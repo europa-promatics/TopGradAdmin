@@ -1,0 +1,777 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+@import "~@ng-select/ng-select/themes/default.theme.css";
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ng-primary: mat-palette($mat-indigo);
+$ng-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ng-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$ng-theme: mat-light-theme((
+  color: (
+    primary: $ng-primary,
+    accent: $ng-accent,
+    warn: $ng-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ng-theme);
+
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// Custom CSS strats from here.
+@import "custom";
+/*************************Material Table******************/
+table {
+  width: 100%;
+}
+/***********Common  CSS*********/
+.mb-100{
+  margin-bottom: 100px;
+}
+app-sidebar-nav-link-content {
+  display: flex;
+  align-items: baseline;
+}
+.td-check label{
+  margin-bottom: 0 !important;
+}
+a:hover {
+  text-decoration: none;
+}
+.sidebar .nav-link .nav-icon {
+  color: #dedede;
+}
+a.nav-link.nav-dropdown-toggle {
+  display: flex;
+  align-items: baseline;
+}
+.border-0{
+  border:none;
+}
+.form-control {
+  border: 1px solid #e4e7ea !important;
+}
+/***********Common  CSS*********/
+
+/***********************************Login Page*********************************/
+.login-page{
+	min-height: 100vh;
+}
+.text-pink{
+  color: #F25094;
+}
+.main-blue{
+  color: #202C76;
+}
+.text-bold{
+  font-weight: bold !important;
+}
+/***********************************Login Page*********************************/
+
+/***********************************Employers List*********************************/
+.td-btn{
+  border: none;
+  background: none;
+}
+.td-btn:focus{
+  outline:none;
+}
+.filter_input{
+  background: none;
+  border: none;
+  border-bottom: 1px solid;
+  margin-bottom: 8px;
+}
+
+.td-menu .mat-menu-item .mat-icon {
+  margin-right: 7px;
+}
+.td-menu .mat-menu-item:hover .mat-icon {
+  color: #20a8d8;
+}
+/***********************************Employers List*********************************/
+
+/***********************************Edit Employer*********************************/
+.user_dp img {
+  height: 130px;
+  width: 130px;
+  border-radius: 100%;
+}
+.user_dp{
+  display: inline-block;
+}
+.user_dp .dp-input {
+  opacity: 0;
+  position: absolute;
+  bottom: 3px;
+  width: 25px;
+  right: 5px;
+}
+.user_dp .dp-icon {
+  position: absolute;
+  bottom: 4px;
+  right: 5px;
+  background-color: #20a8d8;
+  color: #fff;
+  border-radius: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+.only-view{
+  pointer-events: none;
+}
+
+/*Modal CSS*/
+.prof_modclose img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: -25px;
+  top: -24px;
+  z-index: 2;
+}
+.modal-header .close.td-btn, .modal-header .close.td-btn:hover{
+  opacity: 1;
+}
+.modal-content {
+  border-radius: 20px;
+}
+.modal-header {
+  border-bottom:none;
+}
+.modal-footer {
+  border-top:none;
+  margin-bottom: 15px;
+}
+.modal-body {
+  text-align:center;
+}
+/***********************************Edit Employer*********************************/
+
+/***********************************View Job Details*********************************/
+.gradPreview_result .preview_wrapper {
+  margin: 0px auto 40px;
+}
+.prevw_main_ttl h4 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #707070;
+}
+.prevw_main_ttl small {
+  color: #202C76;
+}
+.prvw_jb_ttl p {
+  color: #202C76;
+  margin-bottom: 0;
+}
+.preview_wrapper {
+  padding: 46px 30px;
+  margin: 80px auto 40px;
+  background-color: #fff;
+}
+.prev_descriptions .compny_info h6 {
+  font-weight: 600;
+  color: #545465;
+  font-size: 13px;
+}
+.deadTtl .ddl_date sub {
+  color: #9A9A9A;
+  font-size: 10px;
+  bottom: -0.05em;
+}
+.prev_descriptions .compny_info p {
+  font-size: 12px;
+  color: #545465;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.gradKey_prve span.colr_green {
+  background: #E9F9F4;
+  color: #26C296;
+}
+.prvw_jb_skills small {
+  color: #C4C4C4;
+  font-weight: 500;
+  display: block;
+}
+.prvw_jb_skills .typed_text span {
+  padding: 3px 5px;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.typed_text span {
+  display: inline-block;
+  background-color: #F8F8F8;
+  border-radius: 53px;
+  text-align: center;
+  padding: 6px 15px;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+.prev_availby small {
+  color: #C4C4C4;
+  font-weight: 500;
+}
+.prev_availby {
+  width: 110px;
+}
+.prev_descriptions p {
+  color: #C4C4C4;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.prvw_jb_ttl p > small {
+  font-size: 10px;
+  color: #9A9A9A;
+}
+
+
+/***************************View Applicant page***********************/
+
+.files_prevw .singl_mrggn {
+  margin-left: 20px;
+}
+.prew_info {
+  margin-left: 14px;
+}
+.files_prevw .prev_icons {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background: #F8F8F8;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 35px;
+}
+.lettrscreening_form h5 {
+  margin: 30px 0;
+  font-weight: normal;
+  font-size: 16px;
+  color: #545465;
+}
+.jobApply_modal .job-content{
+  padding:30px;
+}
+.jobApply_modal .modal-header h4 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+.prevwCover_letter p {
+  font-size: 16px;
+  color: #545465;
+  margin-bottom: 0;
+}
+.anserd_brdrbox {
+  border: 1px solid #E5E5E5;
+  box-shadow: inset 2px 4px 18px -10px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+.collp_info h4 {
+  color: #545465;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.collp_info p {
+  font-size: 16px;
+  color: #545465;
+  margin-bottom: 7px;
+}
+.collp_info label {
+  font-size: 16px;
+  font-weight: 500;
+}
+/***************************View Applicant page***********************/
+
+/*Home Management******************/
+.tox-notifications-container {
+  display: none;
+}
+/*Home header********/
+.prev-upld-img{
+  display: inline-block;
+}
+.prev-upld-img img{
+  width: 310px;
+  border-radius: 5px;
+}
+
+input.img-input-upld {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+.btn.upld-btn{
+  margin: 15px 20px 15px 40px;
+}
+/***************************Home our Story*********************/
+.video {
+  position: relative;
+  display: inline-block;
+}
+.video .speaker-vdeo{
+  height: 367px;
+}
+.video .virde_play_btn img {
+  position: absolute;
+  top: 125px;
+  width: 80px;
+  left: 245px;
+}
+/****************************something for everyone****************/
+.prev-upld-icon img {
+  width: 50px;
+}
+.mat-tab-labels {
+  background-color: #fff;
+}
+/**********************success story slider**************************/
+.slider-imag {
+  height: 150px;
+  width: 200px;
+  margin: 10px 10px 10px 0;
+  border-radius: 5px;
+}
+.slider-play {
+  position: absolute;
+  top: 57px;
+  height: 50px;
+  left: 70px;
+}
+.play-container{
+  display: inline-block;
+}
+/*********************edit job*************************/
+.job_date_pickr button.mat-focus-indicator.mat-icon-button.mat-button-base {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+}
+.job_date_pickr button.mat-focus-indicator.mat-icon-button.mat-button-base:focus {
+  outline: none;
+}
+/*****************************view payment************/
+.insurance_pay_info {
+  width: 617px;
+  border: 1.5px solid #C4C4C4;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 45px 60px;
+  margin: 40px auto 40px;
+}
+.insurance_pay_info label {
+  font-size: 14px;
+  color: #9A9A9A;
+}
+.insurance_pay_info small {
+  display: block;
+  color: #2B2A35;
+  font-size: 13px;
+}
+.cost_show {
+  background: #20a8d8;
+  border-radius: 5px;
+  padding: 5px 30px;
+  margin: 29px auto 0;
+}
+.cost_show small {
+  color: #fff !important;
+}
+
+/*********************Add Sub admin***********************/
+.access-body {
+  border: 1px solid #20a8d8;
+  border-radius: 3px;
+}
+ul {
+  list-style-type: none;
+}
+.acces-crd{
+  border: 1px solid #e4e7ea !important;
+}
+
+/***********************edit job detail******************/
+span.ngx-slider-span.ngx-slider-pointer.ngx-slider-pointer-min:focus-visible {
+  outline: none;
+}
+span.ngx-slider-span.ngx-slider-pointer.ngx-slider-pointer-max:focus-visible{
+  outline: none;
+}
+.radio-btns{
+  padding: 0.375rem 0.75rem;
+}
+
+/*edit-employer how it works*/
+.endrose-step{
+  margin-bottom: 55px;
+}
+.prev-upld-img.icons img{
+  width: 130px;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #ffffff;
+    opacity: 1;
+}
+.td-width {
+    max-width: 180px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/*view article details*/
+
+.resource_back_lnk {
+    margin-bottom: 20px;
+}
+.resource_back_lnk .back_lnk {
+    color: #9A9A9A;
+    font-size: 18px;
+    line-height: 140%;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    margin-left: 18px;
+}
+/*.articles_sec {
+    background: linear-gradient(180deg, rgba(22, 105, 77, 0) 0%, rgba(39, 81, 143, 0) 0.01%, rgba(57, 50, 102, 0.08) 100%), url('assets/img/article_detail_bg.png');
+    border-radius: 10px;
+    height: 231px;
+    position: relative;
+    background-color: #fff;
+}*/
+.articles_sec .grad_artcl {
+    margin-top: 29px;
+}
+.grad_resource_article::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 293px;
+    width: 100%;
+    box-shadow: inset -3px -1px 79px -26px rgba(112, 154, 142, 0.2);
+    z-index: -1;
+}
+.resource_hdng_container h2 {
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 52px;
+    color: #464BA8;
+    margin-bottom: 22px;
+}
+.resource_sub_hdngs .user_circle_name {
+    margin-right: 12px;
+}
+span.user_circle_name {
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    background: #464BA8;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 100%;
+    margin-right: -26px;
+    position: relative;
+    margin-left: 25px;
+}
+.arcle_author {
+    font-size: 16px;
+    line-height: 140%;
+    color: #545465;
+}
+.resource_sub_hdngs small {
+    font-size: 13px;
+    line-height: 18px;
+    color: #9A9A9A;
+    margin-left: 7px;
+}
+.reosurce_posted_info {
+    font-size: 14px;
+    line-height: 20px;
+    color: #545465;
+}
+.resource_inner_content .highlighted_info {
+    font-size: 25px;
+    line-height: 37px;
+    color: #464BA8;
+    margin: 38px 0 33px 21px;
+}
+/*view article details*/
+.video-ply-icn .video .virde_play_btn img {
+    position: absolute;
+    top: 95px;
+    width: 50px;
+    left: 140px;
+}
+.video_career img {
+    border-radius: 10px;
+}
+.blog_vdo {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+}
+
+.blog_vdo span {
+    width: 79px;
+    height: 79px;
+    display: inline-block;
+    background: #DCF3ED;
+    line-height: 80px;
+    border-radius: 100%;
+    text-align: center;
+}
+
+/*payment management*/
+
+th.mat-header-cell{
+  white-space: nowrap;
+}
+th.mat-header-cell, td.mat-cell{
+  // min-width: 100px;
+  padding-right: 15px !important;
+  white-space: nowrap;
+}
+// .mat-column-select{
+//   max-width: 60px !important;
+//   width: 60px !important;
+//   min-width: 60px !important;
+// }
+// .mat-column-id{
+//   max-width: 50px !important;
+//   width: 50px !important;
+//   min-width: 50px !important;
+// }
+
+/*payment management*/
+
+
+/*view payment details*/
+
+.pymnt_dtls{
+  display: flex;
+}
+.pymnt_dtls label{
+  width: 160px;
+  max-width: 160px;
+  min-width: 160px;
+}
+.pymnt_dtls span{
+  color: #636363;
+  vertical-align: top;
+}
+
+/*view payment details*/
+
+
+/*---------Resume Builder Management------------*/
+
+.resume_img img{
+  width: 400px;
+}
+.resume_tips_sctn .icons img{
+  width: 96px;
+  height: 96px;
+}
+/*---------Resume Builder Management------------*/
+
+.experience_inner {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    text-align: center;
+}
+.view-graduate-sec ul{
+  padding: 0;
+}
+p.accoun_date {
+    color: #9A9A9A;
+}
+.account_intern{
+  font-weight: 500;
+  margin-bottom: 5px !important;
+}
+.accnt_subhead{
+  margin-bottom: 5px !important;
+}
+.pw_size{
+  color: #9A9A9A;
+}
+.singl_div{
+  margin-top: 20px;
+}
+.prfl_smry{
+  margin-top: 30px;
+}
+.vid_img{
+    position: relative;
+    display: inline-block;
+}
+.vid_img span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.employr_vw img {
+    width: 80px;
+    height: 118px;
+}
+.view_heading h2{
+  margin-bottom: 10px;
+}
+.other_dtls p{
+  display: flex;
+  color: #9A9A9A;
+}
+
+.dtl_hdng{
+  width: 200px;
+  color: #23282c;
+}
+
+.skill_dtl .dropdown-menu{
+  min-width: 22rem;
+  transform: translate(50%, 3%) !important;
+}
+.skill_dtl h4{
+  margin: 15px 0px 5px;
+  font-weight: 500;
+}
+.skill_dtl p{
+  padding: 0px 10px;
+}
+.video_resm .icons img{
+  width: unset;
+  height: unset;
+}
+.grad_filter{
+  .dropdown-submenu {
+    position: relative;
+  }
+
+  .dropdown-submenu>.dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -6px;
+      margin-left: -1px;
+      -webkit-border-radius: 0 6px 6px 6px;
+      -moz-border-radius: 0 6px 6px;
+      border-radius: 0 6px 6px 6px;
+  }
+
+  .dropdown-submenu:hover>.dropdown-menu {
+      display: block;
+  }
+
+  .dropdown-submenu>a:after {
+      display: block;
+      content: " ";
+      float: right;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-left-color: #ccc;
+      margin-top: 5px;
+      margin-right: -10px;
+  }
+
+  /*.dropdown-submenu:hover>a:after {
+      border-left-color: #fff;
+  }*/
+
+  .dropdown-submenu.pull-left {
+      float: none;
+  }
+
+  .dropdown-submenu.pull-left>.dropdown-menu {
+      left: -100%;
+      margin-left: 10px;
+      -webkit-border-radius: 6px 0 6px 6px;
+      -moz-border-radius: 6px 0 6px 6px;
+      border-radius: 6px 0 6px 6px;
+  }
+  .dropdown-item{
+    border-bottom: 1px solid #c8ced3;
+
+  }
+}
+
+.dashbrd_tabs{
+  .mat-tab-body{
+    padding: 20px;
+    background-color: #fff;
+  }
+}
+
+.dash_optns .dropdown-toggle::after{
+  display: none;
+}
+
+.uppr_tabs .mat-tab-body{
+  padding: 20px;
+}
+.cmp_logos img{
+  margin: 20px 20px 0px 0px;
+}
+.add-btn-bg{
+  background: #f8f8f8;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 31px;
+  display: inline-block;
+}
+.file_icons_pw .pw_accnt{
+  margin-bottom: 0;
+}
+.vrfctn_rfrncs{
+  min-width: calc(100% - 160px);
+}
+.proof_skills .mat-expansion-panel{
+  margin-bottom: 15px;
+}
+
+.reset_pswrd .modal-body{
+  text-align: left;
+  padding: 20px 30px;
+}
+
+/* tanya 7feb */
+.invalid{
+  margin-bottom: 10px;
+  color: red
+}
