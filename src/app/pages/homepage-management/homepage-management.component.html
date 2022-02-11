@@ -1,0 +1,644 @@
+<section class="home-header-sec">
+	<div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	      	<div class="card">
+	      		<div class="manage-home-header">
+	      			<div class="card-header d-flex justify-content-between">
+	      				<strong>Home Header Section</strong>
+	      				<div class="slide-cs">
+	      					<span class="mr-2">Visibility </span>
+	      					<mat-slide-toggle></mat-slide-toggle>
+	      				</div>
+	      			</div>
+	      			<div class="card-body">
+	      				<form [formGroup]="headerform">
+		      				<div class="home-mng-form">
+		      					<div class="form-group">
+									<label>Title</label>
+									<editor initialValue="Top Platform to find the Best Employer"  [formControl]="headerform.controls['title']"></editor>
+								</div>
+								<div *ngIf="(headerform.touched || headerform.dirty) && headerform.invalid && headerform.controls.title?.errors?.required  " class="invalid">
+									*Please enter title
+								</div>
+								<div class="form-group">
+									<label>Section Image</label>
+									<div class="slider-video-cntnt">
+										<div class="prev-upld-img">
+											<!-- <img src="assets/img/home-img.png" class="img-fluid"> -->
+											<img src="{{this.image}}" class="img-fluid">
+											<div class="upload-imag text-center">
+												<button class="btn-primary btn  mt-3 position-relative">
+													<input type="file" name="" class="img-input-upld" (change)="onSelect1($event)" [formControl]="headerform.controls['image']">
+												Upload Image
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div *ngIf="(headerform.touched || headerform.dirty) && headerform.invalid && headerform.controls.image?.errors?.required" class="invalid">
+									*Please upload image
+								</div>
+								<div class="edit-btns d-flex justify-content-end">
+									<button class="btn btn-primary mr-4" (click)="header()">Save</button>
+									<button class="btn btn-primary">Back</button>
+								</div>
+		      				</div>
+		      			</form>
+	      			</div>
+		      	</div>
+	      	</div>
+	      </div>
+	  	</div>
+	</div>
+</section>
+
+<section class="home-header-sec">
+	<div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	      	<div class="card">
+	      		<div class="manage-home-header">
+	      			<div class="card-header d-flex justify-content-between">
+	      				<strong>Our Story Section</strong>
+	      				<div class="slide-cs text-right">
+	      					<span class="mr-2">Visibility </span>
+	      					<mat-slide-toggle></mat-slide-toggle>
+	      				</div>
+	      			</div>
+	      			<div class="card-body">
+	      				<form [formGroup]="storyform">
+		      				<div class="home-mng-form">
+		      					<div class="form-group">
+									<label>Title</label>
+									<input type="text" name="" class="form-control" value="Our story"  [formControl]="storyform.controls['title1']">
+								</div>
+								<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.title?.errors?.required  " class="invalid">
+									*Please enter title
+								</div>
+								<div class="form-group">
+									<label>Description</label>
+									<editor [formControl]="storyform.controls['description']">  </editor>
+								</div>
+								<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.description?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+								<div class="form-group">
+									<label>Section Video</label>
+									<div class="slider-video-cntnt">
+										<div class="video">
+											<img src="assets/img/video.png" class="img-fluid speaker-vdeo">
+											<div class="virde_play_btn play-1st">
+												<img src="assets/img/playbtn.svg" class="img-fluid">
+												<!-- <video src="{{this.video1}}" class="img-fluid"></video> -->
+											</div>
+											<div class="upload-imag text-center">
+												<button class="btn-primary btn mt-3 position-relative">
+													<input type="file" name="" class="img-input-upld" (change)="onSelect2($event)" [formControl]="storyform.controls['video']">
+												Upload Video
+												</button>
+											</div>
+											<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.video?.errors?.required  " class="invalid">
+												*Please upload video
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Posted By</label>
+									<input type="text" name="" class="form-control" value="Naren Chellappah"  [formControl]="storyform.controls['name']">
+								</div>
+								<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.name?.errors?.required  " class="invalid">
+									*Please enter name
+								</div>
+								<div class="form-group">
+									<label>Posted Position</label>
+									<input type="text" name="" class="form-control" value="Founder of Top Graduates"  [formControl]="storyform.controls['designation']">
+								</div>
+								<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.designation?.errors?.required  " class="invalid">
+									*Please enter designation
+								</div>
+								<div class="edit-btns d-flex justify-content-end">
+									<button class="btn btn-primary mr-4" (click)="story()">Save</button>
+									<button class="btn btn-primary">Back</button>
+								</div>
+		      				</div>
+		      			</form>
+	      			</div>
+		      	</div>
+	      	</div>
+	      </div>
+	  	</div>
+	</div>
+</section>
+
+<section class="work-for-sec">
+	<div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	      	<div class="card">
+	      		<div class="manage-home-header">
+	      			<div class="card-header d-flex justify-content-between">
+	      				<strong>Curated Especially For You</strong>
+	      				<div class="slide-cs">
+	      					<span class="mr-2">Visibility </span>
+	      					<mat-slide-toggle></mat-slide-toggle>
+	      				</div>
+	      			</div>
+	      			<div class="card-body">
+	      				<form [formGroup]="curatedform">
+		      				<div class="home-mng-form">
+		      					<div class="form-group">
+									<label>Heading</label>
+									<editor initialValue="Curated Especially For You" [innerHTML]="" [formControl]="curatedform.controls['heading']" ></editor>
+								</div>
+								<div *ngIf="(curatedform.touched || curatedform.dirty) && curatedform.invalid && curatedform.controls.heading?.errors?.required  " class="invalid">
+									*Please enter heading
+								</div>
+								<div class="edit-btns d-flex justify-content-end">
+									<button class="btn btn-primary mr-4" (click)="curated()">Save</button>
+									<button class="btn btn-primary">Back</button>
+								</div>
+		      				</div>
+		      			</form>
+	      			</div>
+		      	</div>
+	      	</div>
+	      </div>
+	  	</div>
+	</div>
+</section>
+
+<section class="work-for-sec">
+	<div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	      	<div class="card">
+	      		<div class="manage-home-header">
+	      			<div class="card-header d-flex justify-content-between">
+	      				<strong>The Main Benefits For Both</strong>
+	      				<div class="slide-cs">
+	      					<span class="mr-2">Visibility </span>
+	      					<mat-slide-toggle></mat-slide-toggle>
+	      				</div>
+	      			</div>
+	      			<div class="card-body">
+	      				<form>
+		      				<div class="home-mng-form">
+		      					<div class="form-group">
+									<label>Heading</label>
+									<input type="text" name="" class="form-control" value="The Main Benefits For Both">
+								</div>
+		      				</div>
+		      				<div class="card">
+		      					<div class="card-body p-0">
+		      						<div class="uppr_tabs">
+										<mat-tab-group>
+										  	<mat-tab label="Employers">
+										  		<div class="insid_tabs">
+												  	<ng-template matTabContent>
+												  		<div class="grad_card">
+												  			<div class="grad_tab">
+												  				<div class="slide-cs text-right">
+											      					<span class="mr-2">Visibility </span>
+											      					<mat-slide-toggle></mat-slide-toggle>
+											      				</div>
+												  				<div class="insid_tabs emp_home_page">
+																  	<form [formGroup]="employerform">
+																  		<div class="form-group">
+																  			<label>Tab1 Heading</label>
+																  			<input type="text" name="" class="form-control" value="" [formControl]="employerform.controls['heading_tab1']">
+																  		</div>
+																		  <div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.heading_tab1.errors?.required  " class="invalid">
+																			  *Please enter heading
+																		  </div>
+																  		<div class="form-group">
+																  			<label>Description</label>
+																  			<textarea class="form-control" rows="4" [formControl]="employerform.controls['description_tab1']"></textarea>
+																  		</div>
+																		  <div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.description_tab1.errors?.required  " class="invalid">
+																			  *Please enter description
+																		  </div>
+																	  	<div class="form-group">
+																	  		<label>Tab1 Image</label>
+																	  		<div class="upld-body">
+																		  		<div class="prev-upld-img mb-3">
+																					<img src="assets/img/etabimg1.png" class="img-fluid">
+																					<div class="upload-imag text-center">
+																						<button class="btn-primary btn mt-3 position-relative">
+																							<input type="file" name="" class="img-input-upld" [formControl]="employerform.controls['image_tab1']">
+																						Upload Image
+																						</button>
+																					</div>
+																					<div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.image_tab1.errors?.required  " class="invalid">
+																						*Please upload image
+																					</div>
+																				</div>
+																			</div>
+																	  	</div>
+
+																	  	<div class="form-group">
+																  			<label>Tab2 Heading</label>
+																  			<input type="text" name="" class="form-control" value=""  [formControl]="employerform.controls['heading_tab2']">
+																  		</div>
+																		  <div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.heading_tab2.errors?.required  " class="invalid">
+																			   *Please enter heading
+																		  </div>
+																  		<div class="form-group">
+																  			<label>Description</label>
+																  			<textarea class="form-control" rows="4" [formControl]="employerform.controls['description_tab2']"></textarea>
+																  		</div>
+																		  <div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.description_tab2.errors?.required  " class="invalid">
+																			  *Please enter description
+																	      </div>
+																	  	<div class="form-group">
+																	  		<label>Tab2 Image</label>
+																	  		<div class="upld-body">
+																		  		<div class="prev-upld-img mb-3">
+																					<img src="assets/img/etabimg2.png" class="img-fluid">
+																					<div class="upload-imag text-center">
+																						<button class="btn-primary btn mt-3 position-relative">
+																							<input type="file" name="" class="img-input-upld" [formControl]="employerform.controls['image_tab2']">
+																						Upload Image
+																						</button>
+																					</div>
+																					<div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.image_tab2.errors?.required  " class="invalid">
+																						*Please upload image
+																					</div>
+																				</div>
+																			</div>
+																	  	</div>
+
+																	  	<div class="form-group">
+																  			<label>Tab3 Heading</label>
+																  			<input type="text" name="" class="form-control" value="" [formControl]="employerform.controls['heading_tab3']">
+																  		</div>
+																		  <div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.heading_tab3.errors?.required  " class="invalid">
+																			   *Please enter heading
+																	       </div>
+																  		<div class="form-group">
+																  			<label>Description</label>
+																  			<textarea class="form-control" rows="4" [formControl]="employerform.controls['description_tab3']"></textarea>
+																  		</div>
+																		  <div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.description_tab3.errors?.required  " class="invalid">
+																			  *Please enter description
+																		  </div>
+																	  	<div class="form-group">
+																	  		<label>Tab3 Image</label>
+																	  		<div class="upld-body">
+																		  		<div class="prev-upld-img mb-3">
+																					<img src="assets/img/etabimg3.png" class="img-fluid">
+																					<div class="upload-imag text-center">
+																						<button class="btn-primary btn mt-3 position-relative">
+																							<input type="file" name="" class="img-input-upld" [formControl]="employerform.controls['image_tab3']">
+																						  Upload Image
+																						</button>
+																					</div>
+																					<div *ngIf="(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.image_tab3.errors?.required  " class="invalid">
+																						*Please upload image
+																					</div>
+																				</div>
+																			</div>
+																	  	</div>
+																	  	<div class="home-manage-btns edit-btns d-flex justify-content-end">
+																	  		<button class="btn btn-primary mr-4" (click)="employer()">Save</button>
+																			<button class="btn btn-primary">Cancel</button>
+																	  	</div>
+																  	</form>
+																</div>
+												  			</div>
+												  		</div>
+												  	</ng-template>
+												</div>
+										  	</mat-tab>
+										  	<mat-tab label="Graduates">
+										  		<div class="insid_tabs">
+												  	<ng-template matTabContent>
+												  		<div class="grad_card">
+												  			<div class="grad_tab">
+												  				<div class="slide-cs text-right">
+											      					<span class="mr-2">Visibility </span>
+											      					<mat-slide-toggle></mat-slide-toggle>
+											      				</div>
+												  				<div class="insid_tabs emp_home_page">
+																  	<form [formGroup]="graduateform">
+																  		<div class="form-group">
+																  			<label>Tab1 Heading</label>
+																  			<input type="text" name="" class="form-control" value="" [formControl]="graduateform.controls['grad_heading_tab1']">
+																  		</div>
+																		  <div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_heading_tab1?.errors?.required  " class="invalid">
+																			  *Please enter heading
+																		   </div>
+																  		<div class="form-group">
+																  			<label>Description</label>
+																  			<textarea class="form-control" rows="4" [formControl]="graduateform.controls['grad_description_tab1']"></textarea>
+																  		</div>
+																		  <div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_description_tab1?.errors?.required  " class="invalid">
+																			  *Please enter description
+																		   </div>
+																	  	<div class="form-group">
+																	  		<label>Tab1 Image</label>
+																	  		<div class="upld-body">
+																		  		<div class="prev-upld-img mb-3">
+																					<img src="assets/img/gtabimg1.png" class="img-fluid">
+																					<div class="upload-imag text-center">
+																						<button class="btn-primary btn mt-3 position-relative">
+																							<input type="file" name="" class="img-input-upld" [formControl]="graduateform.controls['grad_image_tab1']">
+																						Upload Image
+																						</button>
+																					</div>
+																					<div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_image_tab1?.errors?.required  " class="invalid">
+																						*Please upload image
+																					</div>
+																				</div>
+																			</div>
+																	  	</div>
+
+																	  	<div class="form-group">
+																  			<label>Tab2 Heading</label>
+																  			<input type="text" name="" class="form-control" value="" [formControl]="graduateform.controls['grad_heading_tab2']">
+																  		</div>
+																		  <div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_heading_tab2?.errors?.required  " class="invalid">
+																			 *Please enter title
+																		  </div>
+																  		<div class="form-group">
+																  			<label>Description</label>
+																  			<textarea class="form-control" rows="4" [formControl]="graduateform.controls['grad_description_tab2']"></textarea>
+																  		</div>
+																		  <div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_description_tab2?.errors?.required  " class="invalid">
+																			*Please enter description
+																		 </div>
+																	  	<div class="form-group">
+																	  		<label>Tab2 Image</label>
+																	  		<div class="upld-body">
+																		  		<div class="prev-upld-img mb-3">
+																					<img src="assets/img/gtabimg2.png" class="img-fluid">
+																					<div class="upload-imag text-center">
+																						<button class="btn-primary btn mt-3 position-relative">
+																							<input type="file" name="" class="img-input-upld" [formControl]="graduateform.controls['grad_image_tab2']">
+																						Upload Image
+																						</button>
+																					</div>
+																					<div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_image_tab2?.errors?.required  " class="invalid">
+																						*Please upload image
+																					</div>
+																				</div>
+																			</div>
+																	  	</div>
+
+																	  	<div class="form-group">
+																  			<label>Tab3 Heading</label>
+																  			<input type="text" name="" class="form-control"  [formControl]="graduateform.controls['grad_heading_tab3']">
+																  		</div>
+																		  <div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_heading_tab3?.errors?.required  " class="invalid">
+																			*Please enter title
+																		 </div>
+																  		<div class="form-group">
+																  			<label>Description</label>
+																  			<textarea class="form-control" rows="4" [formControl]="graduateform.controls['grad_description_tab3']"></textarea>
+																  		</div>
+																		  <div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_description_tab3?.errors?.required  " class="invalid">
+																			*Please enter description
+																		 </div>
+																	  	<div class="form-group">
+																	  		<label>Tab3 Image</label>
+																	  		<div class="upld-body">
+																		  		<div class="prev-upld-img mb-3">
+																					<img src="assets/img/gtabimg3.png" class="img-fluid">
+																					<div class="upload-imag text-center">
+																						<button class="btn-primary btn mt-3 position-relative">
+																							<input type="file" name="" class="img-input-upld" [formControl]="graduateform.controls['grad_image_tab3']">
+																						Upload Image
+																						</button>
+																					</div>
+																					<div *ngIf="(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_image_tab3?.errors?.required  " class="invalid">
+																						*Please upload image
+																					</div>
+																				</div>
+																			</div>
+																	  	</div>
+								
+																	  	<div class="home-manage-btns edit-btns d-flex justify-content-end">
+																	  		<button class="btn btn-primary mr-4">Save</button>
+																			<button class="btn btn-primary">Cancel</button>
+																	  	</div>
+																  	</form>
+																</div>
+												  			</div>
+												  		</div>
+												  	</ng-template>
+												</div>
+										  	</mat-tab>
+										</mat-tab-group>
+									</div>
+		      					</div>
+		      				</div>
+		      				
+		      			</form>
+	      			</div>
+		      	</div>
+	      	</div>
+	      </div>
+	  	</div>
+	</div>
+</section>
+
+<section class="home-header-sec">
+	<div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	      	<div class="card">
+	      		<div class="manage-home-header">
+	      			<div class="card-header d-flex justify-content-between">
+	      				<strong>These Companies Help..</strong>
+	      				<div class="slide-cs">
+	      					<span class="mr-2">Visibility </span>
+	      					<mat-slide-toggle></mat-slide-toggle>
+	      				</div>
+	      			</div>
+	      			<div class="card-body">
+	      				<form >
+		      				<div class="home-mng-form">
+		      					<div class="form-group">
+						  			<label>Heading</label>
+						  			<input type="text" name="" class="form-control" value="These Companies Help Provide The Best TopGraduates Experience">
+						  		</div>
+						  		<div class="form-group">
+						  			<label>Company's Logo</label>
+						  			<div class="enable-organise">
+										<ngx-dropzone (change)="onSelect($event)">
+											<ngx-dropzone-label>Drop your files here!</ngx-dropzone-label>
+											<ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+												<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+											</ngx-dropzone-preview>
+										</ngx-dropzone>
+									</div>
+									<div class="cmp_logos">
+										<img src="assets/img/logo1.png" class="img-fluid">
+										<img src="assets/img/logo2.png" class="img-fluid">
+										<img src="assets/img/logo3.png" class="img-fluid">
+										<img src="assets/img/logo4.png" class="img-fluid">
+										<img src="assets/img/logo5.png" class="img-fluid">
+										<img src="assets/img/logo6.png" class="img-fluid">
+										<img src="assets/img/logo7.png" class="img-fluid">
+									</div>
+						  		</div>
+						  		
+								<div class="form-group">
+									<label>Section Image</label>
+									<div class="slider-video-cntnt">
+										<div class="prev-upld-img">
+											<img src="assets/img/cmp-help.png" class="img-fluid">
+											<div class="upload-imag text-center">
+												<button class="btn-primary btn  mt-3 position-relative">
+													<input type="file" name="" class="img-input-upld">
+												Upload Image
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="edit-btns d-flex justify-content-end">
+									<button class="btn btn-primary mr-4">Save</button>
+									<button class="btn btn-primary">Back</button>
+								</div>
+		      				</div>
+		      			</form>
+	      			</div>
+		      	</div>
+	      	</div>
+	      </div>
+	  	</div>
+	</div>
+</section>
+
+
+<section class="add-slider-item">
+	<div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	      	<div class="card">
+	      		<div class="manage-home-header">
+	      			<div class="card-header">
+	      				<strong>Our Success Stories</strong>
+	      			</div>
+	      			<div class="card-body">
+	      				<form  [formGroup]="successform">
+		      				<div class="home-mng-form">
+		      					<div class="form-group">
+						  			<label>Heading</label>
+						  			<input type="text" name="" class="form-control" value="Our Success Stories" [formControl]="successform.controls['heading']" >
+						  		</div>
+							    <div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.heading?.errors?.required  " class="invalid">
+									*Please enter heading
+								</div>
+						  		<div class="form-group">
+									<label>Slider Video</label>
+									<div class="slider-video-cntnt">
+										<div class="video">
+											<img src="assets/img/success.png" class="img-fluid speaker-vdeo">
+											<div class="virde_play_btn play-1st">
+												<img src="assets/img/play.png" class="img-fluid">
+											</div>
+											<div class="upload-imag text-center">
+												<button class="btn-primary btn mt-3 position-relative">
+													<input type="file" name="" class="img-input-upld" (change)="onSelect3($event)" [formControl]="successform.controls['video']">
+												Upload Video
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.video?.errors?.required  " class="invalid">
+									*Please upload video
+								</div>
+								<div class="form-group">
+									<label>Slider1: Description</label>
+									<editor  [formControl]="successform.controls['sliderdesc1']"></editor>
+								</div>
+								<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc1?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+								<div class="form-group">
+									<label>Slider2: Description</label>
+									<editor [formControl]="successform.controls['sliderdesc2']"></editor>
+								</div>
+								<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc2?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+								<div class="form-group">
+									<label>Slider3: Description</label>
+									<editor [formControl]="successform.controls['sliderdesc3']"></editor>
+								</div>
+								<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc3?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+								<div class="edit-btns d-flex justify-content-end">
+									<button class="btn btn-primary mr-4" (click)="success()">Save</button>
+									<button class="btn btn-primary">Back</button>
+								</div>
+		      				</div>
+		      			</form>
+	      			</div>
+		      	</div>
+	      	</div>
+	      </div>
+	  	</div>
+	</div>
+</section>
+
+<section class="home-header-sec">
+	<div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	      	<div class="card">
+	      		<div class="manage-home-header">
+	      			<div class="card-header d-flex justify-content-between">
+	      				<strong>Register Now Section</strong>
+	      				<div class="slide-cs">
+	      					<span class="mr-2">Visibility </span>
+	      					<mat-slide-toggle></mat-slide-toggle>
+	      				</div>
+	      			</div>
+	      			<div class="card-body">
+	      				<form>
+	      					<div class="grad-body">
+	      						<div class="home-mng-form">
+			      					<div class="form-group">
+										<label>Text</label>
+										<input type="text" name="" class="form-control" value="What are you waiting for?">
+									</div>
+									<div class="form-group">
+										<label>Heading</label>
+										<input type="text" name="" class="form-control" value="Let’s start your journey!">
+									</div>
+									<div class="form-group">
+										<label>Description</label>
+										<textarea class="form-control" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui risus rhoncu.</textarea>
+									</div>
+									<div class="form-group">
+										<label>Graduate Image</label>
+										<div class="register-tday">
+											<div class="upld-body">
+												<div class="prev-upld-img  mb-3">
+													<img src="assets/img/empp.png" class="img-fluid">
+													<div class="upload-imag text-center">
+														<button class="btn-primary btn mt-3 position-relative">
+															<input type="file" name="" class="img-input-upld">
+														Upload Image
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+			      				</div>
+	      					</div>
+		      			</form>
+	      			</div>
+		      	</div>
+	      	</div>
+	      </div>
+	  	</div>
+	</div>
+</section>

@@ -73,12 +73,12 @@ import { ChartsModule } from 'ng2-charts';
 
 // import { DashboardComponent } from './views/dashboard/dashboard.component';
 
-import { UserManagementComponent } from './views/user-management/user-management.component';
+import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-password.component';
 import { ViewProfileComponent } from './views/view-profile/view-profile.component';
-import { EmployersListComponent } from './views/employers-list/employers-list.component';
+import { EmployersListComponent } from './pages/employers-list/employers-list.component';
 import { EditEmployerComponent } from './views/edit-employer/edit-employer.component';
-import { GraduateListComponent } from './views/graduate-list/graduate-list.component';
+import { GraduateListComponent } from './pages/graduate-list/graduate-list.component';
 import { EditGraduateComponent } from './views/edit-graduate/edit-graduate.component';
 import { ViewGraduateComponent } from './views/view-graduate/view-graduate.component';
 import { ViewEmployerComponent } from './views/view-employer/view-employer.component';
@@ -141,7 +141,7 @@ import { AddFaqComponent } from './views/add-faq/add-faq.component';
 import { EditFaqComponent } from './views/edit-faq/edit-faq.component';
 import { ViewFaqComponent } from './views/view-faq/view-faq.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
-import { HomepageManagementComponent } from './views/homepage-management/homepage-management.component';
+import { HomepageManagementComponent } from './pages/homepage-management/homepage-management.component';
 import { HelpManagementComponent } from './views/help-management/help-management.component';
 import { ViewHelpComponent } from './views/view-help/view-help.component';
 import { MessagingReportsComponent } from './views/messaging-reports/messaging-reports.component';

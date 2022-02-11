@@ -163,6 +163,30 @@ export class TopgradserviceService implements HttpInterceptor{
     )
     }
 
+    gradlist(data:any): Observable<any> {
+      let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?role=${data.role}`;
+      console.log(API_URL)
+      return this.httpClient.get(API_URL,data)
+      .pipe(
+      map(res => {
+      return res
+      }),
+      catchError(this.error)
+      )
+      }
+
+      emplist(data:any): Observable<any> {
+        let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?role=${data.role}`;
+        console.log(API_URL)
+        return this.httpClient.get(API_URL,data)
+        .pipe(
+        map(res => {
+        return res
+        }),
+        catchError(this.error)
+        )
+        }
+
 
     sendresetmail(obj:any): Observable<any> {
       let API_URL = `${this.SERVER_URL}/admin/forgot/password`;
@@ -178,6 +202,36 @@ export class TopgradserviceService implements HttpInterceptor{
       let API_URL = `${this.SERVER_URL}/admin/reset/password`;
       console.log(API_URL)
       return this.httpClient.post(API_URL,obj)
+      .pipe(
+      map(res => {
+      return res
+      }))
+    }
+
+    uploadmedia1(obj:any): Observable<any> {
+      let API_URL = `${this.SERVER_URL}/admin/upload/homepage/media`;
+      console.log(API_URL)
+      return this.httpClient.post(API_URL,obj)
+      .pipe(
+      map(res => {
+      return res
+      }))
+    }
+
+    headersection(obj:any): Observable<any> {
+      let API_URL = `${this.SERVER_URL}/admin/edit/homepage/content`;
+      console.log(API_URL)
+      return this.httpClient.put(API_URL,obj)
+      .pipe(
+      map(res => {
+      return res
+      }))
+    }
+
+    homecontent(): Observable<any> {
+      let API_URL = `${this.SERVER_URL}/admin/get/homepage/content`;
+      console.log(API_URL)
+      return this.httpClient.get(API_URL)
       .pipe(
       map(res => {
       return res
