@@ -281,27 +281,16 @@
 											*Please enter heading
 										</div>
 									</div>
-									<div class="form-group" >
-										<label>Text 1</label>
-										<input type="text" name="" class="form-control" value=" testing Lorem ipsum" formControlName="textFields1">
-										<div *ngIf="(TopGraduates.touched || TopGraduates.dirty) && TopGraduates.invalid && TopGraduates.controls.textFields1?.errors?.required  " class="invalid">
+									<ng-container  formArrayName="Fields">
+									<div class="form-group" *ngFor="let alias of Fields.controls; let i=index" >
+										<label>Text {{i+1}}</label>
+										<input type="text" name="" class="form-control"  [formControlName]="i">
+										<div *ngIf="Fields.controls[i].errors?.required  " class="invalid">
 											*Field is Required
 										</div>
 									</div>
-									<div class="form-group">
-										<label>Text 2</label>
-										<input type="text" name="" class="form-control" value="testing dolor sit" formControlName="textFields2">
-										<div *ngIf="(TopGraduates.touched || TopGraduates.dirty) && TopGraduates.invalid && TopGraduates.controls.textFields2?.errors?.required  " class="invalid">
-											*Field is Required
-										</div>
-									</div>
-									<div class="form-group">
-										<label>Text 3</label>
-										<input type="text" name="" class="form-control" value="testing amet consectetur" formControlName="textFields2">
-										<div *ngIf="(TopGraduates.touched || TopGraduates.dirty) && TopGraduates.invalid && TopGraduates.controls.textFields3?.errors?.required  " class="invalid">
-											*Field is Required
-										</div>
-									</div>
+								</ng-container>
+									
 									<div class="edit-btns d-flex justify-content-end">
 										<button class="btn btn-primary mr-4" (click)="postAboutUsdata('TopGraduates')">Save</button>
 										<button class="btn btn-primary">Back</button>

@@ -46,9 +46,8 @@ export class AboutUsComponent implements OnInit {
   TopGraduates = this.fb.group({
     heading: ['', [Validators.required]],
     is_visible: ['',],
-    textFields1: ['', [Validators.required]],
-    textFields2: ['', [Validators.required]], //Form Array might be used if fields will be dynamic 
-    textFields3: ['', [Validators.required]],
+    Fields:  this.fb.array([])
+   
 
   });
 
@@ -62,8 +61,8 @@ export class AboutUsComponent implements OnInit {
   ngOnInit(): void {
     this.getAboutUsData()
   }
-  get textFields(): FormArray {
-    return this.TopGraduates.get('textFields') as FormArray;
+  get Fields(): FormArray {
+    return this.TopGraduates.get('Fields') as FormArray;
   }
 
 
@@ -73,7 +72,7 @@ export class AboutUsComponent implements OnInit {
 
       console.log("getAboutUsData Resp ==>", resp.data);
       this.HeadingImage = resp.data.section_1.image
-      this.textFieldsArray=resp.data.section_6.text
+      
       this.headerSection.patchValue({
         heading: resp.data.section_1.heading,
         description: resp.data.section_1.description,
@@ -106,12 +105,12 @@ export class AboutUsComponent implements OnInit {
       })
       this.TopGraduates.patchValue({
         heading: resp.data.section_6.heading,
-        textFields1: resp.data.section_6.text[0],
-        textFields2: resp.data.section_6.text[1],
-        textFields3: resp.data.section_6.text[2],
         is_visible: resp.data.section_5.is_visible
 
       })
+      resp.data.section_6.text.forEach(element => {
+        this.Fields.push(this.fb.control(element,[Validators.required]))
+      });
 
 
 
