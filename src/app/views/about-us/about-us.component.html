@@ -1,279 +1,318 @@
 <section class="employer-header-sec">
 	<div class="container">
-	    <div class="row">
-	      <div class="col-md-12">
-	      	<div class="card">
-	      		<div class="manage-home-header">
-	      			<div class="card-header d-flex justify-content-between">
-	      				<strong>About Us Header Section</strong>
-	      				<div class="slide-cs">
-	      					<span class="mr-2">Visibility </span>
-	      					<mat-slide-toggle></mat-slide-toggle>
-	      				</div>
-	      			</div>
-	      			<div class="card-body">
-	      				<form>
-		      				<div class="home-mng-form">
-		      					<div class="form-group">
-									<label>Heading</label>
-									<input type="text" name="" class="form-control" value="This is...">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<form [formGroup]="headerSection">
+						<div class="manage-home-header">
+							<div class="card-header d-flex justify-content-between">
+								<strong>About Us Header Section</strong>
+								<div class="slide-cs">
+									<span class="mr-2">Visibility </span>
+									<mat-slide-toggle 
+									formControlName="is_visible"
+									
+									>
+									
+									</mat-slide-toggle>
+									<!-- [checked]="headerSection.controls['is_visible']"
+										(change)="onSliderChange($event)"> -->
 								</div>
-								<div class="form-group">
-									<label>TopGrads Logo</label>
-									<div class="slider-video-cntnt">
-										<div class="prev-upld-img resume_img">
-											<img src="assets/img/logo.svg" class="img-fluid">
-											<div class="upload-imag text-center">
-												<button class="btn-primary btn  mt-3 position-relative">
-													<input type="file" name="" class="img-input-upld">
-												Upload Image
-												</button>
+							</div>
+							<div class="card-body">
+
+								<div class="home-mng-form">
+									<div class="form-group">
+										<label>Heading</label>
+										<input type="text" name="" class="form-control" formControlName="heading"
+											value="This is...testing">
+											<div *ngIf="(headerSection.touched || headerSection.dirty) && headerSection.invalid && headerSection.controls.heading?.errors?.required  " class="invalid">
+												*Please enter heading
+											</div>
+									</div>
+									<div class="form-group">
+										<label>TopGrads Logo</label>
+										<div class="slider-video-cntnt">
+											<div class="prev-upld-img resume_img">
+												<img [src]="HeadingImage?HeadingImage:'assets/img/logo.svg'"
+													class="img-fluid">
+												<div class="upload-imag text-center">
+													<button class="btn-primary btn  mt-3 position-relative">
+														<input type="file" name="" class="img-input-upld"
+															(change)="setHeadingImage($event)">
+														Upload Image
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
+									<div class="form-group">
+										<label>Description</label>
+										<textarea class="form-control" rows="4"
+											formControlName="description"> ut aliquip ex ea commodo consequat.</textarea>
+											<div *ngIf="(headerSection.touched || headerSection.dirty) && headerSection.invalid && headerSection.controls.description?.errors?.required  " class="invalid">
+												*Please enter description
+											</div>
+									</div>
+									<div class="edit-btns d-flex justify-content-end">
+										<button class="btn btn-primary mr-4" (click)="postAboutUsdata('headerSection')">Save</button>
+										<button class="btn btn-primary">Back</button>
+									</div>
 								</div>
-								<div class="form-group">
-									<label>Description</label>
-									<textarea class="form-control" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
-								</div>
-								<div class="edit-btns d-flex justify-content-end">
-									<button class="btn btn-primary mr-4">Save</button>
-									<button class="btn btn-primary">Back</button>
-								</div>
-		      				</div>
-		      			</form>
-	      			</div>
-		      	</div>
-	      	</div>
-	      </div>
-	  	</div>
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="work-for-sec">
 	<div class="container">
-	    <div class="row">
-	      <div class="col-md-12">
-	      	<div class="card">
-	      		<div class="manage-home-header">
-	      			<div class="card-header d-flex justify-content-between">
-	      				<strong>Champions of Graduate Jobs</strong>
-	      				<div class="slide-cs">
-	      					<span class="mr-2">Visibility </span>
-	      					<mat-slide-toggle></mat-slide-toggle>
-	      				</div>
-	      			</div>
-	      			<div class="card-body">
-	      				<form>
-		      				<div class="home-mng-form">
-		      					<div class="form-group">
-									<label>Heading</label>
-									<editor></editor>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<form [formGroup]="Champions">
+						<div class="manage-home-header">
+							<div class="card-header d-flex justify-content-between">
+								<strong>Teasting Champions of Graduate Jobs</strong>
+								<div class="slide-cs">
+									<span class="mr-2">Visibility </span>
+									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
 								</div>
-								<div class="edit-btns d-flex justify-content-end">
-									<button class="btn btn-primary mr-4">Save</button>
-									<button class="btn btn-primary">Back</button>
+							</div>
+							<div class="card-body">
+
+								<div class="home-mng-form">
+									<div class="form-group">
+										<label>Heading</label>
+										<editor [formControl]="Champions.controls['description']"></editor>
+										<div *ngIf="(Champions.touched || Champions.dirty) && Champions.invalid && Champions.controls.description?.errors?.required  " class="invalid">
+											*Please enter description
+										</div>
+									</div>
+									<div class="edit-btns d-flex justify-content-end">
+										<button class="btn btn-primary mr-4" (click)="postAboutUsdata('Champions')">Save</button>
+										<button class="btn btn-primary">Back</button>
+									</div>
 								</div>
-		      				</div>
-		      			</form>
-	      			</div>
-		      	</div>
-	      	</div>
-	      </div>
-	  	</div>
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="work-for-sec">
 	<div class="container">
-	    <div class="row">
-	      <div class="col-md-12">
-	      	<div class="card">
-	      		<div class="manage-home-header">
-	      			<div class="card-header d-flex justify-content-between">
-	      				<strong>Our Vision</strong>
-	      				<div class="slide-cs">
-	      					<span class="mr-2">Visibility </span>
-	      					<mat-slide-toggle></mat-slide-toggle>
-	      				</div>
-	      			</div>
-	      			<div class="card-body">
-	      				<form>
-		      				<div class="home-mng-form">
-		      					<div class="form-group">
-									<label>Heading</label>
-									<input type="text" name="" class="form-control" value="Our Vision">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<form [formGroup]="ourVision">
+						<div class="manage-home-header">
+							<div class="card-header d-flex justify-content-between">
+								<strong>Our Vision</strong>
+								<div class="slide-cs">
+									<span class="mr-2">Visibility </span>
+									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
 								</div>
-								<div class="form-group">
-									<label>Description</label>
-									<textarea class="form-control" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+							</div>
+							<div class="card-body">
+
+								<div class="home-mng-form">
+									<div class="form-group">
+										<label>Heading</label>
+										<input type="text" name="" class="form-control" value="Our Vision"
+											formControlName="heading">
+											<div *ngIf="(ourVision.touched || ourVision.dirty) && ourVision.invalid && ourVision.controls.heading?.errors?.required  " class="invalid">
+												*Please enter heading
+											</div>
+									</div>
+									<div class="form-group">
+										<label>Description</label>
+										<textarea class="form-control" formControlName="description"
+											rows="4"></textarea>
+											<div *ngIf="(ourVision.touched || ourVision.dirty) && ourVision.invalid && ourVision.controls.description?.errors?.required  " class="invalid">
+												*Please enter description
+											</div>
+									</div>
+									<div class="edit-btns d-flex justify-content-end">
+										<button class="btn btn-primary mr-4" (click)="postAboutUsdata('ourVision')">Save</button>
+										<button class="btn btn-primary">Back</button>
+									</div>
 								</div>
-								<div class="edit-btns d-flex justify-content-end">
-									<button class="btn btn-primary mr-4">Save</button>
-									<button class="btn btn-primary">Back</button>
-								</div>
-		      				</div>
-		      			</form>
-	      			</div>
-		      	</div>
-	      	</div>
-	      </div>
-	  	</div>
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="work-for-sec">
 	<div class="container">
-	    <div class="row">
-	      <div class="col-md-12">
-	      	<div class="card">
-	      		<div class="manage-home-header">
-	      			<div class="card-header d-flex justify-content-between">
-	      				<strong>Our Mission</strong>
-	      				<div class="slide-cs">
-	      					<span class="mr-2">Visibility </span>
-	      					<mat-slide-toggle></mat-slide-toggle>
-	      				</div>
-	      			</div>
-	      			<div class="card-body">
-	      				<form>
-		      				<div class="home-mng-form">
-		      					<div class="form-group">
-									<label>Heading</label>
-									<input type="text" name="" class="form-control" value="Our Mission">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<form [formGroup]="ourMission">
+						<div class="manage-home-header">
+							<div class="card-header d-flex justify-content-between">
+								<strong>Our Mission</strong>
+								<div class="slide-cs">
+									<span class="mr-2">Visibility </span>
+									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
 								</div>
-								<div class="form-group">
-									<label>Description</label>
-									<textarea class="form-control" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+							</div>
+							<div class="card-body">
+
+								<div class="home-mng-form">
+									<div class="form-group">
+										<label>Heading</label>
+										<input type="text" name="" class="form-control" value="Our Mission"
+											formControlName="heading">
+											<div *ngIf="(ourMission.touched || ourMission.dirty) && ourMission.invalid && ourMission.controls.heading?.errors?.required  " class="invalid">
+												*Please enter heading
+											</div>
+									</div>
+									<div class="form-group">
+										<label>Description</label>
+										<textarea class="form-control" formControlName="description"
+											rows="4"></textarea>
+											 <div *ngIf="(ourMission.touched || ourMission.dirty) && ourMission.invalid && ourMission.controls.description?.errors?.required  " class="invalid">
+												*Please enter description
+											</div>
+									</div>
+									<div class="edit-btns d-flex justify-content-end">
+										<button class="btn btn-primary mr-4" (click)="postAboutUsdata('ourMission')">Save</button>
+										<button class="btn btn-primary">Back</button>
+									</div>
 								</div>
-								<div class="edit-btns d-flex justify-content-end">
-									<button class="btn btn-primary mr-4">Save</button>
-									<button class="btn btn-primary">Back</button>
-								</div>
-		      				</div>
-		      			</form>
-	      			</div>
-		      	</div>
-	      	</div>
-	      </div>
-	  	</div>
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="work-for-sec">
 	<div class="container">
-	    <div class="row">
-	      <div class="col-md-12">
-	      	<div class="card">
-	      		<div class="manage-home-header">
-	      			<div class="card-header d-flex justify-content-between">
-	      				<strong>Graduate Job Openings</strong>
-	      				<div class="slide-cs">
-	      					<span class="mr-2">Visibility </span>
-	      					<mat-slide-toggle></mat-slide-toggle>
-	      				</div>
-	      			</div>
-	      			<div class="card-body">
-	      				<form>
-		      				<div class="home-mng-form">
-		      					<div class="form-group">
-									<label>Heading</label>
-									<input type="text" name="" class="form-control" value="Graduate Job Openings Across Australia">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<form [formGroup]="jobOpenings">
+						<div class="manage-home-header">
+							<div class="card-header d-flex justify-content-between">
+								<strong>Graduate Job Openings</strong>
+								<div class="slide-cs">
+									<span class="mr-2">Visibility </span>
+									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
 								</div>
-								<div class="form-group">
-									<label>Description</label>
-									<textarea class="form-control" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+							</div>
+							<div class="card-body">
+
+								<div class="home-mng-form">
+									<div class="form-group">
+										<label>Heading</label>
+										<input type="text" name="" class="form-control" 
+										formControlName="heading"
+											value=" Testing Graduate Job Openings Across Australia">
+											<div *ngIf="(jobOpenings.touched || jobOpenings.dirty) && jobOpenings.invalid && jobOpenings.controls.heading?.errors?.required  " class="invalid">
+												*Please enter heading
+											</div>
+										
+									</div>
+									<div class="form-group">
+										<label>Description</label>
+										<textarea class="form-control" formControlName="description"
+											rows="4">Testing Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+											  <div *ngIf="(jobOpenings.touched || jobOpenings.dirty) && jobOpenings.invalid && jobOpenings.controls.description?.errors?.required  " class="invalid">
+												*Please enter description
+											</div>
+									</div>
+									<div class="edit-btns d-flex justify-content-end">
+										<button class="btn btn-primary mr-4" (click)="postAboutUsdata('jobOpenings')">Save</button>
+										<button class="btn btn-primary">Back</button>
+									</div>
 								</div>
-								<div class="edit-btns d-flex justify-content-end">
-									<button class="btn btn-primary mr-4">Save</button>
-									<button class="btn btn-primary">Back</button>
-								</div>
-		      				</div>
-		      			</form>
-	      			</div>
-		      	</div>
-	      	</div>
-	      </div>
-	  	</div>
+
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="work-for-sec">
 	<div class="container">
-	    <div class="row">
-	      <div class="col-md-12">
-	      	<div class="card">
-	      		<div class="manage-home-header">
-	      			<div class="card-header d-flex justify-content-between">
-	      				<strong>TopGraduates isn’t...</strong>
-	      				<div class="slide-cs">
-	      					<span class="mr-2">Visibility </span>
-	      					<mat-slide-toggle></mat-slide-toggle>
-	      				</div>
-	      			</div>
-	      			<div class="card-body">
-	      				<form>
-		      				<div class="home-mng-form">
-		      					<div class="form-group">
-									<label>Heading</label>
-									<input type="text" name="" class="form-control" value="TopGraduates isn’t...">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<form  [formGroup]="TopGraduates">
+					<div class="manage-home-header">
+						<div class="card-header d-flex justify-content-between">
+							<strong>TopGraduates isn’t...</strong>
+							<div class="slide-cs">
+								<span class="mr-2">Visibility </span>
+								<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+							</div>
+						</div>
+						<div class="card-body">
+							
+								<div class="home-mng-form">
+									<div class="form-group">
+										<label>Heading</label>
+										<input type="text" name="" class="form-control" value="Testing TopGraduates isn’t..." 
+										formControlName="heading">
+										<div *ngIf="(TopGraduates.touched || TopGraduates.dirty) && TopGraduates.invalid && TopGraduates.controls.heading?.errors?.required  " class="invalid">
+											*Please enter heading
+										</div>
+									</div>
+									<div class="form-group" >
+										<label>Text 1</label>
+										<input type="text" name="" class="form-control" value=" testing Lorem ipsum" formControlName="textFields1">
+										<div *ngIf="(TopGraduates.touched || TopGraduates.dirty) && TopGraduates.invalid && TopGraduates.controls.textFields1?.errors?.required  " class="invalid">
+											*Field is Required
+										</div>
+									</div>
+									<div class="form-group">
+										<label>Text 2</label>
+										<input type="text" name="" class="form-control" value="testing dolor sit" formControlName="textFields2">
+										<div *ngIf="(TopGraduates.touched || TopGraduates.dirty) && TopGraduates.invalid && TopGraduates.controls.textFields2?.errors?.required  " class="invalid">
+											*Field is Required
+										</div>
+									</div>
+									<div class="form-group">
+										<label>Text 3</label>
+										<input type="text" name="" class="form-control" value="testing amet consectetur" formControlName="textFields2">
+										<div *ngIf="(TopGraduates.touched || TopGraduates.dirty) && TopGraduates.invalid && TopGraduates.controls.textFields3?.errors?.required  " class="invalid">
+											*Field is Required
+										</div>
+									</div>
+									<div class="edit-btns d-flex justify-content-end">
+										<button class="btn btn-primary mr-4" (click)="postAboutUsdata('TopGraduates')">Save</button>
+										<button class="btn btn-primary">Back</button>
+									</div>
 								</div>
-								<div class="form-group">
-									<label>Text 1</label>
-									<input type="text" name="" class="form-control" value="Lorem ipsum">
-								</div>
-								<div class="form-group">
-									<label>Text 2</label>
-									<input type="text" name="" class="form-control" value="dolor sit">
-								</div>
-								<div class="form-group">
-									<label>Text 3</label>
-									<input type="text" name="" class="form-control" value="amet consectetur">
-								</div>
-								<div class="edit-btns d-flex justify-content-end">
-									<button class="btn btn-primary mr-4">Save</button>
-									<button class="btn btn-primary">Back</button>
-								</div>
-		      				</div>
-		      			</form>
-	      			</div>
-		      	</div>
-	      	</div>
-	      </div>
-	  	</div>
+							
+						</div>
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
