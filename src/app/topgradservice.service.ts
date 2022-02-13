@@ -267,6 +267,15 @@ export class TopgradserviceService implements HttpInterceptor {
           return res
         }))
   }
+  postHomePageContent(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/edit/homepage/content`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL,data)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
 
 }
 

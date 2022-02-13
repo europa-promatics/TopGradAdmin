@@ -17,12 +17,8 @@ export class HomepageManagementComponent implements OnInit {
   employerform: FormGroup;
   graduateform: FormGroup;
   newRegister: FormGroup;
-  title: any;
-  image: any;
-  video: any;
-  name: any;
-  designation: any;
-  heading: any;
+  Companies :FormGroup;
+  mainBenefitsForBoth:FormGroup;
   selectedfile: File;
   selectedfile1: File;
   selectedfile2: File;
@@ -33,6 +29,8 @@ export class HomepageManagementComponent implements OnInit {
   title1: any;
   description: any;
   video1: any;
+  logos=[]
+  logosUrl=[]
 
 
   constructor(private sanitizer: DomSanitizer, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private _formBuilder: FormBuilder, private router: Router) {
@@ -42,10 +40,9 @@ export class HomepageManagementComponent implements OnInit {
       'is_visible': ['']
     })
 
-   
-
     this.curatedform = this._formBuilder.group({
-      'heading': ['', [Validators.required]]
+      'heading': ['', [Validators.required]],
+      'is_visible': ['']
     })
 
     this.storyform = this._formBuilder.group({
@@ -59,130 +56,58 @@ export class HomepageManagementComponent implements OnInit {
     this.successform = this._formBuilder.group({
       'heading': ['', [Validators.required]],
       'video': ['', [Validators.required]],
-      'discriptionArray': this._formBuilder.array([])
+      'discriptionArray': this._formBuilder.array([]),
+      'is_visible': ['']
     })
 
-    this.employerform = this._formBuilder.group({
-      'employerArray': this._formBuilder.array([])
+    this.mainBenefitsForBoth = this._formBuilder.group({
+      'heading': ['', [Validators.required]],
+      'is_visible': [''],
+      'employerTab': this._formBuilder.group({
+        'is_visible': [''],
+        'employerArray': this._formBuilder.array([])
+      }),
+      'graduateTab': this._formBuilder.group({
+        'is_visible': [''],
+        'graduateArray': this._formBuilder.array([])
+      })
     })
-
-    this.graduateform = this._formBuilder.group({
-      'graduateArray': this._formBuilder.array([])
-    })
+    
 
     this.newRegister = this._formBuilder.group({
       'text': ['', [Validators.required]],
       'heading': ['', [Validators.required]],
       'description': ['', [Validators.required]],
       'image': ['', [Validators.required]],
+      'is_visible': ['']
+    })
+
+    this.Companies = this._formBuilder.group({
+      'heading': ['', [Validators.required]],
+      'image': ['', [Validators.required]],
+      'is_visible': ['']
     })
 
   }
 
   ngOnInit(): void {
 
+    
     this.homepagecontent();
-
-    // console.log("sedhfnuesdhfuehnfrgersnddgin",this.headerform.controls.title.value);
-
   }
 
   get employerArray(): FormArray {
-    return this.employerform.get('employerArray') as FormArray;
+    return this.mainBenefitsForBoth.controls['employerTab'].get('employerArray') as FormArray;
   }
   get graduateArray(): FormArray {
-    return this.graduateform.get('graduateArray') as FormArray;
+    return this.mainBenefitsForBoth.controls['graduateTab'].get('graduateArray') as FormArray;
   }
   get discriptionArray(): FormArray {
     return this.successform.get('discriptionArray') as FormArray;
   }
 
 
-  header() {
-    if (this.headerform.invalid) {
-      this.headerform.markAllAsTouched()
-    }
-    console.log("sdsfsfdsfdfdfds", this.headerform)
-    var obj = {
-      home_header_section: {
-        title: this.headerform.value.title,
-        image: this.filename
-      }
-    }
-    console.log(obj);
-    this.Service.headersection(obj).subscribe(res => {
-      console.log("fgdgfdgfdfgdfgd", res);
-    })
-  }
-
-  story() {
-    if (this.storyform.invalid) {
-      this.storyform.markAllAsTouched()
-    }
-    console.log("stroryform", this.storyform)
-    const formData = new FormData();
-    formData.append('file', this.selectedfile);
-    formData.append('title', this.storyform.value.title);
-    formData.append('description', this.storyform.value.description,);
-    formData.append('posted_by', this.storyform.value.name);
-    formData.append('position', this.storyform.value.designation);
-    //   var obj={
-    //     title:this.storyform.value.title,
-    //     description:this.storyform.value.description,
-    //     name:this.storyform.value.name,
-    //     designation:this.storyform.value.designation,
-    //     video: this.selectedfile,
-    // }
-    console.log(formData);
-  }
-
-
-  success() {
-    if (this.successform.invalid) {
-      this.successform.markAllAsTouched()
-    }
-    console.log("successform", this.successform)
-    const formData = new FormData();
-    formData.append('file', this.selectedfile);
-    formData.append('heading', this.storyform.value.heading);
-    formData.append('description1', this.successform.value.sliderdesc1);
-    formData.append('description2', this.successform.value.sliderdesc2);
-    formData.append('description3', this.successform.value.sliderdesc3);
-    //   var obj={
-    //     heading:this.successform.value.heading,
-    //     video: this.selectedfile,
-    //     sliderdesc1:this.successform.value.sliderdesc1,
-    //     sliderdesc2:this.successform.value.sliderdesc2,
-    //     sliderdesc3:this.successform.value.sliderdesc3,
-
-    // }
-    // console.log(obj);
-  }
-
-  employer() {
-    if (this.employerform.invalid) {
-      this.employerform.markAllAsTouched()
-    }
-  }
-
-  curated() {
-    if (this.curatedform.invalid) {
-      this.curatedform.markAllAsTouched()
-    }
-    console.log("curatedform", this.curatedform)
-    var obj = {
-      heading: this.curatedform.value.heading,
-    }
-    console.log(obj);
-  }
-
-  onSelect3(e) {
-    console.log(e);
-    console.log(e.target.files[0].name);
-    this.selectedfile3 = e.target.files[0].name;
-  }
-
-  onSelect2(e) {
+  onStoryFormimageChange(e) {
     console.log(e);
     console.log(e.target.files[0].name);
     this.selectedfile2 = e.target.files[0];
@@ -198,8 +123,7 @@ export class HomepageManagementComponent implements OnInit {
     })
   }
 
-
-  onSelect1(e) {
+  onHeaderFormChange(e) {
     console.log(e);
     console.log(e.target.files[0].name);
     this.file = e.target.files[0]
@@ -218,11 +142,19 @@ export class HomepageManagementComponent implements OnInit {
     // })
   }
 
+  onSelectLogo(e) {
+    console.log("logos response ==>", e.addedFiles[0]);
+    this.selectedfile = e.addedFiles[0];
+    this.logos.push(e.addedFiles[0])
+   
+    const formData = new FormData();
+    formData.append('media', this.selectedfile);
+    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
 
-  onSelect(e) {
-    console.log(e);
-    this.files.push(e.addedFiles);
-    console.log(this.files);
+      console.log("video response ==>", resp);
+
+      this.logosUrl.push(resp.file_name)
+    })
   }
   setHeadingImage(e) {
     this.selectedfile2 = e.target.files[0];
@@ -248,6 +180,19 @@ export class HomepageManagementComponent implements OnInit {
       })
     })
   }
+  onGraduatesChange(e,index){
+    this.selectedfile = e.target.files[0];
+    const formData = new FormData();
+    formData.append('media', this.selectedfile);
+    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+
+      console.log("video response ==>", resp);
+
+      this.graduateArray.at(index).patchValue({
+        image: resp.file_name
+      })
+    })
+  }
   onSelectVideo(e){
     this.selectedfile = e.target.files[0];
     const formData = new FormData();
@@ -261,9 +206,23 @@ export class HomepageManagementComponent implements OnInit {
       })
     })
   }
-  
-  
+  onCompaniesChangeImage(e){
+    this.selectedfile = e.target.files[0];
+    const formData = new FormData();
+    formData.append('media', this.selectedfile);
+    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
 
+      console.log("video response ==>", resp);
+
+      this.Companies.controls['image'].setValue(resp.file_name)
+    })
+  }
+  onRemove(i)
+  {
+    this.logos.splice(i,1)
+    this.logosUrl.splice(i,1)
+
+  }
   homepagecontent() {
     this.Service.homecontent().subscribe(data => {
       console.log("home page content is ====>", data)
@@ -289,17 +248,22 @@ export class HomepageManagementComponent implements OnInit {
         text: data.data.section_7.text,
         description: data.data.section_7.description,
         image: data.data.section_7.image,
+        is_visible: data.data.section_7.is_visible
       })
-      console.log("newRegister==>", this.newRegister);
-      
       this.successform.patchValue({
         heading:data.data.section_6.heading,
         video:this.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video)
       })
-      data.data.section_6.description.forEach((element) => {
-        this.discriptionArray.push( this._formBuilder.control(element,[Validators.required]))
-      });
-
+      this.Companies.patchValue({
+        heading:data.data.section_5.heading,
+        image: data.data.section_5.image,
+        is_visible: data.data.section_5.is_visible
+      })
+      this.mainBenefitsForBoth.patchValue({
+        heading:data.data.section_4.heading,
+        is_visible: data.data.section_4.is_visible
+      })
+     
       data.data.section_4.tab_1.forEach((element) => {
         this.employerArray.push(this._formBuilder.group({
           heading: [element.heading, [Validators.required]],
@@ -309,8 +273,6 @@ export class HomepageManagementComponent implements OnInit {
         }))
       });
 
-      console.log("employeee==>",this.employerform);
-      
       data.data.section_4.tab_2.forEach((element) => {
         this.graduateArray.push(this._formBuilder.group({
           heading: [element.heading, [Validators.required]],
@@ -320,9 +282,171 @@ export class HomepageManagementComponent implements OnInit {
         }))
       });
       
-
+      data.data.section_6.description.forEach((element) => {
+        this.discriptionArray.push( this._formBuilder.control(element,[Validators.required]))
+      });
+     
     })
 
+  }
+  postHomePageContent(type,Secondtype?){
+    let obj: any
+    console.log("type==>",type);
+    
+    if (type == 'headerform') {
+      if (this.headerform.valid) {
+        const formdata = new FormData()
+        const home_header_section = {
+          title: this.headerform.controls['title'].value,
+          image: this.headerform.controls['image'].value,
+          is_visible: this.headerform.controls['is_visible'].value
+        }
+        formdata.append("home_header_section", JSON.stringify(home_header_section))
+       
+        obj = formdata
+
+      } else {
+        this.headerform.markAllAsTouched()
+        return 
+      }
+    }
+    if (type == "curatedform") {
+      if (this.curatedform.valid) {
+       
+        const section_3 = {
+          heading: this.curatedform.controls['heading'].value,
+          is_visible: this.curatedform.controls['is_visible'].value
+        }
+        const formdata=new FormData()
+        formdata.append("section_3", JSON.stringify(section_3))
+
+        obj = formdata
+    }else{
+      this.curatedform.markAllAsTouched()
+      return 
+    }
+  }
+    if (type == "storyform") {
+      if (this.storyform.valid) {
+        
+        const our_story_section = {
+          title: this.storyform.controls['title1'].value,
+          description: this.storyform.controls['description'].value, 
+          posted_by: this.storyform.controls['name'].value,
+          position: this.storyform.controls['designation'].value,
+          video: this.storyform.controls['video'].value,
+          is_visible: this.storyform.controls['is_visible'].value
+        }
+        const formdata=new FormData()
+        formdata.append("our_story_section", JSON.stringify(our_story_section))
+        obj = formdata
+    }else{
+      this.storyform.markAllAsTouched()
+      return 
+    }
+    }
+    if (type == "successform") {
+      if (this.successform.valid) {
+       
+        const section_6 = {
+          heading: this.successform.controls['heading'].value,
+          video: this.successform.controls['video'].value,
+          description: this.successform.controls['discriptionArray'].value,
+          is_visible: this.successform.controls['is_visible'].value
+        }
+        const formdata=new FormData()
+        formdata.append("section_6", JSON.stringify(section_6))
+        obj = formdata
+    }else{
+      this.successform.markAllAsTouched()
+      return 
+    }
+
+    }
+    if (type == "mainBenefitsForBoth") {
+     
+    console.log("both==>",this.mainBenefitsForBoth);
+
+      if (this.mainBenefitsForBoth.valid) {
+       
+        if (Secondtype == "employerTab") {
+            if (this.mainBenefitsForBoth.controls['employerTab'].valid) {
+             
+              const section_4 = {
+                heading: this.mainBenefitsForBoth.controls['heading'].value,
+                is_visible: this.mainBenefitsForBoth.controls['is_visible'].value,
+                tab_1:this.mainBenefitsForBoth.controls['employerTab'].get('employerArray').value
+              }
+              const formdata=new FormData()
+              formdata.append("section_4", JSON.stringify(section_4))
+              obj = formdata
+          }else{
+            this.mainBenefitsForBoth.controls['employerTab'].markAllAsTouched()
+            return 
+          }
+          }
+          if (Secondtype == "graduateTab") {
+            if (this.mainBenefitsForBoth.controls['graduateTab'].valid) {
+              
+              const section_4 = {
+                heading: this.mainBenefitsForBoth.controls['heading'].value,
+                is_visible: this.mainBenefitsForBoth.controls['is_visible'].value,
+                tab_2:this.mainBenefitsForBoth.controls['graduateTab'].get('graduateArray').value
+              }
+              const formdata=new FormData()
+              formdata.append("section_4", JSON.stringify(section_4))
+              obj = formdata
+          }else{
+            this.mainBenefitsForBoth.controls['graduateTab'].markAllAsTouched()
+            return 
+          }
+          }
+
+
+      }
+
+
+
+    }
+    if (type == "newRegister") {
+      if (this.newRegister.valid) {
+        
+        const section_7 = {
+          heading: this.newRegister.controls['heading'].value,
+          text:this.newRegister.controls['text'].value,
+          description: this.newRegister.controls['description'].value,
+          image: this.newRegister.controls['image'].value,
+          is_visible: this.newRegister.controls['is_visible'].value
+        }
+        const formdata=new FormData()
+        formdata.append("section_7", JSON.stringify(section_7))
+        obj = formdata
+    }else{
+      this.newRegister.markAllAsTouched()
+      return 
+    }
+    }
+    if (type == "Companies") {
+      if (this.Companies.valid) {
+        
+        const section_5 = {
+          heading: this.Companies.controls['heading'].value,
+          logos:this.logosUrl,
+          image: this.Companies.controls['image'].value,
+          is_visible: this.Companies.controls['is_visible'].value
+        }
+        const formdata=new FormData()
+        formdata.append("section_5", JSON.stringify(section_5))
+        obj = formdata
+    }else{
+      this.Companies.markAllAsTouched()
+      return 
+    }
+    }
+    this.Service.postHomePageContent(obj).subscribe((resp) => {
+
+      this.Service.showMessage({ message: "Submitted Successfully" })
+    })
   }
 
 }

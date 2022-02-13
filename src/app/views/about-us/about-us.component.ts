@@ -164,7 +164,9 @@ export class AboutUsComponent implements OnInit {
           heading: this.Champions.controls['heading'].value,
           is_visible: this.Champions.controls['is_visible'].value
         }
-        obj = section_2
+        const formData=new FormData()
+        formData.append('section_2',JSON.stringify(section_2))
+        obj = formData
     }else{
       this.Champions.markAllAsTouched()
       return 
@@ -177,7 +179,9 @@ export class AboutUsComponent implements OnInit {
           heading: this.ourVision.controls['heading'].value,
           is_visible: this.ourVision.controls['is_visible'].value
         }
-        obj = section_3
+        const formData=new FormData()
+        formData.append('section_3',JSON.stringify(section_3))
+        obj = formData
     }else{
       this.ourVision.markAllAsTouched()
       return 
@@ -190,7 +194,9 @@ export class AboutUsComponent implements OnInit {
           heading: this.ourMission.controls['heading'].value,
           is_visible: this.ourMission.controls['is_visible'].value
         }
-        obj = section_4
+        const formData=new FormData()
+        formData.append('section_4',JSON.stringify(section_4))
+        obj = formData
     }else{
       this.ourMission.markAllAsTouched()
       return 
@@ -204,7 +210,9 @@ export class AboutUsComponent implements OnInit {
           heading: this.jobOpenings.controls['heading'].value,
           is_visible: this.jobOpenings.controls['is_visible'].value
         }
-        obj = section_5
+        const formData=new FormData()
+        formData.append('section_5',JSON.stringify(section_5))
+        obj = formData
     }else{
       this.jobOpenings.markAllAsTouched()
       return 
@@ -218,7 +226,9 @@ export class AboutUsComponent implements OnInit {
           text:this.TopGraduates.controls['Fields'].value,
           is_visible: this.TopGraduates.controls['is_visible'].value
         }
-        obj = section_6
+        const formData=new FormData()
+        formData.append('section_6',JSON.stringify(section_6))
+        obj = formData
     }else{
       this.TopGraduates.markAllAsTouched()
       return 
