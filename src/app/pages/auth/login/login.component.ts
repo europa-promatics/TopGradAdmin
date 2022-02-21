@@ -33,7 +33,10 @@ export class LoginComponent {
     }
     this.Service.login(obj).subscribe(res=>{
       console.log("fgdgfdgfdfgdfgd",res);
-      localStorage.setItem("admin_details",JSON.stringify(res.data.email))
+      localStorage.setItem("admin_email",res.data.email)
+      localStorage.setItem("first_name",res.data.first_name)
+      localStorage.setItem("last_name",res.data.last_name)
+      localStorage.setItem("image",res.data.image)
       if(res.token){
         console.log("kdjhcjdshcjdhkjdh");
         localStorage.setItem("token", res.token)

@@ -187,6 +187,101 @@ export class TopgradserviceService implements HttpInterceptor {
       )
   }
 
+  termslist(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/terms/or/privacy/${obj.offset}-${obj.limit}/${obj.type}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  termsheading(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/terms/privacy/detail?content_id=${obj.content_id}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  posttermheading(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/edit/terms/privacy`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  addtermheading(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/add/edit/terms/and/privacy`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+  
+  deleteterm(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/delete/heading/terms/privacy`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  getsubheading(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/sub-heading/detail/terms/privacy?content_id=${obj.content_id}&sub_heading_id=${obj.sub_heading_id}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  addtermsubheading(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/add/sub-heading/terms/privacy `;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  deletetermsubheading(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/delete/sub-heading/terms/privacy`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
 
   sendresetmail(obj: any): Observable<any> {
     let API_URL = `${this.SERVER_URL}/admin/forgot/password`;
@@ -276,6 +371,136 @@ export class TopgradserviceService implements HttpInterceptor {
           return res
         }))
   }
+
+  profile(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/edit/profile`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
+  contactList(evt): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/support/list/${evt.offset}-${evt.limit}?type=${evt.type}&search=${evt.search}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+    .pipe(
+    map(res => {
+    return res
+    }))
+  }
+
+
+  contactDetail(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/support/details/${data.support_id}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  contactDelete(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/delete/support/query/${data.support_id}`;
+    console.log(API_URL)
+    return this.httpClient.delete(API_URL,data)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  contactReply(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/reply/to/support/query`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL,data)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  changepwd(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/change/password`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL,data)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+
+  faqCategories(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/all/faq/categories?user_type=${data.user_type}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL,data)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  faqList(evt): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/faq/list/${evt.offset}-${evt.limit}?user_type=${evt.user_type}&search=${evt.search}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  faqDetail(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/faq/details/${data.faq_id}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
+  addEditFaq(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/add/edit/faq`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL,data)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+  faqDelete(data:any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/delete/faq/${data.faq_id}`;
+    console.log(API_URL)
+    return this.httpClient.delete(API_URL,data)
+      .pipe(
+        map(res => {
+          return res
+        }),
+        catchError(this.error)
+      )
+  }
+
 
 }
 

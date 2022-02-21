@@ -11,7 +11,7 @@ import { RegisterComponent } from './views/register/register.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
-import { ViewProfileComponent } from './views/view-profile/view-profile.component';
+import { ViewProfileComponent } from './pages/view-profile/view-profile.component';
 import { EmployersListComponent } from './pages/employers-list/employers-list.component';
 import { EditEmployerComponent } from './views/edit-employer/edit-employer.component';
 import { GraduateListComponent } from './pages/graduate-list/graduate-list.component';
@@ -49,7 +49,8 @@ import { EditEmployerHowItWorksComponent } from './views/edit-employer-how-it-wo
 import { GraduateHowItWorksComponent } from './views/graduate-how-it-works/graduate-how-it-works.component';
 import { EditGraduateHowItWorksComponent } from './views/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
 import { PrivacyPolicyComponent } from './views/privacy-policy/privacy-policy.component';
-import { TermsConditionsComponent } from './views/terms-conditions/terms-conditions.component';
+import { TermsConditionsComponent } from './pages/content-management/terms-conditions/terms-conditions.component';
+import { TermsSubHeadingsComponent } from './pages/content-management/terms-sub-headings/terms-sub-headings.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { ContactListingComponent } from './views/contact-listing/contact-listing.component';
 import { OfferManagementComponent } from './views/offer-management/offer-management.component';
@@ -72,11 +73,14 @@ import { VideoIntro2Component } from './views/video-intro2/video-intro2.componen
 import { VideoIntro3Component } from './views/video-intro3/video-intro3.component';
 import { GraduateVerificationManagementComponent } from './views/graduate-verification-management/graduate-verification-management.component';
 import { FaqsComponent } from './views/faqs/faqs.component';
-import { AddFaqComponent } from './views/add-faq/add-faq.component';
-import { EditFaqComponent } from './views/edit-faq/edit-faq.component';
-import { ViewFaqComponent } from './views/view-faq/view-faq.component';
-import { AboutUsComponent } from './views/about-us/about-us.component';
+import { GraduateAddFaqComponent } from './pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component';
+import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component';
+import { AddFaqComponent } from './pages/support-management/faq_emp-grad/add-faq/add-faq.component';
+import { EditFaqComponent } from './pages/support-management/faq_emp-grad/edit-faq/edit-faq.component';
+import { ViewFaqComponent } from './pages/support-management/faq_emp-grad/view-faq/view-faq.component';
+import { AboutUsComponent } from './pages/content-management/about-us/about-us.component';
 import { HomepageManagementComponent } from './pages/homepage-management/homepage-management.component';
+import { GraduateFaqComponent } from './pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.component';
 // import { IndustrylistComponent } from './pages/content-management/industry-management/industrylist.component';
 import { HelpManagementComponent } from './views/help-management/help-management.component';
 import { ViewHelpComponent } from './views/view-help/view-help.component';
@@ -87,6 +91,10 @@ import { ViewVerificationComponent } from './views/view-verification/view-verifi
 import { ViewOfferComponent } from './views/view-offer/view-offer.component';
 import { ViewReportComponent } from './views/view-report/view-report.component';
 import { AuthguardGuard } from './authguard.guard';
+import { AddHeadingComponent } from './pages/content-management/add-heading/add-heading.component';
+import { EditHeadingComponent } from './pages/content-management/edit-heading/edit-heading.component';
+import { EditSubHeadingComponent } from './pages/content-management/edit-sub-heading/edit-sub-heading.component';
+import { AddSubHeadingComponent } from './pages/content-management/add-sub-heading/add-sub-heading.component';
 
 
 
@@ -148,6 +156,14 @@ export const routes: Routes = [
     },
     children: [
       {
+      path: 'employersFaq',
+      loadChildren: () => import('./pages/support-management/faq_emp-grad/employer-faq/employer-faq.module').then(m => m.EmployerFaqModule)
+      },
+      {
+        path: 'graduateFaq',
+        loadChildren: () => import('./pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.module').then(m => m.GraduateFaqModule)
+        },
+      {
         path: 'base',
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
       },
@@ -170,6 +186,22 @@ export const routes: Routes = [
       {
         path: 'graduateList',
         loadChildren: () => import('./pages/graduate-list/graduate-list.module').then(m => m.GraduateListModule)
+      },
+      {
+        path: 'addHeading',
+        loadChildren: () => import('./pages/content-management/add-heading/add-heading.module').then(m => m.AddHeadingModule)
+      },
+      {
+        path: 'addSubHeading/:id',
+        loadChildren: () => import('./pages/content-management/add-sub-heading/add-sub-heading.module').then(m => m.AddSubHeadingModule)
+      },
+       {
+        path: 'editHeading/:id',
+        loadChildren: () => import('./pages/content-management/edit-heading/edit-heading.module').then(m => m.EditHeadingModule)
+      },
+      {
+        path: 'editSubHeading/:content_id/:id',
+        loadChildren: () => import('./pages/content-management/edit-sub-heading/edit-sub-heading.module').then(m => m.EditSubHeadingModule)
       },
       {
         path: 'editEmployer',
@@ -309,7 +341,11 @@ export const routes: Routes = [
       },
       {
         path: 'viewProfile',
-        loadChildren: () => import('./views/view-profile/view-profile.module').then(m => m.ViewProfileModule)
+        loadChildren: () => import('./pages/view-profile/view-profile.module').then(m => m.ViewProfileModule)
+      },
+      {
+        path: 'changePassword',
+        loadChildren: () => import('./pages/change-password/change-password.module').then(m => m.ChangePasswordModule)
       },
       {
         path: 'notifications',
@@ -321,10 +357,14 @@ export const routes: Routes = [
       },
       {
         path: 'terms-conditions',
-        loadChildren: () => import('./views/terms-conditions/terms-conditions.module').then(m => m.TermsConditionsModule)
+        loadChildren: () => import('./pages/content-management/terms-conditions/terms-conditions.module').then(m => m.TermsConditionsModule)
       },
       {
-        path: 'contact-us',
+        path: 'terms-conditions-sub-headings/:id',
+        loadChildren: () => import('./pages/content-management/terms-sub-headings/terms-sub-headings.module').then(m => m.TermsSubHeadingsModule)
+      },
+      {
+        path: 'contact-us/:id',
         loadChildren: () => import('./views/contact-us/contact-us.module').then(m => m.ContactUsModule)
       },
       {
@@ -405,24 +445,45 @@ export const routes: Routes = [
         loadChildren: () => import('./views/graduate-verification-management/graduate-verification-management.module').then(m => m.GraduateVerificationManagementModule)
       },
       {
-        path: 'faqs',
-        loadChildren: () => import('./views/faqs/faqs.module').then(m => m.FaqsModule)
+      path: 'graduate-add-faq',
+      loadChildren: () => import('./pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.module').then(m => m.GraduateAddFaqModule)
       },
       {
-        path: 'add-faq',
-        loadChildren: () => import('./views/add-faq/add-faq.module').then(m => m.AddFaqModule)
+      path: 'graduate-edit-faq/:id',
+      loadChildren: () => import('./pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.module').then(m => m.GraduateEditFaqModule)
       },
       {
-        path: 'edit-faq',
-        loadChildren: () => import('./views/edit-faq/edit-faq.module').then(m => m.EditFaqModule)
+      path: 'add-faq',
+      loadChildren: () => import('./pages/support-management/faq_emp-grad/add-faq/add-faq.module').then(m => m.AddFaqModule)
       },
       {
-        path: 'view-faq',
-        loadChildren: () => import('./views/view-faq/view-faq.module').then(m => m.ViewFaqModule)
+      path: 'edit-faq/:id',
+      loadChildren: () => import('./pages/support-management/faq_emp-grad/edit-faq/edit-faq.module').then(m => m.EditFaqModule)
       },
+      {
+      path: 'view-faq/:id',
+      loadChildren: () => import('./pages/support-management/faq_emp-grad/view-faq/view-faq.module').then(m => m.ViewFaqModule)
+      },
+        
+      // {
+      //   path: 'faqs',
+      //   loadChildren: () => import('./views/faqs/faqs.module').then(m => m.FaqsModule)
+      // },
+      // {
+      //   path: 'add-faq',
+      //   loadChildren: () => import('./views/add-faq/add-faq.module').then(m => m.AddFaqModule)
+      // },
+      // {
+      //   path: 'edit-faq',
+      //   loadChildren: () => import('./views/edit-faq/edit-faq.module').then(m => m.EditFaqModule)
+      // },
+      // {
+      //   path: 'view-faq',
+      //   loadChildren: () => import('./views/view-faq/view-faq.module').then(m => m.ViewFaqModule)
+      // },
       {
         path: 'about-us',
-        loadChildren: () => import('./views/about-us/about-us.module').then(m => m.AboutUsModule)
+        loadChildren: () => import('./pages/content-management/about-us/about-us.module').then(m => m.AboutUsModule)
       },
       {
         path: 'homePageManagement',
@@ -437,7 +498,7 @@ export const routes: Routes = [
         loadChildren: () => import('./views/help-management/help-management.module').then(m => m.HelpManagementModule)
       },
       {
-        path: 'view-help',
+        path: 'view-help/:id',
         loadChildren: () => import('./views/view-help/view-help.module').then(m => m.ViewHelpModule)
       },
       {

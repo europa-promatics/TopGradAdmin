@@ -15,10 +15,10 @@
                     </div>
                     <input type="text" class="form-control" placeholder="Username" autocomplete="username" required [(ngModel)]="uname" [formControl]="loginform.controls['uname']">
                   </div>
-                  <div *ngIf="(loginform.touched || loginform.dirty) && loginform.invalid && loginform.controls.uname.errors?.required" class="invalid">
+                  <div *ngIf="(loginform.controls.uname?.touched || loginform.controls.uname?.dirty) && loginform.controls.uname?.invalid && loginform.controls.uname.errors?.required" class="invalid">
                     *Please enter username
                   </div>
-                  <div *ngIf="(loginform.touched || loginform.dirty) && loginform.invalid && loginform.controls.uname.errors?.email" class="invalid" >
+                  <div *ngIf="(loginform.controls.uname?.touched || loginform.controls.uname?.dirty) && loginform.controls.uname?.invalid && loginform.controls.uname.errors?.email" class="invalid" >
                       *Please enter valid Username
                   </div>
                   <div class="input-group mb-4">
@@ -27,7 +27,7 @@
                     </div>
                     <input type="password" class="form-control" placeholder="Password" autocomplete="current-password" required [(ngModel)]="pwd" [formControl]="loginform.controls['pwd']">
                   </div>
-                  <div *ngIf="(loginform.touched || loginform.dirty) && loginform.invalid && loginform.controls.pwd.errors?.required" class="invalid">
+                  <div *ngIf="(loginform.controls.pwd?.touched || loginform.controls.pwd?.dirty) && loginform.controls.pwd?.invalid && loginform.controls.pwd.errors?.required" class="invalid">
                     *Please enter password
                   </div>
                   <div class="row">

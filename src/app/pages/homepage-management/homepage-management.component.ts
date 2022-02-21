@@ -17,8 +17,8 @@ export class HomepageManagementComponent implements OnInit {
   employerform: FormGroup;
   graduateform: FormGroup;
   newRegister: FormGroup;
-  Companies :FormGroup;
-  mainBenefitsForBoth:FormGroup;
+  Companies: FormGroup;
+  mainBenefitsForBoth: FormGroup;
   selectedfile: File;
   selectedfile1: File;
   selectedfile2: File;
@@ -29,15 +29,18 @@ export class HomepageManagementComponent implements OnInit {
   title1: any;
   description: any;
   video1: any;
-  logos=[]
-  logosUrl=[]
+  logos = []
+  logosUrl = []
+  data: any;
+  ext: any;
 
 
   constructor(private sanitizer: DomSanitizer, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private _formBuilder: FormBuilder, private router: Router) {
     this.headerform = this._formBuilder.group({
-      'title': ['', [Validators.required]],
+      'title': ['', [Validators.required, Validators.maxLength(200)]],
       'image': ['', [Validators.required]],
-      'is_visible': ['']
+      'is_visible': [''],
+      'county': [''],
     })
 
     this.curatedform = this._formBuilder.group({
@@ -46,53 +49,59 @@ export class HomepageManagementComponent implements OnInit {
     })
 
     this.storyform = this._formBuilder.group({
-      'title1': ['', [Validators.required]],
+      'title1': ['', [Validators.required, Validators.maxLength(50)]],
       'description': ['', [Validators.required]],
-      'name': ['', [Validators.required]],
-      'designation': ['', [Validators.required]],
+      'name': ['', [Validators.required, Validators.maxLength(50)]],
+      'designation': ['', [Validators.required, Validators.maxLength(50)]],
       'video': ['', [Validators.required]],
-      'is_visible': ['']
+      'is_visible': [''],
+      'county': [''],
     })
     this.successform = this._formBuilder.group({
-      'heading': ['', [Validators.required]],
+      'heading': ['', [Validators.required, Validators.maxLength(50)]],
       'video': ['', [Validators.required]],
       'discriptionArray': this._formBuilder.array([]),
-      'is_visible': ['']
+      'is_visible': [''],
+      'county': [''],
     })
 
     this.mainBenefitsForBoth = this._formBuilder.group({
-      'heading': ['', [Validators.required]],
+      'heading': ['', [Validators.required, Validators.maxLength(50)]],
       'is_visible': [''],
       'employerTab': this._formBuilder.group({
         'is_visible': [''],
-        'employerArray': this._formBuilder.array([])
+       
+        'employerArray': this._formBuilder.array([ ])
       }),
       'graduateTab': this._formBuilder.group({
         'is_visible': [''],
+        
         'graduateArray': this._formBuilder.array([])
       })
     })
-    
+
 
     this.newRegister = this._formBuilder.group({
-      'text': ['', [Validators.required]],
-      'heading': ['', [Validators.required]],
-      'description': ['', [Validators.required]],
+      'text': ['', [Validators.required, Validators.maxLength(50)]],
+      'heading': ['', [Validators.required, Validators.maxLength(50)]],
+      'description': ['', [Validators.required, Validators.maxLength(500)]],
       'image': ['', [Validators.required]],
-      'is_visible': ['']
+      'is_visible': [''],
+      'county': [''],
     })
 
     this.Companies = this._formBuilder.group({
-      'heading': ['', [Validators.required]],
+      'heading': ['', [Validators.required, Validators.maxLength(100)]],
       'image': ['', [Validators.required]],
-      'is_visible': ['']
+      'is_visible': [''],
+      'county': [''],
     })
 
   }
 
   ngOnInit(): void {
 
-    
+
     this.homepagecontent();
   }
 
@@ -110,43 +119,71 @@ export class HomepageManagementComponent implements OnInit {
   onStoryFormimageChange(e) {
     console.log(e);
     console.log(e.target.files[0].name);
-    this.selectedfile2 = e.target.files[0];
-    const formData = new FormData();
-    formData.append('media', this.selectedfile2);
-    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+    const file = e.target.files[0];
+    const fileType = file.type.split("/")[0];
+    console.log("videotype", fileType);
+    if (fileType == "video") {
+      this.selectedfile2 = e.target.files[0];
+      const formData = new FormData();
+      formData.append('media', this.selectedfile2);
+      this.Service.uploadmedia1(formData).subscribe((resp: any) => {
 
-      console.log("video response ==>", resp);
+        console.log("video response ==>", resp);
 
-      this.storyform.patchValue({
-        video: this.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+        this.storyform.patchValue({
+          video: this.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+        })
       })
-    })
+      this.storyform.get('county').clearValidators(); // 6. Clear All Validators
+      this.storyform.get('county').updateValueAndValidity();
+      console.log("rightextension", this.storyform);
+    }
+    else {
+      this.storyform.get('county').setValidators([Validators.required]); // 5.Set Required Validator
+      this.storyform.get('county').updateValueAndValidity();
+
+      console.log("wrongextension", this.storyform);
+    }
   }
 
   onHeaderFormChange(e) {
     console.log(e);
     console.log(e.target.files[0].name);
-    this.file = e.target.files[0]
-    const formData = new FormData();
-    formData.append('media', this.file);
-    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
-      this.headerform.patchValue({
-        image: resp.file_name
-      })
-      console.log("uploaded image==>", this.headerform.controls['image'].value);
+    console.log(e.target.files[0].type);
+    var ext = e.target.files[0].type;
+    console.log("extensions", ext);
+    const file = e.target.files[0];
+    const fileType = file.type.split("/")[0]
+    if (fileType == "image") {
+      console.log("filetype", fileType);
+      this.file = e.target.files[0]
+      const formData = new FormData();
+      formData.append('media', this.file);
+      this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+        this.headerform.patchValue({
+          image: resp.file_name
+        })
+        console.log("uploaded image==>", this.headerform.controls['image'].value);
 
-    })
-    // this.selectedfile1= e.target.files[0].name;
-    // this.Service.uploadmedia1(this.selectedfile1).subscribe(res=>{
-    //   console.log("fgdgfdgfdfgdfgd",res);
-    // })
+      })
+      this.headerform.get('county').clearValidators(); // 6. Clear All Validators
+      this.headerform.get('county').updateValueAndValidity();
+      console.log("rightextension", this.headerform);
+    } else {
+      this.headerform.get('county').setValidators([Validators.required]); // 5.Set Required Validator
+      this.headerform.get('county').updateValueAndValidity();
+
+      console.log(this.headerform);
+    }
   }
 
+
   onSelectLogo(e) {
+    
     console.log("logos response ==>", e.addedFiles[0]);
     this.selectedfile = e.addedFiles[0];
     this.logos.push(e.addedFiles[0])
-   
+
     const formData = new FormData();
     formData.append('media', this.selectedfile);
     this.Service.uploadmedia1(formData).subscribe((resp: any) => {
@@ -157,75 +194,153 @@ export class HomepageManagementComponent implements OnInit {
     })
   }
   setHeadingImage(e) {
-    this.selectedfile2 = e.target.files[0];
-    const formData = new FormData();
-    formData.append('media', this.selectedfile2);
-    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+    const file = e.target.files[0];
+    const fileType = file.type.split("/")[0]
+    if (fileType == "image") {
+      this.selectedfile2 = e.target.files[0];
+      const formData = new FormData();
+      formData.append('media', this.selectedfile2);
+      this.Service.uploadmedia1(formData).subscribe((resp: any) => {
 
-      console.log("video response ==>", resp);
+        console.log("video response ==>", resp);
 
-      this.newRegister.controls['image'].setValue(resp.file_name)
-    })
-  }
-  onEmployerChangeImage(e,index){
-    this.selectedfile = e.target.files[0];
-    const formData = new FormData();
-    formData.append('media', this.selectedfile);
-    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
-
-      console.log("video response ==>", resp);
-
-      this.employerArray.at(index).patchValue({
-        image: resp.file_name
+        this.newRegister.controls['image'].setValue(resp.file_name)
       })
-    })
+      this.newRegister.get('county').clearValidators(); // 6. Clear All Validators
+      this.newRegister.get('county').updateValueAndValidity();
+      console.log("rightextension", this.newRegister);
+    } else {
+      this.newRegister.get('county').setValidators([Validators.required]); // 5.Set Required Validator
+      this.newRegister.get('county').updateValueAndValidity();
+
+      console.log(this.newRegister);
+    }
   }
-  onGraduatesChange(e,index){
-    this.selectedfile = e.target.files[0];
-    const formData = new FormData();
-    formData.append('media', this.selectedfile);
-    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+  onEmployerChangeImage(e, index) {
+    console.log("ind",index);
+    const file = e.target.files[0];
+    const fileType = file.type.split("/")[0];
+    console.log(fileType);
+    if (fileType == "image") {
+      this.selectedfile = e.target.files[0];
+      const formData = new FormData();
+      formData.append('media', this.selectedfile);
+      this.Service.uploadmedia1(formData).subscribe((resp: any) => {
 
-      console.log("video response ==>", resp);
+        console.log("video response ==>", resp);
 
-      this.graduateArray.at(index).patchValue({
-        image: resp.file_name
+        this.employerArray.at(index).patchValue({
+          image: resp.file_name
+        })
       })
-    })
+       this.employerArray.controls[index].get('county').clearValidators(); // 6. Clear All Validators
+       this.employerArray.controls[index].get('county').updateValueAndValidity();
+      console.log("rightextension", this.mainBenefitsForBoth);
+      console.log("gussa na dila", this.employerArray);
+
+    } else {
+       this.employerArray.controls[index].get('county').setValidators([Validators.required]); // 5.Set Required Validator
+       this.employerArray.controls[index].get('county').updateValueAndValidity();
+
+      console.log("wrongectension",this.mainBenefitsForBoth);
+      console.log("gussa na dila", this.employerArray);
+    }
   }
-  onSelectVideo(e){
-    this.selectedfile = e.target.files[0];
-    const formData = new FormData();
-    formData.append('media', this.selectedfile);
-    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+  onGraduatesChange(e, index) {
+    console.log("ind",index);
+    const file = e.target.files[0];
+    const fileType = file.type.split("/")[0];
+    console.log(fileType);
+    if (fileType == "image") {
+      this.selectedfile = e.target.files[0];
+      const formData = new FormData();
+      formData.append('media', this.selectedfile);
+      this.Service.uploadmedia1(formData).subscribe((resp: any) => {
 
-      console.log("video response ==>", resp);
+        console.log("video response ==>", resp);
 
-      this.successform.patchValue({
-        video: this.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+        this.graduateArray.at(index).patchValue({
+          image: resp.file_name
+        })
       })
-    })
-  }
-  onCompaniesChangeImage(e){
-    this.selectedfile = e.target.files[0];
-    const formData = new FormData();
-    formData.append('media', this.selectedfile);
-    this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+      this.graduateArray.controls[index].get('county').clearValidators(); // 6. Clear All Validators
+       this.graduateArray.controls[index].get('county').updateValueAndValidity();
+      console.log("rightextension", this.mainBenefitsForBoth);
+      console.log("gussa na dila", this.graduateArray);
 
-      console.log("video response ==>", resp);
+    } else {
+       this.graduateArray.controls[index].get('county').setValidators([Validators.required]); // 5.Set Required Validator
+       this.graduateArray.controls[index].get('county').updateValueAndValidity();
 
-      this.Companies.controls['image'].setValue(resp.file_name)
-    })
+      console.log("wrongectension",this.mainBenefitsForBoth);
+      console.log("gussa na dila", this.graduateArray);
+    }
   }
-  onRemove(i)
-  {
-    this.logos.splice(i,1)
-    this.logosUrl.splice(i,1)
+  onSelectVideo(e) {
+    const file = e.target.files[0];
+    const fileType = file.type.split("/")[0];
+    console.log("videotype", fileType);
+    if (fileType == "video") {
+      this.selectedfile = e.target.files[0];
+      const formData = new FormData();
+      formData.append('media', this.selectedfile);
+      this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+
+        console.log("video response ==>", resp);
+
+        this.successform.patchValue({
+          video: this.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+        })
+      })
+      this.successform.get('county').clearValidators(); // 6. Clear All Validators
+      this.successform.get('county').updateValueAndValidity();
+      console.log("rightextension", this.successform);
+    }
+    else {
+      this.successform.get('county').setValidators([Validators.required]); // 5.Set Required Validator
+      this.successform.get('county').updateValueAndValidity();
+
+      console.log("wrongextension", this.successform);
+    }
+  }
+  onCompaniesChangeImage(e) {
+    const file = e.target.files[0];
+    const fileType = file.type.split("/")[0];
+    console.log(fileType);
+    if (fileType == "image") {
+      this.selectedfile = e.target.files[0];
+      const formData = new FormData();
+      formData.append('media', this.selectedfile);
+      this.Service.uploadmedia1(formData).subscribe((resp: any) => {
+
+        console.log("video response ==>", resp);
+
+        this.Companies.controls['image'].setValue(resp.file_name)
+      })
+      this.Companies.get('county').clearValidators(); // 6. Clear All Validators
+      this.Companies.get('county').updateValueAndValidity();
+      console.log("rightextension", this.Companies);
+    } else {
+      this.Companies.get('county').setValidators([Validators.required]); // 5.Set Required Validator
+      this.Companies.get('county').updateValueAndValidity();
+
+      console.log("wrongextension",this.Companies);
+
+
+    }
+  }
+  onRemove(i) {
+    this.logos.splice(i, 1)
+    this.logosUrl.splice(i, 1)
 
   }
   homepagecontent() {
     this.Service.homecontent().subscribe(data => {
       console.log("home page content is ====>", data)
+      // this.data=data.data
+      // this.data=JSON.parse(this.data)
+      // console.log("home page content is new====>", this.data)
+
 
       this.headerform.patchValue({
         title: data.data.home_header_section.title,
@@ -236,6 +351,7 @@ export class HomepageManagementComponent implements OnInit {
         title1: data.data.our_story_section.title,
         description: data.data.our_story_section.description,
         name: data.data.our_story_section.posted_by,
+        video: this.sanitizer.bypassSecurityTrustResourceUrl(data.data.our_story_section.video),
         designation: data.data.our_story_section.position,
         is_visible: data.data.our_story_section.is_visible
       })
@@ -251,48 +367,49 @@ export class HomepageManagementComponent implements OnInit {
         is_visible: data.data.section_7.is_visible
       })
       this.successform.patchValue({
-        heading:data.data.section_6.heading,
-        video:this.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video)
+        heading: data.data.section_6.heading,
+        video: this.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video)
       })
       this.Companies.patchValue({
-        heading:data.data.section_5.heading,
+        heading: data.data.section_5.heading,
         image: data.data.section_5.image,
         is_visible: data.data.section_5.is_visible
       })
       this.mainBenefitsForBoth.patchValue({
-        heading:data.data.section_4.heading,
+        heading: data.data.section_4.heading,
         is_visible: data.data.section_4.is_visible
       })
-     
+      
       data.data.section_4.tab_1.forEach((element) => {
         this.employerArray.push(this._formBuilder.group({
-          heading: [element.heading, [Validators.required]],
-          Description: [element.description, [Validators.required]],
-          image: [element.image, [Validators.required]],
-
+          heading: [element.heading, [Validators.required, Validators.maxLength(50)]],
+          Description: [element.Description, [Validators.required, Validators.maxLength(500)]],
+          image: [element.image, [Validators.required,]],
+          county: ['']
+          
         }))
       });
 
       data.data.section_4.tab_2.forEach((element) => {
         this.graduateArray.push(this._formBuilder.group({
-          heading: [element.heading, [Validators.required]],
-          Description: [element.description, [Validators.required]],
+          heading: [element.heading, [Validators.required, Validators.maxLength(50)]],
+          Description: [element.Description, [Validators.required, Validators.maxLength(500)]],
           image: [element.image, [Validators.required]],
-
+          county: ['']
         }))
       });
-      
+
       data.data.section_6.description.forEach((element) => {
-        this.discriptionArray.push( this._formBuilder.control(element,[Validators.required]))
+        this.discriptionArray.push(this._formBuilder.control(element, [Validators.required]))
       });
-     
+
     })
 
   }
-  postHomePageContent(type,Secondtype?){
+  postHomePageContent(type, Secondtype?) {
     let obj: any
-    console.log("type==>",type);
-    
+    console.log("type==>", type, this.headerform);
+
     if (type == 'headerform') {
       if (this.headerform.valid) {
         const formdata = new FormData()
@@ -302,105 +419,106 @@ export class HomepageManagementComponent implements OnInit {
           is_visible: this.headerform.controls['is_visible'].value
         }
         formdata.append("home_header_section", JSON.stringify(home_header_section))
-       
+
         obj = formdata
 
       } else {
         this.headerform.markAllAsTouched()
-        return 
+        return
       }
     }
     if (type == "curatedform") {
       if (this.curatedform.valid) {
-       
+
         const section_3 = {
           heading: this.curatedform.controls['heading'].value,
           is_visible: this.curatedform.controls['is_visible'].value
         }
-        const formdata=new FormData()
+        const formdata = new FormData()
         formdata.append("section_3", JSON.stringify(section_3))
 
         obj = formdata
-    }else{
-      this.curatedform.markAllAsTouched()
-      return 
+      } else {
+        this.curatedform.markAllAsTouched()
+        return
+      }
     }
-  }
     if (type == "storyform") {
       if (this.storyform.valid) {
-        
+        console.log(this.storyform);
+        console.log(this.storyform.controls['video'].value.changingThisBreaksApplicationSecurity)
         const our_story_section = {
           title: this.storyform.controls['title1'].value,
-          description: this.storyform.controls['description'].value, 
+          description: this.storyform.controls['description'].value,
           posted_by: this.storyform.controls['name'].value,
           position: this.storyform.controls['designation'].value,
-          video: this.storyform.controls['video'].value,
+          video: this.storyform.controls['video'].value.changingThisBreaksApplicationSecurity,
           is_visible: this.storyform.controls['is_visible'].value
         }
-        const formdata=new FormData()
+        const formdata = new FormData()
         formdata.append("our_story_section", JSON.stringify(our_story_section))
         obj = formdata
-    }else{
-      this.storyform.markAllAsTouched()
-      return 
-    }
+      } else {
+        this.storyform.markAllAsTouched()
+        return
+      }
     }
     if (type == "successform") {
       if (this.successform.valid) {
-       
+
         const section_6 = {
           heading: this.successform.controls['heading'].value,
-          video: this.successform.controls['video'].value,
+          video: this.successform.controls['video'].value.changingThisBreaksApplicationSecurity,
           description: this.successform.controls['discriptionArray'].value,
           is_visible: this.successform.controls['is_visible'].value
         }
-        const formdata=new FormData()
+        const formdata = new FormData()
         formdata.append("section_6", JSON.stringify(section_6))
         obj = formdata
-    }else{
-      this.successform.markAllAsTouched()
-      return 
-    }
+      } else {
+        this.successform.markAllAsTouched()
+        return
+      }
 
     }
     if (type == "mainBenefitsForBoth") {
-     
-    console.log("both==>",this.mainBenefitsForBoth);
+
+      console.log("both==>", this.mainBenefitsForBoth);
 
       if (this.mainBenefitsForBoth.valid) {
-       
+
         if (Secondtype == "employerTab") {
-            if (this.mainBenefitsForBoth.controls['employerTab'].valid) {
-             
-              const section_4 = {
-                heading: this.mainBenefitsForBoth.controls['heading'].value,
-                is_visible: this.mainBenefitsForBoth.controls['is_visible'].value,
-                tab_1:this.mainBenefitsForBoth.controls['employerTab'].get('employerArray').value
-              }
-              const formdata=new FormData()
-              formdata.append("section_4", JSON.stringify(section_4))
-              obj = formdata
-          }else{
+          if (this.mainBenefitsForBoth.controls['employerTab'].valid) {
+
+            const section_4 = {
+              heading: this.mainBenefitsForBoth.controls['heading'].value,
+              is_visible: this.mainBenefitsForBoth.controls['is_visible'].value,
+              tab_1: this.mainBenefitsForBoth.controls['employerTab'].get('employerArray').value
+            }
+            const formdata = new FormData()
+            formdata.append("section_4", JSON.stringify(section_4))
+            obj = formdata
+          } else {
             this.mainBenefitsForBoth.controls['employerTab'].markAllAsTouched()
-            return 
+            return
           }
-          }
-          if (Secondtype == "graduateTab") {
-            if (this.mainBenefitsForBoth.controls['graduateTab'].valid) {
-              
-              const section_4 = {
-                heading: this.mainBenefitsForBoth.controls['heading'].value,
-                is_visible: this.mainBenefitsForBoth.controls['is_visible'].value,
-                tab_2:this.mainBenefitsForBoth.controls['graduateTab'].get('graduateArray').value
-              }
-              const formdata=new FormData()
-              formdata.append("section_4", JSON.stringify(section_4))
-              obj = formdata
-          }else{
+        }
+        if (Secondtype == "graduateTab") {
+          if (this.mainBenefitsForBoth.controls['graduateTab'].valid) {
+
+            const section_4 = {
+              heading: this.mainBenefitsForBoth.controls['heading'].value,
+              is_visible: this.mainBenefitsForBoth.controls['is_visible'].value,
+              tab_2: this.mainBenefitsForBoth.controls['graduateTab'].get('graduateArray').value
+            }
+            const formdata = new FormData()
+            formdata.append("section_4", JSON.stringify(section_4))
+            obj = formdata
+          } else {
             this.mainBenefitsForBoth.controls['graduateTab'].markAllAsTouched()
-            return 
+            return
           }
-          }
+        }
 
 
       }
@@ -410,43 +528,44 @@ export class HomepageManagementComponent implements OnInit {
     }
     if (type == "newRegister") {
       if (this.newRegister.valid) {
-        
+
         const section_7 = {
           heading: this.newRegister.controls['heading'].value,
-          text:this.newRegister.controls['text'].value,
+          text: this.newRegister.controls['text'].value,
           description: this.newRegister.controls['description'].value,
           image: this.newRegister.controls['image'].value,
           is_visible: this.newRegister.controls['is_visible'].value
         }
-        const formdata=new FormData()
+        const formdata = new FormData()
         formdata.append("section_7", JSON.stringify(section_7))
         obj = formdata
-    }else{
-      this.newRegister.markAllAsTouched()
-      return 
-    }
+      } else {
+        this.newRegister.markAllAsTouched()
+        return
+      }
     }
     if (type == "Companies") {
       if (this.Companies.valid) {
-        
+
         const section_5 = {
           heading: this.Companies.controls['heading'].value,
-          logos:this.logosUrl,
+          logos: this.logosUrl,
           image: this.Companies.controls['image'].value,
           is_visible: this.Companies.controls['is_visible'].value
         }
-        const formdata=new FormData()
+        const formdata = new FormData()
         formdata.append("section_5", JSON.stringify(section_5))
         obj = formdata
-    }else{
-      this.Companies.markAllAsTouched()
-      return 
-    }
+      } else {
+        this.Companies.markAllAsTouched()
+        return
+      }
     }
     this.Service.postHomePageContent(obj).subscribe((resp) => {
 
       this.Service.showMessage({ message: "Submitted Successfully" })
     })
+
   }
 
 }

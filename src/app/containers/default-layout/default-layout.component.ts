@@ -7,6 +7,7 @@ import {  Router, RouterStateSnapshot} from '@angular/router';
   templateUrl: './default-layout.component.html'
 })
 export class DefaultLayoutComponent {
+  image: any;
 
   constructor(private router: Router){
     
@@ -20,6 +21,7 @@ export class DefaultLayoutComponent {
   
   ngOnInit() {
     console.log('Called ngOnInit method');
+    this.image= localStorage.getItem('image');
     }
 
   logout(){

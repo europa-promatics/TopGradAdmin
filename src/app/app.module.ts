@@ -70,6 +70,7 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 
 // import { DashboardComponent } from './views/dashboard/dashboard.component';
 
@@ -113,7 +114,7 @@ import { EditEmployerHowItWorksComponent } from './views/edit-employer-how-it-wo
 import { GraduateHowItWorksComponent } from './views/graduate-how-it-works/graduate-how-it-works.component';
 import { EditGraduateHowItWorksComponent } from './views/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
 import { PrivacyPolicyComponent } from './views/privacy-policy/privacy-policy.component';
-import { TermsConditionsComponent } from './views/terms-conditions/terms-conditions.component';
+import { TermsConditionsComponent } from './pages/content-management/terms-conditions/terms-conditions.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { ContactListingComponent } from './views/contact-listing/contact-listing.component';
 import { OfferManagementComponent } from './views/offer-management/offer-management.component';
@@ -140,7 +141,7 @@ import { FaqsComponent } from './views/faqs/faqs.component';
 import { AddFaqComponent } from './views/add-faq/add-faq.component';
 import { EditFaqComponent } from './views/edit-faq/edit-faq.component';
 import { ViewFaqComponent } from './views/view-faq/view-faq.component';
-import { AboutUsComponent } from './views/about-us/about-us.component';
+import { AboutUsComponent } from './pages/content-management/about-us/about-us.component';
 import { HomepageManagementComponent } from './pages/homepage-management/homepage-management.component';
 import { HelpManagementComponent } from './views/help-management/help-management.component';
 import { ViewHelpComponent } from './views/view-help/view-help.component';
@@ -155,6 +156,17 @@ import { TopgradserviceService } from './topgradservice.service';
 import { IndustrylistComponent } from './pages/content-management/industry-management/industrylist/industrylist.component';
 import { IndustrylistModule } from './pages/content-management/industry-management/industrylist/industrylist.module';
 import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
+import { TermsSubHeadingsComponent } from './pages/content-management/terms-sub-headings/terms-sub-headings.component';
+import { AddHeadingComponent } from './pages/content-management/add-heading/add-heading.component';
+import { EditHeadingComponent } from './pages/content-management/edit-heading/edit-heading.component';
+import { EditSubHeadingComponent } from './pages/content-management/edit-sub-heading/edit-sub-heading.component';
+import { AddSubHeadingComponent } from './pages/content-management/add-sub-heading/add-sub-heading.component';
+import { GraduateAddFaqComponent } from './pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component';
+import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component';
+
+// import { GraduateFaqComponent } from './pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.component';
+
+
 
 
 
@@ -199,7 +211,6 @@ import { ResetPasswordComponent } from './pages/auth/reset-password/reset-passwo
     MatTabsModule,
     PlyrModule,
     IndustrylistModule,
-
   ],
   declarations: [
     AppComponent,
@@ -273,9 +284,12 @@ import { ResetPasswordComponent } from './pages/auth/reset-password/reset-passwo
     GraduateVerificationManagementComponent,
     FaqsComponent,
     AddFaqComponent,
+
     EditFaqComponent,
     ViewFaqComponent,
     AboutUsComponent,
+    GraduateAddFaqComponent,
+    GraduateEditFaqComponent,
     HomepageManagementComponent,
     HelpManagementComponent,
     ViewHelpComponent,
@@ -287,9 +301,17 @@ import { ResetPasswordComponent } from './pages/auth/reset-password/reset-passwo
     ViewReportComponent,
     IndustrylistComponent,
     ResetPasswordComponent,
+    TermsSubHeadingsComponent,
+    AddHeadingComponent,
+    EditHeadingComponent,
+    EditSubHeadingComponent,
+    AddSubHeadingComponent,
+    
+    GraduateListComponent,
+    // GraduateFaqComponent
     // DashboardComponent
   ],
-  providers: [
+  providers: [BsModalRef,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy

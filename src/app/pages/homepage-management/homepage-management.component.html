@@ -20,9 +20,13 @@
 										<editor initialValue="Top Platform to find the Best Employer"
 											[formControl]="headerform.controls['title']"></editor>
 									</div>
-									<div *ngIf="(headerform.touched || headerform.dirty) && headerform.invalid && headerform.controls.title?.errors?.required  "
+									<div *ngIf="(headerform.controls.title.touched || headerform.controls.title.dirty) && headerform.controls.title.invalid && headerform.controls.title?.errors?.required  "
 										class="invalid">
 										*Please enter heading
+									</div>
+									<div *ngIf="(headerform.controls.title.touched || headerform.controls.title.dirty)  && headerform.controls.title?.errors?.maxlength  "
+										class="invalid">
+										*Maximum Length should be 200 characters
 									</div>
 									<div class="form-group">
 										<label>Section Image</label>
@@ -32,7 +36,7 @@
 												<img [src]="headerform.controls['image'].value" class="img-fluid">
 												<div class="upload-imag text-center">
 													<button class="btn-primary btn  mt-3 position-relative">
-														<input type="file" name="" class="img-input-upld"
+														<input type="file" name="" accept="image/*" class="img-input-upld"
 															(change)="onHeaderFormChange($event)">
 														Upload Image
 													</button>
@@ -40,9 +44,12 @@
 											</div>
 										</div>
 									</div>
-									<div *ngIf="(headerform.touched || headerform.dirty) && headerform.invalid && headerform.controls.image?.errors?.required"
+									<div *ngIf="(headerform.controls.image.touched || headerform.controls.image.dirty) && headerform.controls.image.invalid && headerform.controls.image?.errors?.required"
 										class="invalid">
 										*Please upload image
+									</div>
+									<div *ngIf="headerform.controls.image.valid && headerform.controls.county?.errors?.required" class="invalid">
+										*Only images are allowed
 									</div>
 									<div class="edit-btns d-flex justify-content-end">
 										<button class="btn btn-primary mr-4" (click)="postHomePageContent('headerform')">Save</button>
@@ -81,15 +88,19 @@
 										<input type="text" name="" class="form-control" value="testing Our story"
 											[formControl]="storyform.controls['title1']">
 									</div>
-									<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.title1?.errors?.required  "
+									<div *ngIf="(storyform.controls.title1.touched || storyform.controls.title1.dirty) && storyform.controls.title1.invalid && storyform.controls.title1?.errors?.required  "
 										class="invalid">
 										*Please enter title
+									</div>
+									<div *ngIf="(storyform.controls.title1.touched || storyform.controls.title1.dirty)  && storyform.controls.title1?.errors?.maxlength  "
+										class="invalid">
+										*Maximum Length should be 50 characters
 									</div>
 									<div class="form-group">
 										<label>Description</label>
 										<editor [formControl]="storyform.controls['description']"> </editor>
 									</div>
-									<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.description?.errors?.required  "
+									<div *ngIf="(storyform.controls.description?.touched || storyform.controls.description.dirty) && storyform.controls.description.invalid && storyform.controls.description?.errors?.required  "
 										class="invalid">
 										*Please enter description
 									</div>
@@ -97,20 +108,23 @@
 										<label>Section Video</label>
 										<div class="slider-video-cntnt">
 											<div class="video">
-
-												<iframe *ngIf="!storyform.controls['video'].value==''" width="420"
+												<iframe *ngIf="storyform.controls['video'].value" width="420"
 													height="315" [src]="storyform.controls['video'].value"
-													frameborder="0" allowfullscreen></iframe>
+													frameborder="0" allowfullscreen ></iframe>
 												<div class="upload-imag text-center">
 													<button class="btn-primary btn mt-3 position-relative">
 														<input type="file" name="" class="img-input-upld"
-															(change)="onStoryFormimageChange($event)">
+															(change)="onStoryFormimageChange($event)" accept="video/*" >
 														Upload Video
 													</button>
 												</div>
-												<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.video?.errors?.required  "
+												<div *ngIf="(storyform.controls.video.touched || storyform.controls.video.dirty) && storyform.controls.video.invalid && storyform.controls.video?.errors?.required  "
 													class="invalid">
 													*Please upload video
+												</div>
+												<div *ngIf="storyform.controls.video.valid && storyform.controls.county?.errors?.required  "
+													class="invalid">
+													*Only videos are allowed
 												</div>
 											</div>
 										</div>
@@ -121,9 +135,13 @@
 											value=" testing Naren Chellappah"
 											[formControl]="storyform.controls['name']">
 									</div>
-									<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.name?.errors?.required  "
+									<div *ngIf="(storyform.controls.name.touched || storyform.controls.name.dirty) && storyform.controls.name.invalid && storyform.controls.name?.errors?.required  "
 										class="invalid">
 										*Please enter name
+									</div>
+									<div *ngIf="(storyform.controls.name.touched || storyform.controls.name.dirty)  && storyform.controls.name?.errors?.maxlength  "
+										class="invalid">
+										*Maximum Length should be 50 characters
 									</div>
 									<div class="form-group">
 										<label>Posted Position</label>
@@ -131,7 +149,11 @@
 											value=" testing Founder of Top Graduates"
 											[formControl]="storyform.controls['designation']">
 									</div>
-									<div *ngIf="(storyform.touched || storyform.dirty) && storyform.invalid && storyform.controls.designation?.errors?.required  "
+									<div *ngIf="(storyform.controls.designation.touched || storyform.controls.designation.dirty)  && storyform.controls.designation?.errors?.maxlength  "
+										class="invalid">
+										*Maximum Length should be 50 characters
+									</div>
+									<div *ngIf="(storyform.controls.designation.touched || storyform.controls.designation.dirty) && storyform.controls.designation.invalid && storyform.controls.designation?.errors?.required  "
 										class="invalid">
 										*Please enter designation
 									</div>
@@ -172,7 +194,7 @@
 										<editor initialValue="Curated Especially For You" [innerHTML]=""
 											[formControl]="curatedform.controls['heading']"></editor>
 									</div>
-									<div *ngIf="(curatedform.touched || curatedform.dirty) && curatedform.invalid && curatedform.controls.heading?.errors?.required  "
+									<div *ngIf="(curatedform.controls.heading.touched || curatedform.controls.heading.dirty) && curatedform.controls.heading.invalid && curatedform.controls.heading?.errors?.required  "
 										class="invalid">
 										*Please enter heading
 									</div>
@@ -213,9 +235,13 @@
 										<input type="text" name="" class="form-control"
 											value="" formControlName="heading">
 									</div>
-									<div *ngIf="(mainBenefitsForBoth.touched || mainBenefitsForBoth.dirty) && mainBenefitsForBoth.invalid && mainBenefitsForBoth.controls.heading?.errors?.required  "
+									<div *ngIf="(mainBenefitsForBoth.controls.heading.touched || mainBenefitsForBoth.controls.heading.dirty) && mainBenefitsForBoth.controls.heading.invalid && mainBenefitsForBoth.controls.heading?.errors?.required  "
 										class="invalid">
 										*Please enter heading
+									</div>
+									<div *ngIf="(mainBenefitsForBoth.controls.heading.touched || mainBenefitsForBoth.controls.heading.dirty)  && mainBenefitsForBoth.controls.heading?.errors?.maxlength  "
+										class="invalid">
+										*Maximum Length should be 50 characters
 									</div>
 								</div>
 								<div class="card">
@@ -237,8 +263,7 @@
 																			<ng-container formArrayName="employerArray"
 																				*ngFor="let alias of mainBenefitsForBoth.controls['employerTab'].controls['employerArray'].controls; let i=index">
 																				<ng-container [formGroupName]="i">
-																					<div
-																						class="insid_tabs emp_home_page">
+																					<div class="insid_tabs emp_home_page">
 
 
 																						<label>Tab
@@ -252,6 +277,10 @@
 																							class="invalid">
 																							*Please enter heading
 																						</div>
+																						<div *ngIf="employerArray.controls[i].controls['heading'].errors?.maxlength  "
+																							class="invalid">
+																							*Maximum Length should be 50 characters
+																						</div>
 																					</div>
 
 
@@ -263,6 +292,10 @@
 																						<div *ngIf="employerArray.controls[i].controls['Description'].errors?.required "
 																							class="invalid">
 																							*Please enter description
+																						</div>
+																						<div *ngIf="employerArray.controls[i].controls['Description'].errors?.maxlength  "
+																							class="invalid">
+																							*Maximum Length should be 500 characters
 																						</div>
 																					</div>
 
@@ -276,9 +309,10 @@
 																								<div *ngIf="employerArray.controls[i].controls['image'].errors?.required "
 																									class="invalid">
 																									*Please select image
-
 																								</div>
-
+                                                                                                <div *ngIf="employerArray.controls[i]?.controls.county?.errors" class="invalid">
+																									*Only images are allowed
+																								</div>
 																								<div
 																									class="upload-imag text-center">
 																									<button
@@ -426,12 +460,28 @@
 																							value=""
 																							formControlName="heading">
 																					</div>
+																					<div *ngIf="graduateArray.controls[i].controls['heading'].errors?.required  "
+																						class="invalid">
+																						*Please enter heading
+																					</div>
+																					<div *ngIf="graduateArray.controls[i].controls['heading'].errors?.maxlength  "
+																						class="invalid">
+																						*Maximum Length should be 50 characters
+																					</div>
 
 																					<div class="form-group">
 																						<label>Description</label>
 																						<textarea class="form-control"
 																							rows="4"
 																							formControlName="Description"></textarea>
+																					</div>
+																					<div *ngIf="graduateArray.controls[i].controls['Description'].errors?.required "
+																						class="invalid">
+																						*Please enter description
+																					</div>
+																					<div *ngIf="graduateArray.controls[i].controls['Description'].errors?.maxlength  "
+																						class="invalid">
+																						*Maximum Length should be 500 characters
 																					</div>
 
 																					<div class="form-group">
@@ -445,6 +495,9 @@
 																									class="invalid">
 																									*Please select image
 
+																								</div>
+																								<div *ngIf="graduateArray.controls[i]?.controls.county?.errors" class="invalid">
+																									*Only images are allowed
 																								</div>
 																								<div
 																									class="upload-imag text-center">
@@ -609,6 +662,14 @@
 											value=""
 											formControlName="heading">
 									</div>
+									<div *ngIf="(Companies.controls.heading.touched || Companies.controls.heading.dirty) && Companies.controls.heading.invalid && Companies.controls.heading?.errors?.required  "
+										class="invalid">
+										*Please enter heading
+									</div>
+									<div *ngIf="(Companies.controls.heading.touched || Companies.controls.heading.dirty)  && Companies.controls.heading?.errors?.maxlength  "
+										class="invalid">
+										*Maximum Length should be 100 characters
+									</div>
 									<div class="form-group">
 										<label>Company's Logo</label>
 										<div class="enable-organise">
@@ -644,9 +705,11 @@
 												<div *ngIf="Companies.controls['image'].errors?.required "
 													class="invalid">
 													*Please select image
-
 												</div>
-
+                                                <div *ngIf="Companies.controls['county'].errors?.required "
+													class="invalid">
+													*Only images are allowed
+												</div>
 												<div
 													class="upload-imag text-center">
 													<button
@@ -700,6 +763,10 @@
 										class="invalid">
 										*Please enter heading
 									</div>
+									<div *ngIf="(successform.controls.heading.touched || successform.controls.heading.dirty)  && successform.controls.heading?.errors?.maxlength  "
+										class="invalid">
+										*Maximum Length should be 50 characters
+									</div>
 									<div class="form-group">
 										<label>Slider Video</label>
 										<div class="slider-video-cntnt">
@@ -718,6 +785,10 @@
 												<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls['video']?.errors?.required  "
 													class="invalid">
 													*Please upload video
+												</div>
+												<div *ngIf="successform.controls.video.valid && successform.controls.county?.errors?.required  "
+													class="invalid">
+													*Only videos are allowed
 												</div>
 											</div>
 										</div>
@@ -786,8 +857,12 @@
 												formControlName="text">
 												<div *ngIf="(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.text?.errors?.required  "
 												class="invalid">
-												*Please enter text
-											</div>
+												   *Please enter text
+											    </div>
+												<div *ngIf="(newRegister.controls.text.touched || newRegister.controls.text.dirty)  && newRegister.controls.text?.errors?.maxlength  "
+													class="invalid">
+													*Maximum Length should be 50 characters
+												</div>
 										</div>
 										<div class="form-group">
 											<label>Heading</label>
@@ -796,8 +871,12 @@
 											>
 											<div *ngIf="(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.heading?.errors?.required  "
 											class="invalid">
-											*Please enter heading
-										</div>
+											   *Please enter heading
+										    </div>
+											<div *ngIf="(newRegister.controls.heading.touched || newRegister.controls.heading.dirty)  && newRegister.controls.heading?.errors?.maxlength  "
+												class="invalid">
+												*Maximum Length should be 50 characters
+											</div>
 										</div>
 										<div class="form-group">
 											<label>Description</label>
@@ -805,8 +884,12 @@
 											formControlName="description"></textarea>
 											<div *ngIf="(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.description?.errors?.required  "
 											class="invalid">
-											*Please enter description
-										</div>
+											   *Please enter description
+										    </div>
+											<div *ngIf="(newRegister.controls.description.touched || newRegister.controls.description.dirty)  && newRegister.controls.description?.errors?.maxlength  "
+												class="invalid">
+												*Maximum Length should be 500 characters
+											</div>
 										</div>
 										<div class="form-group">
 											<label>Graduate Image</label>
@@ -824,6 +907,10 @@
 															<div *ngIf="(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.description?.errors?.required"
 																class="invalid">
 																*Please upload image
+															</div>
+															<div *ngIf="newRegister?.controls['county'].errors?.required "
+																class="invalid">
+																*Only images are allowed
 															</div>
 														</div>
 

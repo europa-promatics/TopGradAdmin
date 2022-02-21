@@ -203,7 +203,19 @@ export const navItems: INavData[] = [
         name: 'FAQs',
         url: '/faqs',
         icon: 'icon-question',
-      },
+        children:[
+        {
+        name: 'Employer',
+        url: '/employersFaq',
+        icon: 'icon-star'
+        },
+        {
+        name: 'Graduate',
+        url: '/graduateFaq',
+        icon: 'icon-star'
+        },
+        ]
+        },
       {
         name: 'Help Management',
         url: '/help-management',
