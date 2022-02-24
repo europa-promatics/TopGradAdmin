@@ -2638,7 +2638,7 @@
               this.terms_sub_headingform.markAllAsTouched();
             } else {
               var obj = {
-                type: "terms",
+                type: this.route.snapshot.paramMap.get('type'),
                 title: this.terms_sub_headingform.value.title,
                 description: this.terms_sub_headingform.value.description,
                 content_id: this.route.snapshot.paramMap.get('id')
@@ -5513,6 +5513,33 @@
               return res;
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
           }
+        }, {
+          key: "postRecruitmentContent",
+          value: function postRecruitmentContent(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/edit/recruitement/solution");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
+        }, {
+          key: "recruitmentcontent",
+          value: function recruitmentcontent() {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/recruitment-solutions?content_id=6214a49299814ab6e4f4338e");
+            console.log(API_URL);
+            return this.httpClient.get(API_URL).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
+        }, {
+          key: "uploadbenefitmedia",
+          value: function uploadbenefitmedia(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/upload/media");
+            console.log(API_URL);
+            return this.httpClient.post(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
         }]);
 
         return TopgradserviceService;
@@ -6288,12 +6315,13 @@
               this.terms_headingform.markAllAsTouched();
             } else {
               var obj = {
-                type: "terms",
+                type: this.route.snapshot.paramMap.get('type'),
                 heading: {
                   title: this.terms_headingform.value.title,
                   description: this.terms_headingform.value.description
                 }
               };
+              console.log("hmara object", obj);
               this.Service.addtermheading(obj).subscribe(function (res) {
                 console.log("fgdgfdgfdfgdfgd", res);
 
@@ -7071,103 +7099,6 @@
 
 
       __webpack_exports__["default"] = "<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-article\">Add Article</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>\n                <td mat-cell *matCellDef=\"let element\"> <img [src]=\"element.image\" class=\"slider-imag\" /></td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.title}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.postedBy}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-article\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-article\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-      /***/
-    },
-
-    /***/
-    "JroR": function JroR(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "PrivacyPolicyComponent", function () {
-        return PrivacyPolicyComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_privacy_policy_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./privacy-policy.component.html */
-      "mvjs");
-      /* harmony import */
-
-
-      var _privacy_policy_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./privacy-policy.component.scss */
-      "QpGA");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/forms */
-      "3Pt+");
-      /* harmony import */
-
-
-      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! ../../topgradservice.service */
-      "DL5e"); //import { ToastrService } from 'ngx-toastr';
-
-
-      var PrivacyPolicyComponent = /*#__PURE__*/function () {
-        function PrivacyPolicyComponent(Service, _formBuilder) {
-          _classCallCheck(this, PrivacyPolicyComponent);
-
-          this.Service = Service;
-          this._formBuilder = _formBuilder;
-          this.privacyform = this._formBuilder.group({
-            'title': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])],
-            'description': [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])]
-          });
-        }
-
-        _createClass(PrivacyPolicyComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "updatecms",
-          value: function updatecms() {
-            console.log("hjgsdhsagdhjsagdhjsg");
-            console.log("sdsfsfdsfdfdfds", this.privacyform);
-            var obj = {
-              title: this.privacyform.value.title,
-              description: this.privacyform.value.description
-            }; // this.Service.cms(obj).subscribe(res=>{
-            //   console.log("fgdgfdgfdfgdfgd",res);
-            // })
-          }
-        }]);
-
-        return PrivacyPolicyComponent;
-      }();
-
-      PrivacyPolicyComponent.ctorParameters = function () {
-        return [{
-          type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_5__["TopgradserviceService"]
-        }, {
-          type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
-        }];
-      };
-
-      PrivacyPolicyComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-privacy-policy',
-        template: _raw_loader_privacy_policy_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_privacy_policy_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_topgradservice_service__WEBPACK_IMPORTED_MODULE_5__["TopgradserviceService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])], PrivacyPolicyComponent);
       /***/
     },
 
@@ -8797,6 +8728,7 @@
           value: function ngOnInit() {
             this.termssubheadings();
             this.heading_id = this.route.snapshot.paramMap.get('id');
+            this.type = this.route.snapshot.paramMap.get('type');
           }
         }, {
           key: "termssubheadings",
@@ -9039,18 +8971,6 @@
         template: _raw_loader_add_category_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_add_category_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], AddCategoryComponent);
-      /***/
-    },
-
-    /***/
-    "QpGA": function QpGA(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwcml2YWN5LXBvbGljeS5jb21wb25lbnQuc2NzcyJ9 */";
       /***/
     },
 
@@ -9822,7 +9742,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"privcy_polcy\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n\t\t\t\t\t<mat-form-field appearance=\"standard\">\n\t\t\t\t\t\t<mat-label>Filter</mat-label>\n\t\t\t\t\t\t<input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<span class=\"add-categry\">\n\t\t\t\t\t\t<a class=\"btn-primary btn\" routerLink=\"/addHeading\">Add Heading</a>\n\t\t\t\t\t</span>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"mat-elevation-z8\">\n\t\t\t\t\t<div class=\"table-responsive\">\n\t\t\t\t\t\t<table mat-table [dataSource]=\"termslist\" matSort>\n\t\t\t\t\t\t\t<!-- Checkbox Column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"select\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef>\n\t\t\t\t\t\t\t\t\t<mat-checkbox (change)=\"$event ? masterToggle() : null\"\n\t\t\t\t\t\t\t\t\t\t[checked]=\"selection.hasValue() && isAllSelected()\"\n\t\t\t\t\t\t\t\t\t\t[indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n\t\t\t\t\t\t\t\t\t\t[aria-label]=\"checkboxLabel()\" class=\"td-check\">\n\t\t\t\t\t\t\t\t\t</mat-checkbox>\n\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row\">\n\t\t\t\t\t\t\t\t\t<mat-checkbox (click)=\"$event.stopPropagation()\"\n\t\t\t\t\t\t\t\t\t\t(change)=\"$event ? selection.toggle(row) : null\"\n\t\t\t\t\t\t\t\t\t\t[checked]=\"selection.isSelected(row)\" [aria-label]=\"checkboxLabel(row)\"\n\t\t\t\t\t\t\t\t\t\tclass=\"td-check\">\n\t\t\t\t\t\t\t\t\t</mat-checkbox>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t<!-- ID Column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"id\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n\t\t\t\t\t\t\t</ng-container>\n\n\t\t\t\t\t\t\t<!-- firstName Column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"title\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef mat-sort-header>Heading </th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row\"> {{row?.heading.title}} </td>\n\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t<!-- Company Column -->\n\t\t\t\t\t\t\t<!-- <ng-container matColumnDef=\"category\">\n\t\t\t\t  <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>\n\t\t\t\t  <td mat-cell *matCellDef=\"let row\"> {{row.category}} </td>\n\t\t\t\t</ng-container> -->\n\n\t\t\t\t\t\t\t<!-- enquiry Column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"description\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row\" class=\"td-width\" [innerHTML]=\"row.heading.description\"> </td>\n\t\t\t\t\t\t\t</ng-container>\n\n\t\t\t\t\t\t\t<!-- Action column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"action\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef> Action </th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row\">\n\t\t\t\t\t\t\t\t\t<button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n\t\t\t\t\t\t\t\t\t\t<mat-icon>more_vert</mat-icon>\n\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t<mat-menu #menu=\"matMenu\" class=\"td-menu\">\n\t\t\t\t\t\t\t\t\t\t<a mat-menu-item class=\"\" routerLink=\"/terms-conditions-sub-headings/{{row._id}}\">\n\t\t\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t<span>View Subheading</span>\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a mat-menu-item class=\"\" routerLink=\"/editHeading/{{row._id}}\">\n\t\t\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t<span>Edit</span>\n\t\t\t\t\t\t\t\t\t\t</a>\n\n\t\t\t\t\t\t\t\t\t\t<a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"modal(row._id)\" >\n\t\t\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t<span>Delete</span>\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</mat-menu>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</ng-container>\n\n\t\t\t\t\t\t\t<!-- Progress Column -->\n\t\t\t\t\t\t\t<!-- <ng-container matColumnDef=\"progress\">\n\t\t\t\t  <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n\t\t\t\t  <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n\t\t\t\t</ng-container> -->\n\n\t\t\t\t\t\t\t<tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n\t\t\t\t\t\t\t<tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n\t\t\t\t\t\t\t<!-- Row shown when there is no matching data. -->\n\t\t\t\t\t\t\t<tr class=\"mat-row\" *matNoDataRow>\n\t\t\t\t\t\t\t\t<td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</table>\n\t\t\t\t\t</div>\n\t\t\t\t\t<mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\">\n\t\t\t\t\t</mat-paginator>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\"\n\taria-hidden=\"true\">\n\t<div class=\"modal-dialog modal-sm\" role=\"document\">\n\t\t<div class=\"modal-content\">\n\t\t\t<div class=\"modal-header\">\n\t\t\t\t<button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n\t\t\t\t\t<span aria-hidden=\"true\" class=\"prof_modclose\">\n\t\t\t\t\t\t<img src=\"assets/img/Group 225.png\">\n\t\t\t\t\t</span>\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t\t<div class=\"modal-body\">\n\t\t\t\t<p>Are you sure you want to delete the selected Terms?</p>\n\t\t\t</div>\n\t\t\t<div class=\"modal-footer justify-content-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteheading(this.delId)\">Yes</button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>";
+      __webpack_exports__["default"] = "<section class=\"privcy_polcy\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n\t\t\t\t\t<mat-form-field appearance=\"standard\">\n\t\t\t\t\t\t<mat-label>Filter</mat-label>\n\t\t\t\t\t\t<input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n\t\t\t\t\t</mat-form-field>\n\t\t\t\t\t<span class=\"add-categry\">\n\t\t\t\t\t\t<a class=\"btn-primary btn\" routerLink=\"/addHeading/terms\">Add Heading</a>\n\t\t\t\t\t</span>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"mat-elevation-z8\">\n\t\t\t\t\t<div class=\"table-responsive\">\n\t\t\t\t\t\t<table mat-table [dataSource]=\"termslist\" matSort>\n\t\t\t\t\t\t\t<!-- Checkbox Column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"select\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef>\n\t\t\t\t\t\t\t\t\t<mat-checkbox (change)=\"$event ? masterToggle() : null\"\n\t\t\t\t\t\t\t\t\t\t[checked]=\"selection.hasValue() && isAllSelected()\"\n\t\t\t\t\t\t\t\t\t\t[indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n\t\t\t\t\t\t\t\t\t\t[aria-label]=\"checkboxLabel()\" class=\"td-check\">\n\t\t\t\t\t\t\t\t\t</mat-checkbox>\n\t\t\t\t\t\t\t\t</th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row\">\n\t\t\t\t\t\t\t\t\t<mat-checkbox (click)=\"$event.stopPropagation()\"\n\t\t\t\t\t\t\t\t\t\t(change)=\"$event ? selection.toggle(row) : null\"\n\t\t\t\t\t\t\t\t\t\t[checked]=\"selection.isSelected(row)\" [aria-label]=\"checkboxLabel(row)\"\n\t\t\t\t\t\t\t\t\t\tclass=\"td-check\">\n\t\t\t\t\t\t\t\t\t</mat-checkbox>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t<!-- ID Column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"id\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n\t\t\t\t\t\t\t</ng-container>\n\n\t\t\t\t\t\t\t<!-- firstName Column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"title\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef mat-sort-header>Heading </th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row\"> {{row?.heading.title}} </td>\n\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t<!-- Company Column -->\n\t\t\t\t\t\t\t<!-- <ng-container matColumnDef=\"category\">\n\t\t\t\t  <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>\n\t\t\t\t  <td mat-cell *matCellDef=\"let row\"> {{row.category}} </td>\n\t\t\t\t</ng-container> -->\n\n\t\t\t\t\t\t\t<!-- enquiry Column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"description\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row\" class=\"td-width\" [innerHTML]=\"row.heading.description\"> </td>\n\t\t\t\t\t\t\t</ng-container>\n\n\t\t\t\t\t\t\t<!-- Action column -->\n\t\t\t\t\t\t\t<ng-container matColumnDef=\"action\">\n\t\t\t\t\t\t\t\t<th mat-header-cell *matHeaderCellDef> Action </th>\n\t\t\t\t\t\t\t\t<td mat-cell *matCellDef=\"let row\">\n\t\t\t\t\t\t\t\t\t<button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n\t\t\t\t\t\t\t\t\t\t<mat-icon>more_vert</mat-icon>\n\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t<mat-menu #menu=\"matMenu\" class=\"td-menu\">\n\t\t\t\t\t\t\t\t\t\t<a mat-menu-item class=\"\" routerLink=\"/terms-conditions-sub-headings/{{row._id}}/terms\">\n\t\t\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t<span>View Subheading</span>\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t\t<a mat-menu-item class=\"\" routerLink=\"/editHeading/{{row._id}}\">\n\t\t\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t<span>Edit</span>\n\t\t\t\t\t\t\t\t\t\t</a>\n\n\t\t\t\t\t\t\t\t\t\t<a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"modal(row._id)\" >\n\t\t\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n\t\t\t\t\t\t\t\t\t\t\t<span>Delete</span>\n\t\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t\t</mat-menu>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</ng-container>\n\n\t\t\t\t\t\t\t<!-- Progress Column -->\n\t\t\t\t\t\t\t<!-- <ng-container matColumnDef=\"progress\">\n\t\t\t\t  <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n\t\t\t\t  <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n\t\t\t\t</ng-container> -->\n\n\t\t\t\t\t\t\t<tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n\t\t\t\t\t\t\t<tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n\t\t\t\t\t\t\t<!-- Row shown when there is no matching data. -->\n\t\t\t\t\t\t\t<tr class=\"mat-row\" *matNoDataRow>\n\t\t\t\t\t\t\t\t<td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</table>\n\t\t\t\t\t</div>\n\t\t\t\t\t<mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\">\n\t\t\t\t\t</mat-paginator>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\"\n\taria-hidden=\"true\">\n\t<div class=\"modal-dialog modal-sm\" role=\"document\">\n\t\t<div class=\"modal-content\">\n\t\t\t<div class=\"modal-header\">\n\t\t\t\t<button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n\t\t\t\t\t<span aria-hidden=\"true\" class=\"prof_modclose\">\n\t\t\t\t\t\t<img src=\"assets/img/Group 225.png\">\n\t\t\t\t\t</span>\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t\t<div class=\"modal-body\">\n\t\t\t\t<p>Are you sure you want to delete the selected Terms?</p>\n\t\t\t</div>\n\t\t\t<div class=\"modal-footer justify-content-center\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteheading(this.delId)\">Yes</button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>";
       /***/
     },
 
@@ -11213,301 +11133,289 @@
       /* harmony import */
 
 
-      var _views_privacy_policy_privacy_policy_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
-      /*! ./views/privacy-policy/privacy-policy.component */
-      "JroR");
-      /* harmony import */
-
-
-      var _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
+      var _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
       /*! ./pages/content-management/terms-conditions/terms-conditions.component */
       "2ihL");
       /* harmony import */
 
 
-      var _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
+      var _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
       /*! ./views/contact-us/contact-us.component */
       "PUU/");
       /* harmony import */
 
 
-      var _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
+      var _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
       /*! ./views/contact-listing/contact-listing.component */
       "RWm0");
       /* harmony import */
 
 
-      var _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
+      var _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
       /*! ./views/offer-management/offer-management.component */
       "fMvR");
       /* harmony import */
 
 
-      var _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
+      var _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
       /*! ./views/career-artcles/career-artcles.component */
       "gGL6");
       /* harmony import */
 
 
-      var _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
+      var _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
       /*! ./views/career-articles/career-articles.component */
       "ICAa");
       /* harmony import */
 
 
-      var _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(
+      var _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
       /*! ./views/career-videos/career-videos.component */
       "ovBg");
       /* harmony import */
 
 
-      var _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(
+      var _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(
       /*! ./views/add-article/add-article.component */
       "unrn");
       /* harmony import */
 
 
-      var _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(
+      var _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(
       /*! ./views/view-article/view-article.component */
       "e9LB");
       /* harmony import */
 
 
-      var _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(
+      var _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(
       /*! ./views/edit-article/edit-article.component */
       "L3zY");
       /* harmony import */
 
 
-      var _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(
+      var _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(
       /*! ./views/add-video/add-video.component */
       "XeIG");
       /* harmony import */
 
 
-      var _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(
+      var _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(
       /*! ./views/view-video/view-video.component */
       "fjVs");
       /* harmony import */
 
 
-      var _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(
+      var _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(
       /*! ./views/edit-video/edit-video.component */
       "q2wW");
       /* harmony import */
 
 
-      var _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(
+      var _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(
       /*! ./views/schedule-interview-management/schedule-interview-management.component */
       "3Hv5");
       /* harmony import */
 
 
-      var _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(
+      var _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(
       /*! ./views/view-interview/view-interview.component */
       "Y+84");
       /* harmony import */
 
 
-      var _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
+      var _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(
       /*! ./views/edit-interview/edit-interview.component */
       "12bd");
       /* harmony import */
 
 
-      var _views_recruitment_solutions_management_recruitment_solutions_management_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
-      /*! ./views/recruitment-solutions-management/recruitment-solutions-management.component */
-      "c6Ys");
-      /* harmony import */
-
-
-      var _views_resume_builder_management_resume_builder_management_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
+      var _views_resume_builder_management_resume_builder_management_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
       /*! ./views/resume-builder-management/resume-builder-management.component */
       "FNYL");
       /* harmony import */
 
 
-      var _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
+      var _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
       /*! ./views/video-intro/video-intro.component */
       "KTfr");
       /* harmony import */
 
 
-      var _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
+      var _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
       /*! ./views/video-intro1/video-intro1.component */
       "8s9Z");
       /* harmony import */
 
 
-      var _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
+      var _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
       /*! ./views/video-intro2/video-intro2.component */
       "xlFL");
       /* harmony import */
 
 
-      var _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
+      var _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
       /*! ./views/video-intro3/video-intro3.component */
       "eN9q");
       /* harmony import */
 
 
-      var _views_graduate_verification_management_graduate_verification_management_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
+      var _views_graduate_verification_management_graduate_verification_management_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
       /*! ./views/graduate-verification-management/graduate-verification-management.component */
       "EaC+");
       /* harmony import */
 
 
-      var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
+      var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
       /*! ./views/faqs/faqs.component */
       "7Cea");
       /* harmony import */
 
 
-      var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(
+      var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
       /*! ./views/add-faq/add-faq.component */
       "3ziB");
       /* harmony import */
 
 
-      var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
+      var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
       /*! ./views/edit-faq/edit-faq.component */
       "PTKP");
       /* harmony import */
 
 
-      var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
+      var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(
       /*! ./views/view-faq/view-faq.component */
       "VqZG");
       /* harmony import */
 
 
-      var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
+      var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
       /*! ./pages/content-management/about-us/about-us.component */
       "KYUf");
       /* harmony import */
 
 
-      var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
+      var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
       /*! ./pages/homepage-management/homepage-management.component */
       "tkH9");
       /* harmony import */
 
 
-      var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
+      var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
       /*! ./views/help-management/help-management.component */
       "4X2+");
       /* harmony import */
 
 
-      var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
+      var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
       /*! ./views/view-help/view-help.component */
       "Jzsx");
       /* harmony import */
 
 
-      var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(
+      var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
       /*! ./views/messaging-reports/messaging-reports.component */
       "3a5B");
       /* harmony import */
 
 
-      var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(
+      var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
       /*! ./views/verification-submissions/verification-submissions.component */
       "cWCV");
       /* harmony import */
 
 
-      var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(
+      var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(
       /*! ./views/offer-submissions/offer-submissions.component */
       "3xDY");
       /* harmony import */
 
 
-      var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
+      var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(
       /*! ./views/view-verification/view-verification.component */
       "ac+Q");
       /* harmony import */
 
 
-      var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(
+      var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(
       /*! ./views/view-offer/view-offer.component */
       "PnTO");
       /* harmony import */
 
 
-      var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(
+      var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
       /*! ./views/view-report/view-report.component */
       "zGdd");
       /* harmony import */
 
 
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(
       /*! @angular/common/http */
       "tk/3");
       /* harmony import */
 
 
-      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(
+      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(
       /*! ./topgradservice.service */
       "DL5e");
       /* harmony import */
 
 
-      var _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(
+      var _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(
       /*! ./pages/content-management/industry-management/industrylist/industrylist.component */
       "/NuI");
       /* harmony import */
 
 
-      var _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(
+      var _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(
       /*! ./pages/content-management/industry-management/industrylist/industrylist.module */
       "08Ex");
       /* harmony import */
 
 
-      var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(
+      var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(
       /*! ./pages/auth/reset-password/reset-password.component */
       "4AU6");
       /* harmony import */
 
 
-      var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(
+      var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(
       /*! ./pages/content-management/terms-sub-headings/terms-sub-headings.component */
       "Q5si");
       /* harmony import */
 
 
-      var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(
+      var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(
       /*! ./pages/content-management/add-heading/add-heading.component */
       "GPan");
       /* harmony import */
 
 
-      var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(
+      var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(
       /*! ./pages/content-management/edit-heading/edit-heading.component */
       "nMTe");
       /* harmony import */
 
 
-      var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(
+      var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(
       /*! ./pages/content-management/edit-sub-heading/edit-sub-heading.component */
       "J/2i");
       /* harmony import */
 
 
-      var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(
+      var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(
       /*! ./pages/content-management/add-sub-heading/add-sub-heading.component */
       "4V+q");
       /* harmony import */
 
 
-      var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(
+      var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(
       /*! ./pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component */
       "TfLc");
       /* harmony import */
 
 
-      var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(
+      var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(
       /*! ./pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component */
       "FPJr"); // Material import
 
@@ -11519,6 +11427,9 @@
       var APP_CONTAINERS = [_containers__WEBPACK_IMPORTED_MODULE_30__["DefaultLayoutComponent"]]; // Import routing module
       // Import 3rd party components
       // import { DashboardComponent } from './views/dashboard/dashboard.component';
+      //import { PrivacyPolicyComponent } from './pages/content-management/privacy-policy/privacy-policy.component';
+      //import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
+      //import { ViewSubHeadingComponent } from './pages/content-management/view-sub-heading/view-sub-heading.component';
       // import { GraduateFaqComponent } from './pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.component';
 
       var AppModule = function AppModule() {
@@ -11526,14 +11437,16 @@
       };
 
       AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_117__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppBreadcrumbModule"].forRoot(), _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppFooterModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppSidebarModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_5__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_37__["BsDropdownModule"].forRoot(), ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_38__["TabsModule"].forRoot(), ng2_charts__WEBPACK_IMPORTED_MODULE_39__["ChartsModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetModule"].forRoot(), _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_9__["MatSortModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_10__["MatSlideToggleModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["ModalModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"], _material_module__WEBPACK_IMPORTED_MODULE_28__["MaterialModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_16__["EditorModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_17__["MatRadioModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_18__["MatAutocompleteModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_19__["MatExpansionModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_20__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["ReactiveFormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"], _angular_slider_ngx_slider__WEBPACK_IMPORTED_MODULE_24__["NgxSliderModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_25__["NgxDropzoneModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_26__["MatTabsModule"], ngx_plyr__WEBPACK_IMPORTED_MODULE_27__["PlyrModule"], _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_120__["IndustrylistModule"]],
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]].concat(APP_CONTAINERS, [_views_error_404_component__WEBPACK_IMPORTED_MODULE_31__["P404Component"], _views_error_500_component__WEBPACK_IMPORTED_MODULE_32__["P500Component"], _pages_auth_login_login_component__WEBPACK_IMPORTED_MODULE_33__["LoginComponent"], _views_register_register_component__WEBPACK_IMPORTED_MODULE_34__["RegisterComponent"], _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_40__["UserManagementComponent"], _pages_auth_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_41__["ForgetPasswordComponent"], _views_view_profile_view_profile_component__WEBPACK_IMPORTED_MODULE_42__["ViewProfileComponent"], _pages_employers_list_employers_list_component__WEBPACK_IMPORTED_MODULE_43__["EmployersListComponent"], _views_edit_employer_edit_employer_component__WEBPACK_IMPORTED_MODULE_44__["EditEmployerComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"], _views_edit_graduate_edit_graduate_component__WEBPACK_IMPORTED_MODULE_46__["EditGraduateComponent"], _views_view_graduate_view_graduate_component__WEBPACK_IMPORTED_MODULE_47__["ViewGraduateComponent"], _views_view_employer_view_employer_component__WEBPACK_IMPORTED_MODULE_48__["ViewEmployerComponent"], _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_49__["JobsManagementComponent"], _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_50__["ViewJobComponent"], _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_51__["CategoriesManagementComponent"], _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_52__["ViewApplicantComponent"], _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_53__["HeaderSectionComponent"], _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_54__["HomeOurStoryComponent"], _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_55__["SomethingForEveryoneComponent"], _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_56__["HowItWorkComponent"], _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_57__["SuccessStorySliderComponent"], _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_58__["RegisterTodayComponent"], _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_59__["ViewSliderItemComponent"], _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_60__["AddSliderItemComponent"], _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_61__["ApplicantsManagementComponent"], _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_62__["AddCategoryComponent"], _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_63__["AddSubCategoryComponent"], _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_64__["EditSubCategoryComponent"], _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_65__["ViewSubCategoryComponent"], _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_66__["EditJobComponent"], _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_67__["PaymentManagementComponent"], _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_68__["ViewPaymentComponent"], _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_69__["SubCategoryManagementComponent"], _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_70__["EditCategoryComponent"], _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_71__["SubAdminManagementComponent"], _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_72__["AddSubAdminComponent"], _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_73__["ViewSubAdminComponent"], _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_74__["EditSubAdminComponent"], _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_75__["EmployerHowItWorksComponent"], _views_edit_employer_how_it_works_edit_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_76__["EditEmployerHowItWorksComponent"], _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_77__["GraduateHowItWorksComponent"], _views_edit_graduate_how_it_works_edit_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_78__["EditGraduateHowItWorksComponent"], _views_privacy_policy_privacy_policy_component__WEBPACK_IMPORTED_MODULE_79__["PrivacyPolicyComponent"], _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_80__["TermsConditionsComponent"], _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_81__["ContactUsComponent"], _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_82__["ContactListingComponent"], _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_83__["OfferManagementComponent"], _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_84__["CareerArtclesComponent"], _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_85__["CareerArticlesComponent"], _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_86__["CareerVideosComponent"], _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_87__["AddArticleComponent"], _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_88__["ViewArticleComponent"], _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_89__["EditArticleComponent"], _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_90__["AddVideoComponent"], _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_91__["ViewVideoComponent"], _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_92__["EditVideoComponent"], _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_93__["ScheduleInterviewManagementComponent"], _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_94__["ViewInterviewComponent"], _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_95__["EditInterviewComponent"], _views_recruitment_solutions_management_recruitment_solutions_management_component__WEBPACK_IMPORTED_MODULE_96__["RecruitmentSolutionsManagementComponent"], _views_resume_builder_management_resume_builder_management_component__WEBPACK_IMPORTED_MODULE_97__["ResumeBuilderManagementComponent"], _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_98__["VideoIntroComponent"], _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_99__["VideoIntro1Component"], _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_100__["VideoIntro2Component"], _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_101__["VideoIntro3Component"], _views_graduate_verification_management_graduate_verification_management_component__WEBPACK_IMPORTED_MODULE_102__["GraduateVerificationManagementComponent"], _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_103__["FaqsComponent"], _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_104__["AddFaqComponent"], _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_105__["EditFaqComponent"], _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_106__["ViewFaqComponent"], _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_107__["AboutUsComponent"], _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_127__["GraduateAddFaqComponent"], _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_128__["GraduateEditFaqComponent"], _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_108__["HomepageManagementComponent"], _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_109__["HelpManagementComponent"], _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_110__["ViewHelpComponent"], _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_111__["MessagingReportsComponent"], _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_112__["VerificationSubmissionsComponent"], _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_113__["OfferSubmissionsComponent"], _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_114__["ViewVerificationComponent"], _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_115__["ViewOfferComponent"], _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_116__["ViewReportComponent"], _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_119__["IndustrylistComponent"], _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_121__["ResetPasswordComponent"], _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_122__["TermsSubHeadingsComponent"], _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_123__["AddHeadingComponent"], _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_124__["EditHeadingComponent"], _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_125__["EditSubHeadingComponent"], _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_126__["AddSubHeadingComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"]]),
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_115__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppBreadcrumbModule"].forRoot(), _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppFooterModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppSidebarModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_5__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_37__["BsDropdownModule"].forRoot(), ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_38__["TabsModule"].forRoot(), ng2_charts__WEBPACK_IMPORTED_MODULE_39__["ChartsModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetModule"].forRoot(), _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_9__["MatSortModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_10__["MatSlideToggleModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["ModalModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"], _material_module__WEBPACK_IMPORTED_MODULE_28__["MaterialModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_16__["EditorModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_17__["MatRadioModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_18__["MatAutocompleteModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_19__["MatExpansionModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_20__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["ReactiveFormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"], _angular_slider_ngx_slider__WEBPACK_IMPORTED_MODULE_24__["NgxSliderModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_25__["NgxDropzoneModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_26__["MatTabsModule"], ngx_plyr__WEBPACK_IMPORTED_MODULE_27__["PlyrModule"], _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_118__["IndustrylistModule"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]].concat(APP_CONTAINERS, [_views_error_404_component__WEBPACK_IMPORTED_MODULE_31__["P404Component"], _views_error_500_component__WEBPACK_IMPORTED_MODULE_32__["P500Component"], _pages_auth_login_login_component__WEBPACK_IMPORTED_MODULE_33__["LoginComponent"], _views_register_register_component__WEBPACK_IMPORTED_MODULE_34__["RegisterComponent"], _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_40__["UserManagementComponent"], _pages_auth_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_41__["ForgetPasswordComponent"], _views_view_profile_view_profile_component__WEBPACK_IMPORTED_MODULE_42__["ViewProfileComponent"], _pages_employers_list_employers_list_component__WEBPACK_IMPORTED_MODULE_43__["EmployersListComponent"], _views_edit_employer_edit_employer_component__WEBPACK_IMPORTED_MODULE_44__["EditEmployerComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"], _views_edit_graduate_edit_graduate_component__WEBPACK_IMPORTED_MODULE_46__["EditGraduateComponent"], _views_view_graduate_view_graduate_component__WEBPACK_IMPORTED_MODULE_47__["ViewGraduateComponent"], _views_view_employer_view_employer_component__WEBPACK_IMPORTED_MODULE_48__["ViewEmployerComponent"], _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_49__["JobsManagementComponent"], _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_50__["ViewJobComponent"], _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_51__["CategoriesManagementComponent"], _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_52__["ViewApplicantComponent"], _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_53__["HeaderSectionComponent"], _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_54__["HomeOurStoryComponent"], _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_55__["SomethingForEveryoneComponent"], _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_56__["HowItWorkComponent"], _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_57__["SuccessStorySliderComponent"], _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_58__["RegisterTodayComponent"], _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_59__["ViewSliderItemComponent"], _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_60__["AddSliderItemComponent"], _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_61__["ApplicantsManagementComponent"], _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_62__["AddCategoryComponent"], _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_63__["AddSubCategoryComponent"], _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_64__["EditSubCategoryComponent"], _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_65__["ViewSubCategoryComponent"], _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_66__["EditJobComponent"], _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_67__["PaymentManagementComponent"], _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_68__["ViewPaymentComponent"], _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_69__["SubCategoryManagementComponent"], _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_70__["EditCategoryComponent"], _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_71__["SubAdminManagementComponent"], _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_72__["AddSubAdminComponent"], _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_73__["ViewSubAdminComponent"], _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_74__["EditSubAdminComponent"], _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_75__["EmployerHowItWorksComponent"], _views_edit_employer_how_it_works_edit_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_76__["EditEmployerHowItWorksComponent"], _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_77__["GraduateHowItWorksComponent"], _views_edit_graduate_how_it_works_edit_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_78__["EditGraduateHowItWorksComponent"], //PrivacyPolicyComponent,
+        _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_79__["TermsConditionsComponent"], _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_80__["ContactUsComponent"], _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_81__["ContactListingComponent"], _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_82__["OfferManagementComponent"], _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_83__["CareerArtclesComponent"], _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_84__["CareerArticlesComponent"], _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_85__["CareerVideosComponent"], _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_86__["AddArticleComponent"], _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_87__["ViewArticleComponent"], _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_88__["EditArticleComponent"], _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_89__["AddVideoComponent"], _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_90__["ViewVideoComponent"], _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_91__["EditVideoComponent"], _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_92__["ScheduleInterviewManagementComponent"], _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_93__["ViewInterviewComponent"], _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_94__["EditInterviewComponent"], //RecruitmentSolutionsManagementComponent,
+        _views_resume_builder_management_resume_builder_management_component__WEBPACK_IMPORTED_MODULE_95__["ResumeBuilderManagementComponent"], _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_96__["VideoIntroComponent"], _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_97__["VideoIntro1Component"], _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_98__["VideoIntro2Component"], _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_99__["VideoIntro3Component"], _views_graduate_verification_management_graduate_verification_management_component__WEBPACK_IMPORTED_MODULE_100__["GraduateVerificationManagementComponent"], _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_101__["FaqsComponent"], _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_102__["AddFaqComponent"], _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_103__["EditFaqComponent"], _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_104__["ViewFaqComponent"], _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_105__["AboutUsComponent"], _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_125__["GraduateAddFaqComponent"], _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_126__["GraduateEditFaqComponent"], _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_106__["HomepageManagementComponent"], _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_107__["HelpManagementComponent"], _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_108__["ViewHelpComponent"], _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_109__["MessagingReportsComponent"], _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_110__["VerificationSubmissionsComponent"], _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_111__["OfferSubmissionsComponent"], _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_112__["ViewVerificationComponent"], _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_113__["ViewOfferComponent"], _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_114__["ViewReportComponent"], _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_117__["IndustrylistComponent"], _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_119__["ResetPasswordComponent"], _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_120__["TermsSubHeadingsComponent"], _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_121__["AddHeadingComponent"], _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_122__["EditHeadingComponent"], _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_123__["EditSubHeadingComponent"], _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_124__["AddSubHeadingComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"]]),
         providers: [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["BsModalRef"], {
           provide: _angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"],
           useClass: _angular_common__WEBPACK_IMPORTED_MODULE_3__["HashLocationStrategy"]
         }, {
-          provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_117__["HTTP_INTERCEPTORS"],
-          useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_118__["TopgradserviceService"],
+          provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_115__["HTTP_INTERCEPTORS"],
+          useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_116__["TopgradserviceService"],
           multi: true
         }, _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]]
@@ -11939,7 +11852,7 @@
             });
           }
         }, {
-          path: 'addHeading',
+          path: 'addHeading/:type',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
             /*! import() | pages-content-management-add-heading-add-heading-module */
@@ -11950,7 +11863,7 @@
             });
           }
         }, {
-          path: 'addSubHeading/:id',
+          path: 'addSubHeading/:id/:type',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
             /*! import() | pages-content-management-add-sub-heading-add-sub-heading-module */
@@ -11969,6 +11882,17 @@
             /*! ./pages/content-management/edit-heading/edit-heading.module */
             "85x5")).then(function (m) {
               return m.EditHeadingModule;
+            });
+          }
+        }, {
+          path: 'viewSubHeading/:content_id/:id',
+          loadChildren: function loadChildren() {
+            return __webpack_require__.e(
+            /*! import() | pages-content-management-view-sub-heading-view-sub-heading-module */
+            "pages-content-management-view-sub-heading-view-sub-heading-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/view-sub-heading/view-sub-heading.module */
+            "e8xx")).then(function (m) {
+              return m.ViewSubHeadingModule;
             });
           }
         }, {
@@ -12393,10 +12317,10 @@
           path: 'privacy-policy',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-privacy-policy-privacy-policy-module */
-            "views-privacy-policy-privacy-policy-module").then(__webpack_require__.bind(null,
-            /*! ./views/privacy-policy/privacy-policy.module */
-            "RAp4")).then(function (m) {
+            /*! import() | pages-content-management-privacy-policy-privacy-policy-module */
+            "pages-content-management-privacy-policy-privacy-policy-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/privacy-policy/privacy-policy.module */
+            "BGHv")).then(function (m) {
               return m.PrivacyPolicyModule;
             });
           }
@@ -12412,7 +12336,7 @@
             });
           }
         }, {
-          path: 'terms-conditions-sub-headings/:id',
+          path: 'terms-conditions-sub-headings/:id/:type',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
             /*! import() | pages-content-management-terms-sub-headings-terms-sub-headings-module */
@@ -12569,10 +12493,10 @@
           path: 'recruitment-solutions-management',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-recruitment-solutions-management-recruitment-solutions-management-module */
-            "views-recruitment-solutions-management-recruitment-solutions-management-module").then(__webpack_require__.bind(null,
-            /*! ./views/recruitment-solutions-management/recruitment-solutions-management.module */
-            "Bjqc")).then(function (m) {
+            /*! import() | pages-recruitment-solutions-management-recruitment-solutions-management-module */
+            "pages-recruitment-solutions-management-recruitment-solutions-management-module").then(__webpack_require__.bind(null,
+            /*! ./pages/recruitment-solutions-management/recruitment-solutions-management.module */
+            "jDfE")).then(function (m) {
               return m.RecruitmentSolutionsManagementModule;
             });
           }
@@ -13055,84 +12979,6 @@
           icon: 'icon-star'
         }]
       }];
-      /***/
-    },
-
-    /***/
-    "c6Ys": function c6Ys(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "RecruitmentSolutionsManagementComponent", function () {
-        return RecruitmentSolutionsManagementComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_recruitment_solutions_management_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./recruitment-solutions-management.component.html */
-      "he3f");
-      /* harmony import */
-
-
-      var _recruitment_solutions_management_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./recruitment-solutions-management.component.scss */
-      "hIx0");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var RecruitmentSolutionsManagementComponent = /*#__PURE__*/function () {
-        function RecruitmentSolutionsManagementComponent() {
-          _classCallCheck(this, RecruitmentSolutionsManagementComponent);
-
-          this.files = [];
-        }
-
-        _createClass(RecruitmentSolutionsManagementComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "onSelect",
-          value: function onSelect(event) {
-            var _this$files3;
-
-            console.log(event);
-
-            (_this$files3 = this.files).push.apply(_this$files3, _toConsumableArray(event.addedFiles));
-          }
-        }, {
-          key: "onRemove",
-          value: function onRemove(event) {
-            console.log(event);
-            this.files.splice(this.files.indexOf(event), 1);
-          }
-        }]);
-
-        return RecruitmentSolutionsManagementComponent;
-      }();
-
-      RecruitmentSolutionsManagementComponent.ctorParameters = function () {
-        return [];
-      };
-
-      RecruitmentSolutionsManagementComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-recruitment-solutions-management',
-        template: _raw_loader_recruitment_solutions_management_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_recruitment_solutions_management_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], RecruitmentSolutionsManagementComponent);
       /***/
     },
 
@@ -14282,18 +14128,6 @@
     },
 
     /***/
-    "hIx0": function hIx0(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJyZWNydWl0bWVudC1zb2x1dGlvbnMtbWFuYWdlbWVudC5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
     "hdGQ": function hdGQ(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -14302,18 +14136,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWZhcS5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "he3f": function he3f(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Recruitment Solutions Header Section</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Don’t have time to recruit candidates? We can help!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Sub-Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Save 10 hours a week sourcing and screening candidates. Let Top Graduates Recruitment help you today!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/rcrtmntimg.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Why choose TopGraduates</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Why choose TopGraduates ?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Our Graduate Recruitment Agency</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Endorsed-steps-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Benefits</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>1: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/access_time.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get hired 3x faster\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>2: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/ondemand_video.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Bonus Video Resume\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>3: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/assessment.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Profile Booster\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>4: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/description.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Resume & Cover Letter\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>5: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/link.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"LinkedIn Profile Booster\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>We provide you with the essentials</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Recruitment Step 1</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Recruitment Consultation\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/s1img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Recruitment Step 2</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Talent sourcing\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/s2img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Recruitment Step 3</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Candidate screening\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/s3img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Recruitment Step 4</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"In depth interviews\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/s4img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Recruitment Step 5</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Meet the best\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/s5img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Recruitment Step 6</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Verify & Select\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/s6img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n<section class=\"tstimnl-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Testimonials</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Testimonial 1: Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Name</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"James\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Testimonial 2: Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/5.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Name</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Andrea\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n<section class=\"opportunities-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Our Success Stories</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Our Success Stories\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"opportunities-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Want to know more?</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Want to know more?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
       /***/
     },
 
@@ -14879,7 +14701,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"jobs-mngmnt\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n            <mat-form-field appearance=\"standard\">\n              <mat-label>Filter</mat-label>\n              <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n            </mat-form-field>\n            <span class=\"add-categry\">\n              <a class=\"btn-primary btn\" routerLink=\"/addSubHeading/{{heading_id}}\">Add Sub Heading</a>\n            </span>\n          </div>\n  \n          <div class=\"mat-elevation-z8\">\n            <div class=\"table-responsive\">\n              <table mat-table [dataSource]=\"subheadinglist\" matSort>\n                <!-- Checkbox Column -->\n                <ng-container matColumnDef=\"select\">\n                  <th mat-header-cell *matHeaderCellDef>\n                    <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                      [checked]=\"selection.hasValue() && isAllSelected()\"\n                      [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                      [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                    </mat-checkbox>\n                  </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                    <mat-checkbox (click)=\"$event.stopPropagation()\"\n                      (change)=\"$event ? selection.toggle(row) : null\"\n                      [checked]=\"selection.isSelected(row)\"\n                      [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                    </mat-checkbox>\n                  </td>\n                </ng-container>\n                <!-- ID Column -->\n                <ng-container matColumnDef=\"id\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                  <td mat-cell *matCellDef=\"let row; let i=index\"> {{i+1}}  </td>\n                </ng-container>\n  \n                <!-- firstName Column -->\n                <ng-container matColumnDef=\"title\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Title </th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.title}} </td>\n                </ng-container>\n                <!-- Company Column -->\n                <!-- <ng-container matColumnDef=\"category\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.category}} </td>\n                </ng-container> -->\n               \n                <!-- enquiry Column -->\n                <ng-container matColumnDef=\"description\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>\n                  <td mat-cell *matCellDef=\"let row\" class=\"td-width\" [innerHTML]=\"row?.description\">  </td>\n                </ng-container>\n  \n                 <!-- Action column -->\n                 <ng-container matColumnDef=\"action\">\n                  <th mat-header-cell *matHeaderCellDef> Action </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                      <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                        <mat-icon>more_vert</mat-icon>\n                      </button>\n                      <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                          <!-- <a mat-menu-item class=\"\" routerLink=\"/view-faq\">\n                              <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                              <span>View</span>\n                          </a> -->\n                          <a mat-menu-item class=\"\" routerLink=\"/editSubHeading/{{this.heading_id}}/{{row._id}}\">\n                              <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                              <span>Edit</span>\n                          </a>\n                          \n                          <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"modal(row._id)\" >\n                              <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                              <span>Delete</span>\n                          </a>\n                      </mat-menu>\n                  </td>\n                </ng-container>\n  \n                <!-- Progress Column -->\n                <!-- <ng-container matColumnDef=\"progress\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n                </ng-container> -->\n  \n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  \n                <!-- Row shown when there is no matching data. -->\n                <tr class=\"mat-row\" *matNoDataRow>\n                  <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n                </tr>\n              </table>\n            </div>\n            <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  \n  <!-- Modal -->\n  <div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-sm\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n            <span aria-hidden=\"true\" class=\"prof_modclose\">\n              <img src=\"assets/img/Group 225.png\">\n            </span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <p>Are you sure you want to delete the selected Sub Heading?</p>\n        </div>\n        <div class=\"modal-footer justify-content-center\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"deletesubheading(this.delId)\">Yes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  \n  ";
+      __webpack_exports__["default"] = "<section class=\"jobs-mngmnt\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n            <mat-form-field appearance=\"standard\">\n              <mat-label>Filter</mat-label>\n              <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n            </mat-form-field>\n            <span class=\"add-categry\">\n              <a class=\"btn-primary btn\" routerLink=\"/addSubHeading/{{heading_id}}/{{type}}\">Add Sub Heading</a>\n            </span>\n          </div>\n  \n          <div class=\"mat-elevation-z8\">\n            <div class=\"table-responsive\">\n              <table mat-table [dataSource]=\"subheadinglist\" matSort>\n                <!-- Checkbox Column -->\n                <ng-container matColumnDef=\"select\">\n                  <th mat-header-cell *matHeaderCellDef>\n                    <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                      [checked]=\"selection.hasValue() && isAllSelected()\"\n                      [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                      [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                    </mat-checkbox>\n                  </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                    <mat-checkbox (click)=\"$event.stopPropagation()\"\n                      (change)=\"$event ? selection.toggle(row) : null\"\n                      [checked]=\"selection.isSelected(row)\"\n                      [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                    </mat-checkbox>\n                  </td>\n                </ng-container>\n                <!-- ID Column -->\n                <ng-container matColumnDef=\"id\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                  <td mat-cell *matCellDef=\"let row; let i=index\"> {{i+1}}  </td>\n                </ng-container>\n  \n                <!-- firstName Column -->\n                <ng-container matColumnDef=\"title\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Title </th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.title}} </td>\n                </ng-container>\n                <!-- Company Column -->\n                <!-- <ng-container matColumnDef=\"category\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.category}} </td>\n                </ng-container> -->\n               \n                <!-- enquiry Column -->\n                <ng-container matColumnDef=\"description\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>\n                  <td mat-cell *matCellDef=\"let row\" class=\"td-width\" [innerHTML]=\"row?.description\">  </td>\n                </ng-container>\n  \n                 <!-- Action column -->\n                 <ng-container matColumnDef=\"action\">\n                  <th mat-header-cell *matHeaderCellDef> Action </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                      <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                        <mat-icon>more_vert</mat-icon>\n                      </button>\n                      <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                          <a mat-menu-item class=\"\" routerLink=\"/viewSubHeading/{{this.heading_id}}/{{row._id}}\">\n                              <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                              <span>View</span>\n                          </a>\n                          <a mat-menu-item class=\"\" routerLink=\"/editSubHeading/{{this.heading_id}}/{{row._id}}\">\n                              <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                              <span>Edit</span>\n                          </a>\n                          \n                          <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"modal(row._id)\" >\n                              <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                              <span>Delete</span>\n                          </a>\n                      </mat-menu>\n                  </td>\n                </ng-container>\n  \n                <!-- Progress Column -->\n                <!-- <ng-container matColumnDef=\"progress\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n                </ng-container> -->\n  \n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  \n                <!-- Row shown when there is no matching data. -->\n                <tr class=\"mat-row\" *matNoDataRow>\n                  <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n                </tr>\n              </table>\n            </div>\n            <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  \n  <!-- Modal -->\n  <div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-sm\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n            <span aria-hidden=\"true\" class=\"prof_modclose\">\n              <img src=\"assets/img/Group 225.png\">\n            </span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <p>Are you sure you want to delete the selected Sub Heading?</p>\n        </div>\n        <div class=\"modal-footer justify-content-center\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"deletesubheading(this.delId)\">Yes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  \n  ";
       /***/
     },
 
@@ -14916,18 +14738,6 @@
 
 
       __webpack_exports__["default"] = "<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Intro Step 2</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Step 2 Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"2. Practice your takes\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/tip_intro.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Endorsed-steps-sec resume_tips_sctn video_resm\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Resume Tips</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Tips on the Video Resume\">\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>1: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip1.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Clear Audio\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>2: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip2.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Appropriate Attire\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>3: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip3.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Perfect Posture\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>4: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip4.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Smile!\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>5: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip5.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Simple Background\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-      /***/
-    },
-
-    /***/
-    "mvjs": function mvjs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Privacy Policy</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"privacyform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\" [(ngModel)]=\"title\" [formControl]=\"privacyform.controls['title']\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor [(ngModel)]=\"description\" [formControl]=\"privacyform.controls['description']\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"updatecms()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n";
       /***/
     },
 
@@ -16008,8 +15818,10 @@
           value: function onSelectLogo(e) {
             var _this37 = this;
 
+            console.log("event", e);
             console.log("logos response ==>", e.addedFiles[0]);
             this.selectedfile = e.addedFiles[0];
+            console.log("addedfiles", this.selectedfile);
             this.logos.push(e.addedFiles[0]);
             var formData = new FormData();
             formData.append('media', this.selectedfile);

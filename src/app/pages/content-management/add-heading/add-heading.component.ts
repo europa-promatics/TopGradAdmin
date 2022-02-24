@@ -34,12 +34,13 @@ export class AddHeadingComponent implements OnInit {
     }
     else{
       var obj={
-        type:"terms",
+        type:this.route.snapshot.paramMap.get('type'),
         heading:{
           title:this.terms_headingform.value.title,
           description:this.terms_headingform.value.description
         }
       }
+      console.log("hmara object", obj);
       this.Service.addtermheading(obj).subscribe(res=>{
         console.log("fgdgfdgfdfgdfgd",res);
         if(res.code==200){

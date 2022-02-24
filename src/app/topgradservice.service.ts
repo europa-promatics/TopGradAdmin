@@ -502,6 +502,37 @@ export class TopgradserviceService implements HttpInterceptor {
   }
 
 
+  postRecruitmentContent(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/edit/recruitement/solution`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
+  recruitmentcontent(): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/recruitment-solutions?content_id=6214a49299814ab6e4f4338e`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
+  uploadbenefitmedia(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/upload/media`;
+    console.log(API_URL)
+    return this.httpClient.post(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
+
 }
 
 

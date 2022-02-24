@@ -8,7 +8,7 @@
               <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" class="filter_input" #input>
             </mat-form-field>
             <span class="add-categry">
-              <a class="btn-primary btn" routerLink="/addSubHeading/{{heading_id}}">Add Sub Heading</a>
+              <a class="btn-primary btn" routerLink="/addSubHeading/{{heading_id}}/{{type}}">Add Sub Heading</a>
             </span>
           </div>
   
@@ -63,10 +63,10 @@
                         <mat-icon>more_vert</mat-icon>
                       </button>
                       <mat-menu #menu="matMenu" class="td-menu">
-                          <!-- <a mat-menu-item class="" routerLink="/view-faq">
+                          <a mat-menu-item class="" routerLink="/viewSubHeading/{{this.heading_id}}/{{row._id}}">
                               <mat-icon class="material-icons-outlined">visibility</mat-icon>
                               <span>View</span>
-                          </a> -->
+                          </a>
                           <a mat-menu-item class="" routerLink="/editSubHeading/{{this.heading_id}}/{{row._id}}">
                               <mat-icon class="material-icons-outlined">edit</mat-icon>
                               <span>Edit</span>

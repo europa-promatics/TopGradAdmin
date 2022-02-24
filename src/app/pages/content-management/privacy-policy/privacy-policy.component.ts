@@ -1,14 +1,14 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-
+import { Component, OnInit, AfterViewInit, ViewChild  } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TopgradserviceService } from '../../../topgradservice.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {ModalDirective} from 'ngx-bootstrap/modal';
 import {SelectionModel} from '@angular/cdk/collections';
-import { TopgradserviceService } from '../../../topgradservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+//import { ToastrService } from 'ngx-toastr';
 
 export interface UserData {
   id: string;
@@ -35,51 +35,52 @@ const DESCRIPTION: string[] = [
 ];
 
 
-
 @Component({
-  selector: 'app-terms-conditions',
-  templateUrl: './terms-conditions.component.html',
-  styleUrls: ['./terms-conditions.component.scss']
+  selector: 'app-privacy-policy',
+  templateUrl: './privacy-policy.component.html',
+  styleUrls: ['./privacy-policy.component.scss']
 })
-export class TermsConditionsComponent implements OnInit {
+export class PrivacyPolicyComponent implements OnInit {
+
 
   displayedColumns: string[] = ['select', 'id', 'title', 'description', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
-  
+
   @ViewChild('smallModal') public smallModal: ModalDirective;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  termslist: any=[];
+
+
+  privacyform:FormGroup
+  title: any;
+  description: any;
+  policylist: any;
   totalRecords: any;
   delId: any;
-
-
   constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _snackBar: MatSnackBar ) { 
-
+    
     const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(this.termslist);
-
+    this.dataSource = new MatTableDataSource(this.policylist);
   }
-
   ngOnInit(): void {
-    this.termsconditionlist();
+     this.privacypolicylist();
   }
 
-  termsconditionlist(){
+  privacypolicylist(){
     console.log("khjhgjhgjhgjhghjghjgjhghjg");
     
     var obj = {
     limit:10,
     offset:0,
-    type: "terms"
+    type: "privacy"
     }
     console.log("onnnn", obj)
     this.Service.termslist(obj).subscribe(data => {
-    console.log("main data for terms is ====", data)
-    this.termslist=data.data
+    console.log("main data for privacy is ====", data)
+    this.policylist=data.data
     this.totalRecords=data.length;
     }, err => {
     console.log(err.status)
@@ -91,6 +92,7 @@ export class TermsConditionsComponent implements OnInit {
     }
     })
   }
+
   modal(id){
     this.smallModal.show()
     this.delId=id
@@ -115,15 +117,6 @@ export class TermsConditionsComponent implements OnInit {
       this._snackBar.open("Some Error Occued","close",{
         duration: 2000})
       })
-  }
-
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
   }
 
   /** Whether the number of selected elements matches the total number of rows. */
@@ -165,4 +158,6 @@ function createNewUser(id: number): UserData {
     description: description,
 
   };
+
+  
 }

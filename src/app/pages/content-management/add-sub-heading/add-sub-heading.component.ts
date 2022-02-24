@@ -35,7 +35,7 @@ export class AddSubHeadingComponent implements OnInit {
     }
     else{
       var obj={
-          type:"terms",
+          type:this.route.snapshot.paramMap.get('type'),
           title:this.terms_sub_headingform.value.title,
           description:this.terms_sub_headingform.value.description,
           content_id:this.route.snapshot.paramMap.get('id')

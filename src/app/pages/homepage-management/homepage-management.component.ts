@@ -179,9 +179,11 @@ export class HomepageManagementComponent implements OnInit {
 
 
   onSelectLogo(e) {
+    console.log("event",e);
     
     console.log("logos response ==>", e.addedFiles[0]);
     this.selectedfile = e.addedFiles[0];
+    console.log("addedfiles",this.selectedfile);
     this.logos.push(e.addedFiles[0])
 
     const formData = new FormData();
@@ -519,12 +521,7 @@ export class HomepageManagementComponent implements OnInit {
             return
           }
         }
-
-
       }
-
-
-
     }
     if (type == "newRegister") {
       if (this.newRegister.valid) {

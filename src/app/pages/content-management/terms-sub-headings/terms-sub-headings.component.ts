@@ -54,6 +54,7 @@ export class TermsSubHeadingsComponent implements OnInit {
   totalRecords: any;
   heading_id: any;
   delId: any;
+  type: any;
 
 
   constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _snackBar: MatSnackBar ) {
@@ -72,6 +73,7 @@ export class TermsSubHeadingsComponent implements OnInit {
   ngOnInit(): void {
     this.termssubheadings();
     this.heading_id=this.route.snapshot.paramMap.get('id');
+    this.type= this.route.snapshot.paramMap.get('type');
   }
 
   termssubheadings(){

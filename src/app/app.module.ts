@@ -113,7 +113,7 @@ import { EmployerHowItWorksComponent } from './views/employer-how-it-works/emplo
 import { EditEmployerHowItWorksComponent } from './views/edit-employer-how-it-works/edit-employer-how-it-works.component';
 import { GraduateHowItWorksComponent } from './views/graduate-how-it-works/graduate-how-it-works.component';
 import { EditGraduateHowItWorksComponent } from './views/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
-import { PrivacyPolicyComponent } from './views/privacy-policy/privacy-policy.component';
+//import { PrivacyPolicyComponent } from './pages/content-management/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './pages/content-management/terms-conditions/terms-conditions.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { ContactListingComponent } from './views/contact-listing/contact-listing.component';
@@ -130,7 +130,7 @@ import { EditVideoComponent } from './views/edit-video/edit-video.component';
 import { ScheduleInterviewManagementComponent } from './views/schedule-interview-management/schedule-interview-management.component';
 import { ViewInterviewComponent } from './views/view-interview/view-interview.component';
 import { EditInterviewComponent } from './views/edit-interview/edit-interview.component';
-import { RecruitmentSolutionsManagementComponent } from './views/recruitment-solutions-management/recruitment-solutions-management.component';
+//import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
 import { ResumeBuilderManagementComponent } from './views/resume-builder-management/resume-builder-management.component';
 import { VideoIntroComponent } from './views/video-intro/video-intro.component';
 import { VideoIntro1Component } from './views/video-intro1/video-intro1.component';
@@ -163,6 +163,7 @@ import { EditSubHeadingComponent } from './pages/content-management/edit-sub-hea
 import { AddSubHeadingComponent } from './pages/content-management/add-sub-heading/add-sub-heading.component';
 import { GraduateAddFaqComponent } from './pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component';
 import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component';
+//import { ViewSubHeadingComponent } from './pages/content-management/view-sub-heading/view-sub-heading.component';
 
 // import { GraduateFaqComponent } from './pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.component';
 
@@ -258,7 +259,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     EditEmployerHowItWorksComponent,
     GraduateHowItWorksComponent,
     EditGraduateHowItWorksComponent,
-    PrivacyPolicyComponent,
+    //PrivacyPolicyComponent,
     TermsConditionsComponent,
     ContactUsComponent,
     ContactListingComponent,
@@ -275,7 +276,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     ScheduleInterviewManagementComponent,
     ViewInterviewComponent,
     EditInterviewComponent,
-    RecruitmentSolutionsManagementComponent,
+    //RecruitmentSolutionsManagementComponent,
     ResumeBuilderManagementComponent,
     VideoIntroComponent,
     VideoIntro1Component,
@@ -308,6 +309,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     AddSubHeadingComponent,
     
     GraduateListComponent,
+        //  ViewSubHeadingComponent,
     // GraduateFaqComponent
     // DashboardComponent
   ],
