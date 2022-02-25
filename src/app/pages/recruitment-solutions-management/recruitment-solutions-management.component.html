@@ -47,6 +47,10 @@
 													Upload Image
 													</button>
 												</div>
+												<div *ngIf="headerSection.controls['image']?.errors?.required "
+													class="invalid">
+													*Please select image
+												</div>
 												<div *ngIf="headerSection.controls.county?.errors?.required  " class="invalid">
 													*Only images are allowed
 												</div>
@@ -184,7 +188,7 @@
 																	Upload Image
 																	</button>
 																</div>
-																<div *ngIf="benefitsArray.controls[i].controls['image'].errors?.required "
+																<div *ngIf="benefitsArray.controls[i].controls['image']?.errors?.required "
 																	class="invalid">
 																	*Please select image
 																</div>
@@ -420,6 +424,10 @@
 														Upload Image
 														</button>
 													</div>
+													<div *ngIf="recruitment1Section.controls['image']?.errors?.required "
+														class="invalid">
+														*Please select image
+													</div>
 													<div *ngIf="recruitment1Section.controls.county?.errors?.required  " class="invalid">
 														*Only images are allowed
 													</div>
@@ -488,6 +496,10 @@
 															<input type="file" title="" name="" class="img-input-upld" (change)="setHeadingImage2($event)">
 														Upload Image
 														</button>
+													</div>
+													<div *ngIf="recruitment2Section.controls['image']?.errors?.required "
+														class="invalid">
+														*Please select image
 													</div>
 													<div *ngIf="recruitment2Section.controls.county?.errors?.required  " class="invalid">
 														*Only images are allowed
@@ -558,6 +570,10 @@
 														Upload Image
 														</button>
 													</div>
+													<div *ngIf="recruitment3Section.controls['image']?.errors?.required "
+														class="invalid">
+														*Please select image
+													</div>
 													<div *ngIf="recruitment3Section.controls.county?.errors?.required  " class="invalid">
 														*Only images are allowed
 													</div>
@@ -626,6 +642,10 @@
 															<input type="file" title="" name="" class="img-input-upld" (change)="setHeadingImage4($event)">
 														Upload Image
 														</button>
+													</div>
+													<div *ngIf="recruitment4Section.controls['image']?.errors?.required "
+														class="invalid">
+														*Please select image
 													</div>
 													<div *ngIf="recruitment4Section.controls.county?.errors?.required  " class="invalid">
 														*Only images are allowed
@@ -696,6 +716,10 @@
 														Upload Image
 														</button>
 													</div>
+													<div *ngIf="recruitment5Section.controls['image']?.errors?.required "
+														class="invalid">
+														*Please select image
+													</div>
 													<div *ngIf="recruitment5Section.controls.county?.errors?.required  " class="invalid">
 														*Only images are allowed
 													</div>
@@ -765,6 +789,10 @@
 														Upload Image
 														</button>
 													</div>
+													<div *ngIf="recruitment6Section.controls['image']?.errors?.required "
+														class="invalid">
+														*Please select image
+													</div>
 													<div *ngIf="recruitment6Section.controls.county?.errors?.required  " class="invalid">
 														*Only images are allowed
 													</div>
@@ -815,6 +843,10 @@
 														Upload Image
 														</button>
 													</div>
+													<div *ngIf="testimonialsSection.controls['image1']?.errors?.required "
+														class="invalid">
+														*Please select image
+													</div>
 													<div *ngIf="testimonialsSection.controls.county?.errors?.required  " class="invalid">
 														*Only images are allowed
 													</div>
@@ -851,6 +883,10 @@
 															<input type="file" title="" name="" class="img-input-upld" (change)="setHeadingImage8($event)">
 														Upload Image
 														</button>
+													</div>
+													<div *ngIf="testimonialsSection.controls['image2']?.errors?.required "
+														class="invalid">
+														*Please select image
 													</div>
 													<div *ngIf="testimonialsSection.controls.county1?.errors?.required  " class="invalid">
 														*Only images are allowed
