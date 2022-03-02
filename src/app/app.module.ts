@@ -131,12 +131,12 @@ import { ScheduleInterviewManagementComponent } from './views/schedule-interview
 import { ViewInterviewComponent } from './views/view-interview/view-interview.component';
 import { EditInterviewComponent } from './views/edit-interview/edit-interview.component';
 //import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
-import { ResumeBuilderManagementComponent } from './views/resume-builder-management/resume-builder-management.component';
+//import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
 import { VideoIntroComponent } from './views/video-intro/video-intro.component';
 import { VideoIntro1Component } from './views/video-intro1/video-intro1.component';
 import { VideoIntro2Component } from './views/video-intro2/video-intro2.component';
 import { VideoIntro3Component } from './views/video-intro3/video-intro3.component';
-import { GraduateVerificationManagementComponent } from './views/graduate-verification-management/graduate-verification-management.component';
+//import { GraduateVerificationManagementComponent } from './pages/graduate-verification-management/graduate-verification-management.component';
 import { FaqsComponent } from './views/faqs/faqs.component';
 import { AddFaqComponent } from './views/add-faq/add-faq.component';
 import { EditFaqComponent } from './views/edit-faq/edit-faq.component';
@@ -277,12 +277,12 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     ViewInterviewComponent,
     EditInterviewComponent,
     //RecruitmentSolutionsManagementComponent,
-    ResumeBuilderManagementComponent,
+    //ResumeBuilderManagementComponent,
     VideoIntroComponent,
     VideoIntro1Component,
     VideoIntro2Component,
     VideoIntro3Component,
-    GraduateVerificationManagementComponent,
+    //GraduateVerificationManagementComponent,
     FaqsComponent,
     AddFaqComponent,
 

@@ -24,7 +24,7 @@
 										*Please enter heading
 									</div>
 									<div *ngIf="(headerSection.controls.heading.touched || headerSection.controls.heading.dirty) && headerSection.controls.heading.invalid && headerSection.controls.heading?.errors?.maxlength  " class="invalid">
-										**Maximum Length should be 50 characters
+										**Maximum Length should be 200 characters
 									</div>
 									<div class="form-group">
 										<label>Sub-Heading</label>
@@ -34,7 +34,7 @@
 										*Please enter sub heading
 									</div>
 									<div *ngIf="(headerSection.controls.subheading.touched || headerSection.controls.subheading.dirty) && headerSection.controls.subheading.invalid && headerSection.controls.subheading?.errors?.maxlength  " class="invalid">
-										**Maximum Length should be 50 characters
+										**Maximum Length should be 200 characters
 									</div>
 									<div class="form-group">
 										<label>Banner Image</label>
@@ -131,6 +131,27 @@
 								
 									<div class="home-mng-form">
 										<div class="form-group">
+											<label>Agency Image</label>
+											<div class="slider-video-cntnt">
+												<div class="prev-upld-img">
+													<img [src]="HeadingImage9?HeadingImage9:'assets/img/rcrtmntimg.png'" class="img-fluid">
+													<div class="upload-imag">
+														<button class="btn-primary btn  mt-3 position-relative">
+															<input type="file" title="" name="" class="img-input-upld" (change)="setHeadingImage9($event)">
+														Upload Image
+														</button>
+													</div>
+													<div *ngIf="agencySection.controls['image']?.errors?.required "
+														class="invalid">
+														*Please select image
+													</div>
+													<div *ngIf="agencySection.controls.county?.errors?.required  " class="invalid">
+														*Only images are allowed
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
 											<label>Description</label>
 											<editor formControlName="description"></editor>
 										</div>
@@ -138,7 +159,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(agencySection.controls.description.touched || agencySection.controls.description.dirty) && agencySection.controls.description.invalid && agencySection.controls.description?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 500 characters
+											**Maximum Length should be 5000 characters
 										</div>
 										<div class="edit-btns d-flex justify-content-end">
 											<button class="btn btn-primary mr-4" (click)="postcontent('agency')">Save</button>
@@ -217,7 +238,7 @@
 														</div>
 														<div *ngIf="benefitsArray.controls[i].controls['description'].errors?.maxlength  "
 															class="invalid">
-															*Maximum Length should be 500 characters
+															*Maximum Length should be 5000 characters
 														</div>
 													</ng-container>
 												</ng-container>
@@ -359,7 +380,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(essentialsSection.controls.description.touched || essentialsSection.controls.description.dirty) && essentialsSection.controls.description.invalid && essentialsSection.controls.description?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 500 characters
+											**Maximum Length should be 10000 characters
 										</div>
 										<div class="edit-btns d-flex justify-content-end">
 											<button class="btn btn-primary mr-4" (click)="postcontent('essentials')">Save</button>
@@ -411,7 +432,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(recruitment1Section.controls.description.touched || recruitment1Section.controls.description.dirty) && recruitment1Section.controls.description.invalid && recruitment1Section.controls.description?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 500 characters
+											**Maximum Length should be 5000 characters
 										</div>
 										<div class="form-group">
 											<label>Section Image</label>
@@ -484,7 +505,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(recruitment2Section.controls.description.touched || recruitment2Section.controls.description.dirty) && recruitment2Section.controls.description.invalid && recruitment2Section.controls.description?.errors?.maxlength  " class="invalid">
-											*Maximum Length should be 500 characters
+											*Maximum Length should be 5000 characters
 										</div>
 										<div class="form-group">
 											<label>Section Image</label>
@@ -547,7 +568,7 @@
 											*Please enter heading
 										</div>
 										<div *ngIf="(recruitment3Section.controls.heading.touched || recruitment3Section.controls.heading.dirty) && recruitment3Section.controls.heading.invalid && recruitment3Section.controls.heading?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 50 characters
+											**Maximum Length should be 500 characters
 										</div>
 										<div class="form-group">
 											<label>Description</label>
@@ -557,7 +578,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(recruitment3Section.controls.description.touched || recruitment3Section.controls.description.dirty) && recruitment3Section.controls.description.invalid && recruitment3Section.controls.description?.errors?.maxlength  " class="invalid">
-											*Maximum Length should be 500 characters
+											*Maximum Length should be 5000 characters
 										</div>
 										<div class="form-group">
 											<label>Section Image</label>
@@ -630,7 +651,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(recruitment4Section.controls.description.touched || recruitment4Section.controls.description.dirty) && recruitment4Section.controls.description.invalid && recruitment4Section.controls.description?.errors?.maxlength  " class="invalid">
-											*Maximum Length should be 500 characters
+											*Maximum Length should be 5000 characters
 										</div>
 										<div class="form-group">
 											<label>Section Image</label>
@@ -703,7 +724,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(recruitment5Section.controls.description.touched || recruitment5Section.controls.description.dirty) && recruitment5Section.controls.description.invalid && recruitment5Section.controls.description?.errors?.maxlength  " class="invalid">
-											*Maximum Length should be 500 characters
+											*Maximum Length should be 5000 characters
 										</div>
 										<div class="form-group">
 											<label>Section Image</label>
@@ -776,7 +797,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(recruitment6Section.controls.description.touched || recruitment6Section.controls.description.dirty) && recruitment6Section.controls.description.invalid && recruitment6Section.controls.description?.errors?.maxlength  " class="invalid">
-											*Maximum Length should be 500 characters
+											*Maximum Length should be 5000 characters
 										</div>
 										<div class="form-group">
 											<label>Section Image</label>
@@ -871,7 +892,17 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(testimonialsSection.controls.description1.touched || testimonialsSection.controls.description1.dirty) && testimonialsSection.controls.description1.invalid && testimonialsSection.controls.description1?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 500 characters
+											**Maximum Length should be 5000 characters
+										</div>
+										<div class="form-group">
+											<label>Designation</label>
+											<input type="text" name="" class="form-control" value="" formControlName="designation1">
+										</div>
+										<div *ngIf="(testimonialsSection.controls.designation1.touched || testimonialsSection.controls.designation1.dirty) && testimonialsSection.controls.designation1.invalid && testimonialsSection.controls.designation1?.errors?.required  " class="invalid">
+											*Please enter designation
+										</div>
+										<div *ngIf="(testimonialsSection.controls.designation1.touched || testimonialsSection.controls.designation1.dirty) && testimonialsSection.controls.designation1.invalid && testimonialsSection.controls.designation1?.errors?.maxlength  " class="invalid">
+											**Maximum Length should be 50 characters
 										</div>
 										<div class="form-group">
 											<label>Testimonial 2: Image</label>
@@ -909,11 +940,22 @@
 											<label>Description</label>
 											<editor formControlName="description2"></editor>
 										</div>
+										
 										<div *ngIf="(testimonialsSection.controls.description2.touched || testimonialsSection.controls.description2.dirty) && testimonialsSection.controls.description2.invalid && testimonialsSection.controls.description2?.errors?.required  " class="invalid">
 											*Please enter description
 										</div>
 										<div *ngIf="(testimonialsSection.controls.description2.touched || testimonialsSection.controls.description2.dirty) && testimonialsSection.controls.description2.invalid && testimonialsSection.controls.description2?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 500 characters
+											**Maximum Length should be 5000 characters
+										</div>
+										<div class="form-group">
+											<label>Designation</label>
+											<input type="text" name="" class="form-control" value="" formControlName="designation2">
+										</div>
+										<div *ngIf="(testimonialsSection.controls.designation2.touched || testimonialsSection.controls.designation2.dirty) && testimonialsSection.controls.designation2.invalid && testimonialsSection.controls.designation2?.errors?.required  " class="invalid">
+											*Please enter designation
+										</div>
+										<div *ngIf="(testimonialsSection.controls.designation2.touched || testimonialsSection.controls.designation2.dirty) && testimonialsSection.controls.designation2.invalid && testimonialsSection.controls.designation2?.errors?.maxlength  " class="invalid">
+											**Maximum Length should be 50 characters
 										</div>
 										<div class="edit-btns d-flex justify-content-end">
 											<button class="btn btn-primary mr-4" (click)="postcontent('testimonials')">Save</button>
@@ -967,7 +1009,7 @@
 											*Please enter description
 										</div>
 										<div *ngIf="(storiesSection.controls.description.touched || storiesSection.controls.description.dirty) && storiesSection.controls.description.invalid && storiesSection.controls.description?.errors?.maxlength  " class="invalid">
-											*Maximum Length should be 500 characters
+											*Maximum Length should be 5000 characters
 										</div>
 										<div class="edit-btns d-flex justify-content-end">
 											<button class="btn btn-primary mr-4" (click)="postcontent('stories')">Save</button>
@@ -1019,7 +1061,7 @@
 										*Please enter description
 									</div>
 									<div *ngIf="(knowmoreSection.controls.description.touched || knowmoreSection.controls.description.dirty) && knowmoreSection.controls.description.invalid && knowmoreSection.controls.description?.errors?.maxlength  " class="invalid">
-										*Maximum Length should be 500 characters
+										*Maximum Length should be 5000 characters
 									</div>
 									<div class="edit-btns d-flex justify-content-end">
 										<button class="btn btn-primary mr-4" (click)="postcontent('knowmore')">Save</button>

@@ -532,6 +532,57 @@ export class TopgradserviceService implements HttpInterceptor {
         }))
   }
 
+  postResumeBuilderContent(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/update/resume/builder`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
+
+  resumebuildercontent(): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/resume/builders?content_id=621c4bbd6f7babe92ccc9618`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
+  graduateVerificationcontent(): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/graduate/endoresement`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
+  postGraduateVerificationContent(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/update/graduate/endoresement`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
+  poststepsArrayContent(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/update/graduate/endoresement/section-4`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+      .pipe(
+        map(res => {
+          return res
+        }))
+  }
+
 
 }
 

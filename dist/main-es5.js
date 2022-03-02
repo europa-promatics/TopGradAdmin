@@ -3267,18 +3267,6 @@
     },
 
     /***/
-    "5tNl": function tNl(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJncmFkdWF0ZS12ZXJpZmljYXRpb24tbWFuYWdlbWVudC5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
     "6FL1": function FL1(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -3918,18 +3906,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjb250YWN0LXVzLmNvbXBvbmVudC5zY3NzIn0= */";
-      /***/
-    },
-
-    /***/
-    "8IW9": function IW9(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJyZXN1bWUtYnVpbGRlci1tYW5hZ2VtZW50LmNvbXBvbmVudC5zY3NzIn0= */";
       /***/
     },
 
@@ -5540,6 +5516,51 @@
               return res;
             }));
           }
+        }, {
+          key: "postResumeBuilderContent",
+          value: function postResumeBuilderContent(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/update/resume/builder");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
+        }, {
+          key: "resumebuildercontent",
+          value: function resumebuildercontent() {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/resume/builders?content_id=621c4bbd6f7babe92ccc9618");
+            console.log(API_URL);
+            return this.httpClient.get(API_URL).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
+        }, {
+          key: "graduateVerificationcontent",
+          value: function graduateVerificationcontent() {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/graduate/endoresement");
+            console.log(API_URL);
+            return this.httpClient.get(API_URL).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
+        }, {
+          key: "postGraduateVerificationContent",
+          value: function postGraduateVerificationContent(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/update/graduate/endoresement");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
+        }, {
+          key: "poststepsArrayContent",
+          value: function poststepsArrayContent(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/update/graduate/endoresement/section-4");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
         }]);
 
         return TopgradserviceService;
@@ -5633,67 +5654,6 @@
 
 
       __webpack_exports__["default"] = "<div class=\"app-body\">\n  <main class=\"main d-flex align-items-center login-page\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-8 mx-auto\">\n          <div class=\"card-group\">\n            <div class=\"card p-4\">\n              <div class=\"card-body\">\n                <form [formGroup]=\"loginform\">\n                  <h1>Login</h1>\n                  <p class=\"text-muted\">Sign In to your account</p>\n                  <div class=\"input-group mb-3\">\n                    <div class=\"input-group-prepend\">\n                      <span class=\"input-group-text\"><i class=\"icon-user\"></i></span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Username\" autocomplete=\"username\" required [(ngModel)]=\"uname\" [formControl]=\"loginform.controls['uname']\">\n                  </div>\n                  <div *ngIf=\"(loginform.controls.uname?.touched || loginform.controls.uname?.dirty) && loginform.controls.uname?.invalid && loginform.controls.uname.errors?.required\" class=\"invalid\">\n                    *Please enter username\n                  </div>\n                  <div *ngIf=\"(loginform.controls.uname?.touched || loginform.controls.uname?.dirty) && loginform.controls.uname?.invalid && loginform.controls.uname.errors?.email\" class=\"invalid\" >\n                      *Please enter valid Username\n                  </div>\n                  <div class=\"input-group mb-4\">\n                    <div class=\"input-group-prepend\">\n                      <span class=\"input-group-text\"><i class=\"icon-lock\"></i></span>\n                    </div>\n                    <input type=\"password\" class=\"form-control\" placeholder=\"Password\" autocomplete=\"current-password\" required [(ngModel)]=\"pwd\" [formControl]=\"loginform.controls['pwd']\">\n                  </div>\n                  <div *ngIf=\"(loginform.controls.pwd?.touched || loginform.controls.pwd?.dirty) && loginform.controls.pwd?.invalid && loginform.controls.pwd.errors?.required\" class=\"invalid\">\n                    *Please enter password\n                  </div>\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <button type=\"button\" class=\"btn btn-primary px-4\" [disabled]=\"loginform.invalid\" (click)=\"logincredentials()\">Login</button>\n                    </div>\n                    <div class=\"col-6 text-right\">\n                      <a routerLink=\"/forgetPassword\" class=\"btn btn-link px-0\">Forgot password?</a>\n                    </div>\n                  </div>\n                </form>\n              </div>\n            </div>\n            <div class=\"card text-white bg-primary py-5 d-md-down-none\" style=\"width:44%\">\n              <div class=\"card-body text-center\">\n                <div>\n                  <img src=\"assets/img/brand/topgrads.png\">\n                  <h2 class=\"mt-4 main-blue\"><span class=\"text-pink\">Top</span>Graduates Admin</h2>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </main>\n</div>\n";
-      /***/
-    },
-
-    /***/
-    "EaC+": function EaC(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "GraduateVerificationManagementComponent", function () {
-        return GraduateVerificationManagementComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_graduate_verification_management_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./graduate-verification-management.component.html */
-      "iQAy");
-      /* harmony import */
-
-
-      var _graduate_verification_management_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./graduate-verification-management.component.scss */
-      "5tNl");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var GraduateVerificationManagementComponent = /*#__PURE__*/function () {
-        function GraduateVerificationManagementComponent() {
-          _classCallCheck(this, GraduateVerificationManagementComponent);
-        }
-
-        _createClass(GraduateVerificationManagementComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return GraduateVerificationManagementComponent;
-      }();
-
-      GraduateVerificationManagementComponent.ctorParameters = function () {
-        return [];
-      };
-
-      GraduateVerificationManagementComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-graduate-verification-management',
-        template: _raw_loader_graduate_verification_management_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_graduate_verification_management_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], GraduateVerificationManagementComponent);
       /***/
     },
 
@@ -5881,67 +5841,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjYXJlZXItYXJ0Y2xlcy5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "FNYL": function FNYL(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "ResumeBuilderManagementComponent", function () {
-        return ResumeBuilderManagementComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_resume_builder_management_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./resume-builder-management.component.html */
-      "t09d");
-      /* harmony import */
-
-
-      var _resume_builder_management_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./resume-builder-management.component.scss */
-      "8IW9");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var ResumeBuilderManagementComponent = /*#__PURE__*/function () {
-        function ResumeBuilderManagementComponent() {
-          _classCallCheck(this, ResumeBuilderManagementComponent);
-        }
-
-        _createClass(ResumeBuilderManagementComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return ResumeBuilderManagementComponent;
-      }();
-
-      ResumeBuilderManagementComponent.ctorParameters = function () {
-        return [];
-      };
-
-      ResumeBuilderManagementComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-resume-builder-management',
-        template: _raw_loader_resume_builder_management_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_resume_builder_management_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ResumeBuilderManagementComponent);
       /***/
     },
 
@@ -11229,193 +11128,181 @@
       /* harmony import */
 
 
-      var _views_resume_builder_management_resume_builder_management_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
-      /*! ./views/resume-builder-management/resume-builder-management.component */
-      "FNYL");
-      /* harmony import */
-
-
-      var _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
+      var _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
       /*! ./views/video-intro/video-intro.component */
       "KTfr");
       /* harmony import */
 
 
-      var _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
+      var _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
       /*! ./views/video-intro1/video-intro1.component */
       "8s9Z");
       /* harmony import */
 
 
-      var _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
+      var _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
       /*! ./views/video-intro2/video-intro2.component */
       "xlFL");
       /* harmony import */
 
 
-      var _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
+      var _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
       /*! ./views/video-intro3/video-intro3.component */
       "eN9q");
       /* harmony import */
 
 
-      var _views_graduate_verification_management_graduate_verification_management_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
-      /*! ./views/graduate-verification-management/graduate-verification-management.component */
-      "EaC+");
-      /* harmony import */
-
-
-      var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
+      var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
       /*! ./views/faqs/faqs.component */
       "7Cea");
       /* harmony import */
 
 
-      var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
+      var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
       /*! ./views/add-faq/add-faq.component */
       "3ziB");
       /* harmony import */
 
 
-      var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
+      var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
       /*! ./views/edit-faq/edit-faq.component */
       "PTKP");
       /* harmony import */
 
 
-      var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(
+      var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
       /*! ./views/view-faq/view-faq.component */
       "VqZG");
       /* harmony import */
 
 
-      var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
+      var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
       /*! ./pages/content-management/about-us/about-us.component */
       "KYUf");
       /* harmony import */
 
 
-      var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
+      var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(
       /*! ./pages/homepage-management/homepage-management.component */
       "tkH9");
       /* harmony import */
 
 
-      var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
+      var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
       /*! ./views/help-management/help-management.component */
       "4X2+");
       /* harmony import */
 
 
-      var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
+      var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
       /*! ./views/view-help/view-help.component */
       "Jzsx");
       /* harmony import */
 
 
-      var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
+      var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
       /*! ./views/messaging-reports/messaging-reports.component */
       "3a5B");
       /* harmony import */
 
 
-      var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
+      var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
       /*! ./views/verification-submissions/verification-submissions.component */
       "cWCV");
       /* harmony import */
 
 
-      var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(
+      var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
       /*! ./views/offer-submissions/offer-submissions.component */
       "3xDY");
       /* harmony import */
 
 
-      var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(
+      var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
       /*! ./views/view-verification/view-verification.component */
       "ac+Q");
       /* harmony import */
 
 
-      var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(
+      var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(
       /*! ./views/view-offer/view-offer.component */
       "PnTO");
       /* harmony import */
 
 
-      var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
+      var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(
       /*! ./views/view-report/view-report.component */
       "zGdd");
       /* harmony import */
 
 
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(
       /*! @angular/common/http */
       "tk/3");
       /* harmony import */
 
 
-      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(
+      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
       /*! ./topgradservice.service */
       "DL5e");
       /* harmony import */
 
 
-      var _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(
+      var _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(
       /*! ./pages/content-management/industry-management/industrylist/industrylist.component */
       "/NuI");
       /* harmony import */
 
 
-      var _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(
+      var _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(
       /*! ./pages/content-management/industry-management/industrylist/industrylist.module */
       "08Ex");
       /* harmony import */
 
 
-      var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(
+      var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(
       /*! ./pages/auth/reset-password/reset-password.component */
       "4AU6");
       /* harmony import */
 
 
-      var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(
+      var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(
       /*! ./pages/content-management/terms-sub-headings/terms-sub-headings.component */
       "Q5si");
       /* harmony import */
 
 
-      var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(
+      var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(
       /*! ./pages/content-management/add-heading/add-heading.component */
       "GPan");
       /* harmony import */
 
 
-      var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(
+      var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(
       /*! ./pages/content-management/edit-heading/edit-heading.component */
       "nMTe");
       /* harmony import */
 
 
-      var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(
+      var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(
       /*! ./pages/content-management/edit-sub-heading/edit-sub-heading.component */
       "J/2i");
       /* harmony import */
 
 
-      var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(
+      var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(
       /*! ./pages/content-management/add-sub-heading/add-sub-heading.component */
       "4V+q");
       /* harmony import */
 
 
-      var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(
+      var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(
       /*! ./pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component */
       "TfLc");
       /* harmony import */
 
 
-      var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(
+      var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(
       /*! ./pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component */
       "FPJr"); // Material import
 
@@ -11429,6 +11316,8 @@
       // import { DashboardComponent } from './views/dashboard/dashboard.component';
       //import { PrivacyPolicyComponent } from './pages/content-management/privacy-policy/privacy-policy.component';
       //import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
+      //import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
+      //import { GraduateVerificationManagementComponent } from './pages/graduate-verification-management/graduate-verification-management.component';
       //import { ViewSubHeadingComponent } from './pages/content-management/view-sub-heading/view-sub-heading.component';
       // import { GraduateFaqComponent } from './pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.component';
 
@@ -11437,16 +11326,18 @@
       };
 
       AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_115__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppBreadcrumbModule"].forRoot(), _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppFooterModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppSidebarModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_5__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_37__["BsDropdownModule"].forRoot(), ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_38__["TabsModule"].forRoot(), ng2_charts__WEBPACK_IMPORTED_MODULE_39__["ChartsModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetModule"].forRoot(), _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_9__["MatSortModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_10__["MatSlideToggleModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["ModalModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"], _material_module__WEBPACK_IMPORTED_MODULE_28__["MaterialModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_16__["EditorModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_17__["MatRadioModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_18__["MatAutocompleteModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_19__["MatExpansionModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_20__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["ReactiveFormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"], _angular_slider_ngx_slider__WEBPACK_IMPORTED_MODULE_24__["NgxSliderModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_25__["NgxDropzoneModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_26__["MatTabsModule"], ngx_plyr__WEBPACK_IMPORTED_MODULE_27__["PlyrModule"], _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_118__["IndustrylistModule"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_113__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppBreadcrumbModule"].forRoot(), _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppFooterModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppSidebarModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_5__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_37__["BsDropdownModule"].forRoot(), ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_38__["TabsModule"].forRoot(), ng2_charts__WEBPACK_IMPORTED_MODULE_39__["ChartsModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetModule"].forRoot(), _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_9__["MatSortModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_10__["MatSlideToggleModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["ModalModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"], _material_module__WEBPACK_IMPORTED_MODULE_28__["MaterialModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_16__["EditorModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_17__["MatRadioModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_18__["MatAutocompleteModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_19__["MatExpansionModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_20__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["ReactiveFormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"], _angular_slider_ngx_slider__WEBPACK_IMPORTED_MODULE_24__["NgxSliderModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_25__["NgxDropzoneModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_26__["MatTabsModule"], ngx_plyr__WEBPACK_IMPORTED_MODULE_27__["PlyrModule"], _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_116__["IndustrylistModule"]],
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]].concat(APP_CONTAINERS, [_views_error_404_component__WEBPACK_IMPORTED_MODULE_31__["P404Component"], _views_error_500_component__WEBPACK_IMPORTED_MODULE_32__["P500Component"], _pages_auth_login_login_component__WEBPACK_IMPORTED_MODULE_33__["LoginComponent"], _views_register_register_component__WEBPACK_IMPORTED_MODULE_34__["RegisterComponent"], _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_40__["UserManagementComponent"], _pages_auth_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_41__["ForgetPasswordComponent"], _views_view_profile_view_profile_component__WEBPACK_IMPORTED_MODULE_42__["ViewProfileComponent"], _pages_employers_list_employers_list_component__WEBPACK_IMPORTED_MODULE_43__["EmployersListComponent"], _views_edit_employer_edit_employer_component__WEBPACK_IMPORTED_MODULE_44__["EditEmployerComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"], _views_edit_graduate_edit_graduate_component__WEBPACK_IMPORTED_MODULE_46__["EditGraduateComponent"], _views_view_graduate_view_graduate_component__WEBPACK_IMPORTED_MODULE_47__["ViewGraduateComponent"], _views_view_employer_view_employer_component__WEBPACK_IMPORTED_MODULE_48__["ViewEmployerComponent"], _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_49__["JobsManagementComponent"], _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_50__["ViewJobComponent"], _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_51__["CategoriesManagementComponent"], _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_52__["ViewApplicantComponent"], _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_53__["HeaderSectionComponent"], _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_54__["HomeOurStoryComponent"], _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_55__["SomethingForEveryoneComponent"], _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_56__["HowItWorkComponent"], _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_57__["SuccessStorySliderComponent"], _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_58__["RegisterTodayComponent"], _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_59__["ViewSliderItemComponent"], _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_60__["AddSliderItemComponent"], _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_61__["ApplicantsManagementComponent"], _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_62__["AddCategoryComponent"], _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_63__["AddSubCategoryComponent"], _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_64__["EditSubCategoryComponent"], _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_65__["ViewSubCategoryComponent"], _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_66__["EditJobComponent"], _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_67__["PaymentManagementComponent"], _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_68__["ViewPaymentComponent"], _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_69__["SubCategoryManagementComponent"], _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_70__["EditCategoryComponent"], _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_71__["SubAdminManagementComponent"], _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_72__["AddSubAdminComponent"], _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_73__["ViewSubAdminComponent"], _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_74__["EditSubAdminComponent"], _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_75__["EmployerHowItWorksComponent"], _views_edit_employer_how_it_works_edit_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_76__["EditEmployerHowItWorksComponent"], _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_77__["GraduateHowItWorksComponent"], _views_edit_graduate_how_it_works_edit_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_78__["EditGraduateHowItWorksComponent"], //PrivacyPolicyComponent,
         _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_79__["TermsConditionsComponent"], _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_80__["ContactUsComponent"], _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_81__["ContactListingComponent"], _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_82__["OfferManagementComponent"], _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_83__["CareerArtclesComponent"], _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_84__["CareerArticlesComponent"], _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_85__["CareerVideosComponent"], _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_86__["AddArticleComponent"], _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_87__["ViewArticleComponent"], _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_88__["EditArticleComponent"], _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_89__["AddVideoComponent"], _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_90__["ViewVideoComponent"], _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_91__["EditVideoComponent"], _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_92__["ScheduleInterviewManagementComponent"], _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_93__["ViewInterviewComponent"], _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_94__["EditInterviewComponent"], //RecruitmentSolutionsManagementComponent,
-        _views_resume_builder_management_resume_builder_management_component__WEBPACK_IMPORTED_MODULE_95__["ResumeBuilderManagementComponent"], _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_96__["VideoIntroComponent"], _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_97__["VideoIntro1Component"], _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_98__["VideoIntro2Component"], _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_99__["VideoIntro3Component"], _views_graduate_verification_management_graduate_verification_management_component__WEBPACK_IMPORTED_MODULE_100__["GraduateVerificationManagementComponent"], _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_101__["FaqsComponent"], _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_102__["AddFaqComponent"], _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_103__["EditFaqComponent"], _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_104__["ViewFaqComponent"], _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_105__["AboutUsComponent"], _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_125__["GraduateAddFaqComponent"], _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_126__["GraduateEditFaqComponent"], _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_106__["HomepageManagementComponent"], _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_107__["HelpManagementComponent"], _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_108__["ViewHelpComponent"], _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_109__["MessagingReportsComponent"], _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_110__["VerificationSubmissionsComponent"], _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_111__["OfferSubmissionsComponent"], _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_112__["ViewVerificationComponent"], _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_113__["ViewOfferComponent"], _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_114__["ViewReportComponent"], _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_117__["IndustrylistComponent"], _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_119__["ResetPasswordComponent"], _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_120__["TermsSubHeadingsComponent"], _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_121__["AddHeadingComponent"], _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_122__["EditHeadingComponent"], _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_123__["EditSubHeadingComponent"], _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_124__["AddSubHeadingComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"]]),
+        //ResumeBuilderManagementComponent,
+        _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_95__["VideoIntroComponent"], _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_96__["VideoIntro1Component"], _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_97__["VideoIntro2Component"], _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_98__["VideoIntro3Component"], //GraduateVerificationManagementComponent,
+        _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_99__["FaqsComponent"], _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_100__["AddFaqComponent"], _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_101__["EditFaqComponent"], _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_102__["ViewFaqComponent"], _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_103__["AboutUsComponent"], _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_123__["GraduateAddFaqComponent"], _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_124__["GraduateEditFaqComponent"], _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_104__["HomepageManagementComponent"], _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_105__["HelpManagementComponent"], _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_106__["ViewHelpComponent"], _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_107__["MessagingReportsComponent"], _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_108__["VerificationSubmissionsComponent"], _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_109__["OfferSubmissionsComponent"], _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_110__["ViewVerificationComponent"], _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_111__["ViewOfferComponent"], _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_112__["ViewReportComponent"], _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_115__["IndustrylistComponent"], _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_117__["ResetPasswordComponent"], _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_118__["TermsSubHeadingsComponent"], _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_119__["AddHeadingComponent"], _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_120__["EditHeadingComponent"], _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_121__["EditSubHeadingComponent"], _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_122__["AddSubHeadingComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"]]),
         providers: [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["BsModalRef"], {
           provide: _angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"],
           useClass: _angular_common__WEBPACK_IMPORTED_MODULE_3__["HashLocationStrategy"]
         }, {
-          provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_115__["HTTP_INTERCEPTORS"],
-          useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_116__["TopgradserviceService"],
+          provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_113__["HTTP_INTERCEPTORS"],
+          useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_114__["TopgradserviceService"],
           multi: true
         }, _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]]
@@ -12504,10 +12395,10 @@
           path: 'resume-builder-management',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-resume-builder-management-resume-builder-management-module */
-            "views-resume-builder-management-resume-builder-management-module").then(__webpack_require__.bind(null,
-            /*! ./views/resume-builder-management/resume-builder-management.module */
-            "S3oX")).then(function (m) {
+            /*! import() | pages-resume-builder-management-resume-builder-management-module */
+            "pages-resume-builder-management-resume-builder-management-module").then(__webpack_require__.bind(null,
+            /*! ./pages/resume-builder-management/resume-builder-management.module */
+            "ixza")).then(function (m) {
               return m.ResumeBuilderManagementModule;
             });
           }
@@ -12559,10 +12450,10 @@
           path: 'graduate-verification-management',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-graduate-verification-management-graduate-verification-management-module */
-            "views-graduate-verification-management-graduate-verification-management-module").then(__webpack_require__.bind(null,
-            /*! ./views/graduate-verification-management/graduate-verification-management.module */
-            "R2XK")).then(function (m) {
+            /*! import() | pages-graduate-verification-management-graduate-verification-management-module */
+            "pages-graduate-verification-management-graduate-verification-management-module").then(__webpack_require__.bind(null,
+            /*! ./pages/graduate-verification-management/graduate-verification-management.module */
+            "qA8f")).then(function (m) {
               return m.GraduateVerificationManagementModule;
             });
           }
@@ -14152,18 +14043,6 @@
     },
 
     /***/
-    "iQAy": function iQAy(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Graduate Verification Header Section</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get Verified. Get Hired Faster.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Sub-Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"When you become a TopGrads Verified graduate, employers are more likely to contact you!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/student1.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Endorsed-steps-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Why get Verified?</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>1: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/access_time.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get hired 3x faster\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Verified Profiles stand out! Get Verified and get viewed by more Employers & Recruiters!</textarea>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>2: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/show_chart.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get More Credibility\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">A Verified badge gives you more credibility on Top Graduates and gives you the competitive edge you need to get hired!</textarea>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>3: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/Subtract.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Boosts & Recommendations\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Verified candidates get their profile displayed to more than 5000 hiring managers’ recruitment dashboards.</textarea>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>4: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/mail.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"In-Mail Advertising\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"Is verification guaranteed?\">As a Verified candidate, we send your profile to hiring managers in your industry to help you get more interviews.</textarea>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>5: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/prfl-rnk.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Increase your Profile Ranking\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Verification will help you rank in the top 5% of the graduates and get found 4x faster.</textarea>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>6: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/description.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Amazing Careers Resources\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Get access to the best Resume &Cover Letter writing tutorials plus Interview Training Masterclass videos.</textarea>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>How do I get Verified?</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"How do I get Verified?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Step 1: Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Step 1\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Upload your academic transcripts. This can be your GPA, WAM or Percentage grade.</textarea>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/step1.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Step 2</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Step 2\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Upload your National Police Check.</textarea>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/step2.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Step 3</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Step 3\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">If you’re not a Permanent Resident/Citizen, upload your English test result. This can be from IELTS, PTE or TOEFL.</textarea>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/step3.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Step 4</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Step 4\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Submit your proof of work. You will be able to elaborate your existing skillset from your profile.</textarea>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/step4.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Step 5</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Step 5\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Submit two different references.</textarea>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/step5.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Step 6</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Step 6\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Upload a video resume up to 5 minutes, or import one from Youtube/Vimeo.</textarea>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/step6.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Step 7</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Step 7\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">Finalize your verification with a one-time payment to become a Verified Graduate!</textarea>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/step7.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"opportunities-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Want to get Verified?</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Want to get Verified?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Price</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"$195\">\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/vrfd_img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"opportunities-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Frequently Asked Questions</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Question 1</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Is verification guaranteed?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Answer</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"Is verification guaranteed?\">Is verification guaranteed?</textarea>\n\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Question 2</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"I got declined, can I keep trying to get verified?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Answer</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">There’s no time limit. You may want to double check your documents required for verification or the format of your video resume to get verified.</textarea>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Question 3</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Why should I get verified?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Answer</label>\n\t\t\t\t\t\t\t\t\t<textarea name=\"\" rows=\"3\" class=\"form-control\" value=\"\">The main reason to get verified is to help you stand out among your peers, which will get the attention of your future employers. Additionally, there are other perks to getting endorsed, namely training videos and additional resources to further help you.</textarea>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-      /***/
-    },
-
-    /***/
     "iQG3": function iQG3(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -15295,18 +15174,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LWhlbHAuY29tcG9uZW50LnNjc3MifQ== */";
-      /***/
-    },
-
-    /***/
-    "t09d": function t09d(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Resume Builder Header Section</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Create your Resume with ease!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Sub-Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Use our Free Resume Builder Tool to create the perfect Resume!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/resume-build.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>We help you</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"We help you perfect your Resume that lands you a job faster.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Endorsed-steps-sec resume_tips_sctn\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Resume Tips</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>1: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/select icon.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Easily edited online\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>2: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/tips.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Expert tips\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>3: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/templates.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Professional templates\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>4: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/format.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Multi-format options\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>5: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/info detect.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Content extract\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Steps to create Resume</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Follow three simple steps to create your Resume\">\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Step 1: Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"1. Select a Resume template\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Step 2: Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"2. Edit Resume content online\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Step 3: Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"3. Click Download\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Resume Builder Start Now</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Professional Resumes for faster job offers!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Sub-Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Want to land a job?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/resumebtm.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
       /***/
     },
 

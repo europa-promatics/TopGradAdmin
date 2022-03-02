@@ -26,8 +26,8 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
   headingImageObj1: any = null
 
   headerSection = this.fb.group({
-    heading: ['', [Validators.required, Validators.maxLength(50)]],
-    subheading: ['', [Validators.required, Validators.maxLength(50)]],
+    heading: ['', [Validators.required, Validators.maxLength(200)]],
+    subheading: ['', [Validators.required, Validators.maxLength(200)]],
     Image: ['',],
     is_visible: [''],
     county:['']
@@ -40,20 +40,21 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
   });
 
   agencySection = this.fb.group({
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
+    image: ['',],
     is_visible: ['',],
     county:['']
   });
 
   essentialsSection = this.fb.group({
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(10000)]],
     is_visible: ['',],
     county:['']
   });
 
   recruitment1Section = this.fb.group({
     heading: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
     Image: ['',],
     is_visible: ['',],
     county:['']
@@ -61,7 +62,7 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
 
   recruitment2Section = this.fb.group({
     heading: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
     Image: ['',],
     is_visible: ['',],
     county:['']
@@ -69,7 +70,7 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
 
   recruitment3Section = this.fb.group({
     heading: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
     Image: ['',],
     is_visible: ['',],
     county:['']
@@ -77,7 +78,7 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
 
   recruitment4Section = this.fb.group({
     heading: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
     Image: ['',],
     is_visible: ['',],
     county:['']
@@ -85,7 +86,7 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
 
   recruitment5Section = this.fb.group({
     heading: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
     Image: ['',],
     is_visible: ['',],
     county:['']
@@ -93,7 +94,7 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
 
   recruitment6Section = this.fb.group({
     heading: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
     Image: ['',],
     is_visible: ['',],
     county:['']
@@ -101,23 +102,25 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
 
   storiesSection = this.fb.group({
     heading: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
     is_visible: ['',],
     county:['']
   });
 
   knowmoreSection = this.fb.group({
-    heading: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(500)]],
+    heading: ['', [Validators.required, Validators.maxLength(500)]],
+    description: ['', [Validators.required, Validators.maxLength(5000)]],
     is_visible: ['',],
     county:['']
   });
 
   testimonialsSection = this.fb.group({
     name1: ['', [Validators.required, Validators.maxLength(50)]],
-    description1: ['', [Validators.required, Validators.maxLength(500)]],
+    description1: ['', [Validators.required, Validators.maxLength(5000)]],
+    designation1: ['', [Validators.required, Validators.maxLength(50)]],
     name2: ['', [Validators.required, Validators.maxLength(50)]],
-    description2: ['', [Validators.required, Validators.maxLength(500)]],
+    description2: ['', [Validators.required, Validators.maxLength(5000)]],
+    designation2: ['', [Validators.required, Validators.maxLength(50)]],
     is_visible: ['',],
     Image: ['',],
     Image1: ['',],
@@ -133,6 +136,7 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
   content_id: string;
   HeadingImage11: any;
   selectedfile: any;
+  HeadingImage9: any;
 
 
 constructor(private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
@@ -159,6 +163,7 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
       this.HeadingImage6 = data.data.section_11.image
       this.HeadingImage7 = data.data.section_12.image1
       this.HeadingImage8 = data.data.section_12.image2
+      this.HeadingImage9 = data.data.section_3.image
 
 
       this.headerSection.patchValue({
@@ -175,6 +180,7 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
 
       this.agencySection.patchValue({
         description: data.data.section_3.heading,
+        image:data.data.section_3.image,
         is_visible: data.data.section_3.is_visible
       })
 
@@ -228,9 +234,11 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
       this.testimonialsSection.patchValue({
         name1: data.data.section_12.heading1,
         description1: data.data.section_12.description1,
+        designation1: data.data.section_12.degiganation1,
         Image1:data.data.section_12.image1,
         name2: data.data.section_12.heading2,
         description2: data.data.section_12.description2,
+        designation2: data.data.section_12.degiganation2,
         Image2:data.data.section_12.image2,
         is_visible: data.data.section_12.is_visible
       })
@@ -254,7 +262,7 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
       data.data.section_4.data.forEach((element) => {
         this.benefitsArray.push(this.fb.group({
           heading: [element.heading, [Validators.required, Validators.maxLength(50)]],
-          description: [element.description, [Validators.required, Validators.maxLength(500)]],
+          description: [element.description, [Validators.required, Validators.maxLength(5000)]],
           image: [element.image, [Validators.required]],
           county: ['']
         }));
@@ -504,6 +512,32 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     }
   }
 
+  setHeadingImage9(event) {
+    console.log(event.target.files[0]);
+    const file = event.target.files[0];
+    const fileType = file.type.split("/")[0];
+    console.log(fileType);
+    if (fileType == "image") {
+      this.headingImageObj = event.target.files[0]
+      this.agencySection.patchValue({
+        Image: this.headingImageObj,
+      })
+      let reader = new FileReader();
+      reader.onload = (event: any) => {
+        this.HeadingImage9 = event.target.result;
+      };
+      reader.readAsDataURL(this.headingImageObj);
+      this.agencySection.get('county').clearValidators(); // 6. Clear All Validators
+      this.agencySection.get('county').updateValueAndValidity();
+      console.log("rightextension", this.agencySection);
+    } else {
+      this.agencySection.get('county').setValidators([Validators.required]); // 5.Set Required Validator
+      this.agencySection.get('county').updateValueAndValidity();
+
+      console.log("wrongextension",this.agencySection);
+    }
+  }
+
   onBenefitChangeImage(e, index) {
     console.log("ind",index);
     const file = e.target.files[0];
@@ -576,6 +610,7 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
         formdata.append("section_2", JSON.stringify(section_2))
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
+        
         obj = formdata
 
       } else {
@@ -594,6 +629,9 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
         formdata.append("section_3", JSON.stringify(section_3))
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
+        if (this.headingImageObj) {
+          formdata.append("image", this.headingImageObj)
+        }
         obj = formdata
 
       } else {
@@ -760,8 +798,10 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
         const section_12 = {
           heading1: this.testimonialsSection.controls['name1'].value,
           description1: this.testimonialsSection.controls['description1'].value,
+          degiganation1: this.testimonialsSection.controls['designation1'].value,
           heading2: this.testimonialsSection.controls['name2'].value,
           description2: this.testimonialsSection.controls['description2'].value,
+          degiganation2: this.testimonialsSection.controls['designation2'].value,
           is_visible: this.testimonialsSection.controls['is_visible'].value
         }
         formdata.append("section_12", JSON.stringify(section_12))
@@ -825,7 +865,7 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
         if (this.benefitsArray.valid) {
           const formdata = new FormData()
           const section_4 = {data:this.benefitsSection.get('benefitsArray').value,
-            is_visible: this.recruitment6Section.controls['is_visible'].value
+            is_visible: this.benefitsSection.controls['is_visible'].value
           }
           
           formdata.append("section_4", JSON.stringify(section_4))

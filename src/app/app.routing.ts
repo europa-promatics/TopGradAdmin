@@ -66,12 +66,12 @@ import { ScheduleInterviewManagementComponent } from './views/schedule-interview
 import { ViewInterviewComponent } from './views/view-interview/view-interview.component';
 import { EditInterviewComponent } from './views/edit-interview/edit-interview.component';
 import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
-import { ResumeBuilderManagementComponent } from './views/resume-builder-management/resume-builder-management.component';
+import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
 import { VideoIntroComponent } from './views/video-intro/video-intro.component';
 import { VideoIntro1Component } from './views/video-intro1/video-intro1.component';
 import { VideoIntro2Component } from './views/video-intro2/video-intro2.component';
 import { VideoIntro3Component } from './views/video-intro3/video-intro3.component';
-import { GraduateVerificationManagementComponent } from './views/graduate-verification-management/graduate-verification-management.component';
+import { GraduateVerificationManagementComponent } from './pages/graduate-verification-management/graduate-verification-management.component';
 import { FaqsComponent } from './views/faqs/faqs.component';
 import { GraduateAddFaqComponent } from './pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component';
 import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component';
@@ -428,7 +428,7 @@ export const routes: Routes = [
       },
       {
         path: 'resume-builder-management',
-        loadChildren: () => import('./views/resume-builder-management/resume-builder-management.module').then(m => m.ResumeBuilderManagementModule)
+        loadChildren: () => import('./pages/resume-builder-management/resume-builder-management.module').then(m => m.ResumeBuilderManagementModule)
       },
       {
         path: 'videoIntro',
@@ -448,7 +448,7 @@ export const routes: Routes = [
       },
       {
         path: 'graduate-verification-management',
-        loadChildren: () => import('./views/graduate-verification-management/graduate-verification-management.module').then(m => m.GraduateVerificationManagementModule)
+        loadChildren: () => import('./pages/graduate-verification-management/graduate-verification-management.module').then(m => m.GraduateVerificationManagementModule)
       },
       {
       path: 'graduate-add-faq',
