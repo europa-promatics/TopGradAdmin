@@ -9,7 +9,7 @@
 								<strong>Graduate Verification Header Section</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -82,7 +82,7 @@
 								<strong>Why get Verified?</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun1($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -285,7 +285,7 @@
 								<strong>How do I get Verified?</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun2($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -375,7 +375,7 @@
 													<label><span class="font-weight-bold pr-1">Step {{i+1}}: </span>Heading</label>
 													<div class="slide-cs">
 														<span class="mr-2">Visibility </span>
-														<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+														<mat-slide-toggle formControlName="is_visible" (change)="fun3($event)"></mat-slide-toggle>
 													</div>
 												</div>
 												<input type="text" name="" class="form-control" value="Step 2" formControlName="heading">
@@ -781,7 +781,7 @@
 								<strong>Want to get Verified?</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun4($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -865,7 +865,7 @@
 								<strong>Frequently Asked Questions</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun5($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">

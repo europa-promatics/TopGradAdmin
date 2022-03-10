@@ -105,6 +105,78 @@ export class HomepageManagementComponent implements OnInit {
     this.homepagecontent();
   }
 
+  fun(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun1(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun2(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun3(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun4(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun5(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun6(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun7(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun8(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
   get employerArray(): FormArray {
     return this.mainBenefitsForBoth.controls['employerTab'].get('employerArray') as FormArray;
   }
@@ -370,7 +442,8 @@ export class HomepageManagementComponent implements OnInit {
       })
       this.successform.patchValue({
         heading: data.data.section_6.heading,
-        video: this.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video)
+        video: this.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video),
+        is_visible: data.data.section_6.is_visible
       })
       this.Companies.patchValue({
         heading: data.data.section_5.heading,
@@ -387,6 +460,7 @@ export class HomepageManagementComponent implements OnInit {
           heading: [element.heading, [Validators.required, Validators.maxLength(50)]],
           Description: [element.Description, [Validators.required, Validators.maxLength(500)]],
           image: [element.image, [Validators.required,]],
+          is_visible: [element.is_visible],
           county: ['']
           
         }))
@@ -397,6 +471,7 @@ export class HomepageManagementComponent implements OnInit {
           heading: [element.heading, [Validators.required, Validators.maxLength(50)]],
           Description: [element.Description, [Validators.required, Validators.maxLength(500)]],
           image: [element.image, [Validators.required]],
+          is_visible: [element.is_visible],
           county: ['']
         }))
       });

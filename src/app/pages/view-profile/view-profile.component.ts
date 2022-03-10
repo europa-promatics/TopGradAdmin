@@ -24,7 +24,9 @@ export class ViewProfileComponent implements OnInit {
     this.profileform = this._formBuilder.group({
       'first_name':['',[Validators.required]],
       'last_name':['',[Validators.required]],
-      'email':['',[Validators.required]]
+      'email':['',[Validators.required]],
+      'image':[''],
+       county:['']
     })
     console.log(this.profileform);
   }
@@ -39,15 +41,25 @@ export class ViewProfileComponent implements OnInit {
   onSelect(e){
     console.log(e);
     console.log(e.target.files[0].name);
-    this.selectedfile= e.target.files[0];
-    if (e.target.files && e.target.files[0]) {
+    const file = e.target.files[0];
+    const fileType = file.type.split("/")[0];
+    console.log(fileType);
+    if (fileType == "image") {
+      this.selectedfile= e.target.files[0];
       const file = e.target.files[0];
-
       const reader = new FileReader();
       reader.onload = e => this.imageSrc = reader.result;
-
       reader.readAsDataURL(file);
-  }
+      this.profileform.get('county').clearValidators(); // 6. Clear All Validators
+      this.profileform.get('county').updateValueAndValidity();
+      console.log("rightextension", this.profileform);
+      
+    }else {
+      this.profileform.get('county').setValidators([Validators.required]); // 5.Set Required Validator
+      this.profileform.get('county').updateValueAndValidity();
+
+      console.log("wrongextension",this.profileform);
+    }
   }
 
   admindetails(){

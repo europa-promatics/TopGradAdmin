@@ -10,8 +10,7 @@
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
 									<mat-slide-toggle 
-									formControlName="is_visible"
-									
+									formControlName="is_visible" (change)="fun($event)"
 									>
 									
 									</mat-slide-toggle>
@@ -37,7 +36,7 @@
 										<label>TopGrads Logo</label>
 										<div class="slider-video-cntnt">
 											<div class="prev-upld-img resume_img">
-												<img [src]="HeadingImage?HeadingImage:'assets/img/logo.svg'"
+												<img [src]="HeadingImage?HeadingImage:'assets/img/no_image_placeholder.png'"
 													class="img-fluid">
 												<div class="upload-imag text-center">
 													<button class="btn-primary btn  mt-3 position-relative">
@@ -89,7 +88,7 @@
 								<strong>Testing Champions of Graduate Jobs</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun1($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -149,7 +148,7 @@
 								<strong>Our Vision</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun2($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -203,7 +202,7 @@
 								<strong>Our Mission</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun3($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -257,7 +256,7 @@
 								<strong>Graduate Job Openings</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun4($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -315,7 +314,7 @@
 							<strong>TopGraduates isn’t...</strong>
 							<div class="slide-cs">
 								<span class="mr-2">Visibility </span>
-								<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+								<mat-slide-toggle formControlName="is_visible" (change)="fun5($event)"></mat-slide-toggle>
 							</div>
 						</div>
 						<div class="card-body">

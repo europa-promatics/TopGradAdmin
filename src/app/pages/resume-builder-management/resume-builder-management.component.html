@@ -9,7 +9,7 @@
 								<strong>Resume Builder Header Section</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -17,13 +17,15 @@
 									<div class="home-mng-form">
 										<div class="form-group">
 											<label>Title</label>
-											<input type="text" name="" class="form-control" value="Create your Resume with ease!" formControlName="heading">
+											<editor formControlName="heading"></editor>
+											<!-- <label>Title</label>
+											<input type="text" name="" class="form-control" value="Create your Resume with ease!" formControlName="heading"> -->
 										</div>
 										<div *ngIf="(headerSection.controls.heading.touched || headerSection.controls.heading.dirty) && headerSection.controls.heading.invalid && headerSection.controls.heading?.errors?.required  " class="invalid">
 											*Please enter heading
 										</div>
 										<div *ngIf="(headerSection.controls.heading.touched || headerSection.controls.heading.dirty) && headerSection.controls.heading.invalid && headerSection.controls.heading?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 50 characters
+											**Maximum Length should be 5000 characters
 										</div>
 										<div class="form-group">
 											<label>Sub-Heading</label>
@@ -82,7 +84,7 @@
 								<strong>We help you</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun1($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -90,13 +92,15 @@
 									<div class="home-mng-form">
 										<div class="form-group">
 											<label>Heading</label>
-											<input type="text" name="" class="form-control" value="We help you perfect your Resume that lands you a job faster." formControlName="heading">
+											<editor formControlName="heading"></editor>
+											<!-- <label>Heading</label>
+											<input type="text" name="" class="form-control" value="We help you perfect your Resume that lands you a job faster." formControlName="heading"> -->
 										</div>
 										<div *ngIf="(helpSection.controls.heading.touched || helpSection.controls.heading.dirty) && helpSection.controls.heading.invalid && helpSection.controls.heading?.errors?.required  " class="invalid">
 											*Please enter heading
 										</div>
 										<div *ngIf="(helpSection.controls.heading.touched || helpSection.controls.heading.dirty) && helpSection.controls.heading.invalid && helpSection.controls.heading?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 200 characters
+											**Maximum Length should be 5000 characters
 										</div>
 										<div class="edit-btns d-flex justify-content-end">
 											<button class="btn btn-primary mr-4" (click)="postcontent('help')">Save</button>
@@ -124,7 +128,7 @@
 								<strong>Resume Tips</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun2($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -304,7 +308,7 @@
 								<strong>Steps to create Resume</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun3($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -312,13 +316,15 @@
 									<div class="home-mng-form">
 										<div class="form-group">
 											<label>Heading</label>
-											<input type="text" name="" class="form-control" value="Follow three simple steps to create your Resume" formControlName="heading">
+											<editor formControlName="heading"></editor>
+											<!-- <label>Heading</label>
+											<input type="text" name="" class="form-control" value="Follow three simple steps to create your Resume" formControlName="heading"> -->
 										</div>
 										<div *ngIf="(stepsSection.controls.heading.touched || stepsSection.controls.heading.dirty) && stepsSection.controls.heading.invalid && stepsSection.controls.heading?.errors?.required  " class="invalid">
 											*Please enter heading
 										</div>
 										<div *ngIf="(stepsSection.controls.heading.touched || stepsSection.controls.heading.dirty) && stepsSection.controls.heading.invalid && stepsSection.controls.heading?.errors?.maxlength  " class="invalid">
-											**Maximum Length should be 50 characters
+											**Maximum Length should be 5000 characters
 										</div>
 										<ng-container formArrayName="stepsArray"
 											*ngFor="let alias of stepsSection.controls['stepsArray'].controls; let i=index">
@@ -418,7 +424,7 @@
 								<strong>Resume Builder Start Now</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun4($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -426,7 +432,9 @@
 									<div class="home-mng-form">
 										<div class="form-group">
 											<label>Title</label>
-											<input type="text" name="" class="form-control" value="Professional Resumes for faster job offers!" formControlName="heading">
+											<editor formControlName="heading"></editor>
+											<!-- <label>Title</label>
+											<input type="text" name="" class="form-control" value="Professional Resumes for faster job offers!" formControlName="heading"> -->
 										</div>
 										<div *ngIf="(startnowSection.controls.heading.touched || startnowSection.controls.heading.dirty) && startnowSection.controls.heading.invalid && startnowSection.controls.heading?.errors?.required  " class="invalid">
 											*Please enter title

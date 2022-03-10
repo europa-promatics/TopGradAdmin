@@ -52,6 +52,7 @@ export class AboutUsComponent implements OnInit {
    
 
   });
+  uintArray: any;
 
 
 
@@ -63,6 +64,55 @@ export class AboutUsComponent implements OnInit {
   ngOnInit(): void {
     this.getAboutUsData()
   }
+
+  fun(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun1(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun2(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun3(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun4(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun5(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
   get Fields(): FormArray {
     return this.TopGraduates.get('Fields') as FormArray;
   }
@@ -159,16 +209,31 @@ export class AboutUsComponent implements OnInit {
         console.log(this.headerSection);
         
         const formdata = new FormData()
-        const section_1 = {
-          heading: this.headerSection.controls['heading'].value,
-          description: this.headerSection.controls['description'].value,
-          is_visible: this.headerSection.controls['is_visible'].value
-        }
-        formdata.append("section_1", JSON.stringify(section_1))
+
         if (this.headingImageObj) {
+          const section_1 = {
+            heading: this.headerSection.controls['heading'].value,
+            description: this.headerSection.controls['description'].value,
+            is_visible: this.headerSection.controls['is_visible'].value,
+          }
+          
+          formdata.append("section_1", JSON.stringify(section_1))
           formdata.append("image", this.headingImageObj)
         }
+        else{
+          const section_1 = {
+            heading: this.headerSection.controls['heading'].value,
+            description: this.headerSection.controls['description'].value,
+            is_visible: this.headerSection.controls['is_visible'].value,
+            image:this.headerSection.controls['Image'].value
+          }
+          
+          formdata.append("section_1", JSON.stringify(section_1))
+          // formdata.append("image", this.HeadingImage)
+        }
         obj = formdata
+        //console.log("our binary image is ======>",obj,this.uintArray[i]);
+        
 
       } else {
         this.headerSection.markAllAsTouched()

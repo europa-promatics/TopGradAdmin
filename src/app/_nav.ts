@@ -111,9 +111,28 @@ export const navItems: INavData[] = [
       },
       {
         name: 'Industry Management',
-        url: '/industryManagement',
-        icon: 'icon-star', 
-      },
+        // url: '/industryManagement',
+        icon: 'icon-star',
+        children: [
+        {
+        name: 'Employer Industry Management',
+        url: '/employerIndustryManagement',
+        icon: 'icon-star'
+        },
+        {
+        name: 'Graduate Industry Management',
+        url: '/graduateIndustryManagement',
+        icon: 'icon-star'
+        },
+        ]
+        },
+        
+          
+      // {
+      //   name: 'Industry Management',
+      //   url: '/industryManagement',
+      //   icon: 'icon-star', 
+      // },
       {
         name: 'How it Works Management',
         icon: 'icon-settings',
@@ -259,9 +278,15 @@ export const navItems: INavData[] = [
     divider: true
   },
   {
+    name: 'Skills List',
+    url: '/skills-list',
+    icon: 'icon-user'
+    },
+  {
     title: true,
     name: 'Extras',
   },
+  
   {
     name: 'Pages',
     url: '/pages',

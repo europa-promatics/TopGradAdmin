@@ -9,7 +9,7 @@
 								<strong>Home Header Section</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -77,7 +77,7 @@
 								<strong>Our Story Section</strong>
 								<div class="slide-cs text-right">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun1($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -183,7 +183,7 @@
 							<strong>Curated Especially For You</strong>
 							<div class="slide-cs">
 								<span class="mr-2">Visibility </span>
-								<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+								<mat-slide-toggle formControlName="is_visible" (change)="fun2($event)"></mat-slide-toggle>
 							</div>
 						</div>
 						<div class="card-body">
@@ -224,7 +224,7 @@
 								<strong>The Main Benefits For Both</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun3($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -255,16 +255,16 @@
 															<form formGroupName="employerTab">
 																<div class="grad_card">
 																	<div class="grad_tab">
-																		<div class="slide-cs text-right">
-																			<span class="mr-2">Visibility </span>
-																			<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
-																		</div>
+																		
 																		<div class="form-group">
 																			<ng-container formArrayName="employerArray"
 																				*ngFor="let alias of mainBenefitsForBoth.controls['employerTab'].controls['employerArray'].controls; let i=index">
 																				<ng-container [formGroupName]="i">
 																					<div class="insid_tabs emp_home_page">
-
+                                                                                        <div class="slide-cs text-right">
+																							<span class="mr-2">Visibility </span>
+																							<mat-slide-toggle formControlName="is_visible" (change)="fun4($event)"></mat-slide-toggle>
+																						</div>
 
 																						<label>Tab
 																							Heading</label>
@@ -444,14 +444,15 @@
 															<form formGroupName="graduateTab">
 																<div class="grad_card">
 																	<div class="grad_tab">
-																		<div class="slide-cs text-right">
-																			<span class="mr-2">Visibility </span>
-																			<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
-																		</div>
+																		
 																		<div class="insid_tabs emp_home_page">
 																			<ng-container formArrayName="graduateArray"
 																				*ngFor="let alias of mainBenefitsForBoth.controls['graduateTab'].controls['graduateArray'].controls; let i=index">
 																				<ng-container [formGroupName]="i">
+																					<div class="slide-cs text-right">
+																						<span class="mr-2">Visibility </span>
+																						<mat-slide-toggle formControlName="is_visible" (change)="fun5($event)"></mat-slide-toggle>
+																					</div>
 																					<div class="form-group">
 
 																						<label>Tab Heading</label>
@@ -650,7 +651,7 @@
 							<strong>These Companies Help..</strong>
 							<div class="slide-cs">
 								<span class="mr-2">Visibility </span>
-								<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+								<mat-slide-toggle formControlName="is_visible" (change)="fun6($event)"></mat-slide-toggle>
 							</div>
 						</div>
 						<div class="card-body">
@@ -748,84 +749,90 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="manage-home-header">
-						<div class="card-header">
-							<strong>Our Success Stories</strong>
-						</div>
-						<div class="card-body">
-							<form [formGroup]="successform">
-								<div class="home-mng-form">
-									<div class="form-group">
-										<label>Heading</label>
-										<input type="text" name="" class="form-control" value=""
-											formControlName="heading">
-									</div>
-									<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls['heading'].errors?.required  "
-										class="invalid">
-										*Please enter heading
-									</div>
-									<div *ngIf="(successform.controls.heading.touched || successform.controls.heading.dirty)  && successform.controls.heading?.errors?.maxlength  "
-										class="invalid">
-										*Maximum Length should be 50 characters
-									</div>
-									<div class="form-group">
-										<label>Slider Video</label>
-										<div class="slider-video-cntnt">
-											<div class="video">
+						<form [formGroup]="successform">
+							<div class="card-header  d-flex justify-content-between">
+								<strong>Our Success Stories</strong>
+								<div class="slide-cs">
+									<span class="mr-2">Visibility </span>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun7($event)"></mat-slide-toggle>
+								</div>
+							</div>
+							<div class="card-body">
+								
+									<div class="home-mng-form">
+										<div class="form-group">
+											<label>Heading</label>
+											<input type="text" name="" class="form-control" value=""
+												formControlName="heading">
+										</div>
+										<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls['heading'].errors?.required  "
+											class="invalid">
+											*Please enter heading
+										</div>
+										<div *ngIf="(successform.controls.heading.touched || successform.controls.heading.dirty)  && successform.controls.heading?.errors?.maxlength  "
+											class="invalid">
+											*Maximum Length should be 50 characters
+										</div>
+										<div class="form-group">
+											<label>Slider Video</label>
+											<div class="slider-video-cntnt">
+												<div class="video">
 
-												<iframe *ngIf="!successform.controls['video'].value==''" width="420"
-													height="315" [src]="successform.controls['video'].value"
-													frameborder="0" allowfullscreen></iframe>
-												<div class="upload-imag text-center">
-													<button class="btn-primary btn mt-3 position-relative">
-														<input type="file" name="" class="img-input-upld"
-															(change)="onSelectVideo($event)">
-														Upload Video
-													</button>
-												</div>
-												<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls['video']?.errors?.required  "
-													class="invalid">
-													*Please upload video
-												</div>
-												<div *ngIf="successform.controls.video.valid && successform.controls.county?.errors?.required  "
-													class="invalid">
-													*Only videos are allowed
+													<iframe *ngIf="!successform.controls['video'].value==''" width="420"
+														height="315" [src]="successform.controls['video'].value"
+														frameborder="0" allowfullscreen></iframe>
+													<div class="upload-imag text-center">
+														<button class="btn-primary btn mt-3 position-relative">
+															<input type="file" name="" class="img-input-upld"
+																(change)="onSelectVideo($event)">
+															Upload Video
+														</button>
+													</div>
+													<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls['video']?.errors?.required  "
+														class="invalid">
+														*Please upload video
+													</div>
+													<div *ngIf="successform.controls.video.valid && successform.controls.county?.errors?.required  "
+														class="invalid">
+														*Only videos are allowed
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<ng-container formArrayName="discriptionArray"
-										*ngFor="let alias of successform.controls['discriptionArray'].controls; let i=index">
-										<div class="form-group">
-											<label>Slider1: Description</label>
-											<editor [formControlName]="i"></editor>
+										<ng-container formArrayName="discriptionArray"
+											*ngFor="let alias of successform.controls['discriptionArray'].controls; let i=index">
+											<div class="form-group">
+												<label>Slider1: Description</label>
+												<editor [formControlName]="i"></editor>
+											</div>
+											<div *ngIf="discriptionArray.controls[i].errors?.required " class="invalid">
+												*Please enter description
+											</div>
+										</ng-container>
+										<!-- <div class="form-group">
+											<label>Slider2: Description</label>
+											<editor [formControl]="successform.controls['sliderdesc2']"></editor>
 										</div>
-										<div *ngIf="discriptionArray.controls[i].errors?.required " class="invalid">
+										<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc2?.errors?.required  "
+											class="invalid">
 											*Please enter description
 										</div>
-									</ng-container>
-									<!-- <div class="form-group">
-										<label>Slider2: Description</label>
-										<editor [formControl]="successform.controls['sliderdesc2']"></editor>
+										<div class="form-group">
+											<label>Slider3: Description</label>
+											<editor [formControl]="successform.controls['sliderdesc3']"></editor>
+										</div>
+										<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc3?.errors?.required  "
+											class="invalid">
+											*Please enter description
+										</div> -->
+										<div class="edit-btns d-flex justify-content-end">
+											<button class="btn btn-primary mr-4" (click)="postHomePageContent('successform')">Save</button>
+											<button class="btn btn-primary">Back</button>
+										</div>
 									</div>
-									<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc2?.errors?.required  "
-										class="invalid">
-										*Please enter description
-									</div>
-									<div class="form-group">
-										<label>Slider3: Description</label>
-										<editor [formControl]="successform.controls['sliderdesc3']"></editor>
-									</div>
-									<div *ngIf="(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc3?.errors?.required  "
-										class="invalid">
-										*Please enter description
-									</div> -->
-									<div class="edit-btns d-flex justify-content-end">
-										<button class="btn btn-primary mr-4" (click)="postHomePageContent('successform')">Save</button>
-										<button class="btn btn-primary">Back</button>
-									</div>
-								</div>
-							</form>
-						</div>
+								
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -844,7 +851,7 @@
 								<strong>Register Now Section</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun8($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">

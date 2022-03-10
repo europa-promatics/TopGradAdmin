@@ -12,12 +12,12 @@ import { UserManagementComponent } from './pages/user-management/user-management
 import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
 import { ViewProfileComponent } from './pages/view-profile/view-profile.component';
-import { EmployersListComponent } from './pages/employers-list/employers-list.component';
-import { EditEmployerComponent } from './views/edit-employer/edit-employer.component';
-import { GraduateListComponent } from './pages/graduate-list/graduate-list.component';
-import { EditGraduateComponent } from './views/edit-graduate/edit-graduate.component';
-import { ViewGraduateComponent } from './views/view-graduate/view-graduate.component';
-import { ViewEmployerComponent } from './views/view-employer/view-employer.component';
+import { EmployersListComponent } from './pages/UserManagement/employers-list/employers-list.component';
+import { EditEmployerComponent } from './pages/UserManagement/edit-employer/edit-employer.component';
+import { GraduateListComponent } from './pages/UserManagement/graduate-list/graduate-list.component';
+import { EditGraduateComponent } from './pages/UserManagement/edit-graduate/edit-graduate.component';
+import { ViewGraduateComponent } from './pages/UserManagement/view-graduate/view-graduate.component';
+import { ViewEmployerComponent } from './pages/UserManagement/view-employer/view-employer.component';
 import { JobsManagementComponent } from './views/jobs-management/jobs-management.component';
 import { ViewJobComponent } from './views/view-job/view-job.component';
 import { CategoriesManagementComponent } from './views/categories-management/categories-management.component';
@@ -45,9 +45,9 @@ import { AddSubAdminComponent } from './views/add-sub-admin/add-sub-admin.compon
 import { ViewSubAdminComponent } from './views/view-sub-admin/view-sub-admin.component';
 import { EditSubAdminComponent } from './views/edit-sub-admin/edit-sub-admin.component';
 import { EmployerHowItWorksComponent } from './views/employer-how-it-works/employer-how-it-works.component';
-import { EditEmployerHowItWorksComponent } from './views/edit-employer-how-it-works/edit-employer-how-it-works.component';
+import { EditEmployerHowItWorksComponent } from './pages/content-management/how-it-works/edit-employer-how-it-works/edit-employer-how-it-works.component';
 import { GraduateHowItWorksComponent } from './views/graduate-how-it-works/graduate-how-it-works.component';
-import { EditGraduateHowItWorksComponent } from './views/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
+import { EditGraduateHowItWorksComponent } from './pages/content-management/how-it-works/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
 import { PrivacyPolicyComponent } from './pages/content-management/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './pages/content-management/terms-conditions/terms-conditions.component';
 import { TermsSubHeadingsComponent } from './pages/content-management/terms-sub-headings/terms-sub-headings.component';
@@ -67,10 +67,10 @@ import { ViewInterviewComponent } from './views/view-interview/view-interview.co
 import { EditInterviewComponent } from './views/edit-interview/edit-interview.component';
 import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
 import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
-import { VideoIntroComponent } from './views/video-intro/video-intro.component';
-import { VideoIntro1Component } from './views/video-intro1/video-intro1.component';
-import { VideoIntro2Component } from './views/video-intro2/video-intro2.component';
-import { VideoIntro3Component } from './views/video-intro3/video-intro3.component';
+import { VideoIntroComponent } from './pages/content-management/video-intro/video-intro.component';
+import { VideoIntro1Component } from './pages/content-management/video-intro1/video-intro1.component';
+import { VideoIntro2Component } from './pages/content-management/video-intro2/video-intro2.component';
+import { VideoIntro3Component } from './pages/content-management/video-intro3/video-intro3.component';
 import { GraduateVerificationManagementComponent } from './pages/graduate-verification-management/graduate-verification-management.component';
 import { FaqsComponent } from './views/faqs/faqs.component';
 import { GraduateAddFaqComponent } from './pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component';
@@ -182,11 +182,11 @@ export const routes: Routes = [
       },
       {
         path: 'employersList',
-        loadChildren: () => import('./pages/employers-list/employers-list.module').then(m => m.EmployersListModule)
+        loadChildren: () => import('./pages/UserManagement/employers-list/employers-list.module').then(m => m.EmployersListModule)
       },
       {
         path: 'graduateList',
-        loadChildren: () => import('./pages/graduate-list/graduate-list.module').then(m => m.GraduateListModule)
+        loadChildren: () => import('./pages/UserManagement/graduate-list/graduate-list.module').then(m => m.GraduateListModule)
       },
       {
         path: 'addHeading/:type',
@@ -210,20 +210,20 @@ export const routes: Routes = [
         loadChildren: () => import('./pages/content-management/edit-sub-heading/edit-sub-heading.module').then(m => m.EditSubHeadingModule)
       },
       {
-        path: 'editEmployer',
-        loadChildren: () => import('./views/edit-employer/edit-employer.module').then(m => m.EditEmployerModule)
+        path: 'editEmployer/:id',
+        loadChildren: () => import('./pages/UserManagement/edit-employer/edit-employer.module').then(m => m.EditEmployerModule)
       },
       {
-        path: 'editGraduate',
-        loadChildren: () => import('./views/edit-graduate/edit-graduate.module').then(m => m.EditGraduateModule)
+        path: 'editGraduate/:id',
+        loadChildren: () => import('./pages/UserManagement/edit-graduate/edit-graduate.module').then(m => m.EditGraduateModule)
       },
       {
-        path: 'viewGraduate',
-        loadChildren: () => import('./views/view-graduate/view-graduate.module').then(m => m.ViewGraduateModule)
+        path: 'viewGraduate/:id',
+        loadChildren: () => import('./pages/UserManagement/view-graduate/view-graduate.module').then(m => m.ViewGraduateModule)
       },
       {
-        path: 'viewEmployer',
-        loadChildren: () => import('./views/view-employer/view-employer.module').then(m => m.ViewEmployerModule)
+        path: 'viewEmployer/:id',
+        loadChildren: () => import('./pages/UserManagement/view-employer/view-employer.module').then(m => m.ViewEmployerModule)
       },
       {
         path: 'jobsManagement',
@@ -335,7 +335,7 @@ export const routes: Routes = [
       },
       {
         path: 'editEmployerHowItWorks',
-        loadChildren: () => import('./views/edit-employer-how-it-works/edit-employer-how-it-works.module').then(m => m.EditEmployerHowItWorksModule)
+        loadChildren: () => import('./pages/content-management/how-it-works/edit-employer-how-it-works/edit-employer-how-it-works.module').then(m => m.EditEmployerHowItWorksModule)
       },
       {
         path: 'graduateHowItWorks',
@@ -343,7 +343,7 @@ export const routes: Routes = [
       },
       {
         path: 'editGraduateHowItWorks',
-        loadChildren: () => import('./views/edit-graduate-how-it-works/edit-graduate-how-it-works.module').then(m => m.EditGraduateHowItWorksModule)
+        loadChildren: () => import('./pages/content-management/how-it-works/edit-graduate-how-it-works/edit-graduate-how-it-works.module').then(m => m.EditGraduateHowItWorksModule)
       },
       {
         path: 'viewProfile',
@@ -432,19 +432,19 @@ export const routes: Routes = [
       },
       {
         path: 'videoIntro',
-        loadChildren: () => import('./views/video-intro/video-intro.module').then(m => m.VideoIntroModule)
+        loadChildren: () => import('./pages/content-management/video-intro/video-intro.module').then(m => m.VideoIntroModule)
       },
       {
         path: 'videoIntro1',
-        loadChildren: () => import('./views/video-intro1/video-intro1.module').then(m => m.VideoIntro1Module)
+        loadChildren: () => import('./pages/content-management/video-intro1/video-intro1.module').then(m => m.VideoIntro1Module)
       },
       {
         path: 'videoIntro2',
-        loadChildren: () => import('./views/video-intro2/video-intro2.module').then(m => m.VideoIntro2Module)
+        loadChildren: () => import('./pages/content-management/video-intro2/video-intro2.module').then(m => m.VideoIntro2Module)
       },
       {
         path: 'videoIntro3',
-        loadChildren: () => import('./views/video-intro3/video-intro3.module').then(m => m.VideoIntro3Module)
+        loadChildren: () => import('./pages/content-management/video-intro3/video-intro3.module').then(m => m.VideoIntro3Module)
       },
       {
         path: 'graduate-verification-management',
@@ -470,23 +470,20 @@ export const routes: Routes = [
       path: 'view-faq/:id',
       loadChildren: () => import('./pages/support-management/faq_emp-grad/view-faq/view-faq.module').then(m => m.ViewFaqModule)
       },
+      {
+      path: 'employerIndustryManagement',
+      loadChildren: () => import('./pages/content-management/industry-management/employer-industry/employer-industry.module').then(m => m.EmployerIndustryModule)
+      },
+      {
+      path: 'graduateIndustryManagement',
+      loadChildren: () => import('./pages/content-management/industry-management/graduate-industry/graduate-industry.module').then(m => m.GraduateIndustryModule)
+      },
+      {
+        path: 'skills-list',
+        loadChildren: () => import('./views/skills-list/skills-list.module').then(m => m.SkillsListModule)
+        },
         
-      // {
-      //   path: 'faqs',
-      //   loadChildren: () => import('./views/faqs/faqs.module').then(m => m.FaqsModule)
-      // },
-      // {
-      //   path: 'add-faq',
-      //   loadChildren: () => import('./views/add-faq/add-faq.module').then(m => m.AddFaqModule)
-      // },
-      // {
-      //   path: 'edit-faq',
-      //   loadChildren: () => import('./views/edit-faq/edit-faq.module').then(m => m.EditFaqModule)
-      // },
-      // {
-      //   path: 'view-faq',
-      //   loadChildren: () => import('./views/view-faq/view-faq.module').then(m => m.ViewFaqModule)
-      // },
+      
       {
         path: 'about-us',
         loadChildren: () => import('./pages/content-management/about-us/about-us.module').then(m => m.AboutUsModule)
@@ -495,10 +492,10 @@ export const routes: Routes = [
         path: 'homePageManagement',
         loadChildren: () => import('./pages/homepage-management/homepage-management.module').then(m => m.HomepageManagementModule)
       },
-      {
-        path: 'industryManagement',
-        loadChildren: () => import('./pages/content-management/industry-management/industrylist/industrylist.module').then(m => m.IndustrylistModule)
-      },
+      // {
+      //   path: 'industryManagement',
+      //   loadChildren: () => import('./pages/content-management/industry-management/industrylist/industrylist.module').then(m => m.IndustrylistModule)
+      // },
       {
         path: 'help-management',
         loadChildren: () => import('./views/help-management/help-management.module').then(m => m.HelpManagementModule)

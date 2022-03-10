@@ -82,6 +82,7 @@ export class ContactListingComponent implements OnInit {
   sortedData: [];
   search: any='';
   filterValue: string;
+  event: any;
 
   constructor(private Service:TopgradserviceService,  private fb : FormBuilder) {
     this.contactUsForm=this.fb.group({
@@ -136,14 +137,18 @@ export class ContactListingComponent implements OnInit {
   }
 
   paginationOptionChange(evt) {
+    this.event=evt
     console.log("evthrm", evt)
     this.topPage = evt.pageIndex
     console.log('rsawsfsdsf',this.topPage)
-   var obj = {
+   var obj:any = {
     type:'contact_us',
-      limit: evt.pageSize,
-       offset:  (evt.pageIndex * evt.pageSize)
+    limit:evt.pageSize,
+    offset: (evt.pageIndex*evt.pageSize)
      }
+     if(this.search){
+      obj.search = this.search
+    }
      this.Service.contactList(obj).subscribe(async data => {
        console.log("Response of all the service listing>>>>>", data);
         this.Contactlisting=data.data,
@@ -237,10 +242,20 @@ export class ContactListingComponent implements OnInit {
 
 
 
-  applyFilter(filterValue: string ) {
-    // console.log("filterValue", this.search);
-    this.contactList()
-    this.ngOnInit()
+  applyFilter(filterValue) {
+    console.log("filterValue", this.search);
+    this.search=filterValue.target.value
+    console.log("after searchhhhh-00------------0=====",this.event);
+
+    if(this.event){
+      console.log("after searchhhhh=====",this.event);
+      
+      this.paginationOptionChange(this.event)
+    }
+    else{
+      this.contactList()
+
+    }
 
   }
 

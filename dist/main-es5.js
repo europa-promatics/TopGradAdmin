@@ -50,7 +50,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"headerform\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Home Header Section</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t\t<editor initialValue=\"Top Platform to find the Best Employer\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"headerform.controls['title']\"></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerform.controls.title.touched || headerform.controls.title.dirty) && headerform.controls.title.invalid && headerform.controls.title?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerform.controls.title.touched || headerform.controls.title.dirty)  && headerform.controls.title?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <img src=\"assets/img/home-img.png\" class=\"img-fluid\"> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"headerform.controls['image'].value\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" accept=\"image/*\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onHeaderFormChange($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerform.controls.image.touched || headerform.controls.image.dirty) && headerform.controls.image.invalid && headerform.controls.image?.errors?.required\"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"headerform.controls.image.valid && headerform.controls.county?.errors?.required\" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('headerform')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"storyform\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Our Story Section</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs text-right\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"testing Our story\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"storyform.controls['title1']\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.title1.touched || storyform.controls.title1.dirty) && storyform.controls.title1.invalid && storyform.controls.title1?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.title1.touched || storyform.controls.title1.dirty)  && storyform.controls.title1?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor [formControl]=\"storyform.controls['description']\"> </editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.description?.touched || storyform.controls.description.dirty) && storyform.controls.description.invalid && storyform.controls.description?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Section Video</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"video\">\n\t\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"storyform.controls['video'].value\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"storyform.controls['video'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen ></iframe>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onStoryFormimageChange($event)\" accept=\"video/*\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.video.touched || storyform.controls.video.dirty) && storyform.controls.video.invalid && storyform.controls.video?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"storyform.controls.video.valid && storyform.controls.county?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\" testing Naren Chellappah\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"storyform.controls['name']\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.name.touched || storyform.controls.name.dirty) && storyform.controls.name.invalid && storyform.controls.name?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.name.touched || storyform.controls.name.dirty)  && storyform.controls.name?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Posted Position</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\" testing Founder of Top Graduates\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"storyform.controls['designation']\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.designation.touched || storyform.controls.designation.dirty)  && storyform.controls.designation?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.designation.touched || storyform.controls.designation.dirty) && storyform.controls.designation.invalid && storyform.controls.designation?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter designation\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('storyform')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"curatedform\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t<strong>Curated Especially For You</strong>\n\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<editor initialValue=\"Curated Especially For You\" [innerHTML]=\"\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"curatedform.controls['heading']\"></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(curatedform.controls.heading.touched || curatedform.controls.heading.dirty) && curatedform.controls.heading.invalid && curatedform.controls.heading?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('curatedform')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"mainBenefitsForBoth\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>The Main Benefits For Both</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\"\" formControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(mainBenefitsForBoth.controls.heading.touched || mainBenefitsForBoth.controls.heading.dirty) && mainBenefitsForBoth.controls.heading.invalid && mainBenefitsForBoth.controls.heading?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(mainBenefitsForBoth.controls.heading.touched || mainBenefitsForBoth.controls.heading.dirty)  && mainBenefitsForBoth.controls.heading?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"card\">\n\t\t\t\t\t\t\t\t\t<div class=\"card-body p-0\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"uppr_tabs\">\n\t\t\t\t\t\t\t\t\t\t\t<mat-tab-group>\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-tab label=\"Employers\">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"insid_tabs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-template matTabContent>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form formGroupName=\"employerTab\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_card\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_tab\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"slide-cs text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-container formArrayName=\"employerArray\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*ngFor=\"let alias of mainBenefitsForBoth.controls['employerTab'].controls['employerArray'].controls; let i=index\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-container [formGroupName]=\"i\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"insid_tabs emp_home_page\">\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHeading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['heading'].errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['heading'].errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"Description\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['Description'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['Description'].errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"employerArray.controls[i].controls['image']?employerArray.controls[i].controls['image'].value:'assets/img/etabimg1.png'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['image'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n                                                                                                <div *ngIf=\"employerArray.controls[i]?.controls.county?.errors\" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttype=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onEmployerChangeImage($event,i)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab2 Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['heading_tab2']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.heading_tab2.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['description_tab2']\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.description_tab2.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab2 Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/etabimg2.png\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['image_tab2']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.image_tab2.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab3 Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['heading_tab3']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.heading_tab3.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['description_tab3']\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.description_tab3.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab3 Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/etabimg3.png\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['image_tab3']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.image_tab3.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"home-manage-btns edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(click)=\"postHomePageContent('mainBenefitsForBoth','employerTab')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary\">Cancel</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-template>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-tab>\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-tab label=\"Graduates\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"insid_tabs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-template matTabContent>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form formGroupName=\"graduateTab\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_card\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_tab\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"slide-cs text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"insid_tabs emp_home_page\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-container formArrayName=\"graduateArray\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*ngFor=\"let alias of mainBenefitsForBoth.controls['graduateTab'].controls['graduateArray'].controls; let i=index\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-container [formGroupName]=\"i\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['heading'].errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['heading'].errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"Description\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['Description'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['Description'].errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"graduateArray.controls[i].controls['image']?graduateArray.controls[i].controls['image'].value:'assets/img/etabimg1.png'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['image'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i]?.controls.county?.errors\" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttype=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onGraduatesChange($event,i)\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab2 Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_heading_tab2']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_heading_tab2?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_description_tab2']\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_description_tab2?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab2 Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/gtabimg2.png\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_image_tab2']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_image_tab2?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab3 Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_heading_tab3']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_heading_tab3?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_description_tab3']\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_description_tab3?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab3 Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/gtabimg3.png\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_image_tab3']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_image_tab3?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div> -->\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"home-manage-btns edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('mainBenefitsForBoth','graduateTab')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary\">Cancel</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-template>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-tab>\n\t\t\t\t\t\t\t\t\t\t\t</mat-tab-group>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"Companies\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t<strong>These Companies Help..</strong>\n\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\"\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Companies.controls.heading.touched || Companies.controls.heading.dirty) && Companies.controls.heading.invalid && Companies.controls.heading?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Companies.controls.heading.touched || Companies.controls.heading.dirty)  && Companies.controls.heading?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 100 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Company's Logo</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"enable-organise\">\n\t\t\t\t\t\t\t\t\t\t\t<ngx-dropzone  (change)=\"onSelectLogo($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t<ngx-dropzone-label>Drop your files here!</ngx-dropzone-label>\n\t\t\t\t\t\t\t\t\t\t\t\t<ngx-dropzone-preview *ngFor=\"let f of logos;let i=index\" [removable]=\"true\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t(removed)=\"onRemove(i)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>\n\t\t\t\t\t\t\t\t\t\t\t\t</ngx-dropzone-preview>\n\t\t\t\t\t\t\t\t\t\t\t</ngx-dropzone>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"cmp_logos\">\n\t\t\t\t\t\t\t\t\t\t\t<ng-container *ngFor=\" let logo of logosUrl\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"logo\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<!-- <img src=\"assets/img/logo2.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo3.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo4.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo5.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo6.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo7.png\" class=\"img-fluid\"> -->\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"Companies.controls['image']?Companies.controls['image'].value:'assets/img/etabimg1.png'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"Companies.controls['image'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n                                                <div *ngIf=\"Companies.controls['county'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttype=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onCompaniesChangeImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('Companies')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n\n<section class=\"add-slider-item\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t\t<strong>Our Success Stories</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t<form [formGroup]=\"successform\">\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.touched || successform.dirty) && successform.invalid && successform.controls['heading'].errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.controls.heading.touched || successform.controls.heading.dirty)  && successform.controls.heading?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Slider Video</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"video\">\n\n\t\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"!successform.controls['video'].value==''\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"successform.controls['video'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen></iframe>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onSelectVideo($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.touched || successform.dirty) && successform.invalid && successform.controls['video']?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"successform.controls.video.valid && successform.controls.county?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<ng-container formArrayName=\"discriptionArray\"\n\t\t\t\t\t\t\t\t\t\t*ngFor=\"let alias of successform.controls['discriptionArray'].controls; let i=index\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Slider1: Description</label>\n\t\t\t\t\t\t\t\t\t\t\t<editor [formControlName]=\"i\"></editor>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"discriptionArray.controls[i].errors?.required \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t<!-- <div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Slider2: Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor [formControl]=\"successform.controls['sliderdesc2']\"></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc2?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Slider3: Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor [formControl]=\"successform.controls['sliderdesc3']\"></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc3?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('successform')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<form [formGroup]=\"newRegister\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Register Now Section</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"grad-body\">\n\t\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Text</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"text\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.text?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t   *Please enter text\n\t\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.controls.text.touched || newRegister.controls.text.dirty)  && newRegister.controls.text?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\"\n\t\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.heading?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t   *Please enter heading\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.controls.heading.touched || newRegister.controls.heading.dirty)  && newRegister.controls.heading?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"description\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.description?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t   *Please enter description\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.controls.description.touched || newRegister.controls.description.dirty)  && newRegister.controls.description?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Graduate Image</label>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"register-tday\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img  mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"newRegister.controls['image'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.description?.errors?.required\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"newRegister?.controls['county'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('newRegister')\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</form>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>";
+      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"headerform\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Home Header Section</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t\t<editor initialValue=\"Top Platform to find the Best Employer\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"headerform.controls['title']\"></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerform.controls.title.touched || headerform.controls.title.dirty) && headerform.controls.title.invalid && headerform.controls.title?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerform.controls.title.touched || headerform.controls.title.dirty)  && headerform.controls.title?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <img src=\"assets/img/home-img.png\" class=\"img-fluid\"> -->\n\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"headerform.controls['image'].value\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" accept=\"image/*\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onHeaderFormChange($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerform.controls.image.touched || headerform.controls.image.dirty) && headerform.controls.image.invalid && headerform.controls.image?.errors?.required\"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"headerform.controls.image.valid && headerform.controls.county?.errors?.required\" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('headerform')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"storyform\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Our Story Section</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs text-right\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun1($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"testing Our story\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"storyform.controls['title1']\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.title1.touched || storyform.controls.title1.dirty) && storyform.controls.title1.invalid && storyform.controls.title1?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.title1.touched || storyform.controls.title1.dirty)  && storyform.controls.title1?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor [formControl]=\"storyform.controls['description']\"> </editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.description?.touched || storyform.controls.description.dirty) && storyform.controls.description.invalid && storyform.controls.description?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Section Video</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"video\">\n\t\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"storyform.controls['video'].value\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"storyform.controls['video'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen ></iframe>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onStoryFormimageChange($event)\" accept=\"video/*\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.video.touched || storyform.controls.video.dirty) && storyform.controls.video.invalid && storyform.controls.video?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"storyform.controls.video.valid && storyform.controls.county?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\" testing Naren Chellappah\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"storyform.controls['name']\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.name.touched || storyform.controls.name.dirty) && storyform.controls.name.invalid && storyform.controls.name?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.name.touched || storyform.controls.name.dirty)  && storyform.controls.name?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Posted Position</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\" testing Founder of Top Graduates\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"storyform.controls['designation']\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.designation.touched || storyform.controls.designation.dirty)  && storyform.controls.designation?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(storyform.controls.designation.touched || storyform.controls.designation.dirty) && storyform.controls.designation.invalid && storyform.controls.designation?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter designation\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('storyform')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"curatedform\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t<strong>Curated Especially For You</strong>\n\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun2($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<editor initialValue=\"Curated Especially For You\" [innerHTML]=\"\"\n\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"curatedform.controls['heading']\"></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(curatedform.controls.heading.touched || curatedform.controls.heading.dirty) && curatedform.controls.heading.invalid && curatedform.controls.heading?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('curatedform')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"mainBenefitsForBoth\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>The Main Benefits For Both</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun3($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\"\" formControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(mainBenefitsForBoth.controls.heading.touched || mainBenefitsForBoth.controls.heading.dirty) && mainBenefitsForBoth.controls.heading.invalid && mainBenefitsForBoth.controls.heading?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(mainBenefitsForBoth.controls.heading.touched || mainBenefitsForBoth.controls.heading.dirty)  && mainBenefitsForBoth.controls.heading?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"card\">\n\t\t\t\t\t\t\t\t\t<div class=\"card-body p-0\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"uppr_tabs\">\n\t\t\t\t\t\t\t\t\t\t\t<mat-tab-group>\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-tab label=\"Employers\">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"insid_tabs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-template matTabContent>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form formGroupName=\"employerTab\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_card\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_tab\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-container formArrayName=\"employerArray\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*ngFor=\"let alias of mainBenefitsForBoth.controls['employerTab'].controls['employerArray'].controls; let i=index\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-container [formGroupName]=\"i\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"insid_tabs emp_home_page\">\n                                                                                        <div class=\"slide-cs text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun4($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHeading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['heading'].errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['heading'].errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"Description\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['Description'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['Description'].errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"employerArray.controls[i].controls['image']?employerArray.controls[i].controls['image'].value:'assets/img/etabimg1.png'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"employerArray.controls[i].controls['image'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n                                                                                                <div *ngIf=\"employerArray.controls[i]?.controls.county?.errors\" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttype=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onEmployerChangeImage($event,i)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab2 Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['heading_tab2']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.heading_tab2.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['description_tab2']\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.description_tab2.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab2 Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/etabimg2.png\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['image_tab2']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.image_tab2.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab3 Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['heading_tab3']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.heading_tab3.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['description_tab3']\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.description_tab3.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab3 Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/etabimg3.png\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"employerform.controls['image_tab3']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(employerform.touched || employerform.dirty) && employerform.invalid && employerform.controls.image_tab3.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"home-manage-btns edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(click)=\"postHomePageContent('mainBenefitsForBoth','employerTab')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary\">Cancel</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-template>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-tab>\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-tab label=\"Graduates\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"insid_tabs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-template matTabContent>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<form formGroupName=\"graduateTab\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_card\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_tab\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"insid_tabs emp_home_page\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-container formArrayName=\"graduateArray\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*ngFor=\"let alias of mainBenefitsForBoth.controls['graduateTab'].controls['graduateArray'].controls; let i=index\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ng-container [formGroupName]=\"i\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"slide-cs text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun5($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tvalue=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['heading'].errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['heading'].errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"Description\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['Description'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['Description'].errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"graduateArray.controls[i].controls['image']?graduateArray.controls[i].controls['image'].value:'assets/img/etabimg1.png'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i].controls['image'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"graduateArray.controls[i]?.controls.county?.errors\" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttype=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onGraduatesChange($event,i)\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab2 Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_heading_tab2']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_heading_tab2?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_description_tab2']\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_description_tab2?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab2 Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/gtabimg2.png\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_image_tab2']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_image_tab2?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab3 Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_heading_tab3']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_heading_tab3?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\trows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_description_tab3']\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_description_tab3?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Tab3 Image</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/gtabimg3.png\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[formControl]=\"graduateform.controls['grad_image_tab3']\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(graduateform.touched || graduateform.dirty) && graduateform.invalid && graduateform.controls.grad_image_tab3?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div> -->\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"home-manage-btns edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('mainBenefitsForBoth','graduateTab')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn btn-primary\">Cancel</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ng-template>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-tab>\n\t\t\t\t\t\t\t\t\t\t\t</mat-tab-group>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"Companies\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t<strong>These Companies Help..</strong>\n\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun6($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\"\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Companies.controls.heading.touched || Companies.controls.heading.dirty) && Companies.controls.heading.invalid && Companies.controls.heading?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Companies.controls.heading.touched || Companies.controls.heading.dirty)  && Companies.controls.heading?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 100 characters\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Company's Logo</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"enable-organise\">\n\t\t\t\t\t\t\t\t\t\t\t<ngx-dropzone  (change)=\"onSelectLogo($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t<ngx-dropzone-label>Drop your files here!</ngx-dropzone-label>\n\t\t\t\t\t\t\t\t\t\t\t\t<ngx-dropzone-preview *ngFor=\"let f of logos;let i=index\" [removable]=\"true\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t(removed)=\"onRemove(i)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>\n\t\t\t\t\t\t\t\t\t\t\t\t</ngx-dropzone-preview>\n\t\t\t\t\t\t\t\t\t\t\t</ngx-dropzone>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"cmp_logos\">\n\t\t\t\t\t\t\t\t\t\t\t<ng-container *ngFor=\" let logo of logosUrl\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"logo\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t<!-- <img src=\"assets/img/logo2.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo3.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo4.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo5.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo6.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/logo7.png\" class=\"img-fluid\"> -->\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"prev-upld-img mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"Companies.controls['image']?Companies.controls['image'].value:'assets/img/etabimg1.png'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"Companies.controls['image'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n                                                <div *ngIf=\"Companies.controls['county'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\ttype=\"file\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tname=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onCompaniesChangeImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('Companies')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n\n<section class=\"add-slider-item\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<form [formGroup]=\"successform\">\n\t\t\t\t\t\t\t<div class=\"card-header  d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Our Success Stories</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun7($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.touched || successform.dirty) && successform.invalid && successform.controls['heading'].errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.controls.heading.touched || successform.controls.heading.dirty)  && successform.controls.heading?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Slider Video</label>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"video\">\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"!successform.controls['video'].value==''\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"successform.controls['video'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen></iframe>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onSelectVideo($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.touched || successform.dirty) && successform.invalid && successform.controls['video']?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"successform.controls.video.valid && successform.controls.county?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<ng-container formArrayName=\"discriptionArray\"\n\t\t\t\t\t\t\t\t\t\t\t*ngFor=\"let alias of successform.controls['discriptionArray'].controls; let i=index\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label>Slider1: Description</label>\n\t\t\t\t\t\t\t\t\t\t\t\t<editor [formControlName]=\"i\"></editor>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"discriptionArray.controls[i].errors?.required \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Slider2: Description</label>\n\t\t\t\t\t\t\t\t\t\t\t<editor [formControl]=\"successform.controls['sliderdesc2']\"></editor>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc2?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Slider3: Description</label>\n\t\t\t\t\t\t\t\t\t\t\t<editor [formControl]=\"successform.controls['sliderdesc3']\"></editor>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(successform.touched || successform.dirty) && successform.invalid && successform.controls.sliderdesc3?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('successform')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</form>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<form [formGroup]=\"newRegister\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Register Now Section</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun8($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"grad-body\">\n\t\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Text</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\t\tformControlName=\"text\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.text?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t   *Please enter text\n\t\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.controls.text.touched || newRegister.controls.text.dirty)  && newRegister.controls.text?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\"\n\t\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.heading?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t   *Please enter heading\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.controls.heading.touched || newRegister.controls.heading.dirty)  && newRegister.controls.heading?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"description\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.description?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t   *Please enter description\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.controls.description.touched || newRegister.controls.description.dirty)  && newRegister.controls.description?.errors?.maxlength  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Graduate Image</label>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"register-tday\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upld-body\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img  mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"newRegister.controls['image'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(newRegister.touched || newRegister.dirty) && newRegister.invalid && newRegister.controls.description?.errors?.required\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Please upload image\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"newRegister?.controls['county'].errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postHomePageContent('newRegister')\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</form>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>";
       /***/
     },
 
@@ -246,218 +246,6 @@
     },
 
     /***/
-    "/NuI": function NuI(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "IndustrylistComponent", function () {
-        return IndustrylistComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_industrylist_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./industrylist.component.html */
-      "kQxi");
-      /* harmony import */
-
-
-      var _industrylist_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./industrylist.component.scss */
-      "X1jl");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/paginator */
-      "M9IT");
-      /* harmony import */
-
-
-      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/sort */
-      "Dh3D");
-      /* harmony import */
-
-
-      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/material/table */
-      "+0xr");
-      /* harmony import */
-
-
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ngx-bootstrap/modal */
-      "K3ix");
-      /* harmony import */
-
-
-      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @angular/cdk/collections */
-      "0EQZ");
-      /* harmony import */
-
-
-      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-      /*! ../../../../topgradservice.service */
-      "DL5e");
-      /** Constants used to fill up our data base. */
-
-
-      var NAME = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-
-      var IndustrylistComponent = /*#__PURE__*/function () {
-        function IndustrylistComponent(Service) {
-          _classCallCheck(this, IndustrylistComponent);
-
-          this.Service = Service;
-          this.userList = [];
-          this.displayedColumns = ['select', 'id', 'name', 'action']; // dataSource: MatTableDataSource<UserData>(this.userList);
-
-          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
-
-          var users = Array.from({
-            length: 5
-          }, function (_, k) {
-            return createNewUser(k + 1);
-          }); // Assign the data to the data source for the table to render
-
-          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
-        }
-
-        _createClass(IndustrylistComponent, [{
-          key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }
-        }, {
-          key: "ngOnInit",
-          value: function ngOnInit() {
-            if (this.dataSource.paginator) {
-              this.dataSource.paginator.firstPage();
-            }
-
-            this.userlisting();
-          }
-        }, {
-          key: "userlisting",
-          value: function userlisting() {
-            var _this2 = this;
-
-            console.log("khjhgjhgjhgjhghjghjgjhghjg");
-            var obj = {
-              limit: 5,
-              offset: 0
-            };
-            console.log("onnnn", obj);
-            this.Service.userlist(obj).subscribe(function (data) {
-              console.log("main data for users is ====", data);
-              _this2.userList = data.data;
-              _this2.totalRecords = data.length;
-            }, function (err) {
-              console.log(err.status);
-
-              if (err.status >= 404) {
-                console.log('Some error occured');
-              } else {
-                // this.toastr.error('Some error occured, please try again!!', 'Error')
-                console.log('Internet Connection Error');
-              }
-            });
-          }
-          /** Whether the number of selected elements matches the total number of rows. */
-
-        }, {
-          key: "isAllSelected",
-          value: function isAllSelected() {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-          }
-          /** Selects all rows if they are not all selected; otherwise clear selection. */
-
-        }, {
-          key: "masterToggle",
-          value: function masterToggle() {
-            var _this$selection;
-
-            if (this.isAllSelected()) {
-              this.selection.clear();
-              return;
-            }
-
-            (_this$selection = this.selection).select.apply(_this$selection, _toConsumableArray(this.dataSource.data));
-          }
-          /** The label for the checkbox on the passed row */
-
-        }, {
-          key: "checkboxLabel",
-          value: function checkboxLabel(row) {
-            if (!row) {
-              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
-            }
-
-            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
-          }
-        }]);
-
-        return IndustrylistComponent;
-      }();
-
-      IndustrylistComponent.ctorParameters = function () {
-        return [{
-          type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"]
-        }];
-      };
-
-      IndustrylistComponent.propDecorators = {
-        smallModal: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: ['smallModal']
-        }],
-        paginator: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
-        }],
-        sort: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
-        }]
-      };
-      IndustrylistComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-industrylist',
-        template: _raw_loader_industrylist_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_industrylist_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"]])], IndustrylistComponent);
-
-      function createNewUser(id) {
-        var name = NAME[Math.round(Math.random() * (NAME.length - 1))] + ' ';
-        return {
-          id: id.toString() + '.',
-          name: name
-        };
-      }
-      /***/
-
-    },
-
-    /***/
     "/Oao": function Oao(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -474,53 +262,6 @@
       module.exports = __webpack_require__(
       /*! /home/promatics/Documents/GitHub/TopGradAdmin/src/main.ts */
       "zUnb");
-      /***/
-    },
-
-    /***/
-    "08Ex": function Ex(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "IndustrylistModule", function () {
-        return IndustrylistModule;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/common */
-      "ofXK");
-      /* harmony import */
-
-
-      var _industrylist_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! ./industrylist-routing.module */
-      "AUtu");
-
-      var IndustrylistModule = function IndustrylistModule() {
-        _classCallCheck(this, IndustrylistModule);
-      };
-
-      IndustrylistModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [],
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _industrylist_routing_module__WEBPACK_IMPORTED_MODULE_3__["IndustrylistRoutingModule"]]
-      })], IndustrylistModule);
       /***/
     },
 
@@ -651,14 +392,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection2;
+            var _this$selection;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection2 = this.selection).select.apply(_this$selection2, _toConsumableArray(this.dataSource.data));
+            (_this$selection = this.selection).select.apply(_this$selection, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -1503,7 +1244,7 @@
         }, {
           key: "termsconditionlist",
           value: function termsconditionlist() {
-            var _this3 = this;
+            var _this2 = this;
 
             console.log("khjhgjhgjhgjhghjghjgjhghjg");
             var obj = {
@@ -1514,8 +1255,8 @@
             console.log("onnnn", obj);
             this.Service.termslist(obj).subscribe(function (data) {
               console.log("main data for terms is ====", data);
-              _this3.termslist = data.data;
-              _this3.totalRecords = data.length;
+              _this2.termslist = data.data;
+              _this2.totalRecords = data.length;
             }, function (err) {
               console.log(err.status);
 
@@ -1536,7 +1277,7 @@
         }, {
           key: "deleteheading",
           value: function deleteheading(id) {
-            var _this4 = this;
+            var _this3 = this;
 
             var obj = {
               content_id: id
@@ -1544,19 +1285,19 @@
             this.Service.deleteterm(obj).subscribe(function (res) {
               console.log("fgdgfdgfdfgdfgd", res);
 
-              _this4.smallModal.hide();
+              _this3.smallModal.hide();
 
               if (res.code == 200) {
-                _this4._snackBar.open("Heading Deleted Successfully", "close", {
+                _this3._snackBar.open("Heading Deleted Successfully", "close", {
                   duration: 2000
                 });
 
-                _this4.ngOnInit();
+                _this3.ngOnInit();
               }
             }, function (err) {
               console.log(err);
 
-              _this4._snackBar.open("Some Error Occued", "close", {
+              _this3._snackBar.open("Some Error Occued", "close", {
                 duration: 2000
               });
             });
@@ -1585,14 +1326,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection3;
+            var _this$selection2;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection3 = this.selection).select.apply(_this$selection3, _toConsumableArray(this.dataSource.data));
+            (_this$selection2 = this.selection).select.apply(_this$selection2, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -1791,14 +1532,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection4;
+            var _this$selection3;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection4 = this.selection).select.apply(_this$selection4, _toConsumableArray(this.dataSource.data));
+            (_this$selection3 = this.selection).select.apply(_this$selection3, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -1861,18 +1602,6 @@
       }
       /***/
 
-    },
-
-    /***/
-    "3KJ9": function KJ9(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWdyYWR1YXRlLWhvdy1pdC13b3Jrcy5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
     },
 
     /***/
@@ -2012,14 +1741,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection5;
+            var _this$selection4;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection5 = this.selection).select.apply(_this$selection5, _toConsumableArray(this.dataSource.data));
+            (_this$selection4 = this.selection).select.apply(_this$selection4, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -2223,14 +1952,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection6;
+            var _this$selection5;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection6 = this.selection).select.apply(_this$selection6, _toConsumableArray(this.dataSource.data));
+            (_this$selection5 = this.selection).select.apply(_this$selection5, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -2477,7 +2206,7 @@
         }, {
           key: "sendlogin",
           value: function sendlogin() {
-            var _this5 = this;
+            var _this4 = this;
 
             console.log("gfgfgfgfgfgfgfgfgf", this.resetpwdform);
             var token = this.route.snapshot.params["token"];
@@ -2498,15 +2227,15 @@
             this.Service.resetpassword(obj).subscribe(function (data) {
               console.log("fdfdfdfdsfdsfdsfdsfdsfdsf", data);
 
-              _this5.Service.showMessage({
+              _this4.Service.showMessage({
                 message: "Password Reset Successfully"
               });
 
-              _this5.router.navigate(["login"]);
+              _this4.router.navigate(["login"]);
             }, function (err) {
               console.log(err);
 
-              _this5.Service.showMessage({
+              _this4.Service.showMessage({
                 message: err.error.errors ? err.error.errors.msg : 'Something went Wrong'
               });
             });
@@ -2630,7 +2359,7 @@
         }, {
           key: "addsubheading",
           value: function addsubheading() {
-            var _this6 = this;
+            var _this5 = this;
 
             console.log("sdsfsfdsfdfdfds", this.terms_sub_headingform);
 
@@ -2647,14 +2376,14 @@
                 console.log("fgdgfdgfdfgdfgd", res);
 
                 if (res.code == 200) {
-                  _this6._snackBar.open("Added Sub Heading Successfully", "close", {
+                  _this5._snackBar.open("Added Sub Heading Successfully", "close", {
                     duration: 2000
                   });
                 }
               }, function (err) {
                 console.log(err);
 
-                _this6._snackBar.open("Some Error Occued", "close", {
+                _this5._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               });
@@ -2859,7 +2588,7 @@
         }, {
           key: "paginationOptionChange",
           value: function paginationOptionChange(evt) {
-            var _this7 = this;
+            var _this6 = this;
 
             console.log("evthrm", evt);
             this.topPage = evt.pageIndex;
@@ -2870,7 +2599,7 @@
               offset: evt.pageIndex * evt.pageSize
             };
             this.Service.contactList(obj).subscribe(function (data) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this7, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this6, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
                 return regeneratorRuntime.wrap(function _callee$(_context) {
                   while (1) {
                     switch (_context.prev = _context.next) {
@@ -2896,7 +2625,7 @@
         }, {
           key: "contactList",
           value: function contactList() {
-            var _this8 = this;
+            var _this7 = this;
 
             console.log("javascriptt========");
             var obj = {
@@ -2911,9 +2640,9 @@
 
             this.Service.contactList(obj).subscribe(function (res) {
               console.log("Response==========", res);
-              _this8.HelpManagement = res.data;
-              _this8.totalRecords = res.count;
-              _this8.sortedData = _this8.HelpManagement; // this.ngOnInit()
+              _this7.HelpManagement = res.data;
+              _this7.totalRecords = res.count;
+              _this7.sortedData = _this7.HelpManagement; // this.ngOnInit()
             });
             console.log("Object==========");
           } // delete start .............
@@ -2928,7 +2657,7 @@
         }, {
           key: "contactDelete",
           value: function contactDelete(id) {
-            var _this9 = this;
+            var _this8 = this;
 
             var obj = {
               support_id: id
@@ -2939,9 +2668,9 @@
             this.Service.contactDelete(obj).subscribe(function (res) {
               console.log("Response==========", res);
 
-              _this9.ngOnInit();
+              _this8.ngOnInit();
 
-              _this9.smallModal.hide();
+              _this8.smallModal.hide();
             });
           } // delete end here.........
           // Contact_Reply start here......
@@ -2956,7 +2685,7 @@
         }, {
           key: "contactReply",
           value: function contactReply(id) {
-            var _this10 = this;
+            var _this9 = this;
 
             console.log("formmmmmmmmmmmm", this.viewHelp);
 
@@ -2971,11 +2700,11 @@
               this.Service.contactReply(obj).subscribe(function (res) {
                 console.log("Response==========", res);
 
-                _this10.ngOnInit();
+                _this9.ngOnInit();
 
-                _this10.replyModal.hide();
+                _this9.replyModal.hide();
 
-                _this10.viewHelp.reset();
+                _this9.viewHelp.reset();
               });
             }
           }
@@ -3013,14 +2742,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection7;
+            var _this$selection6;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection7 = this.selection).select.apply(_this$selection7, _toConsumableArray(this.dataSource.data));
+            (_this$selection6 = this.selection).select.apply(_this$selection6, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -3177,84 +2906,6 @@
     },
 
     /***/
-    "5b5r": function b5r(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "EditEmployerHowItWorksComponent", function () {
-        return EditEmployerHowItWorksComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_edit_employer_how_it_works_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./edit-employer-how-it-works.component.html */
-      "Rt/6");
-      /* harmony import */
-
-
-      var _edit_employer_how_it_works_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./edit-employer-how-it-works.component.scss */
-      "ZnBK");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var EditEmployerHowItWorksComponent = /*#__PURE__*/function () {
-        function EditEmployerHowItWorksComponent() {
-          _classCallCheck(this, EditEmployerHowItWorksComponent);
-
-          this.files = [];
-        }
-
-        _createClass(EditEmployerHowItWorksComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "onSelect",
-          value: function onSelect(event) {
-            var _this$files;
-
-            console.log(event);
-
-            (_this$files = this.files).push.apply(_this$files, _toConsumableArray(event.addedFiles));
-          }
-        }, {
-          key: "onRemove",
-          value: function onRemove(event) {
-            console.log(event);
-            this.files.splice(this.files.indexOf(event), 1);
-          }
-        }]);
-
-        return EditEmployerHowItWorksComponent;
-      }();
-
-      EditEmployerHowItWorksComponent.ctorParameters = function () {
-        return [];
-      };
-
-      EditEmployerHowItWorksComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-edit-employer-how-it-works',
-        template: _raw_loader_edit_employer_how_it_works_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_edit_employer_how_it_works_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], EditEmployerHowItWorksComponent);
-      /***/
-    },
-
-    /***/
     "5qaq": function qaq(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -3388,14 +3039,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection8;
+            var _this$selection7;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection8 = this.selection).select.apply(_this$selection8, _toConsumableArray(this.dataSource.data));
+            (_this$selection7 = this.selection).select.apply(_this$selection7, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -3649,14 +3300,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection9;
+            var _this$selection8;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection9 = this.selection).select.apply(_this$selection9, _toConsumableArray(this.dataSource.data));
+            (_this$selection8 = this.selection).select.apply(_this$selection8, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -3833,14 +3484,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection10;
+            var _this$selection9;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection10 = this.selection).select.apply(_this$selection10, _toConsumableArray(this.dataSource.data));
+            (_this$selection9 = this.selection).select.apply(_this$selection9, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -4040,14 +3691,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection11;
+            var _this$selection10;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection11 = this.selection).select.apply(_this$selection11, _toConsumableArray(this.dataSource.data));
+            (_this$selection10 = this.selection).select.apply(_this$selection10, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -4250,487 +3901,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LXZpZGVvLmNvbXBvbmVudC5zY3NzIn0= */";
-      /***/
-    },
-
-    /***/
-    "AMTe": function AMTe(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "EmployersListComponent", function () {
-        return EmployersListComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_employers_list_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./employers-list.component.html */
-      "Y+Pn");
-      /* harmony import */
-
-
-      var _employers_list_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./employers-list.component.scss */
-      "S98m");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/paginator */
-      "M9IT");
-      /* harmony import */
-
-
-      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/sort */
-      "Dh3D");
-      /* harmony import */
-
-
-      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/material/table */
-      "+0xr");
-      /* harmony import */
-
-
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ngx-bootstrap/modal */
-      "K3ix");
-      /* harmony import */
-
-
-      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @angular/cdk/collections */
-      "0EQZ");
-      /* harmony import */
-
-
-      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-      /*! ../../topgradservice.service */
-      "DL5e");
-      /** Constants used to fill up our data base. */
-
-
-      var LNAME = ['A', 'T', 'V', 'C', 'J', 'R', 'J', 'J'];
-      var NAMES = ['Maia', 'Asher'];
-      var EMAILS = ['maia@gmail.com', 'asher@gmail.com', 'olivia@gmail.com', 'atticus@gmail.com', 'amelia@gmail.com', 'jack@gmail.com', 'charlotte@gmail.com', 'theodore@gmail.com', 'isla@gmail.com', 'oliver@gmail.com', 'isabella@gmail.com', 'jasper@gmail.com', 'cora@gmail.com', 'levi@gmail.com', 'violet@gmail.com', 'arthur@gmail.com', 'mia@gmail.com', 'thomas@gmail.com', 'elizabeth@gmail.com'];
-      var COMPANY = ['Promatics', 'PromaticsA', 'PromaticsB', 'PromaticsC', 'PromaticsD', 'PromaticsE', 'PromaticsF', 'PromaticsG', 'Promatics', 'Promatics', 'Promatics', 'Promatics', 'Promatics', 'Promatics', 'Promatics', 'Promatics', 'Promatics', 'Promatics', 'Promatics'];
-      var TITLE = ['Employer', 'Employer', 'Employer', 'Employer', 'Employer', 'Employer', 'Employer', 'Employer', 'Employer', 'Promatics', 'Promatics', 'Promatics', 'Employer', 'Employer', 'Employer', 'Employer', 'Employer', 'Promatics', 'Promatics'];
-      var CREATION = ['12-01-2012 (06:22 PM)', '12-12-2012 (02:22 PM)', '12-12-2012 (03:12 PM)', '24-11-2012 (03:12 PM)', '12-01-2012 (06:22 PM)', '12-01-2012 (02:22 PM)', '12-01-2012 (03:12 PM)', '12-01-2012 (03:12 PM)', '12-01-2012 (03:12 PM)', '09-01-2021 (06:22 PM)', '09-01-2021 (06:22 PM)', '12-01-2012 (02:22 PM)', '12-04-2012 (03:12 PM)', '12-01-2012 (06:22 PM)', '12-01-2012 (02:22 PM)', '12-01-2012 (02:22 PM)', '09-01-2021 (03:12 PM)'];
-
-      var EmployersListComponent = /*#__PURE__*/function () {
-        function EmployersListComponent(Service) {
-          _classCallCheck(this, EmployersListComponent);
-
-          this.Service = Service;
-          this.emplist = [];
-          this.displayedColumns = ['select', 'id', 'name', 'lname', 'email', 'company', 'jobtitle', 'status', 'creation', 'action'];
-          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
-
-          var users = Array.from({
-            length: 50
-          }, function (_, k) {
-            return createNewUser(k + 1);
-          }); // Assign the data to the data source for the table to render
-
-          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
-        }
-
-        _createClass(EmployersListComponent, [{
-          key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }
-        }, {
-          key: "ngOnInit",
-          value: function ngOnInit() {
-            this.employerlist();
-          }
-        }, {
-          key: "employerlist",
-          value: function employerlist() {
-            var _this11 = this;
-
-            console.log("khjhgjhgjhgjhghjghjgjhghjg");
-            var obj = {
-              limit: 10,
-              offset: 0,
-              role: "Employer"
-            };
-            console.log("onnnn", obj);
-            this.Service.emplist(obj).subscribe(function (data) {
-              console.log("main data for users is ====", data);
-              _this11.emplist = data.data;
-              _this11.totalRecords = data.length;
-            }, function (err) {
-              console.log(err.status);
-
-              if (err.status >= 404) {
-                console.log('Some error occured');
-              } else {
-                // this.toastr.error('Some error occured, please try again!!', 'Error')
-                console.log('Internet Connection Error');
-              }
-            });
-          }
-        }, {
-          key: "applyFilter",
-          value: function applyFilter(event) {
-            var filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-
-            if (this.dataSource.paginator) {
-              this.dataSource.paginator.firstPage();
-            }
-          }
-          /** Whether the number of selected elements matches the total number of rows. */
-
-        }, {
-          key: "isAllSelected",
-          value: function isAllSelected() {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-          }
-          /** Selects all rows if they are not all selected; otherwise clear selection. */
-
-        }, {
-          key: "masterToggle",
-          value: function masterToggle() {
-            var _this$selection12;
-
-            if (this.isAllSelected()) {
-              this.selection.clear();
-              return;
-            }
-
-            (_this$selection12 = this.selection).select.apply(_this$selection12, _toConsumableArray(this.dataSource.data));
-          }
-          /** The label for the checkbox on the passed row */
-
-        }, {
-          key: "checkboxLabel",
-          value: function checkboxLabel(row) {
-            if (!row) {
-              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
-            }
-
-            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
-          }
-        }]);
-
-        return EmployersListComponent;
-      }();
-
-      EmployersListComponent.ctorParameters = function () {
-        return [{
-          type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"]
-        }];
-      };
-
-      EmployersListComponent.propDecorators = {
-        smallModal: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: ['smallModal']
-        }],
-        paginator: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
-        }],
-        sort: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
-        }]
-      };
-      EmployersListComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-employers-list',
-        template: _raw_loader_employers_list_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_employers_list_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"]])], EmployersListComponent);
-
-      function createNewUser(id) {
-        var name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ';
-        var email = EMAILS[Math.round(Math.random() * (EMAILS.length - 1))] + ' ';
-        var company = COMPANY[Math.round(Math.random() * (COMPANY.length - 1))] + ' ';
-        var jobtitle = TITLE[Math.round(Math.random() * (TITLE.length - 1))] + ' ';
-        var creation = CREATION[Math.round(Math.random() * (CREATION.length - 1))] + ' ';
-        return {
-          id: id.toString() + '.',
-          name: name,
-          email: email,
-          company: company,
-          jobtitle: jobtitle,
-          creation: creation,
-          lname: LNAME[Math.round(Math.random() * (LNAME.length - 1))]
-        };
-      }
-      /***/
-
-    },
-
-    /***/
-    "AU9f": function AU9f(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "ViewGraduateComponent", function () {
-        return ViewGraduateComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_view_graduate_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./view-graduate.component.html */
-      "nnjm");
-      /* harmony import */
-
-
-      var _view_graduate_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./view-graduate.component.scss */
-      "TXfm");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/paginator */
-      "M9IT");
-      /* harmony import */
-
-
-      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/sort */
-      "Dh3D");
-      /* harmony import */
-
-
-      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/material/table */
-      "+0xr");
-      /* harmony import */
-
-
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ngx-bootstrap/modal */
-      "K3ix");
-      /* harmony import */
-
-
-      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @angular/cdk/collections */
-      "0EQZ");
-      /** Constants used to fill up our data base. */
-
-
-      var TRANSID = ['INV-65D9E592', 'INV-95D9E0897', 'INV-32D9E092'];
-      var AMOUNT = ['195'];
-      var PAID = ['195'];
-      var BALANCE = ['0'];
-      var OFFER = ['Basic Internship Agreement', 'Insurance and Agreement', 'Insurance Only'];
-      var SDATE = ['08-09-2021', '07-09-2021', '01-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021'];
-      var SUBSEXP = ['08-09-2021', '07-09-2021', '01-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021'];
-
-      var ViewGraduateComponent = /*#__PURE__*/function () {
-        function ViewGraduateComponent() {
-          _classCallCheck(this, ViewGraduateComponent);
-
-          this.displayedColumns = ['select', 'id', 'transid', 'offer', 'startdate', 'subsexp', 'status', 'amount', 'paid', 'action'];
-          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
-
-          var users = Array.from({
-            length: 50
-          }, function (_, k) {
-            return createNewUser(k + 1);
-          }); // Assign the data to the data source for the table to render
-
-          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
-        }
-
-        _createClass(ViewGraduateComponent, [{
-          key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }
-        }, {
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "applyFilter",
-          value: function applyFilter(event) {
-            var filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-
-            if (this.dataSource.paginator) {
-              this.dataSource.paginator.firstPage();
-            }
-          }
-          /** Whether the number of selected elements matches the total number of rows. */
-
-        }, {
-          key: "isAllSelected",
-          value: function isAllSelected() {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-          }
-          /** Selects all rows if they are not all selected; otherwise clear selection. */
-
-        }, {
-          key: "masterToggle",
-          value: function masterToggle() {
-            var _this$selection13;
-
-            if (this.isAllSelected()) {
-              this.selection.clear();
-              return;
-            }
-
-            (_this$selection13 = this.selection).select.apply(_this$selection13, _toConsumableArray(this.dataSource.data));
-          }
-          /** The label for the checkbox on the passed row */
-
-        }, {
-          key: "checkboxLabel",
-          value: function checkboxLabel(row) {
-            if (!row) {
-              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
-            }
-
-            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
-          }
-        }]);
-
-        return ViewGraduateComponent;
-      }();
-
-      ViewGraduateComponent.ctorParameters = function () {
-        return [];
-      };
-
-      ViewGraduateComponent.propDecorators = {
-        smallModal: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: ['smallModal']
-        }],
-        paginator: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
-        }],
-        sort: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
-        }]
-      };
-      ViewGraduateComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-view-graduate',
-        template: _raw_loader_view_graduate_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_view_graduate_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewGraduateComponent);
-
-      function createNewUser(id) {
-        var transid = TRANSID[Math.round(Math.random() * (TRANSID.length - 1))] + ' ';
-        var amount = AMOUNT[Math.round(Math.random() * (AMOUNT.length - 1))] + ' ';
-        var paid = PAID[Math.round(Math.random() * (PAID.length - 1))] + ' ';
-        var balance = BALANCE[Math.round(Math.random() * (BALANCE.length - 1))] + ' ';
-        var offer = OFFER[Math.round(Math.random() * (OFFER.length - 1))] + ' ';
-        var startdate = SDATE[Math.round(Math.random() * (SDATE.length - 1))] + ' ';
-        var subsexp = SUBSEXP[Math.round(Math.random() * (SUBSEXP.length - 1))] + ' ';
-        return {
-          id: id.toString() + '.',
-          transid: transid,
-          amount: amount,
-          paid: paid,
-          balance: balance,
-          offer: offer,
-          startdate: startdate,
-          subsexp: subsexp
-        };
-      }
-      /***/
-
-    },
-
-    /***/
-    "AUtu": function AUtu(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "IndustrylistRoutingModule", function () {
-        return IndustrylistRoutingModule;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/router */
-      "tyNb");
-      /* harmony import */
-
-
-      var _industrylist_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! ./industrylist.component */
-      "/NuI");
-
-      var routes = [{
-        path: '',
-        component: _industrylist_component__WEBPACK_IMPORTED_MODULE_3__["IndustrylistComponent"]
-      }];
-
-      var IndustrylistRoutingModule = function IndustrylistRoutingModule() {
-        _classCallCheck(this, IndustrylistRoutingModule);
-      };
-
-      IndustrylistRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
-      })], IndustrylistRoutingModule);
       /***/
     },
 
@@ -5095,7 +4265,7 @@
         }, {
           key: "intercept",
           value: function intercept(request, next) {
-            var _this12 = this;
+            var _this10 = this;
 
             var started = Date.now();
             this.loader.start();
@@ -5113,7 +4283,7 @@
               return ok = error;
             }), // Log when response observable either completes or errors
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["finalize"])(function () {
-              _this12.loader.stop();
+              _this10.loader.stop();
 
               var elapsed = Date.now() - started;
 
@@ -5128,11 +4298,11 @@
                   localStorage.clear();
                   sessionStorage.clear();
 
-                  _this12.router.navigate(['auth/login']);
+                  _this10.router.navigate(['auth/login']);
 
                   console.log(ok["status"]);
                 } else {
-                  _this12.handleError(ok);
+                  _this10.handleError(ok);
                 }
               }
             }));
@@ -5209,20 +4379,76 @@
 
             console.log(errorMessage);
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(errorMessage);
-          }
+          } // userlist(data: any): Observable<any> {
+          //   let API_URL = `${this.SERVER_URL}/admin/get/industry/list/:${data.offset}-:${data.limit}`;
+          //   console.log(API_URL)
+          //   return this.httpClient.get(API_URL, data)
+          //     .pipe(
+          //       map(res => {
+          //         return res
+          //       }),
+          //       catchError(this.error)
+          //     )
+          // }
+
         }, {
-          key: "userlist",
-          value: function userlist(data) {
-            var API_URL = "".concat(this.SERVER_URL, "/admin/get/industry/list/:").concat(data.offset, "-:").concat(data.limit);
+          key: "industryList",
+          value: function industryList(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/industry/list/").concat(data.offset, "-").concat(data.limit, "?type=").concat(data.type, "&search=").concat(data.search);
             console.log(API_URL);
             return this.httpClient.get(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
               return res;
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
           }
         }, {
+          key: "graduateIndustryList",
+          value: function graduateIndustryList(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/industry/list/").concat(data.offset, "-").concat(data.limit, "?type=graduate");
+            console.log(API_URL);
+            return this.httpClient.get(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "addIndustry",
+          value: function addIndustry(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/add/edit/industry");
+            console.log(API_URL);
+            return this.httpClient.post(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
+        }, {
+          key: "addEditIndustryDetail",
+          value: function addEditIndustryDetail(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/industry/details/").concat(obj.industry_id);
+            console.log(API_URL);
+            return this.httpClient.get(API_URL).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "industryDelete",
+          value: function industryDelete(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/delete/industry");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "skillsList",
+          value: function skillsList(evt) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/skills/list?limit=").concat(evt.limit, "&offset=").concat(evt.offset, "&search=").concat(evt.search);
+            console.log(API_URL);
+            return this.httpClient.get(API_URL).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
           key: "gradlist",
           value: function gradlist(data) {
-            var API_URL = "".concat(this.SERVER_URL, "/admin/get/user/list/").concat(data.offset, "-").concat(data.limit, "?role=").concat(data.role);
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/user/list/").concat(data.offset, "-").concat(data.limit, "?search=").concat(data.search, "&role=").concat(data.role, "&filter=").concat(data.filter);
             console.log(API_URL);
             return this.httpClient.get(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
               return res;
@@ -5231,7 +4457,7 @@
         }, {
           key: "emplist",
           value: function emplist(data) {
-            var API_URL = "".concat(this.SERVER_URL, "/admin/get/user/list/").concat(data.offset, "-").concat(data.limit, "?role=").concat(data.role);
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/user/list/").concat(data.offset, "-").concat(data.limit, "?role=").concat(data.role, "&search=").concat(data.search, "&filter=").concat(data.filter);
             console.log(API_URL);
             return this.httpClient.get(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
               return res;
@@ -5561,6 +4787,96 @@
               return res;
             }));
           }
+        }, {
+          key: "getEmployerDetail",
+          value: function getEmployerDetail(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/user/detail/").concat(obj.user_id);
+            console.log(API_URL);
+            return this.httpClient.get(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "EditEmployerDetail",
+          value: function EditEmployerDetail(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/edit/user/detail");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "getGraduateHowItWorks",
+          value: function getGraduateHowItWorks(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/graduate/how-it-works?content_id=621350cc3352bd34948f0634");
+            console.log(API_URL);
+            return this.httpClient.get(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "editGraduateHowItWorks",
+          value: function editGraduateHowItWorks(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/edit/graduate/how-it-works");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "uploadEditGraduateHowItsWorks",
+          value: function uploadEditGraduateHowItsWorks(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/upload/media");
+            console.log(API_URL);
+            return this.httpClient.post(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }));
+          }
+        }, {
+          key: "editGraduateHowItWorksDelete",
+          value: function editGraduateHowItWorksDelete(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/delete/media/graduateHowItWorks");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "getEmpHowItWorks",
+          value: function getEmpHowItWorks(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/employer/how-it-works?content_id=62131e0b9a4fb6871a828022");
+            console.log(API_URL);
+            return this.httpClient.get(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "editEmpHowItWorks",
+          value: function editEmpHowItWorks(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/edit/employer/how-it-works");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "editEmpHowItWorksDelete",
+          value: function editEmpHowItWorksDelete(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/delete/media/employerHowItWorks");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "deleteuser",
+          value: function deleteuser(data) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/edit/user/detail");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
         }]);
 
         return TopgradserviceService;
@@ -5666,84 +4982,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ1c2VyLW1hbmFnZW1lbnQuY29tcG9uZW50LnNjc3MifQ== */";
-      /***/
-    },
-
-    /***/
-    "Ehck": function Ehck(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "EditGraduateComponent", function () {
-        return EditGraduateComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_edit_graduate_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./edit-graduate.component.html */
-      "vuZ+");
-      /* harmony import */
-
-
-      var _edit_graduate_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./edit-graduate.component.scss */
-      "vq3f");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var EditGraduateComponent = /*#__PURE__*/function () {
-        function EditGraduateComponent() {
-          _classCallCheck(this, EditGraduateComponent);
-
-          this.isCollapsed = false;
-          this.iconCollapse = 'icon-arrow-up';
-        }
-
-        _createClass(EditGraduateComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "collapsed",
-          value: function collapsed(event) {// console.log(event);
-          }
-        }, {
-          key: "expanded",
-          value: function expanded(event) {// console.log(event);
-          }
-        }, {
-          key: "toggleCollapse",
-          value: function toggleCollapse() {
-            this.isCollapsed = !this.isCollapsed;
-            this.iconCollapse = this.isCollapsed ? 'icon-arrow-down' : 'icon-arrow-up';
-          }
-        }]);
-
-        return EditGraduateComponent;
-      }();
-
-      EditGraduateComponent.ctorParameters = function () {
-        return [];
-      };
-
-      EditGraduateComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-edit-graduate',
-        template: _raw_loader_edit_graduate_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_edit_graduate_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], EditGraduateComponent);
       /***/
     },
 
@@ -5935,27 +5173,27 @@
         }, {
           key: "getFaqCategories",
           value: function getFaqCategories() {
-            var _this13 = this;
+            var _this11 = this;
 
             var data = {
               user_type: 'graduate'
             };
             this.Service.faqCategories(data).subscribe(function (data) {
-              _this13.faq = data.data;
+              _this11.faq = data.data;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                _this13.toastr.error('Some error occured, please try again!!', 'Error');
+                _this11.toastr.error('Some error occured, please try again!!', 'Error');
               }
             });
           }
         }, {
           key: "faq_id",
           value: function faq_id() {
-            var _this14 = this;
+            var _this12 = this;
 
             var obj = {
               faq_id: this.route.snapshot.paramMap.get('id')
@@ -5963,17 +5201,17 @@
             console.log("onnnn", obj);
             this.Service.faqDetail(obj).subscribe(function (data) {
               console.log("main data for users is ssssssssssssssssssss====", data);
-              _this14.user = data.data;
-              _this14.description1 = _this14.user.description;
-              _this14.title1 = _this14.user.title;
-              _this14.selectedValue = _this14.user.category_id._id;
+              _this12.user = data.data;
+              _this12.description1 = _this12.user.description;
+              _this12.title1 = _this12.user.title;
+              _this12.selectedValue = _this12.user.category_id._id;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                _this14.toastr.error('Some error occured, please try again!!', 'Error');
+                _this12.toastr.error('Some error occured, please try again!!', 'Error');
 
                 console.log('Internet Connection Error');
               }
@@ -5993,7 +5231,7 @@
         }, {
           key: "addEditFaq",
           value: function addEditFaq(id) {
-            var _this15 = this;
+            var _this13 = this;
 
             console.log("formmmmmmmmmmmm", this.inputTitle);
 
@@ -6010,11 +5248,11 @@
               this.Service.addEditFaq(obj).subscribe(function (res) {
                 console.log("Response==========", res);
 
-                _this15.Service.showMessage({
+                _this13.Service.showMessage({
                   message: "Edit Successfully"
                 });
 
-                _this15.router.navigate(['/graduateFaq']);
+                _this13.router.navigate(['/graduateFaq']);
               });
             }
           }
@@ -6066,18 +5304,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJvZmZlci1zdWJtaXNzaW9ucy5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "FaU1": function FaU1(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"view-employer-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n    \t\t\t\t<mat-tab-group>\n    \t\t\t\t\t<mat-tab label=\"Employer Profile Details\">\n\t\t\t\t\t\t\t<!-- <div class=\"card-header\">\n\t\t\t\t\t\t\t\t<strong>View Graduate Details</strong>\n\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t\t\t<div class=\"text-center edit-profile\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form mt-4\">\n\t\t\t\t\t\t\t\t\t\t<form class=\"\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-form-fields\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>First Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Mike\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Last Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"John\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Work Email Address</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"abc@gmail.com\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Company Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"abc\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Job Title</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Employer\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Creation Date (Time)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"22-01-2012 (08:12 PM)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <mat-form-field appearance=\"fill\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <mat-label>Choose a date</mat-label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <input matInput [matDatepicker]=\"picker\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <mat-datepicker #picker></mat-datepicker>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</mat-form-field> -->\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Password</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"abc123@\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Status</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Active\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" routerLink=\"/employersList\">Back</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</mat-tab>\n\t\t\t\t\t\t<mat-tab label=\"Orders and Insurances\">\n\t\t\t\t\t\t\t<!-- <div class=\"card-header\">\n\t\t\t\t\t\t\t\t<strong>View Graduate Details</strong>\n\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t      <div class=\"col-md-12\">\n\t\t\t\t\t\t\t        <mat-form-field appearance=\"standard\">\n\t\t\t\t\t\t\t          <mat-label>Filter</mat-label>\n\t\t\t\t\t\t\t          <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n\t\t\t\t\t\t\t        </mat-form-field>\n\n\t\t\t\t\t\t\t        <div class=\"mat-elevation-z8\">\n\t\t\t\t\t\t\t          <div class=\"table-responsive\">\n\t\t\t\t\t\t\t            <table mat-table [dataSource]=\"dataSource\" matSort>\n\t\t\t\t\t\t\t              <!-- Checkbox Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"select\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef>\n\t\t\t\t\t\t\t                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n\t\t\t\t\t\t\t                    [checked]=\"selection.hasValue() && isAllSelected()\"\n\t\t\t\t\t\t\t                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n\t\t\t\t\t\t\t                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n\t\t\t\t\t\t\t                  </mat-checkbox>\n\t\t\t\t\t\t\t                </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\">\n\t\t\t\t\t\t\t                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n\t\t\t\t\t\t\t                    (change)=\"$event ? selection.toggle(row) : null\"\n\t\t\t\t\t\t\t                    [checked]=\"selection.isSelected(row)\"\n\t\t\t\t\t\t\t                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n\t\t\t\t\t\t\t                  </mat-checkbox>\n\t\t\t\t\t\t\t                </td>\n\t\t\t\t\t\t\t              </ng-container>\n\t\t\t\t\t\t\t              <!-- ID Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"id\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <!-- postedby Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"transid\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Invoice ID </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.transid}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\n\t\t\t\t\t\t\t              <!-- Company Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"offer\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Offer Selected</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.offer}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t               <!-- Job title Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"startdate\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Start Date</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.startdate}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\t\t\t\t\t\t\t              \n\t\t\t\t\t\t\t              <!-- status column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"subsexp\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header> Expiry date </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\">{{row.subsexp}}</td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"status\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"><span class=\"badge badge-success\">Paid</span></td>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"><span class=\"badge badge-primary\">Pending</span></td>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"><span class=\"badge badge-danger\">Failed</span></td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <!-- Company Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"amount\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Amount</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> ${{row.amount}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"paid\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Paid</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> ${{row.paid}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"balance\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Balance</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> ${{row.balance}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\t\t\t\t\t\t\t               <!-- Action column -->\n\t\t\t\t\t\t\t               <ng-container matColumnDef=\"action\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef> Action </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\">\n\t\t\t\t\t\t\t                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n\t\t\t\t\t\t\t                      <mat-icon>more_vert</mat-icon>\n\t\t\t\t\t\t\t                    </button>\n\t\t\t\t\t\t\t                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n\t\t\t\t\t\t\t                      <a mat-menu-item class=\"\" routerLink=\"/\">\n\t\t\t\t\t\t\t                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n\t\t\t\t\t\t\t                        <span>View</span>\n\t\t\t\t\t\t\t                      </a>\n\t\t\t\t\t\t\t                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n\t\t\t\t\t\t\t                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n\t\t\t\t\t\t\t                        <span>Delete</span>\n\t\t\t\t\t\t\t                      </a>\n\t\t\t\t\t\t\t                    </mat-menu>\n\t\t\t\t\t\t\t                </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <!-- Progress Column -->\n\t\t\t\t\t\t\t              <!-- <ng-container matColumnDef=\"progress\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n\t\t\t\t\t\t\t              </ng-container> -->\n\n\t\t\t\t\t\t\t              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n\t\t\t\t\t\t\t              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n\t\t\t\t\t\t\t              <!-- Row shown when there is no matching data. -->\n\t\t\t\t\t\t\t              <tr class=\"mat-row\" *matNoDataRow>\n\t\t\t\t\t\t\t                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n\t\t\t\t\t\t\t              </tr>\n\t\t\t\t\t\t\t            </table>\n\t\t\t\t\t\t\t          </div>\n\t\t\t\t\t\t\t          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n\t\t\t\t\t\t\t        </div>\n\t\t\t\t\t\t\t      </div>\n\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</mat-tab>\n        \t\t\t</mat-tab-group>\n\t\t\t\t</div>\n\n\t\t\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n";
       /***/
     },
 
@@ -6206,7 +5432,7 @@
         }, {
           key: "addheading",
           value: function addheading() {
-            var _this16 = this;
+            var _this14 = this;
 
             console.log("sdsfsfdsfdfdfds", this.terms_headingform);
 
@@ -6225,14 +5451,14 @@
                 console.log("fgdgfdgfdfgdfgd", res);
 
                 if (res.code == 200) {
-                  _this16._snackBar.open("Added Heading Successfully", "close", {
+                  _this14._snackBar.open("Added Heading Successfully", "close", {
                     duration: 2000
                   });
                 }
               }, function (err) {
                 console.log(err);
 
-                _this16._snackBar.open("Some Error Occued", "close", {
+                _this14._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               });
@@ -6272,84 +5498,6 @@
 
 
       __webpack_exports__["default"] = "<section class=\"applicant-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/addSubAdmin\">Add</a>\n          </span>\n        </div>\n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>User Name</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"email\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Email Id</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.email}} </td>\n              </ng-container>\n              <!-- Phone Column -->\n              <ng-container matColumnDef=\"credentials\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Send Credentials</th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <span>\n                    <mat-icon class=\"material-icons-outlined\">vpn_key</mat-icon>\n                  </span>\n                </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle></mat-slide-toggle>\n                   </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <a mat-menu-item class=\"\" routerLink=\"/viewSubAdmin\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/editSubAdmin\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Sub Admin?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-      /***/
-    },
-
-    /***/
-    "GYQ9": function GYQ9(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "EditGraduateHowItWorksComponent", function () {
-        return EditGraduateHowItWorksComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_edit_graduate_how_it_works_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./edit-graduate-how-it-works.component.html */
-      "P9NN");
-      /* harmony import */
-
-
-      var _edit_graduate_how_it_works_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./edit-graduate-how-it-works.component.scss */
-      "3KJ9");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var EditGraduateHowItWorksComponent = /*#__PURE__*/function () {
-        function EditGraduateHowItWorksComponent() {
-          _classCallCheck(this, EditGraduateHowItWorksComponent);
-
-          this.files = [];
-        }
-
-        _createClass(EditGraduateHowItWorksComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "onSelect",
-          value: function onSelect(event) {
-            var _this$files2;
-
-            console.log(event);
-
-            (_this$files2 = this.files).push.apply(_this$files2, _toConsumableArray(event.addedFiles));
-          }
-        }, {
-          key: "onRemove",
-          value: function onRemove(event) {
-            console.log(event);
-            this.files.splice(this.files.indexOf(event), 1);
-          }
-        }]);
-
-        return EditGraduateHowItWorksComponent;
-      }();
-
-      EditGraduateHowItWorksComponent.ctorParameters = function () {
-        return [];
-      };
-
-      EditGraduateHowItWorksComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-edit-graduate-how-it-works',
-        template: _raw_loader_edit_graduate_how_it_works_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_edit_graduate_how_it_works_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], EditGraduateHowItWorksComponent);
       /***/
     },
 
@@ -6484,7 +5632,7 @@
         _createClass(LoginComponent, [{
           key: "logincredentials",
           value: function logincredentials() {
-            var _this17 = this;
+            var _this15 = this;
 
             //  console.log("hjgsdhsagdhjsagdhjsg");
             console.log("sdsfsfdsfdfdfds", this.loginform);
@@ -6503,9 +5651,9 @@
                 console.log("kdjhcjdshcjdhkjdh");
                 localStorage.setItem("token", res.token);
 
-                _this17.router.navigate(['dashboard']);
+                _this15.router.navigate(['dashboard']);
 
-                _this17._snackBar.open("User Logged In Successfully", "close", {
+                _this15._snackBar.open("User Logged In Successfully", "close", {
                   duration: 2000
                 });
               }
@@ -6513,11 +5661,11 @@
               console.log(err);
 
               if (err.status >= 400) {
-                _this17._snackBar.open("User Does Not Exist", "close", {
+                _this15._snackBar.open("User Does Not Exist", "close", {
                   duration: 2000
                 });
               } else {
-                _this17._snackBar.open("Some Error Occued", "close", {
+                _this15._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               }
@@ -6669,14 +5817,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection14;
+            var _this$selection11;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection14 = this.selection).select.apply(_this$selection14, _toConsumableArray(this.dataSource.data));
+            (_this$selection11 = this.selection).select.apply(_this$selection11, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -6829,7 +5977,7 @@
         }, {
           key: "getsubheading",
           value: function getsubheading() {
-            var _this18 = this;
+            var _this16 = this;
 
             var obj = {
               content_id: this.route.snapshot.paramMap.get('content_id'),
@@ -6839,7 +5987,7 @@
             this.Service.getsubheading(obj).subscribe(function (res) {
               console.log("response", res);
 
-              _this18.editsubheadingform.patchValue({
+              _this16.editsubheadingform.patchValue({
                 title: res.data[0].sub_heading[0].title,
                 description: res.data[0].sub_heading[0].description
               });
@@ -6848,7 +5996,7 @@
         }, {
           key: "editsubheading",
           value: function editsubheading() {
-            var _this19 = this;
+            var _this17 = this;
 
             console.log("sdsfsfdsfdfdfds", this.editsubheadingform);
 
@@ -6865,14 +6013,14 @@
                 console.log("fgdgfdgfdfgdfgd", res);
 
                 if (res.code == 200) {
-                  _this19._snackBar.open("Sub Heading Updated Successfully", "close", {
+                  _this17._snackBar.open("Sub Heading Updated Successfully", "close", {
                     duration: 2000
                   });
                 }
               }, function (err) {
                 console.log(err);
 
-                _this19._snackBar.open("Some Error Occued", "close", {
+                _this17._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               });
@@ -7065,7 +6213,7 @@
         }, {
           key: "support_id",
           value: function support_id() {
-            var _this20 = this;
+            var _this18 = this;
 
             var obj = {
               //  limit: this.searchFilters.limit,
@@ -7076,14 +6224,14 @@
               console.log("main data for users is ssssssssssssssssssss====", data); //  this.productslist = data.products
               //  this.length = data.total_counts
 
-              _this20.user = data.data;
+              _this18.user = data.data;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                _this20.toastr.error('Some error occured, please try again!!', 'Error');
+                _this18.toastr.error('Some error occured, please try again!!', 'Error');
 
                 console.log('Internet Connection Error');
               }
@@ -7108,203 +6256,6 @@
         styles: [_view_help_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_5__["TopgradserviceService"]])], ViewHelpComponent);
       /***/
-    },
-
-    /***/
-    "K3G1": function K3G1(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "ViewEmployerComponent", function () {
-        return ViewEmployerComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_view_employer_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./view-employer.component.html */
-      "FaU1");
-      /* harmony import */
-
-
-      var _view_employer_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./view-employer.component.scss */
-      "yffW");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/paginator */
-      "M9IT");
-      /* harmony import */
-
-
-      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/sort */
-      "Dh3D");
-      /* harmony import */
-
-
-      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/material/table */
-      "+0xr");
-      /* harmony import */
-
-
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ngx-bootstrap/modal */
-      "K3ix");
-      /* harmony import */
-
-
-      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @angular/cdk/collections */
-      "0EQZ");
-      /** Constants used to fill up our data base. */
-
-
-      var TRANSID = ['INV-65D9E592', 'INV-95D9E0897', 'INV-32D9E092'];
-      var AMOUNT = ['195'];
-      var PAID = ['195'];
-      var BALANCE = ['0'];
-      var OFFER = ['Basic Internship Agreement', 'Insurance and Agreement', 'Insurance Only'];
-      var SDATE = ['08-09-2021', '07-09-2021', '01-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021'];
-      var SUBSEXP = ['08-09-2021', '07-09-2021', '01-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021'];
-
-      var ViewEmployerComponent = /*#__PURE__*/function () {
-        function ViewEmployerComponent() {
-          _classCallCheck(this, ViewEmployerComponent);
-
-          this.displayedColumns = ['select', 'id', 'transid', 'offer', 'startdate', 'subsexp', 'status', 'amount', 'paid', 'action'];
-          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
-
-          var users = Array.from({
-            length: 50
-          }, function (_, k) {
-            return createNewUser(k + 1);
-          }); // Assign the data to the data source for the table to render
-
-          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
-        }
-
-        _createClass(ViewEmployerComponent, [{
-          key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }
-        }, {
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "applyFilter",
-          value: function applyFilter(event) {
-            var filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-
-            if (this.dataSource.paginator) {
-              this.dataSource.paginator.firstPage();
-            }
-          }
-          /** Whether the number of selected elements matches the total number of rows. */
-
-        }, {
-          key: "isAllSelected",
-          value: function isAllSelected() {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-          }
-          /** Selects all rows if they are not all selected; otherwise clear selection. */
-
-        }, {
-          key: "masterToggle",
-          value: function masterToggle() {
-            var _this$selection15;
-
-            if (this.isAllSelected()) {
-              this.selection.clear();
-              return;
-            }
-
-            (_this$selection15 = this.selection).select.apply(_this$selection15, _toConsumableArray(this.dataSource.data));
-          }
-          /** The label for the checkbox on the passed row */
-
-        }, {
-          key: "checkboxLabel",
-          value: function checkboxLabel(row) {
-            if (!row) {
-              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
-            }
-
-            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
-          }
-        }]);
-
-        return ViewEmployerComponent;
-      }();
-
-      ViewEmployerComponent.ctorParameters = function () {
-        return [];
-      };
-
-      ViewEmployerComponent.propDecorators = {
-        smallModal: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: ['smallModal']
-        }],
-        paginator: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
-        }],
-        sort: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
-        }]
-      };
-      ViewEmployerComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-view-employer',
-        template: _raw_loader_view_employer_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_view_employer_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewEmployerComponent);
-
-      function createNewUser(id) {
-        var transid = TRANSID[Math.round(Math.random() * (TRANSID.length - 1))] + ' ';
-        var amount = AMOUNT[Math.round(Math.random() * (AMOUNT.length - 1))] + ' ';
-        var paid = PAID[Math.round(Math.random() * (PAID.length - 1))] + ' ';
-        var balance = BALANCE[Math.round(Math.random() * (BALANCE.length - 1))] + ' ';
-        var offer = OFFER[Math.round(Math.random() * (OFFER.length - 1))] + ' ';
-        var startdate = SDATE[Math.round(Math.random() * (SDATE.length - 1))] + ' ';
-        var subsexp = SUBSEXP[Math.round(Math.random() * (SUBSEXP.length - 1))] + ' ';
-        return {
-          id: id.toString() + '.',
-          transid: transid,
-          amount: amount,
-          paid: paid,
-          balance: balance,
-          offer: offer,
-          startdate: startdate,
-          subsexp: subsexp
-        };
-      }
-      /***/
-
     },
 
     /***/
@@ -7514,6 +6465,60 @@
             this.getAboutUsData();
           }
         }, {
+          key: "fun",
+          value: function fun(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun1",
+          value: function fun1(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun2",
+          value: function fun2(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun3",
+          value: function fun3(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun4",
+          value: function fun4(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun5",
+          value: function fun5(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
           key: "Fields",
           get: function get() {
             return this.TopGraduates.get('Fields');
@@ -7521,57 +6526,57 @@
         }, {
           key: "getAboutUsData",
           value: function getAboutUsData() {
-            var _this21 = this;
+            var _this19 = this;
 
             this.Service.getAboutUsData().subscribe(function (resp) {
               console.log("getAboutUsData Resp ==>", resp.data);
-              _this21.HeadingImage = resp.data.section_1.image;
+              _this19.HeadingImage = resp.data.section_1.image;
 
-              _this21.headerSection.patchValue({
+              _this19.headerSection.patchValue({
                 heading: resp.data.section_1.heading,
                 description: resp.data.section_1.description,
                 Image: resp.data.section_1.image,
                 is_visible: resp.data.section_1.is_visible
               });
 
-              _this21.Champions.patchValue({
+              _this19.Champions.patchValue({
                 heading: resp.data.section_2.heading_1,
                 heading1: resp.data.section_2.heading_2,
                 is_visible: resp.data.section_2.is_visible
               });
 
-              _this21.ourVision.patchValue({
+              _this19.ourVision.patchValue({
                 heading: resp.data.section_3.heading,
                 description: resp.data.section_3.description,
                 is_visible: resp.data.section_3.is_visible
               });
 
-              _this21.ourMission.patchValue({
+              _this19.ourMission.patchValue({
                 heading: resp.data.section_4.heading,
                 description: resp.data.section_4.description,
                 is_visible: resp.data.section_4.is_visible
               });
 
-              _this21.jobOpenings.patchValue({
+              _this19.jobOpenings.patchValue({
                 heading: resp.data.section_5.heading,
                 description: resp.data.section_5.description,
                 is_visible: resp.data.section_5.is_visible
               });
 
-              _this21.TopGraduates.patchValue({
+              _this19.TopGraduates.patchValue({
                 heading: resp.data.section_6.heading,
                 is_visible: resp.data.section_5.is_visible
               });
 
               resp.data.section_6.text.forEach(function (element) {
-                _this21.Fields.push(_this21.fb.control(element, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(100)]));
+                _this19.Fields.push(_this19.fb.control(element, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(100)]));
               });
             });
           }
         }, {
           key: "setHeadingImage",
           value: function setHeadingImage(event) {
-            var _this22 = this;
+            var _this20 = this;
 
             console.log(event.target.files[0]);
             var file = event.target.files[0];
@@ -7586,7 +6591,7 @@
               var reader = new FileReader();
 
               reader.onload = function (event) {
-                _this22.HeadingImage = event.target.result;
+                _this20.HeadingImage = event.target.result;
               };
 
               reader.readAsDataURL(this.headingImageObj);
@@ -7604,7 +6609,7 @@
         }, {
           key: "postAboutUsdata",
           value: function postAboutUsdata(type) {
-            var _this23 = this;
+            var _this21 = this;
 
             var obj;
             console.log("type==>", type);
@@ -7615,18 +6620,26 @@
               if (this.headerSection.valid) {
                 console.log(this.headerSection);
                 var formdata = new FormData();
-                var section_1 = {
-                  heading: this.headerSection.controls['heading'].value,
-                  description: this.headerSection.controls['description'].value,
-                  is_visible: this.headerSection.controls['is_visible'].value
-                };
-                formdata.append("section_1", JSON.stringify(section_1));
 
                 if (this.headingImageObj) {
+                  var section_1 = {
+                    heading: this.headerSection.controls['heading'].value,
+                    description: this.headerSection.controls['description'].value,
+                    is_visible: this.headerSection.controls['is_visible'].value
+                  };
+                  formdata.append("section_1", JSON.stringify(section_1));
                   formdata.append("image", this.headingImageObj);
+                } else {
+                  var _section_ = {
+                    heading: this.headerSection.controls['heading'].value,
+                    description: this.headerSection.controls['description'].value,
+                    is_visible: this.headerSection.controls['is_visible'].value,
+                    image: this.headerSection.controls['Image'].value
+                  };
+                  formdata.append("section_1", JSON.stringify(_section_)); // formdata.append("image", this.HeadingImage)
                 }
 
-                obj = formdata;
+                obj = formdata; //console.log("our binary image is ======>",obj,this.uintArray[i]);
               } else {
                 this.headerSection.markAllAsTouched();
                 return;
@@ -7734,7 +6747,7 @@
             }
 
             this.Service.postAboutUsdata(obj).subscribe(function (resp) {
-              _this23.Service.showMessage({
+              _this21.Service.showMessage({
                 message: "Submitted Successfully"
               });
             });
@@ -7869,19 +6882,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"headerSection\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>About Us Header Section</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle \n\t\t\t\t\t\t\t\t\tformControlName=\"is_visible\"\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</mat-slide-toggle>\n\t\t\t\t\t\t\t\t\t<!-- [checked]=\"headerSection.controls['is_visible']\"\n\t\t\t\t\t\t\t\t\t\t(change)=\"onSliderChange($event)\"> -->\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" formControlName=\"heading\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\"This is...testing\">\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerSection.controls.heading.touched || headerSection.controls.heading.dirty) && headerSection.controls.heading.invalid && headerSection.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerSection.controls.heading.touched || headerSection.controls.heading.dirty) && headerSection.controls.heading.invalid && headerSection.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>TopGrads Logo</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage?HeadingImage:'assets/img/logo.svg'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"headerSection.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"description\"> ut aliquip ex ea commodo consequat.</textarea>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerSection.controls.description.touched || headerSection.controls.description.dirty) && headerSection.controls.description.invalid && headerSection.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerSection.controls.description.touched || headerSection.controls.description.dirty) && headerSection.controls.description.invalid && headerSection.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t**Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('headerSection')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"Champions\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Testing Champions of Graduate Jobs</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading 1</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t[formControl]=\"Champions.controls['heading']\">\n\t\t\t\t\t\t\t\t\t\t<!-- <textarea class=\"form-control\" [formControl]=\"Champions.controls['description']\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\"></textarea> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <editor [formControl]=\"Champions.controls['description']\"></editor> -->\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Champions.controls.heading.touched || Champions.controls.heading.dirty) && Champions.controls.heading.invalid && Champions.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Champions.controls.heading.touched || Champions.controls.heading.dirty) && Champions.controls.heading.invalid && Champions.controls.heading?.errors?.maxlength \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading 2</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t[formControl]=\"Champions.controls['heading1']\">\n\t\t\t\t\t\t\t\t\t\t<!-- <textarea class=\"form-control\" [formControl]=\"Champions.controls['description']\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\"></textarea> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <editor [formControl]=\"Champions.controls['description']\"></editor> -->\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Champions.controls.heading1.touched || Champions.controls.heading1.dirty) && Champions.controls.heading1.invalid && Champions.controls.heading1?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Champions.controls.heading1.touched || Champions.controls.heading1.dirty) && Champions.controls.heading1.invalid && Champions.controls.heading1?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('Champions')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"ourVision\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Our Vision</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourVision.controls.heading.touched || ourVision.dirty) && ourVision.controls.heading.invalid && ourVision.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourVision.controls.heading.touched || ourVision.controls.heading.dirty) && ourVision.controls.heading.invalid && ourVision.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"description\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourVision.controls.description || ourVision.controls.description) && ourVision.controls.description.invalid && ourVision.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourVision.controls.description || ourVision.controls.description) && ourVision.controls.description.invalid && ourVision.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('ourVision')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"ourMission\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Our Mission</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Our Mission\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourMission.controls.heading.touched || ourMission.controls.heading.dirty) && ourMission.controls.heading.invalid && ourMission.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourMission.controls.heading.touched || ourMission.controls.heading.dirty) && ourMission.controls.heading.invalid && ourMission.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"description\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t <div *ngIf=\"(ourMission.controls.description.touched || ourMission.controls.description.dirty) && ourMission.controls.description.invalid && ourMission.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t *Please enter description\n\t\t\t\t\t\t\t\t\t\t\t </div>\n\t\t\t\t\t\t\t\t\t\t\t <div *ngIf=\"(ourMission.controls.description.touched || ourMission.controls.description.dirty) && ourMission.controls.description.invalid && ourMission.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t *Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t </div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('ourMission')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"jobOpenings\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Graduate Job Openings</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" \n\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\" Testing Graduate Job Openings Across Australia\">\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(jobOpenings.controls.heading.touched || jobOpenings.controls.heading.dirty) && jobOpenings.controls.heading.invalid && jobOpenings.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t *Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(jobOpenings.controls.heading.touched || jobOpenings.controls.heading.dirty) && jobOpenings.controls.heading.invalid && jobOpenings.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"description\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\">Testing Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n\t\t\t\t\t\t\t\t\t\t\t sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\t\t\t\t\t\t\t\t\t\t  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>\n\t\t\t\t\t\t\t\t\t\t\t  <div *ngIf=\"(jobOpenings.controls.description.touched || jobOpenings.controls.description.dirty) && jobOpenings.controls.description.invalid && jobOpenings.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t  *Please enter description\n\t\t\t\t\t\t\t\t\t\t\t  </div>\n\t\t\t\t\t\t\t\t\t\t\t  <div *ngIf=\"(jobOpenings.controls.description.touched || jobOpenings.controls.description.dirty) && jobOpenings.controls.description.invalid && jobOpenings.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t  *Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t  </div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('jobOpenings')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form  [formGroup]=\"TopGraduates\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t<strong>TopGraduates isn’t...</strong>\n\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\"></mat-slide-toggle>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Testing TopGraduates isn’t...\" \n\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(TopGraduates.controls.heading.touched || TopGraduates.controls.heading.dirty) && TopGraduates.controls.heading.invalid && TopGraduates.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(TopGraduates.controls.heading.touched || TopGraduates.controls.heading.dirty) && TopGraduates.controls.heading.invalid && TopGraduates.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<ng-container  formArrayName=\"Fields\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngFor=\"let alias of Fields.controls; let i=index\" >\n\t\t\t\t\t\t\t\t\t\t<label>Text {{i+1}}</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"  [formControlName]=\"i\">\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"Fields.controls[i].errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Field is Required\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"Fields.controls[i].errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 100 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('TopGraduates')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>";
-      /***/
-    },
-
-    /***/
-    "LUEE": function LUEE(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJncmFkdWF0ZS1saXN0LmNvbXBvbmVudC5zY3NzIn0= */";
+      __webpack_exports__["default"] = "<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"headerSection\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>About Us Header Section</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle \n\t\t\t\t\t\t\t\t\tformControlName=\"is_visible\" (change)=\"fun($event)\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</mat-slide-toggle>\n\t\t\t\t\t\t\t\t\t<!-- [checked]=\"headerSection.controls['is_visible']\"\n\t\t\t\t\t\t\t\t\t\t(change)=\"onSliderChange($event)\"> -->\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" formControlName=\"heading\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\"This is...testing\">\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerSection.controls.heading.touched || headerSection.controls.heading.dirty) && headerSection.controls.heading.invalid && headerSection.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerSection.controls.heading.touched || headerSection.controls.heading.dirty) && headerSection.controls.heading.invalid && headerSection.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>TopGrads Logo</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage?HeadingImage:'assets/img/no_image_placeholder.png'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"headerSection.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"4\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"description\"> ut aliquip ex ea commodo consequat.</textarea>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerSection.controls.description.touched || headerSection.controls.description.dirty) && headerSection.controls.description.invalid && headerSection.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(headerSection.controls.description.touched || headerSection.controls.description.dirty) && headerSection.controls.description.invalid && headerSection.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t**Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('headerSection')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"Champions\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Testing Champions of Graduate Jobs</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun1($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading 1</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t[formControl]=\"Champions.controls['heading']\">\n\t\t\t\t\t\t\t\t\t\t<!-- <textarea class=\"form-control\" [formControl]=\"Champions.controls['description']\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\"></textarea> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <editor [formControl]=\"Champions.controls['description']\"></editor> -->\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Champions.controls.heading.touched || Champions.controls.heading.dirty) && Champions.controls.heading.invalid && Champions.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Champions.controls.heading.touched || Champions.controls.heading.dirty) && Champions.controls.heading.invalid && Champions.controls.heading?.errors?.maxlength \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading 2</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t[formControl]=\"Champions.controls['heading1']\">\n\t\t\t\t\t\t\t\t\t\t<!-- <textarea class=\"form-control\" [formControl]=\"Champions.controls['description']\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\"></textarea> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <editor [formControl]=\"Champions.controls['description']\"></editor> -->\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Champions.controls.heading1.touched || Champions.controls.heading1.dirty) && Champions.controls.heading1.invalid && Champions.controls.heading1?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(Champions.controls.heading1.touched || Champions.controls.heading1.dirty) && Champions.controls.heading1.invalid && Champions.controls.heading1?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('Champions')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"ourVision\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Our Vision</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun2($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourVision.controls.heading.touched || ourVision.dirty) && ourVision.controls.heading.invalid && ourVision.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourVision.controls.heading.touched || ourVision.controls.heading.dirty) && ourVision.controls.heading.invalid && ourVision.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"description\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourVision.controls.description || ourVision.controls.description) && ourVision.controls.description.invalid && ourVision.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourVision.controls.description || ourVision.controls.description) && ourVision.controls.description.invalid && ourVision.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('ourVision')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"ourMission\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Our Mission</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun3($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Our Mission\"\n\t\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourMission.controls.heading.touched || ourMission.controls.heading.dirty) && ourMission.controls.heading.invalid && ourMission.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(ourMission.controls.heading.touched || ourMission.controls.heading.dirty) && ourMission.controls.heading.invalid && ourMission.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"description\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t <div *ngIf=\"(ourMission.controls.description.touched || ourMission.controls.description.dirty) && ourMission.controls.description.invalid && ourMission.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t *Please enter description\n\t\t\t\t\t\t\t\t\t\t\t </div>\n\t\t\t\t\t\t\t\t\t\t\t <div *ngIf=\"(ourMission.controls.description.touched || ourMission.controls.description.dirty) && ourMission.controls.description.invalid && ourMission.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t *Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t </div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('ourMission')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form [formGroup]=\"jobOpenings\">\n\t\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t<strong>Graduate Job Openings</strong>\n\t\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun4($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" \n\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\"\n\t\t\t\t\t\t\t\t\t\t\tvalue=\" Testing Graduate Job Openings Across Australia\">\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(jobOpenings.controls.heading.touched || jobOpenings.controls.heading.dirty) && jobOpenings.controls.heading.invalid && jobOpenings.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t *Please enter heading\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(jobOpenings.controls.heading.touched || jobOpenings.controls.heading.dirty) && jobOpenings.controls.heading.invalid && jobOpenings.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" formControlName=\"description\"\n\t\t\t\t\t\t\t\t\t\t\trows=\"4\">Testing Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n\t\t\t\t\t\t\t\t\t\t\t sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n\t\t\t\t\t\t\t\t\t\t\t  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>\n\t\t\t\t\t\t\t\t\t\t\t  <div *ngIf=\"(jobOpenings.controls.description.touched || jobOpenings.controls.description.dirty) && jobOpenings.controls.description.invalid && jobOpenings.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t  *Please enter description\n\t\t\t\t\t\t\t\t\t\t\t  </div>\n\t\t\t\t\t\t\t\t\t\t\t  <div *ngIf=\"(jobOpenings.controls.description.touched || jobOpenings.controls.description.dirty) && jobOpenings.controls.description.invalid && jobOpenings.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t  *Maximum Length should be 500 characters\n\t\t\t\t\t\t\t\t\t\t\t  </div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('jobOpenings')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<form  [formGroup]=\"TopGraduates\">\n\t\t\t\t\t<div class=\"manage-home-header\">\n\t\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t\t<strong>TopGraduates isn’t...</strong>\n\t\t\t\t\t\t\t<div class=\"slide-cs\">\n\t\t\t\t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t\t\t\t\t\t\t\t<mat-slide-toggle formControlName=\"is_visible\" (change)=\"fun5($event)\"></mat-slide-toggle>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Testing TopGraduates isn’t...\" \n\t\t\t\t\t\t\t\t\t\tformControlName=\"heading\">\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(TopGraduates.controls.heading.touched || TopGraduates.controls.heading.dirty) && TopGraduates.controls.heading.invalid && TopGraduates.controls.heading?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please enter heading\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(TopGraduates.controls.heading.touched || TopGraduates.controls.heading.dirty) && TopGraduates.controls.heading.invalid && TopGraduates.controls.heading?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<ng-container  formArrayName=\"Fields\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngFor=\"let alias of Fields.controls; let i=index\" >\n\t\t\t\t\t\t\t\t\t\t<label>Text {{i+1}}</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\"  [formControlName]=\"i\">\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"Fields.controls[i].errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Field is Required\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"Fields.controls[i].errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Maximum Length should be 100 characters\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</ng-container>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postAboutUsdata('TopGraduates')\">Save</button>\n\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>";
       /***/
     },
 
@@ -8140,18 +7141,6 @@
     },
 
     /***/
-    "P9NN": function P9NN(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Graduate Header Section</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Finding graduate talent made easy.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/graduate_hw.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Why choose TopGrads</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Why choose TopGrads?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/graduate_hit.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>We do the work for you.</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"We do the work for you.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"candidate-animate-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Candidate Profile Animation</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/graduate_profile.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Animation Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/briefcase.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"opportunities-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Let opportunities approach you</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Let opportunities approach you\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n<!-- Listing of candidate profiles -->\n<section class=\"profile-match-listing\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Profile Match Listing</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>No. of Listings to be displayed</label>\n\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"\" class=\"form-control\" value=\"4\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"perfectjob-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>We match you with the perfect job</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"We match you with the perfect job\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Trackprogress-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Track your progress with a transparent process</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Track your progress with a transparent process\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"organisedashboard-components\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t<strong>Graduate Dashboard Components</strong>\n\t\t\t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"enable-organise\">\n\t\t\t\t\t\t\t<ngx-dropzone (change)=\"onSelect($event)\">\n\t\t\t\t\t\t\t\t<ngx-dropzone-label>Drop your files here!</ngx-dropzone-label>\n\t\t\t\t\t\t\t\t<ngx-dropzone-preview *ngFor=\"let f of files\" [removable]=\"true\" (removed)=\"onRemove(f)\">\n\t\t\t\t\t\t\t\t\t<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>\n\t\t\t\t\t\t\t\t</ngx-dropzone-preview>\n\t\t\t\t\t\t\t</ngx-dropzone>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"PersonalisedDashboard-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Your Personalised Dashboard</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Your Personalised Dashboard\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"progress-animation-blocks\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Progress Animation Blocks</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"anime-blocks\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Tab 1 text</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Finding graduate talent made easy.\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"anim-imgs\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/block-anim1.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"anime-blocks\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Tab 2 text</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Finding graduate talent made easy.\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"anim-imgs\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/block-anim2.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"anime-blocks\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Tab 3 text</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Finding graduate talent made easy.\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"anim-imgs\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/block-anim3.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"anime-blocks\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Tab 4 text</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Finding graduate talent made easy.\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"anim-imgs\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/block-anim4.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"anime-blocks\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Tab 5 text</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Finding graduate talent made easy.\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"anim-imgs\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/block-anim6.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"See-the-progress\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>See the progress of your applications and interviews</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"See the progress of your applications and interviews\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"interview-status\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Interview Status Listing</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>No. of Listings to be displayed</label>\n\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"\" class=\"form-control\" value=\"3\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Seek-feedback\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Seek feedback with a click</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Seek feedback with a click\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Apply-with-no-sweat\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Apply with no sweat, and make an impression</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Apply with no sweat, and make an impression\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Pre-filled-applications\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Pre filled applications ready to submit</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Pre filled applications ready to submit\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Get-Endorsed\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Get Endorsed</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get Endorsed\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"employer-footer-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Graduate Footer</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Footer Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/gard-footer.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n";
-      /***/
-    },
-
-    /***/
     "PFVl": function PFVl(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -8324,7 +7313,7 @@
         }, {
           key: "support_id",
           value: function support_id() {
-            var _this24 = this;
+            var _this22 = this;
 
             var obj = {
               //  limit: this.searchFilters.limit,
@@ -8335,14 +7324,14 @@
               console.log("main data for users is ssssssssssssssssssss====", data); //  this.productslist = data.products
               //  this.length = data.total_counts
 
-              _this24.user = data.data;
+              _this22.user = data.data;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                _this24.toastr.error('Some error occured, please try again!!', 'Error');
+                _this22.toastr.error('Some error occured, please try again!!', 'Error');
 
                 console.log('Internet Connection Error');
               }
@@ -8632,7 +7621,7 @@
         }, {
           key: "termssubheadings",
           value: function termssubheadings() {
-            var _this25 = this;
+            var _this23 = this;
 
             console.log("khjhgjhgjhgjhghjghjgjhghjg");
             var obj = {
@@ -8643,11 +7632,11 @@
               var _a;
 
               console.log("main data for terms sub headings is ====", data);
-              _this25.subheadinglist = (_a = data.data.heading) === null || _a === void 0 ? void 0 : _a.sub_headings;
-              _this25.totalRecords = data.length;
-              _this25.heading_id = obj.content_id;
-              console.log(_this25.subheadinglist);
-              console.log("heading_id", _this25.heading_id);
+              _this23.subheadinglist = (_a = data.data.heading) === null || _a === void 0 ? void 0 : _a.sub_headings;
+              _this23.totalRecords = data.length;
+              _this23.heading_id = obj.content_id;
+              console.log(_this23.subheadinglist);
+              console.log("heading_id", _this23.heading_id);
             }, function (err) {
               console.log(err.status);
 
@@ -8668,7 +7657,7 @@
         }, {
           key: "deletesubheading",
           value: function deletesubheading(id) {
-            var _this26 = this;
+            var _this24 = this;
 
             var obj = {
               content_id: this.route.snapshot.paramMap.get('id'),
@@ -8677,19 +7666,19 @@
             this.Service.deletetermsubheading(obj).subscribe(function (res) {
               console.log("fgdgfdgfdfgdfgd", res);
 
-              _this26.smallModal.hide();
+              _this24.smallModal.hide();
 
               if (res.code == 200) {
-                _this26._snackBar.open("Sub Heading Deleted Successfully", "close", {
+                _this24._snackBar.open("Sub Heading Deleted Successfully", "close", {
                   duration: 2000
                 });
 
-                _this26.ngOnInit();
+                _this24.ngOnInit();
               }
             }, function (err) {
               console.log(err);
 
-              _this26._snackBar.open("Some Error Occued", "close", {
+              _this24._snackBar.open("Some Error Occued", "close", {
                 duration: 2000
               });
             });
@@ -8718,14 +7707,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection16;
+            var _this$selection12;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection16 = this.selection).select.apply(_this$selection16, _toConsumableArray(this.dataSource.data));
+            (_this$selection12 = this.selection).select.apply(_this$selection12, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -8786,18 +7775,6 @@
       }
       /***/
 
-    },
-
-    /***/
-    "Q9uG": function Q9uG(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"edit-employer-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Edit employer Details</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<div class=\"text-center edit-profile\">\n\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined dp-icon\">edit</mat-icon>\n\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"dp-input\">\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-form mt-4\">\n\t\t\t\t\t\t\t\t<form>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form-fields\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>First Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Last Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Work Email Address</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Company Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Job Title</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<select class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Employer</option>\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Graduate</option>\n\t\t\t\t\t\t\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Creation Date (Time)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"09-09-2012 (02:18 AM)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <mat-form-field appearance=\"fill\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <mat-label>Choose a date</mat-label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <input matInput [matDatepicker]=\"picker\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  <mat-datepicker #picker></mat-datepicker>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</mat-form-field> -->\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Password</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"abc123@\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Status</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<select class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Active</option>\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Inactive</option>\n\t\t\t\t\t\t\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Cancel</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n";
-      /***/
     },
 
     /***/
@@ -9056,8 +8033,9 @@
         }, {
           key: "paginationOptionChange",
           value: function paginationOptionChange(evt) {
-            var _this27 = this;
+            var _this25 = this;
 
+            this.event = evt;
             console.log("evthrm", evt);
             this.topPage = evt.pageIndex;
             console.log('rsawsfsdsf', this.topPage);
@@ -9066,8 +8044,13 @@
               limit: evt.pageSize,
               offset: evt.pageIndex * evt.pageSize
             };
+
+            if (this.search) {
+              obj.search = this.search;
+            }
+
             this.Service.contactList(obj).subscribe(function (data) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this27, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this25, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
                 return regeneratorRuntime.wrap(function _callee2$(_context2) {
                   while (1) {
                     switch (_context2.prev = _context2.next) {
@@ -9093,7 +8076,7 @@
         }, {
           key: "contactList",
           value: function contactList() {
-            var _this28 = this;
+            var _this26 = this;
 
             console.log("javascriptt========");
             var obj = {
@@ -9108,9 +8091,9 @@
 
             this.Service.contactList(obj).subscribe(function (res) {
               console.log("Response==========", res);
-              _this28.Contactlisting = res.data;
-              _this28.sortedData = _this28.Contactlisting;
-              _this28.totalRecords = res.count; // this.ngOnInit()
+              _this26.Contactlisting = res.data;
+              _this26.sortedData = _this26.Contactlisting;
+              _this26.totalRecords = res.count; // this.ngOnInit()
             });
             console.log("Object==========");
           } // delete contact start..............
@@ -9126,7 +8109,7 @@
         }, {
           key: "contactDelete",
           value: function contactDelete(id) {
-            var _this29 = this;
+            var _this27 = this;
 
             var obj = {
               support_id: id
@@ -9136,9 +8119,9 @@
             this.Service.contactDelete(obj).subscribe(function (res) {
               console.log("Response==========", res);
 
-              _this29.ngOnInit();
+              _this27.ngOnInit();
 
-              _this29.smallModal.hide();
+              _this27.smallModal.hide();
             });
           } // delete end here............
           //replyyyyyyyyyyyyyy..............
@@ -9153,7 +8136,7 @@
         }, {
           key: "contactReply",
           value: function contactReply(id) {
-            var _this30 = this;
+            var _this28 = this;
 
             console.log("formmmmmmmmmmmm", this.contactUsForm);
 
@@ -9168,11 +8151,11 @@
               this.Service.contactReply(obj).subscribe(function (res) {
                 console.log("Response==========", res);
 
-                _this30.ngOnInit();
+                _this28.ngOnInit();
 
-                _this30.replyModal.hide();
+                _this28.replyModal.hide();
 
-                _this30.contactUsForm.reset();
+                _this28.contactUsForm.reset();
               });
             }
           }
@@ -9185,9 +8168,16 @@
         }, {
           key: "applyFilter",
           value: function applyFilter(filterValue) {
-            // console.log("filterValue", this.search);
-            this.contactList();
-            this.ngOnInit();
+            console.log("filterValue", this.search);
+            this.search = filterValue.target.value;
+            console.log("after searchhhhh-00------------0=====", this.event);
+
+            if (this.event) {
+              console.log("after searchhhhh=====", this.event);
+              this.paginationOptionChange(this.event);
+            } else {
+              this.contactList();
+            }
           }
           /** Whether the number of selected elements matches the total number of rows. */
 
@@ -9203,14 +8193,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection17;
+            var _this$selection13;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection17 = this.selection).select.apply(_this$selection17, _toConsumableArray(this.dataSource.data));
+            (_this$selection13 = this.selection).select.apply(_this$selection13, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -9586,18 +8576,6 @@
     },
 
     /***/
-    "Rt/6": function Rt6(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Employer Header Section</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Finding graduate talent made easy.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/man_in_a_chair.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"whychose-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Why choose TopGrads</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Why choose TopGrads?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/whychose_emp.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"recruitmenteasy-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>We make recruitment easy</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"We make recruitment easy.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"createjob-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Create Job in 4 steps</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/imag_tilt.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"JobPosting-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Fee-less Job Posting</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"We make recruitment easy.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"moreResume-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>More Than Just a Resume</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"We make recruitment easy.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"gradSerach-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Graduate Search</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>No. of Listings to be displayed</label>\n\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"\" class=\"form-control\" value=\"4\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"EasyShortlisting-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Easy Shortlisting</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"We make recruitment easy.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"recruitmenteasy-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>All the best grads in one place</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"All the best grads in one place\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"UniqueMatch-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Unique Match Percentage</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Unique Match Percentage\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"matchHighlyt-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Highlighted unique Match</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Section Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/special_endrosed.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"carddates-matched-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Unique Matched Candidates</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>No. of Listings to be displayed</label>\n\t\t\t\t\t\t\t\t\t<input type=\"number\" name=\"\" class=\"form-control\" value=\"4\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"EndorsedCandidates-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Endorsed Candidates</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Endorsed Candidates\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Endorsed-steps-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Endrosement Steps</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Step 1: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/description.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Documents checked\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Step 2: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/videorefer.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Documents checked\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Step 3: Icon</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/refernce.svg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Documents checked\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"organise&progress-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Organise and progress candidates your way</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Organise and progress candidates your way\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"organise&progress-components\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t\t\t\t\t\t<strong>Employer Dashoboard Components</strong>\n\t\t\t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"enable-organise\">\n\t\t\t\t\t\t\t<ngx-dropzone (change)=\"onSelect($event)\">\n\t\t\t\t\t\t\t\t<ngx-dropzone-label>Drop your files here!</ngx-dropzone-label>\n\t\t\t\t\t\t\t\t<ngx-dropzone-preview *ngFor=\"let f of files\" [removable]=\"true\" (removed)=\"onRemove(f)\">\n\t\t\t\t\t\t\t\t\t<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>\n\t\t\t\t\t\t\t\t</ngx-dropzone-preview>\n\t\t\t\t\t\t\t</ngx-dropzone>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n<section class=\"PersonalisedDashboard-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Your Personalised Dashboard</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Your Personalised Dashboard\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Scheduleinterviews-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Schedule Interviews</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Schedule Interviews\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"newhire-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-newhire\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>New hire modal</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Modal Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/new_hire.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title Message</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Congratulations on your new hire!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Message info</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"An offer has been sent to Nathan Jones.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Select&Offer-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Select and Offer</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Select and Offer Just Like That!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"employer-footer-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Employer Footer</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Looking for Interns\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Sub-heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"We’ve got you covered.*\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Footer Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/how_workfooter.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n";
-      /***/
-    },
-
-    /***/
     "S49X": function S49X(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -9618,18 +8596,6 @@
 
 
       __webpack_exports__["default"] = "<section class=\"payment-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <mat-form-field appearance=\"standard\">\n          <mat-label>Filter</mat-label>\n          <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n        </mat-form-field>\n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- postedby Column -->\n              <ng-container matColumnDef=\"transid\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Transaction ID </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.transid}} </td>\n              </ng-container>\n\n              <!-- postedby Column -->\n              <ng-container matColumnDef=\"supervisorname\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Supervisor Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.supervisorname}} </td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"supervisoremail\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Supervisor Email</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.supervisoremail}} </td>\n              </ng-container>\n\n              <!-- postedby Column -->\n              <ng-container matColumnDef=\"company\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Company name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.company}} </td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"candidate\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Candidate name</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.candidate}} </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"candidatemail\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Candidate Email</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.candidatemail}} </td>\n              </ng-container>\n\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"offer\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Offer Selected</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.offer}} </td>\n              </ng-container>\n\n               <!-- Job title Column -->\n              <ng-container matColumnDef=\"startdate\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Start Date</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.startdate}} </td>\n              </ng-container>\n              \n              <!-- status column -->\n              <ng-container matColumnDef=\"subsexp\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Expiry date </th>\n                <td mat-cell *matCellDef=\"let row\">{{row.subsexp}}</td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <a mat-menu-item class=\"\" routerLink=\"/view-offer\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Payment Slip?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-      /***/
-    },
-
-    /***/
-    "S98m": function S98m(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlbXBsb3llcnMtbGlzdC5jb21wb25lbnQuc2NzcyJ9 */";
       /***/
     },
 
@@ -9878,14 +8844,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection18;
+            var _this$selection14;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection18 = this.selection).select.apply(_this$selection18, _toConsumableArray(this.dataSource.data));
+            (_this$selection14 = this.selection).select.apply(_this$selection14, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -9945,18 +8911,6 @@
       }
       /***/
 
-    },
-
-    /***/
-    "TXfm": function TXfm(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LWdyYWR1YXRlLmNvbXBvbmVudC5zY3NzIn0= */";
-      /***/
     },
 
     /***/
@@ -10059,7 +9013,7 @@
         }, {
           key: "getFaqCategories",
           value: function getFaqCategories() {
-            var _this31 = this;
+            var _this29 = this;
 
             var obj = {
               user_type: 'graduate'
@@ -10067,14 +9021,14 @@
             console.log("categories=============", obj);
             this.Service.faqCategories(obj).subscribe(function (data) {
               console.log("fgdfgfgdfgdfgdfgdfgdfgdgf", data);
-              _this31.faq = data.data;
+              _this29.faq = data.data;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                _this31.toastr.error('Some error occured, please try again!!', 'Error');
+                _this29.toastr.error('Some error occured, please try again!!', 'Error');
               }
             });
           }
@@ -10092,7 +9046,7 @@
         }, {
           key: "addEditFaq",
           value: function addEditFaq(id) {
-            var _this32 = this;
+            var _this30 = this;
 
             console.log("formmmmmmmmmmmm", this.inputTitle);
 
@@ -10109,11 +9063,11 @@
               this.Service.addEditFaq(obj).subscribe(function (res) {
                 console.log("Response==========", res);
 
-                _this32.Service.showMessage({
+                _this30.Service.showMessage({
                   message: "Added Successfully"
                 });
 
-                _this32.router.navigate(['/graduateFaq']);
+                _this30.router.navigate(['/graduateFaq']);
               });
             }
           }
@@ -10141,18 +9095,6 @@
         template: _raw_loader_graduate_add_faq_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_graduate_add_faq_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]])], GraduateAddFaqComponent);
-      /***/
-    },
-
-    /***/
-    "U9I+": function U9I(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWVtcGxveWVyLmNvbXBvbmVudC5zY3NzIn0= */";
       /***/
     },
 
@@ -10298,18 +9240,6 @@
 
 
       __webpack_exports__["default"] = "<section class=\"jobs-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <mat-form-field appearance=\"standard\">\n          <mat-label>Filter</mat-label>\n          <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n        </mat-form-field>\n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- postedby Column -->\n              <ng-container matColumnDef=\"postedby\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Employer Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.postedby}} </td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"worktype\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Type</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.worktype}} </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"contracttype\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Contract Type</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.contracttype}} </td>\n              </ng-container>\n               <!-- Job title Column -->\n              <ng-container matColumnDef=\"jobtitle\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Title</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.jobtitle}} </td>\n              </ng-container>\n             \n              <!-- deadline Column -->\n              <ng-container matColumnDef=\"deadline\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Deadline </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.deadline}} </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle></mat-slide-toggle>\n                   </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"applications\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Applicants </th>\n                <td mat-cell *matCellDef=\"let row\"><a routerLink=\"/applicantsManagement\"> {{row.applications}}</a> </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <a mat-menu-item class=\"\" routerLink=\"/viewJob\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/editJob\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Job?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-      /***/
-    },
-
-    /***/
-    "X1jl": function X1jl(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJpbmR1c3RyeWxpc3QuY29tcG9uZW50LnNjc3MifQ== */";
       /***/
     },
 
@@ -10517,18 +9447,6 @@
         template: _raw_loader_view_interview_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_view_interview_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewInterviewComponent);
-      /***/
-    },
-
-    /***/
-    "Y+Pn": function YPn(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"employer-mng-list\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"tabl_upr d-flex align-items-center justify-content-between\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <div class=\"fltr_div d-flex align-items-center\">\n            <div class=\"form-group mb-0 ml-3\">\n              <select class=\"form-control custom-select\">\n                  <option selected>Select Filter</option>\n                  <option>Location</option>\n                  <option>Work Preference</option>\n                  <option>Availability</option>\n                  <option>Education</option>\n                  <option>License</option>\n                  <option>Work Rights</option>\n                  <option>Skills</option>\n              </select>\n            </div>\n\n            <div class=\"form-group mb-0 ml-3\">\n              <select class=\"form-control custom-select\">\n                  <option selected>Select Sub-Filter</option>\n                  <option>Melbourne</option>\n                  <option>Sydney</option>\n              </select>\n            </div>\n            <div class=\"appl_fltr ml-3\">\n              <button class=\"btn btn-primary\">\n              Apply Filter\n            </button>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"emplist\" matSort>\n\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row ; let i=index\">  {{i+1}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.first_name}} </td>\n              </ng-container>\n               <!-- lname Column -->\n              <ng-container matColumnDef=\"lname\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.last_name}} </td>\n              </ng-container>\n              <!-- Email Column -->\n              <ng-container matColumnDef=\"email\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Email Address</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.email}} </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"company\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Company Name</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.company_name}} </td>\n              </ng-container>\n               <!-- Job title Column -->\n              <ng-container matColumnDef=\"jobtitle\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Title</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.role}} </td>\n              </ng-container>\n               <!-- creation date Column -->\n              <ng-container matColumnDef=\"creation\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Creation Date (Time)</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.createdAt | date}} </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\" >\n                     <mat-slide-toggle [checked]=\"row.status=='active'?true:false\"></mat-slide-toggle>\n                   </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <a mat-menu-item class=\"\" routerLink=\"/viewEmployer\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/editEmployer\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"resetpswrd.show()\">\n                        <mat-icon class=\"material-icons-outlined\">cached</mat-icon>\n                        <span>Reset Password</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">block</mat-icon>\n                        <span>Ban</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">message</mat-icon>\n                        <span>Send Message</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">email</mat-icon>\n                        <span>Send Email</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p class=\"mb-0\">Are you sure you want to delete the selected user's account?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div bsModal #resetpswrd=\"bs-modal\" class=\"modal fade reset_pswrd\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"resetpswrd.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form>\n          <div class=\"row\">\n            <div class=\"col-sm-12\">\n              <div class=\"form-group\">\n                <label>Current Password</label>\n                <input type=\"password\" class=\"form-control\" value=\"abc123@\">\n              </div>\n              <div class=\"form-group\">\n                <label>New Password</label>\n                <input type=\"password\" class=\"form-control\">\n              </div>\n              <div class=\"form-group\">\n                <label>Confirm Password</label>\n                <input type=\"password\" class=\"form-control\">\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"resetpswrd.hide()\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\">Submit</button>\n      </div>\n    </div>\n  </div>\n</div>\n";
       /***/
     },
 
@@ -10816,493 +9734,433 @@
       /* harmony import */
 
 
-      var _pages_employers_list_employers_list_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
-      /*! ./pages/employers-list/employers-list.component */
-      "AMTe");
-      /* harmony import */
-
-
-      var _views_edit_employer_edit_employer_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
-      /*! ./views/edit-employer/edit-employer.component */
-      "wrVc");
-      /* harmony import */
-
-
-      var _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
-      /*! ./pages/graduate-list/graduate-list.component */
-      "xwI+");
-      /* harmony import */
-
-
-      var _views_edit_graduate_edit_graduate_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
-      /*! ./views/edit-graduate/edit-graduate.component */
-      "Ehck");
-      /* harmony import */
-
-
-      var _views_view_graduate_view_graduate_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
-      /*! ./views/view-graduate/view-graduate.component */
-      "AU9f");
-      /* harmony import */
-
-
-      var _views_view_employer_view_employer_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
-      /*! ./views/view-employer/view-employer.component */
-      "K3G1");
-      /* harmony import */
-
-
-      var _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
+      var _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
       /*! ./views/jobs-management/jobs-management.component */
       "TNju");
       /* harmony import */
 
 
-      var _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
+      var _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
       /*! ./views/view-job/view-job.component */
       "/9A/");
       /* harmony import */
 
 
-      var _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
+      var _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
       /*! ./views/categories-management/categories-management.component */
       "768J");
       /* harmony import */
 
 
-      var _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
+      var _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
       /*! ./views/view-applicant/view-applicant.component */
       "MiC3");
       /* harmony import */
 
 
-      var _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
+      var _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
       /*! ./views/header-section/header-section.component */
       "Q1t5");
       /* harmony import */
 
 
-      var _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
+      var _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
       /*! ./views/home-our-story/home-our-story.component */
       "MUxT");
       /* harmony import */
 
 
-      var _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
+      var _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
       /*! ./views/something-for-everyone/something-for-everyone.component */
       "crs7");
       /* harmony import */
 
 
-      var _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
+      var _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
       /*! ./views/how-it-work/how-it-work.component */
       "h6yy");
       /* harmony import */
 
 
-      var _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
+      var _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
       /*! ./views/success-story-slider/success-story-slider.component */
       "gCHI");
       /* harmony import */
 
 
-      var _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
+      var _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
       /*! ./views/register-today/register-today.component */
       "iafZ");
       /* harmony import */
 
 
-      var _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
+      var _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
       /*! ./views/view-slider-item/view-slider-item.component */
       "vYXW");
       /* harmony import */
 
 
-      var _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
+      var _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
       /*! ./views/add-slider-item/add-slider-item.component */
       "CiAW");
       /* harmony import */
 
 
-      var _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(
+      var _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
       /*! ./views/applicants-management/applicants-management.component */
       "6FL1");
       /* harmony import */
 
 
-      var _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(
+      var _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
       /*! ./views/add-category/add-category.component */
       "Qnxy");
       /* harmony import */
 
 
-      var _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(
+      var _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
       /*! ./views/add-sub-category/add-sub-category.component */
       "Eicf");
       /* harmony import */
 
 
-      var _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(
+      var _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
       /*! ./views/edit-sub-category/edit-sub-category.component */
       "BCwB");
       /* harmony import */
 
 
-      var _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
+      var _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
       /*! ./views/view-sub-category/view-sub-category.component */
       "wcH6");
       /* harmony import */
 
 
-      var _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
+      var _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
       /*! ./views/edit-job/edit-job.component */
       "+rVA");
       /* harmony import */
 
 
-      var _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
+      var _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(
       /*! ./views/payment-management/payment-management.component */
       "0Wcs");
       /* harmony import */
 
 
-      var _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
+      var _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(
       /*! ./views/view-payment/view-payment.component */
       "iQG3");
       /* harmony import */
 
 
-      var _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
+      var _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(
       /*! ./views/sub-category-management/sub-category-management.component */
       "k40T");
       /* harmony import */
 
 
-      var _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(
+      var _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(
       /*! ./views/edit-category/edit-category.component */
       "uP1o");
       /* harmony import */
 
 
-      var _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
+      var _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
       /*! ./views/sub-admin-management/sub-admin-management.component */
       "yAik");
       /* harmony import */
 
 
-      var _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
+      var _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
       /*! ./views/add-sub-admin/add-sub-admin.component */
       "1jXZ");
       /* harmony import */
 
 
-      var _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
+      var _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
       /*! ./views/view-sub-admin/view-sub-admin.component */
       "tRZt");
       /* harmony import */
 
 
-      var _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
+      var _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
       /*! ./views/edit-sub-admin/edit-sub-admin.component */
       "0ki/");
       /* harmony import */
 
 
-      var _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(
+      var _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
       /*! ./views/employer-how-it-works/employer-how-it-works.component */
       "fB+M");
       /* harmony import */
 
 
-      var _views_edit_employer_how_it_works_edit_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(
-      /*! ./views/edit-employer-how-it-works/edit-employer-how-it-works.component */
-      "5b5r");
-      /* harmony import */
-
-
-      var _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(
+      var _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(
       /*! ./views/graduate-how-it-works/graduate-how-it-works.component */
       "8XS0");
       /* harmony import */
 
 
-      var _views_edit_graduate_how_it_works_edit_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(
-      /*! ./views/edit-graduate-how-it-works/edit-graduate-how-it-works.component */
-      "GYQ9");
-      /* harmony import */
-
-
-      var _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
+      var _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
       /*! ./pages/content-management/terms-conditions/terms-conditions.component */
       "2ihL");
       /* harmony import */
 
 
-      var _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
+      var _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
       /*! ./views/contact-us/contact-us.component */
       "PUU/");
       /* harmony import */
 
 
-      var _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
+      var _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
       /*! ./views/contact-listing/contact-listing.component */
       "RWm0");
       /* harmony import */
 
 
-      var _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
+      var _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
       /*! ./views/offer-management/offer-management.component */
       "fMvR");
       /* harmony import */
 
 
-      var _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
+      var _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(
       /*! ./views/career-artcles/career-artcles.component */
       "gGL6");
       /* harmony import */
 
 
-      var _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
+      var _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(
       /*! ./views/career-articles/career-articles.component */
       "ICAa");
       /* harmony import */
 
 
-      var _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
+      var _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(
       /*! ./views/career-videos/career-videos.component */
       "ovBg");
       /* harmony import */
 
 
-      var _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(
+      var _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(
       /*! ./views/add-article/add-article.component */
       "unrn");
       /* harmony import */
 
 
-      var _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(
+      var _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
       /*! ./views/view-article/view-article.component */
       "e9LB");
       /* harmony import */
 
 
-      var _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(
+      var _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
       /*! ./views/edit-article/edit-article.component */
       "L3zY");
       /* harmony import */
 
 
-      var _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(
+      var _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
       /*! ./views/add-video/add-video.component */
       "XeIG");
       /* harmony import */
 
 
-      var _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(
+      var _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
       /*! ./views/view-video/view-video.component */
       "fjVs");
       /* harmony import */
 
 
-      var _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(
+      var _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
       /*! ./views/edit-video/edit-video.component */
       "q2wW");
       /* harmony import */
 
 
-      var _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(
+      var _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
       /*! ./views/schedule-interview-management/schedule-interview-management.component */
       "3Hv5");
       /* harmony import */
 
 
-      var _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(
+      var _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
       /*! ./views/view-interview/view-interview.component */
       "Y+84");
       /* harmony import */
 
 
-      var _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(
+      var _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(
       /*! ./views/edit-interview/edit-interview.component */
       "12bd");
       /* harmony import */
 
 
-      var _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
+      var _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(
       /*! ./views/video-intro/video-intro.component */
       "KTfr");
       /* harmony import */
 
 
-      var _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
+      var _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(
       /*! ./views/video-intro1/video-intro1.component */
       "8s9Z");
       /* harmony import */
 
 
-      var _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
+      var _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(
       /*! ./views/video-intro2/video-intro2.component */
       "xlFL");
       /* harmony import */
 
 
-      var _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
+      var _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(
       /*! ./views/video-intro3/video-intro3.component */
       "eN9q");
       /* harmony import */
 
 
-      var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
+      var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(
       /*! ./views/faqs/faqs.component */
       "7Cea");
       /* harmony import */
 
 
-      var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
+      var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(
       /*! ./views/add-faq/add-faq.component */
       "3ziB");
       /* harmony import */
 
 
-      var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
+      var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(
       /*! ./views/edit-faq/edit-faq.component */
       "PTKP");
       /* harmony import */
 
 
-      var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
+      var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(
       /*! ./views/view-faq/view-faq.component */
       "VqZG");
       /* harmony import */
 
 
-      var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
+      var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
       /*! ./pages/content-management/about-us/about-us.component */
       "KYUf");
       /* harmony import */
 
 
-      var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(
+      var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
       /*! ./pages/homepage-management/homepage-management.component */
       "tkH9");
       /* harmony import */
 
 
-      var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
+      var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
       /*! ./views/help-management/help-management.component */
       "4X2+");
       /* harmony import */
 
 
-      var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
+      var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
       /*! ./views/view-help/view-help.component */
       "Jzsx");
       /* harmony import */
 
 
-      var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
+      var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
       /*! ./views/messaging-reports/messaging-reports.component */
       "3a5B");
       /* harmony import */
 
 
-      var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
+      var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
       /*! ./views/verification-submissions/verification-submissions.component */
       "cWCV");
       /* harmony import */
 
 
-      var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
+      var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
       /*! ./views/offer-submissions/offer-submissions.component */
       "3xDY");
       /* harmony import */
 
 
-      var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
+      var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
       /*! ./views/view-verification/view-verification.component */
       "ac+Q");
       /* harmony import */
 
 
-      var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(
+      var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
       /*! ./views/view-offer/view-offer.component */
       "PnTO");
       /* harmony import */
 
 
-      var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(
+      var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(
       /*! ./views/view-report/view-report.component */
       "zGdd");
       /* harmony import */
 
 
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
       /*! @angular/common/http */
       "tk/3");
       /* harmony import */
 
 
-      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
+      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
       /*! ./topgradservice.service */
       "DL5e");
       /* harmony import */
 
 
-      var _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(
-      /*! ./pages/content-management/industry-management/industrylist/industrylist.component */
-      "/NuI");
-      /* harmony import */
-
-
-      var _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(
-      /*! ./pages/content-management/industry-management/industrylist/industrylist.module */
-      "08Ex");
-      /* harmony import */
-
-
-      var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(
+      var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
       /*! ./pages/auth/reset-password/reset-password.component */
       "4AU6");
       /* harmony import */
 
 
-      var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(
+      var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
       /*! ./pages/content-management/terms-sub-headings/terms-sub-headings.component */
       "Q5si");
       /* harmony import */
 
 
-      var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(
+      var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
       /*! ./pages/content-management/add-heading/add-heading.component */
       "GPan");
       /* harmony import */
 
 
-      var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(
+      var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
       /*! ./pages/content-management/edit-heading/edit-heading.component */
       "nMTe");
       /* harmony import */
 
 
-      var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(
+      var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(
       /*! ./pages/content-management/edit-sub-heading/edit-sub-heading.component */
       "J/2i");
       /* harmony import */
 
 
-      var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(
+      var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(
       /*! ./pages/content-management/add-sub-heading/add-sub-heading.component */
       "4V+q");
       /* harmony import */
 
 
-      var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(
+      var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(
       /*! ./pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component */
       "TfLc");
       /* harmony import */
 
 
-      var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(
+      var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(
       /*! ./pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component */
       "FPJr"); // Material import
 
@@ -11314,10 +10172,20 @@
       var APP_CONTAINERS = [_containers__WEBPACK_IMPORTED_MODULE_30__["DefaultLayoutComponent"]]; // Import routing module
       // Import 3rd party components
       // import { DashboardComponent } from './views/dashboard/dashboard.component';
+      // import { EmployersListComponent } from './pages/employers-list/employers-list.component';
+      // import { EditEmployerComponent } from './pages/UserManagement/edit-employer/edit-employer.component';
+      // import { GraduateListComponent } from './pages/graduate-list/graduate-list.component';
+      // import { EditGraduateComponent } from './pages/UserManagement/edit-graduate/edit-graduate.component';
+      //import { ViewGraduateComponent } from './pages/UserManagement/view-graduate/view-graduate.component';
+      // import { ViewEmployerComponent } from './pages/UserManagement/view-employer/view-employer.component';
+      //import { EditEmployerHowItWorksComponent } from './views/edit-employer-how-it-works/edit-employer-how-it-works.component';
+      //import { EditGraduateHowItWorksComponent } from './views/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
       //import { PrivacyPolicyComponent } from './pages/content-management/privacy-policy/privacy-policy.component';
       //import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
       //import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
       //import { GraduateVerificationManagementComponent } from './pages/graduate-verification-management/graduate-verification-management.component';
+      //import { IndustrylistComponent } from './pages/content-management/industry-management/industrylist/industrylist.component';
+      //import { IndustrylistModule } from './pages/content-management/industry-management/industrylist/industrylist.module';
       //import { ViewSubHeadingComponent } from './pages/content-management/view-sub-heading/view-sub-heading.component';
       // import { GraduateFaqComponent } from './pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.component';
 
@@ -11326,18 +10194,27 @@
       };
 
       AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_113__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppBreadcrumbModule"].forRoot(), _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppFooterModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppSidebarModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_5__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_37__["BsDropdownModule"].forRoot(), ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_38__["TabsModule"].forRoot(), ng2_charts__WEBPACK_IMPORTED_MODULE_39__["ChartsModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetModule"].forRoot(), _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_9__["MatSortModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_10__["MatSlideToggleModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["ModalModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"], _material_module__WEBPACK_IMPORTED_MODULE_28__["MaterialModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_16__["EditorModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_17__["MatRadioModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_18__["MatAutocompleteModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_19__["MatExpansionModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_20__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["ReactiveFormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"], _angular_slider_ngx_slider__WEBPACK_IMPORTED_MODULE_24__["NgxSliderModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_25__["NgxDropzoneModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_26__["MatTabsModule"], ngx_plyr__WEBPACK_IMPORTED_MODULE_27__["PlyrModule"], _pages_content_management_industry_management_industrylist_industrylist_module__WEBPACK_IMPORTED_MODULE_116__["IndustrylistModule"]],
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]].concat(APP_CONTAINERS, [_views_error_404_component__WEBPACK_IMPORTED_MODULE_31__["P404Component"], _views_error_500_component__WEBPACK_IMPORTED_MODULE_32__["P500Component"], _pages_auth_login_login_component__WEBPACK_IMPORTED_MODULE_33__["LoginComponent"], _views_register_register_component__WEBPACK_IMPORTED_MODULE_34__["RegisterComponent"], _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_40__["UserManagementComponent"], _pages_auth_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_41__["ForgetPasswordComponent"], _views_view_profile_view_profile_component__WEBPACK_IMPORTED_MODULE_42__["ViewProfileComponent"], _pages_employers_list_employers_list_component__WEBPACK_IMPORTED_MODULE_43__["EmployersListComponent"], _views_edit_employer_edit_employer_component__WEBPACK_IMPORTED_MODULE_44__["EditEmployerComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"], _views_edit_graduate_edit_graduate_component__WEBPACK_IMPORTED_MODULE_46__["EditGraduateComponent"], _views_view_graduate_view_graduate_component__WEBPACK_IMPORTED_MODULE_47__["ViewGraduateComponent"], _views_view_employer_view_employer_component__WEBPACK_IMPORTED_MODULE_48__["ViewEmployerComponent"], _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_49__["JobsManagementComponent"], _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_50__["ViewJobComponent"], _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_51__["CategoriesManagementComponent"], _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_52__["ViewApplicantComponent"], _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_53__["HeaderSectionComponent"], _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_54__["HomeOurStoryComponent"], _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_55__["SomethingForEveryoneComponent"], _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_56__["HowItWorkComponent"], _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_57__["SuccessStorySliderComponent"], _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_58__["RegisterTodayComponent"], _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_59__["ViewSliderItemComponent"], _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_60__["AddSliderItemComponent"], _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_61__["ApplicantsManagementComponent"], _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_62__["AddCategoryComponent"], _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_63__["AddSubCategoryComponent"], _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_64__["EditSubCategoryComponent"], _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_65__["ViewSubCategoryComponent"], _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_66__["EditJobComponent"], _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_67__["PaymentManagementComponent"], _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_68__["ViewPaymentComponent"], _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_69__["SubCategoryManagementComponent"], _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_70__["EditCategoryComponent"], _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_71__["SubAdminManagementComponent"], _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_72__["AddSubAdminComponent"], _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_73__["ViewSubAdminComponent"], _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_74__["EditSubAdminComponent"], _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_75__["EmployerHowItWorksComponent"], _views_edit_employer_how_it_works_edit_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_76__["EditEmployerHowItWorksComponent"], _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_77__["GraduateHowItWorksComponent"], _views_edit_graduate_how_it_works_edit_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_78__["EditGraduateHowItWorksComponent"], //PrivacyPolicyComponent,
-        _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_79__["TermsConditionsComponent"], _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_80__["ContactUsComponent"], _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_81__["ContactListingComponent"], _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_82__["OfferManagementComponent"], _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_83__["CareerArtclesComponent"], _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_84__["CareerArticlesComponent"], _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_85__["CareerVideosComponent"], _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_86__["AddArticleComponent"], _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_87__["ViewArticleComponent"], _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_88__["EditArticleComponent"], _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_89__["AddVideoComponent"], _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_90__["ViewVideoComponent"], _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_91__["EditVideoComponent"], _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_92__["ScheduleInterviewManagementComponent"], _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_93__["ViewInterviewComponent"], _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_94__["EditInterviewComponent"], //RecruitmentSolutionsManagementComponent,
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_105__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppBreadcrumbModule"].forRoot(), _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppFooterModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppSidebarModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_5__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_37__["BsDropdownModule"].forRoot(), ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_38__["TabsModule"].forRoot(), ng2_charts__WEBPACK_IMPORTED_MODULE_39__["ChartsModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetModule"].forRoot(), _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_9__["MatSortModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_10__["MatSlideToggleModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["ModalModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"], _material_module__WEBPACK_IMPORTED_MODULE_28__["MaterialModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_16__["EditorModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_17__["MatRadioModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_18__["MatAutocompleteModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_19__["MatExpansionModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_20__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["ReactiveFormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"], _angular_slider_ngx_slider__WEBPACK_IMPORTED_MODULE_24__["NgxSliderModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_25__["NgxDropzoneModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_26__["MatTabsModule"], ngx_plyr__WEBPACK_IMPORTED_MODULE_27__["PlyrModule"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]].concat(APP_CONTAINERS, [_views_error_404_component__WEBPACK_IMPORTED_MODULE_31__["P404Component"], _views_error_500_component__WEBPACK_IMPORTED_MODULE_32__["P500Component"], _pages_auth_login_login_component__WEBPACK_IMPORTED_MODULE_33__["LoginComponent"], _views_register_register_component__WEBPACK_IMPORTED_MODULE_34__["RegisterComponent"], _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_40__["UserManagementComponent"], _pages_auth_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_41__["ForgetPasswordComponent"], _views_view_profile_view_profile_component__WEBPACK_IMPORTED_MODULE_42__["ViewProfileComponent"], //EmployersListComponent,
+        //EditEmployerComponent,
+        //GraduateListComponent,
+        //EditGraduateComponent,
+        //ViewGraduateComponent,
+        // ViewEmployerComponent,
+        _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_43__["JobsManagementComponent"], _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_44__["ViewJobComponent"], _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_45__["CategoriesManagementComponent"], _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_46__["ViewApplicantComponent"], _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_47__["HeaderSectionComponent"], _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_48__["HomeOurStoryComponent"], _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_49__["SomethingForEveryoneComponent"], _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_50__["HowItWorkComponent"], _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_51__["SuccessStorySliderComponent"], _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_52__["RegisterTodayComponent"], _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_53__["ViewSliderItemComponent"], _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_54__["AddSliderItemComponent"], _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_55__["ApplicantsManagementComponent"], _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_56__["AddCategoryComponent"], _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_57__["AddSubCategoryComponent"], _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_58__["EditSubCategoryComponent"], _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_59__["ViewSubCategoryComponent"], _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_60__["EditJobComponent"], _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_61__["PaymentManagementComponent"], _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_62__["ViewPaymentComponent"], _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_63__["SubCategoryManagementComponent"], _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_64__["EditCategoryComponent"], _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_65__["SubAdminManagementComponent"], _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_66__["AddSubAdminComponent"], _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_67__["ViewSubAdminComponent"], _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_68__["EditSubAdminComponent"], _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_69__["EmployerHowItWorksComponent"], //EditEmployerHowItWorksComponent,
+        _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_70__["GraduateHowItWorksComponent"], //EditGraduateHowItWorksComponent,
+        //PrivacyPolicyComponent,
+        _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_71__["TermsConditionsComponent"], _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_72__["ContactUsComponent"], _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_73__["ContactListingComponent"], _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_74__["OfferManagementComponent"], _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_75__["CareerArtclesComponent"], _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_76__["CareerArticlesComponent"], _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_77__["CareerVideosComponent"], _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_78__["AddArticleComponent"], _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_79__["ViewArticleComponent"], _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_80__["EditArticleComponent"], _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_81__["AddVideoComponent"], _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_82__["ViewVideoComponent"], _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_83__["EditVideoComponent"], _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_84__["ScheduleInterviewManagementComponent"], _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_85__["ViewInterviewComponent"], _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_86__["EditInterviewComponent"], //RecruitmentSolutionsManagementComponent,
         //ResumeBuilderManagementComponent,
-        _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_95__["VideoIntroComponent"], _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_96__["VideoIntro1Component"], _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_97__["VideoIntro2Component"], _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_98__["VideoIntro3Component"], //GraduateVerificationManagementComponent,
-        _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_99__["FaqsComponent"], _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_100__["AddFaqComponent"], _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_101__["EditFaqComponent"], _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_102__["ViewFaqComponent"], _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_103__["AboutUsComponent"], _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_123__["GraduateAddFaqComponent"], _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_124__["GraduateEditFaqComponent"], _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_104__["HomepageManagementComponent"], _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_105__["HelpManagementComponent"], _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_106__["ViewHelpComponent"], _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_107__["MessagingReportsComponent"], _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_108__["VerificationSubmissionsComponent"], _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_109__["OfferSubmissionsComponent"], _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_110__["ViewVerificationComponent"], _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_111__["ViewOfferComponent"], _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_112__["ViewReportComponent"], _pages_content_management_industry_management_industrylist_industrylist_component__WEBPACK_IMPORTED_MODULE_115__["IndustrylistComponent"], _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_117__["ResetPasswordComponent"], _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_118__["TermsSubHeadingsComponent"], _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_119__["AddHeadingComponent"], _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_120__["EditHeadingComponent"], _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_121__["EditSubHeadingComponent"], _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_122__["AddSubHeadingComponent"], _pages_graduate_list_graduate_list_component__WEBPACK_IMPORTED_MODULE_45__["GraduateListComponent"]]),
+        _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_87__["VideoIntroComponent"], _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_88__["VideoIntro1Component"], _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_89__["VideoIntro2Component"], _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_90__["VideoIntro3Component"], //GraduateVerificationManagementComponent,
+        _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_91__["FaqsComponent"], _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_92__["AddFaqComponent"], _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_93__["EditFaqComponent"], _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_94__["ViewFaqComponent"], _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_95__["AboutUsComponent"], _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_113__["GraduateAddFaqComponent"], _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_114__["GraduateEditFaqComponent"], _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_96__["HomepageManagementComponent"], _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_97__["HelpManagementComponent"], _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_98__["ViewHelpComponent"], _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_99__["MessagingReportsComponent"], _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_100__["VerificationSubmissionsComponent"], _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_101__["OfferSubmissionsComponent"], _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_102__["ViewVerificationComponent"], _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_103__["ViewOfferComponent"], _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_104__["ViewReportComponent"], //IndustrylistComponent,
+        _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_107__["ResetPasswordComponent"], _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_108__["TermsSubHeadingsComponent"], _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_109__["AddHeadingComponent"], _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_110__["EditHeadingComponent"], _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_111__["EditSubHeadingComponent"], _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_112__["AddSubHeadingComponent"]]),
         providers: [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["BsModalRef"], {
           provide: _angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"],
           useClass: _angular_common__WEBPACK_IMPORTED_MODULE_3__["HashLocationStrategy"]
         }, {
-          provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_113__["HTTP_INTERCEPTORS"],
-          useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_114__["TopgradserviceService"],
+          provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_105__["HTTP_INTERCEPTORS"],
+          useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_106__["TopgradserviceService"],
           multi: true
         }, _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]]
@@ -11378,18 +10255,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdWItYWRtaW4tbWFuYWdlbWVudC5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "ZnBK": function ZnBK(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWVtcGxveWVyLWhvdy1pdC13b3Jrcy5jb21wb25lbnQuc2NzcyJ9 */";
       /***/
     },
 
@@ -11724,10 +10589,10 @@
           path: 'employersList',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | pages-employers-list-employers-list-module */
-            "pages-employers-list-employers-list-module").then(__webpack_require__.bind(null,
-            /*! ./pages/employers-list/employers-list.module */
-            "Hgyl")).then(function (m) {
+            /*! import() | pages-UserManagement-employers-list-employers-list-module */
+            "pages-UserManagement-employers-list-employers-list-module").then(__webpack_require__.bind(null,
+            /*! ./pages/UserManagement/employers-list/employers-list.module */
+            "SU4D")).then(function (m) {
               return m.EmployersListModule;
             });
           }
@@ -11735,10 +10600,10 @@
           path: 'graduateList',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | pages-graduate-list-graduate-list-module */
-            "pages-graduate-list-graduate-list-module").then(__webpack_require__.bind(null,
-            /*! ./pages/graduate-list/graduate-list.module */
-            "MHIT")).then(function (m) {
+            /*! import() | pages-UserManagement-graduate-list-graduate-list-module */
+            "pages-UserManagement-graduate-list-graduate-list-module").then(__webpack_require__.bind(null,
+            /*! ./pages/UserManagement/graduate-list/graduate-list.module */
+            "G31A")).then(function (m) {
               return m.GraduateListModule;
             });
           }
@@ -11798,46 +10663,46 @@
             });
           }
         }, {
-          path: 'editEmployer',
+          path: 'editEmployer/:id',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-edit-employer-edit-employer-module */
-            "views-edit-employer-edit-employer-module").then(__webpack_require__.bind(null,
-            /*! ./views/edit-employer/edit-employer.module */
-            "3g0J")).then(function (m) {
+            /*! import() | pages-UserManagement-edit-employer-edit-employer-module */
+            "pages-UserManagement-edit-employer-edit-employer-module").then(__webpack_require__.bind(null,
+            /*! ./pages/UserManagement/edit-employer/edit-employer.module */
+            "Y8eB")).then(function (m) {
               return m.EditEmployerModule;
             });
           }
         }, {
-          path: 'editGraduate',
+          path: 'editGraduate/:id',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-edit-graduate-edit-graduate-module */
-            "views-edit-graduate-edit-graduate-module").then(__webpack_require__.bind(null,
-            /*! ./views/edit-graduate/edit-graduate.module */
-            "uuA8")).then(function (m) {
+            /*! import() | pages-UserManagement-edit-graduate-edit-graduate-module */
+            "pages-UserManagement-edit-graduate-edit-graduate-module").then(__webpack_require__.bind(null,
+            /*! ./pages/UserManagement/edit-graduate/edit-graduate.module */
+            "4ghe")).then(function (m) {
               return m.EditGraduateModule;
             });
           }
         }, {
-          path: 'viewGraduate',
+          path: 'viewGraduate/:id',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-view-graduate-view-graduate-module */
-            "views-view-graduate-view-graduate-module").then(__webpack_require__.bind(null,
-            /*! ./views/view-graduate/view-graduate.module */
-            "0+Xa")).then(function (m) {
+            /*! import() | pages-UserManagement-view-graduate-view-graduate-module */
+            "pages-UserManagement-view-graduate-view-graduate-module").then(__webpack_require__.bind(null,
+            /*! ./pages/UserManagement/view-graduate/view-graduate.module */
+            "Iitw")).then(function (m) {
               return m.ViewGraduateModule;
             });
           }
         }, {
-          path: 'viewEmployer',
+          path: 'viewEmployer/:id',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-view-employer-view-employer-module */
-            "views-view-employer-view-employer-module").then(__webpack_require__.bind(null,
-            /*! ./views/view-employer/view-employer.module */
-            "hZv/")).then(function (m) {
+            /*! import() | pages-UserManagement-view-employer-view-employer-module */
+            "pages-UserManagement-view-employer-view-employer-module").then(__webpack_require__.bind(null,
+            /*! ./pages/UserManagement/view-employer/view-employer.module */
+            "sdL6")).then(function (m) {
               return m.ViewEmployerModule;
             });
           }
@@ -12142,10 +11007,10 @@
           path: 'editEmployerHowItWorks',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-edit-employer-how-it-works-edit-employer-how-it-works-module */
-            "views-edit-employer-how-it-works-edit-employer-how-it-works-module").then(__webpack_require__.bind(null,
-            /*! ./views/edit-employer-how-it-works/edit-employer-how-it-works.module */
-            "lP0W")).then(function (m) {
+            /*! import() | pages-content-management-how-it-works-edit-employer-how-it-works-edit-employer-how-it-works-module */
+            "pages-content-management-how-it-works-edit-employer-how-it-works-edit-employer-how-it-works-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/how-it-works/edit-employer-how-it-works/edit-employer-how-it-works.module */
+            "/ZRv")).then(function (m) {
               return m.EditEmployerHowItWorksModule;
             });
           }
@@ -12164,10 +11029,10 @@
           path: 'editGraduateHowItWorks',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-edit-graduate-how-it-works-edit-graduate-how-it-works-module */
-            "views-edit-graduate-how-it-works-edit-graduate-how-it-works-module").then(__webpack_require__.bind(null,
-            /*! ./views/edit-graduate-how-it-works/edit-graduate-how-it-works.module */
-            "qHN/")).then(function (m) {
+            /*! import() | pages-content-management-how-it-works-edit-graduate-how-it-works-edit-graduate-how-it-works-module */
+            "pages-content-management-how-it-works-edit-graduate-how-it-works-edit-graduate-how-it-works-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/how-it-works/edit-graduate-how-it-works/edit-graduate-how-it-works.module */
+            "sFuJ")).then(function (m) {
               return m.EditGraduateHowItWorksModule;
             });
           }
@@ -12512,23 +11377,40 @@
               return m.ViewFaqModule;
             });
           }
-        }, // {
-        //   path: 'faqs',
-        //   loadChildren: () => import('./views/faqs/faqs.module').then(m => m.FaqsModule)
-        // },
-        // {
-        //   path: 'add-faq',
-        //   loadChildren: () => import('./views/add-faq/add-faq.module').then(m => m.AddFaqModule)
-        // },
-        // {
-        //   path: 'edit-faq',
-        //   loadChildren: () => import('./views/edit-faq/edit-faq.module').then(m => m.EditFaqModule)
-        // },
-        // {
-        //   path: 'view-faq',
-        //   loadChildren: () => import('./views/view-faq/view-faq.module').then(m => m.ViewFaqModule)
-        // },
-        {
+        }, {
+          path: 'employerIndustryManagement',
+          loadChildren: function loadChildren() {
+            return __webpack_require__.e(
+            /*! import() | pages-content-management-industry-management-employer-industry-employer-industry-module */
+            "pages-content-management-industry-management-employer-industry-employer-industry-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/industry-management/employer-industry/employer-industry.module */
+            "PD/U")).then(function (m) {
+              return m.EmployerIndustryModule;
+            });
+          }
+        }, {
+          path: 'graduateIndustryManagement',
+          loadChildren: function loadChildren() {
+            return __webpack_require__.e(
+            /*! import() | pages-content-management-industry-management-graduate-industry-graduate-industry-module */
+            "pages-content-management-industry-management-graduate-industry-graduate-industry-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/industry-management/graduate-industry/graduate-industry.module */
+            "s3Lz")).then(function (m) {
+              return m.GraduateIndustryModule;
+            });
+          }
+        }, {
+          path: 'skills-list',
+          loadChildren: function loadChildren() {
+            return __webpack_require__.e(
+            /*! import() | views-skills-list-skills-list-module */
+            "views-skills-list-skills-list-module").then(__webpack_require__.bind(null,
+            /*! ./views/skills-list/skills-list.module */
+            "HOly")).then(function (m) {
+              return m.SkillsListModule;
+            });
+          }
+        }, {
           path: 'about-us',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
@@ -12550,16 +11432,11 @@
               return m.HomepageManagementModule;
             });
           }
-        }, {
-          path: 'industryManagement',
-          loadChildren: function loadChildren() {
-            return Promise.resolve().then(__webpack_require__.bind(null,
-            /*! ./pages/content-management/industry-management/industrylist/industrylist.module */
-            "08Ex")).then(function (m) {
-              return m.IndustrylistModule;
-            });
-          }
-        }, {
+        }, // {
+        //   path: 'industryManagement',
+        //   loadChildren: () => import('./pages/content-management/industry-management/industrylist/industrylist.module').then(m => m.IndustrylistModule)
+        // },
+        {
           path: 'help-management',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
@@ -12737,9 +11614,23 @@
           icon: 'icon-home'
         }, {
           name: 'Industry Management',
-          url: '/industryManagement',
-          icon: 'icon-star'
-        }, {
+          // url: '/industryManagement',
+          icon: 'icon-star',
+          children: [{
+            name: 'Employer Industry Management',
+            url: '/employerIndustryManagement',
+            icon: 'icon-star'
+          }, {
+            name: 'Graduate Industry Management',
+            url: '/graduateIndustryManagement',
+            icon: 'icon-star'
+          }]
+        }, // {
+        //   name: 'Industry Management',
+        //   url: '/industryManagement',
+        //   icon: 'icon-star', 
+        // },
+        {
           name: 'How it Works Management',
           icon: 'icon-settings',
           children: [{
@@ -12849,6 +11740,10 @@
         icon: 'icon-user'
       }, {
         divider: true
+      }, {
+        name: 'Skills List',
+        url: '/skills-list',
+        icon: 'icon-user'
       }, {
         title: true,
         name: 'Extras'
@@ -12994,14 +11889,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection19;
+            var _this$selection15;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection19 = this.selection).select.apply(_this$selection19, _toConsumableArray(this.dataSource.data));
+            (_this$selection15 = this.selection).select.apply(_this$selection15, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -13512,14 +12407,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection20;
+            var _this$selection16;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection20 = this.selection).select.apply(_this$selection20, _toConsumableArray(this.dataSource.data));
+            (_this$selection16 = this.selection).select.apply(_this$selection16, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -14169,14 +13064,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection21;
+            var _this$selection17;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection21 = this.selection).select.apply(_this$selection21, _toConsumableArray(this.dataSource.data));
+            (_this$selection17 = this.selection).select.apply(_this$selection17, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -14319,18 +13214,6 @@
     },
 
     /***/
-    "jvj3": function jvj3(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"grad-mn-list\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"tabl_upr d-flex align-items-center justify-content-between\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <div class=\"fltr_div d-flex align-items-center\">\n            <div class=\"form-group mb-0 ml-3\">\n              <select class=\"form-control custom-select\">\n                  <option selected>Select Filter</option>\n                  <option>Location</option>\n                  <option>Work Preference</option>\n                  <option>Availability</option>\n                  <option>Education</option>\n                  <option>License</option>\n                  <option>Work Rights</option>\n                  <option>Skills</option>\n              </select>\n            </div>\n\n            <div class=\"form-group mb-0 ml-3\">\n              <select class=\"form-control custom-select\">\n                  <option selected>Select Sub-Filter</option>\n                  <option>Melbourne</option>\n                  <option>Sydney</option>\n              </select>\n            </div>\n            <div class=\"appl_fltr ml-3\">\n              <button class=\"btn btn-primary\">\n              Apply Filter\n            </button>\n            </div>\n          </div>\n          \n\n          <!-- <div class=\"grad_filter dropdown ml-4\" dropdown>\n            \n            <a class=\"btn btn-primary\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n              Filter\n            </a>\n            <ul class=\"dropdown-menu dropdown-menu-left\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Location<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Melbourne</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Sydney</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Work Preference<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Open</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Any</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Availability<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Any</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Remote</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Education<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Macquarie University</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">The University of New England</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">The University of Sydney</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Western Sydney University</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">License<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Available</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Not Available</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Work Rights<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Available</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Not Available</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Skills<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Figma</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Adobe Illustrator</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Data Analysis</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Adobe Photoshop</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Adobe XD</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Marketing</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Python</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Resume Writing</a></li>\n                </ul>\n              </li>\n              \n            </ul>\n          </div> -->\n        </div>\n        \n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"gradlist\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row; let i=index\">  {{i+1}}</td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.first_name}} </td>\n              </ng-container>\n              <!-- Email Column -->\n              <ng-container matColumnDef=\"email\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Email Address</th>\n                <td mat-cell *matCellDef=\"let row\">  {{row.email}}  </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"company\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Creation Date (Time)</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.createdAt | date}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"location\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Location</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.company_name}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"wrkpref\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Preference</th>\n                <td mat-cell *matCellDef=\"let row\">  </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"availability\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Availability</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.availability}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"education\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Education</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.education}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"license\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>License</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.license}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"wrkrights\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Rights</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.wrkrights}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"skills\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Skills</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.skills}} </td>\n              </ng-container>\n             \n              <!-- lname Column -->\n              <ng-container matColumnDef=\"lname\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.last_name}} </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle [checked]=\"row.status=='active'?true:false\"></mat-slide-toggle>\n                   </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <a mat-menu-item class=\"\" routerLink=\"/viewGraduate\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/editGraduate\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"resetpswrd.show()\">\n                        <mat-icon class=\"material-icons-outlined\">cached</mat-icon>\n                        <span>Reset Password</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">block</mat-icon>\n                        <span>Ban</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">message</mat-icon>\n                        <span>Send Message</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">email</mat-icon>\n                        <span>Send Email</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n\n\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p class=\"mb-0\">Are you sure you want to delete the selected user's account?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div bsModal #resetpswrd=\"bs-modal\" class=\"modal fade reset_pswrd\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"resetpswrd.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form>\n          <div class=\"row\">\n            <div class=\"col-sm-12\">\n              <div class=\"form-group\">\n                <label>Current Password</label>\n                <input type=\"password\" class=\"form-control\" value=\"abc123@\">\n              </div>\n              <div class=\"form-group\">\n                <label>New Password</label>\n                <input type=\"password\" class=\"form-control\">\n              </div>\n              <div class=\"form-group\">\n                <label>Confirm Password</label>\n                <input type=\"password\" class=\"form-control\">\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"resetpswrd.hide()\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\">Submit</button>\n      </div>\n    </div>\n  </div>\n</div>";
-      /***/
-    },
-
-    /***/
     "k/sR": function kSR(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -14462,14 +13345,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection22;
+            var _this$selection18;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection22 = this.selection).select.apply(_this$selection22, _toConsumableArray(this.dataSource.data));
+            (_this$selection18 = this.selection).select.apply(_this$selection18, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -14533,18 +13416,6 @@
 
 
       __webpack_exports__["default"] = "<section class=\"edit-job-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-sm-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Edit Job Details</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<form>\n\t\t\t\t\t\t\t<div class=\"edit-job-descr\">\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Job Title</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" value=\"UI/UX Designer\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Company Name</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" value=\"Adobe\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group only-view\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Job Posted</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" value=\"8 days ago\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Remote work</label>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"radio-btns border-0\">\n\t\t\t\t\t\t\t\t\t\t\t\t<mat-radio-group aria-label=\"Select an option\">\n\t\t\t\t\t\t\t\t\t\t\t\t  <mat-radio-button value=\"1\" class=\"mr-3\">Yes</mat-radio-button>\n\t\t\t\t\t\t\t\t\t\t\t\t  <mat-radio-button value=\"2\">No</mat-radio-button>\n\t\t\t\t\t\t\t\t\t\t\t\t</mat-radio-group>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Availability</label>\n\t\t\t\t\t\t\t\t\t\t\t<select class=\"form-control\">\n\t\t\t\t\t\t\t\t                <option>Part time</option>\n\t\t\t\t\t\t\t\t                <option>Full time</option>\n\t\t\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Work type</label>\n\t\t\t\t\t\t\t\t\t\t\t<select class=\"form-control\">\n\t\t\t\t\t\t\t\t                <option>Employment</option>\n\t\t\t\t\t\t\t\t                <option>Internship</option>\n\t\t\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" value=\"Employer\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"location-inp\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label>Location</label>\n\t\t\t\t\t\t\t\t\t\t\t\t<form class=\"example-form\">\n\t\t\t\t\t\t\t\t\t\t\t\t    <input type=\"text\"\n\t\t\t\t\t\t\t\t\t\t\t\t           placeholder=\"Start typing\"\n\t\t\t\t\t\t\t\t\t\t\t\t           aria-label=\"Number\"\n\t\t\t\t\t\t\t\t\t\t\t\t           matInput\n\t\t\t\t\t\t\t\t\t\t\t\t           [formControl]=\"myControl\"\n\t\t\t\t\t\t\t\t\t\t\t\t           [matAutocomplete]=\"auto\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n\t\t\t\t\t\t\t\t\t\t\t\t      <mat-option *ngFor=\"let option1 of filteredOptions | async\" [value]=\"option1\">\n\t\t\t\t\t\t\t\t\t\t\t\t        {{option1}}\n\t\t\t\t\t\t\t\t\t\t\t\t      </mat-option>\n\t\t\t\t\t\t\t\t\t\t\t\t    </mat-autocomplete>\n\t\t\t\t\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"skill-selelct\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Key Skills</label>\n\t\t\t\t\t\t\t\t\t\t<!--Using items input-->\n\t\t\t\t\t\t\t\t\t\t<ng-select [multiple]=\"true\" [items]=\"cars\" \n\t\t\t\t\t\t\t\t\t\t           bindLabel=\"name\" \n\t\t\t\t\t\t\t\t\t\t           bindValue=\"id\" \n\t\t\t\t\t\t\t\t\t\t           [(ngModel)]=\"selectedCar\">\n\t\t\t\t\t\t\t\t\t\t</ng-select>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Expected start date</label>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"\">\n\t\t\t\t\t\t\t\t\t\t\t\t  <input matInput [matDatepicker]=\"picker1\"  (click)=\"picker1.open()\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t  <mat-datepicker-toggle matSuffix [for]=\"picker1\" class=\"job_date_pickr\"></mat-datepicker-toggle>\n\t\t\t\t\t\t\t\t\t\t\t\t  <mat-datepicker #picker1></mat-datepicker>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t<label>Application deadline</label>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"\">\n\t\t\t\t\t\t\t\t\t\t\t\t  <input matInput [matDatepicker]=\"picker\"  (click)=\"picker.open()\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t  <mat-datepicker-toggle matSuffix [for]=\"picker\" class=\"job_date_pickr\"></mat-datepicker-toggle>\n\t\t\t\t\t\t\t\t\t\t\t\t  <mat-datepicker #picker></mat-datepicker>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-sm-6\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"salary-inp\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label>Salary</label>\n\t\t\t\t\t\t\t\t\t\t\t\t<ngx-slider [(value)]=\"minValue\" [(highValue)]=\"maxValue\" [options]=\"options\"></ngx-slider>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Cancel</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</form>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>";
-      /***/
-    },
-
-    /***/
-    "kQxi": function kQxi(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"applicant-mngmnt\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n            <mat-form-field appearance=\"standard\">\n              <mat-label>Filter</mat-label>\n              <input matInput placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n            </mat-form-field>\n            <span class=\"add-categry\">\n              <a class=\"btn-primary btn\" data-toggle=\"modal\" (click)=\"addModal.show()\">Add</a>\n            </span>\n          </div>\n  \n          <div class=\"mat-elevation-z8\">\n            <div class=\"table-responsive\">\n              <table mat-table [dataSource]=\"userList\" matSort>\n                <!-- Checkbox Column -->\n                <ng-container matColumnDef=\"select\">\n                  <th mat-header-cell *matHeaderCellDef>\n                    <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                      [checked]=\"selection.hasValue() && isAllSelected()\"\n                      [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                      [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                    </mat-checkbox>\n                  </th>\n                  <td mat-cell *matCellDef=\"let row \">\n                    <mat-checkbox (click)=\"$event.stopPropagation()\"\n                      (change)=\"$event ? selection.toggle(row) : null\"\n                      [checked]=\"selection.isSelected(row)\"\n                      [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                    </mat-checkbox>\n                  </td>\n                </ng-container>\n                <!-- ID Column -->\n                <ng-container matColumnDef=\"id\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                  <td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n                </ng-container>\n  \n                <!-- Name Column -->\n                <ng-container matColumnDef=\"name\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Industry Name</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n                </ng-container>\n                \n               \n                 <!-- Action column -->\n                 <ng-container matColumnDef=\"action\">\n                  <th mat-header-cell *matHeaderCellDef> Action </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                      <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                        <mat-icon>more_vert</mat-icon>\n                      </button>\n                      <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                        <a mat-menu-item class=\"\" routerLink=\"/viewSubAdmin\">\n                          <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                          <span>View</span>\n                        </a>\n                        <a mat-menu-item class=\"\" routerLink=\"/editSubAdmin\">\n                          <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                          <span>Edit</span>\n                        </a>\n                        <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                          <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                          <span>Delete</span>\n                        </a>\n                      </mat-menu>\n                  </td>\n                </ng-container>\n  \n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  \n                <!-- Row shown when there is no matching data. -->\n                <tr class=\"mat-row\" *matNoDataRow>\n                  <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n                </tr>\n              </table>\n            </div>\n            <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  \n  <!-- Modal -->\n  <div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-sm\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n            <span aria-hidden=\"true\" class=\"prof_modclose\">\n              <img src=\"assets/img/Group 225.png\">\n            </span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <p>Are you sure you want to delete the selected Sub Admin?</p>\n        </div>\n        <div class=\"modal-footer justify-content-center\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n          <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n  <!-- Add Modal -->\n<div bsModal #addModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"addModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"addModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <div >\n          <strong class=\"label-add\">Add Industry</strong>\n        </div>\n        <form>\n        \t<div class=\"row\">\n        \t\t<div class=\"col-sm-12\">\n        \t\t\t<div class=\"form-group\">\n                <!-- <label>Industry Name</label> -->\n                <input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"John\">\n              </div>\n        \t\t</div>\n        \t</div>\n        </form>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"addModal.hide()\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\">Submit</button>\n      </div>\n    </div>\n  </div>\n</div>\n  \n  ";
       /***/
     },
 
@@ -14714,7 +13585,7 @@
         }, {
           key: "getheadingdetail",
           value: function getheadingdetail() {
-            var _this33 = this;
+            var _this31 = this;
 
             console.log("khjhgjhgjhgjhghjghjgjhghjg");
             var obj = {
@@ -14724,7 +13595,7 @@
             this.Service.termsheading(obj).subscribe(function (data) {
               console.log("main data for terms is ====", data);
 
-              _this33.editheadingform.patchValue({
+              _this31.editheadingform.patchValue({
                 title: data.data.heading.title,
                 description: data.data.heading.description
               });
@@ -14742,7 +13613,7 @@
         }, {
           key: "editheading",
           value: function editheading() {
-            var _this34 = this;
+            var _this32 = this;
 
             console.log("sdsfsfdsfdfdfds", this.editheadingform);
 
@@ -14758,14 +13629,14 @@
                 console.log("fgdgfdgfdfgdfgd", res);
 
                 if (res.code == 200) {
-                  _this34._snackBar.open("Heading Updated Successfully", "close", {
+                  _this32._snackBar.open("Heading Updated Successfully", "close", {
                     duration: 2000
                   });
                 }
               }, function (err) {
                 console.log(err);
 
-                _this34._snackBar.open("Some Error Occued", "close", {
+                _this32._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               });
@@ -14817,18 +13688,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhYm91dC11cy5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "nnjm": function nnjm(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"view-graduate-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\n    \t\t\t<div class=\"card\">\n    \t\t\t\t<mat-tab-group>\n    \t\t\t\t\t<mat-tab label=\"Graduate Profile\">\n\t\t\t\t\t\t\t<!-- <div class=\"card-header\">\n\t\t\t\t\t\t\t\t<strong>View Graduate Details</strong>\n\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form mt-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"edit-profile d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative ml-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"view_heading ml-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h2>Nathan Jones</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"gt_dash_sub_head\">Accounting - Accounts Receivable/Credit Control</p>\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date\">Melbourne, Victoria, Australia</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"other_dtls ml-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p><span class=\"dtl_hdng\">Work preferences:</span>Any</p>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><span class=\"dtl_hdng\">Availability:</span>Any</p>\n\t\t\t\t\t\t\t\t\t\t\t\t<p><span class=\"dtl_hdng\">Location:</span>Open to remote working/relocation</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t<div class=\"access-form-fields mt-3\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-11\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"access-form\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"grad_dtls\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Profile summary</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Recent college graduate with internship experience at well established brands. Seeking to leverage exceptional accounting skills and academic knowledge to gain the entry-level accounting position at your firm. Dedicated, competent, and detail-oriented individual with the capacity to go beyond what is expected and achieve company goals. </p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Work experience</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"expe_list1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experiene_txt d-flex\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"exper_img mr-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experience_inner\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/image 27.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"work_right_txt\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"all_headings d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"ex_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"account_intern\">Accounting Intern</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accnt_subhead\">Rydges Hotels & Resorts • Internship</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date\">Dec 2019 - Present (10 months)</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Helped manage payroll and the registration of employees to Jobs and Pensions service for our 150+ employee branch</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Reviewed, prepared, and issued bills and invoices from over 300+ clients</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Assisted with incoming earnings and outgoing payments</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Organized files, records, cash, and cash equivalents to comply with policy and procedure</li>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"files_prevw mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"prw_ttl\">Files</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt mb-0\">AccountingCO_certificate.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_size mb-0\">126 KB • Added 02/05/19</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Education</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"expe_list1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experiene_txt d-flex\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"exper_img mr-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experience_inner\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/image 22.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"work_right_txt\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"all_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"ex_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"account_intern\">Monash University</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accnt_subhead\">Bachelor,  Accounting and Finance</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date mb-0\">2014 - 2018 </p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date mb-0\">Grade: HD</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"files_prevw mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"prw_ttl\">Files</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt mb-0\">Bachelor_certificate.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_size mb-0\">126 KB • Added 02/05/19</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Projects (Uni/TAFE)</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"expe_list1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experiene_txt d-flex\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"exper_img mr-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experience_inner\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/image 22.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"work_right_txt\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"all_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"ex_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"account_intern\">Project name</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accnt_subhead\">Monash University</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date mb-0\">2014 </p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"singl_div\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date mb-0\">Summary</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit nulla, lacinia a porta sit amet, pulvinar pulvinar mi. Cras turpis lorem, elementum a sodales sed, posuere ut dui.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"singl_div\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date mb-0\">Key tasks</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Lorem ipsum dolor sit amet</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Consectetur adipiscing elit</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Suspendisse elit nulla id lacinia a porta sit amet.</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"singl_div\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date mb-0\">Outcomes</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Lorem ipsum dolor sit amet</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Consectetur adipiscing elit</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>- Suspendisse elit nulla id lacinia a porta sit amet.</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"files_prevw mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"prw_ttl\">Files</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt mb-0\">Bachelor_certificate.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_size mb-0\">126 KB • Added 02/05/19</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Licences and certifications</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"expe_list1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experiene_txt\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"work_right_txt\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"all_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"singl_div\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-1\">Working with Children Check</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date \">Jan 2019 - Jan 2025</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<hr>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"singl_div\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-1\">VIC Responsible Service of Alcohol Licence</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date \">Issued Feb 2020</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Volunteer experience</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"expe_list1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experiene_txt d-flex\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"exper_img mr-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experience_inner\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/image 21.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"work_right_txt\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"all_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"ex_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"account_intern\">Assistant Store Manager</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accnt_subhead\">The Salvation Army</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date mb-0\">Dec 2019 - Present (10 months)</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Resume</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"files_prevw mb-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt mb-0\">NathanJones_CV.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_size mb-0\">126 KB • Added 02/05/19</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Video Resume</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"video_info\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <p class=\"accoun_date mb-0\">126 KB • Added 02/05/19</p> -->\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"vid_img mt-1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/Rectangle 17.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"add-click employr_vw\"><img src=\"assets/img/Rectangle 16.png\" class=\"img-fluid\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Technical skills</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"expe_list1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul class=\"typed_text typed_subpart d-flex flex-wrap\" type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"skill_dtl dropdown\" dropdown placement=\"bottom right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span data-toggle=\"dropdown\" dropdownToggle (click)=\"false\">Figma</span>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-right text-center\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t        <div class=\"dropdown-header text-center\"><strong>Figma</strong></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t        <h4>Proficiency Level</h4>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t        \t<div class=\"ratng_stars\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \t<ul class=\"list-inline\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.671 12.1172C29.8164 11.9745 29.9194 11.7933 29.9682 11.5942C30.0169 11.3952 30.0096 11.1863 29.9469 10.9913C29.8842 10.7963 29.7688 10.623 29.6137 10.4912C29.4586 10.3593 29.27 10.274 29.0695 10.2452L20.5824 8.99605C20.4087 8.9696 20.244 8.90104 20.1021 8.79623C19.9603 8.69142 19.8456 8.55346 19.7677 8.39409L15.9865 0.61033C15.8966 0.427029 15.7579 0.272783 15.586 0.164956C15.4141 0.0571287 15.2159 0 15.0137 0C14.8116 0 14.6134 0.0571287 14.4415 0.164956C14.2696 0.272783 14.1309 0.427029 14.041 0.61033L10.2598 8.39409C10.1819 8.55346 10.0672 8.69142 9.92537 8.79623C9.78352 8.90104 9.61875 8.9696 9.44509 8.99605L0.930534 10.2452C0.729973 10.274 0.541424 10.3593 0.386317 10.4912C0.23121 10.623 0.115766 10.7963 0.0531045 10.9913C-0.00955693 11.1863 -0.0169222 11.3952 0.0318457 11.5942C0.0806135 11.7933 0.183559 11.9745 0.328981 12.1172L6.46826 18.1751C6.59481 18.2987 6.68949 18.4519 6.74403 18.6211C6.79856 18.7903 6.81128 18.9705 6.78107 19.1459L5.33046 27.716C5.29652 27.918 5.31899 28.1255 5.39533 28.3152C5.47167 28.505 5.59885 28.6693 5.76253 28.7898C5.92621 28.9102 6.11989 28.982 6.32171 28.997C6.52354 29.0121 6.7255 28.9697 6.90482 28.8747L14.4947 24.8211C14.6507 24.7387 14.8241 24.6957 15 24.6957C15.1759 24.6957 15.3493 24.7387 15.5053 24.8211L23.0952 28.8608C23.2734 28.9546 23.4738 28.9965 23.6741 28.982C23.8744 28.9674 24.0668 28.8969 24.23 28.7783C24.3931 28.6597 24.5205 28.4976 24.5981 28.3101C24.6757 28.1226 24.7004 27.9169 24.6695 27.716L23.2189 19.1459C23.1887 18.9705 23.2014 18.7903 23.256 18.6211C23.3105 18.4519 23.4052 18.2987 23.5317 18.1751L29.671 12.1172Z\" fill=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.671 12.1172C29.8164 11.9745 29.9194 11.7933 29.9682 11.5942C30.0169 11.3952 30.0096 11.1863 29.9469 10.9913C29.8842 10.7963 29.7688 10.623 29.6137 10.4912C29.4586 10.3593 29.27 10.274 29.0695 10.2452L20.5824 8.99605C20.4087 8.9696 20.244 8.90104 20.1021 8.79623C19.9603 8.69142 19.8456 8.55346 19.7677 8.39409L15.9865 0.61033C15.8966 0.427029 15.7579 0.272783 15.586 0.164956C15.4141 0.0571287 15.2159 0 15.0137 0C14.8116 0 14.6134 0.0571287 14.4415 0.164956C14.2696 0.272783 14.1309 0.427029 14.041 0.61033L10.2598 8.39409C10.1819 8.55346 10.0672 8.69142 9.92537 8.79623C9.78352 8.90104 9.61875 8.9696 9.44509 8.99605L0.930534 10.2452C0.729973 10.274 0.541424 10.3593 0.386317 10.4912C0.23121 10.623 0.115766 10.7963 0.0531045 10.9913C-0.00955693 11.1863 -0.0169222 11.3952 0.0318457 11.5942C0.0806135 11.7933 0.183559 11.9745 0.328981 12.1172L6.46826 18.1751C6.59481 18.2987 6.68949 18.4519 6.74403 18.6211C6.79856 18.7903 6.81128 18.9705 6.78107 19.1459L5.33046 27.716C5.29652 27.918 5.31899 28.1255 5.39533 28.3152C5.47167 28.505 5.59885 28.6693 5.76253 28.7898C5.92621 28.9102 6.11989 28.982 6.32171 28.997C6.52354 29.0121 6.7255 28.9697 6.90482 28.8747L14.4947 24.8211C14.6507 24.7387 14.8241 24.6957 15 24.6957C15.1759 24.6957 15.3493 24.7387 15.5053 24.8211L23.0952 28.8608C23.2734 28.9546 23.4738 28.9965 23.6741 28.982C23.8744 28.9674 24.0668 28.8969 24.23 28.7783C24.3931 28.6597 24.5205 28.4976 24.5981 28.3101C24.6757 28.1226 24.7004 27.9169 24.6695 27.716L23.2189 19.1459C23.1887 18.9705 23.2014 18.7903 23.256 18.6211C23.3105 18.4519 23.4052 18.2987 23.5317 18.1751L29.671 12.1172Z\" fill=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.671 12.1172C29.8164 11.9745 29.9194 11.7933 29.9682 11.5942C30.0169 11.3952 30.0096 11.1863 29.9469 10.9913C29.8842 10.7963 29.7688 10.623 29.6137 10.4912C29.4586 10.3593 29.27 10.274 29.0695 10.2452L20.5824 8.99605C20.4087 8.9696 20.244 8.90104 20.1021 8.79623C19.9603 8.69142 19.8456 8.55346 19.7677 8.39409L15.9865 0.61033C15.8966 0.427029 15.7579 0.272783 15.586 0.164956C15.4141 0.0571287 15.2159 0 15.0137 0C14.8116 0 14.6134 0.0571287 14.4415 0.164956C14.2696 0.272783 14.1309 0.427029 14.041 0.61033L10.2598 8.39409C10.1819 8.55346 10.0672 8.69142 9.92537 8.79623C9.78352 8.90104 9.61875 8.9696 9.44509 8.99605L0.930534 10.2452C0.729973 10.274 0.541424 10.3593 0.386317 10.4912C0.23121 10.623 0.115766 10.7963 0.0531045 10.9913C-0.00955693 11.1863 -0.0169222 11.3952 0.0318457 11.5942C0.0806135 11.7933 0.183559 11.9745 0.328981 12.1172L6.46826 18.1751C6.59481 18.2987 6.68949 18.4519 6.74403 18.6211C6.79856 18.7903 6.81128 18.9705 6.78107 19.1459L5.33046 27.716C5.29652 27.918 5.31899 28.1255 5.39533 28.3152C5.47167 28.505 5.59885 28.6693 5.76253 28.7898C5.92621 28.9102 6.11989 28.982 6.32171 28.997C6.52354 29.0121 6.7255 28.9697 6.90482 28.8747L14.4947 24.8211C14.6507 24.7387 14.8241 24.6957 15 24.6957C15.1759 24.6957 15.3493 24.7387 15.5053 24.8211L23.0952 28.8608C23.2734 28.9546 23.4738 28.9965 23.6741 28.982C23.8744 28.9674 24.0668 28.8969 24.23 28.7783C24.3931 28.6597 24.5205 28.4976 24.5981 28.3101C24.6757 28.1226 24.7004 27.9169 24.6695 27.716L23.2189 19.1459C23.1887 18.9705 23.2014 18.7903 23.256 18.6211C23.3105 18.4519 23.4052 18.2987 23.5317 18.1751L29.671 12.1172Z\" fill=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.671 12.1172C29.8164 11.9745 29.9194 11.7933 29.9682 11.5942C30.0169 11.3952 30.0096 11.1863 29.9469 10.9913C29.8842 10.7963 29.7688 10.623 29.6137 10.4912C29.4586 10.3593 29.27 10.274 29.0695 10.2452L20.5824 8.99605C20.4087 8.9696 20.244 8.90104 20.1021 8.79623C19.9603 8.69142 19.8456 8.55346 19.7677 8.39409L15.9865 0.61033C15.8966 0.427029 15.7579 0.272783 15.586 0.164956C15.4141 0.0571287 15.2159 0 15.0137 0C14.8116 0 14.6134 0.0571287 14.4415 0.164956C14.2696 0.272783 14.1309 0.427029 14.041 0.61033L10.2598 8.39409C10.1819 8.55346 10.0672 8.69142 9.92537 8.79623C9.78352 8.90104 9.61875 8.9696 9.44509 8.99605L0.930534 10.2452C0.729973 10.274 0.541424 10.3593 0.386317 10.4912C0.23121 10.623 0.115766 10.7963 0.0531045 10.9913C-0.00955693 11.1863 -0.0169222 11.3952 0.0318457 11.5942C0.0806135 11.7933 0.183559 11.9745 0.328981 12.1172L6.46826 18.1751C6.59481 18.2987 6.68949 18.4519 6.74403 18.6211C6.79856 18.7903 6.81128 18.9705 6.78107 19.1459L5.33046 27.716C5.29652 27.918 5.31899 28.1255 5.39533 28.3152C5.47167 28.505 5.59885 28.6693 5.76253 28.7898C5.92621 28.9102 6.11989 28.982 6.32171 28.997C6.52354 29.0121 6.7255 28.9697 6.90482 28.8747L14.4947 24.8211C14.6507 24.7387 14.8241 24.6957 15 24.6957C15.1759 24.6957 15.3493 24.7387 15.5053 24.8211L23.0952 28.8608C23.2734 28.9546 23.4738 28.9965 23.6741 28.982C23.8744 28.9674 24.0668 28.8969 24.23 28.7783C24.3931 28.6597 24.5205 28.4976 24.5981 28.3101C24.6757 28.1226 24.7004 27.9169 24.6695 27.716L23.2189 19.1459C23.1887 18.9705 23.2014 18.7903 23.256 18.6211C23.3105 18.4519 23.4052 18.2987 23.5317 18.1751L29.671 12.1172Z\" fill=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.3208 11.7604L29.3198 11.7613L23.1824 17.8174C23.1821 17.8177 23.1819 17.8179 23.1816 17.8181C22.997 17.9987 22.8593 18.2219 22.7801 18.4678C22.7008 18.7136 22.6823 18.9752 22.726 19.2298C22.7261 19.2301 22.7261 19.2305 22.7262 19.2308L24.1758 27.7953C24.1921 27.905 24.1783 28.017 24.1361 28.1189C24.0935 28.2218 24.024 28.3098 23.9359 28.3739C23.8479 28.4379 23.7447 28.4755 23.6378 28.4833C23.5313 28.491 23.4244 28.4689 23.3289 28.4188C23.3286 28.4186 23.3283 28.4185 23.328 28.4184L15.7402 24.3797L15.7387 24.3789C15.5109 24.2587 15.2575 24.1957 15 24.1957C14.7425 24.1957 14.4891 24.2587 14.2613 24.3788L14.2591 24.38L6.67083 28.4329C6.67064 28.433 6.67045 28.4331 6.67027 28.4332C6.57408 28.484 6.46626 28.5064 6.3588 28.4984C6.25111 28.4904 6.14723 28.4521 6.05891 28.3871C5.97053 28.322 5.90108 28.2327 5.85919 28.1286C5.81732 28.0245 5.80488 27.9104 5.82349 27.7993C5.82351 27.7992 5.82353 27.799 5.82355 27.7989L7.27381 19.2308C7.27387 19.2305 7.27392 19.2301 7.27398 19.2298C7.31767 18.9752 7.29916 18.7136 7.21993 18.4678C7.14071 18.2219 7.00307 17.9988 6.81846 17.8182C6.81819 17.818 6.81792 17.8177 6.81764 17.8174L0.680169 11.7613L0.679246 11.7604C0.600571 11.6832 0.544246 11.5845 0.517479 11.4753C0.490705 11.366 0.494768 11.2512 0.529131 11.1443L0.0553482 10.9921L0.529131 11.1443C0.563481 11.0374 0.626506 10.9432 0.71022 10.8721C0.793878 10.8009 0.894917 10.7555 1.00169 10.7401L1.00311 10.7399L9.51767 9.49077L9.52039 9.49035C9.77473 9.4516 10.0156 9.35126 10.2225 9.19836C10.4294 9.04549 10.5962 8.8447 10.7091 8.61349L10.7095 8.61257L14.4898 0.830625C14.4899 0.830374 14.4901 0.830124 14.4902 0.829874C14.5395 0.729797 14.6149 0.646439 14.7072 0.588498C14.7998 0.530449 14.9059 0.5 15.0137 0.5C15.1216 0.5 15.2277 0.530448 15.3203 0.588498C15.4126 0.64644 15.488 0.729796 15.5373 0.829872C15.5374 0.830122 15.5376 0.830372 15.5377 0.830623L19.318 8.61257L19.3184 8.61349C19.4313 8.8447 19.5981 9.04549 19.805 9.19836C20.0119 9.35126 20.2528 9.4516 20.5071 9.49036L20.5096 9.49072L28.9967 10.7399L28.9983 10.7401C29.1051 10.7555 29.2061 10.8009 29.2898 10.8721C29.3735 10.9432 29.4365 11.0374 29.4709 11.1443C29.5052 11.2512 29.5093 11.366 29.4825 11.4752L29.9682 11.5942L29.4825 11.4753C29.4558 11.5845 29.3994 11.6832 29.3208 11.7604Z\" stroke=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            </div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            <h4>Description</h4>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t        <p>I am highly proficient in creating mobile\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tapplication, webpages, and tablet screens on\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFigma. I am highly proficient in creating mobile\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tapplication, webpages, and tablet screens on\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFigma.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t      </div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"skill_dtl dropdown\" dropdown placement=\"bottom right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span data-toggle=\"dropdown\" dropdownToggle (click)=\"false\">Adobe Illustrator</span>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-right text-center\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t        <div class=\"dropdown-header text-center\"><strong>Adobe Illustrator</strong></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t        <h4>Proficiency Level</h4>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t        \t<div class=\"ratng_stars\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \t<ul class=\"list-inline\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.671 12.1172C29.8164 11.9745 29.9194 11.7933 29.9682 11.5942C30.0169 11.3952 30.0096 11.1863 29.9469 10.9913C29.8842 10.7963 29.7688 10.623 29.6137 10.4912C29.4586 10.3593 29.27 10.274 29.0695 10.2452L20.5824 8.99605C20.4087 8.9696 20.244 8.90104 20.1021 8.79623C19.9603 8.69142 19.8456 8.55346 19.7677 8.39409L15.9865 0.61033C15.8966 0.427029 15.7579 0.272783 15.586 0.164956C15.4141 0.0571287 15.2159 0 15.0137 0C14.8116 0 14.6134 0.0571287 14.4415 0.164956C14.2696 0.272783 14.1309 0.427029 14.041 0.61033L10.2598 8.39409C10.1819 8.55346 10.0672 8.69142 9.92537 8.79623C9.78352 8.90104 9.61875 8.9696 9.44509 8.99605L0.930534 10.2452C0.729973 10.274 0.541424 10.3593 0.386317 10.4912C0.23121 10.623 0.115766 10.7963 0.0531045 10.9913C-0.00955693 11.1863 -0.0169222 11.3952 0.0318457 11.5942C0.0806135 11.7933 0.183559 11.9745 0.328981 12.1172L6.46826 18.1751C6.59481 18.2987 6.68949 18.4519 6.74403 18.6211C6.79856 18.7903 6.81128 18.9705 6.78107 19.1459L5.33046 27.716C5.29652 27.918 5.31899 28.1255 5.39533 28.3152C5.47167 28.505 5.59885 28.6693 5.76253 28.7898C5.92621 28.9102 6.11989 28.982 6.32171 28.997C6.52354 29.0121 6.7255 28.9697 6.90482 28.8747L14.4947 24.8211C14.6507 24.7387 14.8241 24.6957 15 24.6957C15.1759 24.6957 15.3493 24.7387 15.5053 24.8211L23.0952 28.8608C23.2734 28.9546 23.4738 28.9965 23.6741 28.982C23.8744 28.9674 24.0668 28.8969 24.23 28.7783C24.3931 28.6597 24.5205 28.4976 24.5981 28.3101C24.6757 28.1226 24.7004 27.9169 24.6695 27.716L23.2189 19.1459C23.1887 18.9705 23.2014 18.7903 23.256 18.6211C23.3105 18.4519 23.4052 18.2987 23.5317 18.1751L29.671 12.1172Z\" fill=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.671 12.1172C29.8164 11.9745 29.9194 11.7933 29.9682 11.5942C30.0169 11.3952 30.0096 11.1863 29.9469 10.9913C29.8842 10.7963 29.7688 10.623 29.6137 10.4912C29.4586 10.3593 29.27 10.274 29.0695 10.2452L20.5824 8.99605C20.4087 8.9696 20.244 8.90104 20.1021 8.79623C19.9603 8.69142 19.8456 8.55346 19.7677 8.39409L15.9865 0.61033C15.8966 0.427029 15.7579 0.272783 15.586 0.164956C15.4141 0.0571287 15.2159 0 15.0137 0C14.8116 0 14.6134 0.0571287 14.4415 0.164956C14.2696 0.272783 14.1309 0.427029 14.041 0.61033L10.2598 8.39409C10.1819 8.55346 10.0672 8.69142 9.92537 8.79623C9.78352 8.90104 9.61875 8.9696 9.44509 8.99605L0.930534 10.2452C0.729973 10.274 0.541424 10.3593 0.386317 10.4912C0.23121 10.623 0.115766 10.7963 0.0531045 10.9913C-0.00955693 11.1863 -0.0169222 11.3952 0.0318457 11.5942C0.0806135 11.7933 0.183559 11.9745 0.328981 12.1172L6.46826 18.1751C6.59481 18.2987 6.68949 18.4519 6.74403 18.6211C6.79856 18.7903 6.81128 18.9705 6.78107 19.1459L5.33046 27.716C5.29652 27.918 5.31899 28.1255 5.39533 28.3152C5.47167 28.505 5.59885 28.6693 5.76253 28.7898C5.92621 28.9102 6.11989 28.982 6.32171 28.997C6.52354 29.0121 6.7255 28.9697 6.90482 28.8747L14.4947 24.8211C14.6507 24.7387 14.8241 24.6957 15 24.6957C15.1759 24.6957 15.3493 24.7387 15.5053 24.8211L23.0952 28.8608C23.2734 28.9546 23.4738 28.9965 23.6741 28.982C23.8744 28.9674 24.0668 28.8969 24.23 28.7783C24.3931 28.6597 24.5205 28.4976 24.5981 28.3101C24.6757 28.1226 24.7004 27.9169 24.6695 27.716L23.2189 19.1459C23.1887 18.9705 23.2014 18.7903 23.256 18.6211C23.3105 18.4519 23.4052 18.2987 23.5317 18.1751L29.671 12.1172Z\" fill=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.671 12.1172C29.8164 11.9745 29.9194 11.7933 29.9682 11.5942C30.0169 11.3952 30.0096 11.1863 29.9469 10.9913C29.8842 10.7963 29.7688 10.623 29.6137 10.4912C29.4586 10.3593 29.27 10.274 29.0695 10.2452L20.5824 8.99605C20.4087 8.9696 20.244 8.90104 20.1021 8.79623C19.9603 8.69142 19.8456 8.55346 19.7677 8.39409L15.9865 0.61033C15.8966 0.427029 15.7579 0.272783 15.586 0.164956C15.4141 0.0571287 15.2159 0 15.0137 0C14.8116 0 14.6134 0.0571287 14.4415 0.164956C14.2696 0.272783 14.1309 0.427029 14.041 0.61033L10.2598 8.39409C10.1819 8.55346 10.0672 8.69142 9.92537 8.79623C9.78352 8.90104 9.61875 8.9696 9.44509 8.99605L0.930534 10.2452C0.729973 10.274 0.541424 10.3593 0.386317 10.4912C0.23121 10.623 0.115766 10.7963 0.0531045 10.9913C-0.00955693 11.1863 -0.0169222 11.3952 0.0318457 11.5942C0.0806135 11.7933 0.183559 11.9745 0.328981 12.1172L6.46826 18.1751C6.59481 18.2987 6.68949 18.4519 6.74403 18.6211C6.79856 18.7903 6.81128 18.9705 6.78107 19.1459L5.33046 27.716C5.29652 27.918 5.31899 28.1255 5.39533 28.3152C5.47167 28.505 5.59885 28.6693 5.76253 28.7898C5.92621 28.9102 6.11989 28.982 6.32171 28.997C6.52354 29.0121 6.7255 28.9697 6.90482 28.8747L14.4947 24.8211C14.6507 24.7387 14.8241 24.6957 15 24.6957C15.1759 24.6957 15.3493 24.7387 15.5053 24.8211L23.0952 28.8608C23.2734 28.9546 23.4738 28.9965 23.6741 28.982C23.8744 28.9674 24.0668 28.8969 24.23 28.7783C24.3931 28.6597 24.5205 28.4976 24.5981 28.3101C24.6757 28.1226 24.7004 27.9169 24.6695 27.716L23.2189 19.1459C23.1887 18.9705 23.2014 18.7903 23.256 18.6211C23.3105 18.4519 23.4052 18.2987 23.5317 18.1751L29.671 12.1172Z\" fill=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.671 12.1172C29.8164 11.9745 29.9194 11.7933 29.9682 11.5942C30.0169 11.3952 30.0096 11.1863 29.9469 10.9913C29.8842 10.7963 29.7688 10.623 29.6137 10.4912C29.4586 10.3593 29.27 10.274 29.0695 10.2452L20.5824 8.99605C20.4087 8.9696 20.244 8.90104 20.1021 8.79623C19.9603 8.69142 19.8456 8.55346 19.7677 8.39409L15.9865 0.61033C15.8966 0.427029 15.7579 0.272783 15.586 0.164956C15.4141 0.0571287 15.2159 0 15.0137 0C14.8116 0 14.6134 0.0571287 14.4415 0.164956C14.2696 0.272783 14.1309 0.427029 14.041 0.61033L10.2598 8.39409C10.1819 8.55346 10.0672 8.69142 9.92537 8.79623C9.78352 8.90104 9.61875 8.9696 9.44509 8.99605L0.930534 10.2452C0.729973 10.274 0.541424 10.3593 0.386317 10.4912C0.23121 10.623 0.115766 10.7963 0.0531045 10.9913C-0.00955693 11.1863 -0.0169222 11.3952 0.0318457 11.5942C0.0806135 11.7933 0.183559 11.9745 0.328981 12.1172L6.46826 18.1751C6.59481 18.2987 6.68949 18.4519 6.74403 18.6211C6.79856 18.7903 6.81128 18.9705 6.78107 19.1459L5.33046 27.716C5.29652 27.918 5.31899 28.1255 5.39533 28.3152C5.47167 28.505 5.59885 28.6693 5.76253 28.7898C5.92621 28.9102 6.11989 28.982 6.32171 28.997C6.52354 29.0121 6.7255 28.9697 6.90482 28.8747L14.4947 24.8211C14.6507 24.7387 14.8241 24.6957 15 24.6957C15.1759 24.6957 15.3493 24.7387 15.5053 24.8211L23.0952 28.8608C23.2734 28.9546 23.4738 28.9965 23.6741 28.982C23.8744 28.9674 24.0668 28.8969 24.23 28.7783C24.3931 28.6597 24.5205 28.4976 24.5981 28.3101C24.6757 28.1226 24.7004 27.9169 24.6695 27.716L23.2189 19.1459C23.1887 18.9705 23.2014 18.7903 23.256 18.6211C23.3105 18.4519 23.4052 18.2987 23.5317 18.1751L29.671 12.1172Z\" fill=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"list-inline-item\"><svg width=\"30\" height=\"29\" viewBox=\"0 0 30 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M29.3208 11.7604L29.3198 11.7613L23.1824 17.8174C23.1821 17.8177 23.1819 17.8179 23.1816 17.8181C22.997 17.9987 22.8593 18.2219 22.7801 18.4678C22.7008 18.7136 22.6823 18.9752 22.726 19.2298C22.7261 19.2301 22.7261 19.2305 22.7262 19.2308L24.1758 27.7953C24.1921 27.905 24.1783 28.017 24.1361 28.1189C24.0935 28.2218 24.024 28.3098 23.9359 28.3739C23.8479 28.4379 23.7447 28.4755 23.6378 28.4833C23.5313 28.491 23.4244 28.4689 23.3289 28.4188C23.3286 28.4186 23.3283 28.4185 23.328 28.4184L15.7402 24.3797L15.7387 24.3789C15.5109 24.2587 15.2575 24.1957 15 24.1957C14.7425 24.1957 14.4891 24.2587 14.2613 24.3788L14.2591 24.38L6.67083 28.4329C6.67064 28.433 6.67045 28.4331 6.67027 28.4332C6.57408 28.484 6.46626 28.5064 6.3588 28.4984C6.25111 28.4904 6.14723 28.4521 6.05891 28.3871C5.97053 28.322 5.90108 28.2327 5.85919 28.1286C5.81732 28.0245 5.80488 27.9104 5.82349 27.7993C5.82351 27.7992 5.82353 27.799 5.82355 27.7989L7.27381 19.2308C7.27387 19.2305 7.27392 19.2301 7.27398 19.2298C7.31767 18.9752 7.29916 18.7136 7.21993 18.4678C7.14071 18.2219 7.00307 17.9988 6.81846 17.8182C6.81819 17.818 6.81792 17.8177 6.81764 17.8174L0.680169 11.7613L0.679246 11.7604C0.600571 11.6832 0.544246 11.5845 0.517479 11.4753C0.490705 11.366 0.494768 11.2512 0.529131 11.1443L0.0553482 10.9921L0.529131 11.1443C0.563481 11.0374 0.626506 10.9432 0.71022 10.8721C0.793878 10.8009 0.894917 10.7555 1.00169 10.7401L1.00311 10.7399L9.51767 9.49077L9.52039 9.49035C9.77473 9.4516 10.0156 9.35126 10.2225 9.19836C10.4294 9.04549 10.5962 8.8447 10.7091 8.61349L10.7095 8.61257L14.4898 0.830625C14.4899 0.830374 14.4901 0.830124 14.4902 0.829874C14.5395 0.729797 14.6149 0.646439 14.7072 0.588498C14.7998 0.530449 14.9059 0.5 15.0137 0.5C15.1216 0.5 15.2277 0.530448 15.3203 0.588498C15.4126 0.64644 15.488 0.729796 15.5373 0.829872C15.5374 0.830122 15.5376 0.830372 15.5377 0.830623L19.318 8.61257L19.3184 8.61349C19.4313 8.8447 19.5981 9.04549 19.805 9.19836C20.0119 9.35126 20.2528 9.4516 20.5071 9.49036L20.5096 9.49072L28.9967 10.7399L28.9983 10.7401C29.1051 10.7555 29.2061 10.8009 29.2898 10.8721C29.3735 10.9432 29.4365 11.0374 29.4709 11.1443C29.5052 11.2512 29.5093 11.366 29.4825 11.4752L29.9682 11.5942L29.4825 11.4753C29.4558 11.5845 29.3994 11.6832 29.3208 11.7604Z\" stroke=\"#FADE97\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg></li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            \t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            </div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t                            <h4>Description</h4>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t        <p>I am highly proficient in creating mobile\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tapplication, webpages, and tablet screens on\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFigma. I am highly proficient in creating mobile\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tapplication, webpages, and tablet screens on\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFigma.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t      </div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Data Analysis</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Adobe Photoshop</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Adobe XD</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Marketing</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Python</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Resume Writing</span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prfl_smry\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h2>Work rights</h2>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"expe_list1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<ul type=\"none\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"experiene_txt\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"work_right_txt\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"all_headings\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"singl_div\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mb-1\">Permanent Resident/Citizen</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"accoun_date \">Valid until Nov 2022</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" routerLink=\"/graduateList\">Back</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\n\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</mat-tab>\n\t\t\t\t\t\t<mat-tab label=\"Orders and Insurances\">\n\t\t\t\t\t\t\t<!-- <div class=\"card-header\">\n\t\t\t\t\t\t\t\t<strong>View Graduate Details</strong>\n\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t      <div class=\"col-md-12\">\n\t\t\t\t\t\t\t        <mat-form-field appearance=\"standard\">\n\t\t\t\t\t\t\t          <mat-label>Filter</mat-label>\n\t\t\t\t\t\t\t          <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n\t\t\t\t\t\t\t        </mat-form-field>\n\n\t\t\t\t\t\t\t        <div class=\"mat-elevation-z8\">\n\t\t\t\t\t\t\t          <div class=\"table-responsive\">\n\t\t\t\t\t\t\t            <table mat-table [dataSource]=\"dataSource\" matSort>\n\t\t\t\t\t\t\t              <!-- Checkbox Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"select\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef>\n\t\t\t\t\t\t\t                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n\t\t\t\t\t\t\t                    [checked]=\"selection.hasValue() && isAllSelected()\"\n\t\t\t\t\t\t\t                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n\t\t\t\t\t\t\t                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n\t\t\t\t\t\t\t                  </mat-checkbox>\n\t\t\t\t\t\t\t                </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\">\n\t\t\t\t\t\t\t                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n\t\t\t\t\t\t\t                    (change)=\"$event ? selection.toggle(row) : null\"\n\t\t\t\t\t\t\t                    [checked]=\"selection.isSelected(row)\"\n\t\t\t\t\t\t\t                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n\t\t\t\t\t\t\t                  </mat-checkbox>\n\t\t\t\t\t\t\t                </td>\n\t\t\t\t\t\t\t              </ng-container>\n\t\t\t\t\t\t\t              <!-- ID Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"id\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <!-- postedby Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"transid\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Invoice ID </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.transid}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\n\t\t\t\t\t\t\t              <!-- Company Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"offer\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Offer Selected</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.offer}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t               <!-- Job title Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"startdate\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Start Date</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.startdate}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\t\t\t\t\t\t\t              \n\t\t\t\t\t\t\t              <!-- status column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"subsexp\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header> Expiry date </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\">{{row.subsexp}}</td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"status\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"><span class=\"badge badge-success\">Paid</span></td>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"><span class=\"badge badge-primary\">Pending</span></td>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"><span class=\"badge badge-danger\">Failed</span></td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <!-- Company Column -->\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"amount\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Amount</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> ${{row.amount}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"paid\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Paid</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> ${{row.paid}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <ng-container matColumnDef=\"balance\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header>Balance</th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> ${{row.balance}} </td>\n\t\t\t\t\t\t\t              </ng-container>\n\t\t\t\t\t\t\t               <!-- Action column -->\n\t\t\t\t\t\t\t               <ng-container matColumnDef=\"action\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef> Action </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\">\n\t\t\t\t\t\t\t                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n\t\t\t\t\t\t\t                      <mat-icon>more_vert</mat-icon>\n\t\t\t\t\t\t\t                    </button>\n\t\t\t\t\t\t\t                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n\t\t\t\t\t\t\t                      <a mat-menu-item class=\"\" routerLink=\"/\">\n\t\t\t\t\t\t\t                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n\t\t\t\t\t\t\t                        <span>View</span>\n\t\t\t\t\t\t\t                      </a>\n\t\t\t\t\t\t\t                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n\t\t\t\t\t\t\t                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n\t\t\t\t\t\t\t                        <span>Delete</span>\n\t\t\t\t\t\t\t                      </a>\n\t\t\t\t\t\t\t                    </mat-menu>\n\t\t\t\t\t\t\t                </td>\n\t\t\t\t\t\t\t              </ng-container>\n\n\t\t\t\t\t\t\t              <!-- Progress Column -->\n\t\t\t\t\t\t\t              <!-- <ng-container matColumnDef=\"progress\">\n\t\t\t\t\t\t\t                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n\t\t\t\t\t\t\t                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n\t\t\t\t\t\t\t              </ng-container> -->\n\n\t\t\t\t\t\t\t              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n\t\t\t\t\t\t\t              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n\t\t\t\t\t\t\t              <!-- Row shown when there is no matching data. -->\n\t\t\t\t\t\t\t              <tr class=\"mat-row\" *matNoDataRow>\n\t\t\t\t\t\t\t                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n\t\t\t\t\t\t\t              </tr>\n\t\t\t\t\t\t\t            </table>\n\t\t\t\t\t\t\t          </div>\n\t\t\t\t\t\t\t          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n\t\t\t\t\t\t\t        </div>\n\t\t\t\t\t\t\t      </div>\n\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</mat-tab>\n        \t\t\t</mat-tab-group>\n\t\t\t\t</div>\n            \t\t\n\t\t\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>";
       /***/
     },
 
@@ -15002,14 +13861,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection23;
+            var _this$selection19;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection23 = this.selection).select.apply(_this$selection23, _toConsumableArray(this.dataSource.data));
+            (_this$selection19 = this.selection).select.apply(_this$selection19, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -15597,6 +14456,87 @@
             this.homepagecontent();
           }
         }, {
+          key: "fun",
+          value: function fun(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun1",
+          value: function fun1(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun2",
+          value: function fun2(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun3",
+          value: function fun3(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun4",
+          value: function fun4(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun5",
+          value: function fun5(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun6",
+          value: function fun6(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun7",
+          value: function fun7(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
+          key: "fun8",
+          value: function fun8(e) {
+            console.log("hfjsdfjsdhfjkds", e);
+
+            this._snackBar.open("Visibility changed successfully", "close", {
+              duration: 2000
+            });
+          }
+        }, {
           key: "employerArray",
           get: function get() {
             return this.mainBenefitsForBoth.controls['employerTab'].get('employerArray');
@@ -15614,7 +14554,7 @@
         }, {
           key: "onStoryFormimageChange",
           value: function onStoryFormimageChange(e) {
-            var _this35 = this;
+            var _this33 = this;
 
             console.log(e);
             console.log(e.target.files[0].name);
@@ -15629,8 +14569,8 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this35.storyform.patchValue({
-                  video: _this35.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+                _this33.storyform.patchValue({
+                  video: _this33.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
                 });
               });
               this.storyform.get('county').clearValidators(); // 6. Clear All Validators
@@ -15647,7 +14587,7 @@
         }, {
           key: "onHeaderFormChange",
           value: function onHeaderFormChange(e) {
-            var _this36 = this;
+            var _this34 = this;
 
             console.log(e);
             console.log(e.target.files[0].name);
@@ -15663,11 +14603,11 @@
               var formData = new FormData();
               formData.append('media', this.file);
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
-                _this36.headerform.patchValue({
+                _this34.headerform.patchValue({
                   image: resp.file_name
                 });
 
-                console.log("uploaded image==>", _this36.headerform.controls['image'].value);
+                console.log("uploaded image==>", _this34.headerform.controls['image'].value);
               });
               this.headerform.get('county').clearValidators(); // 6. Clear All Validators
 
@@ -15683,7 +14623,7 @@
         }, {
           key: "onSelectLogo",
           value: function onSelectLogo(e) {
-            var _this37 = this;
+            var _this35 = this;
 
             console.log("event", e);
             console.log("logos response ==>", e.addedFiles[0]);
@@ -15695,13 +14635,13 @@
             this.Service.uploadmedia1(formData).subscribe(function (resp) {
               console.log("video response ==>", resp);
 
-              _this37.logosUrl.push(resp.file_name);
+              _this35.logosUrl.push(resp.file_name);
             });
           }
         }, {
           key: "setHeadingImage",
           value: function setHeadingImage(e) {
-            var _this38 = this;
+            var _this36 = this;
 
             var file = e.target.files[0];
             var fileType = file.type.split("/")[0];
@@ -15713,7 +14653,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this38.newRegister.controls['image'].setValue(resp.file_name);
+                _this36.newRegister.controls['image'].setValue(resp.file_name);
               });
               this.newRegister.get('county').clearValidators(); // 6. Clear All Validators
 
@@ -15729,7 +14669,7 @@
         }, {
           key: "onEmployerChangeImage",
           value: function onEmployerChangeImage(e, index) {
-            var _this39 = this;
+            var _this37 = this;
 
             console.log("ind", index);
             var file = e.target.files[0];
@@ -15743,7 +14683,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this39.employerArray.at(index).patchValue({
+                _this37.employerArray.at(index).patchValue({
                   image: resp.file_name
                 });
               });
@@ -15763,7 +14703,7 @@
         }, {
           key: "onGraduatesChange",
           value: function onGraduatesChange(e, index) {
-            var _this40 = this;
+            var _this38 = this;
 
             console.log("ind", index);
             var file = e.target.files[0];
@@ -15777,7 +14717,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this40.graduateArray.at(index).patchValue({
+                _this38.graduateArray.at(index).patchValue({
                   image: resp.file_name
                 });
               });
@@ -15797,7 +14737,7 @@
         }, {
           key: "onSelectVideo",
           value: function onSelectVideo(e) {
-            var _this41 = this;
+            var _this39 = this;
 
             var file = e.target.files[0];
             var fileType = file.type.split("/")[0];
@@ -15810,8 +14750,8 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this41.successform.patchValue({
-                  video: _this41.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+                _this39.successform.patchValue({
+                  video: _this39.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
                 });
               });
               this.successform.get('county').clearValidators(); // 6. Clear All Validators
@@ -15828,7 +14768,7 @@
         }, {
           key: "onCompaniesChangeImage",
           value: function onCompaniesChangeImage(e) {
-            var _this42 = this;
+            var _this40 = this;
 
             var file = e.target.files[0];
             var fileType = file.type.split("/")[0];
@@ -15841,7 +14781,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this42.Companies.controls['image'].setValue(resp.file_name);
+                _this40.Companies.controls['image'].setValue(resp.file_name);
               });
               this.Companies.get('county').clearValidators(); // 6. Clear All Validators
 
@@ -15863,34 +14803,34 @@
         }, {
           key: "homepagecontent",
           value: function homepagecontent() {
-            var _this43 = this;
+            var _this41 = this;
 
             this.Service.homecontent().subscribe(function (data) {
               console.log("home page content is ====>", data); // this.data=data.data
               // this.data=JSON.parse(this.data)
               // console.log("home page content is new====>", this.data)
 
-              _this43.headerform.patchValue({
+              _this41.headerform.patchValue({
                 title: data.data.home_header_section.title,
                 image: data.data.home_header_section.image,
                 is_visible: data.data.home_header_section.is_visible
               });
 
-              _this43.storyform.patchValue({
+              _this41.storyform.patchValue({
                 title1: data.data.our_story_section.title,
                 description: data.data.our_story_section.description,
                 name: data.data.our_story_section.posted_by,
-                video: _this43.sanitizer.bypassSecurityTrustResourceUrl(data.data.our_story_section.video),
+                video: _this41.sanitizer.bypassSecurityTrustResourceUrl(data.data.our_story_section.video),
                 designation: data.data.our_story_section.position,
                 is_visible: data.data.our_story_section.is_visible
               });
 
-              _this43.curatedform.patchValue({
+              _this41.curatedform.patchValue({
                 heading: data.data.section_3.heading,
                 is_visible: data.data.section_3.is_visible
               });
 
-              _this43.newRegister.patchValue({
+              _this41.newRegister.patchValue({
                 heading: data.data.section_7.heading,
                 text: data.data.section_7.text,
                 description: data.data.section_7.description,
@@ -15898,47 +14838,50 @@
                 is_visible: data.data.section_7.is_visible
               });
 
-              _this43.successform.patchValue({
+              _this41.successform.patchValue({
                 heading: data.data.section_6.heading,
-                video: _this43.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video)
+                video: _this41.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video),
+                is_visible: data.data.section_6.is_visible
               });
 
-              _this43.Companies.patchValue({
+              _this41.Companies.patchValue({
                 heading: data.data.section_5.heading,
                 image: data.data.section_5.image,
                 is_visible: data.data.section_5.is_visible
               });
 
-              _this43.mainBenefitsForBoth.patchValue({
+              _this41.mainBenefitsForBoth.patchValue({
                 heading: data.data.section_4.heading,
                 is_visible: data.data.section_4.is_visible
               });
 
               data.data.section_4.tab_1.forEach(function (element) {
-                _this43.employerArray.push(_this43._formBuilder.group({
+                _this41.employerArray.push(_this41._formBuilder.group({
                   heading: [element.heading, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
                   Description: [element.Description, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(500)]],
                   image: [element.image, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
+                  is_visible: [element.is_visible],
                   county: ['']
                 }));
               });
               data.data.section_4.tab_2.forEach(function (element) {
-                _this43.graduateArray.push(_this43._formBuilder.group({
+                _this41.graduateArray.push(_this41._formBuilder.group({
                   heading: [element.heading, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
                   Description: [element.Description, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(500)]],
                   image: [element.image, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
+                  is_visible: [element.is_visible],
                   county: ['']
                 }));
               });
               data.data.section_6.description.forEach(function (element) {
-                _this43.discriptionArray.push(_this43._formBuilder.control(element, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]));
+                _this41.discriptionArray.push(_this41._formBuilder.control(element, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]));
               });
             });
           }
         }, {
           key: "postHomePageContent",
           value: function postHomePageContent(type, Secondtype) {
-            var _this44 = this;
+            var _this42 = this;
 
             var obj;
             console.log("type==>", type, this.headerform);
@@ -16046,7 +14989,7 @@
 
                 if (Secondtype == "graduateTab") {
                   if (this.mainBenefitsForBoth.controls['graduateTab'].valid) {
-                    var _section_ = {
+                    var _section_2 = {
                       heading: this.mainBenefitsForBoth.controls['heading'].value,
                       is_visible: this.mainBenefitsForBoth.controls['is_visible'].value,
                       tab_2: this.mainBenefitsForBoth.controls['graduateTab'].get('graduateArray').value
@@ -16054,7 +14997,7 @@
 
                     var _formdata10 = new FormData();
 
-                    _formdata10.append("section_4", JSON.stringify(_section_));
+                    _formdata10.append("section_4", JSON.stringify(_section_2));
 
                     obj = _formdata10;
                   } else {
@@ -16107,7 +15050,7 @@
             }
 
             this.Service.postHomePageContent(obj).subscribe(function (resp) {
-              _this44.Service.showMessage({
+              _this42.Service.showMessage({
                 message: "Submitted Successfully"
               });
             });
@@ -16376,7 +15319,7 @@
         }, {
           key: "sendemail",
           value: function sendemail() {
-            var _this45 = this;
+            var _this43 = this;
 
             console.log("sdsfsfdsfdfdfds", this.forgotpwdform);
             var obj = {
@@ -16386,14 +15329,14 @@
               console.log("fgdgfdgfdfgdfgd", res); // localStorage.setItem("admin_details",JSON.stringify(res.obj.email))
 
               if (res.code == 200) {
-                _this45.Service.showMessage({
+                _this43.Service.showMessage({
                   message: "Email Sent Succsessfully"
                 });
               }
             }, function (err) {
               console.log("hjjhgjhghjgjhghjgjhghjg", err);
 
-              _this45.Service.showMessage({
+              _this43.Service.showMessage({
                 message: err.error.errors.msg ? err.error.errors.msg : 'Something went Wrong'
               });
             });
@@ -16493,30 +15436,6 @@
         template: _raw_loader_view_slider_item_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_view_slider_item_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewSliderItemComponent);
-      /***/
-    },
-
-    /***/
-    "vq3f": function vq3f(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWdyYWR1YXRlLmNvbXBvbmVudC5zY3NzIn0= */";
-      /***/
-    },
-
-    /***/
-    "vuZ+": function vuZ(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"edit-graduate-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t\t<strong>Edit Graduate Details</strong>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t\t<div class=\"text-center edit-profile\">\n\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined dp-icon\">edit</mat-icon>\n\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"dp-input\">\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-form mt-4\">\n\t\t\t\t\t\t\t\t<form>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form-fields\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>First Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Last Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Email Address</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Creation Date (Time)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"09-09-2012 (02:18 AM)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Password</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"abc123@\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Status</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<select class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Active</option>\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Inactive</option>\n\t\t\t\t\t\t\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Cancel</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n";
       /***/
     },
 
@@ -16922,84 +15841,6 @@
     },
 
     /***/
-    "wrVc": function wrVc(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "EditEmployerComponent", function () {
-        return EditEmployerComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_edit_employer_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./edit-employer.component.html */
-      "Q9uG");
-      /* harmony import */
-
-
-      var _edit_employer_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./edit-employer.component.scss */
-      "U9I+");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var EditEmployerComponent = /*#__PURE__*/function () {
-        function EditEmployerComponent() {
-          _classCallCheck(this, EditEmployerComponent);
-
-          this.isCollapsed = false;
-          this.iconCollapse = 'icon-arrow-up';
-        }
-
-        _createClass(EditEmployerComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "collapsed",
-          value: function collapsed(event) {// console.log(event);
-          }
-        }, {
-          key: "expanded",
-          value: function expanded(event) {// console.log(event);
-          }
-        }, {
-          key: "toggleCollapse",
-          value: function toggleCollapse() {
-            this.isCollapsed = !this.isCollapsed;
-            this.iconCollapse = this.isCollapsed ? 'icon-arrow-down' : 'icon-arrow-up';
-          }
-        }]);
-
-        return EditEmployerComponent;
-      }();
-
-      EditEmployerComponent.ctorParameters = function () {
-        return [];
-      };
-
-      EditEmployerComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-edit-employer',
-        template: _raw_loader_edit_employer_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_edit_employer_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], EditEmployerComponent);
-      /***/
-    },
-
-    /***/
     "x8rD": function x8rD(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -17007,7 +15848,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"edit-employer-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Help Query</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<!-- <div class=\"text-center edit-profile\">\n\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined dp-icon\">edit</mat-icon>\n\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"dp-input\">\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t<div class=\"edit-form\">\n\t\t\t\t\t\t\t\t<form>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form-fields\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>First Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.first_name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Last Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.last_name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Email Address</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.email}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Enquiry Type</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <select class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Employer</option>\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Graduate</option>\n\t\t\t\t\t\t\t\t\t\t\t\t            </select> -->\n\t\t\t\t\t\t\t\t\t\t\t\t            <input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\" {{user?.enquiry_subject.name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Enquiry</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"3\" readonly=\"\">{{user?.enquiry}}</textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"user?.is_replied\" class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Admin Reply</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"3\" readonly=\"\">{{user?.reply}}</textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"chck_icn ml-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"19\" height=\"19\" viewBox=\"0 0 19 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M15.8333 2.375L7.125 13.4583L2.375 7.125\" stroke=\"#26C296\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" routerLink='/help-management'>Back</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n";
+      __webpack_exports__["default"] = "<section class=\"edit-employer-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Help Query</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<!-- <div class=\"text-center edit-profile\">\n\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined dp-icon\">edit</mat-icon>\n\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"dp-input\">\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t<div class=\"edit-form\">\n\t\t\t\t\t\t\t\t<form>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form-fields\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>First Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.first_name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Last Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.last_name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Email Address</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.email}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Enquiry Type</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <select class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Employer</option>\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Graduate</option>\n\t\t\t\t\t\t\t\t\t\t\t\t            </select> -->\n\t\t\t\t\t\t\t\t\t\t\t\t            <input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\" {{user?.enquiry_subject.name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Enquiry</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"3\" readonly=\"\">{{user?.enquiry}}</textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"user?.is_replied\" class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Admin Reply</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"3\" readonly=\"\">{{user?.reply}}</textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrdwrp\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrd\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_enqr d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_wrp d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_img mr-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Tanveer Singh</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_dtm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Mar 09, 2:14 PM</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenq_msg py-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments (2)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs mb-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqr_rply text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" ><i class=\"fa fa-reply mr-2\"></i>Reply</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"admnusr_rply\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group mt-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"5\" placeholder=\"Reply here\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqr_rply text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" >Send</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrd\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_enqr d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_wrp d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_img mr-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Tanveer Singh</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_dtm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Mar 09, 2:14 PM</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenq_msg py-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments (2)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs mb-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<hr>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_wrp\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_dtls\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Mar 09, 16:04 PM Akshit Jain </b>wrote</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_rply\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Hey,</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"chck_icn ml-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"19\" height=\"19\" viewBox=\"0 0 19 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M15.8333 2.375L7.125 13.4583L2.375 7.125\" stroke=\"#26C296\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" routerLink='/help-management'>Back</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n";
       /***/
     },
 
@@ -17082,253 +15923,6 @@
         styles: [_video_intro2_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], VideoIntro2Component);
       /***/
-    },
-
-    /***/
-    "xwI+": function xwI(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "GraduateListComponent", function () {
-        return GraduateListComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_graduate_list_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./graduate-list.component.html */
-      "jvj3");
-      /* harmony import */
-
-
-      var _graduate_list_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./graduate-list.component.scss */
-      "LUEE");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/paginator */
-      "M9IT");
-      /* harmony import */
-
-
-      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/sort */
-      "Dh3D");
-      /* harmony import */
-
-
-      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/material/table */
-      "+0xr");
-      /* harmony import */
-
-
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ngx-bootstrap/modal */
-      "K3ix");
-      /* harmony import */
-
-
-      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @angular/cdk/collections */
-      "0EQZ");
-      /* harmony import */
-
-
-      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-      /*! ../../topgradservice.service */
-      "DL5e");
-      /** Constants used to fill up our data base. */
-
-
-      var LNAME = ['A', 'T', 'V', 'C', 'J', 'R', 'J', 'J'];
-      var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-      var EMAILS = ['maia@gmail.com', 'asher@gmail.com', 'olivia@gmail.com', 'atticus@gmail.com', 'amelia@gmail.com', 'jack@gmail.com', 'charlotte@gmail.com', 'theodore@gmail.com', 'isla@gmail.com', 'oliver@gmail.com', 'isabella@gmail.com', 'jasper@gmail.com', 'cora@gmail.com', 'levi@gmail.com', 'violet@gmail.com', 'arthur@gmail.com', 'mia@gmail.com', 'thomas@gmail.com', 'elizabeth@gmail.com'];
-      var CREATION = ['12-01-2012 (06:22 PM)', '12-12-2012 (02:22 PM)', '12-12-2012 (03:12 PM)', '24-11-2012 (03:12 PM)', '12-01-2012 (09:23 AM)', '12-01-2012 (09:23 AM)', '12-01-2012 (10:23 AM)', '12-01-2012 (07:14 PM)', '12-01-2012 (03:30 PM)', '09-01-2021 (09:12 AM)', '09-01-2021 (06:22 PM)', '12-01-2012 (02:22 PM)', '12-04-2012 (03:12 PM)', '12-01-2012 (09:12 AM)', '12-01-2012 (06:22 PM)', '12-01-2012 (06:22 PM)', '09-01-2021 (06:22 PM)'];
-      var LOCATION = ['Sydney', 'Melbourne'];
-      var WRKPREF = ['Open', 'Any'];
-      var AVAILABILITY = ['Any', 'Remote'];
-      var EDUCATION = ['Macquarie University', 'The University of New England', 'The University of Sydney', 'Western Sydney University'];
-      var LICENSE = ['Available', 'Not Available'];
-      var WRKRIGHTS = ['Available', 'Not Available'];
-      var SKILLS = ['Figma', 'Adobe Illustrator'];
-
-      var GraduateListComponent = /*#__PURE__*/function () {
-        function GraduateListComponent(Service) {
-          _classCallCheck(this, GraduateListComponent);
-
-          this.Service = Service;
-          this.gradlist = [];
-          this.displayedColumns = ['select', 'id', 'name', 'lname', 'email', 'company', 'location', 'wrkpref', 'availability', 'education', 'license', 'wrkrights', 'skills', 'status', 'action'];
-          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
-
-          var users = Array.from({
-            length: 50
-          }, function (_, k) {
-            return createNewUser(k + 1);
-          }); // Assign the data to the data source for the table to render
-
-          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
-        }
-
-        _createClass(GraduateListComponent, [{
-          key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }
-        }, {
-          key: "ngOnInit",
-          value: function ngOnInit() {
-            this.graduatelist();
-          }
-        }, {
-          key: "graduatelist",
-          value: function graduatelist() {
-            var _this46 = this;
-
-            console.log("khjhgjhgjhgjhghjghjgjhghjg");
-            var obj = {
-              limit: 10,
-              offset: 0,
-              role: "Graduate"
-            };
-            console.log("onnnn", obj);
-            this.Service.gradlist(obj).subscribe(function (data) {
-              console.log("main data for users is ====", data);
-              _this46.gradlist = data.data;
-              _this46.totalRecords = data.length;
-            }, function (err) {
-              console.log(err.status);
-
-              if (err.status >= 404) {
-                console.log('Some error occured');
-              } else {
-                // this.toastr.error('Some error occured, please try again!!', 'Error')
-                console.log('Internet Connection Error');
-              }
-            });
-          }
-        }, {
-          key: "applyFilter",
-          value: function applyFilter(event) {
-            var filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-
-            if (this.dataSource.paginator) {
-              this.dataSource.paginator.firstPage();
-            }
-          }
-          /** Whether the number of selected elements matches the total number of rows. */
-
-        }, {
-          key: "isAllSelected",
-          value: function isAllSelected() {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-          }
-          /** Selects all rows if they are not all selected; otherwise clear selection. */
-
-        }, {
-          key: "masterToggle",
-          value: function masterToggle() {
-            var _this$selection24;
-
-            if (this.isAllSelected()) {
-              this.selection.clear();
-              return;
-            }
-
-            (_this$selection24 = this.selection).select.apply(_this$selection24, _toConsumableArray(this.dataSource.data));
-          }
-          /** The label for the checkbox on the passed row */
-
-        }, {
-          key: "checkboxLabel",
-          value: function checkboxLabel(row) {
-            if (!row) {
-              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
-            }
-
-            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
-          }
-        }]);
-
-        return GraduateListComponent;
-      }();
-
-      GraduateListComponent.ctorParameters = function () {
-        return [{
-          type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"]
-        }];
-      };
-
-      GraduateListComponent.propDecorators = {
-        smallModal: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: ['smallModal']
-        }],
-        paginator: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
-        }],
-        sort: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
-        }]
-      };
-      GraduateListComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-graduate-list',
-        template: _raw_loader_graduate_list_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_graduate_list_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"]])], GraduateListComponent);
-
-      function createNewUser(id) {
-        var name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ';
-        var email = EMAILS[Math.round(Math.random() * (EMAILS.length - 1))] + ' ';
-        var company = CREATION[Math.round(Math.random() * (CREATION.length - 1))] + ' ';
-        var location = LOCATION[Math.round(Math.random() * (LOCATION.length - 1))] + ' ';
-        var wrkpref = WRKPREF[Math.round(Math.random() * (WRKPREF.length - 1))] + ' ';
-        var availability = AVAILABILITY[Math.round(Math.random() * (AVAILABILITY.length - 1))] + ' ';
-        var education = EDUCATION[Math.round(Math.random() * (EDUCATION.length - 1))] + ' ';
-        var license = LICENSE[Math.round(Math.random() * (LICENSE.length - 1))] + ' ';
-        var wrkrights = WRKRIGHTS[Math.round(Math.random() * (WRKRIGHTS.length - 1))] + ' ';
-        var skills = SKILLS[Math.round(Math.random() * (SKILLS.length - 1))] + ' ';
-        return {
-          id: id.toString() + '.',
-          name: name,
-          email: email,
-          company: company,
-          lname: LNAME[Math.round(Math.random() * (LNAME.length - 1))],
-          location: location,
-          wrkpref: wrkpref,
-          availability: availability,
-          education: education,
-          license: license,
-          wrkrights: wrkrights,
-          skills: skills
-        };
-      }
-      /***/
-
     },
 
     /***/
@@ -17464,14 +16058,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection25;
+            var _this$selection20;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection25 = this.selection).select.apply(_this$selection25, _toConsumableArray(this.dataSource.data));
+            (_this$selection20 = this.selection).select.apply(_this$selection20, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -17537,18 +16131,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdWItY2F0ZWdvcnktbWFuYWdlbWVudC5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "yffW": function yffW(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LWVtcGxveWVyLmNvbXBvbmVudC5zY3NzIn0= */";
       /***/
     },
 

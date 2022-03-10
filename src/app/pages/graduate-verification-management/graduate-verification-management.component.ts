@@ -65,6 +65,54 @@ export class GraduateVerificationManagementComponent implements OnInit {
     
   }
 
+  fun(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun1(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun2(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun3(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun4(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun5(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
   get verificatonArray(): FormArray {
     return this.WhyVerifiedSection.get('verificatonArray') as FormArray;
   }
@@ -276,14 +324,25 @@ export class GraduateVerificationManagementComponent implements OnInit {
     if (type == 'header') {
       if (this.headerSection.valid) {
         const formdata = new FormData()
-        const section_1 = {
-          heading: this.headerSection.controls['heading'].value,
-          sub_heading: this.headerSection.controls['subheading'].value,
-          is_visible: this.headerSection.controls['is_visible'].value
-        }
-        formdata.append("section_1", JSON.stringify(section_1))
+        
         if (this.headingImageObj) {
+          const section_1 = {
+            heading: this.headerSection.controls['heading'].value,
+            sub_heading: this.headerSection.controls['subheading'].value,
+            is_visible: this.headerSection.controls['is_visible'].value
+          }
+          formdata.append("section_1", JSON.stringify(section_1))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_1 = {
+            heading: this.headerSection.controls['heading'].value,
+            sub_heading: this.headerSection.controls['subheading'].value,
+            is_visible: this.headerSection.controls['is_visible'].value,
+            image:this.HeadingImage1
+          }
+          formdata.append("section_1", JSON.stringify(section_1))
+          //formdata.append("image", this.HeadingImage1)
         }
         obj = formdata
 
@@ -312,15 +371,27 @@ export class GraduateVerificationManagementComponent implements OnInit {
     if (type == 'getverified') {
       if (this.verificationSection.valid) {
         const formdata = new FormData()
-        const section_5 = {
-          heading: this.verificationSection.controls['heading'].value,
-          description: this.verificationSection.controls['description'].value,
-          price: this.verificationSection.controls['price'].value,
-          is_visible: this.verificationSection.controls['is_visible'].value
-        }
-        formdata.append("section_5", JSON.stringify(section_5))
+        
         if (this.headingImageObj) {
+          const section_5 = {
+            heading: this.verificationSection.controls['heading'].value,
+            description: this.verificationSection.controls['description'].value,
+            price: this.verificationSection.controls['price'].value,
+            is_visible: this.verificationSection.controls['is_visible'].value
+          }
+          formdata.append("section_5", JSON.stringify(section_5))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_5 = {
+            heading: this.verificationSection.controls['heading'].value,
+            description: this.verificationSection.controls['description'].value,
+            price: this.verificationSection.controls['price'].value,
+            is_visible: this.verificationSection.controls['is_visible'].value,
+            image:this.HeadingImage2
+          }
+          formdata.append("section_5", JSON.stringify(section_5))
+          formdata.append("image", this.HeadingImage2)
         }
         obj = formdata
 

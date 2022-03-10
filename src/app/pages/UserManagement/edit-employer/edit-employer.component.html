@@ -1,0 +1,133 @@
+<section class="edit-employer-sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<strong>Edit employer Details</strong>
+					</div>
+					<div class="card-body">
+						<div class="edit-wrapper">
+							<form [formGroup]="EditEmployerform">
+								<div class="text-center edit-profile">
+									<span class="user_dp position-relative">
+										<img src="assets/img/avatars/8.jpg" class="img-fluid">
+										<mat-icon class="material-icons-outlined dp-icon">edit</mat-icon>
+										<input type="file" name="" class="dp-input">
+									</span>
+								</div>
+								<div class="edit-form mt-4">
+									
+										<div class="edit-form-fields">
+											<div class="row justify-content-center">
+												<div class="col-md-8">
+													<div class="row">
+														<div class="col-md-6">
+															<div class="form-group">
+																<label>First Name</label>
+																<input type="text" name="" class="form-control" formControlName="first_name">
+															</div>
+															<div *ngIf="(EditEmployerform.controls.first_name.touched || EditEmployerform.controls.first_name.dirty) && EditEmployerform.controls.first_name.invalid && EditEmployerform.controls.first_name?.errors?.required  "
+																class="invalid">
+																*Please enter first name
+															</div>
+															<div *ngIf="(EditEmployerform.controls.first_name.touched || EditEmployerform.controls.first_name.dirty)  && EditEmployerform.controls.first_name?.errors?.maxlength  "
+																class="invalid">
+																*Maximum Length should be 50 characters
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label>Last Name</label>
+																<input type="text" name="" class="form-control" formControlName="last_name">
+															</div>
+															<div *ngIf="(EditEmployerform.controls.last_name.touched || EditEmployerform.controls.last_name.dirty) && EditEmployerform.controls.last_name.invalid && EditEmployerform.controls.last_name?.errors?.required  "
+																class="invalid">
+																*Please enter last name
+															</div>
+															<div *ngIf="(EditEmployerform.controls.last_name.touched || EditEmployerform.controls.last_name.dirty)  && EditEmployerform.controls.last_name?.errors?.maxlength  "
+																class="invalid">
+																*Maximum Length should be 50 characters
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-6">
+															<div class="form-group">
+																<label>Work Email Address</label>
+																<input type="text" name="" class="form-control" formControlName="email">
+															</div>
+															<div *ngIf="(EditEmployerform.controls.email.touched || EditEmployerform.controls.email.dirty) && EditEmployerform.controls.email.invalid && EditEmployerform.controls.email?.errors?.required  "
+																class="invalid">
+																*Please enter email
+															</div>
+															<div *ngIf="(EditEmployerform.controls.email.touched || EditEmployerform.controls.email.dirty)  && EditEmployerform.controls.email?.errors?.pattern  "
+																class="invalid">
+																*Please enter valid email
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label>Company Name</label>
+																<input type="text" name="" class="form-control" formControlName="company_name">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-6">
+															<div class="form-group">
+																<label>Job Title</label>
+																<select class="form-control" formControlName="job_title">
+																	<option>Employer</option>
+																	<option>Graduate</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group only-view">
+																<label>Creation Date (Time)</label>
+																<input type="text" name="" class="form-control" value="{{EditEmployerform.value.creation_date | date:'dd/MM/yyyy'}} ({{EditEmployerform.value.creation_date | date:'shortTime'}})" formControlName="creation_date">
+																<!-- <mat-form-field appearance="fill">
+																<mat-label>Choose a date</mat-label>
+																<input matInput [matDatepicker]="picker">
+																<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+																<mat-datepicker #picker></mat-datepicker>
+																</mat-form-field> -->
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<!-- <div class="col-md-6">
+															<div class="form-group">
+																<label>Password</label>
+																<input type="text" name="" class="form-control" value="abc123@" formControlName="password">
+															</div>
+														</div> -->
+														<div class="col-md-6">
+															<div class="form-group">
+																<label>Status</label>
+																<select class="form-control" formControlName="status" >
+																	<option value="active">Active</option>
+																	<option value="inactive">Inactive</option>
+																</select>
+																
+															</div>
+														</div>
+													</div>
+													<div class="edit-btns d-flex justify-content-end">
+														<button class="btn btn-primary mr-4" (click)="edituser()">Save</button>
+														<button class="btn btn-primary">Cancel</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

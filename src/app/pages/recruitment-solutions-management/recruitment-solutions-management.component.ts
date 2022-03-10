@@ -34,7 +34,7 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
   });
 
   whytopgraduatesSection = this.fb.group({
-    heading: ['', [Validators.required, Validators.maxLength(50)]],
+    heading: ['', [Validators.required, Validators.maxLength(5000)]],
     is_visible: ['',],
     county:['']
   });
@@ -101,7 +101,7 @@ export class RecruitmentSolutionsManagementComponent implements OnInit {
   });
 
   storiesSection = this.fb.group({
-    heading: ['', [Validators.required, Validators.maxLength(50)]],
+    heading: ['', [Validators.required, Validators.maxLength(5000)]],
     description: ['', [Validators.required, Validators.maxLength(5000)]],
     is_visible: ['',],
     county:['']
@@ -144,6 +144,118 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
   ngOnInit(): void {
     this.getcontent();
     console.log("asmaan me jese baadal ho rhe hain",this.benefitsSection);
+    
+  }
+
+  fun(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun1(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun2(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun3(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun4(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun5(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun6(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun7(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun8(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun9(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun10(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun11(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun12(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun13(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
     
   }
 
@@ -580,16 +692,27 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     if (type == 'header') {
       if (this.headerSection.valid) {
         const formdata = new FormData()
-        const section_1 = {
-          heading: this.headerSection.controls['heading'].value,
-          description: this.headerSection.controls['subheading'].value,
-          is_visible: this.headerSection.controls['is_visible'].value
-        }
-        formdata.append("section_1", JSON.stringify(section_1))
+        
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_1 = {
+            heading: this.headerSection.controls['heading'].value,
+            description: this.headerSection.controls['subheading'].value,
+            is_visible: this.headerSection.controls['is_visible'].value
+          }
+          formdata.append("section_1", JSON.stringify(section_1))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_1 = {
+            heading: this.headerSection.controls['heading'].value,
+            description: this.headerSection.controls['subheading'].value,
+            is_visible: this.headerSection.controls['is_visible'].value,
+            image: this.headerSection.controls['Image'].value,
+          }
+          formdata.append("section_1", JSON.stringify(section_1))
+          //formdata.append("image", this.HeadingImage)
         }
         obj = formdata
 
@@ -622,15 +745,25 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     if (type == 'agency') {
       if (this.agencySection.valid) {
         const formdata = new FormData()
-        const section_3 = {
-          heading: this.agencySection.controls['description'].value,
-          is_visible: this.agencySection.controls['is_visible'].value
-        }
-        formdata.append("section_3", JSON.stringify(section_3))
+        
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_3 = {
+            heading: this.agencySection.controls['description'].value,
+            is_visible: this.agencySection.controls['is_visible'].value
+          }
+          formdata.append("section_3", JSON.stringify(section_3))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_3 = {
+            heading: this.agencySection.controls['description'].value,
+            is_visible: this.agencySection.controls['is_visible'].value,
+            image:this.agencySection.controls['image'].value
+          }
+          formdata.append("section_3", JSON.stringify(section_3))
+          //formdata.append("image", this.HeadingImage9)
         }
         obj = formdata
 
@@ -661,16 +794,27 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     if (type == 'recruitment1') {
       if (this.recruitment1Section.valid) {
         const formdata = new FormData()
-        const section_6 = {
-          heading: this.recruitment1Section.controls['heading'].value,
-          description: this.recruitment1Section.controls['description'].value,
-          is_visible: this.recruitment1Section.controls['is_visible'].value
-        }
-        formdata.append("section_6", JSON.stringify(section_6))
+        
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_6 = {
+            heading: this.recruitment1Section.controls['heading'].value,
+            description: this.recruitment1Section.controls['description'].value,
+            is_visible: this.recruitment1Section.controls['is_visible'].value
+          }
+          formdata.append("section_6", JSON.stringify(section_6))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_6 = {
+            heading: this.recruitment1Section.controls['heading'].value,
+            description: this.recruitment1Section.controls['description'].value,
+            is_visible: this.recruitment1Section.controls['is_visible'].value,
+            image: this.recruitment1Section.controls['Image'].value
+          }
+          formdata.append("section_6", JSON.stringify(section_6))
+          //formdata.append("image", this.HeadingImage1)
         }
         obj = formdata
 
@@ -684,16 +828,27 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     if (type == 'recruitment2') {
       if (this.recruitment2Section.valid) {
         const formdata = new FormData()
-        const section_7 = {
-          heading: this.recruitment2Section.controls['heading'].value,
-          description: this.recruitment2Section.controls['description'].value,
-          is_visible: this.recruitment2Section.controls['is_visible'].value
-        }
-        formdata.append("section_7", JSON.stringify(section_7))
+       
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_7 = {
+            heading: this.recruitment2Section.controls['heading'].value,
+            description: this.recruitment2Section.controls['description'].value,
+            is_visible: this.recruitment2Section.controls['is_visible'].value
+          }
+          formdata.append("section_7", JSON.stringify(section_7))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_7 = {
+            heading: this.recruitment2Section.controls['heading'].value,
+            description: this.recruitment2Section.controls['description'].value,
+            is_visible: this.recruitment2Section.controls['is_visible'].value,
+            image: this.recruitment2Section.controls['Image'].value
+          }
+          formdata.append("section_7", JSON.stringify(section_7))
+          //formdata.append("image", this.HeadingImage2)
         }
         obj = formdata
 
@@ -706,16 +861,27 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     if (type == 'recruitment3') {
       if (this.recruitment3Section.valid) {
         const formdata = new FormData()
-        const section_8 = {
-          heading: this.recruitment3Section.controls['heading'].value,
-          description: this.recruitment3Section.controls['description'].value,
-          is_visible: this.recruitment3Section.controls['is_visible'].value
-        }
-        formdata.append("section_8", JSON.stringify(section_8))
+        
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_8 = {
+            heading: this.recruitment3Section.controls['heading'].value,
+            description: this.recruitment3Section.controls['description'].value,
+            is_visible: this.recruitment3Section.controls['is_visible'].value
+          }
+          formdata.append("section_8", JSON.stringify(section_8))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_8 = {
+            heading: this.recruitment3Section.controls['heading'].value,
+            description: this.recruitment3Section.controls['description'].value,
+            is_visible: this.recruitment3Section.controls['is_visible'].value,
+            image: this.recruitment3Section.controls['Image'].value
+          }
+          formdata.append("section_8", JSON.stringify(section_8))
+          //formdata.append("image", this.HeadingImage3)
         }
         obj = formdata
 
@@ -728,16 +894,27 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     if (type == 'recruitment4') {
       if (this.recruitment4Section.valid) {
         const formdata = new FormData()
-        const section_9 = {
-          heading: this.recruitment4Section.controls['heading'].value,
-          description: this.recruitment4Section.controls['description'].value,
-          is_visible: this.recruitment4Section.controls['is_visible'].value
-        }
-        formdata.append("section_9", JSON.stringify(section_9))
+        
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_9 = {
+            heading: this.recruitment4Section.controls['heading'].value,
+            description: this.recruitment4Section.controls['description'].value,
+            is_visible: this.recruitment4Section.controls['is_visible'].value
+          }
+          formdata.append("section_9", JSON.stringify(section_9))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_9 = {
+            heading: this.recruitment4Section.controls['heading'].value,
+            description: this.recruitment4Section.controls['description'].value,
+            is_visible: this.recruitment4Section.controls['is_visible'].value,
+            image: this.recruitment4Section.controls['Image'].value
+          }
+          formdata.append("section_9", JSON.stringify(section_9))
+          //formdata.append("image", this.HeadingImage4)
         }
         obj = formdata
 
@@ -750,16 +927,27 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     if (type == 'recruitment5') {
       if (this.recruitment5Section.valid) {
         const formdata = new FormData()
-        const section_10 = {
-          heading: this.recruitment5Section.controls['heading'].value,
-          description: this.recruitment5Section.controls['description'].value,
-          is_visible: this.recruitment5Section.controls['is_visible'].value
-        }
-        formdata.append("section_10", JSON.stringify(section_10))
+        
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_10 = {
+            heading: this.recruitment5Section.controls['heading'].value,
+            description: this.recruitment5Section.controls['description'].value,
+            is_visible: this.recruitment5Section.controls['is_visible'].value
+          }
+          formdata.append("section_10", JSON.stringify(section_10))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_10 = {
+            heading: this.recruitment5Section.controls['heading'].value,
+            description: this.recruitment5Section.controls['description'].value,
+            is_visible: this.recruitment5Section.controls['is_visible'].value,
+            image: this.recruitment5Section.controls['Image'].value
+          }
+          formdata.append("section_10", JSON.stringify(section_10))
+          //formdata.append("image", this.HeadingImage5)
         }
         obj = formdata
 
@@ -773,16 +961,27 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
     if (type == 'recruitment6') {
       if (this.recruitment6Section.valid) {
         const formdata = new FormData()
-        const section_11 = {
-          heading: this.recruitment6Section.controls['heading'].value,
-          description: this.recruitment6Section.controls['description'].value,
-          is_visible: this.recruitment6Section.controls['is_visible'].value
-        }
-        formdata.append("section_11", JSON.stringify(section_11))
+        
         this.content_id= "6214a49299814ab6e4f4338e"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_11 = {
+            heading: this.recruitment6Section.controls['heading'].value,
+            description: this.recruitment6Section.controls['description'].value,
+            is_visible: this.recruitment6Section.controls['is_visible'].value
+          }
+          formdata.append("section_11", JSON.stringify(section_11))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_11 = {
+            heading: this.recruitment6Section.controls['heading'].value,
+            description: this.recruitment6Section.controls['description'].value,
+            is_visible: this.recruitment6Section.controls['is_visible'].value,
+            image: this.recruitment6Section.controls['Image'].value
+          }
+          formdata.append("section_11", JSON.stringify(section_11))
+          //formdata.append("image", this.HeadingImage6)
         }
         obj = formdata
 
@@ -794,6 +993,8 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
 
     if (type == 'testimonials') {
       if (this.testimonialsSection.valid) {
+        console.log("both testimonials", this.testimonialsSection);
+        
         const formdata = new FormData()
         const section_12 = {
           heading1: this.testimonialsSection.controls['name1'].value,
@@ -802,7 +1003,9 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
           heading2: this.testimonialsSection.controls['name2'].value,
           description2: this.testimonialsSection.controls['description2'].value,
           degiganation2: this.testimonialsSection.controls['designation2'].value,
-          is_visible: this.testimonialsSection.controls['is_visible'].value
+          is_visible: this.testimonialsSection.controls['is_visible'].value,
+          image1: this.HeadingImage7,
+          image2: this.HeadingImage8
         }
         formdata.append("section_12", JSON.stringify(section_12))
         this.content_id= "6214a49299814ab6e4f4338e"
@@ -810,9 +1013,11 @@ constructor(private Service: TopgradserviceService, private _snackBar: MatSnackB
         if (this.headingImageObj) {
           formdata.append("image1", this.headingImageObj)
         }
+        
         if (this.headingImageObj1) {
-          formdata.append("image2", this.headingImageObj)
+          formdata.append("image2", this.headingImageObj1)
         }
+        
         obj = formdata
 
       } else {

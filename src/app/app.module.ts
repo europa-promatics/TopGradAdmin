@@ -77,12 +77,12 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { ForgetPasswordComponent } from './pages/auth/forget-password/forget-password.component';
 import { ViewProfileComponent } from './views/view-profile/view-profile.component';
-import { EmployersListComponent } from './pages/employers-list/employers-list.component';
-import { EditEmployerComponent } from './views/edit-employer/edit-employer.component';
-import { GraduateListComponent } from './pages/graduate-list/graduate-list.component';
-import { EditGraduateComponent } from './views/edit-graduate/edit-graduate.component';
-import { ViewGraduateComponent } from './views/view-graduate/view-graduate.component';
-import { ViewEmployerComponent } from './views/view-employer/view-employer.component';
+// import { EmployersListComponent } from './pages/employers-list/employers-list.component';
+// import { EditEmployerComponent } from './pages/UserManagement/edit-employer/edit-employer.component';
+// import { GraduateListComponent } from './pages/graduate-list/graduate-list.component';
+// import { EditGraduateComponent } from './pages/UserManagement/edit-graduate/edit-graduate.component';
+//import { ViewGraduateComponent } from './pages/UserManagement/view-graduate/view-graduate.component';
+// import { ViewEmployerComponent } from './pages/UserManagement/view-employer/view-employer.component';
 import { JobsManagementComponent } from './views/jobs-management/jobs-management.component';
 import { ViewJobComponent } from './views/view-job/view-job.component';
 import { CategoriesManagementComponent } from './views/categories-management/categories-management.component';
@@ -110,9 +110,9 @@ import { AddSubAdminComponent } from './views/add-sub-admin/add-sub-admin.compon
 import { ViewSubAdminComponent } from './views/view-sub-admin/view-sub-admin.component';
 import { EditSubAdminComponent } from './views/edit-sub-admin/edit-sub-admin.component';
 import { EmployerHowItWorksComponent } from './views/employer-how-it-works/employer-how-it-works.component';
-import { EditEmployerHowItWorksComponent } from './views/edit-employer-how-it-works/edit-employer-how-it-works.component';
+//import { EditEmployerHowItWorksComponent } from './views/edit-employer-how-it-works/edit-employer-how-it-works.component';
 import { GraduateHowItWorksComponent } from './views/graduate-how-it-works/graduate-how-it-works.component';
-import { EditGraduateHowItWorksComponent } from './views/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
+//import { EditGraduateHowItWorksComponent } from './views/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
 //import { PrivacyPolicyComponent } from './pages/content-management/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './pages/content-management/terms-conditions/terms-conditions.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
@@ -132,10 +132,10 @@ import { ViewInterviewComponent } from './views/view-interview/view-interview.co
 import { EditInterviewComponent } from './views/edit-interview/edit-interview.component';
 //import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
 //import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
-import { VideoIntroComponent } from './views/video-intro/video-intro.component';
-import { VideoIntro1Component } from './views/video-intro1/video-intro1.component';
-import { VideoIntro2Component } from './views/video-intro2/video-intro2.component';
-import { VideoIntro3Component } from './views/video-intro3/video-intro3.component';
+// import { VideoIntroComponent } from './pages/content-management/video-intro/video-intro.component';
+import { VideoIntro1Component } from './pages/content-management/video-intro1/video-intro1.component';
+import { VideoIntro2Component } from './pages/content-management/video-intro2/video-intro2.component';
+import { VideoIntro3Component } from './pages/content-management/video-intro3/video-intro3.component';
 //import { GraduateVerificationManagementComponent } from './pages/graduate-verification-management/graduate-verification-management.component';
 import { FaqsComponent } from './views/faqs/faqs.component';
 import { AddFaqComponent } from './views/add-faq/add-faq.component';
@@ -153,8 +153,8 @@ import { ViewOfferComponent } from './views/view-offer/view-offer.component';
 import { ViewReportComponent } from './views/view-report/view-report.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TopgradserviceService } from './topgradservice.service';
-import { IndustrylistComponent } from './pages/content-management/industry-management/industrylist/industrylist.component';
-import { IndustrylistModule } from './pages/content-management/industry-management/industrylist/industrylist.module';
+//import { IndustrylistComponent } from './pages/content-management/industry-management/industrylist/industrylist.component';
+//import { IndustrylistModule } from './pages/content-management/industry-management/industrylist/industrylist.module';
 import { ResetPasswordComponent } from './pages/auth/reset-password/reset-password.component';
 import { TermsSubHeadingsComponent } from './pages/content-management/terms-sub-headings/terms-sub-headings.component';
 import { AddHeadingComponent } from './pages/content-management/add-heading/add-heading.component';
@@ -211,7 +211,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     NgxDropzoneModule,
     MatTabsModule,
     PlyrModule,
-    IndustrylistModule,
+    //IndustrylistModule,
   ],
   declarations: [
     AppComponent,
@@ -223,12 +223,12 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     UserManagementComponent,
     ForgetPasswordComponent,
     ViewProfileComponent,
-    EmployersListComponent,
-    EditEmployerComponent,
-    GraduateListComponent,
-    EditGraduateComponent,
-    ViewGraduateComponent,
-    ViewEmployerComponent,
+    //EmployersListComponent,
+    //EditEmployerComponent,
+    //GraduateListComponent,
+    //EditGraduateComponent,
+    //ViewGraduateComponent,
+   // ViewEmployerComponent,
     JobsManagementComponent,
     ViewJobComponent,
     CategoriesManagementComponent,
@@ -256,9 +256,9 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     ViewSubAdminComponent,
     EditSubAdminComponent,
     EmployerHowItWorksComponent,
-    EditEmployerHowItWorksComponent,
+    //EditEmployerHowItWorksComponent,
     GraduateHowItWorksComponent,
-    EditGraduateHowItWorksComponent,
+    //EditGraduateHowItWorksComponent,
     //PrivacyPolicyComponent,
     TermsConditionsComponent,
     ContactUsComponent,
@@ -278,7 +278,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     EditInterviewComponent,
     //RecruitmentSolutionsManagementComponent,
     //ResumeBuilderManagementComponent,
-    VideoIntroComponent,
+    //VideoIntroComponent,
     VideoIntro1Component,
     VideoIntro2Component,
     VideoIntro3Component,
@@ -300,7 +300,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     ViewVerificationComponent,
     ViewOfferComponent,
     ViewReportComponent,
-    IndustrylistComponent,
+    //IndustrylistComponent,
     ResetPasswordComponent,
     TermsSubHeadingsComponent,
     AddHeadingComponent,
@@ -308,7 +308,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     EditSubHeadingComponent,
     AddSubHeadingComponent,
     
-    GraduateListComponent,
+    //GraduateListComponent,
         //  ViewSubHeadingComponent,
     // GraduateFaqComponent
     // DashboardComponent

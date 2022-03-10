@@ -20,7 +20,7 @@ export class ResumeBuilderManagementComponent implements OnInit {
   constructor(private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
   
   headerSection = this.fb.group({
-    heading: ['', [Validators.required, Validators.maxLength(50)]],
+    heading: ['', [Validators.required, Validators.maxLength(5000)]],
     subheading: ['', [Validators.required, Validators.maxLength(200)]],
     Image: ['',],
     is_visible: [''],
@@ -28,20 +28,20 @@ export class ResumeBuilderManagementComponent implements OnInit {
   });
 
   helpSection = this.fb.group({
-    heading: ['', [Validators.required, Validators.maxLength(200)]],
+    heading: ['', [Validators.required, Validators.maxLength(5000)]],
     is_visible: [''],
     county:['']
   });
 
   stepsSection = this.fb.group({
-    heading: ['', [Validators.required, Validators.maxLength(50)]],
+    heading: ['', [Validators.required, Validators.maxLength(5000)]],
     is_visible: [''],
     county:[''],
     'stepsArray': this.fb.array([ ])
   });
 
   startnowSection = this.fb.group({
-    heading: ['', [Validators.required, Validators.maxLength(50)]],
+    heading: ['', [Validators.required, Validators.maxLength(5000)]],
     subheading: ['', [Validators.required, Validators.maxLength(50)]],
     description: ['', [Validators.required, Validators.maxLength(5000)]],
     Image: ['',],
@@ -59,6 +59,48 @@ export class ResumeBuilderManagementComponent implements OnInit {
   ngOnInit(): void {
     this.getcontent();
   }
+  
+  fun(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun1(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun2(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun3(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun4(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+
 
   get tipsArray(): FormArray {
     return this.resumetipsSection.get('tipsArray') as FormArray;
@@ -226,16 +268,27 @@ export class ResumeBuilderManagementComponent implements OnInit {
     if (type == 'header') {
       if (this.headerSection.valid) {
         const formdata = new FormData()
-        const section_1 = {
-          heading: this.headerSection.controls['heading'].value,
-          sub_heading: this.headerSection.controls['subheading'].value,
-          is_visible: this.headerSection.controls['is_visible'].value
-        }
-        formdata.append("section_1", JSON.stringify(section_1))
+        
         this.content_id= "621c4bbd6f7babe92ccc9618"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_1 = {
+            heading: this.headerSection.controls['heading'].value,
+            sub_heading: this.headerSection.controls['subheading'].value,
+            is_visible: this.headerSection.controls['is_visible'].value
+          }
+          formdata.append("section_1", JSON.stringify(section_1))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_1 = {
+            heading: this.headerSection.controls['heading'].value,
+            sub_heading: this.headerSection.controls['subheading'].value,
+            is_visible: this.headerSection.controls['is_visible'].value,
+            image: this.HeadingImage1
+          }
+          formdata.append("section_1", JSON.stringify(section_1))
+          //formdata.append("image", this.HeadingImage1)
         }
         obj = formdata
 
@@ -249,7 +302,8 @@ export class ResumeBuilderManagementComponent implements OnInit {
       if (this.helpSection.valid) {
         const formdata = new FormData()
         const section_2 = {
-          heading: this.helpSection.controls['heading'].value
+          heading: this.helpSection.controls['heading'].value,
+          is_visible: this.helpSection.controls['is_visible'].value
         }
         formdata.append("section_2", JSON.stringify(section_2))
         this.content_id= "621c4bbd6f7babe92ccc9618"
@@ -265,17 +319,29 @@ export class ResumeBuilderManagementComponent implements OnInit {
     if (type == 'startnow') {
       if (this.startnowSection.valid) {
         const formdata = new FormData()
-        const section_5 = {
-          heading: this.startnowSection.controls['heading'].value,
-          sub_heading: this.startnowSection.controls['subheading'].value,
-          description: this.startnowSection.controls['description'].value,
-          is_visible: this.startnowSection.controls['is_visible'].value
-        }
-        formdata.append("section_5", JSON.stringify(section_5))
+        
         this.content_id= "621c4bbd6f7babe92ccc9618"
         formdata.append("content_id", this.content_id)
         if (this.headingImageObj) {
+          const section_5 = {
+            heading: this.startnowSection.controls['heading'].value,
+            sub_heading: this.startnowSection.controls['subheading'].value,
+            description: this.startnowSection.controls['description'].value,
+            is_visible: this.startnowSection.controls['is_visible'].value
+          }
+          formdata.append("section_5", JSON.stringify(section_5))
           formdata.append("image", this.headingImageObj)
+        }
+        else{
+          const section_5 = {
+            heading: this.startnowSection.controls['heading'].value,
+            sub_heading: this.startnowSection.controls['subheading'].value,
+            description: this.startnowSection.controls['description'].value,
+            is_visible: this.startnowSection.controls['is_visible'].value,
+            image: this.HeadingImage2
+          }
+          formdata.append("section_5", JSON.stringify(section_5))
+          //formdata.append("image", this.HeadingImage2)
         }
         obj = formdata
 
