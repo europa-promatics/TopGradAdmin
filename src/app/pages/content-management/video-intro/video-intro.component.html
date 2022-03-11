@@ -9,7 +9,7 @@
 								<strong>Video Intro Header Section</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -62,7 +62,7 @@
 								<strong>Video Resume Tips</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun1($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">
@@ -194,7 +194,7 @@
 								<strong>Get started</strong>
 								<div class="slide-cs">
 									<span class="mr-2">Visibility </span>
-									<mat-slide-toggle formControlName="is_visible"></mat-slide-toggle>
+									<mat-slide-toggle formControlName="is_visible" (change)="fun2($event)"></mat-slide-toggle>
 								</div>
 							</div>
 							<div class="card-body">

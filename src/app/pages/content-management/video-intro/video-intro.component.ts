@@ -47,6 +47,30 @@ export class VideoIntroComponent implements OnInit {
     return this.tipsSection.get('tipsArray') as FormArray;
   }
 
+  fun(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun1(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun2(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
   getcontent(){
     this.Service.videointrocontent().subscribe(data => {
       console.log("recruitment page content is ====>", data)

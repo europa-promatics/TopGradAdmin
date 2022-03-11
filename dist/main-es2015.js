@@ -2535,43 +2535,6 @@ P404Component = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
-/***/ "8s9Z":
-/*!**************************************************************!*\
-  !*** ./src/app/views/video-intro1/video-intro1.component.ts ***!
-  \**************************************************************/
-/*! exports provided: VideoIntro1Component */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoIntro1Component", function() { return VideoIntro1Component; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_video_intro1_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./video-intro1.component.html */ "IGoB");
-/* harmony import */ var _video_intro1_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./video-intro1.component.scss */ "O9va");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-
-
-let VideoIntro1Component = class VideoIntro1Component {
-    constructor() { }
-    ngOnInit() {
-    }
-};
-VideoIntro1Component.ctorParameters = () => [];
-VideoIntro1Component = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-video-intro1',
-        template: _raw_loader_video_intro1_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_video_intro1_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-    }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-], VideoIntro1Component);
-
-
-
-/***/ }),
-
 /***/ "9S+9":
 /*!****************************************************************************************!*\
   !*** ./src/app/views/verification-submissions/verification-submissions.component.scss ***!
@@ -3079,7 +3042,7 @@ let TopgradserviceService = class TopgradserviceService {
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
     }
     emplist(data) {
-        let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?role=${data.role}&search=${data.search}&filter=${data.filter}`;
+        let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?role=${data.role}&search=${data.search}`;
         console.log(API_URL);
         return this.httpClient.get(API_URL, data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
@@ -3447,6 +3410,22 @@ let TopgradserviceService = class TopgradserviceService {
     }
     deleteuser(data) {
         let API_URL = `${this.SERVER_URL}/admin/edit/user/detail`;
+        console.log(API_URL);
+        return this.httpClient.put(API_URL, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+    }
+    videointrocontent() {
+        let API_URL = `${this.SERVER_URL}/admin/get/video/intro`;
+        console.log(API_URL);
+        return this.httpClient.get(API_URL)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+    }
+    postVideoIntroContent(data) {
+        let API_URL = `${this.SERVER_URL}/admin/edit/video/intro`;
         console.log(API_URL);
         return this.httpClient.put(API_URL, data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
@@ -3989,19 +3968,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "HI+0":
-/*!****************************************************************!*\
-  !*** ./src/app/views/video-intro3/video-intro3.component.scss ***!
-  \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWRlby1pbnRybzMuY29tcG9uZW50LnNjc3MifQ== */");
-
-/***/ }),
-
 /***/ "Huwh":
 /*!*****************************************************!*\
   !*** ./src/app/pages/auth/login/login.component.ts ***!
@@ -4206,19 +4172,6 @@ function createNewUser(id) {
     };
 }
 
-
-/***/ }),
-
-/***/ "IGoB":
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/views/video-intro1/video-intro1.component.html ***!
-  \******************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Intro Step 1</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Step 1 Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"1. Structure your script\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video1_img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Endorsed-steps-sec resume_tips_sctn video_resm\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Resume Tips</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Why should you upload your Video Resume?What should you talk about?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>1: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/talk1.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"5 minutes\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>2: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/talk2.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Brief Introduction\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>3: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/talk3.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Experience\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>4: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/talk4.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Education\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>5: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/talk5.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Core Skills\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>6: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/talk6.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Additional Credentials\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Last Heading</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Last but not least, make a strong closing statement!\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -4495,43 +4448,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LW9mZmVyLmNvbXBvbmVudC5zY3NzIn0= */");
-
-/***/ }),
-
-/***/ "KTfr":
-/*!************************************************************!*\
-  !*** ./src/app/views/video-intro/video-intro.component.ts ***!
-  \************************************************************/
-/*! exports provided: VideoIntroComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoIntroComponent", function() { return VideoIntroComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_video_intro_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./video-intro.component.html */ "WFhO");
-/* harmony import */ var _video_intro_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./video-intro.component.scss */ "fCgE");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-
-
-let VideoIntroComponent = class VideoIntroComponent {
-    constructor() { }
-    ngOnInit() {
-    }
-};
-VideoIntroComponent.ctorParameters = () => [];
-VideoIntroComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-video-intro',
-        template: _raw_loader_video_intro_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_video_intro_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-    }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-], VideoIntroComponent);
-
-
 
 /***/ }),
 
@@ -5114,19 +5030,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n<section class=\"view-employer-sec view-payment-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Scheduled Interview Details</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Candidate:</label>\n\t\t\t\t\t\t\t\t \t\t<span>Charlie Herwitz</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Employer:</label>\n\t\t\t\t\t\t\t\t \t\t<span>Michael Smith</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Job Title:</label>\n\t\t\t\t\t\t\t\t \t\t<span>Software Developer</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Date:</label>\n\t\t\t\t\t\t\t\t \t\t<span>08-09-2021</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Time:</label>\n\t\t\t\t\t\t\t\t \t\t<span>12.00 PM - 01.00 PM ((GMT +10) Australian East Standard Time)</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Interview Method:</label>\n\t\t\t\t\t\t\t\t \t\t<span>Face-to-Face/Phone/Video</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Location:</label>\n\t\t\t\t\t\t\t\t \t\t<span>553 Swanston Street, Melbourne, Victoria 3000</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Phone Number:</label>\n\t\t\t\t\t\t\t\t \t\t<span>9575578657</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Video Conferencing Application:</label>\n\t\t\t\t\t\t\t\t \t\t<span><img src=\"assets/img/team.png\" class=\"img-fluid\"></span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Meeting Link:</label>\n\t\t\t\t\t\t\t\t \t\t<span>https://www.google.com/search</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-12 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Notes:</label>\n\t\t\t\t\t\t\t\t \t\t<span>Has worked with marketing coordinator Conner Kent before</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns text-right mt-4\">\n\t\t                        <span><a routerLink=\"/schedule-interview-management\" class=\"btn btn-primary\">Back</a></span>\n\t\t                    </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>\n</section>");
-
-/***/ }),
-
-/***/ "O9va":
-/*!****************************************************************!*\
-  !*** ./src/app/views/video-intro1/video-intro1.component.scss ***!
-  \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWRlby1pbnRybzEuY29tcG9uZW50LnNjc3MifQ== */");
 
 /***/ }),
 
@@ -6710,19 +6613,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "WFhO":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/views/video-intro/video-intro.component.html ***!
-  \****************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Intro Header Section</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Endorsed-steps-sec resume_tips_sctn video_resm\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Resume Tips</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Why should you upload your Video Resume?\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Sub Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Video resumes create a connection between you and the recruiters.\">\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>1: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video-card1.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get found by Recruiter\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>2: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video-card2.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get into more Interviews\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>3: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video-card3.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get Hired Faster\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Get started</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Get started with three easy steps\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/steps_img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-
-/***/ }),
-
 /***/ "WpKD":
 /*!************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/views/jobs-management/jobs-management.component.html ***!
@@ -6983,34 +6873,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./views/schedule-interview-management/schedule-interview-management.component */ "3Hv5");
 /* harmony import */ var _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./views/view-interview/view-interview.component */ "Y+84");
 /* harmony import */ var _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./views/edit-interview/edit-interview.component */ "12bd");
-/* harmony import */ var _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./views/video-intro/video-intro.component */ "KTfr");
-/* harmony import */ var _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./views/video-intro1/video-intro1.component */ "8s9Z");
-/* harmony import */ var _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./views/video-intro2/video-intro2.component */ "xlFL");
-/* harmony import */ var _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./views/video-intro3/video-intro3.component */ "eN9q");
-/* harmony import */ var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./views/faqs/faqs.component */ "7Cea");
-/* harmony import */ var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./views/add-faq/add-faq.component */ "3ziB");
-/* harmony import */ var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./views/edit-faq/edit-faq.component */ "PTKP");
-/* harmony import */ var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./views/view-faq/view-faq.component */ "VqZG");
-/* harmony import */ var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./pages/content-management/about-us/about-us.component */ "KYUf");
-/* harmony import */ var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./pages/homepage-management/homepage-management.component */ "tkH9");
-/* harmony import */ var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./views/help-management/help-management.component */ "4X2+");
-/* harmony import */ var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./views/view-help/view-help.component */ "Jzsx");
-/* harmony import */ var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./views/messaging-reports/messaging-reports.component */ "3a5B");
-/* harmony import */ var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./views/verification-submissions/verification-submissions.component */ "cWCV");
-/* harmony import */ var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./views/offer-submissions/offer-submissions.component */ "3xDY");
-/* harmony import */ var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./views/view-verification/view-verification.component */ "ac+Q");
-/* harmony import */ var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./views/view-offer/view-offer.component */ "PnTO");
-/* harmony import */ var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./views/view-report/view-report.component */ "zGdd");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./topgradservice.service */ "DL5e");
-/* harmony import */ var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./pages/auth/reset-password/reset-password.component */ "4AU6");
-/* harmony import */ var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./pages/content-management/terms-sub-headings/terms-sub-headings.component */ "Q5si");
-/* harmony import */ var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./pages/content-management/add-heading/add-heading.component */ "GPan");
-/* harmony import */ var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./pages/content-management/edit-heading/edit-heading.component */ "nMTe");
-/* harmony import */ var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./pages/content-management/edit-sub-heading/edit-sub-heading.component */ "J/2i");
-/* harmony import */ var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./pages/content-management/add-sub-heading/add-sub-heading.component */ "4V+q");
-/* harmony import */ var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component */ "TfLc");
-/* harmony import */ var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component */ "FPJr");
+/* harmony import */ var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./views/faqs/faqs.component */ "7Cea");
+/* harmony import */ var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./views/add-faq/add-faq.component */ "3ziB");
+/* harmony import */ var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./views/edit-faq/edit-faq.component */ "PTKP");
+/* harmony import */ var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./views/view-faq/view-faq.component */ "VqZG");
+/* harmony import */ var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./pages/content-management/about-us/about-us.component */ "KYUf");
+/* harmony import */ var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./pages/homepage-management/homepage-management.component */ "tkH9");
+/* harmony import */ var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./views/help-management/help-management.component */ "4X2+");
+/* harmony import */ var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./views/view-help/view-help.component */ "Jzsx");
+/* harmony import */ var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./views/messaging-reports/messaging-reports.component */ "3a5B");
+/* harmony import */ var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./views/verification-submissions/verification-submissions.component */ "cWCV");
+/* harmony import */ var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./views/offer-submissions/offer-submissions.component */ "3xDY");
+/* harmony import */ var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./views/view-verification/view-verification.component */ "ac+Q");
+/* harmony import */ var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./views/view-offer/view-offer.component */ "PnTO");
+/* harmony import */ var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./views/view-report/view-report.component */ "zGdd");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./topgradservice.service */ "DL5e");
+/* harmony import */ var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./pages/auth/reset-password/reset-password.component */ "4AU6");
+/* harmony import */ var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./pages/content-management/terms-sub-headings/terms-sub-headings.component */ "Q5si");
+/* harmony import */ var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./pages/content-management/add-heading/add-heading.component */ "GPan");
+/* harmony import */ var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./pages/content-management/edit-heading/edit-heading.component */ "nMTe");
+/* harmony import */ var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./pages/content-management/edit-sub-heading/edit-sub-heading.component */ "J/2i");
+/* harmony import */ var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./pages/content-management/add-sub-heading/add-sub-heading.component */ "4V+q");
+/* harmony import */ var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component */ "TfLc");
+/* harmony import */ var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component */ "FPJr");
 
 
 
@@ -7121,10 +7007,10 @@ const APP_CONTAINERS = [
 
 //import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
 //import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
-
-
-
-
+// import { VideoIntroComponent } from './pages/content-management/video-intro/video-intro.component';
+// import { VideoIntro1Component } from './pages/content-management/video-intro1/video-intro1.component';
+// import { VideoIntro2Component } from './pages/content-management/video-intro2/video-intro2.component';
+// import { VideoIntro3Component } from './pages/content-management/video-intro3/video-intro3.component';
 //import { GraduateVerificationManagementComponent } from './pages/graduate-verification-management/graduate-verification-management.component';
 
 
@@ -7160,7 +7046,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_105__["HttpClientModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_101__["HttpClientModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
             _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"],
             _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"],
@@ -7263,34 +7149,34 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_86__["EditInterviewComponent"],
             //RecruitmentSolutionsManagementComponent,
             //ResumeBuilderManagementComponent,
-            _views_video_intro_video_intro_component__WEBPACK_IMPORTED_MODULE_87__["VideoIntroComponent"],
-            _views_video_intro1_video_intro1_component__WEBPACK_IMPORTED_MODULE_88__["VideoIntro1Component"],
-            _views_video_intro2_video_intro2_component__WEBPACK_IMPORTED_MODULE_89__["VideoIntro2Component"],
-            _views_video_intro3_video_intro3_component__WEBPACK_IMPORTED_MODULE_90__["VideoIntro3Component"],
+            //VideoIntroComponent,
+            // VideoIntro1Component,
+            //VideoIntro2Component,
+            // VideoIntro3Component,
             //GraduateVerificationManagementComponent,
-            _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_91__["FaqsComponent"],
-            _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_92__["AddFaqComponent"],
-            _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_93__["EditFaqComponent"],
-            _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_94__["ViewFaqComponent"],
-            _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_95__["AboutUsComponent"],
-            _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_113__["GraduateAddFaqComponent"],
-            _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_114__["GraduateEditFaqComponent"],
-            _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_96__["HomepageManagementComponent"],
-            _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_97__["HelpManagementComponent"],
-            _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_98__["ViewHelpComponent"],
-            _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_99__["MessagingReportsComponent"],
-            _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_100__["VerificationSubmissionsComponent"],
-            _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_101__["OfferSubmissionsComponent"],
-            _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_102__["ViewVerificationComponent"],
-            _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_103__["ViewOfferComponent"],
-            _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_104__["ViewReportComponent"],
+            _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_87__["FaqsComponent"],
+            _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_88__["AddFaqComponent"],
+            _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_89__["EditFaqComponent"],
+            _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_90__["ViewFaqComponent"],
+            _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_91__["AboutUsComponent"],
+            _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_109__["GraduateAddFaqComponent"],
+            _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_110__["GraduateEditFaqComponent"],
+            _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_92__["HomepageManagementComponent"],
+            _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_93__["HelpManagementComponent"],
+            _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_94__["ViewHelpComponent"],
+            _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_95__["MessagingReportsComponent"],
+            _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_96__["VerificationSubmissionsComponent"],
+            _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_97__["OfferSubmissionsComponent"],
+            _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_98__["ViewVerificationComponent"],
+            _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_99__["ViewOfferComponent"],
+            _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_100__["ViewReportComponent"],
             //IndustrylistComponent,
-            _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_107__["ResetPasswordComponent"],
-            _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_108__["TermsSubHeadingsComponent"],
-            _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_109__["AddHeadingComponent"],
-            _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_110__["EditHeadingComponent"],
-            _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_111__["EditSubHeadingComponent"],
-            _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_112__["AddSubHeadingComponent"],
+            _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_103__["ResetPasswordComponent"],
+            _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_104__["TermsSubHeadingsComponent"],
+            _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_105__["AddHeadingComponent"],
+            _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_106__["EditHeadingComponent"],
+            _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_107__["EditSubHeadingComponent"],
+            _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_108__["AddSubHeadingComponent"],
         ],
         providers: [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["BsModalRef"],
             {
@@ -7298,8 +7184,8 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
                 useClass: _angular_common__WEBPACK_IMPORTED_MODULE_3__["HashLocationStrategy"]
             },
             {
-                provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_105__["HTTP_INTERCEPTORS"],
-                useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_106__["TopgradserviceService"], multi: true
+                provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_101__["HTTP_INTERCEPTORS"],
+                useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_102__["TopgradserviceService"], multi: true
             },
             _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetService"],
         ],
@@ -7766,6 +7652,10 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | views-career-videos-career-videos-module */ "views-career-videos-career-videos-module").then(__webpack_require__.bind(null, /*! ./views/career-videos/career-videos.module */ "JFCb")).then(m => m.CareerVideosModule)
             },
             {
+                path: 'career-article',
+                loadChildren: () => __webpack_require__.e(/*! import() | views-career-articles-career-articles-module */ "views-career-articles-career-articles-module").then(__webpack_require__.bind(null, /*! ./views/career-articles/career-articles.module */ "uPJ4")).then(m => m.CareerArticlesModule)
+            },
+            {
                 path: 'add-article',
                 loadChildren: () => __webpack_require__.e(/*! import() | views-add-article-add-article-module */ "views-add-article-add-article-module").then(__webpack_require__.bind(null, /*! ./views/add-article/add-article.module */ "un/j")).then(m => m.AddArticleModule)
             },
@@ -7811,19 +7701,19 @@ const routes = [
             },
             {
                 path: 'videoIntro',
-                loadChildren: () => __webpack_require__.e(/*! import() | views-video-intro-video-intro-module */ "views-video-intro-video-intro-module").then(__webpack_require__.bind(null, /*! ./views/video-intro/video-intro.module */ "1jFd")).then(m => m.VideoIntroModule)
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-video-intro-video-intro-module */ "pages-content-management-video-intro-video-intro-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/video-intro/video-intro.module */ "6rQE")).then(m => m.VideoIntroModule)
             },
             {
                 path: 'videoIntro1',
-                loadChildren: () => __webpack_require__.e(/*! import() | views-video-intro1-video-intro1-module */ "views-video-intro1-video-intro1-module").then(__webpack_require__.bind(null, /*! ./views/video-intro1/video-intro1.module */ "XOA6")).then(m => m.VideoIntro1Module)
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-video-intro1-video-intro1-module */ "pages-content-management-video-intro1-video-intro1-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/video-intro1/video-intro1.module */ "kkrx")).then(m => m.VideoIntro1Module)
             },
             {
                 path: 'videoIntro2',
-                loadChildren: () => __webpack_require__.e(/*! import() | views-video-intro2-video-intro2-module */ "views-video-intro2-video-intro2-module").then(__webpack_require__.bind(null, /*! ./views/video-intro2/video-intro2.module */ "qPK8")).then(m => m.VideoIntro2Module)
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-video-intro2-video-intro2-module */ "pages-content-management-video-intro2-video-intro2-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/video-intro2/video-intro2.module */ "k67S")).then(m => m.VideoIntro2Module)
             },
             {
                 path: 'videoIntro3',
-                loadChildren: () => __webpack_require__.e(/*! import() | views-video-intro3-video-intro3-module */ "views-video-intro3-video-intro3-module").then(__webpack_require__.bind(null, /*! ./views/video-intro3/video-intro3.module */ "TvJn")).then(m => m.VideoIntro3Module)
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-video-intro3-video-intro3-module */ "pages-content-management-video-intro3-video-intro3-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/video-intro3/video-intro3.module */ "irEN")).then(m => m.VideoIntro3Module)
             },
             {
                 path: 'graduate-verification-management',
@@ -8440,19 +8330,6 @@ P500Component = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
-/***/ "e3/i":
-/*!****************************************************************!*\
-  !*** ./src/app/views/video-intro2/video-intro2.component.scss ***!
-  \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWRlby1pbnRybzIuY29tcG9uZW50LnNjc3MifQ== */");
-
-/***/ }),
-
 /***/ "e9LB":
 /*!**************************************************************!*\
   !*** ./src/app/views/view-article/view-article.component.ts ***!
@@ -8500,43 +8377,6 @@ ViewArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtaGVhZGluZy5jb21wb25lbnQuc2NzcyJ9 */");
-
-/***/ }),
-
-/***/ "eN9q":
-/*!**************************************************************!*\
-  !*** ./src/app/views/video-intro3/video-intro3.component.ts ***!
-  \**************************************************************/
-/*! exports provided: VideoIntro3Component */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoIntro3Component", function() { return VideoIntro3Component; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_video_intro3_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./video-intro3.component.html */ "ucRo");
-/* harmony import */ var _video_intro3_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./video-intro3.component.scss */ "HI+0");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-
-
-let VideoIntro3Component = class VideoIntro3Component {
-    constructor() { }
-    ngOnInit() {
-    }
-};
-VideoIntro3Component.ctorParameters = () => [];
-VideoIntro3Component = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-video-intro3',
-        template: _raw_loader_video_intro3_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_video_intro3_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-    }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-], VideoIntro3Component);
-
-
 
 /***/ }),
 
@@ -8695,19 +8535,6 @@ function createNewUser(id) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add FAQ</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"inputTitle\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Category</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\"  formControlName=\"category_id\" [(ngModel)]=\"selectedValue\">\n\t\t\t\t\t\t\t\t\t\t<option *ngFor=\"let row of faq\"  [ngValue]=\"row._id\" [selected]=\"row._id==selectedValue\" >{{row?.name}}</option>\n\t\t\t\t\t\t                <!-- <option>My Account</option>\n\t\t\t\t\t\t                <option>Jobs</option>\n\t\t\t\t\t\t                <option>Permissions & Privacy</option> -->\n\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\" formControlName=\"title\" [(ngModel)]=\"title1\"  >\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.title?.touched || inputTitle.controls.title?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.title?.invalid && inputTitle.controls.title?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter title here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.description?.touched || inputTitle.controls.description?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.description?.invalid && inputTitle.controls.description?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter description here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button mat-stroked-button (click)=\"openSnackBar()\"  class=\"btn btn-primary mr-4\" (click)=\"addEditFaq(this.id)\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" routerLink='/graduateFaq'>Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
-
-/***/ }),
-
-/***/ "fCgE":
-/*!**************************************************************!*\
-  !*** ./src/app/views/video-intro/video-intro.component.scss ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWRlby1pbnRyby5jb21wb25lbnQuc2NzcyJ9 */");
 
 /***/ }),
 
@@ -9402,19 +9229,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LWFydGljbGUuY29tcG9uZW50LnNjc3MifQ== */");
-
-/***/ }),
-
-/***/ "mmIQ":
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/views/video-intro2/video-intro2.component.html ***!
-  \******************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Intro Step 2</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Step 2 Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"2. Practice your takes\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/tip_intro.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"Endorsed-steps-sec resume_tips_sctn video_resm\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Resume Tips</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Tips on the Video Resume\">\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>1: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip1.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Clear Audio\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>2: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip2.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Appropriate Attire\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>3: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip3.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Perfect Posture\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>4: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip4.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Smile!\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"endrose-step\">\n\t\t      \t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>5: Image</label>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img icons\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_tip5.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Heading</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Simple Background\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -10645,19 +10459,6 @@ EditCategoryComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 
 /***/ }),
 
-/***/ "ucRo":
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/views/video-intro3/video-intro3.component.html ***!
-  \******************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"employer-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Video Intro Step 3</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Step 3 Heading</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"3. Upload your video\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/tip_intro.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n<section class=\"work-for-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header d-flex justify-content-between\">\n\t      \t\t\t\t<strong>Last section</strong>\n\t      \t\t\t\t<div class=\"slide-cs\">\n\t      \t\t\t\t\t<span class=\"mr-2\">Visibility </span>\n\t      \t\t\t\t\t<mat-slide-toggle></mat-slide-toggle>\n\t      \t\t\t\t</div>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img resume_img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/stepsl_img.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-
-/***/ }),
-
 /***/ "unrn":
 /*!************************************************************!*\
   !*** ./src/app/views/add-article/add-article.component.ts ***!
@@ -11083,43 +10884,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWhlYWRpbmcuY29tcG9uZW50LnNjc3MifQ== */");
-
-/***/ }),
-
-/***/ "xlFL":
-/*!**************************************************************!*\
-  !*** ./src/app/views/video-intro2/video-intro2.component.ts ***!
-  \**************************************************************/
-/*! exports provided: VideoIntro2Component */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoIntro2Component", function() { return VideoIntro2Component; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _raw_loader_video_intro2_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./video-intro2.component.html */ "mmIQ");
-/* harmony import */ var _video_intro2_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./video-intro2.component.scss */ "e3/i");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-
-
-let VideoIntro2Component = class VideoIntro2Component {
-    constructor() { }
-    ngOnInit() {
-    }
-};
-VideoIntro2Component.ctorParameters = () => [];
-VideoIntro2Component = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-video-intro2',
-        template: _raw_loader_video_intro2_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_video_intro2_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-    }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-], VideoIntro2Component);
-
-
 
 /***/ }),
 

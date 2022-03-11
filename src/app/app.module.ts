@@ -133,9 +133,9 @@ import { EditInterviewComponent } from './views/edit-interview/edit-interview.co
 //import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
 //import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
 // import { VideoIntroComponent } from './pages/content-management/video-intro/video-intro.component';
-import { VideoIntro1Component } from './pages/content-management/video-intro1/video-intro1.component';
-import { VideoIntro2Component } from './pages/content-management/video-intro2/video-intro2.component';
-import { VideoIntro3Component } from './pages/content-management/video-intro3/video-intro3.component';
+// import { VideoIntro1Component } from './pages/content-management/video-intro1/video-intro1.component';
+// import { VideoIntro2Component } from './pages/content-management/video-intro2/video-intro2.component';
+// import { VideoIntro3Component } from './pages/content-management/video-intro3/video-intro3.component';
 //import { GraduateVerificationManagementComponent } from './pages/graduate-verification-management/graduate-verification-management.component';
 import { FaqsComponent } from './views/faqs/faqs.component';
 import { AddFaqComponent } from './views/add-faq/add-faq.component';
@@ -279,9 +279,9 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     //RecruitmentSolutionsManagementComponent,
     //ResumeBuilderManagementComponent,
     //VideoIntroComponent,
-    VideoIntro1Component,
-    VideoIntro2Component,
-    VideoIntro3Component,
+   // VideoIntro1Component,
+    //VideoIntro2Component,
+    // VideoIntro3Component,
     //GraduateVerificationManagementComponent,
     FaqsComponent,
     AddFaqComponent,

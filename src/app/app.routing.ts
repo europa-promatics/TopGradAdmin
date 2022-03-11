@@ -387,6 +387,10 @@ export const routes: Routes = [
         loadChildren: () => import('./views/career-videos/career-videos.module').then(m => m.CareerVideosModule)
       },
       {
+        path: 'career-article',
+        loadChildren: () => import('./views/career-articles/career-articles.module').then(m => m.CareerArticlesModule)
+      },
+      {
         path: 'add-article',
         loadChildren: () => import('./views/add-article/add-article.module').then(m => m.AddArticleModule)
       },
