@@ -155,7 +155,7 @@ export const navItems: INavData[] = [
         children: [
           {
            name: 'Articles',
-            url: '/career-articles',
+            url: '/career-article',
             icon: 'icon-star'
           },
           {

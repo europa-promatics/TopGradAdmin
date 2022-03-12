@@ -265,6 +265,10 @@ let VideoIntro2Component = class VideoIntro2Component {
                     return;
                 }
             }
+            else {
+                this.tipsSection.markAllAsTouched();
+                return;
+            }
         }
         this.Service.postVideoIntroContent(obj).subscribe((resp) => {
             this.Service.showMessage({ message: "Submitted Successfully" });

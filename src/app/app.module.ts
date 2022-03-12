@@ -83,8 +83,8 @@ import { ViewProfileComponent } from './views/view-profile/view-profile.componen
 // import { EditGraduateComponent } from './pages/UserManagement/edit-graduate/edit-graduate.component';
 //import { ViewGraduateComponent } from './pages/UserManagement/view-graduate/view-graduate.component';
 // import { ViewEmployerComponent } from './pages/UserManagement/view-employer/view-employer.component';
-import { JobsManagementComponent } from './views/jobs-management/jobs-management.component';
-import { ViewJobComponent } from './views/view-job/view-job.component';
+//import { JobsManagementComponent } from './views/jobs-management/jobs-management.component';
+//import { ViewJobComponent } from './views/view-job/view-job.component';
 import { CategoriesManagementComponent } from './views/categories-management/categories-management.component';
 import { ViewApplicantComponent } from './views/view-applicant/view-applicant.component';
 import { HeaderSectionComponent } from './views/header-section/header-section.component';
@@ -119,14 +119,14 @@ import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { ContactListingComponent } from './views/contact-listing/contact-listing.component';
 import { OfferManagementComponent } from './views/offer-management/offer-management.component';
 import { CareerArtclesComponent } from './views/career-artcles/career-artcles.component';
-import { CareerArticlesComponent } from './views/career-articles/career-articles.component';
-import { CareerVideosComponent } from './views/career-videos/career-videos.component';
-import { AddArticleComponent } from './views/add-article/add-article.component';
-import { ViewArticleComponent } from './views/view-article/view-article.component';
-import { EditArticleComponent } from './views/edit-article/edit-article.component';
-import { AddVideoComponent } from './views/add-video/add-video.component';
-import { ViewVideoComponent } from './views/view-video/view-video.component';
-import { EditVideoComponent } from './views/edit-video/edit-video.component';
+import { CareerArticlesComponent } from './pages/content-management/career-articles/career-articles.component';
+import { CareerVideosComponent } from './pages/content-management/career-videos/career-videos.component';
+// import { AddArticleComponent } from './pages/content-management/add-article/add-article.component';
+import { ViewArticleComponent } from './pages/content-management/view-article/view-article.component';
+import { EditArticleComponent } from './pages/content-management/edit-article/edit-article.component';
+import { AddVideoComponent } from './pages/content-management/add-video/add-video.component';
+import { ViewVideoComponent } from './pages/content-management/view-video/view-video.component';
+import { EditVideoComponent } from './pages/content-management/edit-video/edit-video.component';
 import { ScheduleInterviewManagementComponent } from './views/schedule-interview-management/schedule-interview-management.component';
 import { ViewInterviewComponent } from './views/view-interview/view-interview.component';
 import { EditInterviewComponent } from './views/edit-interview/edit-interview.component';
@@ -229,8 +229,8 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     //EditGraduateComponent,
     //ViewGraduateComponent,
    // ViewEmployerComponent,
-    JobsManagementComponent,
-    ViewJobComponent,
+   // JobsManagementComponent,
+    //ViewJobComponent,
     CategoriesManagementComponent,
     ViewApplicantComponent,
     HeaderSectionComponent,
@@ -267,7 +267,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     CareerArtclesComponent,
     CareerArticlesComponent,
     CareerVideosComponent,
-    AddArticleComponent,
+   // AddArticleComponent,
     ViewArticleComponent,
     EditArticleComponent,
     AddVideoComponent,

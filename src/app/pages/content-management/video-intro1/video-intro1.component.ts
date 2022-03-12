@@ -216,6 +216,10 @@ export class VideoIntro1Component implements OnInit {
           return
         }
       }
+      else {
+        this.tipsSection.markAllAsTouched()
+        return
+      }
     }
 
     if (type == 'step3') {

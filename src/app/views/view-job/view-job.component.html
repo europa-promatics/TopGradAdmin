@@ -9,28 +9,29 @@
 					<div class="gradPreview_result position-relative">
                         <div class="preview_wrapper">
                         	<div class="prevw_main_ttl d-flex justify-content-between align-items-center">
-                        		<h4>UI/UX Designer</h4>
-                        		<small>Posted: 8 days ago</small>
+                        		<h4>{{user?.job_title}}</h4>
+                        		<small>Posted:{{diffInDays2}} days ago</small>
                         	</div>
                         	<div class="job_nam_prvw">
                         		<div class="row">
                         			<div class="col-sm-6">
                         				<div class="prvw_jb_ttl">
-                        					<p>Adobe <small>remote work possible</small></p>
-                        					<small class="prevw_loctn">in Melbourne, Victoria</small>
+                        					<p>{{user?.company_name}} <small *ngIf="remote == true">remote work possible</small></p>
+                        					<small class="prevw_loctn">{{user?.job_location?.name}}</small>
                         				</div>
                         				<div class="prev_schdul d-flex justify-content-start">
                             				<div class="prev_availby">
                             					<small>Availability:</small>
-                            					<p>Part time</p>
+												<p>{{user?.cType}}</p>
+                            					
                             				</div>
                             				<div class="prev_availby prev_wrk_typ">
                             					<small>Work type:</small>
-                            					<p>Employment</p>
+                            					<p>{{user?.work_type}}</p>
                             				</div>
                                             <div class="prev_availby prev_wrk_typ">
                                                 <small>Posted By:</small>
-                                                <p>Employer 893745</p>
+                                                <p>{{user?.user_id?.first_name}} {{user?.user_id?.last_name}}</p>
                                             </div>
                         				</div>
                         			</div>
@@ -38,19 +39,25 @@
                         				<div class="prvw_jb_skills gradKey_prve">
                         					<div class="typed_text">
                         						<small>Key Skills:</small>
-												<span>Figma</span>
+												<ng-container *ngFor="let data of user?.skills; let i=index">
+													<span>{{data?.name}}</span>
+												</ng-container>
+												
+												<!-- <span>Figma</span>
 												<span class="colr_green">Adobe Illustrator</span>
 												<span class="colr_green">Adobe Photoshop</span>
 												<span>Python</span>
-												<span>Figma</span>
+												<span>Figma</span> -->
 											</div>
                         				</div>
                         			</div>
                         		</div>
                         	</div>
                         	<div class="prev_descriptions">
-                        		<p>Description:</p>
-                        		<div class="compny_info">
+                        		<h2 >Description:</h2>
+								<small [innerHTML]="user?.job_description"></small>
+								<!-- {{user?.job_description}} -->
+                        		<!-- <div class="compny_info">
                         			<h6>About the Company</h6>
                         			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -72,27 +79,37 @@
                         			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         			consequat.</p>
-                        		</div>
+                        		</div> -->
                         	</div>
                         	<div class="job_nam_prvw prevwDeadline">
                         		<div class="row">
                         			<div class="col-sm-4">
                         				<div class="deadTtl">
                         					<small>Application deadline:</small>
-                        					<small class="ddl_date">14 / 03 / 21 <sub>&ensp;closes in 5 days</sub></small>
+                        					<small class="ddl_date">{{user?.deadline_date |date:'MM/dd/yyyy':'UTC'}}<sub>&ensp;closes in {{date}} days</sub></small>
+											<!-- <small class="ddl_date">{{user?.deadline_date |  date : "MM/dd/yyyy"}} <sub>&ensp;closes in 5 days</sub></small> -->
                         				</div>
                         			</div>
                         			<div class="col-sm-8">
                         				<div class="deadTtl">
-                        					<small>Salary:</small>
-                        					<small class="ddl_date">$45 - $50 per hour</small>
+                        					<small>Salary:-</small>
+                        					<small class="ddl_date">${{user?.salary.maximum_sal}} - ${{user?.salary.minimum_sal}} per {{user?.salary.sal_type}}</small>
+											
+											<!-- <small class="ddl_date" *ngFor="let inner of user?.salary | keyvalue">
+												<span>{{inner.key}}</span>:-
+												<span>{{inner.value}}</span><br>
+											</small> -->
+											<!-- {{user?.salary.maximum_sal}}
+											{{user?.salary.minimum_sal}}
+											{{user?.salary.sal_type}} -->
                         				</div>
                         			</div>
                         		</div>
                         	</div>
                         	<div class="deadTtl">
             					<small>Expected start date:</small>
-            					<small class="ddl_date">01 / 04 / 21</small>
+            					<small class="ddl_date">{{user?.expected_start_date |  date : "MM/dd/yy":'UTC'}}</small>
+								
             				</div>
                             <div class="edit-btns text-right mt-3">
                                 <a class="btn btn-primary" routerLink="/jobsManagement">Back</a>

@@ -227,8 +227,12 @@ export class VideoIntroComponent implements OnInit {
     }
 
     if (type == 'tips') {
+      console.log("i am invalid");
+      console.log(this.tipsSection)
       if (this.tipsSection.valid) {
+        console.log("i am valid section");
         if (this.tipsArray.valid) {
+          console.log("i am valid array");
           const formdata = new FormData()
           const section_2 = {image_heading:this.tipsSection.get('tipsArray').value,
             is_visible: this.tipsSection.controls['is_visible'].value,
@@ -242,6 +246,10 @@ export class VideoIntroComponent implements OnInit {
           this.tipsArray.markAllAsTouched()
           return
         }
+      }
+      else {
+        this.tipsSection.markAllAsTouched()
+        return
       }
     }
 

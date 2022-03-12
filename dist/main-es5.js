@@ -185,68 +185,19 @@
     },
 
     /***/
-    "/9A/": function A(module, __webpack_exports__, __webpack_require__) {
+    "/Zwt": function Zwt(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
+      /* harmony default export */
 
 
-      __webpack_require__.d(__webpack_exports__, "ViewJobComponent", function () {
-        return ViewJobComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_view_job_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./view-job.component.html */
-      "Mbux");
-      /* harmony import */
-
-
-      var _view_job_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./view-job.component.scss */
-      "5T/K");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var ViewJobComponent = /*#__PURE__*/function () {
-        function ViewJobComponent() {
-          _classCallCheck(this, ViewJobComponent);
-        }
-
-        _createClass(ViewJobComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return ViewJobComponent;
-      }();
-
-      ViewJobComponent.ctorParameters = function () {
-        return [];
-      };
-
-      ViewJobComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-view-job',
-        template: _raw_loader_view_job_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_view_job_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewJobComponent);
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LWFydGljbGUuY29tcG9uZW50LnNjc3MifQ== */";
       /***/
     },
 
     /***/
-    "/Oao": function Oao(module, __webpack_exports__, __webpack_require__) {
+    "/jwz": function jwz(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -466,18 +417,6 @@
       }
       /***/
 
-    },
-
-    /***/
-    "0dNg": function dNg(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-video\">Add Video</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video</th>\n                <td mat-cell *matCellDef=\"let element\">\n                  <span class=\"position-relative play-container\">\n                    <img [src]=\"element.image\" class=\"slider-imag\" />\n                    <img src=\"assets/img/play-btn.png\" class=\"img-fluid slider-play\"> \n                  </span> \n                </td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.title}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.postedBy}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-video\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-video\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-      /***/
     },
 
     /***/
@@ -1101,18 +1040,6 @@
     },
 
     /***/
-    "1usr": function usr(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Article</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/blog-article.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
-      /***/
-    },
-
-    /***/
     "2iYI": function iYI(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -1602,6 +1529,30 @@
       }
       /***/
 
+    },
+
+    /***/
+    "3Jhu": function Jhu(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/success.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"virde_play_btn play-1st\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/play-btn.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/youtube_video.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
+      /***/
+    },
+
+    /***/
+    "3Oif": function Oif(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtdmlkZW8uY29tcG9uZW50LnNjc3MifQ== */";
+      /***/
     },
 
     /***/
@@ -2882,18 +2833,6 @@
     },
 
     /***/
-    "5T/K": function TK(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LWpvYi5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
     "5ZTe": function ZTe(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -3796,6 +3735,194 @@
     },
 
     /***/
+    "8lXT": function lXT(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CareerArticlesComponent", function () {
+        return CareerArticlesComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _raw_loader_career_articles_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./career-articles.component.html */
+      "rfL6");
+      /* harmony import */
+
+
+      var _career_articles_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./career-articles.component.scss */
+      "/jwz");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/material/paginator */
+      "M9IT");
+      /* harmony import */
+
+
+      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @angular/material/sort */
+      "Dh3D");
+      /* harmony import */
+
+
+      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/material/table */
+      "+0xr");
+      /* harmony import */
+
+
+      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! ngx-bootstrap/modal */
+      "K3ix");
+      /* harmony import */
+
+
+      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @angular/cdk/collections */
+      "0EQZ");
+      /** Constants used to fill up our data base. */
+
+
+      var IMAGE = ['assets/img/blog-article.png', 'assets/img/blog3_bg.png'];
+      var TITLE = ['Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Web Development', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors'];
+      var DESCRIPTION = ['Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar'];
+      var POSTEDBY = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+
+      var CareerArticlesComponent = /*#__PURE__*/function () {
+        function CareerArticlesComponent() {
+          _classCallCheck(this, CareerArticlesComponent);
+
+          this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'description', 'action'];
+          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
+
+          var users = Array.from({
+            length: 50
+          }, function (_, k) {
+            return createNewUser(k + 1);
+          }); // Assign the data to the data source for the table to render
+
+          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
+        }
+
+        _createClass(CareerArticlesComponent, [{
+          key: "ngAfterViewInit",
+          value: function ngAfterViewInit() {
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+          }
+        }, {
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "applyFilter",
+          value: function applyFilter(event) {
+            var filterValue = event.target.value;
+            this.dataSource.filter = filterValue.trim().toLowerCase();
+
+            if (this.dataSource.paginator) {
+              this.dataSource.paginator.firstPage();
+            }
+          }
+          /** Whether the number of selected elements matches the total number of rows. */
+
+        }, {
+          key: "isAllSelected",
+          value: function isAllSelected() {
+            var numSelected = this.selection.selected.length;
+            var numRows = this.dataSource.data.length;
+            return numSelected === numRows;
+          }
+          /** Selects all rows if they are not all selected; otherwise clear selection. */
+
+        }, {
+          key: "masterToggle",
+          value: function masterToggle() {
+            var _this$selection11;
+
+            if (this.isAllSelected()) {
+              this.selection.clear();
+              return;
+            }
+
+            (_this$selection11 = this.selection).select.apply(_this$selection11, _toConsumableArray(this.dataSource.data));
+          }
+          /** The label for the checkbox on the passed row */
+
+        }, {
+          key: "checkboxLabel",
+          value: function checkboxLabel(row) {
+            if (!row) {
+              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
+            }
+
+            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
+          }
+        }]);
+
+        return CareerArticlesComponent;
+      }();
+
+      CareerArticlesComponent.ctorParameters = function () {
+        return [];
+      };
+
+      CareerArticlesComponent.propDecorators = {
+        smallModal: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+          args: ['smallModal']
+        }],
+        paginator: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
+        }],
+        sort: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
+        }]
+      };
+      CareerArticlesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-career-articles',
+        template: _raw_loader_career_articles_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_career_articles_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], CareerArticlesComponent);
+
+      function createNewUser(id) {
+        var image = IMAGE[Math.round(Math.random() * (IMAGE.length - 1))] + ' ';
+        var title = TITLE[Math.round(Math.random() * (TITLE.length - 1))] + ' ';
+        var description = DESCRIPTION[Math.round(Math.random() * (DESCRIPTION.length - 1))] + ' ';
+        var postedBy = POSTEDBY[Math.round(Math.random() * (POSTEDBY.length - 1))] + ' ';
+        return {
+          id: id.toString() + '.',
+          image: image,
+          title: title,
+          description: description,
+          postedBy: postedBy
+        };
+      }
+      /***/
+
+    },
+
+    /***/
     "9S+9": function S9(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -3832,18 +3959,6 @@
     },
 
     /***/
-    "9z4g": function z4g(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LXZpZGVvLmNvbXBvbmVudC5zY3NzIn0= */";
-      /***/
-    },
-
-    /***/
     "Adbz": function Adbz(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -3852,18 +3967,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtZXNzYWdpbmctcmVwb3J0cy5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "Ar1G": function Ar1G(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJqb2JzLW1hbmFnZW1lbnQuY29tcG9uZW50LnNjc3MifQ== */";
       /***/
     },
 
@@ -4105,6 +4208,18 @@
 
 
       __webpack_exports__["default"] = "";
+      /***/
+    },
+
+    /***/
+    "D0rB": function D0rB(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter name here\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/dummy.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/dummy.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
       /***/
     },
 
@@ -4834,6 +4949,33 @@
               return res;
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
           }
+        }, {
+          key: "jobManagementList",
+          value: function jobManagementList(evt) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/employer/job/post/list?limit=").concat(evt.limit, "&offset=").concat(evt.offset, "&search=").concat(evt.search);
+            console.log(API_URL);
+            return this.httpClient.get(API_URL).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "jobManagementDetail",
+          value: function jobManagementDetail(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/get/employer/job/detail?employer_job_id=").concat(obj.employer_job_id);
+            console.log(API_URL);
+            return this.httpClient.get(API_URL).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
+        }, {
+          key: "jobManagementDelete",
+          value: function jobManagementDelete(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/delete/employer/job/post");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
         }]);
 
         return TopgradserviceService;
@@ -4903,6 +5045,18 @@
 
 
       __webpack_exports__["default"] = "<section class=\"jobs-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <mat-progress-bar mode=\"indeterminate\" value=\"100\" *ngIf=\"!sortedData\"></mat-progress-bar>\n        <mat-form-field appearance=\"standard\">\n          <mat-label>Filter</mat-label>\n          <input matInput (keyup)=\"applyFilter($event)\" [(ngModel)]=\"search\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n        </mat-form-field>\n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            \n            <table mat-table [dataSource]=\"sortedData\"  matSort (matSortChange)=\"sortData($event)\" >\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row \">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"id\"> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- firstName Column -->\n              <ng-container matColumnDef=\"firstName\" >\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"first_name\">First Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.first_name ? row.first_name : 'N/A'}} </td>\n              </ng-container>\n              <!-- lastName Column -->\n              <ng-container matColumnDef=\"last_name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"last_name\">Last Name</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.last_name}} </td>\n             \n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"enquiryType\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"enquiry_subject\">Enquiry Type</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.enquiry_subject.name }} </td>\n              </ng-container>\n               <!-- Job title Column -->\n              <ng-container matColumnDef=\"email\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"email\">Email Address</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.email}} </td>\n              </ng-container>\n             \n              <!-- enquiry Column -->\n              <ng-container matColumnDef=\"enquiry\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"enquiry\"> Enquiry </th>\n                <td mat-cell *matCellDef=\"let row\" > {{row.enquiry}} </td>\n              </ng-container>\n\n              <!-- Admin reply -->\n              <ng-container matColumnDef=\"reply\">\n                <th  mat-header-cell *matHeaderCellDef mat-sort-header=\"is_replied\"> Is Replied </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.is_replied==false ? 'NO' : \"Yes\"}} </td>\n            \n              </ng-container>\n\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle></mat-slide-toggle>\n                   </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"applications\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Applicants </th>\n                <td mat-cell *matCellDef=\"let row\"><a routerLink=\"/applicantsManagement\"> {{row.applications}}</a> </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                    \t<a *ngIf=\"!row.is_replied\" mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"simple_reply(row._id)\" >\n                        <mat-icon class=\"material-icons-outlined\">reply</mat-icon>\n                        <span>Reply</span>\n                      </a>\n                      <a *ngIf=\"row.is_replied\" mat-menu-item class=\"\" >\n                        <mat-icon class=\"material-icons-outlined\">check_circle_outline</mat-icon>\n                        <span>Already Replied</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/contact-us/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\" (click)=\"reply_id(row._id)\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\"  (click)=\"delete_id(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\" >delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n                [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\" showFirstLastButtons>\n              </mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Job?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\"  (click)=\"contactDelete(this.item_id)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- Modal -->\n<div bsModal #replyModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"replyModal1()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form [formGroup]=\"contactUsForm\">\n        \t<div class=\"row\">\n        \t\t<div class=\"col-sm-12\">\n        \t\t\t<div class=\"form-group\">\n        \t\t\t\t<textarea class=\"form-control\" rows=\"3\" name=\"reply\" placeholder=\"Write your reply here...\" formControlName=\"reply\"></textarea>\n                <div *ngIf=\"(contactUsForm.controls.reply?.touched || contactUsForm.controls.reply?.dirty)\n                  && contactUsForm.controls.reply?.invalid && contactUsForm.controls.reply?.errors?.required\" style=\"color:red\" >\n                  *Please enter your reply....\n                </div>\n        \t\t\t</div>\n        \t\t</div>\n        \t</div>\n        </form>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"replyModal1()\">Cancel</button>\n        <button type=\"submit\" class=\"btn btn-primary\"  (click)=\"contactReply(this.id) \">Submit</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+      /***/
+    },
+
+    /***/
+    "EK1N": function EK1N(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-video\">Add Video</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video</th>\n                <td mat-cell *matCellDef=\"let element\">\n                  <span class=\"position-relative play-container\">\n                    <img [src]=\"element.image\" class=\"slider-imag\" />\n                    <img src=\"assets/img/play-btn.png\" class=\"img-fluid slider-play\"> \n                  </span> \n                </td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.title}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.postedBy}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-video\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-video\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
       /***/
     },
 
@@ -5298,18 +5452,6 @@
     },
 
     /***/
-    "GDIt": function GDIt(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/success.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"virde_play_btn play-1st\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/play-btn.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/youtube_video.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
-      /***/
-    },
-
-    /***/
     "GPan": function GPan(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -5641,194 +5783,6 @@
     },
 
     /***/
-    "ICAa": function ICAa(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "CareerArticlesComponent", function () {
-        return CareerArticlesComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_career_articles_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./career-articles.component.html */
-      "JVWD");
-      /* harmony import */
-
-
-      var _career_articles_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./career-articles.component.scss */
-      "/Oao");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/paginator */
-      "M9IT");
-      /* harmony import */
-
-
-      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/sort */
-      "Dh3D");
-      /* harmony import */
-
-
-      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/material/table */
-      "+0xr");
-      /* harmony import */
-
-
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ngx-bootstrap/modal */
-      "K3ix");
-      /* harmony import */
-
-
-      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @angular/cdk/collections */
-      "0EQZ");
-      /** Constants used to fill up our data base. */
-
-
-      var IMAGE = ['assets/img/blog-article.png', 'assets/img/blog3_bg.png'];
-      var TITLE = ['Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Web Development', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors'];
-      var DESCRIPTION = ['Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar'];
-      var POSTEDBY = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-
-      var CareerArticlesComponent = /*#__PURE__*/function () {
-        function CareerArticlesComponent() {
-          _classCallCheck(this, CareerArticlesComponent);
-
-          this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'description', 'action'];
-          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
-
-          var users = Array.from({
-            length: 50
-          }, function (_, k) {
-            return createNewUser(k + 1);
-          }); // Assign the data to the data source for the table to render
-
-          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
-        }
-
-        _createClass(CareerArticlesComponent, [{
-          key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }
-        }, {
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "applyFilter",
-          value: function applyFilter(event) {
-            var filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-
-            if (this.dataSource.paginator) {
-              this.dataSource.paginator.firstPage();
-            }
-          }
-          /** Whether the number of selected elements matches the total number of rows. */
-
-        }, {
-          key: "isAllSelected",
-          value: function isAllSelected() {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-          }
-          /** Selects all rows if they are not all selected; otherwise clear selection. */
-
-        }, {
-          key: "masterToggle",
-          value: function masterToggle() {
-            var _this$selection11;
-
-            if (this.isAllSelected()) {
-              this.selection.clear();
-              return;
-            }
-
-            (_this$selection11 = this.selection).select.apply(_this$selection11, _toConsumableArray(this.dataSource.data));
-          }
-          /** The label for the checkbox on the passed row */
-
-        }, {
-          key: "checkboxLabel",
-          value: function checkboxLabel(row) {
-            if (!row) {
-              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
-            }
-
-            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
-          }
-        }]);
-
-        return CareerArticlesComponent;
-      }();
-
-      CareerArticlesComponent.ctorParameters = function () {
-        return [];
-      };
-
-      CareerArticlesComponent.propDecorators = {
-        smallModal: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: ['smallModal']
-        }],
-        paginator: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
-        }],
-        sort: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
-        }]
-      };
-      CareerArticlesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-career-articles',
-        template: _raw_loader_career_articles_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_career_articles_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], CareerArticlesComponent);
-
-      function createNewUser(id) {
-        var image = IMAGE[Math.round(Math.random() * (IMAGE.length - 1))] + ' ';
-        var title = TITLE[Math.round(Math.random() * (TITLE.length - 1))] + ' ';
-        var description = DESCRIPTION[Math.round(Math.random() * (DESCRIPTION.length - 1))] + ' ';
-        var postedBy = POSTEDBY[Math.round(Math.random() * (POSTEDBY.length - 1))] + ' ';
-        return {
-          id: id.toString() + '.',
-          image: image,
-          title: title,
-          description: description,
-          postedBy: postedBy
-        };
-      }
-      /***/
-
-    },
-
-    /***/
     "J/2i": function J2i(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -5985,6 +5939,18 @@
     },
 
     /***/
+    "J3NH": function J3NH(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/blog-article.png\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>Build a better resume</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">Jaxson Stanton</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted 02 / 07 / 21</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa eget convallis enim lobortis ullamcorper tempus</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<p class=\"highlighted_info\">\n\t\t\t\t\t\t\t\t\t\t“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa eget convallis enim lobortis ullamcorper tempus”\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant. \n\t\t\t\t\t\t\t\t\t\tPurus volutpat aliquam integer mauris. Nam id venenatis pellentesque pellentesque. Donec est et sed velit at aliquet imperdiet. Velit vel id id orci, egestas id. Cursus vitae sit orci vitae luctus lectus sit eget. Cursus in ultricies sit vestibulum nulla nisi imperdiet dignissim ac. Eu in gravida id volutpat. Nec auctor amet posuere massa imperdiet nulla aenean diam. Ut lobortis sed aliquet donec. \n\t\t\t\t\t\t\t\t\t\tNisi lectus malesuada lectus imperdiet dictum id quisque. Montes, sapien libero sodales pharetra sed neque. Iaculis congue augue eget donec in nec platea id nullam. Quam tortor ut in eu euismod urna amet, fames. Condimentum ut ac convallis in bibendum faucibus. \n\t\t\t\t\t\t\t\t\t\tMagna diam adipiscing vitae quis nullam cras. Tempor donec morbi dolor ullamcorper id pharetra, cursus etiam. Adipiscing nunc, eleifend gravida malesuada tellus diam mattis condimentum. Nulla.\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant.\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n";
+      /***/
+    },
+
+    /***/
     "JPqG": function JPqG(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -6067,18 +6033,6 @@
         selector: 'app-dashboard',
         template: _raw_loader_default_layout_component_html__WEBPACK_IMPORTED_MODULE_1__["default"]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], DefaultLayoutComponent);
-      /***/
-    },
-
-    /***/
-    "JVWD": function JVWD(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-article\">Add Article</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>\n                <td mat-cell *matCellDef=\"let element\"> <img [src]=\"element.image\" class=\"slider-imag\" /></td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.title}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.postedBy}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-article\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-article\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
       /***/
     },
 
@@ -6188,6 +6142,67 @@
         template: _raw_loader_view_help_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_view_help_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_5__["TopgradserviceService"]])], ViewHelpComponent);
+      /***/
+    },
+
+    /***/
+    "K1un": function K1un(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EditVideoComponent", function () {
+        return EditVideoComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _raw_loader_edit_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./edit-video.component.html */
+      "3Jhu");
+      /* harmony import */
+
+
+      var _edit_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./edit-video.component.scss */
+      "Nfig");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+
+      var EditVideoComponent = /*#__PURE__*/function () {
+        function EditVideoComponent() {
+          _classCallCheck(this, EditVideoComponent);
+        }
+
+        _createClass(EditVideoComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }]);
+
+        return EditVideoComponent;
+      }();
+
+      EditVideoComponent.ctorParameters = function () {
+        return [];
+      };
+
+      EditVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-edit-video',
+        template: _raw_loader_edit_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_edit_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], EditVideoComponent);
       /***/
     },
 
@@ -6662,75 +6677,14 @@
     },
 
     /***/
-    "KydO": function KydO(module, __webpack_exports__, __webpack_require__) {
+    "Kp4c": function Kp4c(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjYXJlZXItdmlkZW9zLmNvbXBvbmVudC5zY3NzIn0= */";
-      /***/
-    },
-
-    /***/
-    "L3zY": function L3zY(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "EditArticleComponent", function () {
-        return EditArticleComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_edit_article_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./edit-article.component.html */
-      "1usr");
-      /* harmony import */
-
-
-      var _edit_article_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./edit-article.component.scss */
-      "iP52");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var EditArticleComponent = /*#__PURE__*/function () {
-        function EditArticleComponent() {
-          _classCallCheck(this, EditArticleComponent);
-        }
-
-        _createClass(EditArticleComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return EditArticleComponent;
-      }();
-
-      EditArticleComponent.ctorParameters = function () {
-        return [];
-      };
-
-      EditArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-edit-article',
-        template: _raw_loader_edit_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_edit_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], EditArticleComponent);
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LXZpZGVvLmNvbXBvbmVudC5zY3NzIn0= */";
       /***/
     },
 
@@ -6880,18 +6834,6 @@
     },
 
     /***/
-    "Mbux": function Mbux(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"view-job-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"job-description-sec card\">\n                    <div class=\"card-header\">\n                        <strong>View Job Details</strong>\n                    </div>\n\t\t\t\t\t<div class=\"gradPreview_result position-relative\">\n                        <div class=\"preview_wrapper\">\n                        \t<div class=\"prevw_main_ttl d-flex justify-content-between align-items-center\">\n                        \t\t<h4>UI/UX Designer</h4>\n                        \t\t<small>Posted: 8 days ago</small>\n                        \t</div>\n                        \t<div class=\"job_nam_prvw\">\n                        \t\t<div class=\"row\">\n                        \t\t\t<div class=\"col-sm-6\">\n                        \t\t\t\t<div class=\"prvw_jb_ttl\">\n                        \t\t\t\t\t<p>Adobe <small>remote work possible</small></p>\n                        \t\t\t\t\t<small class=\"prevw_loctn\">in Melbourne, Victoria</small>\n                        \t\t\t\t</div>\n                        \t\t\t\t<div class=\"prev_schdul d-flex justify-content-start\">\n                            \t\t\t\t<div class=\"prev_availby\">\n                            \t\t\t\t\t<small>Availability:</small>\n                            \t\t\t\t\t<p>Part time</p>\n                            \t\t\t\t</div>\n                            \t\t\t\t<div class=\"prev_availby prev_wrk_typ\">\n                            \t\t\t\t\t<small>Work type:</small>\n                            \t\t\t\t\t<p>Employment</p>\n                            \t\t\t\t</div>\n                                            <div class=\"prev_availby prev_wrk_typ\">\n                                                <small>Posted By:</small>\n                                                <p>Employer 893745</p>\n                                            </div>\n                        \t\t\t\t</div>\n                        \t\t\t</div>\n                        \t\t\t<div class=\"col-sm-6\">\n                        \t\t\t\t<div class=\"prvw_jb_skills gradKey_prve\">\n                        \t\t\t\t\t<div class=\"typed_text\">\n                        \t\t\t\t\t\t<small>Key Skills:</small>\n\t\t\t\t\t\t\t\t\t\t\t\t<span>Figma</span>\n\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"colr_green\">Adobe Illustrator</span>\n\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"colr_green\">Adobe Photoshop</span>\n\t\t\t\t\t\t\t\t\t\t\t\t<span>Python</span>\n\t\t\t\t\t\t\t\t\t\t\t\t<span>Figma</span>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n                        \t\t\t\t</div>\n                        \t\t\t</div>\n                        \t\t</div>\n                        \t</div>\n                        \t<div class=\"prev_descriptions\">\n                        \t\t<p>Description:</p>\n                        \t\t<div class=\"compny_info\">\n                        \t\t\t<h6>About the Company</h6>\n                        \t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n                        \t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n                        \t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n                        \t\t\tconsequat.</p>\n                        \t\t</div>\n                        \t\t<div class=\"compny_info\">\n                        \t\t\t<h6>Job Responsibilities</h6>\n                        \t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n                        \t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n                        \t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n                        \t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n                        \t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n                        \t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n                        \t\t</div>\n                        \t\t<div class=\"compny_info\">\n                        \t\t\t<h6>Qualifications & Experience</h6>\n                        \t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n                        \t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n                        \t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n                        \t\t\tconsequat.</p>\n                        \t\t</div>\n                        \t</div>\n                        \t<div class=\"job_nam_prvw prevwDeadline\">\n                        \t\t<div class=\"row\">\n                        \t\t\t<div class=\"col-sm-4\">\n                        \t\t\t\t<div class=\"deadTtl\">\n                        \t\t\t\t\t<small>Application deadline:</small>\n                        \t\t\t\t\t<small class=\"ddl_date\">14 / 03 / 21 <sub>&ensp;closes in 5 days</sub></small>\n                        \t\t\t\t</div>\n                        \t\t\t</div>\n                        \t\t\t<div class=\"col-sm-8\">\n                        \t\t\t\t<div class=\"deadTtl\">\n                        \t\t\t\t\t<small>Salary:</small>\n                        \t\t\t\t\t<small class=\"ddl_date\">$45 - $50 per hour</small>\n                        \t\t\t\t</div>\n                        \t\t\t</div>\n                        \t\t</div>\n                        \t</div>\n                        \t<div class=\"deadTtl\">\n            \t\t\t\t\t<small>Expected start date:</small>\n            \t\t\t\t\t<small class=\"ddl_date\">01 / 04 / 21</small>\n            \t\t\t\t</div>\n                            <div class=\"edit-btns text-right mt-3\">\n                                <a class=\"btn btn-primary\" routerLink=\"/jobsManagement\">Back</a>\n                            </div>\n                        </div>\n                \t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>";
-      /***/
-    },
-
-    /***/
     "MiC3": function MiC3(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -6977,6 +6919,18 @@
     },
 
     /***/
+    "Nfig": function Nfig(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LXZpZGVvLmNvbXBvbmVudC5zY3NzIn0= */";
+      /***/
+    },
+
+    /***/
     "ON/j": function ONJ(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -6989,14 +6943,14 @@
     },
 
     /***/
-    "Otod": function Otod(module, __webpack_exports__, __webpack_require__) {
+    "PAKq": function PAKq(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtdmlkZW8uY29tcG9uZW50LnNjc3MifQ== */";
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWFydGljbGUuY29tcG9uZW50LnNjc3MifQ== */";
       /***/
     },
 
@@ -7216,6 +7170,194 @@
         styles: [_contact_us_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_5__["TopgradserviceService"]])], ContactUsComponent);
       /***/
+    },
+
+    /***/
+    "PlhI": function PlhI(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CareerVideosComponent", function () {
+        return CareerVideosComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _raw_loader_career_videos_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./career-videos.component.html */
+      "EK1N");
+      /* harmony import */
+
+
+      var _career_videos_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./career-videos.component.scss */
+      "Snfh");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/material/paginator */
+      "M9IT");
+      /* harmony import */
+
+
+      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @angular/material/sort */
+      "Dh3D");
+      /* harmony import */
+
+
+      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/material/table */
+      "+0xr");
+      /* harmony import */
+
+
+      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! ngx-bootstrap/modal */
+      "K3ix");
+      /* harmony import */
+
+
+      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @angular/cdk/collections */
+      "0EQZ");
+      /** Constants used to fill up our data base. */
+
+
+      var IMAGE = ['assets/img/grads.png', 'assets/img/success.png'];
+      var TITLE = ['Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Web Development', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors'];
+      var DESCRIPTION = ['Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar'];
+      var POSTEDBY = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+
+      var CareerVideosComponent = /*#__PURE__*/function () {
+        function CareerVideosComponent() {
+          _classCallCheck(this, CareerVideosComponent);
+
+          this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'description', 'action'];
+          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
+
+          var users = Array.from({
+            length: 50
+          }, function (_, k) {
+            return createNewUser(k + 1);
+          }); // Assign the data to the data source for the table to render
+
+          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
+        }
+
+        _createClass(CareerVideosComponent, [{
+          key: "ngAfterViewInit",
+          value: function ngAfterViewInit() {
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+          }
+        }, {
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "applyFilter",
+          value: function applyFilter(event) {
+            var filterValue = event.target.value;
+            this.dataSource.filter = filterValue.trim().toLowerCase();
+
+            if (this.dataSource.paginator) {
+              this.dataSource.paginator.firstPage();
+            }
+          }
+          /** Whether the number of selected elements matches the total number of rows. */
+
+        }, {
+          key: "isAllSelected",
+          value: function isAllSelected() {
+            var numSelected = this.selection.selected.length;
+            var numRows = this.dataSource.data.length;
+            return numSelected === numRows;
+          }
+          /** Selects all rows if they are not all selected; otherwise clear selection. */
+
+        }, {
+          key: "masterToggle",
+          value: function masterToggle() {
+            var _this$selection12;
+
+            if (this.isAllSelected()) {
+              this.selection.clear();
+              return;
+            }
+
+            (_this$selection12 = this.selection).select.apply(_this$selection12, _toConsumableArray(this.dataSource.data));
+          }
+          /** The label for the checkbox on the passed row */
+
+        }, {
+          key: "checkboxLabel",
+          value: function checkboxLabel(row) {
+            if (!row) {
+              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
+            }
+
+            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
+          }
+        }]);
+
+        return CareerVideosComponent;
+      }();
+
+      CareerVideosComponent.ctorParameters = function () {
+        return [];
+      };
+
+      CareerVideosComponent.propDecorators = {
+        smallModal: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+          args: ['smallModal']
+        }],
+        paginator: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
+        }],
+        sort: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
+        }]
+      };
+      CareerVideosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-career-videos',
+        template: _raw_loader_career_videos_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_career_videos_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], CareerVideosComponent);
+
+      function createNewUser(id) {
+        var image = IMAGE[Math.round(Math.random() * (IMAGE.length - 1))] + ' ';
+        var title = TITLE[Math.round(Math.random() * (TITLE.length - 1))] + ' ';
+        var description = DESCRIPTION[Math.round(Math.random() * (DESCRIPTION.length - 1))] + ' ';
+        var postedBy = POSTEDBY[Math.round(Math.random() * (POSTEDBY.length - 1))] + ' ';
+        return {
+          id: id.toString() + '.',
+          image: image,
+          title: title,
+          description: description,
+          postedBy: postedBy
+        };
+      }
+      /***/
+
     },
 
     /***/
@@ -7567,14 +7709,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection12;
+            var _this$selection13;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection12 = this.selection).select.apply(_this$selection12, _toConsumableArray(this.dataSource.data));
+            (_this$selection13 = this.selection).select.apply(_this$selection13, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -8053,14 +8195,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection13;
+            var _this$selection14;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection13 = this.selection).select.apply(_this$selection13, _toConsumableArray(this.dataSource.data));
+            (_this$selection14 = this.selection).select.apply(_this$selection14, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 
@@ -8484,14 +8626,14 @@
     },
 
     /***/
-    "SvAo": function SvAo(module, __webpack_exports__, __webpack_require__) {
+    "Snfh": function Snfh(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add Article</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter name here\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/dummy.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjYXJlZXItdmlkZW9zLmNvbXBvbmVudC5zY3NzIn0= */";
       /***/
     },
 
@@ -8578,199 +8720,6 @@
         providers: [_coreui_icons_angular__WEBPACK_IMPORTED_MODULE_3__["IconSetService"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_3__["IconSetService"]])], AppComponent);
       /***/
-    },
-
-    /***/
-    "TNju": function TNju(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "JobsManagementComponent", function () {
-        return JobsManagementComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_jobs_management_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./jobs-management.component.html */
-      "WpKD");
-      /* harmony import */
-
-
-      var _jobs_management_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./jobs-management.component.scss */
-      "Ar1G");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/paginator */
-      "M9IT");
-      /* harmony import */
-
-
-      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/sort */
-      "Dh3D");
-      /* harmony import */
-
-
-      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/material/table */
-      "+0xr");
-      /* harmony import */
-
-
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ngx-bootstrap/modal */
-      "K3ix");
-      /* harmony import */
-
-
-      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @angular/cdk/collections */
-      "0EQZ");
-      /** Constants used to fill up our data base. */
-
-
-      var DEADLINE = ['08-09-2021', '07-09-2021', '01-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021', '08-09-2021'];
-      var POSTEDBY = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-      var WORKTYPE = ['Employment', 'Employment', 'Internship', 'Employment', 'Employment', 'Employment', 'Employment', 'Employment', 'Internship'];
-      var CONTRACT = ['Full-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Full-Time', 'Full-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time', 'Part-Time'];
-      var TITLE = ['UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'Promatics', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'UI/UX Designer', 'Promatics', 'Promatics'];
-      var APPLICATIONS = ['23', '33', '77', '34', '3', '56', '56', '56', '56', '78', '78', '78', '56', '56', '56', '56', '56', '78', '78'];
-
-      var JobsManagementComponent = /*#__PURE__*/function () {
-        function JobsManagementComponent() {
-          _classCallCheck(this, JobsManagementComponent);
-
-          this.displayedColumns = ['select', 'id', 'postedby', 'jobtitle', 'worktype', 'contracttype', 'deadline', 'status', 'applications', 'action'];
-          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
-
-          var users = Array.from({
-            length: 50
-          }, function (_, k) {
-            return createNewUser(k + 1);
-          }); // Assign the data to the data source for the table to render
-
-          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
-        }
-
-        _createClass(JobsManagementComponent, [{
-          key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }
-        }, {
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "applyFilter",
-          value: function applyFilter(event) {
-            var filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-
-            if (this.dataSource.paginator) {
-              this.dataSource.paginator.firstPage();
-            }
-          }
-          /** Whether the number of selected elements matches the total number of rows. */
-
-        }, {
-          key: "isAllSelected",
-          value: function isAllSelected() {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-          }
-          /** Selects all rows if they are not all selected; otherwise clear selection. */
-
-        }, {
-          key: "masterToggle",
-          value: function masterToggle() {
-            var _this$selection14;
-
-            if (this.isAllSelected()) {
-              this.selection.clear();
-              return;
-            }
-
-            (_this$selection14 = this.selection).select.apply(_this$selection14, _toConsumableArray(this.dataSource.data));
-          }
-          /** The label for the checkbox on the passed row */
-
-        }, {
-          key: "checkboxLabel",
-          value: function checkboxLabel(row) {
-            if (!row) {
-              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
-            }
-
-            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
-          }
-        }]);
-
-        return JobsManagementComponent;
-      }();
-
-      JobsManagementComponent.ctorParameters = function () {
-        return [];
-      };
-
-      JobsManagementComponent.propDecorators = {
-        smallModal: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: ['smallModal']
-        }],
-        paginator: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
-        }],
-        sort: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
-        }]
-      };
-      JobsManagementComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-jobs-management',
-        template: _raw_loader_jobs_management_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_jobs_management_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], JobsManagementComponent);
-
-      function createNewUser(id) {
-        var postedby = POSTEDBY[Math.round(Math.random() * (POSTEDBY.length - 1))] + ' ';
-        var worktype = WORKTYPE[Math.round(Math.random() * (WORKTYPE.length - 1))] + ' ';
-        var contracttype = CONTRACT[Math.round(Math.random() * (CONTRACT.length - 1))] + ' ';
-        var jobtitle = TITLE[Math.round(Math.random() * (TITLE.length - 1))] + ' ';
-        var applications = APPLICATIONS[Math.round(Math.random() * (APPLICATIONS.length - 1))] + ' ';
-        return {
-          id: id.toString() + '.',
-          postedby: postedby,
-          worktype: worktype,
-          contracttype: contracttype,
-          jobtitle: jobtitle,
-          applications: applications,
-          deadline: DEADLINE[Math.round(Math.random() * (DEADLINE.length - 1))]
-        };
-      }
-      /***/
-
     },
 
     /***/
@@ -8959,6 +8908,79 @@
     },
 
     /***/
+    "TqeO": function TqeO(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Article</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/blog-article.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
+      /***/
+    },
+
+    /***/
+    "U/Yp": function UYp(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "EditArticleComponent", function () {
+        return EditArticleComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _raw_loader_edit_article_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./edit-article.component.html */
+      "TqeO");
+      /* harmony import */
+
+
+      var _edit_article_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./edit-article.component.scss */
+      "PAKq");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+
+      var EditArticleComponent = /*#__PURE__*/function () {
+        function EditArticleComponent() {
+          _classCallCheck(this, EditArticleComponent);
+        }
+
+        _createClass(EditArticleComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }]);
+
+        return EditArticleComponent;
+      }();
+
+      EditArticleComponent.ctorParameters = function () {
+        return [];
+      };
+
+      EditArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-edit-article',
+        template: _raw_loader_edit_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_edit_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], EditArticleComponent);
+      /***/
+    },
+
+    /***/
     "UcHy": function UcHy(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -9080,30 +9102,6 @@
     },
 
     /***/
-    "WpKD": function WpKD(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"jobs-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <mat-form-field appearance=\"standard\">\n          <mat-label>Filter</mat-label>\n          <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n        </mat-form-field>\n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- postedby Column -->\n              <ng-container matColumnDef=\"postedby\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Employer Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.postedby}} </td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"worktype\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Type</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.worktype}} </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"contracttype\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Contract Type</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.contracttype}} </td>\n              </ng-container>\n               <!-- Job title Column -->\n              <ng-container matColumnDef=\"jobtitle\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Title</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.jobtitle}} </td>\n              </ng-container>\n             \n              <!-- deadline Column -->\n              <ng-container matColumnDef=\"deadline\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Deadline </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.deadline}} </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle></mat-slide-toggle>\n                   </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"applications\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Applicants </th>\n                <td mat-cell *matCellDef=\"let row\"><a routerLink=\"/applicantsManagement\"> {{row.applications}}</a> </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <a mat-menu-item class=\"\" routerLink=\"/viewJob\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/editJob\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Job?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-      /***/
-    },
-
-    /***/
-    "X98x": function X98x(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LXZpZGVvLmNvbXBvbmVudC5zY3NzIn0= */";
-      /***/
-    },
-
-    /***/
     "XLjr": function XLjr(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -9161,67 +9159,6 @@
         template: _raw_loader_view_profile_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_view_profile_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewProfileComponent);
-      /***/
-    },
-
-    /***/
-    "XeIG": function XeIG(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "AddVideoComponent", function () {
-        return AddVideoComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_add_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./add-video.component.html */
-      "eSVE");
-      /* harmony import */
-
-
-      var _add_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./add-video.component.scss */
-      "Otod");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var AddVideoComponent = /*#__PURE__*/function () {
-        function AddVideoComponent() {
-          _classCallCheck(this, AddVideoComponent);
-        }
-
-        _createClass(AddVideoComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return AddVideoComponent;
-      }();
-
-      AddVideoComponent.ctorParameters = function () {
-        return [];
-      };
-
-      AddVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-add-video',
-        template: _raw_loader_add_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_add_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], AddVideoComponent);
       /***/
     },
 
@@ -9582,409 +9519,391 @@
       /* harmony import */
 
 
-      var _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
-      /*! ./views/jobs-management/jobs-management.component */
-      "TNju");
-      /* harmony import */
-
-
-      var _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
-      /*! ./views/view-job/view-job.component */
-      "/9A/");
-      /* harmony import */
-
-
-      var _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
+      var _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
       /*! ./views/categories-management/categories-management.component */
       "768J");
       /* harmony import */
 
 
-      var _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
+      var _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
       /*! ./views/view-applicant/view-applicant.component */
       "MiC3");
       /* harmony import */
 
 
-      var _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
+      var _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
       /*! ./views/header-section/header-section.component */
       "Q1t5");
       /* harmony import */
 
 
-      var _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
+      var _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
       /*! ./views/home-our-story/home-our-story.component */
       "MUxT");
       /* harmony import */
 
 
-      var _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
+      var _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
       /*! ./views/something-for-everyone/something-for-everyone.component */
       "crs7");
       /* harmony import */
 
 
-      var _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
+      var _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
       /*! ./views/how-it-work/how-it-work.component */
       "h6yy");
       /* harmony import */
 
 
-      var _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
+      var _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
       /*! ./views/success-story-slider/success-story-slider.component */
       "gCHI");
       /* harmony import */
 
 
-      var _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
+      var _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
       /*! ./views/register-today/register-today.component */
       "iafZ");
       /* harmony import */
 
 
-      var _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
+      var _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
       /*! ./views/view-slider-item/view-slider-item.component */
       "vYXW");
       /* harmony import */
 
 
-      var _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
+      var _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
       /*! ./views/add-slider-item/add-slider-item.component */
       "CiAW");
       /* harmony import */
 
 
-      var _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
+      var _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
       /*! ./views/applicants-management/applicants-management.component */
       "6FL1");
       /* harmony import */
 
 
-      var _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
+      var _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
       /*! ./views/add-category/add-category.component */
       "Qnxy");
       /* harmony import */
 
 
-      var _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
+      var _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
       /*! ./views/add-sub-category/add-sub-category.component */
       "Eicf");
       /* harmony import */
 
 
-      var _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
+      var _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
       /*! ./views/edit-sub-category/edit-sub-category.component */
       "BCwB");
       /* harmony import */
 
 
-      var _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
+      var _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
       /*! ./views/view-sub-category/view-sub-category.component */
       "wcH6");
       /* harmony import */
 
 
-      var _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
+      var _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
       /*! ./views/edit-job/edit-job.component */
       "+rVA");
       /* harmony import */
 
 
-      var _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(
+      var _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
       /*! ./views/payment-management/payment-management.component */
       "0Wcs");
       /* harmony import */
 
 
-      var _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(
+      var _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
       /*! ./views/view-payment/view-payment.component */
       "iQG3");
       /* harmony import */
 
 
-      var _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(
+      var _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(
       /*! ./views/sub-category-management/sub-category-management.component */
       "k40T");
       /* harmony import */
 
 
-      var _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(
+      var _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(
       /*! ./views/edit-category/edit-category.component */
       "uP1o");
       /* harmony import */
 
 
-      var _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
+      var _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(
       /*! ./views/sub-admin-management/sub-admin-management.component */
       "yAik");
       /* harmony import */
 
 
-      var _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
+      var _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(
       /*! ./views/add-sub-admin/add-sub-admin.component */
       "1jXZ");
       /* harmony import */
 
 
-      var _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
+      var _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
       /*! ./views/view-sub-admin/view-sub-admin.component */
       "tRZt");
       /* harmony import */
 
 
-      var _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
+      var _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
       /*! ./views/edit-sub-admin/edit-sub-admin.component */
       "0ki/");
       /* harmony import */
 
 
-      var _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
+      var _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
       /*! ./views/employer-how-it-works/employer-how-it-works.component */
       "fB+M");
       /* harmony import */
 
 
-      var _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(
+      var _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
       /*! ./views/graduate-how-it-works/graduate-how-it-works.component */
       "8XS0");
       /* harmony import */
 
 
-      var _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
+      var _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
       /*! ./pages/content-management/terms-conditions/terms-conditions.component */
       "2ihL");
       /* harmony import */
 
 
-      var _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
+      var _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(
       /*! ./views/contact-us/contact-us.component */
       "PUU/");
       /* harmony import */
 
 
-      var _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
+      var _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
       /*! ./views/contact-listing/contact-listing.component */
       "RWm0");
       /* harmony import */
 
 
-      var _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
+      var _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
       /*! ./views/offer-management/offer-management.component */
       "fMvR");
       /* harmony import */
 
 
-      var _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(
+      var _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
       /*! ./views/career-artcles/career-artcles.component */
       "gGL6");
       /* harmony import */
 
 
-      var _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(
-      /*! ./views/career-articles/career-articles.component */
-      "ICAa");
+      var _pages_content_management_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
+      /*! ./pages/content-management/career-articles/career-articles.component */
+      "8lXT");
       /* harmony import */
 
 
-      var _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(
-      /*! ./views/career-videos/career-videos.component */
-      "ovBg");
+      var _pages_content_management_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(
+      /*! ./pages/content-management/career-videos/career-videos.component */
+      "PlhI");
       /* harmony import */
 
 
-      var _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(
-      /*! ./views/add-article/add-article.component */
-      "unrn");
+      var _pages_content_management_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(
+      /*! ./pages/content-management/view-article/view-article.component */
+      "a+qF");
       /* harmony import */
 
 
-      var _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
-      /*! ./views/view-article/view-article.component */
-      "e9LB");
+      var _pages_content_management_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(
+      /*! ./pages/content-management/edit-article/edit-article.component */
+      "U/Yp");
       /* harmony import */
 
 
-      var _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
-      /*! ./views/edit-article/edit-article.component */
-      "L3zY");
+      var _pages_content_management_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(
+      /*! ./pages/content-management/add-video/add-video.component */
+      "bRVr");
       /* harmony import */
 
 
-      var _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
-      /*! ./views/add-video/add-video.component */
-      "XeIG");
+      var _pages_content_management_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
+      /*! ./pages/content-management/view-video/view-video.component */
+      "bh3J");
       /* harmony import */
 
 
-      var _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
-      /*! ./views/view-video/view-video.component */
-      "fjVs");
+      var _pages_content_management_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
+      /*! ./pages/content-management/edit-video/edit-video.component */
+      "K1un");
       /* harmony import */
 
 
-      var _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
-      /*! ./views/edit-video/edit-video.component */
-      "q2wW");
-      /* harmony import */
-
-
-      var _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
+      var _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
       /*! ./views/schedule-interview-management/schedule-interview-management.component */
       "3Hv5");
       /* harmony import */
 
 
-      var _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
+      var _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
       /*! ./views/view-interview/view-interview.component */
       "Y+84");
       /* harmony import */
 
 
-      var _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(
+      var _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
       /*! ./views/edit-interview/edit-interview.component */
       "12bd");
       /* harmony import */
 
 
-      var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(
+      var _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
       /*! ./views/faqs/faqs.component */
       "7Cea");
       /* harmony import */
 
 
-      var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(
+      var _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
       /*! ./views/add-faq/add-faq.component */
       "3ziB");
       /* harmony import */
 
 
-      var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(
+      var _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(
       /*! ./views/edit-faq/edit-faq.component */
       "PTKP");
       /* harmony import */
 
 
-      var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(
+      var _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(
       /*! ./views/view-faq/view-faq.component */
       "VqZG");
       /* harmony import */
 
 
-      var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(
+      var _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(
       /*! ./pages/content-management/about-us/about-us.component */
       "KYUf");
       /* harmony import */
 
 
-      var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(
+      var _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(
       /*! ./pages/homepage-management/homepage-management.component */
       "tkH9");
       /* harmony import */
 
 
-      var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(
+      var _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(
       /*! ./views/help-management/help-management.component */
       "4X2+");
       /* harmony import */
 
 
-      var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(
+      var _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(
       /*! ./views/view-help/view-help.component */
       "Jzsx");
       /* harmony import */
 
 
-      var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
+      var _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(
       /*! ./views/messaging-reports/messaging-reports.component */
       "3a5B");
       /* harmony import */
 
 
-      var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
+      var _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(
       /*! ./views/verification-submissions/verification-submissions.component */
       "cWCV");
       /* harmony import */
 
 
-      var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
+      var _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(
       /*! ./views/offer-submissions/offer-submissions.component */
       "3xDY");
       /* harmony import */
 
 
-      var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
+      var _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(
       /*! ./views/view-verification/view-verification.component */
       "ac+Q");
       /* harmony import */
 
 
-      var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
+      var _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(
       /*! ./views/view-offer/view-offer.component */
       "PnTO");
       /* harmony import */
 
 
-      var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
+      var _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(
       /*! ./views/view-report/view-report.component */
       "zGdd");
       /* harmony import */
 
 
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(
       /*! @angular/common/http */
       "tk/3");
       /* harmony import */
 
 
-      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
+      var _topgradservice_service__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(
       /*! ./topgradservice.service */
       "DL5e");
       /* harmony import */
 
 
-      var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
+      var _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(
       /*! ./pages/auth/reset-password/reset-password.component */
       "4AU6");
       /* harmony import */
 
 
-      var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(
+      var _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(
       /*! ./pages/content-management/terms-sub-headings/terms-sub-headings.component */
       "Q5si");
       /* harmony import */
 
 
-      var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
+      var _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(
       /*! ./pages/content-management/add-heading/add-heading.component */
       "GPan");
       /* harmony import */
 
 
-      var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
+      var _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(
       /*! ./pages/content-management/edit-heading/edit-heading.component */
       "nMTe");
       /* harmony import */
 
 
-      var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
+      var _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(
       /*! ./pages/content-management/edit-sub-heading/edit-sub-heading.component */
       "J/2i");
       /* harmony import */
 
 
-      var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(
+      var _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(
       /*! ./pages/content-management/add-sub-heading/add-sub-heading.component */
       "4V+q");
       /* harmony import */
 
 
-      var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(
+      var _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(
       /*! ./pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component */
       "TfLc");
       /* harmony import */
 
 
-      var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(
+      var _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(
       /*! ./pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component */
       "FPJr"); // Material import
 
@@ -10002,9 +9921,12 @@
       // import { EditGraduateComponent } from './pages/UserManagement/edit-graduate/edit-graduate.component';
       //import { ViewGraduateComponent } from './pages/UserManagement/view-graduate/view-graduate.component';
       // import { ViewEmployerComponent } from './pages/UserManagement/view-employer/view-employer.component';
+      //import { JobsManagementComponent } from './views/jobs-management/jobs-management.component';
+      //import { ViewJobComponent } from './views/view-job/view-job.component';
       //import { EditEmployerHowItWorksComponent } from './views/edit-employer-how-it-works/edit-employer-how-it-works.component';
       //import { EditGraduateHowItWorksComponent } from './views/edit-graduate-how-it-works/edit-graduate-how-it-works.component';
       //import { PrivacyPolicyComponent } from './pages/content-management/privacy-policy/privacy-policy.component';
+      // import { AddArticleComponent } from './pages/content-management/add-article/add-article.component';
       //import { RecruitmentSolutionsManagementComponent } from './pages/recruitment-solutions-management/recruitment-solutions-management.component';
       //import { ResumeBuilderManagementComponent } from './pages/resume-builder-management/resume-builder-management.component';
       // import { VideoIntroComponent } from './pages/content-management/video-intro/video-intro.component';
@@ -10022,31 +9944,34 @@
       };
 
       AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_101__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppBreadcrumbModule"].forRoot(), _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppFooterModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppSidebarModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_5__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_37__["BsDropdownModule"].forRoot(), ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_38__["TabsModule"].forRoot(), ng2_charts__WEBPACK_IMPORTED_MODULE_39__["ChartsModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetModule"].forRoot(), _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_9__["MatSortModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_10__["MatSlideToggleModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["ModalModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"], _material_module__WEBPACK_IMPORTED_MODULE_28__["MaterialModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_16__["EditorModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_17__["MatRadioModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_18__["MatAutocompleteModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_19__["MatExpansionModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_20__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["ReactiveFormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"], _angular_slider_ngx_slider__WEBPACK_IMPORTED_MODULE_24__["NgxSliderModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_25__["NgxDropzoneModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_26__["MatTabsModule"], ngx_plyr__WEBPACK_IMPORTED_MODULE_27__["PlyrModule"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_98__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _app_routing__WEBPACK_IMPORTED_MODULE_36__["AppRoutingModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppAsideModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppBreadcrumbModule"].forRoot(), _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppFooterModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppHeaderModule"], _coreui_angular__WEBPACK_IMPORTED_MODULE_35__["AppSidebarModule"], ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_5__["PerfectScrollbarModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_37__["BsDropdownModule"].forRoot(), ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_38__["TabsModule"].forRoot(), ng2_charts__WEBPACK_IMPORTED_MODULE_39__["ChartsModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetModule"].forRoot(), _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_paginator__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_9__["MatSortModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_10__["MatSlideToggleModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_11__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_12__["MatIconModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["ModalModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_15__["MatCheckboxModule"], _material_module__WEBPACK_IMPORTED_MODULE_28__["MaterialModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_16__["EditorModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_17__["MatRadioModule"], _angular_material_autocomplete__WEBPACK_IMPORTED_MODULE_18__["MatAutocompleteModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_19__["MatExpansionModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_20__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_21__["ReactiveFormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_23__["MatNativeDateModule"], _angular_slider_ngx_slider__WEBPACK_IMPORTED_MODULE_24__["NgxSliderModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_25__["NgxDropzoneModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_26__["MatTabsModule"], ngx_plyr__WEBPACK_IMPORTED_MODULE_27__["PlyrModule"]],
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]].concat(APP_CONTAINERS, [_views_error_404_component__WEBPACK_IMPORTED_MODULE_31__["P404Component"], _views_error_500_component__WEBPACK_IMPORTED_MODULE_32__["P500Component"], _pages_auth_login_login_component__WEBPACK_IMPORTED_MODULE_33__["LoginComponent"], _views_register_register_component__WEBPACK_IMPORTED_MODULE_34__["RegisterComponent"], _pages_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_40__["UserManagementComponent"], _pages_auth_forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_41__["ForgetPasswordComponent"], _views_view_profile_view_profile_component__WEBPACK_IMPORTED_MODULE_42__["ViewProfileComponent"], //EmployersListComponent,
         //EditEmployerComponent,
         //GraduateListComponent,
         //EditGraduateComponent,
         //ViewGraduateComponent,
         // ViewEmployerComponent,
-        _views_jobs_management_jobs_management_component__WEBPACK_IMPORTED_MODULE_43__["JobsManagementComponent"], _views_view_job_view_job_component__WEBPACK_IMPORTED_MODULE_44__["ViewJobComponent"], _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_45__["CategoriesManagementComponent"], _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_46__["ViewApplicantComponent"], _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_47__["HeaderSectionComponent"], _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_48__["HomeOurStoryComponent"], _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_49__["SomethingForEveryoneComponent"], _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_50__["HowItWorkComponent"], _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_51__["SuccessStorySliderComponent"], _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_52__["RegisterTodayComponent"], _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_53__["ViewSliderItemComponent"], _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_54__["AddSliderItemComponent"], _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_55__["ApplicantsManagementComponent"], _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_56__["AddCategoryComponent"], _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_57__["AddSubCategoryComponent"], _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_58__["EditSubCategoryComponent"], _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_59__["ViewSubCategoryComponent"], _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_60__["EditJobComponent"], _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_61__["PaymentManagementComponent"], _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_62__["ViewPaymentComponent"], _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_63__["SubCategoryManagementComponent"], _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_64__["EditCategoryComponent"], _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_65__["SubAdminManagementComponent"], _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_66__["AddSubAdminComponent"], _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_67__["ViewSubAdminComponent"], _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_68__["EditSubAdminComponent"], _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_69__["EmployerHowItWorksComponent"], //EditEmployerHowItWorksComponent,
-        _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_70__["GraduateHowItWorksComponent"], //EditGraduateHowItWorksComponent,
+        // JobsManagementComponent,
+        //ViewJobComponent,
+        _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_43__["CategoriesManagementComponent"], _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_44__["ViewApplicantComponent"], _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_45__["HeaderSectionComponent"], _views_home_our_story_home_our_story_component__WEBPACK_IMPORTED_MODULE_46__["HomeOurStoryComponent"], _views_something_for_everyone_something_for_everyone_component__WEBPACK_IMPORTED_MODULE_47__["SomethingForEveryoneComponent"], _views_how_it_work_how_it_work_component__WEBPACK_IMPORTED_MODULE_48__["HowItWorkComponent"], _views_success_story_slider_success_story_slider_component__WEBPACK_IMPORTED_MODULE_49__["SuccessStorySliderComponent"], _views_register_today_register_today_component__WEBPACK_IMPORTED_MODULE_50__["RegisterTodayComponent"], _views_view_slider_item_view_slider_item_component__WEBPACK_IMPORTED_MODULE_51__["ViewSliderItemComponent"], _views_add_slider_item_add_slider_item_component__WEBPACK_IMPORTED_MODULE_52__["AddSliderItemComponent"], _views_applicants_management_applicants_management_component__WEBPACK_IMPORTED_MODULE_53__["ApplicantsManagementComponent"], _views_add_category_add_category_component__WEBPACK_IMPORTED_MODULE_54__["AddCategoryComponent"], _views_add_sub_category_add_sub_category_component__WEBPACK_IMPORTED_MODULE_55__["AddSubCategoryComponent"], _views_edit_sub_category_edit_sub_category_component__WEBPACK_IMPORTED_MODULE_56__["EditSubCategoryComponent"], _views_view_sub_category_view_sub_category_component__WEBPACK_IMPORTED_MODULE_57__["ViewSubCategoryComponent"], _views_edit_job_edit_job_component__WEBPACK_IMPORTED_MODULE_58__["EditJobComponent"], _views_payment_management_payment_management_component__WEBPACK_IMPORTED_MODULE_59__["PaymentManagementComponent"], _views_view_payment_view_payment_component__WEBPACK_IMPORTED_MODULE_60__["ViewPaymentComponent"], _views_sub_category_management_sub_category_management_component__WEBPACK_IMPORTED_MODULE_61__["SubCategoryManagementComponent"], _views_edit_category_edit_category_component__WEBPACK_IMPORTED_MODULE_62__["EditCategoryComponent"], _views_sub_admin_management_sub_admin_management_component__WEBPACK_IMPORTED_MODULE_63__["SubAdminManagementComponent"], _views_add_sub_admin_add_sub_admin_component__WEBPACK_IMPORTED_MODULE_64__["AddSubAdminComponent"], _views_view_sub_admin_view_sub_admin_component__WEBPACK_IMPORTED_MODULE_65__["ViewSubAdminComponent"], _views_edit_sub_admin_edit_sub_admin_component__WEBPACK_IMPORTED_MODULE_66__["EditSubAdminComponent"], _views_employer_how_it_works_employer_how_it_works_component__WEBPACK_IMPORTED_MODULE_67__["EmployerHowItWorksComponent"], //EditEmployerHowItWorksComponent,
+        _views_graduate_how_it_works_graduate_how_it_works_component__WEBPACK_IMPORTED_MODULE_68__["GraduateHowItWorksComponent"], //EditGraduateHowItWorksComponent,
         //PrivacyPolicyComponent,
-        _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_71__["TermsConditionsComponent"], _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_72__["ContactUsComponent"], _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_73__["ContactListingComponent"], _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_74__["OfferManagementComponent"], _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_75__["CareerArtclesComponent"], _views_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_76__["CareerArticlesComponent"], _views_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_77__["CareerVideosComponent"], _views_add_article_add_article_component__WEBPACK_IMPORTED_MODULE_78__["AddArticleComponent"], _views_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_79__["ViewArticleComponent"], _views_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_80__["EditArticleComponent"], _views_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_81__["AddVideoComponent"], _views_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_82__["ViewVideoComponent"], _views_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_83__["EditVideoComponent"], _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_84__["ScheduleInterviewManagementComponent"], _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_85__["ViewInterviewComponent"], _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_86__["EditInterviewComponent"], //RecruitmentSolutionsManagementComponent,
+        _pages_content_management_terms_conditions_terms_conditions_component__WEBPACK_IMPORTED_MODULE_69__["TermsConditionsComponent"], _views_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_70__["ContactUsComponent"], _views_contact_listing_contact_listing_component__WEBPACK_IMPORTED_MODULE_71__["ContactListingComponent"], _views_offer_management_offer_management_component__WEBPACK_IMPORTED_MODULE_72__["OfferManagementComponent"], _views_career_artcles_career_artcles_component__WEBPACK_IMPORTED_MODULE_73__["CareerArtclesComponent"], _pages_content_management_career_articles_career_articles_component__WEBPACK_IMPORTED_MODULE_74__["CareerArticlesComponent"], _pages_content_management_career_videos_career_videos_component__WEBPACK_IMPORTED_MODULE_75__["CareerVideosComponent"], // AddArticleComponent,
+        _pages_content_management_view_article_view_article_component__WEBPACK_IMPORTED_MODULE_76__["ViewArticleComponent"], _pages_content_management_edit_article_edit_article_component__WEBPACK_IMPORTED_MODULE_77__["EditArticleComponent"], _pages_content_management_add_video_add_video_component__WEBPACK_IMPORTED_MODULE_78__["AddVideoComponent"], _pages_content_management_view_video_view_video_component__WEBPACK_IMPORTED_MODULE_79__["ViewVideoComponent"], _pages_content_management_edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_80__["EditVideoComponent"], _views_schedule_interview_management_schedule_interview_management_component__WEBPACK_IMPORTED_MODULE_81__["ScheduleInterviewManagementComponent"], _views_view_interview_view_interview_component__WEBPACK_IMPORTED_MODULE_82__["ViewInterviewComponent"], _views_edit_interview_edit_interview_component__WEBPACK_IMPORTED_MODULE_83__["EditInterviewComponent"], //RecruitmentSolutionsManagementComponent,
         //ResumeBuilderManagementComponent,
         //VideoIntroComponent,
         // VideoIntro1Component,
         //VideoIntro2Component,
         // VideoIntro3Component,
         //GraduateVerificationManagementComponent,
-        _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_87__["FaqsComponent"], _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_88__["AddFaqComponent"], _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_89__["EditFaqComponent"], _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_90__["ViewFaqComponent"], _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_91__["AboutUsComponent"], _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_109__["GraduateAddFaqComponent"], _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_110__["GraduateEditFaqComponent"], _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_92__["HomepageManagementComponent"], _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_93__["HelpManagementComponent"], _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_94__["ViewHelpComponent"], _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_95__["MessagingReportsComponent"], _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_96__["VerificationSubmissionsComponent"], _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_97__["OfferSubmissionsComponent"], _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_98__["ViewVerificationComponent"], _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_99__["ViewOfferComponent"], _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_100__["ViewReportComponent"], //IndustrylistComponent,
-        _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_103__["ResetPasswordComponent"], _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_104__["TermsSubHeadingsComponent"], _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_105__["AddHeadingComponent"], _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_106__["EditHeadingComponent"], _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_107__["EditSubHeadingComponent"], _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_108__["AddSubHeadingComponent"]]),
+        _views_faqs_faqs_component__WEBPACK_IMPORTED_MODULE_84__["FaqsComponent"], _views_add_faq_add_faq_component__WEBPACK_IMPORTED_MODULE_85__["AddFaqComponent"], _views_edit_faq_edit_faq_component__WEBPACK_IMPORTED_MODULE_86__["EditFaqComponent"], _views_view_faq_view_faq_component__WEBPACK_IMPORTED_MODULE_87__["ViewFaqComponent"], _pages_content_management_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_88__["AboutUsComponent"], _pages_support_management_faq_emp_grad_graduate_add_faq_graduate_add_faq_component__WEBPACK_IMPORTED_MODULE_106__["GraduateAddFaqComponent"], _pages_support_management_faq_emp_grad_graduate_edit_faq_graduate_edit_faq_component__WEBPACK_IMPORTED_MODULE_107__["GraduateEditFaqComponent"], _pages_homepage_management_homepage_management_component__WEBPACK_IMPORTED_MODULE_89__["HomepageManagementComponent"], _views_help_management_help_management_component__WEBPACK_IMPORTED_MODULE_90__["HelpManagementComponent"], _views_view_help_view_help_component__WEBPACK_IMPORTED_MODULE_91__["ViewHelpComponent"], _views_messaging_reports_messaging_reports_component__WEBPACK_IMPORTED_MODULE_92__["MessagingReportsComponent"], _views_verification_submissions_verification_submissions_component__WEBPACK_IMPORTED_MODULE_93__["VerificationSubmissionsComponent"], _views_offer_submissions_offer_submissions_component__WEBPACK_IMPORTED_MODULE_94__["OfferSubmissionsComponent"], _views_view_verification_view_verification_component__WEBPACK_IMPORTED_MODULE_95__["ViewVerificationComponent"], _views_view_offer_view_offer_component__WEBPACK_IMPORTED_MODULE_96__["ViewOfferComponent"], _views_view_report_view_report_component__WEBPACK_IMPORTED_MODULE_97__["ViewReportComponent"], //IndustrylistComponent,
+        _pages_auth_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_100__["ResetPasswordComponent"], _pages_content_management_terms_sub_headings_terms_sub_headings_component__WEBPACK_IMPORTED_MODULE_101__["TermsSubHeadingsComponent"], _pages_content_management_add_heading_add_heading_component__WEBPACK_IMPORTED_MODULE_102__["AddHeadingComponent"], _pages_content_management_edit_heading_edit_heading_component__WEBPACK_IMPORTED_MODULE_103__["EditHeadingComponent"], _pages_content_management_edit_sub_heading_edit_sub_heading_component__WEBPACK_IMPORTED_MODULE_104__["EditSubHeadingComponent"], _pages_content_management_add_sub_heading_add_sub_heading_component__WEBPACK_IMPORTED_MODULE_105__["AddSubHeadingComponent"]]),
         providers: [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_14__["BsModalRef"], {
           provide: _angular_common__WEBPACK_IMPORTED_MODULE_3__["LocationStrategy"],
           useClass: _angular_common__WEBPACK_IMPORTED_MODULE_3__["HashLocationStrategy"]
         }, {
-          provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_101__["HTTP_INTERCEPTORS"],
-          useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_102__["TopgradserviceService"],
+          provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_98__["HTTP_INTERCEPTORS"],
+          useClass: _topgradservice_service__WEBPACK_IMPORTED_MODULE_99__["TopgradserviceService"],
           multi: true
         }, _coreui_icons_angular__WEBPACK_IMPORTED_MODULE_6__["IconSetService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"]]
@@ -10087,6 +10012,67 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdWItYWRtaW4tbWFuYWdlbWVudC5jb21wb25lbnQuc2NzcyJ9 */";
+      /***/
+    },
+
+    /***/
+    "a+qF": function aQF(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ViewArticleComponent", function () {
+        return ViewArticleComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _raw_loader_view_article_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./view-article.component.html */
+      "J3NH");
+      /* harmony import */
+
+
+      var _view_article_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./view-article.component.scss */
+      "/Zwt");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+
+      var ViewArticleComponent = /*#__PURE__*/function () {
+        function ViewArticleComponent() {
+          _classCallCheck(this, ViewArticleComponent);
+        }
+
+        _createClass(ViewArticleComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }]);
+
+        return ViewArticleComponent;
+      }();
+
+      ViewArticleComponent.ctorParameters = function () {
+        return [];
+      };
+
+      ViewArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-view-article',
+        template: _raw_loader_view_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_view_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewArticleComponent);
       /***/
     },
 
@@ -10204,6 +10190,67 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LXZlcmlmaWNhdGlvbi5jb21wb25lbnQuc2NzcyJ9 */";
+      /***/
+    },
+
+    /***/
+    "bRVr": function bRVr(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddVideoComponent", function () {
+        return AddVideoComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _raw_loader_add_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./add-video.component.html */
+      "D0rB");
+      /* harmony import */
+
+
+      var _add_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./add-video.component.scss */
+      "3Oif");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+
+      var AddVideoComponent = /*#__PURE__*/function () {
+        function AddVideoComponent() {
+          _classCallCheck(this, AddVideoComponent);
+        }
+
+        _createClass(AddVideoComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }]);
+
+        return AddVideoComponent;
+      }();
+
+      AddVideoComponent.ctorParameters = function () {
+        return [];
+      };
+
+      AddVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-add-video',
+        template: _raw_loader_add_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_add_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], AddVideoComponent);
       /***/
     },
 
@@ -10550,7 +10597,7 @@
             });
           }
         }, {
-          path: 'viewJob',
+          path: 'viewJob/:id',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
             /*! import() | views-view-job-view-job-module */
@@ -10971,10 +11018,10 @@
           path: 'career-videos',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-career-videos-career-videos-module */
-            "views-career-videos-career-videos-module").then(__webpack_require__.bind(null,
-            /*! ./views/career-videos/career-videos.module */
-            "JFCb")).then(function (m) {
+            /*! import() | pages-content-management-career-videos-career-videos-module */
+            "pages-content-management-career-videos-career-videos-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/career-videos/career-videos.module */
+            "YRJC")).then(function (m) {
               return m.CareerVideosModule;
             });
           }
@@ -10982,10 +11029,10 @@
           path: 'career-article',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-career-articles-career-articles-module */
-            "views-career-articles-career-articles-module").then(__webpack_require__.bind(null,
-            /*! ./views/career-articles/career-articles.module */
-            "uPJ4")).then(function (m) {
+            /*! import() | pages-content-management-career-articles-career-articles-module */
+            "pages-content-management-career-articles-career-articles-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/career-articles/career-articles.module */
+            "xKJK")).then(function (m) {
               return m.CareerArticlesModule;
             });
           }
@@ -10993,10 +11040,10 @@
           path: 'add-article',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-add-article-add-article-module */
-            "views-add-article-add-article-module").then(__webpack_require__.bind(null,
-            /*! ./views/add-article/add-article.module */
-            "un/j")).then(function (m) {
+            /*! import() | pages-content-management-add-article-add-article-module */
+            "pages-content-management-add-article-add-article-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/add-article/add-article.module */
+            "KXHg")).then(function (m) {
               return m.AddArticleModule;
             });
           }
@@ -11004,10 +11051,10 @@
           path: 'view-article',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-view-article-view-article-module */
-            "views-view-article-view-article-module").then(__webpack_require__.bind(null,
-            /*! ./views/view-article/view-article.module */
-            "RzhO")).then(function (m) {
+            /*! import() | pages-content-management-view-article-view-article-module */
+            "pages-content-management-view-article-view-article-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/view-article/view-article.module */
+            "zyyM")).then(function (m) {
               return m.ViewArticleModule;
             });
           }
@@ -11015,10 +11062,10 @@
           path: 'edit-article',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-edit-article-edit-article-module */
-            "views-edit-article-edit-article-module").then(__webpack_require__.bind(null,
-            /*! ./views/edit-article/edit-article.module */
-            "fBoI")).then(function (m) {
+            /*! import() | pages-content-management-edit-article-edit-article-module */
+            "pages-content-management-edit-article-edit-article-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/edit-article/edit-article.module */
+            "yZVn")).then(function (m) {
               return m.EditArticleModule;
             });
           }
@@ -11026,10 +11073,10 @@
           path: 'add-video',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-add-video-add-video-module */
-            "views-add-video-add-video-module").then(__webpack_require__.bind(null,
-            /*! ./views/add-video/add-video.module */
-            "weeN")).then(function (m) {
+            /*! import() | pages-content-management-add-video-add-video-module */
+            "pages-content-management-add-video-add-video-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/add-video/add-video.module */
+            "CjsJ")).then(function (m) {
               return m.AddVideoModule;
             });
           }
@@ -11037,10 +11084,10 @@
           path: 'view-video',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-view-video-view-video-module */
-            "views-view-video-view-video-module").then(__webpack_require__.bind(null,
-            /*! ./views/view-video/view-video.module */
-            "cWCo")).then(function (m) {
+            /*! import() | pages-content-management-view-video-view-video-module */
+            "pages-content-management-view-video-view-video-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/view-video/view-video.module */
+            "tqrE")).then(function (m) {
               return m.ViewVideoModule;
             });
           }
@@ -11048,10 +11095,10 @@
           path: 'edit-video',
           loadChildren: function loadChildren() {
             return __webpack_require__.e(
-            /*! import() | views-edit-video-edit-video-module */
-            "views-edit-video-edit-video-module").then(__webpack_require__.bind(null,
-            /*! ./views/edit-video/edit-video.module */
-            "WTXF")).then(function (m) {
+            /*! import() | pages-content-management-edit-video-edit-video-module */
+            "pages-content-management-edit-video-edit-video-module").then(__webpack_require__.bind(null,
+            /*! ./pages/content-management/edit-video/edit-video.module */
+            "j2q3")).then(function (m) {
               return m.EditVideoModule;
             });
           }
@@ -11387,6 +11434,67 @@
     },
 
     /***/
+    "bh3J": function bh3J(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ViewVideoComponent", function () {
+        return ViewVideoComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _raw_loader_view_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./view-video.component.html */
+      "kTZA");
+      /* harmony import */
+
+
+      var _view_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./view-video.component.scss */
+      "Kp4c");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+
+      var ViewVideoComponent = /*#__PURE__*/function () {
+        function ViewVideoComponent() {
+          _classCallCheck(this, ViewVideoComponent);
+        }
+
+        _createClass(ViewVideoComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }]);
+
+        return ViewVideoComponent;
+      }();
+
+      ViewVideoComponent.ctorParameters = function () {
+        return [];
+      };
+
+      ViewVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-view-video',
+        template: _raw_loader_view_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_view_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewVideoComponent);
+      /***/
+    },
+
+    /***/
     "c2Qq": function c2Qq(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -11490,7 +11598,7 @@
           icon: 'icon-calculator',
           children: [{
             name: 'Articles',
-            url: '/career-articles',
+            url: '/career-article',
             icon: 'icon-star'
           }, {
             name: 'Videos',
@@ -11950,67 +12058,6 @@
     },
 
     /***/
-    "e9LB": function e9LB(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "ViewArticleComponent", function () {
-        return ViewArticleComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_view_article_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./view-article.component.html */
-      "gsSw");
-      /* harmony import */
-
-
-      var _view_article_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./view-article.component.scss */
-      "mYce");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var ViewArticleComponent = /*#__PURE__*/function () {
-        function ViewArticleComponent() {
-          _classCallCheck(this, ViewArticleComponent);
-        }
-
-        _createClass(ViewArticleComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return ViewArticleComponent;
-      }();
-
-      ViewArticleComponent.ctorParameters = function () {
-        return [];
-      };
-
-      ViewArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-view-article',
-        template: _raw_loader_view_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_view_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewArticleComponent);
-      /***/
-    },
-
-    /***/
     "eMok": function eMok(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -12031,18 +12078,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJob21lLW91ci1zdG9yeS5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "eSVE": function eSVE(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter name here\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/dummy.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/dummy.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
       /***/
     },
 
@@ -12323,67 +12358,6 @@
     },
 
     /***/
-    "fjVs": function fjVs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "ViewVideoComponent", function () {
-        return ViewVideoComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_view_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./view-video.component.html */
-      "mNw9");
-      /* harmony import */
-
-
-      var _view_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./view-video.component.scss */
-      "9z4g");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var ViewVideoComponent = /*#__PURE__*/function () {
-        function ViewVideoComponent() {
-          _classCallCheck(this, ViewVideoComponent);
-        }
-
-        _createClass(ViewVideoComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return ViewVideoComponent;
-      }();
-
-      ViewVideoComponent.ctorParameters = function () {
-        return [];
-      };
-
-      ViewVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-view-video',
-        template: _raw_loader_view_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_view_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ViewVideoComponent);
-      /***/
-    },
-
-    /***/
     "gCHI": function gCHI(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -12599,18 +12573,6 @@
     },
 
     /***/
-    "gsSw": function gsSw(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/blog-article.png\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>Build a better resume</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">Jaxson Stanton</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted 02 / 07 / 21</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa eget convallis enim lobortis ullamcorper tempus</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<p class=\"highlighted_info\">\n\t\t\t\t\t\t\t\t\t\t“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa eget convallis enim lobortis ullamcorper tempus”\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant. \n\t\t\t\t\t\t\t\t\t\tPurus volutpat aliquam integer mauris. Nam id venenatis pellentesque pellentesque. Donec est et sed velit at aliquet imperdiet. Velit vel id id orci, egestas id. Cursus vitae sit orci vitae luctus lectus sit eget. Cursus in ultricies sit vestibulum nulla nisi imperdiet dignissim ac. Eu in gravida id volutpat. Nec auctor amet posuere massa imperdiet nulla aenean diam. Ut lobortis sed aliquet donec. \n\t\t\t\t\t\t\t\t\t\tNisi lectus malesuada lectus imperdiet dictum id quisque. Montes, sapien libero sodales pharetra sed neque. Iaculis congue augue eget donec in nec platea id nullam. Quam tortor ut in eu euismod urna amet, fames. Condimentum ut ac convallis in bibendum faucibus. \n\t\t\t\t\t\t\t\t\t\tMagna diam adipiscing vitae quis nullam cras. Tempor donec morbi dolor ullamcorper id pharetra, cursus etiam. Adipiscing nunc, eleifend gravida malesuada tellus diam mattis condimentum. Nulla.\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant.\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n";
-      /***/
-    },
-
-    /***/
     "h6yy": function h6yy(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -12680,18 +12642,6 @@
 
 
       __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWZhcS5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
-    "iP52": function iP52(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJlZGl0LWFydGljbGUuY29tcG9uZW50LnNjc3MifQ== */";
       /***/
     },
 
@@ -13178,6 +13128,18 @@
     },
 
     /***/
+    "kTZA": function kTZA(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/youtube_video.png\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>Career Counsellors can Get You the Perfect Job in Australia Quicker!</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">Jaxson Stanton</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted 02 / 07 / 21</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<figure class=\"figMargn_8 video_career position-relative\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_detail_bg.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t<figcaption class=\"blog_vdo large_vdo_src\">\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"29\" viewBox=\"0 0 25 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M23.875 13.8505C24.375 14.1392 24.375 14.8608 23.875 15.1495L1.375 28.1399C0.874997 28.4286 0.249999 28.0677 0.249999 27.4904L0.25 1.50962C0.25 0.932266 0.875 0.571424 1.375 0.860099L23.875 13.8505Z\" fill=\"#26C296\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t</figcaption>\n\t\t\t\t\t\t\t\t\t</figure>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa<br>eget convallis enim lobortis ullamcorper tempus...\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n";
+      /***/
+    },
+
+    /***/
     "lah8": function lah8(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -13210,30 +13172,6 @@
 
 
       __webpack_exports__["default"] = "<section class=\"jobs-mngmnt\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n            <mat-form-field appearance=\"standard\">\n              <mat-label>Filter</mat-label>\n              <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n            </mat-form-field>\n            <span class=\"add-categry\">\n              <a class=\"btn-primary btn\" routerLink=\"/addSubHeading/{{heading_id}}/{{type}}\">Add Sub Heading</a>\n            </span>\n          </div>\n  \n          <div class=\"mat-elevation-z8\">\n            <div class=\"table-responsive\">\n              <table mat-table [dataSource]=\"subheadinglist\" matSort>\n                <!-- Checkbox Column -->\n                <ng-container matColumnDef=\"select\">\n                  <th mat-header-cell *matHeaderCellDef>\n                    <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                      [checked]=\"selection.hasValue() && isAllSelected()\"\n                      [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                      [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                    </mat-checkbox>\n                  </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                    <mat-checkbox (click)=\"$event.stopPropagation()\"\n                      (change)=\"$event ? selection.toggle(row) : null\"\n                      [checked]=\"selection.isSelected(row)\"\n                      [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                    </mat-checkbox>\n                  </td>\n                </ng-container>\n                <!-- ID Column -->\n                <ng-container matColumnDef=\"id\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                  <td mat-cell *matCellDef=\"let row; let i=index\"> {{i+1}}  </td>\n                </ng-container>\n  \n                <!-- firstName Column -->\n                <ng-container matColumnDef=\"title\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Title </th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.title}} </td>\n                </ng-container>\n                <!-- Company Column -->\n                <!-- <ng-container matColumnDef=\"category\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.category}} </td>\n                </ng-container> -->\n               \n                <!-- enquiry Column -->\n                <ng-container matColumnDef=\"description\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>\n                  <td mat-cell *matCellDef=\"let row\" class=\"td-width\" [innerHTML]=\"row?.description\">  </td>\n                </ng-container>\n  \n                 <!-- Action column -->\n                 <ng-container matColumnDef=\"action\">\n                  <th mat-header-cell *matHeaderCellDef> Action </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                      <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                        <mat-icon>more_vert</mat-icon>\n                      </button>\n                      <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                          <a mat-menu-item class=\"\" routerLink=\"/viewSubHeading/{{this.heading_id}}/{{row._id}}\">\n                              <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                              <span>View</span>\n                          </a>\n                          <a mat-menu-item class=\"\" routerLink=\"/editSubHeading/{{this.heading_id}}/{{row._id}}\">\n                              <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                              <span>Edit</span>\n                          </a>\n                          \n                          <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"modal(row._id)\" >\n                              <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                              <span>Delete</span>\n                          </a>\n                      </mat-menu>\n                  </td>\n                </ng-container>\n  \n                <!-- Progress Column -->\n                <!-- <ng-container matColumnDef=\"progress\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n                </ng-container> -->\n  \n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  \n                <!-- Row shown when there is no matching data. -->\n                <tr class=\"mat-row\" *matNoDataRow>\n                  <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n                </tr>\n              </table>\n            </div>\n            <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  \n  <!-- Modal -->\n  <div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-sm\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n            <span aria-hidden=\"true\" class=\"prof_modclose\">\n              <img src=\"assets/img/Group 225.png\">\n            </span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <p>Are you sure you want to delete the selected Sub Heading?</p>\n        </div>\n        <div class=\"modal-footer justify-content-center\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"deletesubheading(this.delId)\">Yes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  \n  ";
-      /***/
-    },
-
-    /***/
-    "mNw9": function mNw9(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/youtube_video.png\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>Career Counsellors can Get You the Perfect Job in Australia Quicker!</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">Jaxson Stanton</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted 02 / 07 / 21</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<figure class=\"figMargn_8 video_career position-relative\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_detail_bg.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t<figcaption class=\"blog_vdo large_vdo_src\">\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"29\" viewBox=\"0 0 25 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M23.875 13.8505C24.375 14.1392 24.375 14.8608 23.875 15.1495L1.375 28.1399C0.874997 28.4286 0.249999 28.0677 0.249999 27.4904L0.25 1.50962C0.25 0.932266 0.875 0.571424 1.375 0.860099L23.875 13.8505Z\" fill=\"#26C296\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t</figcaption>\n\t\t\t\t\t\t\t\t\t</figure>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa<br>eget convallis enim lobortis ullamcorper tempus...\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n";
-      /***/
-    },
-
-    /***/
-    "mYce": function mYce(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2aWV3LWFydGljbGUuY29tcG9uZW50LnNjc3MifQ== */";
       /***/
     },
 
@@ -13450,18 +13388,6 @@
     },
 
     /***/
-    "oFeT": function oFeT(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZGQtYXJ0aWNsZS5jb21wb25lbnQuc2NzcyJ9 */";
-      /***/
-    },
-
-    /***/
     "oLOf": function oLOf(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -13486,194 +13412,6 @@
     },
 
     /***/
-    "ovBg": function ovBg(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "CareerVideosComponent", function () {
-        return CareerVideosComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_career_videos_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./career-videos.component.html */
-      "0dNg");
-      /* harmony import */
-
-
-      var _career_videos_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./career-videos.component.scss */
-      "KydO");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-      /* harmony import */
-
-
-      var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/paginator */
-      "M9IT");
-      /* harmony import */
-
-
-      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/material/sort */
-      "Dh3D");
-      /* harmony import */
-
-
-      var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/material/table */
-      "+0xr");
-      /* harmony import */
-
-
-      var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ngx-bootstrap/modal */
-      "K3ix");
-      /* harmony import */
-
-
-      var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! @angular/cdk/collections */
-      "0EQZ");
-      /** Constants used to fill up our data base. */
-
-
-      var IMAGE = ['assets/img/grads.png', 'assets/img/success.png'];
-      var TITLE = ['Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Web Development', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors'];
-      var DESCRIPTION = ['Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar'];
-      var POSTEDBY = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-
-      var CareerVideosComponent = /*#__PURE__*/function () {
-        function CareerVideosComponent() {
-          _classCallCheck(this, CareerVideosComponent);
-
-          this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'description', 'action'];
-          this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
-
-          var users = Array.from({
-            length: 50
-          }, function (_, k) {
-            return createNewUser(k + 1);
-          }); // Assign the data to the data source for the table to render
-
-          this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
-        }
-
-        _createClass(CareerVideosComponent, [{
-          key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-          }
-        }, {
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }, {
-          key: "applyFilter",
-          value: function applyFilter(event) {
-            var filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-
-            if (this.dataSource.paginator) {
-              this.dataSource.paginator.firstPage();
-            }
-          }
-          /** Whether the number of selected elements matches the total number of rows. */
-
-        }, {
-          key: "isAllSelected",
-          value: function isAllSelected() {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-          }
-          /** Selects all rows if they are not all selected; otherwise clear selection. */
-
-        }, {
-          key: "masterToggle",
-          value: function masterToggle() {
-            var _this$selection19;
-
-            if (this.isAllSelected()) {
-              this.selection.clear();
-              return;
-            }
-
-            (_this$selection19 = this.selection).select.apply(_this$selection19, _toConsumableArray(this.dataSource.data));
-          }
-          /** The label for the checkbox on the passed row */
-
-        }, {
-          key: "checkboxLabel",
-          value: function checkboxLabel(row) {
-            if (!row) {
-              return "".concat(this.isAllSelected() ? 'deselect' : 'select', " all");
-            }
-
-            return "".concat(this.selection.isSelected(row) ? 'deselect' : 'select', " row ").concat(row.id + 1);
-          }
-        }]);
-
-        return CareerVideosComponent;
-      }();
-
-      CareerVideosComponent.ctorParameters = function () {
-        return [];
-      };
-
-      CareerVideosComponent.propDecorators = {
-        smallModal: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: ['smallModal']
-        }],
-        paginator: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"]]
-        }],
-        sort: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
-          args: [_angular_material_sort__WEBPACK_IMPORTED_MODULE_5__["MatSort"]]
-        }]
-      };
-      CareerVideosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-career-videos',
-        template: _raw_loader_career_videos_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_career_videos_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], CareerVideosComponent);
-
-      function createNewUser(id) {
-        var image = IMAGE[Math.round(Math.random() * (IMAGE.length - 1))] + ' ';
-        var title = TITLE[Math.round(Math.random() * (TITLE.length - 1))] + ' ';
-        var description = DESCRIPTION[Math.round(Math.random() * (DESCRIPTION.length - 1))] + ' ';
-        var postedBy = POSTEDBY[Math.round(Math.random() * (POSTEDBY.length - 1))] + ' ';
-        return {
-          id: id.toString() + '.',
-          image: image,
-          title: title,
-          description: description,
-          postedBy: postedBy
-        };
-      }
-      /***/
-
-    },
-
-    /***/
     "pv8C": function pv8C(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -13686,67 +13424,6 @@
     },
 
     /***/
-    "q2wW": function q2wW(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "EditVideoComponent", function () {
-        return EditVideoComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_edit_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./edit-video.component.html */
-      "GDIt");
-      /* harmony import */
-
-
-      var _edit_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./edit-video.component.scss */
-      "X98x");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var EditVideoComponent = /*#__PURE__*/function () {
-        function EditVideoComponent() {
-          _classCallCheck(this, EditVideoComponent);
-        }
-
-        _createClass(EditVideoComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return EditVideoComponent;
-      }();
-
-      EditVideoComponent.ctorParameters = function () {
-        return [];
-      };
-
-      EditVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-edit-video',
-        template: _raw_loader_edit_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_edit_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], EditVideoComponent);
-      /***/
-    },
-
-    /***/
     "rWBt": function rWBt(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -13755,6 +13432,18 @@
 
 
       __webpack_exports__["default"] = "<section class=\"edit-employer-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>View Sub-Category</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<div class=\"text-center edit-profile\">\n\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/img/category.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-form mt-4\">\n\t\t\t\t\t\t\t\t<form>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form-fields\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Category Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" value=\"Category 1\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Sub-Category Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Sub-category 1\">\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group only-view\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Status</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" value=\"Active\" class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" routerLink=\"/categoriesManagement\">Back</a>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n";
+      /***/
+    },
+
+    /***/
+    "rfL6": function rfL6(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-article\">Add Article</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>\n                <td mat-cell *matCellDef=\"let element\"> <img [src]=\"element.image\" class=\"slider-imag\" /></td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.title}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.postedBy}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-article\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-article\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
       /***/
     },
 
@@ -14914,67 +14603,6 @@
     },
 
     /***/
-    "unrn": function unrn(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "AddArticleComponent", function () {
-        return AddArticleComponent;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "mrSG");
-      /* harmony import */
-
-
-      var _raw_loader_add_article_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! raw-loader!./add-article.component.html */
-      "SvAo");
-      /* harmony import */
-
-
-      var _add_article_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./add-article.component.scss */
-      "oFeT");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/core */
-      "fXoL");
-
-      var AddArticleComponent = /*#__PURE__*/function () {
-        function AddArticleComponent() {
-          _classCallCheck(this, AddArticleComponent);
-        }
-
-        _createClass(AddArticleComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {}
-        }]);
-
-        return AddArticleComponent;
-      }();
-
-      AddArticleComponent.ctorParameters = function () {
-        return [];
-      };
-
-      AddArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: 'app-add-article',
-        template: _raw_loader_add_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
-        styles: [_add_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
-      }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], AddArticleComponent);
-      /***/
-    },
-
-    /***/
     "v1Rx": function v1Rx(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
@@ -15731,14 +15359,14 @@
         }, {
           key: "masterToggle",
           value: function masterToggle() {
-            var _this$selection20;
+            var _this$selection19;
 
             if (this.isAllSelected()) {
               this.selection.clear();
               return;
             }
 
-            (_this$selection20 = this.selection).select.apply(_this$selection20, _toConsumableArray(this.dataSource.data));
+            (_this$selection19 = this.selection).select.apply(_this$selection19, _toConsumableArray(this.dataSource.data));
           }
           /** The label for the checkbox on the passed row */
 

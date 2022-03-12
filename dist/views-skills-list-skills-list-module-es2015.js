@@ -91,6 +91,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/progress-bar */ "bv9b");
 /* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/input */ "qFsG");
 /* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/menu */ "STbY");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/sort */ "Dh3D");
+
 
 
 
@@ -139,7 +141,8 @@ SkillsListModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _angular_material_table__WEBPACK_IMPORTED_MODULE_14__["MatTableModule"],
             _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_15__["MatProgressBarModule"],
             _angular_material_menu__WEBPACK_IMPORTED_MODULE_17__["MatMenuModule"],
-            _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInputModule"]
+            _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInputModule"],
+            _angular_material_sort__WEBPACK_IMPORTED_MODULE_18__["MatSortModule"]
         ]
     })
 ], SkillsListModule);

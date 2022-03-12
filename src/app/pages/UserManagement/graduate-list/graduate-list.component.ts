@@ -143,7 +143,7 @@ export class GraduateListComponent implements AfterViewInit {
     console.log("khjhgjhgjhgjhghjghjgjhghjg");
     
     var obj: any={
-    limit: 10,
+    limit: 5,
     offset: 0,
     role: "Graduate",
     search:this.search,

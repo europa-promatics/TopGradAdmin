@@ -16,6 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatTableModule,
     MatProgressBarModule,
     MatMenuModule,
-    MatInputModule
+    MatInputModule,
+    MatSortModule
   ]
 })
 export class SkillsListModule { }

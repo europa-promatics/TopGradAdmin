@@ -54,14 +54,14 @@ import { TermsSubHeadingsComponent } from './pages/content-management/terms-sub-
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { ContactListingComponent } from './views/contact-listing/contact-listing.component';
 import { OfferManagementComponent } from './views/offer-management/offer-management.component';
-import { CareerArticlesComponent } from './views/career-articles/career-articles.component';
-import { CareerVideosComponent } from './views/career-videos/career-videos.component';
-import { AddArticleComponent } from './views/add-article/add-article.component';
-import { ViewArticleComponent } from './views/view-article/view-article.component';
-import { EditArticleComponent } from './views/edit-article/edit-article.component';
-import { AddVideoComponent } from './views/add-video/add-video.component';
-import { ViewVideoComponent } from './views/view-video/view-video.component';
-import { EditVideoComponent } from './views/edit-video/edit-video.component';
+import { CareerArticlesComponent } from './pages/content-management/career-articles/career-articles.component';
+import { CareerVideosComponent } from './pages/content-management/career-videos/career-videos.component';
+import { AddArticleComponent } from './pages/content-management/add-article/add-article.component';
+import { ViewArticleComponent } from './pages/content-management/view-article/view-article.component';
+import { EditArticleComponent } from './pages/content-management/edit-article/edit-article.component';
+import { AddVideoComponent } from './pages/content-management/add-video/add-video.component';
+import { ViewVideoComponent } from './pages/content-management/view-video/view-video.component';
+import { EditVideoComponent } from './pages/content-management/edit-video/edit-video.component';
 import { ScheduleInterviewManagementComponent } from './views/schedule-interview-management/schedule-interview-management.component';
 import { ViewInterviewComponent } from './views/view-interview/view-interview.component';
 import { EditInterviewComponent } from './views/edit-interview/edit-interview.component';
@@ -226,12 +226,12 @@ export const routes: Routes = [
         loadChildren: () => import('./pages/UserManagement/view-employer/view-employer.module').then(m => m.ViewEmployerModule)
       },
       {
-        path: 'jobsManagement',
-        loadChildren: () => import('./views/jobs-management/jobs-management.module').then(m => m.JobsManagementModule)
+      path: 'jobsManagement',
+      loadChildren: () => import('./views/jobs-management/jobs-management.module').then(m => m.JobsManagementModule)
       },
       {
-        path: 'viewJob',
-        loadChildren: () => import('./views/view-job/view-job.module').then(m => m.ViewJobModule)
+      path: 'viewJob/:id',
+      loadChildren: () => import('./views/view-job/view-job.module').then(m => m.ViewJobModule)
       },
       {
         path: 'viewApplicant',
@@ -384,35 +384,35 @@ export const routes: Routes = [
      
       {
         path: 'career-videos',
-        loadChildren: () => import('./views/career-videos/career-videos.module').then(m => m.CareerVideosModule)
+        loadChildren: () => import('./pages/content-management/career-videos/career-videos.module').then(m => m.CareerVideosModule)
       },
       {
         path: 'career-article',
-        loadChildren: () => import('./views/career-articles/career-articles.module').then(m => m.CareerArticlesModule)
+        loadChildren: () => import('./pages/content-management/career-articles/career-articles.module').then(m => m.CareerArticlesModule)
       },
       {
         path: 'add-article',
-        loadChildren: () => import('./views/add-article/add-article.module').then(m => m.AddArticleModule)
+        loadChildren: () => import('./pages/content-management/add-article/add-article.module').then(m => m.AddArticleModule)
       },
       {
         path: 'view-article',
-        loadChildren: () => import('./views/view-article/view-article.module').then(m => m.ViewArticleModule)
+        loadChildren: () => import('./pages/content-management/view-article/view-article.module').then(m => m.ViewArticleModule)
       },
       {
         path: 'edit-article',
-        loadChildren: () => import('./views/edit-article/edit-article.module').then(m => m.EditArticleModule)
+        loadChildren: () => import('./pages/content-management/edit-article/edit-article.module').then(m => m.EditArticleModule)
       },
       {
         path: 'add-video',
-        loadChildren: () => import('./views/add-video/add-video.module').then(m => m.AddVideoModule)
+        loadChildren: () => import('./pages/content-management/add-video/add-video.module').then(m => m.AddVideoModule)
       },
       {
         path: 'view-video',
-        loadChildren: () => import('./views/view-video/view-video.module').then(m => m.ViewVideoModule)
+        loadChildren: () => import('./pages/content-management/view-video/view-video.module').then(m => m.ViewVideoModule)
       },
       {
         path: 'edit-video',
-        loadChildren: () => import('./views/edit-video/edit-video.module').then(m => m.EditVideoModule)
+        loadChildren: () => import('./pages/content-management/edit-video/edit-video.module').then(m => m.EditVideoModule)
       },
       {
         path: 'schedule-interview-management',

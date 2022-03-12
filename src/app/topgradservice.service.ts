@@ -794,6 +794,42 @@ export class TopgradserviceService implements HttpInterceptor {
       )
   }
 
+  jobManagementList(evt): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/employer/job/post/list?limit=${evt.limit}&offset=${evt.offset}&search=${evt.search}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+    .pipe(
+    map(res => {
+    return res
+    }),
+    catchError(this.error)
+    )
+    }
+    
+    jobManagementDetail(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/employer/job/detail?employer_job_id=${obj.employer_job_id}`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+    .pipe(
+    map(res => {
+    return res
+    }),
+    catchError(this.error)
+    )
+    }
+    
+    jobManagementDelete(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/delete/employer/job/post`;
+    console.log(API_URL)
+    return this.httpClient.put(API_URL, obj)
+    .pipe(
+    map(res => {
+    return res
+    }),
+    catchError(this.error)
+    )
+    }
+
 
 
 

@@ -236,6 +236,10 @@ let VideoIntro1Component = class VideoIntro1Component {
                     return;
                 }
             }
+            else {
+                this.tipsSection.markAllAsTouched();
+                return;
+            }
         }
         if (type == 'step3') {
             if (this.step3Section.valid) {

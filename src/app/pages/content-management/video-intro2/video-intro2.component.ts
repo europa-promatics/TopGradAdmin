@@ -204,6 +204,10 @@ export class VideoIntro2Component implements OnInit {
           return
         }
       }
+      else {
+        this.tipsSection.markAllAsTouched()
+        return
+      }
     }
 
     this.Service.postVideoIntroContent(obj).subscribe((resp) => {

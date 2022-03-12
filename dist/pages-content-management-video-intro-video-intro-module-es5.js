@@ -444,8 +444,15 @@
             }
 
             if (type == 'tips') {
+              console.log("i am invalid");
+              console.log(this.tipsSection);
+
               if (this.tipsSection.valid) {
+                console.log("i am valid section");
+
                 if (this.tipsArray.valid) {
+                  console.log("i am valid array");
+
                   var _formdata = new FormData();
 
                   var section_2 = {
@@ -462,6 +469,9 @@
                   this.tipsArray.markAllAsTouched();
                   return;
                 }
+              } else {
+                this.tipsSection.markAllAsTouched();
+                return;
               }
             }
 

@@ -201,6 +201,12 @@
       var _angular_material_menu__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! @angular/material/menu */
       "STbY");
+      /* harmony import */
+
+
+      var _angular_material_sort__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+      /*! @angular/material/sort */
+      "Dh3D");
 
       var SkillsListModule = function SkillsListModule() {
         _classCallCheck(this, SkillsListModule);
@@ -209,7 +215,7 @@
       SkillsListModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [_skills_list_component__WEBPACK_IMPORTED_MODULE_9__["SkillsListComponent"]],
         imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_5__["EditorModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_6__["MatSlideToggleModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_7__["MatIconModule"], _skills_list_routing_module__WEBPACK_IMPORTED_MODULE_3__["SkillsListRoutingModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_4__["NgxDropzoneModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _tinymce_tinymce_angular__WEBPACK_IMPORTED_MODULE_5__["EditorModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_6__["MatSlideToggleModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_7__["MatIconModule"], ngx_dropzone__WEBPACK_IMPORTED_MODULE_4__["NgxDropzoneModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"], // MatFormFieldModule,
-        _angular_material_paginator__WEBPACK_IMPORTED_MODULE_10__["MatPaginatorModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_11__["BsDropdownModule"].forRoot(), ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_13__["ModalModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatFormFieldModule"], _angular_material_table__WEBPACK_IMPORTED_MODULE_14__["MatTableModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_15__["MatProgressBarModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_17__["MatMenuModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInputModule"]]
+        _angular_material_paginator__WEBPACK_IMPORTED_MODULE_10__["MatPaginatorModule"], ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_11__["BsDropdownModule"].forRoot(), ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_13__["ModalModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatFormFieldModule"], _angular_material_table__WEBPACK_IMPORTED_MODULE_14__["MatTableModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_15__["MatProgressBarModule"], _angular_material_menu__WEBPACK_IMPORTED_MODULE_17__["MatMenuModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInputModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_18__["MatSortModule"]]
       })], SkillsListModule);
       /***/
     },

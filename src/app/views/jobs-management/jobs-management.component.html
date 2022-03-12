@@ -4,12 +4,12 @@
       <div class="col-md-12">
         <mat-form-field appearance="standard">
           <mat-label>Filter</mat-label>
-          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" class="filter_input" #input>
+          <input matInput (keyup)="applyFilter($event)"  [(ngModel)]="search " placeholder="Ex. Mia" class="filter_input" #input>
         </mat-form-field>
 
         <div class="mat-elevation-z8">
           <div class="table-responsive">
-            <table mat-table [dataSource]="dataSource" matSort>
+            <table mat-table [dataSource]="sortedData" matSort (matSortChange)="sortData($event)">
               <!-- Checkbox Column -->
               <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
@@ -29,48 +29,65 @@
               </ng-container>
               <!-- ID Column -->
               <ng-container matColumnDef="id">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
-                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="id"> S.No </th>
+                <td mat-cell *matCellDef="let row; let i=index"> {{i+1}}  </td>
               </ng-container>
 
               <!-- postedby Column -->
               <ng-container matColumnDef="postedby">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Employer Name </th>
-                <td mat-cell *matCellDef="let row"> {{row.postedby}} </td>
+                <th mat-header-cell *matHeaderCellDef  mat-sort-header="first_name">Employer Name </th>
+                <td mat-cell *matCellDef="let row"> {{row.user_detail.first_name}} {{row.user_detail.last_name}} </td>
               </ng-container>
               <!-- worktype Column -->
               <ng-container matColumnDef="worktype">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Type</th>
-                <td mat-cell *matCellDef="let row"> {{row.worktype}} </td>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="work_type">Work Type</th>
+                <td mat-cell *matCellDef="let row"> {{row.work_type}} </td>
               </ng-container>
               <!-- Company Column -->
               <ng-container matColumnDef="contracttype">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Contract Type</th>
-                <td mat-cell *matCellDef="let row"> {{row.contracttype}} </td>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="contract_type">Contract Type</th>
+                <td mat-cell *matCellDef="let row"> {{row.cType}} </td>
+                <!-- <ng-container *ngIf="row?.contract_type == temp_contract"> 
+                  <td mat-cell *matCellDef="let row" > Temp/Contract </td> 
+                </ng-container>
+                <ng-container *ngIf="row?.contract_type == full_time"> 
+                  <td mat-cell *matCellDef="let row" >Full Time </td> 
+                </ng-container>
+                <ng-container *ngIf="row?.contract_type == part_time"> 
+                  <td mat-cell *matCellDef="let row" > Part Time </td> 
+                </ng-container>
+                <ng-container *ngIf="row?.contract_type == casual"> 
+                  <td mat-cell *matCellDef="let row" > Casual </td> 
+                </ng-container> -->
               </ng-container>
+
                <!-- Job title Column -->
               <ng-container matColumnDef="jobtitle">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Title</th>
-                <td mat-cell *matCellDef="let row"> {{row.jobtitle}} </td>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="job_title">Job Title</th>
+                <td mat-cell *matCellDef="let row"> {{row.job_title}} </td>
               </ng-container>
              
               <!-- deadline Column -->
               <ng-container matColumnDef="deadline">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Deadline </th>
-                <td mat-cell *matCellDef="let row"> {{row.deadline}} </td>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="deadline_date"> Deadline </th>
+                <td mat-cell *matCellDef="let row"> {{row.deadline_date | date:"MM/dd/yyyy "}} </td>
               </ng-container>
               <!-- status column -->
               <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef> Status </th>
                 <td mat-cell *matCellDef="let row">
-                     <mat-slide-toggle></mat-slide-toggle>
+                     <mat-slide-toggle [checked]="row.user_detail.status=='active'?true:false"></mat-slide-toggle>
                    </td>
               </ng-container>
               <!-- status column -->
-              <ng-container matColumnDef="applications">
+
+
+              <!-- <ng-container matColumnDef="applications">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Applicants </th>
                 <td mat-cell *matCellDef="let row"><a routerLink="/applicantsManagement"> {{row.applications}}</a> </td>
-              </ng-container>
+              </ng-container> -->
+
+
                <!-- Action column -->
                <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef> Action </th>
@@ -79,16 +96,16 @@
                       <mat-icon>more_vert</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu" class="td-menu">
-                      <a mat-menu-item class="" routerLink="/viewJob">
-                        <mat-icon class="material-icons-outlined">visibility</mat-icon>
+                      <a mat-menu-item class="" routerLink="/viewJob/{{row._id}}">
+                        <mat-icon class="material-icons-outlined" (click)="view_id(row._id)">visibility</mat-icon>
                         <span>View</span>
                       </a>
-                      <a mat-menu-item class="" routerLink="/editJob">
+                      <!-- <a mat-menu-item class="" routerLink="/editJob">
                         <mat-icon class="material-icons-outlined">edit</mat-icon>
                         <span>Edit</span>
-                      </a>
-                      <a mat-menu-item class="" data-toggle="modal" (click)="smallModal.show()">
-                        <mat-icon class="material-icons-outlined">delete</mat-icon>
+                      </a> -->
+                      <a mat-menu-item class="" data-toggle="modal" (click)="delete_id(row._id)">
+                        <mat-icon class="material-icons-outlined" >delete</mat-icon>
                         <span>Delete</span>
                       </a>
                     </mat-menu>
@@ -110,7 +127,9 @@
               </tr>
             </table>
           </div>
-          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          <mat-paginator [length]="totalRecords" [pageIndex]="topPage" [pageSize]="limit"
+          [pageSizeOptions]="getPageSizeOptions()" (page)="paginationOptionChange($event)" showFirstLastButtons>
+        </mat-paginator>
         </div>
       </div>
     </div>
@@ -133,7 +152,7 @@
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" (click)="smallModal.hide()">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" class="btn btn-primary" (click)="jobManageDelete(this.item_id)" (click)="openSnackBar()">Yes</button>
       </div>
     </div>
   </div>

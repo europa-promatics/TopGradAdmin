@@ -338,6 +338,9 @@
                   this.tipsArray.markAllAsTouched();
                   return;
                 }
+              } else {
+                this.tipsSection.markAllAsTouched();
+                return;
               }
             }
 
