@@ -395,11 +395,11 @@ export const routes: Routes = [
         loadChildren: () => import('./pages/content-management/add-article/add-article.module').then(m => m.AddArticleModule)
       },
       {
-        path: 'view-article',
+        path: 'view-article/:id',
         loadChildren: () => import('./pages/content-management/view-article/view-article.module').then(m => m.ViewArticleModule)
       },
       {
-        path: 'edit-article',
+        path: 'edit-article/:id',
         loadChildren: () => import('./pages/content-management/edit-article/edit-article.module').then(m => m.EditArticleModule)
       },
       {
@@ -407,11 +407,11 @@ export const routes: Routes = [
         loadChildren: () => import('./pages/content-management/add-video/add-video.module').then(m => m.AddVideoModule)
       },
       {
-        path: 'view-video',
+        path: 'view-video/:id',
         loadChildren: () => import('./pages/content-management/view-video/view-video.module').then(m => m.ViewVideoModule)
       },
       {
-        path: 'edit-video',
+        path: 'edit-video/:id',
         loadChildren: () => import('./pages/content-management/edit-video/edit-video.module').then(m => m.EditVideoModule)
       },
       {

@@ -29,7 +29,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import {MatTabsModule} from '@angular/material/tabs';
-
 import { PlyrModule } from 'ngx-plyr';
 
 // Material import
@@ -230,7 +229,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
     //ViewGraduateComponent,
    // ViewEmployerComponent,
    // JobsManagementComponent,
-    //ViewJobComponent,
+    //sViewJobComponent,
     CategoriesManagementComponent,
     ViewApplicantComponent,
     HeaderSectionComponent,

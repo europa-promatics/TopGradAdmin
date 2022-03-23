@@ -50,7 +50,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _view_video_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./view-video-routing.module */ "ojjy");
+/* harmony import */ var ngx_plyr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-plyr */ "pr9R");
+/* harmony import */ var _view_video_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./view-video-routing.module */ "ojjy");
+
 
 
 
@@ -62,7 +64,8 @@ ViewVideoModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         declarations: [],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-            _view_video_routing_module__WEBPACK_IMPORTED_MODULE_3__["ViewVideoRoutingModule"]
+            ngx_plyr__WEBPACK_IMPORTED_MODULE_3__["PlyrModule"],
+            _view_video_routing_module__WEBPACK_IMPORTED_MODULE_4__["ViewVideoRoutingModule"]
         ]
     })
 ], ViewVideoModule);

@@ -15,13 +15,14 @@
             <table mat-table [dataSource]="sortedData" matSort (matSortChange)="sortData($event)">
               <!-- ID Column -->
               <ng-container matColumnDef="id">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header 
+                class="sno_wdth"> S.No </th>
                 <td mat-cell *matCellDef="let row; let i=index"> {{i+1}} </td>
               </ng-container>
 
               <!--Skills List Column -->
               <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Skiils List</th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="skill_wdth">Skiils List</th>
                 <td mat-cell *matCellDef="let row"> {{row.name}} </td>
               </ng-container>
 

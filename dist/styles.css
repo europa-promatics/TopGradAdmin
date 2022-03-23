@@ -23720,7 +23720,7 @@ span.user_circle_name {
 .blog_vdo {
   position: absolute;
   top: 50%;
-  left: 38%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 .blog_vdo span {
@@ -23969,4 +23969,13 @@ p.accoun_date {
 }
 .fl_sz {
   color: grey;
+}
+.skill_wdth {
+  width: 80%;
+}
+.sno_wdth {
+  width: 20%;
+}
+.vw_video {
+  display: inline-block;
 }

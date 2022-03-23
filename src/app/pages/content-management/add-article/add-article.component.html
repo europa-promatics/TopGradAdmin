@@ -12,7 +12,7 @@
 		      				<div class="home-mng-form">
 		      					<div class="form-group">
 									<label>Article Title</label>
-									<input type="text" name="" class="form-control" placeholder="Enter Title" formControlName="title">
+									<input type="text" name="" class="form-control" placeholder="Enter Title" formControlName="title" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
 								</div>
 								<div *ngIf="(addArticleform.controls.title.touched || addArticleform.controls.title.dirty) && addArticleform.controls.title.invalid && addArticleform.controls.title?.errors?.required  " class="invalid">
 									*Please enter title
@@ -46,7 +46,7 @@
 								</div>
 								<div class="form-group">
 									<label>Posted By</label>
-									<input type="text" name="" class="form-control" placeholder="Enter name here" formControlName="postedby">
+									<input type="text" name="" class="form-control" placeholder="Enter name here" formControlName="postedby" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
 								</div>
 								<div *ngIf="(addArticleform.controls.postedby.touched || addArticleform.controls.postedby.dirty) && addArticleform.controls.postedby.invalid && addArticleform.controls.postedby?.errors?.required  " class="invalid">
 									*Please enter name

@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { TopgradserviceService } from '../../../topgradservice.service';
 
 @Component({
   selector: 'app-view-article',
@@ -6,10 +12,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-article.component.scss']
 })
 export class ViewArticleComponent implements OnInit {
+  articledetail: any;
 
-  constructor() { }
+  constructor(private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.getcontent();
   }
+
+  getcontent(){
+    var obj={
+      article_id:this.route.snapshot.paramMap.get('id')
+    }
+
+    this.Service.getArticleContent(obj).subscribe((resp) => {
+      console.log("object============>",obj);
+      
+      console.log("response============>",resp);
+      this.articledetail=resp.data;
+      console.log("============>",this.articledetail);
+       
+    
+      
+     })
+    
+  }
+
 
 }

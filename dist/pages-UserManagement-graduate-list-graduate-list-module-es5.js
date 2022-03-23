@@ -152,7 +152,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"grad-mn-list\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"tabl_upr d-flex align-items-center justify-content-between\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" [(ngModel)]=\"search\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <div class=\"fltr_div d-flex align-items-center\">\n            <div class=\"form-group mb-0 ml-3\">\n              <select class=\"form-control custom-select\" (change)=\"selectfilter($event)\">\n                  <option selected>Select Filter</option>\n                  <option>Work Preference</option>\n                  <option>Availability</option>\n                  <option>Work Rights</option>\n              </select>\n            </div>\n\n            <div class=\"form-group mb-0 ml-3\">\n              <select class=\"form-control custom-select\" (change)=\"selectsubfilter($event)\" [(ngModel)]=\"filter\">\n                  <option selected>Select Sub-Filter</option>\n                  <option *ngFor=\"let i of array\" value=\"{{i.value}}\">{{i.name}}</option>\n                  <!-- <option>Sydney</option> -->\n              </select>\n            </div>\n            <div class=\"appl_fltr ml-3\">\n              <button class=\"btn btn-primary\" (click)=\"applysubfilter($event)\">\n              Apply Filter\n            </button>\n            </div>\n          </div>\n          \n\n          <!-- <div class=\"grad_filter dropdown ml-4\" dropdown>\n            \n            <a class=\"btn btn-primary\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" dropdownToggle (click)=\"false\">\n              Filter\n            </a>\n            <ul class=\"dropdown-menu dropdown-menu-left\" *dropdownMenu aria-labelledby=\"simple-dropdown\">\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Location<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Melbourne</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Sydney</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Work Preference<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Open</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Any</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Availability<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Any</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Remote</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Education<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Macquarie University</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">The University of New England</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">The University of Sydney</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Western Sydney University</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">License<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Available</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Not Available</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Work Rights<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Available</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Not Available</a></li>\n                </ul>\n              </li>\n              <li class=\"dropdown-submenu\">\n                <a class=\"dropdown-item\" href=\"#\">Skills<span class=\"caret\"></span></a>\n                <ul class=\"dropdown-menu\">\n                  <li><a class=\"dropdown-item\" href=\"#\">Figma</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Adobe Illustrator</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Data Analysis</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Adobe Photoshop</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Adobe XD</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Marketing</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Python</a></li>\n                  <li><a class=\"dropdown-item\" href=\"#\">Resume Writing</a></li>\n                </ul>\n              </li>\n              \n            </ul>\n          </div> -->\n        </div>\n        \n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"gradlist\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row; let i=index\">  {{i+1}}</td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.first_name | titlecase}} </td>\n              </ng-container>\n              <!-- Email Column -->\n              <ng-container matColumnDef=\"email\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Email Address</th>\n                <td mat-cell *matCellDef=\"let row\">  {{row?.email | titlecase}}  </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"company\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Creation Date (Time)</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.createdAt | date}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"location\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Location</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.location?.name | titlecase}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"wrkpref\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Preference</th>\n                <td mat-cell *matCellDef=\"let row\">{{row?.work_preference | titlecase}}  </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"availability\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Availability</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.availability | titlecase}} </td>\n              </ng-container>\n\n              <!-- <ng-container matColumnDef=\"education\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Education</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.education}} </td>\n              </ng-container> -->\n\n              <!-- <ng-container matColumnDef=\"license\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>License</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.license}} </td>\n              </ng-container> -->\n\n              <ng-container matColumnDef=\"wrkrights\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Rights</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.work_right?.work_right | titlecase}} </td>\n              </ng-container>\n\n              <!-- <ng-container matColumnDef=\"skills\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Skills</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.skills}} </td>\n              </ng-container> -->\n             \n              <!-- lname Column -->\n              <ng-container matColumnDef=\"lname\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.last_name | titlecase}} </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle [checked]=\"row.status=='active'?true:false\"></mat-slide-toggle>\n                   </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <a mat-menu-item class=\"\" routerLink=\"/viewGraduate/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/editGraduate/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <!-- <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"resetpswrd.show()\">\n                        <mat-icon class=\"material-icons-outlined\">cached</mat-icon>\n                        <span>Reset Password</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">block</mat-icon>\n                        <span>Ban</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">message</mat-icon>\n                        <span>Send Message</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">email</mat-icon>\n                        <span>Send Email</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"modal(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n          [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\"  aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n\n\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p class=\"mb-0\">Are you sure you want to delete the selected user's account?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deletegraduate(this.delId)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div bsModal #resetpswrd=\"bs-modal\" class=\"modal fade reset_pswrd\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"resetpswrd.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form>\n          <div class=\"row\">\n            <div class=\"col-sm-12\">\n              <div class=\"form-group\">\n                <label>Current Password</label>\n                <input type=\"password\" class=\"form-control\" value=\"abc123@\">\n              </div>\n              <div class=\"form-group\">\n                <label>New Password</label>\n                <input type=\"password\" class=\"form-control\">\n              </div>\n              <div class=\"form-group\">\n                <label>Confirm Password</label>\n                <input type=\"password\" class=\"form-control\">\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"resetpswrd.hide()\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\">Submit</button>\n      </div>\n    </div>\n  </div>\n</div>";
+      __webpack_exports__["default"] = "<section class=\"grad-mn-list\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"tabl_upr d-flex align-items-center justify-content-between\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n\n\n          <div class=\"fltr_div d-flex align-items-center\">\n            <div class=\"form-group mb-0 ml-3\">\n              <select class=\"form-control custom-select\" [(ngModel)]=\"main_filter\" (change)=\"selectfilter($event)\">\n                <option selected>Select Filter</option>\n                <option value=\"work_preference\" >Work Preference</option>\n                <option value=\"availability\">Availability</option>\n                <option value=\"work_right\">Work Rights</option>\n                <!-- <option>Education</option> -->\n                <!-- <option>License</option> -->\n                <!-- <option>Skills</option> -->\n                   <!-- <option>Location</option> -->\n              </select>\n            </div>\n\n            <div class=\"form-group mb-0 ml-3\">\n              <select [(ngModel)]=\"sub_filter\" class=\"form-control custom-select\">\n                <option selected> Select Sub-Filter</option>\n                <option  *ngFor=\"let filter of selectFilter\" value=\"{{filter._id}}\" (click)=\"selectsubfilter($event)\" >{{filter.name}}</option>\n              </select>\n            </div>\n\n            <div class=\"appl_fltr ml-3\" >\n              <button class=\"btn btn-primary\" (click)=\"applyfilters()\"  >\n                Apply Filter\n              </button>\n            </div>\n          </div>\n        </div>\n\n        \n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"gradlist\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row; let i=index\">  {{i+1}}</td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"name\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.first_name | titlecase}} </td>\n              </ng-container>\n              <!-- Email Column -->\n              <ng-container matColumnDef=\"email\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Email Address</th>\n                <td mat-cell *matCellDef=\"let row\">  {{row?.email | titlecase}}  </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"company\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Creation Date (Time)</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.createdAt | date}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"location\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Location</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.location?.name | titlecase}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"wrkpref\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Preference</th>\n                <td mat-cell *matCellDef=\"let row\">{{row?.work_preference | titlecase}}  </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"availability\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Availability</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.availability | titlecase}} </td>\n              </ng-container>\n\n              <!-- <ng-container matColumnDef=\"education\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Education</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.education}} </td>\n              </ng-container> -->\n\n              <!-- <ng-container matColumnDef=\"license\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>License</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.license}} </td>\n              </ng-container> -->\n\n              <ng-container matColumnDef=\"wrkrights\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Work Rights</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.work_right?.work_right | titlecase}} </td>\n              </ng-container>\n\n              <!-- <ng-container matColumnDef=\"skills\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Skills</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.skills}} </td>\n              </ng-container> -->\n             \n              <!-- lname Column -->\n              <ng-container matColumnDef=\"lname\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.last_name | titlecase}} </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle [checked]=\"row.status=='active'?true:false\"></mat-slide-toggle>\n                   </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <a mat-menu-item class=\"\" routerLink=\"/viewGraduate/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/editGraduate/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <!-- <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"resetpswrd.show()\">\n                        <mat-icon class=\"material-icons-outlined\">cached</mat-icon>\n                        <span>Reset Password</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">block</mat-icon>\n                        <span>Ban</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">message</mat-icon>\n                        <span>Send Message</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"\">\n                        <mat-icon class=\"material-icons-outlined\">email</mat-icon>\n                        <span>Send Email</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"modal(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n          [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\"  aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n\n\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p class=\"mb-0\">Are you sure you want to delete the selected user's account?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deletegraduate(this.delId)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<div bsModal #resetpswrd=\"bs-modal\" class=\"modal fade reset_pswrd\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"resetpswrd.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form>\n          <div class=\"row\">\n            <div class=\"col-sm-12\">\n              <div class=\"form-group\">\n                <label>Current Password</label>\n                <input type=\"password\" class=\"form-control\" value=\"abc123@\">\n              </div>\n              <div class=\"form-group\">\n                <label>New Password</label>\n                <input type=\"password\" class=\"form-control\">\n              </div>\n              <div class=\"form-group\">\n                <label>Confirm Password</label>\n                <input type=\"password\" class=\"form-control\">\n              </div>\n            </div>\n          </div>\n        </form>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"resetpswrd.hide()\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\">Submit</button>\n      </div>\n    </div>\n  </div>\n</div>";
       /***/
     },
 
@@ -325,11 +325,12 @@
           this.route = route;
           this.Service = Service;
           this._snackBar = _snackBar;
-          this.gradlist = [];
           this.displayedColumns = ['select', 'id', 'name', 'lname', 'email', 'company', 'location', 'wrkpref', 'availability', 'wrkrights', 'status', 'action'];
           this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []);
-          this.search = '';
-          this.filter = ''; // Create 100 users
+          this.selectFilter = [];
+          this.main_filter = "";
+          this.sub_filter = "";
+          this.flag = false; // Create 100 users
 
           var users = Array.from({
             length: 50
@@ -349,9 +350,12 @@
         }, {
           key: "ngOnInit",
           value: function ngOnInit() {
+            this.filter = '';
             this.search = '';
             this.graduatelist();
-            this.filter = '';
+            this.work_preference = "";
+            this.availability = "";
+            this.work_right = "";
           }
         }, {
           key: "modal",
@@ -393,29 +397,53 @@
           value: function graduatelist() {
             var _this2 = this;
 
-            console.log("khjhgjhgjhgjhghjghjgjhghjg");
             var obj = {
               limit: 5,
               offset: 0,
               role: "Graduate",
-              search: this.search,
-              filter: this.filter
-            }; // if(this.search){
-            //   obj.search = this.search
-            // }
+              search: this.search
+            };
 
-            console.log("onnnn", obj);
+            if (this.main_filter && this.sub_filter) {
+              obj[this.main_filter] = this.sub_filter;
+            }
+
+            console.log("Obj is====", obj);
             this.Service.gradlist(obj).subscribe(function (data) {
+              var _a, _b, _c, _d;
+
               console.log("main data for users is ====", data);
               _this2.gradlist = data.data;
-              _this2.totalRecords = data.length;
+
+              for (var i = 0; i < ((_a = _this2.gradlist) === null || _a === void 0 ? void 0 : _a.length); i++) {
+                if (_this2.gradlist[i].availability == 'full_time') {
+                  var cType = "Full Time";
+                  _this2.gradlist[i].cType = cType;
+                } else if (_this2.gradlist[i].availability == "part_time") {
+                  var _cType = 'Part Time';
+                  _this2.gradlist[i].cType = _cType;
+                }
+
+                if (((_b = _this2.gradlist[i].work_right) === null || _b === void 0 ? void 0 : _b.work_right) == '6229c90da69fcf8fc87e2827') {
+                  var workType = 'Permanent Resident/Citizen';
+                  _this2.gradlist[i].workType = workType;
+                } else if (((_c = _this2.gradlist[i].work_right) === null || _c === void 0 ? void 0 : _c.work_right) == "6229c917a69fcf8fc87e2828") {
+                  var _workType = 'Full Time Work Rights';
+                  _this2.gradlist[i].workType = _workType;
+                } else if (((_d = _this2.gradlist[i].work_right) === null || _d === void 0 ? void 0 : _d.work_right) == "6229c91fa69fcf8fc87e2829") {
+                  var _workType2 = 'Student Visa';
+                  _this2.gradlist[i].workType = _workType2;
+                }
+              }
+
+              _this2.totalRecords = data.count;
+              _this2.sortedData = _this2.gradlist;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                // this.toastr.error('Some error occured, please try again!!', 'Error')
                 console.log('Internet Connection Error');
               }
             });
@@ -424,124 +452,111 @@
           key: "applyFilter",
           value: function applyFilter(filterValue) {
             this.search = filterValue.target.value;
-            console.log("search", this.search);
-            console.log("after searchhhhh-00------------0=====", this.event);
+            console.log("seacrh=====>", this.search);
 
             if (this.event) {
-              console.log("after searchhhhh=====", this.event);
               this.paginationOptionChange(this.event);
             } else {
               this.graduatelist();
             }
+
+            console.log("apply filter===>>", this.event);
+            console.log("filter value===>>>", this.filterValue);
           }
         }, {
           key: "selectfilter",
           value: function selectfilter(e) {
-            console.log("ddsfc", e.target.value);
+            var _this3 = this;
 
-            if (e.target.value == "Work Preference") {
-              console.log("blle blle");
-              this.array = [{
-                name: 'Any',
-                value: "any"
+            if (e.target.value == "Select Filter") {
+              this.selectFilter = [];
+            } else if (e.target.value == "work_preference") {
+              this.selectFilter = [{
+                name: 'Internship',
+                _id: "internship"
               }, {
                 name: 'Job',
-                value: "job"
+                _id: "job"
               }, {
-                name: 'Internship',
-                value: "internship"
-              }];
-              console.log("1", this.array);
-            }
-
-            if (e.target.value == "Availability") {
-              console.log("te shava shava");
-              this.array = [{
                 name: 'Any',
-                value: "any"
+                _id: "any"
+              }];
+            } else if (e.target.value == "availability") {
+              this.selectFilter = [{
+                name: 'Any',
+                _id: "any"
               }, {
                 name: 'Part Time',
-                value: "part_time"
+                _id: "part_time"
               }, {
                 name: 'Full Time',
-                value: "full_time"
+                _id: "full_time"
               }];
-              console.log("2", this.array);
-            }
-
-            if (e.target.value == "Work Rights") {
-              console.log("nacho navho te kava kava");
-              this.array = [{
-                name: 'Any',
-                value: "any"
-              }, {
-                name: 'Citizen Permanent Resident',
-                value: "citizen_permanent_resident"
-              }, {
-                name: 'Full Time Work Visa',
-                value: "full_time_work_visa"
-              }, {
-                name: 'Student Visa',
-                value: "student_visa"
-              }, {
-                name: 'Aboriginal Torres Straight Islander',
-                value: "aboriginal_torres_straight_islander"
-              }];
-              console.log("3", this.array);
+            } else if (e.target.value == "work_right") {
+              this.Service.getGradDropDown().subscribe(function (res) {
+                console.log("fnjdskjfhdskjf", res);
+                _this3.selectFilter = res.data;
+              }); // this.selectFilter = [
+              //   { name: 'Permanent Resident/Citizen', value: "6229c90da69fcf8fc87e2827" },
+              //   { name: 'Full Time Work Rights', value: "6229c917a69fcf8fc87e2828" },
+              //   { name: 'Student Visa', value: "6229c91fa69fcf8fc87e2829" },
+              // ]
             }
           }
         }, {
-          key: "selectsubfilter",
-          value: function selectsubfilter(e) {
-            console.log("subfilter value", e.target.value);
-            this.filter = e.target.value;
-
-            if (this.event) {
-              console.log("after searchhhhh=====", this.event);
-              this.paginationOptionChange(this.event);
-            } else {
-              console.log("fgddfgdfgdfgdfgdgfdfg", this.filter);
-              this.graduatelist();
-            }
+          key: "applyfilters",
+          value: function applyfilters() {
+            this.flag = true;
+            this.graduatelist();
           }
         }, {
           key: "paginationOptionChange",
           value: function paginationOptionChange(evt) {
-            var _this3 = this;
+            var _this4 = this;
 
             this.event = evt;
-            console.log("evthrm", evt);
             this.topPage = evt.pageIndex;
-            console.log('rsawsfsdsf', this.topPage);
-            console.log("pagesize is======", evt.pageSize);
             var obj = {
               role: "Graduate",
               search: this.search,
-              filter: this.filter,
               limit: evt.pageSize,
               offset: evt.pageIndex * evt.pageSize
-            }; //  if(this.search){
-            //   obj.search = this.search
-            // }
+            };
+
+            if (this.main_filter && this.sub_filter && this.flag == true) {
+              obj[this.main_filter] = this.sub_filter;
+            }
 
             console.log("paginator obj==========", obj);
             this.Service.gradlist(obj).subscribe(function (data) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this3, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-                return regeneratorRuntime.wrap(function _callee$(_context) {
-                  while (1) {
-                    switch (_context.prev = _context.next) {
-                      case 0:
-                        console.log("Response of all the service listing>>>>>", data);
-                        this.gradlist = data.data, this.sortedData = this.gradlist;
-                        this.totalRecords = data.count;
+              var _a, _b, _c, _d;
 
-                      case 3:
-                      case "end":
-                        return _context.stop();
-                    }
-                  }
-                }, _callee, this);
-              }));
+              console.log("main data for users is ====", data);
+              _this4.gradlist = data.data;
+
+              for (var i = 0; i < ((_a = _this4.gradlist) === null || _a === void 0 ? void 0 : _a.length); i++) {
+                if (_this4.gradlist[i].availability == 'full_time') {
+                  var cType = "Full Time";
+                  _this4.gradlist[i].cType = cType;
+                } else if (_this4.gradlist[i].availability == "part_time") {
+                  var _cType2 = 'Part Time';
+                  _this4.gradlist[i].cType = _cType2;
+                }
+
+                if (((_b = _this4.gradlist[i].work_right) === null || _b === void 0 ? void 0 : _b.work_right) == '6229c90da69fcf8fc87e2827') {
+                  var workType = 'Permanent Resident/Citizen';
+                  _this4.gradlist[i].workType = workType;
+                } else if (((_c = _this4.gradlist[i].work_right) === null || _c === void 0 ? void 0 : _c.work_right) == "6229c917a69fcf8fc87e2828") {
+                  var _workType3 = 'Full Time Work Rights';
+                  _this4.gradlist[i].workType = _workType3;
+                } else if (((_d = _this4.gradlist[i].work_right) === null || _d === void 0 ? void 0 : _d.work_right) == "6229c91fa69fcf8fc87e2829") {
+                  var _workType4 = 'Student Visa';
+                  _this4.gradlist[i].workType = _workType4;
+                }
+              }
+
+              _this4.totalRecords = data.count;
+              _this4.sortedData = _this4.gradlist;
             });
           }
         }, {

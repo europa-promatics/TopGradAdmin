@@ -5,100 +5,39 @@
         <div class="tabl_upr d-flex align-items-center justify-content-between">
           <mat-form-field appearance="standard">
             <mat-label>Filter</mat-label>
-            <input matInput (keyup)="applyFilter($event)" [(ngModel)]="search" placeholder="Ex. Mia" class="filter_input" #input>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" class="filter_input" #input>
           </mat-form-field>
+
+
           <div class="fltr_div d-flex align-items-center">
             <div class="form-group mb-0 ml-3">
-              <select class="form-control custom-select" (change)="selectfilter($event)">
-                  <option selected>Select Filter</option>
-                  <option>Work Preference</option>
-                  <option>Availability</option>
-                  <option>Work Rights</option>
+              <select class="form-control custom-select" [(ngModel)]="main_filter" (change)="selectfilter($event)">
+                <option selected>Select Filter</option>
+                <option value="work_preference" >Work Preference</option>
+                <option value="availability">Availability</option>
+                <option value="work_right">Work Rights</option>
+                <!-- <option>Education</option> -->
+                <!-- <option>License</option> -->
+                <!-- <option>Skills</option> -->
+                   <!-- <option>Location</option> -->
               </select>
             </div>
 
             <div class="form-group mb-0 ml-3">
-              <select class="form-control custom-select" (change)="selectsubfilter($event)" [(ngModel)]="filter">
-                  <option selected>Select Sub-Filter</option>
-                  <option *ngFor="let i of array" value="{{i.value}}">{{i.name}}</option>
-                  <!-- <option>Sydney</option> -->
+              <select [(ngModel)]="sub_filter" class="form-control custom-select">
+                <option selected> Select Sub-Filter</option>
+                <option  *ngFor="let filter of selectFilter" value="{{filter._id}}" (click)="selectsubfilter($event)" >{{filter.name}}</option>
               </select>
             </div>
-            <div class="appl_fltr ml-3">
-              <button class="btn btn-primary" (click)="applysubfilter($event)">
-              Apply Filter
-            </button>
+
+            <div class="appl_fltr ml-3" >
+              <button class="btn btn-primary" (click)="applyfilters()"  >
+                Apply Filter
+              </button>
             </div>
           </div>
-          
-
-          <!-- <div class="grad_filter dropdown ml-4" dropdown>
-            
-            <a class="btn btn-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
-              Filter
-            </a>
-            <ul class="dropdown-menu dropdown-menu-left" *dropdownMenu aria-labelledby="simple-dropdown">
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Location<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Melbourne</a></li>
-                  <li><a class="dropdown-item" href="#">Sydney</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Work Preference<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Open</a></li>
-                  <li><a class="dropdown-item" href="#">Any</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Availability<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Any</a></li>
-                  <li><a class="dropdown-item" href="#">Remote</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Education<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Macquarie University</a></li>
-                  <li><a class="dropdown-item" href="#">The University of New England</a></li>
-                  <li><a class="dropdown-item" href="#">The University of Sydney</a></li>
-                  <li><a class="dropdown-item" href="#">Western Sydney University</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">License<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Available</a></li>
-                  <li><a class="dropdown-item" href="#">Not Available</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Work Rights<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Available</a></li>
-                  <li><a class="dropdown-item" href="#">Not Available</a></li>
-                </ul>
-              </li>
-              <li class="dropdown-submenu">
-                <a class="dropdown-item" href="#">Skills<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Figma</a></li>
-                  <li><a class="dropdown-item" href="#">Adobe Illustrator</a></li>
-                  <li><a class="dropdown-item" href="#">Data Analysis</a></li>
-                  <li><a class="dropdown-item" href="#">Adobe Photoshop</a></li>
-                  <li><a class="dropdown-item" href="#">Adobe XD</a></li>
-                  <li><a class="dropdown-item" href="#">Marketing</a></li>
-                  <li><a class="dropdown-item" href="#">Python</a></li>
-                  <li><a class="dropdown-item" href="#">Resume Writing</a></li>
-                </ul>
-              </li>
-              
-            </ul>
-          </div> -->
         </div>
+
         
 
         <div class="mat-elevation-z8">

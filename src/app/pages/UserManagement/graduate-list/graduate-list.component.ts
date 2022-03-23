@@ -73,7 +73,7 @@ const SKILLS: string[] = [
   styleUrls: ['./graduate-list.component.scss']
 })
 export class GraduateListComponent implements AfterViewInit {
-  gradlist=[]
+  
 	displayedColumns: string[] = ['select', 'id', 'name', 'lname', 'email', 'company', 'location', 'wrkpref', 'availability','wrkrights', 'status', 'action'];
 	dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
@@ -81,15 +81,23 @@ export class GraduateListComponent implements AfterViewInit {
   @ViewChild('smallModal') public smallModal: ModalDirective;
 	@ViewChild(MatPaginator) paginator: MatPaginator;
 	@ViewChild(MatSort) sort: MatSort;
-  totalRecords: any;
-  delId: any;
+  filter: any;
   event: any;
-  topPage: any;
+  selectFilter: any = [];
+  delId:any;
+  gradlist: any;
+  search: any;
+  totalRecords: any;
   sortedData: any;
-  search: any='';
-  filter: any='';
-  array: any[];
-  array1: any[];
+  graduateList: any;
+  topPage: any;
+  work_preference: any;
+  work_right: any;
+  availability: any;
+  filterValue: any;
+  main_filter: string = ""
+  sub_filter: string = ""
+  flag: boolean = false;
 
 	constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _snackBar: MatSnackBar) { 
 		 // Create 100 users
@@ -107,9 +115,13 @@ export class GraduateListComponent implements AfterViewInit {
 	  }
 
 	ngOnInit(): void {
-    this.search=''
-    this.graduatelist();
+    
     this.filter=''
+    this.search = ''
+    this.graduatelist();
+    this.work_preference = ""
+    this.availability = ""
+    this.work_right = ""
 	}
 
   modal(id){
@@ -139,116 +151,152 @@ export class GraduateListComponent implements AfterViewInit {
   }
 
 
-  graduatelist(){
-    console.log("khjhgjhgjhgjhghjghjgjhghjg");
-    
-    var obj: any={
-    limit: 5,
-    offset: 0,
-    role: "Graduate",
-    search:this.search,
-    filter:this.filter
+  graduatelist() {
+    var obj: any = {
+      limit: 5,
+      offset: 0,
+      role: "Graduate",
+      search: this.search,
     }
-    // if(this.search){
-    //   obj.search = this.search
-    // }
-    console.log("onnnn", obj)
+    if (this.main_filter && this.sub_filter) {
+      obj[this.main_filter] = this.sub_filter
+    }
+    console.log("Obj is====", obj);
     this.Service.gradlist(obj).subscribe(data => {
-    console.log("main data for users is ====", data)
-    this.gradlist=data.data
-    this.totalRecords=data.length;
+      console.log("main data for users is ====", data)
+      this.gradlist = data.data
+
+      for (let i = 0; i < this.gradlist?.length; i++) {
+        if (this.gradlist[i].availability == 'full_time') {
+          let cType = "Full Time"
+          this.gradlist[i].cType = cType
+        }
+        else if (this.gradlist[i].availability == "part_time") {
+          let cType = 'Part Time'
+          this.gradlist[i].cType = cType
+        }
+
+        if (this.gradlist[i].work_right?.work_right == '6229c90da69fcf8fc87e2827') {
+          let workType = 'Permanent Resident/Citizen'
+          this.gradlist[i].workType = workType
+        }
+        else if (this.gradlist[i].work_right?.work_right == "6229c917a69fcf8fc87e2828") {
+          let workType = 'Full Time Work Rights'
+          this.gradlist[i].workType = workType
+        }
+        else if (this.gradlist[i].work_right?.work_right == "6229c91fa69fcf8fc87e2829") {
+          let workType = 'Student Visa'
+          this.gradlist[i].workType = workType
+        }
+      }
+      this.totalRecords = data.count
+      this.sortedData = this.gradlist
     }, err => {
-    console.log(err.status)
-    if (err.status >= 404) {
-    console.log('Some error occured')
-    } else {
-    // this.toastr.error('Some error occured, please try again!!', 'Error')
-    console.log('Internet Connection Error')
-    }
+      console.log(err.status)
+      if (err.status >= 404) {
+        console.log('Some error occured')
+      } else {
+        console.log('Internet Connection Error')
+      }
     })
-    }
+  }
 
-	applyFilter(filterValue) {
-   
-    this.search=filterValue.target.value
-    console.log("search", this.search);
-    
-    console.log("after searchhhhh-00------------0=====",this.event);
-
-    if(this.event){
-      console.log("after searchhhhh=====",this.event);
-      
+  applyFilter(filterValue) {
+    this.search = filterValue.target.value
+    console.log("seacrh=====>", this.search);
+    if (this.event) {
       this.paginationOptionChange(this.event)
     }
-    else{
+    else {
       this.graduatelist()
+    }
+    console.log("apply filter===>>", this.event)
+    console.log("filter value===>>>", this.filterValue)
+  }
+
+  selectfilter(e) {
+    if (e.target.value == "Select Filter") {
+      this.selectFilter = []
+    }
+    else if (e.target.value == "work_preference") {
+      this.selectFilter = [
+        { name: 'Internship', _id: "internship" },
+        { name: 'Job', _id: "job" },
+        { name: 'Any', _id: "any" }
+      ]
+    }
+    else if (e.target.value == "availability") {
+      this.selectFilter = [
+        { name: 'Any', _id: "any" },
+        { name: 'Part Time', _id: "part_time" },
+        { name: 'Full Time', _id: "full_time" }
+      ]
+
+    }
+    else if (e.target.value == "work_right") {
+      this.Service.getGradDropDown().subscribe(res => {
+        console.log("fnjdskjfhdskjf", res);
+        this.selectFilter = res.data
+
+      })
+      // this.selectFilter = [
+      //   { name: 'Permanent Resident/Citizen', value: "6229c90da69fcf8fc87e2827" },
+      //   { name: 'Full Time Work Rights', value: "6229c917a69fcf8fc87e2828" },
+      //   { name: 'Student Visa', value: "6229c91fa69fcf8fc87e2829" },
+      // ]
 
     }
 
-	 }
+  }
 
-   selectfilter(e){
-     console.log("ddsfc",e.target.value);
-     if(e.target.value== "Work Preference"){
-        console.log("blle blle");
-        this.array=[{name:'Any', value:"any"},{name:'Job',value:"job"},{name:'Internship',value:"internship"}]
-        console.log("1",this.array);
-        
-     }
-     if(e.target.value== "Availability"){
-        console.log("te shava shava");
-        this.array=[{name:'Any', value:"any"},{name:'Part Time',value:"part_time"},{name:'Full Time',value:"full_time"}]
-        console.log("2",this.array);
-     }
-     if(e.target.value== "Work Rights"){
-        console.log("nacho navho te kava kava");
-        this.array=[{name:'Any', value:"any"},{name:'Citizen Permanent Resident',value:"citizen_permanent_resident"},{name:'Full Time Work Visa',value:"full_time_work_visa"},{name:'Student Visa',value:"student_visa"},{name:'Aboriginal Torres Straight Islander',value:"aboriginal_torres_straight_islander"}]
-        console.log("3",this.array);
-     }
-     
-   }
-
-   selectsubfilter(e){
-    console.log("subfilter value",e.target.value);
-    this.filter=e.target.value;
-    if(this.event){
-      console.log("after searchhhhh=====",this.event);
-      
-      this.paginationOptionChange(this.event)
-    }
-    else{
-      console.log("fgddfgdfgdfgdfgdgfdfg",this.filter);
-      
-      this.graduatelist()
-
-    }
-   }
-
+  applyfilters() {
+    this.flag = true
+    this.graduatelist()
+  }
    paginationOptionChange(evt) {
-    this.event=evt
-    console.log("evthrm", evt)
+    this.event = evt
     this.topPage = evt.pageIndex
-    console.log('rsawsfsdsf',this.topPage)
-    console.log("pagesize is======",evt.pageSize);
-    
-   var obj:any = {
-    role: "Graduate",
-    search:this.search,
-    filter:this.filter,
-    limit: evt.pageSize,
-    offset: (evt.pageIndex*evt.pageSize)
-     }
-    //  if(this.search){
-    //   obj.search = this.search
-    // }
-    console.log("paginator obj==========",obj);
-    
-     this.Service.gradlist(obj).subscribe(async data => {
-       console.log("Response of all the service listing>>>>>", data);
-        this.gradlist=data.data,
-        this.sortedData=this.gradlist
-        this.totalRecords = data.count
-     })
+
+    var obj: any = {
+      role: "Graduate",
+      search: this.search,
+      limit: evt.pageSize,
+      offset: (evt.pageIndex * evt.pageSize),
+    }
+    if (this.main_filter && this.sub_filter && this.flag == true) {
+      obj[this.main_filter] = this.sub_filter
+    }
+    console.log("paginator obj==========", obj);
+    this.Service.gradlist(obj).subscribe(data => {
+      console.log("main data for users is ====", data)
+      this.gradlist = data.data
+
+      for (let i = 0; i < this.gradlist?.length; i++) {
+        if (this.gradlist[i].availability == 'full_time') {
+          let cType = "Full Time"
+          this.gradlist[i].cType = cType
+        }
+        else if (this.gradlist[i].availability == "part_time") {
+          let cType = 'Part Time'
+          this.gradlist[i].cType = cType
+        }
+
+        if (this.gradlist[i].work_right?.work_right == '6229c90da69fcf8fc87e2827') {
+          let workType = 'Permanent Resident/Citizen'
+          this.gradlist[i].workType = workType
+        }
+        else if (this.gradlist[i].work_right?.work_right == "6229c917a69fcf8fc87e2828") {
+          let workType = 'Full Time Work Rights'
+          this.gradlist[i].workType = workType
+        }
+        else if (this.gradlist[i].work_right?.work_right == "6229c91fa69fcf8fc87e2829") {
+          let workType = 'Student Visa'
+          this.gradlist[i].workType = workType
+        }
+      }
+      this.totalRecords = data.count
+      this.sortedData = this.gradlist
+    })
   }
   getPageSizeOptions() {
     return [5,10,50,100];

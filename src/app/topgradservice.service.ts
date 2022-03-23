@@ -234,17 +234,50 @@ export class TopgradserviceService implements HttpInterceptor {
   }
 
 
+  // gradlist(data: any): Observable<any> {
+  //   let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&filter=${data.filter}`;
+  //   console.log(API_URL)
+  //   return this.httpClient.get(API_URL, data)
+  //     .pipe(
+  //       map(res => {
+  //         return res
+  //       }),
+  //       catchError(this.error)
+  //     )
+  // }
+
   gradlist(data: any): Observable<any> {
-    let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&filter=${data.filter}`;
+    let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}`;
+    if(data.work_preference){
+    API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&work_preference=${data.work_preference}`;
+    }
+    else if(data.availability){
+    API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&availability=${data.availability}`;
+    }
+    else if(data.work_right){
+    API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&work_right=${data.work_right}`;
+    }
     console.log(API_URL)
     return this.httpClient.get(API_URL, data)
-      .pipe(
-        map(res => {
-          return res
-        }),
-        catchError(this.error)
-      )
-  }
+    .pipe(
+    map(res => {
+    return res
+    }),
+    catchError(this.error)
+    )
+    }
+    
+    getGradDropDown(): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/dropdown/options/graduate_work_rights`;
+    console.log(API_URL)
+    return this.httpClient.get(API_URL)
+    .pipe(
+    map(res => {
+    return res
+    }),
+    catchError(this.error)
+    )
+    }
 
   emplist(data: any): Observable<any> {
     let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?role=${data.role}&search=${data.search}`;
@@ -829,6 +862,68 @@ export class TopgradserviceService implements HttpInterceptor {
     catchError(this.error)
     )
     }
+
+
+    addArticleContent(obj: any): Observable<any> {
+      let API_URL = `${this.SERVER_URL}/admin/add/article`;
+      console.log(API_URL)
+      return this.httpClient.post(API_URL, obj)
+      .pipe(
+      map(res => {
+      return res
+      }),
+      catchError(this.error)
+      )
+      }
+
+      getarticleList(obj: any): Observable<any> {
+        let API_URL = `${this.SERVER_URL}/admin/get/article/list?limit=${obj.limit}&offset=${obj.offset}&search=${obj.search}&type=${obj.type}`;
+        console.log(API_URL)
+        return this.httpClient.get(API_URL, obj)
+        .pipe(
+        map(res => {
+        return res
+        }),
+        catchError(this.error)
+        )
+      }
+
+
+      getArticleContent(obj: any): Observable<any> {
+        let API_URL = `${this.SERVER_URL}/admin/view/article?article_id=${obj.article_id}`;
+        console.log(API_URL)
+        return this.httpClient.get(API_URL, obj)
+        .pipe(
+        map(res => {
+        return res
+        }),
+        catchError(this.error)
+        )
+      }
+
+      editArticleContent(obj: any): Observable<any> {
+        let API_URL = `${this.SERVER_URL}/admin/edit/article`;
+        console.log(API_URL)
+        return this.httpClient.put(API_URL, obj)
+        .pipe(
+        map(res => {
+        return res
+        }),
+        catchError(this.error)
+        )
+        }
+
+        delArticle(obj: any): Observable<any> {
+          let API_URL = `${this.SERVER_URL}/admin/delete/article/${obj.article_id}`;
+          console.log(API_URL)
+          return this.httpClient.delete(API_URL)
+          .pipe(
+          map(res => {
+          return res
+          }),
+          catchError(this.error)
+          )
+          }
 
 
 

@@ -14,7 +14,7 @@
         
         <div class="mat-elevation-z8">
           <div class="table-responsive">
-            <table mat-table [dataSource]="dataSource" matSort>
+            <table mat-table [dataSource]="sortedData" matSort>
               <!-- Checkbox Column -->
               <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
@@ -35,29 +35,35 @@
               <!-- ID Column -->
               <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
-                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                <td mat-cell *matCellDef="let row ; let i=index"> {{i+1}} </td>
               </ng-container>
 
               <!-- Name Column -->
               <ng-container matColumnDef="image">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
-                <td mat-cell *matCellDef="let element"> <img [src]="element.image" class="slider-imag" /></td>
+                <td mat-cell *matCellDef="let row"> <img [src]="row.medias[0].url" class="slider-imag" /></td>
               </ng-container>
               <!-- worktype Column -->
               <ng-container matColumnDef="title">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Title</th>
-                <td mat-cell *matCellDef="let row" class="td-width"> {{row.title}} </td>
+                <td mat-cell *matCellDef="let row" class="td-width"> {{row.article_title}} </td>
+              </ng-container>
+
+              <!-- worktype Column -->
+              <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Type</th>
+                <td mat-cell *matCellDef="let row" class="td-width"> {{row.article_name}} </td>
               </ng-container>
               
               <!-- worktype Column -->
-              <ng-container matColumnDef="description">
+              <!-- <ng-container matColumnDef="description">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
-                <td mat-cell *matCellDef="let row" class="td-width"> {{row.description}} </td>
-              </ng-container>
+                <td mat-cell *matCellDef="let row" class="td-width"> {{row.article_description}} </td>
+              </ng-container> -->
 
               <ng-container matColumnDef="postedBy">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>
-                <td mat-cell *matCellDef="let row" class="td-width"> {{row.postedBy}} </td>
+                <td mat-cell *matCellDef="let row" class="td-width"> {{row.posted_by}} </td>
               </ng-container>
               
               
@@ -72,15 +78,15 @@
                         <mat-icon class="material-icons-outlined">add</mat-icon>
                         <span>Add</span>
                       </a> -->
-                      <a mat-menu-item class="" routerLink="/view-article">
+                      <a mat-menu-item class="" routerLink="/view-article/{{row._id}}">
                         <mat-icon class="material-icons-outlined">visibility</mat-icon>
                         <span>View</span>
                     </a>
-                      <a mat-menu-item class="" routerLink="/edit-article">
+                      <a mat-menu-item class="" routerLink="/edit-article/{{row._id}}">
                         <mat-icon class="material-icons-outlined">edit</mat-icon>
                         <span>Edit</span>
                       </a>
-                      <a mat-menu-item class="" data-toggle="modal" (click)="smallModal.show()">
+                      <a mat-menu-item class="" data-toggle="modal" (click)="Modal(row._id)">
                         <mat-icon class="material-icons-outlined">delete</mat-icon>
                         <span>Delete</span>
                       </a>
@@ -103,7 +109,8 @@
               </tr>
             </table>
           </div>
-          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          <mat-paginator [length]="totalRecords" [pageIndex]="topPage" [pageSize]="limit"
+          [pageSizeOptions]="getPageSizeOptions()" (page)="paginationOptionChange($event)"  aria-label="Select page of users"></mat-paginator>
         </div>
       </div>
     </div>
@@ -126,7 +133,7 @@
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" (click)="smallModal.hide()">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" class="btn btn-primary" (click)="deleteArticle(delId)">Yes</button>
       </div>
     </div>
   </div>

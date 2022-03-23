@@ -1011,7 +1011,7 @@ function createNewUser(id) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/success.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"virde_play_btn play-1st\">\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/play-btn.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/youtube_video.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"editVideoform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\" formControlName=\"title\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.title.touched || editVideoform.controls.title.dirty) && editVideoform.controls.title.invalid && editVideoform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.title.touched || editVideoform.controls.title.dirty) && editVideoform.controls.title.invalid && editVideoform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"changevideo($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_video_article\">Small Video</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_video_article\">Large Video</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.type.touched || editVideoform.controls.type.dirty) && editVideoform.controls.type.invalid && editVideoform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.type.touched || editVideoform.controls.type.dirty) && editVideoform.controls.type.invalid && editVideoform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.description.touched || editVideoform.controls.description.dirty) && editVideoform.controls.description.invalid && editVideoform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.description.touched || editVideoform.controls.description.dirty) && editVideoform.controls.description.invalid && editVideoform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postdescription.touched || editVideoform.controls.postdescription.dirty) && editVideoform.controls.postdescription.invalid && editVideoform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postdescription.touched || editVideoform.controls.postdescription.dirty) && editVideoform.controls.postdescription.invalid && editVideoform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article == 'large_video_article'\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<!-- <video [src]=\"editVideoform.controls['Video'].value\"></video> -->\n\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"editVideoform.controls['Video'].value\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"sanitizer.bypassSecurityTrustResourceUrl(editVideoform.controls['Video'].value)\"\n\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen ></iframe>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onVideoChange($event)\" accept=\"video/*\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.Video?.errors?.required\"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.Video.valid && editVideoform.controls.county1?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage2?HeadingImage2:'assets/img/youtube_video.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage1($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -2517,6 +2517,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
 /* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-bootstrap/modal */ "K3ix");
 /* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/cdk/collections */ "0EQZ");
+/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
+
 
 
 
@@ -2533,17 +2541,25 @@ const IMAGE = [
 const TITLE = [
     'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Web Development', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors'
 ];
-const DESCRIPTION = [
-    'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar',
+const TYPE = [
+    'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Web Development', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors'
 ];
+// const DESCRIPTION: string[] = [
+//   'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 
+// ];
 const POSTEDBY = [
     'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
     'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
 ];
 let CareerArticlesComponent = class CareerArticlesComponent {
-    constructor() {
-        this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'description', 'action'];
+    constructor(Service, dialog, fb, route) {
+        this.Service = Service;
+        this.dialog = dialog;
+        this.fb = fb;
+        this.route = route;
+        this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'type', 'action'];
         this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []);
+        this.search = '';
         // Create 100 users
         const users = Array.from({ length: 50 }, (_, k) => createNewUser(k + 1));
         // Assign the data to the data source for the table to render
@@ -2554,13 +2570,59 @@ let CareerArticlesComponent = class CareerArticlesComponent {
         this.dataSource.sort = this.sort;
     }
     ngOnInit() {
+        this.articleList();
+        this.search = '';
     }
-    applyFilter(event) {
-        const filterValue = event.target.value;
-        this.dataSource.filter = filterValue.trim().toLowerCase();
-        if (this.dataSource.paginator) {
-            this.dataSource.paginator.firstPage();
+    applyFilter(filterValue) {
+        this.search = filterValue.target.value;
+        console.log("search", this.search);
+        console.log("after searchhhhh-00------------0=====", this.event);
+        if (this.event) {
+            console.log("after searchhhhh=====", this.event);
+            this.paginationOptionChange(this.event);
         }
+        else {
+            this.articleList();
+        }
+    }
+    paginationOptionChange(evt) {
+        this.event = evt;
+        console.log("evthrm", evt);
+        this.topPage = evt.pageIndex;
+        console.log('rsawsfsdsf', this.topPage);
+        console.log("pagesize is======", evt.pageSize);
+        var obj = {
+            search: this.search,
+            limit: evt.pageSize,
+            offset: (evt.pageIndex * evt.pageSize)
+        };
+        //  if(this.search){
+        //   obj.search = this.search
+        // }
+        console.log("paginator obj==========", obj);
+        this.Service.getarticleList(obj).subscribe((data) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            console.log("Response of all the service listing>>>>>", data);
+            this.sortedData = data.data;
+            this.totalRecords = data.count;
+        }));
+    }
+    getPageSizeOptions() {
+        return [5, 10, 50, 100];
+    }
+    Modal(id) {
+        this.delId = id;
+        this.smallModal.show();
+    }
+    deleteArticle(id) {
+        var obj = {
+            article_id: id
+        };
+        this.Service.delArticle(obj).subscribe(res => {
+            console.log("Response==========", res);
+            this.smallModal.hide();
+            this.Service.showMessage({ message: "Deleted Successfully" });
+            this.ngOnInit();
+        });
     }
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected() {
@@ -2583,8 +2645,52 @@ let CareerArticlesComponent = class CareerArticlesComponent {
         }
         return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
     }
+    articleList() {
+        console.log("javascriptt========");
+        var obj = {
+            limit: 5,
+            offset: 0,
+            type: "image_article",
+            search: this.search
+            // search: this.search
+        };
+        console.log("object===>", obj);
+        this.Service.getarticleList(obj).subscribe(res => {
+            console.log("Response==========", res);
+            this.sortedData = res.data;
+            this.totalRecords = res.count;
+            for (let i = 0; i < this.sortedData.length; i++) {
+                var new_article = this.sortedData[i].article_type;
+                console.log("new_article=============>", new_article);
+                if (new_article == "small_article") {
+                    this.article = "Small Article";
+                    console.log("this.article small===========>", this.article);
+                    this.sortedData[i].article_name = (this.article);
+                }
+                else if (new_article == "large_article") {
+                    this.article = "Large Article";
+                    console.log("this.article large===========>", this.article);
+                    this.sortedData[i].article_name = (this.article);
+                }
+            }
+        }, err => {
+            console.log(err.status);
+            if (err.status >= 404) {
+                console.log('Some error occured');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+        console.log("Object==========");
+    }
 };
-CareerArticlesComponent.ctorParameters = () => [];
+CareerArticlesComponent.ctorParameters = () => [
+    { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"] },
+    { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"] }
+];
 CareerArticlesComponent.propDecorators = {
     smallModal: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: ['smallModal',] }],
     paginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"],] }],
@@ -2596,19 +2702,19 @@ CareerArticlesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
         template: _raw_loader_career_articles_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_career_articles_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"]])
 ], CareerArticlesComponent);
 
 function createNewUser(id) {
     const image = IMAGE[Math.round(Math.random() * (IMAGE.length - 1))] + ' ';
     const title = TITLE[Math.round(Math.random() * (TITLE.length - 1))] + ' ';
-    const description = DESCRIPTION[Math.round(Math.random() * (DESCRIPTION.length - 1))] + ' ';
+    const type = TYPE[Math.round(Math.random() * (TYPE.length - 1))] + ' ';
     const postedBy = POSTEDBY[Math.round(Math.random() * (POSTEDBY.length - 1))] + ' ';
     return {
         id: id.toString() + '.',
         image: image,
         title: title,
-        description: description,
+        type: type,
         postedBy: postedBy
     };
 }
@@ -2877,7 +2983,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter name here\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/dummy.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/dummy.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"addVideoform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\" formControlName=\"title\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.title.touched || addVideoform.controls.title.dirty) && addVideoform.controls.title.invalid && addVideoform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.title.touched || addVideoform.controls.title.dirty) && addVideoform.controls.title.invalid && addVideoform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"video($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_video_article\">Small Video</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_video_article\">Large Video</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.type.touched || addVideoform.controls.type.dirty) && addVideoform.controls.type.invalid && addVideoform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.type.touched || addVideoform.controls.type.dirty) && addVideoform.controls.type.invalid && addVideoform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter name here\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage1?HeadingImage1:'assets/img/dummy.png'\"  class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article =='large_video_article'\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"addVideoform.controls['video'].value\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"addVideoform.controls['video'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen ></iframe>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onVideoChange($event)\" accept=\"video/*\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.video.touched || addVideoform.controls.video.dirty) && addVideoform.controls.video.invalid && addVideoform.controls.video?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls.video.valid && addVideoform.controls.county1?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<!-- <img src=\"assets/img/dummy.png\" class=\"img-fluid\"> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -3101,10 +3207,38 @@ let TopgradserviceService = class TopgradserviceService {
             return res;
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
     }
+    // gradlist(data: any): Observable<any> {
+    //   let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&filter=${data.filter}`;
+    //   console.log(API_URL)
+    //   return this.httpClient.get(API_URL, data)
+    //     .pipe(
+    //       map(res => {
+    //         return res
+    //       }),
+    //       catchError(this.error)
+    //     )
+    // }
     gradlist(data) {
-        let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&filter=${data.filter}`;
+        let API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}`;
+        if (data.work_preference) {
+            API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&work_preference=${data.work_preference}`;
+        }
+        else if (data.availability) {
+            API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&availability=${data.availability}`;
+        }
+        else if (data.work_right) {
+            API_URL = `${this.SERVER_URL}/admin/get/user/list/${data.offset}-${data.limit}?search=${data.search}&role=${data.role}&work_right=${data.work_right}`;
+        }
         console.log(API_URL);
         return this.httpClient.get(API_URL, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+    }
+    getGradDropDown() {
+        let API_URL = `${this.SERVER_URL}/admin/get/dropdown/options/graduate_work_rights`;
+        console.log(API_URL);
+        return this.httpClient.get(API_URL)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
             return res;
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
@@ -3524,6 +3658,46 @@ let TopgradserviceService = class TopgradserviceService {
             return res;
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
     }
+    addArticleContent(obj) {
+        let API_URL = `${this.SERVER_URL}/admin/add/article`;
+        console.log(API_URL);
+        return this.httpClient.post(API_URL, obj)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+    }
+    getarticleList(obj) {
+        let API_URL = `${this.SERVER_URL}/admin/get/article/list?limit=${obj.limit}&offset=${obj.offset}&search=${obj.search}&type=${obj.type}`;
+        console.log(API_URL);
+        return this.httpClient.get(API_URL, obj)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+    }
+    getArticleContent(obj) {
+        let API_URL = `${this.SERVER_URL}/admin/view/article?article_id=${obj.article_id}`;
+        console.log(API_URL);
+        return this.httpClient.get(API_URL, obj)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+    }
+    editArticleContent(obj) {
+        let API_URL = `${this.SERVER_URL}/admin/edit/article`;
+        console.log(API_URL);
+        return this.httpClient.put(API_URL, obj)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+    }
+    delArticle(obj) {
+        let API_URL = `${this.SERVER_URL}/admin/delete/article/${obj.article_id}`;
+        console.log(API_URL);
+        return this.httpClient.delete(API_URL)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(res => {
+            return res;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+    }
 };
 TopgradserviceService.ctorParameters = () => [
     { type: ngx_ui_loader__WEBPACK_IMPORTED_MODULE_5__["NgxUiLoaderService"] },
@@ -3597,7 +3771,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-video\">Add Video</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video</th>\n                <td mat-cell *matCellDef=\"let element\">\n                  <span class=\"position-relative play-container\">\n                    <img [src]=\"element.image\" class=\"slider-imag\" />\n                    <img src=\"assets/img/play-btn.png\" class=\"img-fluid slider-play\"> \n                  </span> \n                </td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.title}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.postedBy}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-video\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-video\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-video\">Add Video</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"sortedData\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video/Image</th>\n                  <td mat-cell *matCellDef=\"let row \" > \n                    <span class=\"position-relative play-container\">\n                      <video [src]=\"row?.url\" class=\"slider-imag\" *ngIf=\"row.article_type == 'large_video_article' \"></video>\n                      <img [src]=\"row?.url\" class=\"slider-imag\" *ngIf=\"row.article_type == 'small_video_article' \" /> \n                    </span> \n                  </td>\n                <!-- <td mat-cell *matCellDef=\"let row \" *ngIf=\"row.article_name == 'small_video_article' \"> \n                  <span class=\"position-relative play-container\"> -->\n                    <!-- <video [src]=\"row?.medias[i]?.url\" class=\"slider-imag\" ></video> -->\n                    <!-- <img src=\"row?.url\" class=\"img-fluid slider-play\"> \n                  </span> \n                </td> -->\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_title}} </td>\n              </ng-container>\n\n               <!-- worktype Column -->\n               <ng-container matColumnDef=\"type\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Type</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_name}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <!-- <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container> -->\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.posted_by}}</td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-video/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-video/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"Modal(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n          [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\"  aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Video?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteArticle(delId)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -4259,7 +4433,7 @@ EditSubHeadingComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/blog-article.png\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>Build a better resume</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">Jaxson Stanton</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted 02 / 07 / 21</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa eget convallis enim lobortis ullamcorper tempus</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<p class=\"highlighted_info\">\n\t\t\t\t\t\t\t\t\t\t“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa eget convallis enim lobortis ullamcorper tempus”\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant. \n\t\t\t\t\t\t\t\t\t\tPurus volutpat aliquam integer mauris. Nam id venenatis pellentesque pellentesque. Donec est et sed velit at aliquet imperdiet. Velit vel id id orci, egestas id. Cursus vitae sit orci vitae luctus lectus sit eget. Cursus in ultricies sit vestibulum nulla nisi imperdiet dignissim ac. Eu in gravida id volutpat. Nec auctor amet posuere massa imperdiet nulla aenean diam. Ut lobortis sed aliquet donec. \n\t\t\t\t\t\t\t\t\t\tNisi lectus malesuada lectus imperdiet dictum id quisque. Montes, sapien libero sodales pharetra sed neque. Iaculis congue augue eget donec in nec platea id nullam. Quam tortor ut in eu euismod urna amet, fames. Condimentum ut ac convallis in bibendum faucibus. \n\t\t\t\t\t\t\t\t\t\tMagna diam adipiscing vitae quis nullam cras. Tempor donec morbi dolor ullamcorper id pharetra, cursus etiam. Adipiscing nunc, eleifend gravida malesuada tellus diam mattis condimentum. Nulla.\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant.\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"{{articledetail?.medias[0].url}}\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>{{articledetail?.article_title | titlecase}}</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">{{articledetail?.posted_by | titlecase}}</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted {{articledetail?.createdAt | date:\"dd/MM/yyyy\"}}</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.posted_description\"></p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<p class=\"highlighted_info\" [innerHTML]=\"articledetail.posted_description\">\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.article_description\">\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<!-- <p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant.\n\t\t\t\t\t\t\t\t\t</p> -->\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -4400,23 +4574,208 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_edit_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./edit-video.component.html */ "3Jhu");
 /* harmony import */ var _edit_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit-video.component.scss */ "Nfig");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "dNgK");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+
+
+
+
+
+
 
 
 
 
 let EditVideoComponent = class EditVideoComponent {
-    constructor() { }
+    constructor(sanitizer, route, Service, _snackBar, router, fb) {
+        this.sanitizer = sanitizer;
+        this.route = route;
+        this.Service = Service;
+        this._snackBar = _snackBar;
+        this.router = router;
+        this.fb = fb;
+        this.editVideoform = this.fb.group({
+            title: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(200)]],
+            type: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            postedby: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            Image: ['',],
+            county: [''],
+            Video: ['',],
+            county1: ['']
+        });
+    }
     ngOnInit() {
+        this.getcontent();
+    }
+    getcontent() {
+        var obj = {
+            article_id: this.route.snapshot.paramMap.get('id')
+        };
+        this.Service.getArticleContent(obj).subscribe((resp) => {
+            var _a, _b, _c;
+            console.log("object============>", obj);
+            this.video = resp.data.medias.find(x => x.for == 'video');
+            // this.video.url = this.sanitizer.bypassSecurityTrustUrl(this.video.url)
+            this.main_image = resp.data.medias.find(x => x.for == 'main');
+            console.log("============>", this.main_image);
+            this.HeadingImage2 = (_a = this.main_image) === null || _a === void 0 ? void 0 : _a.url;
+            console.log("============>", this.video);
+            console.log("response============>", resp);
+            // setTimeout(function(){
+            this.editVideoform.patchValue({
+                Image: (_b = this.main_image) === null || _b === void 0 ? void 0 : _b.url,
+                title: resp.data.article_title,
+                type: resp.data.article_type,
+                description: resp.data.article_description,
+                postedby: resp.data.posted_by,
+                postdescription: resp.data.posted_description
+            });
+            // }, 2000)
+            console.log("my for,=============>", this.editVideoform);
+            if (resp.data.article_type == "small_video_article") {
+                this.type_article = "small_video_article";
+            }
+            else if (resp.data.article_type == "large_video_article") {
+                this.type_article = "large_video_article";
+                this.editVideoform.patchValue({
+                    Video: (_c = this.video) === null || _c === void 0 ? void 0 : _c.url
+                });
+            }
+        });
+    }
+    changevideo(event) {
+        console.log(event.target.value);
+        this.type_article = event.target.value;
+        console.log("type============>", this.type_article);
+    }
+    onVideoChange(e) {
+        this.type_article = "large_video_article";
+        console.log(e);
+        console.log(e.target.files[0].name);
+        const file = e.target.files[0];
+        const fileType = file.type.split("/")[0];
+        console.log("videotype", fileType);
+        if (fileType == "video") {
+            this.selectedfile2 = e.target.files[0];
+            const formData = new FormData();
+            formData.append('media', this.selectedfile2);
+            this.Service.uploadmedia1(formData).subscribe((resp) => {
+                console.log("video response ==>", resp);
+                this.editVideoform.patchValue({
+                    Video: resp.file_name
+                });
+            });
+            this.editVideoform.get('county1').clearValidators(); // 6. Clear All Validators
+            this.editVideoform.get('county1').updateValueAndValidity();
+            console.log("rightextension", this.editVideoform);
+        }
+        else {
+            this.editVideoform.get('county1').setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]); // 5.Set Required Validator
+            this.editVideoform.get('county1').updateValueAndValidity();
+            console.log("wrongextension", this.editVideoform);
+        }
+    }
+    setHeadingImage1(event) {
+        console.log(event.target.files[0]);
+        // this.type_article="small_article";
+        const file = event.target.files[0];
+        const fileType = file.type.split("/")[0];
+        console.log(fileType);
+        if (fileType == "image") {
+            this.headingImageObj = event.target.files[0];
+            const formData = new FormData();
+            formData.append('image', this.headingImageObj);
+            this.Service.uploadbenefitmedia(formData).subscribe((resp) => {
+                console.log("image response ==>", resp);
+                this.editVideoform.patchValue({
+                    Image: resp,
+                });
+            });
+            let reader = new FileReader();
+            reader.onload = (event) => {
+                this.HeadingImage2 = event.target.result;
+            };
+            reader.readAsDataURL(this.headingImageObj);
+            this.editVideoform.get('county').clearValidators(); // 6. Clear All Validators
+            this.editVideoform.get('county').updateValueAndValidity();
+            console.log("rightextension", this.editVideoform);
+        }
+        else {
+            this.editVideoform.get('county').setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]); // 5.Set Required Validator
+            this.editVideoform.get('county').updateValueAndValidity();
+            console.log("wrongextension", this.editVideoform);
+        }
+    }
+    postcontent() {
+        let obj;
+        if (this.editVideoform.valid) {
+            console.log("hmara form", this.editVideoform);
+            const formdata = new FormData();
+            console.log("yippeeeeeeee", this.headingImageObj);
+            formdata.append("article_id", this.route.snapshot.paramMap.get('id'));
+            formdata.append("article_type", this.editVideoform.controls['type'].value);
+            formdata.append("article_title", this.editVideoform.controls['title'].value);
+            formdata.append("article_description", this.editVideoform.controls['description'].value);
+            formdata.append("posted_by", this.editVideoform.controls['postedby'].value);
+            formdata.append("posted_description", this.editVideoform.controls['postdescription'].value);
+            if (this.editVideoform.controls['type'].value == 'small_video_article') {
+                const medias = [
+                    {
+                        "for": "main",
+                        "url": this.editVideoform.controls['Image'].value
+                    }
+                ];
+                const newmedia = JSON.stringify(medias);
+                console.log("newmedia==========>>>", newmedia);
+                formdata.append("medias", JSON.stringify(medias));
+            }
+            if (this.editVideoform.controls['type'].value == 'large_video_article') {
+                const medias = [
+                    {
+                        for: "video",
+                        url: this.editVideoform.controls['Video'].value
+                    },
+                    {
+                        "for": "main",
+                        "url": this.editVideoform.controls['Image'].value
+                    }
+                ];
+                const newmedia = JSON.stringify(medias);
+                console.log("newmedia==========>>>", newmedia);
+                formdata.append("medias", JSON.stringify(medias));
+            }
+            obj = formdata;
+        }
+        else {
+            this.editVideoform.markAllAsTouched();
+            return;
+        }
+        console.log("objjjjjjjj===========>", obj);
+        this.Service.editArticleContent(obj).subscribe((resp) => {
+            this.Service.showMessage({ message: "Submitted Successfully" });
+        });
     }
 };
-EditVideoComponent.ctorParameters = () => [];
+EditVideoComponent.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
+    { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
+    { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+];
 EditVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-edit-video',
         template: _raw_loader_edit_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_edit_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], EditVideoComponent);
 
 
@@ -5211,6 +5570,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
 /* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-bootstrap/modal */ "K3ix");
 /* harmony import */ var _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/cdk/collections */ "0EQZ");
+/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
+
 
 
 
@@ -5227,17 +5594,25 @@ const IMAGE = [
 const TITLE = [
     'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Web Development', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors'
 ];
-const DESCRIPTION = [
-    'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar',
+const TYPE = [
+    'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Web Development', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors', 'Career Counsellors'
 ];
+// const DESCRIPTION: string[] = [
+//   'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 'Lorem ipsum sit donar Lorem ipsum sit donar', 
+// ];
 const POSTEDBY = [
     'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
     'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
 ];
 let CareerVideosComponent = class CareerVideosComponent {
-    constructor() {
-        this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'description', 'action'];
+    constructor(Service, dialog, fb, route) {
+        this.Service = Service;
+        this.dialog = dialog;
+        this.fb = fb;
+        this.route = route;
+        this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'type', 'action'];
         this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []);
+        this.search = '';
         // Create 100 users
         const users = Array.from({ length: 50 }, (_, k) => createNewUser(k + 1));
         // Assign the data to the data source for the table to render
@@ -5248,13 +5623,67 @@ let CareerVideosComponent = class CareerVideosComponent {
         this.dataSource.sort = this.sort;
     }
     ngOnInit() {
+        this.articleList();
+        this.search = '';
     }
-    applyFilter(event) {
-        const filterValue = event.target.value;
-        this.dataSource.filter = filterValue.trim().toLowerCase();
-        if (this.dataSource.paginator) {
-            this.dataSource.paginator.firstPage();
+    applyFilter(filterValue) {
+        this.search = filterValue.target.value;
+        console.log("search", this.search);
+        console.log("after searchhhhh-00------------0=====", this.event);
+        if (this.event) {
+            console.log("after searchhhhh=====", this.event);
+            this.paginationOptionChange(this.event);
         }
+        else {
+            this.articleList();
+        }
+    }
+    paginationOptionChange(evt) {
+        this.event = evt;
+        console.log("evthrm", evt);
+        this.topPage = evt.pageIndex;
+        console.log('rsawsfsdsf', this.topPage);
+        console.log("pagesize is======", evt.pageSize);
+        var obj = {
+            search: this.search,
+            limit: evt.pageSize,
+            offset: (evt.pageIndex * evt.pageSize),
+            type: "video_article"
+        };
+        //  if(this.search){
+        //   obj.search = this.search
+        // }
+        console.log("paginator obj==========", obj);
+        this.Service.getarticleList(obj).subscribe((data) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            var _a, _b;
+            console.log("Response of all the service listing>>>>>", data);
+            this.sortedData = data.data;
+            this.totalRecords = data.count;
+            for (let i = 0; i < this.sortedData.length; i++) {
+                var new_article = this.sortedData[i].article_type;
+                console.log("new_article=============>", new_article);
+                if (new_article == "small_video_article") {
+                    this.article = "Small Video";
+                    console.log("this.article small===========>", this.article);
+                    this.sortedData[i].article_name = (this.article);
+                    this.image = this.sortedData[i].medias.find(x => x.for == 'main');
+                    this.image_url = (_a = this.image) === null || _a === void 0 ? void 0 : _a.url;
+                    this.sortedData[i].url = (this.image_url);
+                }
+                else if (new_article == "large_video_article") {
+                    this.article = "Large Video";
+                    console.log("this.article large===========>", this.article);
+                    this.sortedData[i].article_name = (this.article);
+                    this.video = this.sortedData[i].medias.find(x => x.for == 'video');
+                    this.video_url = (_b = this.video) === null || _b === void 0 ? void 0 : _b.url;
+                    this.sortedData[i].url = (this.video_url);
+                }
+            }
+            console.log("data shubham==>", this.sortedData);
+        }));
+    }
+    getPageSizeOptions() {
+        return [5, 10, 50, 100];
     }
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected() {
@@ -5277,8 +5706,75 @@ let CareerVideosComponent = class CareerVideosComponent {
         }
         return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
     }
+    Modal(id) {
+        this.delId = id;
+        this.smallModal.show();
+    }
+    deleteArticle(id) {
+        var obj = {
+            article_id: id
+        };
+        this.Service.delArticle(obj).subscribe(res => {
+            console.log("Response==========", res);
+            this.smallModal.hide();
+            this.Service.showMessage({ message: "Deleted Successfully" });
+            this.ngOnInit();
+        });
+    }
+    articleList() {
+        console.log("javascriptt========");
+        var obj = {
+            limit: 5,
+            offset: 0,
+            type: "video_article",
+            search: this.search
+            // search: this.search
+        };
+        console.log("object===>", obj);
+        this.Service.getarticleList(obj).subscribe(res => {
+            var _a, _b;
+            console.log("Response==========", res);
+            this.sortedData = res.data;
+            this.totalRecords = res.count;
+            for (let i = 0; i < this.sortedData.length; i++) {
+                var new_article = this.sortedData[i].article_type;
+                console.log("new_article=============>", new_article);
+                if (new_article == "small_video_article") {
+                    this.article = "Small Video";
+                    console.log("this.article small===========>", this.article);
+                    this.sortedData[i].article_name = (this.article);
+                    this.image = this.sortedData[i].medias.find(x => x.for == 'main');
+                    this.image_url = (_a = this.image) === null || _a === void 0 ? void 0 : _a.url;
+                    this.sortedData[i].url = (this.image_url);
+                }
+                else if (new_article == "large_video_article") {
+                    this.article = "Large Video";
+                    console.log("this.article large===========>", this.article);
+                    this.sortedData[i].article_name = (this.article);
+                    this.video = this.sortedData[i].medias.find(x => x.for == 'video');
+                    this.video_url = (_b = this.video) === null || _b === void 0 ? void 0 : _b.url;
+                    this.sortedData[i].url = (this.video_url);
+                }
+            }
+            console.log("data shubham==>", this.sortedData);
+        }, err => {
+            console.log(err.status);
+            if (err.status >= 404) {
+                console.log('Some error occured');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
+        console.log("Object==========");
+    }
 };
-CareerVideosComponent.ctorParameters = () => [];
+CareerVideosComponent.ctorParameters = () => [
+    { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"] },
+    { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"] }
+];
 CareerVideosComponent.propDecorators = {
     smallModal: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: ['smallModal',] }],
     paginator: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: [_angular_material_paginator__WEBPACK_IMPORTED_MODULE_4__["MatPaginator"],] }],
@@ -5290,19 +5786,19 @@ CareerVideosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
         template: _raw_loader_career_videos_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_career_videos_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"]])
 ], CareerVideosComponent);
 
 function createNewUser(id) {
     const image = IMAGE[Math.round(Math.random() * (IMAGE.length - 1))] + ' ';
     const title = TITLE[Math.round(Math.random() * (TITLE.length - 1))] + ' ';
-    const description = DESCRIPTION[Math.round(Math.random() * (DESCRIPTION.length - 1))] + ' ';
+    const type = TYPE[Math.round(Math.random() * (TYPE.length - 1))] + ' ';
     const postedBy = POSTEDBY[Math.round(Math.random() * (POSTEDBY.length - 1))] + ' ';
     return {
         id: id.toString() + '.',
         image: image,
         title: title,
-        description: description,
+        type: type,
         postedBy: postedBy
     };
 }
@@ -6482,7 +6978,7 @@ GraduateAddFaqComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Article</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form>\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/blog-article.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Article</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"editArticleform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\" formControlName=\"title\" \n\t\t\t\t\t\t\t\t\toninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.title.touched || editArticleform.controls.title.dirty) && editArticleform.controls.title.invalid && editArticleform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.title.touched || editArticleform.controls.title.dirty) && editArticleform.controls.title.invalid && editArticleform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"article($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_article\">Small Article</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_article\">Large Article</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.type.touched || editArticleform.controls.type.dirty) && editArticleform.controls.type.invalid && editArticleform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.type.touched || editArticleform.controls.type.dirty) && editArticleform.controls.type.invalid && editArticleform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Description</label>\n\t\t\t\t\t\t\t\t\t<editor  formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article =='large_article'\">\n\t\t\t\t\t\t\t\t\t<label>Article Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage1?HeadingImage1:'assets/img/dummy.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article == 'small_article'\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage2?HeadingImage2:'assets/img/dummy.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage1($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -6500,23 +6996,191 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_edit_article_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./edit-article.component.html */ "TqeO");
 /* harmony import */ var _edit_article_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit-article.component.scss */ "PAKq");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "dNgK");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+
+
+
+
+
 
 
 
 
 let EditArticleComponent = class EditArticleComponent {
-    constructor() { }
+    constructor(route, Service, _snackBar, router, fb) {
+        this.route = route;
+        this.Service = Service;
+        this._snackBar = _snackBar;
+        this.router = router;
+        this.fb = fb;
+        this.editArticleform = this.fb.group({
+            title: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(200)]],
+            type: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            postedby: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            Image: ['',],
+            county: ['']
+        });
+    }
     ngOnInit() {
+        this.getcontent();
+    }
+    article(event) {
+        console.log(event.target.value);
+        this.type_article = event.target.value;
+        console.log("type============>", this.type_article);
+    }
+    getcontent() {
+        var obj = {
+            article_id: this.route.snapshot.paramMap.get('id')
+        };
+        this.Service.getArticleContent(obj).subscribe((resp) => {
+            console.log("object============>", obj);
+            console.log("response============>", resp);
+            this.editArticleform.patchValue({
+                Image: resp.data.medias[0].url,
+                title: resp.data.article_title,
+                type: resp.data.article_type,
+                description: resp.data.article_description,
+                postedby: resp.data.posted_by,
+                postdescription: resp.data.posted_description
+            });
+            if (resp.data.article_type == "small_article") {
+                this.type_article = "small_article",
+                    this.HeadingImage2 = resp.data.medias[0].url;
+            }
+            else if (resp.data.article_type == "large_article") {
+                this.type_article = "large_article",
+                    this.HeadingImage1 = resp.data.medias[0].url;
+            }
+        });
+    }
+    setHeadingImage(event) {
+        console.log(event.target.files[0]);
+        this.type_article = "large_article";
+        const file = event.target.files[0];
+        const fileType = file.type.split("/")[0];
+        console.log(fileType);
+        if (fileType == "image") {
+            this.headingImageObj = event.target.files[0];
+            const formData = new FormData();
+            formData.append('image', this.headingImageObj);
+            this.Service.uploadbenefitmedia(formData).subscribe((resp) => {
+                console.log("image response ==>", resp);
+                this.editArticleform.patchValue({
+                    Image: resp,
+                });
+            });
+            let reader = new FileReader();
+            reader.onload = (event) => {
+                this.HeadingImage1 = event.target.result;
+            };
+            reader.readAsDataURL(this.headingImageObj);
+            this.editArticleform.get('county').clearValidators(); // 6. Clear All Validators
+            this.editArticleform.get('county').updateValueAndValidity();
+            console.log("rightextension", this.editArticleform);
+        }
+        else {
+            this.editArticleform.get('county').setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]); // 5.Set Required Validator
+            this.editArticleform.get('county').updateValueAndValidity();
+            console.log("wrongextension", this.editArticleform);
+        }
+    }
+    setHeadingImage1(event) {
+        console.log(event.target.files[0]);
+        this.type_article = "small_article";
+        const file = event.target.files[0];
+        const fileType = file.type.split("/")[0];
+        console.log(fileType);
+        if (fileType == "image") {
+            this.headingImageObj = event.target.files[0];
+            const formData = new FormData();
+            formData.append('image', this.headingImageObj);
+            this.Service.uploadbenefitmedia(formData).subscribe((resp) => {
+                console.log("image response ==>", resp);
+                this.editArticleform.patchValue({
+                    Image: resp,
+                });
+            });
+            let reader = new FileReader();
+            reader.onload = (event) => {
+                this.HeadingImage2 = event.target.result;
+            };
+            reader.readAsDataURL(this.headingImageObj);
+            this.editArticleform.get('county').clearValidators(); // 6. Clear All Validators
+            this.editArticleform.get('county').updateValueAndValidity();
+            console.log("rightextension", this.editArticleform);
+        }
+        else {
+            this.editArticleform.get('county').setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]); // 5.Set Required Validator
+            this.editArticleform.get('county').updateValueAndValidity();
+            console.log("wrongextension", this.editArticleform);
+        }
+    }
+    postcontent() {
+        let obj;
+        if (this.editArticleform.valid) {
+            console.log("hmara form", this.editArticleform);
+            const formdata = new FormData();
+            console.log("yippeeeeeeee", this.headingImageObj);
+            formdata.append("article_id", this.route.snapshot.paramMap.get('id'));
+            formdata.append("article_type", this.editArticleform.controls['type'].value);
+            formdata.append("article_title", this.editArticleform.controls['title'].value);
+            formdata.append("article_description", this.editArticleform.controls['description'].value);
+            formdata.append("posted_by", this.editArticleform.controls['postedby'].value);
+            formdata.append("posted_description", this.editArticleform.controls['postdescription'].value);
+            if (this.editArticleform.controls['type'].value == 'small_article') {
+                const medias = [
+                    {
+                        "for": "main",
+                        "url": this.editArticleform.controls['Image'].value
+                    }
+                ];
+                const newmedia = JSON.stringify(medias);
+                console.log("newmedia==========>>>", newmedia);
+                formdata.append("medias", JSON.stringify(medias));
+            }
+            if (this.editArticleform.controls['type'].value == 'large_article') {
+                const medias = [
+                    {
+                        for: "article_image",
+                        url: this.editArticleform.controls['Image'].value
+                    }
+                ];
+                const newmedia = JSON.stringify(medias);
+                console.log("newmedia==========>>>", newmedia);
+                formdata.append("medias", JSON.stringify(medias));
+            }
+            obj = formdata;
+        }
+        else {
+            this.editArticleform.markAllAsTouched();
+            return;
+        }
+        console.log("objjjjjjjj===========>", obj);
+        this.Service.editArticleContent(obj).subscribe((resp) => {
+            this.Service.showMessage({ message: "Submitted Successfully" });
+        });
     }
 };
-EditArticleComponent.ctorParameters = () => [];
+EditArticleComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
+    { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
+    { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+];
 EditArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-edit-article',
         template: _raw_loader_edit_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_edit_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], EditArticleComponent);
 
 
@@ -7047,7 +7711,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             //ViewGraduateComponent,
             // ViewEmployerComponent,
             // JobsManagementComponent,
-            //ViewJobComponent,
+            //sViewJobComponent,
             _views_categories_management_categories_management_component__WEBPACK_IMPORTED_MODULE_43__["CategoriesManagementComponent"],
             _views_view_applicant_view_applicant_component__WEBPACK_IMPORTED_MODULE_44__["ViewApplicantComponent"],
             _views_header_section_header_section_component__WEBPACK_IMPORTED_MODULE_45__["HeaderSectionComponent"],
@@ -7196,23 +7860,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_view_article_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./view-article.component.html */ "J3NH");
 /* harmony import */ var _view_article_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view-article.component.scss */ "/Zwt");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "dNgK");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+
+
+
+
+
 
 
 
 
 let ViewArticleComponent = class ViewArticleComponent {
-    constructor() { }
+    constructor(route, Service, _snackBar, router, fb) {
+        this.route = route;
+        this.Service = Service;
+        this._snackBar = _snackBar;
+        this.router = router;
+        this.fb = fb;
+    }
     ngOnInit() {
+        this.getcontent();
+    }
+    getcontent() {
+        var obj = {
+            article_id: this.route.snapshot.paramMap.get('id')
+        };
+        this.Service.getArticleContent(obj).subscribe((resp) => {
+            console.log("object============>", obj);
+            console.log("response============>", resp);
+            this.articledetail = resp.data;
+            console.log("============>", this.articledetail);
+        });
     }
 };
-ViewArticleComponent.ctorParameters = () => [];
+ViewArticleComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
+    { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
+    { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+];
 ViewArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-view-article',
         template: _raw_loader_view_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_view_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], ViewArticleComponent);
 
 
@@ -7317,23 +8014,167 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_add_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./add-video.component.html */ "D0rB");
 /* harmony import */ var _add_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./add-video.component.scss */ "3Oif");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "dNgK");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+
+
+
+
+
 
 
 
 
 let AddVideoComponent = class AddVideoComponent {
-    constructor() { }
+    constructor(sanitizer, Service, _snackBar, router, fb) {
+        this.sanitizer = sanitizer;
+        this.Service = Service;
+        this._snackBar = _snackBar;
+        this.router = router;
+        this.fb = fb;
+        this.addVideoform = this.fb.group({
+            title: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(200)]],
+            type: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            postedby: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            Image: ['',],
+            video: [''],
+            is_visible: [''],
+            county: [''],
+            county1: ['']
+        });
+    }
     ngOnInit() {
+        this.type_article = " ";
+    }
+    video(event) {
+        console.log(event.target.value);
+        this.type_article = event.target.value;
+        console.log("type============>", this.type_article);
+    }
+    setHeadingImage(event) {
+        console.log(event.target.files[0]);
+        const file = event.target.files[0];
+        const fileType = file.type.split("/")[0];
+        console.log(fileType);
+        if (fileType == "image") {
+            this.headingImageObj = event.target.files[0];
+            const formData = new FormData();
+            formData.append('image', this.headingImageObj);
+            this.Service.uploadbenefitmedia(formData).subscribe((resp) => {
+                console.log("image response ==>", resp);
+                this.addVideoform.patchValue({
+                    Image: resp,
+                });
+            });
+            let reader = new FileReader();
+            reader.onload = (event) => {
+                this.HeadingImage1 = event.target.result;
+            };
+            reader.readAsDataURL(this.headingImageObj);
+            this.addVideoform.get('county').clearValidators(); // 6. Clear All Validators
+            this.addVideoform.get('county').updateValueAndValidity();
+            console.log("rightextension", this.addVideoform);
+        }
+        else {
+            this.addVideoform.get('county').setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]); // 5.Set Required Validator
+            this.addVideoform.get('county').updateValueAndValidity();
+            console.log("wrongextension", this.addVideoform);
+        }
+    }
+    onVideoChange(e) {
+        console.log(e);
+        console.log(e.target.files[0].name);
+        const file = e.target.files[0];
+        const fileType = file.type.split("/")[0];
+        console.log("videotype", fileType);
+        if (fileType == "video") {
+            this.selectedfile2 = e.target.files[0];
+            const formData = new FormData();
+            formData.append('media', this.selectedfile2);
+            this.Service.uploadmedia1(formData).subscribe((resp) => {
+                console.log("video response ==>", resp);
+                this.addVideoform.patchValue({
+                    video: this.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+                });
+            });
+            this.addVideoform.get('county1').clearValidators(); // 6. Clear All Validators
+            this.addVideoform.get('county1').updateValueAndValidity();
+            console.log("rightextension", this.addVideoform);
+        }
+        else {
+            this.addVideoform.get('county1').setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]); // 5.Set Required Validator
+            this.addVideoform.get('county1').updateValueAndValidity();
+            console.log("wrongextension", this.addVideoform);
+        }
+    }
+    postcontent() {
+        let obj;
+        if (this.addVideoform.valid) {
+            console.log("hmara form", this.addVideoform);
+            const formdata = new FormData();
+            console.log("yippeeeeeeee", this.headingImageObj);
+            formdata.append("article_type", this.addVideoform.controls['type'].value);
+            formdata.append("article_title", this.addVideoform.controls['title'].value);
+            formdata.append("article_description", this.addVideoform.controls['description'].value);
+            formdata.append("posted_by", this.addVideoform.controls['postedby'].value);
+            formdata.append("posted_description", this.addVideoform.controls['postdescription'].value);
+            if (this.addVideoform.controls['type'].value == 'small_video_article') {
+                const medias = [
+                    {
+                        "for": "main",
+                        "url": this.addVideoform.controls['Image'].value
+                    }
+                ];
+                const newmedia = JSON.stringify(medias);
+                console.log("newmedia==========>>>", newmedia);
+                formdata.append("medias", JSON.stringify(medias));
+            }
+            if (this.addVideoform.controls['type'].value == 'large_video_article') {
+                const medias = [
+                    {
+                        for: "main",
+                        url: this.addVideoform.controls['Image'].value
+                    },
+                    {
+                        for: "video",
+                        url: this.addVideoform.controls['video'].value.changingThisBreaksApplicationSecurity
+                    }
+                ];
+                const newmedia = JSON.stringify(medias);
+                console.log("newmedia==========>>>", newmedia);
+                formdata.append("medias", JSON.stringify(medias));
+            }
+            obj = formdata;
+        }
+        else {
+            this.addVideoform.markAllAsTouched();
+            return;
+        }
+        console.log("objjjjjjjj===========>", obj);
+        this.Service.addArticleContent(obj).subscribe((resp) => {
+            this.Service.showMessage({ message: "Submitted Successfully" });
+        });
     }
 };
-AddVideoComponent.ctorParameters = () => [];
+AddVideoComponent.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"] },
+    { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
+    { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+];
 AddVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-add-video',
         template: _raw_loader_add_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_add_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], AddVideoComponent);
 
 
@@ -7680,11 +8521,11 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-add-article-add-article-module */ "pages-content-management-add-article-add-article-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/add-article/add-article.module */ "KXHg")).then(m => m.AddArticleModule)
             },
             {
-                path: 'view-article',
+                path: 'view-article/:id',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-view-article-view-article-module */ "pages-content-management-view-article-view-article-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/view-article/view-article.module */ "zyyM")).then(m => m.ViewArticleModule)
             },
             {
-                path: 'edit-article',
+                path: 'edit-article/:id',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-edit-article-edit-article-module */ "pages-content-management-edit-article-edit-article-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/edit-article/edit-article.module */ "yZVn")).then(m => m.EditArticleModule)
             },
             {
@@ -7692,11 +8533,11 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-add-video-add-video-module */ "pages-content-management-add-video-add-video-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/add-video/add-video.module */ "CjsJ")).then(m => m.AddVideoModule)
             },
             {
-                path: 'view-video',
+                path: 'view-video/:id',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-view-video-view-video-module */ "pages-content-management-view-video-view-video-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/view-video/view-video.module */ "tqrE")).then(m => m.ViewVideoModule)
             },
             {
-                path: 'edit-video',
+                path: 'edit-video/:id',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-content-management-edit-video-edit-video-module */ "pages-content-management-edit-video-edit-video-module").then(__webpack_require__.bind(null, /*! ./pages/content-management/edit-video/edit-video.module */ "j2q3")).then(m => m.EditVideoModule)
             },
             {
@@ -7846,23 +8687,133 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_view_video_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./view-video.component.html */ "kTZA");
 /* harmony import */ var _view_video_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view-video.component.scss */ "Kp4c");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "dNgK");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+/* harmony import */ var ngx_plyr__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-plyr */ "pr9R");
+
+
+
+
+
+
 
 
 
 
 let ViewVideoComponent = class ViewVideoComponent {
-    constructor() { }
+    constructor(route, Service, _snackBar, router, fb) {
+        this.route = route;
+        this.Service = Service;
+        this._snackBar = _snackBar;
+        this.router = router;
+        this.fb = fb;
+        this.video_url = "";
+        this.flag = true;
+        // plyr: PlyrComponent;
+        this.author = {};
+    }
     ngOnInit() {
+        this.getcontent();
+        //   document.getElementById('playVid').onclick = function () {
+        //     document.getElementById('video').play();
+        // };
+    }
+    // videoSources: Plyr.Source[] = [
+    //   {
+    //     src: this.video_url,
+    //     type: 'video/mp4'
+    //   },
+    // ];
+    played(event) {
+        console.log('played', event);
+    }
+    play() {
+        this.player.play(); // or this.plyr.player.play()
+    }
+    stop() {
+        this.player.stop(); // or this.plyr.player.play()
+    }
+    play1() {
+        this.video1 = document.getElementById('video');
+        console.log("VIDEOOOOOOOOOOOOOOOOO", this.video1);
+        if (this.flag == true) {
+            console.log("11111111111", this.flag);
+            this.video1.play();
+            this.flag = false;
+            console.log("2222222222", this.flag);
+        }
+        else if (this.flag == false) {
+            console.log("33333333", this.flag);
+            this.video1.pause();
+            this.flag = true;
+            console.log("4444444444", this.flag);
+        }
+    }
+    getcontent() {
+        var obj = {
+            article_id: this.route.snapshot.paramMap.get('id')
+        };
+        this.Service.getArticleContent(obj).subscribe((resp) => {
+            var _a, _b;
+            console.log("object============>", obj);
+            console.log("response============>", resp);
+            this.articledetail = resp.data;
+            console.log("articledetail============>", this.articledetail);
+            this.video = this.articledetail.medias.find(x => x.for == 'video');
+            this.video_url = (_a = this.video) === null || _a === void 0 ? void 0 : _a.url;
+            console.log("shubham============>", this.video_url);
+            this.videoSources = [
+                {
+                    src: this.video_url,
+                    type: 'video/mp4'
+                },
+            ];
+            this.main_image = this.articledetail.medias.find(x => x.for == 'main');
+            console.log("============>", this.main_image);
+            this.image_url = (_b = this.main_image) === null || _b === void 0 ? void 0 : _b.url;
+            var postedBy = resp.data.posted_by;
+            console.log("=====================", this.hasWhiteSpace(postedBy));
+            if (!this.hasWhiteSpace(postedBy)) {
+                this.firstChar = postedBy.charAt(0);
+                console.log("firstchar==========>", this.firstChar);
+                this.secondChar = postedBy.charAt(1);
+                console.log("secondChar==========>", this.secondChar);
+            }
+            console.log("posteBy========>", postedBy);
+            var splitted = postedBy.split(" ", 1);
+            console.log("var splitted========>", splitted);
+            var splitted = postedBy.split(" ", 2);
+            console.log("var splitted========>", splitted);
+            this.firstChar = splitted[0].charAt(0);
+            console.log("firstchar==========>", this.firstChar);
+            this.secondChar = splitted[1].charAt(0);
+            console.log("secondChar==========>", this.secondChar);
+        });
+    }
+    hasWhiteSpace(postedBy) {
+        console.log("whitespeace");
+        return postedBy.indexOf(' ') >= 0;
     }
 };
-ViewVideoComponent.ctorParameters = () => [];
+ViewVideoComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
+    { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
+    { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+];
+ViewVideoComponent.propDecorators = {
+    plyr: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"], args: [ngx_plyr__WEBPACK_IMPORTED_MODULE_8__["PlyrComponent"],] }]
+};
 ViewVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-view-video',
         template: _raw_loader_view_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_view_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], ViewVideoComponent);
 
 
@@ -9120,7 +10071,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/youtube_video.png\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>Career Counsellors can Get You the Perfect Job in Australia Quicker!</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">Jaxson Stanton</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted 02 / 07 / 21</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<figure class=\"figMargn_8 video_career position-relative\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video_detail_bg.png\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t<figcaption class=\"blog_vdo large_vdo_src\">\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"29\" viewBox=\"0 0 25 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M23.875 13.8505C24.375 14.1392 24.375 14.8608 23.875 15.1495L1.375 28.1399C0.874997 28.4286 0.249999 28.0677 0.249999 27.4904L0.25 1.50962C0.25 0.932266 0.875 0.571424 1.375 0.860099L23.875 13.8505Z\" fill=\"#26C296\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t</figcaption>\n\t\t\t\t\t\t\t\t\t</figure>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eu sollicitudin diam nisl viverra amet placerat. A massa<br>eget convallis enim lobortis ullamcorper tempus...\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"{{image_url}}\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>{{articledetail.article_title}}</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">{{firstChar ? (firstChar | titlecase) : ''}}{{secondChar ? (secondChar | titlecase) : ''}}</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">{{articledetail.posted_by}}</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted {{articledetail.createdAt | date:\"dd/MM/yyyy\"}}</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\" >\n\t\t\t\t\t\t\t\t\t<figure class=\"figMargn_8 video_career position-relative vw_video\" *ngIf=\"video_url\">\n\t\t\t\t\t\t\t\t\t\t<div  plyr style=\"width: 700px; height: 400px;\" plyrTitle=\"Video 1\" [plyrPlaysInline]=\"true\" [plyrSources]=\"videoSources\" (plyrInit)=\"player = $event\" (plyrPlay)=\"played($event)\"></div>\n\t\t\t\t\t\t\t\t\t\t<!-- <video id='video'>\n\t\t\t\t\t\t\t\t\t\t\t<source src=\"{{video_url}}\" type=\"video/mp4\">\n\t\t\t\t\t\t\t\t\t\t</video> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <video id='video' src=\"{{video_url}}\" class=\"img-fluid\"></video> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <figcaption class=\"blog_vdo large_vdo_src\"> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <button id='playVid' (click)=\"play1()\">Play</button> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <span id='playVid' (click)=\"play1()\">\n\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"29\" viewBox=\"0 0 25 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" id='playVid'>\n\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M23.875 13.8505C24.375 14.1392 24.375 14.8608 23.875 15.1495L1.375 28.1399C0.874997 28.4286 0.249999 28.0677 0.249999 27.4904L0.25 1.50962C0.25 0.932266 0.875 0.571424 1.375 0.860099L23.875 13.8505Z\" fill=\"#26C296\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t</figcaption> -->\n\t\t\t\t\t\t\t\t\t</figure>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.article_description\">\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -9385,7 +10336,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-article\">Add Article</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"dataSource\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>\n                <td mat-cell *matCellDef=\"let element\"> <img [src]=\"element.image\" class=\"slider-imag\" /></td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.title}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container>\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.postedBy}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-article\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-article\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"smallModal.show()\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\" aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-article\">Add Article</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"sortedData\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>\n                <td mat-cell *matCellDef=\"let row\"> <img [src]=\"row.medias[0].url\" class=\"slider-imag\" /></td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_title}} </td>\n              </ng-container>\n\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"type\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Type</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_name}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <!-- <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_description}} </td>\n              </ng-container> -->\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.posted_by}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-article/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-article/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"Modal(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n          [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\"  aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteArticle(delId)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n");
 
 /***/ }),
 

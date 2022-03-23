@@ -49,8 +49,15 @@ export class AddArticleComponent implements OnInit {
     console.log(fileType);
     if (fileType == "image") {
       this.headingImageObj = event.target.files[0]
-      this.addArticleform.patchValue({
-        Image: this.headingImageObj,
+      const formData = new FormData();
+      formData.append('image', this.headingImageObj);
+      this.Service.uploadbenefitmedia(formData).subscribe((resp: any) => {
+
+        console.log("image response ==>", resp);
+
+        this.addArticleform.patchValue({
+          Image: resp,
+        })
       })
       let reader = new FileReader();
       reader.onload = (event: any) => {
@@ -76,9 +83,17 @@ export class AddArticleComponent implements OnInit {
     console.log(fileType);
     if (fileType == "image") {
       this.headingImageObj = event.target.files[0]
-      this.addArticleform.patchValue({
-        Image: this.headingImageObj,
+      const formData = new FormData();
+      formData.append('image', this.headingImageObj);
+      this.Service.uploadbenefitmedia(formData).subscribe((resp: any) => {
+
+        console.log("image response ==>", resp);
+
+        this.addArticleform.patchValue({
+          Image: resp,
+        })
       })
+      
       let reader = new FileReader();
       reader.onload = (event: any) => {
         
@@ -100,33 +115,39 @@ export class AddArticleComponent implements OnInit {
   postcontent(){
     let obj: any
       if (this.addArticleform.valid) {
+        console.log("hmara form", this.addArticleform);
+        
         const formdata = new FormData()
           console.log("yippeeeeeeee", this.headingImageObj);
-          formdata.append("article_type",  JSON.stringify(this.addArticleform.controls['type'].value))
-          formdata.append("article_title",  JSON.stringify(this.addArticleform.controls['title'].value))
-          formdata.append("article_description",  JSON.stringify(this.addArticleform.controls['description'].value))
-          formdata.append("posted_by",  JSON.stringify(this.addArticleform.controls['postedby'].value))
-          formdata.append("posted_description",  JSON.stringify(this.addArticleform.controls['postdescription'].value))
+          formdata.append("article_type",  this.addArticleform.controls['type'].value)
+          formdata.append("article_title",  this.addArticleform.controls['title'].value)
+          formdata.append("article_description", this.addArticleform.controls['description'].value)
+          formdata.append("posted_by", this.addArticleform.controls['postedby'].value)
+          formdata.append("posted_description", this.addArticleform.controls['postdescription'].value)
           if(this.addArticleform.controls['type'].value=='small_article'){
-             const medias= [
+             const medias:any= [
               {
                   "for":"main",
-                  "url":"https://www.google.com/search?channel=fs&client=ubuntu&q=world+wide"
+                  "url":this.addArticleform.controls['Image'].value
               }
           ]
-
-          formdata.append("medias", JSON.stringify(medias))
+          const newmedia= JSON.stringify(medias)
+          console.log("newmedia==========>>>",newmedia);
+          
+          formdata.append("medias",JSON.stringify(medias))
           }
 
           if(this.addArticleform.controls['type'].value=='large_article'){
-            const medias= [
+            const medias:any= [
              {
-                 "for":"article_image",
-                 "url":"https://www.google.com/search?channel=fs&client=ubuntu&q=world+wide"
+                 for:"article_image",
+                 url:this.addArticleform.controls['Image'].value
              }
          ]
-
-         formdata.append("medias", JSON.stringify(medias))
+         const newmedia= JSON.stringify(medias)
+         console.log("newmedia==========>>>",newmedia);
+         
+         formdata.append("medias",JSON.stringify(medias))
          }
           
         obj = formdata
@@ -139,10 +160,10 @@ export class AddArticleComponent implements OnInit {
       console.log("objjjjjjjj===========>",obj);
       
    
-    // this.Service.addArticleContent(obj).subscribe((resp) => {
+    this.Service.addArticleContent(obj).subscribe((resp) => {
 
-    //   this.Service.showMessage({ message: "Submitted Successfully" })
-    // })
+      this.Service.showMessage({ message: "Submitted Successfully" })
+    })
   }
 
 }
