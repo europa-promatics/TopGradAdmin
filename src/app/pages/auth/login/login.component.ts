@@ -49,9 +49,13 @@ export class LoginComponent {
       
       
     }, err => {
-      console.log(err)
+      console.log("login error==============>>",err)
+      if(err.error.errors.msg){
+         var ErrorMsg = err.error.errors.msg
+      }
+      console.log("login error message==============>>",err.error.errors.msg)
       if (err.status >= 400) {
-        this._snackBar.open("User Does Not Exist","close",{
+        this._snackBar.open(ErrorMsg ,"close",{
           duration: 2000
           });
       } else {

@@ -8,6 +8,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-sub-heading',
@@ -15,10 +16,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./add-sub-heading.component.scss']
 })
 export class AddSubHeadingComponent implements OnInit {
-
+  term_id: any;
   terms_sub_headingform:FormGroup
+  type: any;
 
-  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar ) { 
+  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar, private router : Router ) { 
     this.terms_sub_headingform = this._formBuilder.group({
       'title':['',[Validators.required]],
       'description':['',[Validators.required]]
@@ -26,6 +28,9 @@ export class AddSubHeadingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.term_id= this.route.snapshot.paramMap.get('id');
+    this.type= this.route.snapshot.paramMap.get('type');
+
   }
 
   addsubheading(){
@@ -47,6 +52,7 @@ export class AddSubHeadingComponent implements OnInit {
           this._snackBar.open("Added Sub Heading Successfully","close",{
             duration: 2000
           });
+          this.router.navigate(['/terms-conditions-sub-headings',this.term_id,this.type])
         }
       },err => {
         console.log(err);

@@ -8,7 +8,7 @@ import {SelectionModel} from '@angular/cdk/collections';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { Pipe, PipeTransform } from '@angular/core';
 
 export interface UserData {
   id: string;
@@ -16,6 +16,7 @@ export interface UserData {
   // category: string;
   description: string;
 }
+
 
 /** Constants used to fill up our data base. */
 
@@ -41,6 +42,10 @@ const DESCRIPTION: string[] = [
   templateUrl: './terms-conditions.component.html',
   styleUrls: ['./terms-conditions.component.scss']
 })
+@Pipe({
+  name: 'limitTo'
+})
+
 export class TermsConditionsComponent implements OnInit {
 
   displayedColumns: string[] = ['select', 'id', 'title', 'description', 'action'];
@@ -62,6 +67,15 @@ export class TermsConditionsComponent implements OnInit {
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(this.termslist);
 
+  }
+
+  transform(value: string, args: string) : string {
+    // let limit = args.length > 0 ? parseInt(args[0], 10) : 10;
+    // let trail = args.length > 1 ? args[1] : '...';
+    let limit = args ? parseInt(args, 10) : 10;
+    let trail = '...';
+
+    return value.length > limit ? value.substring(0, limit) + trail : value;
   }
 
   ngOnInit(): void {

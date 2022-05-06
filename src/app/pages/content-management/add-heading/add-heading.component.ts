@@ -7,6 +7,7 @@ import {SelectionModel} from '@angular/cdk/collections';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -17,7 +18,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class AddHeadingComponent implements OnInit {
   terms_headingform:FormGroup
 
-  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar ) { 
+  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar, private router : Router) { 
     this.terms_headingform = this._formBuilder.group({
       'title':['',[Validators.required]],
       'description':['',[Validators.required]]
@@ -44,9 +45,10 @@ export class AddHeadingComponent implements OnInit {
       this.Service.addtermheading(obj).subscribe(res=>{
         console.log("fgdgfdgfdfgdfgd",res);
         if(res.code==200){
-          this._snackBar.open("Added Heading Successfully","close",{
+          this._snackBar.open("Added Terms & Conditions Heading Successfully","close",{
             duration: 2000
           });
+          this.router.navigate(['/terms-conditions'])
         }
       },err => {
         console.log(err);
