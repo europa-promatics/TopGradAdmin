@@ -90,12 +90,13 @@ import { VerificationSubmissionsComponent } from './views/verification-submissio
 import { OfferSubmissionsComponent } from './views/offer-submissions/offer-submissions.component';
 import { ViewVerificationComponent } from './views/view-verification/view-verification.component';
 import { ViewOfferComponent } from './views/view-offer/view-offer.component';
-import { ViewReportComponent } from './views/view-report/view-report.component';
+import { ViewReportComponent } from './pages/support-management/view-report/view-report.component';
 import { AuthguardGuard } from './authguard.guard';
 import { AddHeadingComponent } from './pages/content-management/add-heading/add-heading.component';
 import { EditHeadingComponent } from './pages/content-management/edit-heading/edit-heading.component';
 import { EditSubHeadingComponent } from './pages/content-management/edit-sub-heading/edit-sub-heading.component';
 import { AddSubHeadingComponent } from './pages/content-management/add-sub-heading/add-sub-heading.component';
+import { ReportsComponent } from './pages/support-management/reports/reports.component';
 
 
 
@@ -198,15 +199,15 @@ export const routes: Routes = [
       },
       
        {
-        path: 'editHeading/:id',
+        path: 'editHeading/:id/:type',
         loadChildren: () => import('./pages/content-management/edit-heading/edit-heading.module').then(m => m.EditHeadingModule)
       },
       {
-        path: 'viewSubHeading/:content_id/:id',
+        path: 'viewSubHeading/:content_id/:id/:type',
         loadChildren: () => import('./pages/content-management/view-sub-heading/view-sub-heading.module').then(m => m.ViewSubHeadingModule)
       },
       {
-        path: 'editSubHeading/:content_id/:id',
+        path: 'editSubHeading/:content_id/:id/:type',
         loadChildren: () => import('./pages/content-management/edit-sub-heading/edit-sub-heading.module').then(m => m.EditSubHeadingModule)
       },
       {
@@ -475,6 +476,10 @@ export const routes: Routes = [
       loadChildren: () => import('./pages/support-management/faq_emp-grad/view-faq/view-faq.module').then(m => m.ViewFaqModule)
       },
       {
+        path: 'job-applicants-reports',
+        loadChildren: () => import('./pages/support-management/reports/reports.module').then(m => m.ReportsModule)
+        },
+      {
       path: 'employerIndustryManagement',
       loadChildren: () => import('./pages/content-management/industry-management/employer-industry/employer-industry.module').then(m => m.EmployerIndustryModule)
       },
@@ -529,8 +534,8 @@ export const routes: Routes = [
         loadChildren: () => import('./views/view-offer/view-offer.module').then(m => m.ViewOfferModule)
       },
       {
-        path: 'view-report',
-        loadChildren: () => import('./views/view-report/view-report.module').then(m => m.ViewReportModule)
+        path: 'view-report/:id',
+        loadChildren: () => import('./pages/support-management/view-report/view-report.module').then(m => m.ViewReportModule)
       }
 
     ]

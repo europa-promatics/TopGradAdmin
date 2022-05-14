@@ -149,7 +149,7 @@ import { VerificationSubmissionsComponent } from './views/verification-submissio
 import { OfferSubmissionsComponent } from './views/offer-submissions/offer-submissions.component';
 import { ViewVerificationComponent } from './views/view-verification/view-verification.component';
 import { ViewOfferComponent } from './views/view-offer/view-offer.component';
-import { ViewReportComponent } from './views/view-report/view-report.component';
+import { ViewReportComponent } from './pages/support-management/view-report/view-report.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TopgradserviceService } from './topgradservice.service';
 //import { IndustrylistComponent } from './pages/content-management/industry-management/industrylist/industrylist.component';
@@ -162,6 +162,7 @@ import { EditSubHeadingComponent } from './pages/content-management/edit-sub-hea
 import { AddSubHeadingComponent } from './pages/content-management/add-sub-heading/add-sub-heading.component';
 import { GraduateAddFaqComponent } from './pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component';
 import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component';
+import { ReportsComponent } from './pages/support-management/reports/reports.component';
 //import { ViewSubHeadingComponent } from './pages/content-management/view-sub-heading/view-sub-heading.component';
 
 // import { GraduateFaqComponent } from './pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.component';
@@ -230,6 +231,7 @@ import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-gra
    // ViewEmployerComponent,
    // JobsManagementComponent,
     //sViewJobComponent,
+    ReportsComponent,
     CategoriesManagementComponent,
     ViewApplicantComponent,
     HeaderSectionComponent,

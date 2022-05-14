@@ -9,6 +9,8 @@ import { TopgradserviceService } from '../../../../topgradservice.service';
   templateUrl: './add-faq.component.html',
   styleUrls: ['./add-faq.component.scss']
 })
+
+
 export class AddFaqComponent implements OnInit {
   input:string;
   toastr: any;
@@ -19,7 +21,7 @@ export class AddFaqComponent implements OnInit {
   title: string;
   title1: string;
  
-
+  
 
   constructor(private _snackBar: MatSnackBar, private route:ActivatedRoute,private Service:TopgradserviceService, private fb:FormBuilder, private router: Router  ) {
     this.inputTitle=this.fb.group({
@@ -45,6 +47,8 @@ export class AddFaqComponent implements OnInit {
     this.Service.faqCategories(obj).subscribe(data => {
       console.log("fgdfgfgdfgdfgdfgdfgdfgdgf",data);
       this.faq=data.data
+      console.log("my gaq categories=======>>>", this.faq);
+      
  
     }, err => {
       console.log(err.status)

@@ -8,6 +8,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-view-sub-heading',
@@ -19,8 +20,9 @@ export class ViewSubHeadingComponent implements OnInit {
   viewsubheadingform:FormGroup
   content_id: any;
   id: any;
+  type: any;
 
-  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar) { 
+  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar, private location : Location) { 
     this.viewsubheadingform = this._formBuilder.group({
       'title':['',[Validators.required]],
       'description':['',[Validators.required]]
@@ -31,6 +33,7 @@ export class ViewSubHeadingComponent implements OnInit {
     this.getsubheading();
     this.content_id = this.route.snapshot.paramMap.get('content_id') ;
     this.id=this.route.snapshot.paramMap.get('id');
+    this.type=this.route.snapshot.paramMap.get('type');
     console.log("such a boring day... such a boring people ", this.id, this.content_id);
     
   }
@@ -50,6 +53,10 @@ export class ViewSubHeadingComponent implements OnInit {
       })
      
     });
+  }
+
+  navigate(){
+    this.location.back();
   }
 
 }

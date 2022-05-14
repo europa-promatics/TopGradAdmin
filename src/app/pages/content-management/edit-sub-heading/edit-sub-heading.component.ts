@@ -8,6 +8,8 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-edit-sub-heading',
@@ -17,8 +19,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class EditSubHeadingComponent implements OnInit {
 
   editsubheadingform:FormGroup
+  content_id: any;
+  type: any;
+  id: any;
 
-  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar) { 
+  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar, private router: Router,private location :Location) { 
     this.editsubheadingform = this._formBuilder.group({
       'title':['',[Validators.required]],
       'description':['',[Validators.required]]
@@ -27,6 +32,9 @@ export class EditSubHeadingComponent implements OnInit {
 
   ngOnInit(): void {
     this.getsubheading();
+    this.content_id=this.route.snapshot.paramMap.get('content_id');
+    this.id=this.route.snapshot.paramMap.get('id');
+    this.type=this.route.snapshot.paramMap.get('type');
   }
 
   getsubheading(){
@@ -64,6 +72,7 @@ export class EditSubHeadingComponent implements OnInit {
           this._snackBar.open("Sub Heading Updated Successfully","close",{
             duration: 2000
           });
+          this.location.back();
         }
       },err => {
         console.log(err);
@@ -71,6 +80,10 @@ export class EditSubHeadingComponent implements OnInit {
           duration: 2000})
         });
     }
+  }
+
+  navigate(){
+    this.location.back();
   }
 
 }

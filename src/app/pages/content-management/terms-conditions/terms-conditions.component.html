@@ -50,9 +50,13 @@
 				</ng-container> -->
 
 							<!-- enquiry Column -->
-							<ng-container matColumnDef="description" ng-init="limit = 3">
+							<!-- <ng-container matColumnDef="description" ng-init="limit = 150">
 								<th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
 								<td mat-cell *matCellDef="let row" class="td-width" [innerHTML]="row.heading.description | limitTo: limit"> </td>
+							</ng-container> -->
+							<ng-container matColumnDef="description" >
+								<th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+								<td mat-cell *matCellDef="let row" class="td-width td-tundi " [innerHTML]="row.heading.description"> </td>
 							</ng-container>
 
 							<!-- Action column -->
@@ -67,7 +71,7 @@
 											<mat-icon class="material-icons-outlined">visibility</mat-icon>
 											<span>View Subheading</span>
 										</a>
-										<a mat-menu-item class="" routerLink="/editHeading/{{row._id}}">
+										<a mat-menu-item class="" routerLink="/editHeading/{{row._id}}/terms">
 											<mat-icon class="material-icons-outlined">edit</mat-icon>
 											<span>Edit</span>
 										</a>
@@ -95,8 +99,8 @@
 							</tr>
 						</table>
 					</div>
-					<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users">
-					</mat-paginator>
+					<mat-paginator [length]="totalRecords" [pageIndex]="topPage" [pageSize]="limit"
+                    [pageSizeOptions]="getPageSizeOptions()" (page)="paginationOptionChange($event)"  aria-label="Select page of users"></mat-paginator>
 				</div>
 			</div>
 		</div>

@@ -58,6 +58,10 @@ export class PrivacyPolicyComponent implements OnInit {
   policylist: any;
   totalRecords: any;
   delId: any;
+  sortedData: any;
+  search: any='';
+  topPage: any;
+  event: any;
   constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _snackBar: MatSnackBar ) { 
     
     const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
@@ -65,6 +69,12 @@ export class PrivacyPolicyComponent implements OnInit {
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(this.policylist);
   }
+  
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+    }
+
   ngOnInit(): void {
      this.privacypolicylist();
   }
@@ -80,8 +90,10 @@ export class PrivacyPolicyComponent implements OnInit {
     console.log("onnnn", obj)
     this.Service.termslist(obj).subscribe(data => {
     console.log("main data for privacy is ====", data)
+    // this.sortedData = res.data
+    //   this.totalRecords = res.count
     this.policylist=data.data
-    this.totalRecords=data.length;
+    this.totalRecords=data.count;
     }, err => {
     console.log(err.status)
     if (err.status >= 404) {
@@ -118,6 +130,45 @@ export class PrivacyPolicyComponent implements OnInit {
         duration: 2000})
       })
   }
+
+  paginationOptionChange(evt) {
+    this.event=evt
+    console.log("evthrm", evt)
+    this.topPage = evt.pageIndex
+    console.log('rsawsfsdsf',this.topPage)
+    console.log("pagesize is======",evt.pageSize);
+    
+   var obj:any = {
+     // search:this.search,
+      limit: evt.pageSize,
+      offset: (evt.pageIndex*evt.pageSize),
+      type: "privacy"
+    }
+    //  if(this.search){
+    //   obj.search = this.search
+    // }
+    console.log("paginator obj==========",obj);
+    
+     this.Service.termslist(obj).subscribe(async data => {
+        console.log("main data for privacy is ====", data)
+        this.policylist=data.data
+        this.totalRecords=data.count;
+        }, err => {
+        console.log(err.status)
+        if (err.status >= 404) {
+        console.log('Some error occured')
+        } else {
+        // this.toastr.error('Some error occured, please try again!!', 'Error')
+        console.log('Internet Connection Error')
+        }
+      
+     })
+     
+  }
+  getPageSizeOptions() {
+    return [5,10,50,100];
+  }
+
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {

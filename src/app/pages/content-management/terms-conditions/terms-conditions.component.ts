@@ -42,9 +42,9 @@ const DESCRIPTION: string[] = [
   templateUrl: './terms-conditions.component.html',
   styleUrls: ['./terms-conditions.component.scss']
 })
-@Pipe({
-  name: 'limitTo'
-})
+// @Pipe({
+//   name: 'limitTo'
+// })
 
 export class TermsConditionsComponent implements OnInit {
 
@@ -58,6 +58,8 @@ export class TermsConditionsComponent implements OnInit {
   termslist: any=[];
   totalRecords: any;
   delId: any;
+  event: any;
+  topPage: any;
 
 
   constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _snackBar: MatSnackBar ) { 
@@ -69,14 +71,14 @@ export class TermsConditionsComponent implements OnInit {
 
   }
 
-  transform(value: string, args: string) : string {
-    // let limit = args.length > 0 ? parseInt(args[0], 10) : 10;
-    // let trail = args.length > 1 ? args[1] : '...';
-    let limit = args ? parseInt(args, 10) : 10;
-    let trail = '...';
+  // transform(value: string, args: string) : string {
+  //   // let limit = args.length > 0 ? parseInt(args[0], 10) : 10;
+  //   // let trail = args.length > 1 ? args[1] : '...';
+  //   let limit = args ? parseInt(args, 10) : 10;
+  //   let trail = '...';
 
-    return value.length > limit ? value.substring(0, limit) + trail : value;
-  }
+  //   return value.length > limit ? value.substring(0, limit) + trail : value;
+  // }
 
   ngOnInit(): void {
     this.termsconditionlist();
@@ -94,7 +96,7 @@ export class TermsConditionsComponent implements OnInit {
     this.Service.termslist(obj).subscribe(data => {
     console.log("main data for terms is ====", data)
     this.termslist=data.data
-    this.totalRecords=data.length;
+    this.totalRecords=data.count;
     }, err => {
     console.log(err.status)
     if (err.status >= 404) {
@@ -129,6 +131,44 @@ export class TermsConditionsComponent implements OnInit {
       this._snackBar.open("Some Error Occued","close",{
         duration: 2000})
       })
+  }
+
+  paginationOptionChange(evt) {
+    this.event=evt
+    console.log("evthrm", evt)
+    this.topPage = evt.pageIndex
+    console.log('rsawsfsdsf',this.topPage)
+    console.log("pagesize is======",evt.pageSize);
+    
+   var obj:any = {
+     // search:this.search,
+      limit: evt.pageSize,
+      offset: (evt.pageIndex*evt.pageSize),
+      type: "terms"
+    }
+    //  if(this.search){
+    //   obj.search = this.search
+    // }
+    console.log("paginator obj==========",obj);
+    
+     this.Service.termslist(obj).subscribe(async data => {
+        console.log("main data for terms is ====", data)
+        this.termslist=data.data
+        this.totalRecords=data.count;
+        }, err => {
+        console.log(err.status)
+        if (err.status >= 404) {
+        console.log('Some error occured')
+        } else {
+        // this.toastr.error('Some error occured, please try again!!', 'Error')
+        console.log('Internet Connection Error')
+        }
+      
+     })
+     
+  }
+  getPageSizeOptions() {
+    return [5,10,50,100];
   }
 
   applyFilter(event: Event) {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { TopgradserviceService } from '../../../../topgradservice.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-view-faq',
@@ -13,7 +14,7 @@ export class ViewFaqComponent implements OnInit {
   toastr: any;
   inputTitle: FormGroup;
 
-  constructor(private route:ActivatedRoute,private Service:TopgradserviceService) {
+  constructor(private route:ActivatedRoute,private Service:TopgradserviceService, private location: Location) {
 
    }
 
@@ -39,6 +40,12 @@ export class ViewFaqComponent implements OnInit {
               console.log('Internet Connection Error')
             }
           })
+    }
+
+    navigate(){
+      console.log("Take me back.....");
+      
+      this.location.back();
     }
 
 }

@@ -106,8 +106,8 @@ export class EmployerFaqComponent implements OnInit {
     }
     this.Service.faqList(obj).subscribe(async data => {
       console.log("Response of all the service listing>>>>>", data);
-      this.EmployerFaqList=data.data,
-      this.sortedData=this.EmployerFaqList
+      this.EmployerFaqList=data.data
+      this.sortedData=this.EmployerFaqList;
       this.totalRecords = data.count
     })
   }
@@ -127,7 +127,7 @@ export class EmployerFaqComponent implements OnInit {
     this.Service.faqList(obj).subscribe(res=>{
         console.log("Response==========",res);
         this.EmployerFaqList=res.data
-        this.sortedData=this.EmployerFaqList
+        this.sortedData=this.EmployerFaqList;
         this.totalRecords = res.count
       })
       console.log("Object==========",obj);

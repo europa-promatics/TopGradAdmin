@@ -925,6 +925,55 @@ export class TopgradserviceService implements HttpInterceptor {
           )
           }
 
+          ApplicationReports(obj: any): Observable<any> {
+            let API_URL = `${this.SERVER_URL}/admin/get/report/applications?offset=${obj.offset}&limit=${obj.limit}`;
+            console.log(API_URL)
+            return this.httpClient.get(API_URL)
+            .pipe(
+            map(res => {
+            return res
+            }),
+            catchError(this.error)
+            )
+            }
+
+            ReportsDetail(obj: any): Observable<any> {
+              let API_URL = `${this.SERVER_URL}/admin/get/report/applications?id=${obj.id}`;
+              console.log(API_URL)
+              return this.httpClient.get(API_URL)
+              .pipe(
+              map(res => {
+              return res
+              }),
+              catchError(this.error)
+              )
+            }
+
+            ReportReply(obj: any): Observable<any> {
+              let API_URL = `${this.SERVER_URL}/admin/update/report`;
+              console.log(API_URL)
+              return this.httpClient.patch(API_URL,obj)
+              .pipe(
+              map(res => {
+              return res
+              }),
+              catchError(this.error)
+              )
+            }
+
+            ReportDelete(obj: any): Observable<any> {
+              let API_URL = `${this.SERVER_URL}/admin/delete/report/${obj.id}`;
+              console.log(API_URL)
+              return this.httpClient.delete(API_URL)
+              .pipe(
+              map(res => {
+              return res
+              }),
+              catchError(this.error)
+              )
+            }
+
+
 
 
 

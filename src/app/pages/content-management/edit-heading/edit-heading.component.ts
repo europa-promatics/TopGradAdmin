@@ -8,6 +8,8 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-edit-heading',
@@ -16,8 +18,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class EditHeadingComponent implements OnInit {
   editheadingform:FormGroup
+  type: any;
 
-  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar) { 
+  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar, private router: Router, private location : Location) { 
     this.editheadingform = this._formBuilder.group({
       'title':['',[Validators.required]],
       'description':['',[Validators.required]]
@@ -26,6 +29,7 @@ export class EditHeadingComponent implements OnInit {
 
   ngOnInit(): void {
     this.getheadingdetail();
+    this.type=this.route.snapshot.paramMap.get('type')
   }
   
   getheadingdetail(){
@@ -70,6 +74,7 @@ export class EditHeadingComponent implements OnInit {
           this._snackBar.open("Heading Updated Successfully","close",{
             duration: 2000
           });
+          this.location.back();
         }
       },err => {
         console.log(err);
@@ -77,6 +82,10 @@ export class EditHeadingComponent implements OnInit {
           duration: 2000})
         });
     }
+  }
+
+  navigate(){
+    this.location.back();
   }
 
 

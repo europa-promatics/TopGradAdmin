@@ -154,6 +154,7 @@ export class GraduateFaqComponent implements OnInit {
         console.log("Response==========",res);
         this.ngOnInit()
         this.smallModal.hide()
+        this.Service.showMessage({ message: "Deleted Successfully" })
       })
     }
 

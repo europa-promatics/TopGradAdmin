@@ -191,6 +191,7 @@ export class ContactListingComponent implements OnInit {
     this.ngOnInit()
   }
   contactDelete(id){
+    
     var obj={
       support_id:id
     }
@@ -219,9 +220,16 @@ export class ContactListingComponent implements OnInit {
       this.contactUsForm.markAllAsTouched()
     }
     else{
+      var DetaiIndex =this.sortedData.findIndex((val: any) => val._id == id);
+      console.log("my detail index========>>>", DetaiIndex);
+      console.log("my indexed array======>>>", this.sortedData[DetaiIndex]);
+      
       var obj={
         support_id:id,
         reply:this.contactUsForm.controls.reply.value,
+        name: this.sortedData[DetaiIndex]['first_name'],
+        email: this.sortedData[DetaiIndex]['email'],
+        subject: "Query Reply "
       }
       console.log("Reply=========>",obj);
       this.Service.contactReply(obj).subscribe(res=>{
@@ -229,7 +237,7 @@ export class ContactListingComponent implements OnInit {
       this.ngOnInit()
       this.replyModal.hide()
       this.contactUsForm.reset()
-      
+      this.Service.showMessage({ message: "Reply Sent Successfully" })
       
       })
     }

@@ -249,8 +249,27 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Reports',
-        url: '/reports',
+        url: '/',
         icon: 'icon-report',
+        children: [
+          
+             {
+              name: 'Graduate Applications',
+              url: '/job-applicants-reports',
+              icon: 'icon-star'
+              },
+              {
+              name: 'Jobs',
+              url: '/',
+              icon: 'icon-star'
+              }
+              ,
+              {
+              name: 'Messaging',
+              url: '/',
+              icon: 'icon-star'
+              }
+          ]
       },
       {
         name: 'Verification Submissions',

@@ -63,11 +63,11 @@
                         <mat-icon>more_vert</mat-icon>
                       </button>
                       <mat-menu #menu="matMenu" class="td-menu">
-                          <a mat-menu-item class="" routerLink="/viewSubHeading/{{this.heading_id}}/{{row._id}}">
+                          <a mat-menu-item class="" routerLink="/viewSubHeading/{{this.heading_id}}/{{row._id}}/{{type}}">
                               <mat-icon class="material-icons-outlined">visibility</mat-icon>
                               <span>View</span>
                           </a>
-                          <a mat-menu-item class="" routerLink="/editSubHeading/{{this.heading_id}}/{{row._id}}">
+                          <a mat-menu-item class="" routerLink="/editSubHeading/{{this.heading_id}}/{{row._id}}/{{type}}">
                               <mat-icon class="material-icons-outlined">edit</mat-icon>
                               <span>Edit</span>
                           </a>

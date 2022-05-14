@@ -9,6 +9,7 @@ import { TopgradserviceService } from '../../../topgradservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-add-sub-heading',
@@ -20,7 +21,7 @@ export class AddSubHeadingComponent implements OnInit {
   terms_sub_headingform:FormGroup
   type: any;
 
-  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar, private router : Router ) { 
+  constructor(private route:ActivatedRoute,private Service:TopgradserviceService,private _formBuilder:FormBuilder,private _snackBar: MatSnackBar, private router : Router,private location : Location ) { 
     this.terms_sub_headingform = this._formBuilder.group({
       'title':['',[Validators.required]],
       'description':['',[Validators.required]]
@@ -52,7 +53,7 @@ export class AddSubHeadingComponent implements OnInit {
           this._snackBar.open("Added Sub Heading Successfully","close",{
             duration: 2000
           });
-          this.router.navigate(['/terms-conditions-sub-headings',this.term_id,this.type])
+          this.location.back();
         }
       },err => {
         console.log(err);
@@ -61,6 +62,10 @@ export class AddSubHeadingComponent implements OnInit {
         })
     }
  
+  }
+
+  navigate(){
+   this.location.back();
   }
 
 }

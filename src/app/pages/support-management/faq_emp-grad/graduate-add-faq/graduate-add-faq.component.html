@@ -18,6 +18,10 @@
 						                <option>Jobs</option>
 						                <option>Permissions & Privacy</option> -->
 						            </select>
+									<div *ngIf="(inputTitle.controls.category_id?.touched || inputTitle.controls.category_id?.dirty)
+									&& inputTitle.controls.category_id?.invalid && inputTitle.controls.category_id?.errors?.required" style="color:red" >
+									*Please selected Category....
+									</div>
 								</div>
 		      					<div class="form-group">
 									<label>Title</label>
