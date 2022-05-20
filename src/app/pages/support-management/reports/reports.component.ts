@@ -55,12 +55,13 @@ const TIME: string[] = [
 
 export class ReportsComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'employer', 'candidate', 'interviewmethod', 'jobtitle', 'location', 'application date', 'date', 'time', 'action'];
+  displayedColumns: string[] = ['select', 'id', 'employer', 'candidate', 'interviewmethod', 'jobtitle', 'location', 'date', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   
   @ViewChild('smallModal') public smallModal: ModalDirective;
   @ViewChild('replyModal') public replyModal: ModalDirective;
+  @ViewChild('blockModal') public blockModal: ModalDirective;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   sortedData: any;
@@ -69,6 +70,10 @@ export class ReportsComponent implements OnInit {
   ReplyForm: FormGroup;
   id: any;
   item_id: any;
+  block_id: any;
+  email_id: any;
+  email: any;
+  name: any;
 
   constructor( private Service: TopgradserviceService,private fb : FormBuilder) { 
   	// Create 100 users
@@ -78,6 +83,8 @@ export class ReportsComponent implements OnInit {
     this.dataSource = new MatTableDataSource(users);
     this.ReplyForm=this.fb.group({
       reply:['',Validators.required],
+      email_to:['',Validators.required],
+      subject:['',Validators.required],
       })
   }
 
@@ -176,7 +183,7 @@ export class ReportsComponent implements OnInit {
     this.ReplyForm.reset();
   }
 
-  ReportReply(id){
+  SendEmail(id){
     console.log("formmmmmmmmmmmm",this.ReplyForm);
     if(this.ReplyForm.invalid){
       this.ReplyForm.markAllAsTouched()
@@ -192,10 +199,10 @@ export class ReportsComponent implements OnInit {
       var obj={
         id:id,
         reply:this.ReplyForm.controls.reply.value,
-        reply_status:"replied",
-        email: this.sortedData[index].graduate_detail.email ,
-         name: this.sortedData[index].graduate_detail.first_name,
-         subject: "TopGrad Report Reply"
+        //reply_status:"replied",
+        email: this.ReplyForm.controls.email_to.value ,
+         name: this.name.charAt(0).toUpperCase() + this.name.slice(1),
+         subject: this.ReplyForm.controls.subject.value
       }
       console.log("Reply=========>",obj);
       this.Service.ReportReply(obj).subscribe(res=>{
@@ -203,7 +210,7 @@ export class ReportsComponent implements OnInit {
       this.ngOnInit()
       this.replyModal.hide()
       this.ReplyForm.reset()
-      this.Service.showMessage({ message: "Reply Sent Successfully" })
+      this.Service.showMessage({ message: "Email Sent Successfully" })
       
       })
     }
@@ -231,6 +238,49 @@ export class ReportsComponent implements OnInit {
       this.Service.showMessage({ message: "Deleted Successfully" })
     })
   }
+
+  block_graduate(id){
+    this.block_id=id;
+    this.blockModal.show()
+  }
+
+  BlockProfile(id){
+    var obj={
+      user_id: id,
+      blocked : true
+    }
+    console.log("my object=============>>", obj);
+    this.blockModal.hide()
+    this.Service.BlockGraduateProfile(obj).subscribe(res=>{
+      console.log("Response==========",res);
+      this.ngOnInit()
+      this.smallModal.hide()
+      this.Service.showMessage({ message: "Graduate Profile Blocked Successfully" })
+    })
+  }
+
+  simple_email(id, type){
+    this.email_id=id
+    let index2 = this.sortedData.findIndex(x => x._id === id);
+    console.log("my index---->>>", index2);
+    console.log("my indxd array----->>>", this.sortedData[index2]);
+    if(type == 'employer'){
+      this.email= this.sortedData[index2].employer_detail.email;
+      this.name= this.sortedData[index2].employer_detail.first_name + " " + this.sortedData[index2].employer_detail.last_name;
+    }
+    if(type == 'graduate'){
+      this.email= this.sortedData[index2].graduate_detail.email;
+      this.name= this.sortedData[index2].graduate_detail.first_name + " " + this.sortedData[index2].graduate_detail.last_name;
+    }
+    console.log("my email=========>>",this.email, type);
+    console.log("my name=========>>",this.name, type);
+    this.ReplyForm.patchValue({
+      email_to : this.email
+    });
+    this.replyModal.show()
+  }
+
+ 
 
 }
 

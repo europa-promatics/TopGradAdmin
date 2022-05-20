@@ -249,27 +249,27 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Reports',
-        url: '/',
+        url: '/job-applicants-reports',
         icon: 'icon-report',
-        children: [
+        // children: [
           
-             {
-              name: 'Graduate Applications',
-              url: '/job-applicants-reports',
-              icon: 'icon-star'
-              },
-              {
-              name: 'Jobs',
-              url: '/',
-              icon: 'icon-star'
-              }
-              ,
-              {
-              name: 'Messaging',
-              url: '/',
-              icon: 'icon-star'
-              }
-          ]
+        //      {
+        //       name: 'Graduate Applications',
+        //       url: '/job-applicants-reports',
+        //       icon: 'icon-star'
+        //       },
+        //       {
+        //       name: 'Jobs',
+        //       url: '/',
+        //       icon: 'icon-star'
+        //       }
+        //       ,
+        //       {
+        //       name: 'Messaging',
+        //       url: '/',
+        //       icon: 'icon-star'
+        //       }
+        //   ]
       },
       {
         name: 'Verification Submissions',

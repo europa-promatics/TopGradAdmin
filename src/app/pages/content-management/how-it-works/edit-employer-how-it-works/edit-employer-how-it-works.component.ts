@@ -204,6 +204,176 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     return this.section_form14.get('emparray') as FormArray;
   }
 
+  fun(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun1(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+
+  fun2(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun3(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun4(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun5(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun6(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun7(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+
+  fun8(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun9(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun10(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun11(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun12(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun13(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun14(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun15(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun16(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun17(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun18(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+  fun19(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
+
+
+  fun20(e:any){
+    console.log("hfjsdfjsdhfjkds",e);
+    this._snackBar.open("Visibility changed successfully","close",{
+      duration: 2000
+    });
+    
+  }
 
 
 
@@ -595,7 +765,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
       if (this.headingImageObj) {
         this.sectionA = {
           "heading": this.section_form1.controls.title.value,
-      "is_visible": true,
+           "is_visible": this.section_form1.controls.is_visible.value,
         }
         formdata.append("section_1", JSON.stringify(this.sectionA))
         formdata.append("image", this.headingImageObj)
@@ -603,7 +773,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
       else{
         this.sectionA = {
           "heading": this.section_form1.controls.title.value,
-      "is_visible": true,
+          "is_visible": this.section_form1.controls.is_visible.value,
           "image":this.HeadingImage1,
         }
         formdata.append("section_1", JSON.stringify(this.sectionA))
@@ -634,7 +804,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
         this.sectionA = {
           "heading": this.section_form2.controls.heading.value,
             "description": this.section_form2.controls.description.value,
-            "is_visible": true,
+            "is_visible": this.section_form2.controls.is_visible.value,
         }
         formdata.append("section_2", JSON.stringify(this.sectionA))
         formdata.append("image", this.headingImageObj)
@@ -643,7 +813,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
         this.sectionA = {
           "heading": this.section_form2.controls.heading.value,
           "description": this.section_form2.controls.description.value,
-          "is_visible": true,
+          "is_visible": this.section_form2.controls.is_visible.value,
           "image":this.HeadingImage2,
         }
         formdata.append("section_2", JSON.stringify(this.sectionA))
@@ -665,7 +835,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     let obj: any
     this.sectionA={
       "heading": this.section_form3.controls.heading2.value,
-      "is_visible": true,
+      "is_visible": this.section_form3.controls.is_visible.value,
     }
     if (this.section_form3.valid) {
       console.log(this.section_form3);
@@ -699,14 +869,14 @@ export class EditEmployerHowItWorksComponent implements OnInit {
       
       if (this.headingImageObj) {
         this.sectionA = {
-          "is_visible": true,
+          "is_visible": this.section_form4.controls.is_visible.value,
         }
         formdata.append("section_4", JSON.stringify(this.sectionA))
         formdata.append("image", this.headingImageObj)
       }
       else{
         this.sectionA = {
-          "is_visible": true,
+          "is_visible": this.section_form4.controls.is_visible.value,
           "image":this.HeadingImage3,
         }
         formdata.append("section_2", JSON.stringify(this.sectionA))
@@ -730,7 +900,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     this.sectionA={
       "heading": this.section_form5.controls.heading3.value,
       "description": this.section_form5.controls.description1.value,
-      "is_visible": true,
+      "is_visible": this.section_form5.controls.is_visible.value,
     }
     if (this.section_form5.valid) {
       console.log(this.section_form5);
@@ -759,7 +929,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     this.sectionA={
       "heading": this.section_form6.controls.heading4.value,
       "description": this.section_form6.controls.description2.value,
-      "is_visible": true,
+      "is_visible": this.section_form6.controls.is_visible.value,
     }
     if (this.section_form6.valid) {
       console.log(this.section_form6);
@@ -788,7 +958,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     let obj: any
     this.sectionA={
       "heading": this.section_form7.controls.listing.value,
-      "is_visible": true,
+      "is_visible": this.section_form7.controls.is_visible.value,
     }
     if (this.section_form7.valid) {
       console.log(this.section_form7);
@@ -817,7 +987,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     this.sectionA={
       "heading": this.section_form8.controls.heading5.value,
       "description": this.section_form8.controls.description3.value,
-      "is_visible": true,
+      "is_visible": this.section_form8.controls.is_visible.value,
     }
     if (this.section_form7.valid) {
       console.log(this.section_form7);
@@ -845,7 +1015,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     let obj: any
     this.sectionA={
       "heading": this.section_form9.controls.heading6.value,
-      "is_visible": true,
+      "is_visible": this.section_form9.controls.is_visible.value,
     }
     if (this.section_form7.valid) {
       console.log(this.section_form7);
@@ -874,7 +1044,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     this.sectionA={
       "heading": this.section_form10.controls.heading7.value,
       "description": this.section_form10.controls.description4.value,
-      "is_visible": true,
+      "is_visible": this.section_form10.controls.is_visible.value,
     }
     if (this.section_form7.valid) {
       console.log(this.section_form7);
@@ -907,14 +1077,14 @@ export class EditEmployerHowItWorksComponent implements OnInit {
       
       if (this.headingImageObj) {
         this.sectionA = {
-          "is_visible": true,
+          "is_visible": this.section_form11.controls.is_visible.value,
         }
         formdata.append("section_11", JSON.stringify(this.sectionA))
         formdata.append("image", this.headingImageObj)
       }
       else{
         this.sectionA = {
-          "is_visible": true,
+          "is_visible": this.section_form11.controls.is_visible.value,
           "image":this.HeadingImage4,
         }
         formdata.append("section_11", JSON.stringify(this.sectionA))
@@ -937,7 +1107,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     let obj: any
     this.sectionA={
       "heading": this.section_form12.controls.listing2.value,
-      "is_visible": true,
+      "is_visible": this.section_form12.controls.is_visible.value,
     }
     if (this.section_form7.valid) {
       console.log(this.section_form7);
@@ -966,7 +1136,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     this.sectionA={
       "heading": this.section_form13.controls.heading8.value,
       "description": this.section_form13.controls.description5.value,
-      "is_visible": true,
+      "is_visible": this.section_form13.controls.is_visible.value,
     }
     if (this.section_form7.valid) {
       console.log(this.section_form7);
@@ -1020,7 +1190,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     let obj: any
     this.sectionA={
       "heading": this.section_form15.controls.heading12.value,
-      "is_visible": true,
+      "is_visible":  this.section_form15.controls.is_visible.value,
     }  
     if (this.section_form7.valid) {
       console.log(this.section_form7);
@@ -1083,7 +1253,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     this.sectionA={
       "heading": this.section_form17.controls.heading13.value,
       "description": this.section_form17.controls.description9.value,
-      "is_visible": true,
+      "is_visible": this.section_form17.controls.is_visible.value,
     }
     if (this.section_form17.valid) {
       console.log(this.section_form17);
@@ -1112,7 +1282,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     this.sectionA={
       "heading": this.section_form18.controls.heading14.value,
       "description": this.section_form18.controls.description10.value,
-      "is_visible": true,
+      "is_visible": this.section_form18.controls.is_visible.value,
     }
     if (this.section_form18.valid) {
       console.log(this.section_form18);
@@ -1147,7 +1317,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
         this.sectionA = {
           "heading": this.section_form19.controls.titleMsg.value,
             "description": this.section_form19.controls.msgInfo.value,
-            "is_visible": true,
+            "is_visible": this.section_form19.controls.is_visible.value,
         }
         formdata.append("section_19", JSON.stringify(this.sectionA))
         formdata.append("image", this.headingImageObj)
@@ -1180,7 +1350,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
     this.sectionA={
       "heading": this.section_form20.controls.heading15.value,
       "description": this.section_form20.controls.description11.value,
-      "is_visible": true,
+      "is_visible": this.section_form20.controls.is_visible.value,
     }
     if (this.section_form20.valid) {
       console.log(this.section_form20);
@@ -1217,7 +1387,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
             "heading": this.section_form21.controls.title111.value,
             "sub_heading": this.section_form21.controls.S_heading.value,
             "description": this.section_form21.controls.description12.value,
-            "is_visible": true,
+            "is_visible": this.section_form21.controls.is_visible.value,
         }
         formdata.append("section_21", JSON.stringify(this.sectionA))
         formdata.append("image", this.headingImageObj)
@@ -1227,7 +1397,7 @@ export class EditEmployerHowItWorksComponent implements OnInit {
           "heading": this.section_form21.controls.title111.value,
           "sub_heading": this.section_form21.controls.S_heading.value,
           "description": this.section_form21.controls.description12.value,
-          "is_visible": true,
+          "is_visible": this.section_form21.controls.is_visible.value,
           "image":this.HeadingImage7,
         }
         formdata.append("section_21", JSON.stringify(this.sectionA))

@@ -973,6 +973,19 @@ export class TopgradserviceService implements HttpInterceptor {
               )
             }
 
+            BlockGraduateProfile(obj: any): Observable<any> {
+              let API_URL = `${this.SERVER_URL}/admin/edit/user/detail`;
+              console.log(API_URL)
+              return this.httpClient.put(API_URL,obj)
+              .pipe(
+              map(res => {
+              return res
+              }),
+              catchError(this.error)
+              )
+            }
+
+
 
 
 

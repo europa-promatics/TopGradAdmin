@@ -136,7 +136,7 @@
 									<div class="home-mng-form">
 										<div class="endrose-step">
 											<div class="form-group">
-												<ng-container formArrayName="tipsArray"
+												<ng-container formArrayName=" "
 													*ngFor="let alias of resumetipsSection.controls['tipsArray'].controls; let i=index">
 													<ng-container [formGroupName]="i">
 														<label>{{i+1}}: Icon</label>
@@ -150,7 +150,7 @@
 																	</button>
 																</div>
 															</div>
-															<div *ngIf="tipsArray.controls[i].controls['image']?.errors?.required "
+															<div *ngIf="tipsArray.controls[i].controls['image']?.errors?.required"
 																class="invalid">
 																*Please select image
 															</div>
