@@ -37,7 +37,7 @@ export class HomepageManagementComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private _formBuilder: FormBuilder, private router: Router) {
     this.headerform = this._formBuilder.group({
-      'title': ['', [Validators.required, Validators.maxLength(200)]],
+      'title': ['', [Validators.required, Validators.maxLength(2000)]],
       'image': ['', [Validators.required]],
       'is_visible': [''],
       'county': [''],

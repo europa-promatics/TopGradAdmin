@@ -35,7 +35,7 @@
 								</div>
 								<div class="form-group">
 									<label>Description</label>
-									<editor formControlName="description"></editor>
+									<textarea formControlName="description" class="form-control" rows="4"></textarea>
 									<div *ngIf="(inputTitle.controls.description?.touched || inputTitle.controls.description?.dirty)
 									&& inputTitle.controls.description?.invalid && inputTitle.controls.description?.errors?.required" style="color:red" >
 									*Please enter description here....

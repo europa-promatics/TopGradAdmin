@@ -51,6 +51,9 @@ export class EditFaqComponent implements OnInit {
     this.Service.faqCategories(data).subscribe(data => {
       console.log("fgdfgfgdfgdfgdfgdfgdfgdgf",data);
       this.faq=data.data
+      console.log("My faq array==========>>", this.faq);
+      console.log("formmmmmmmmmmmm",this.inputTitle);
+      
  
     }, err => {
       console.log(err.status)
@@ -73,9 +76,12 @@ export class EditFaqComponent implements OnInit {
     this.Service.faqDetail(obj).subscribe(data => {
           console.log("main data for users is ssssssssssssssssssss====", data)
           this.user=data.data
-          this.description1=this.user.description
-          this.title1=this.user.title
-          this.selectedValue=this.user.category_id._id
+          this.inputTitle.patchValue({
+            category_id:this.user.category_id.name,
+            title: this.user.title,
+            description: this.user.description
+          });
+         
           // this.ngOnInit()
           
         }, err => {

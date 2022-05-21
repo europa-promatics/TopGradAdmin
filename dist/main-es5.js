@@ -4175,7 +4175,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"payment-mngmnt\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"tabl_upr d-flex align-items-center justify-content-between\">\n            <mat-form-field appearance=\"standard\">\n              <mat-label>Filter</mat-label>\n              <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n            </mat-form-field>\n            <!-- <div class=\"fltr_div d-flex align-items-center\">\n              <div class=\"form-group mb-0 ml-3\">\n                <select class=\"form-control custom-select\">\n                    <option selected>Select Report Type</option>\n                    <option>Messaging</option>\n                    <option>Jobs</option>\n                    <option>Grad Applications</option>\n                </select>\n              </div>\n  \n            </div> -->\n          </div>\n  \n          <div class=\"mat-elevation-z8\">\n            <div class=\"table-responsive\">\n              <table mat-table [dataSource]=\"sortedData\" matSort>\n                <!-- Checkbox Column -->\n                <ng-container matColumnDef=\"select\">\n                  <th mat-header-cell *matHeaderCellDef>\n                    <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                      [checked]=\"selection.hasValue() && isAllSelected()\"\n                      [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                      [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                    </mat-checkbox>\n                  </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                    <mat-checkbox (click)=\"$event.stopPropagation()\"\n                      (change)=\"$event ? selection.toggle(row) : null\"\n                      [checked]=\"selection.isSelected(row)\"\n                      [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                    </mat-checkbox>\n                  </td>\n                </ng-container>\n                <!-- ID Column -->\n                <ng-container matColumnDef=\"id\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                  <td mat-cell *matCellDef=\"let row; let i=index\"> {{i+1}} </td>\n                </ng-container>\n  \n                <!-- postedby Column -->\n                <ng-container matColumnDef=\"employer\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Reported By</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.employer_detail?.first_name}} {{row?.employer_detail?.last_name}}</td>\n                </ng-container>\n  \n                <!-- worktype Column -->\n                <ng-container matColumnDef=\"candidate\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Graduate Name</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.graduate_detail?.first_name}} {{row?.graduate_detail?.last_name}} </td>\n                </ng-container>\n                \n                <!-- worktype Column -->\n                <ng-container matColumnDef=\"jobtitle\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Long Reason</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.description}} </td>\n                </ng-container>\n  \n                <!-- postedby Column -->\n                <ng-container matColumnDef=\"interviewmethod\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Short Reason</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.reasons?.name}} </td>\n                </ng-container>\n                <!-- Company Column -->\n                <ng-container matColumnDef=\"location\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Name</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.job_post_detail?.job_title}} </td>\n                </ng-container>\n                 <!-- Job title Column -->\n                <ng-container matColumnDef=\"date\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Post Date</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.job_post_detail?.createdAt | date:'dd/MM/yyyy'}} </td>\n                </ng-container>\n\n                <ng-container matColumnDef=\"application date\">\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Application Date</th>\n                    <td mat-cell *matCellDef=\"let row\"> {{row?.job_application_detail?.createdAt | date:'dd/MM/yyyy'}} </td>\n                  </ng-container>\n                \n                <!-- status column -->\n                <ng-container matColumnDef=\"time\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>\n                  <td mat-cell *matCellDef=\"let row\"><span class=\"badge badge-warning\">{{row?.reply_status | titlecase}}</span></td>\n                  \n                </ng-container>\n                 <!-- Action column -->\n                 <ng-container matColumnDef=\"action\">\n                  <th mat-header-cell *matHeaderCellDef> Action </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                      <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                        <mat-icon>more_vert</mat-icon>\n                      </button>\n                      <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                        <a mat-menu-item class=\"\" routerLink=\"/view-report/{{row._id}}\">\n                          <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                          <span>View</span>\n                        </a>\n                        <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"simple_reply(row._id)\">\n                          <mat-icon class=\"material-icons-outlined\">reply</mat-icon>\n                          <span *ngIf=\"row.reply_status=='pending' \">Reply</span>\n                          <span *ngIf=\"row.reply_status=='replied' \">Already Replied</span>\n                        </a>\n                        <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"delete_id(row._id)\">\n                          <mat-icon class=\"material-icons-outlined\" >delete</mat-icon>\n                          <span>Delete</span>\n                        </a>\n                      </mat-menu>\n                  </td>\n                </ng-container>\n  \n                <!-- Progress Column -->\n                <!-- <ng-container matColumnDef=\"progress\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n                </ng-container> -->\n  \n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  \n                <!-- Row shown when there is no matching data. -->\n                <tr class=\"mat-row\" *matNoDataRow>\n                  <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n                </tr>\n              </table>\n            </div>\n            <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n                [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\" showFirstLastButtons>\n            </mat-paginator>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  \n  <!-- Modal -->\n  <div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-sm\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n            <span aria-hidden=\"true\" class=\"prof_modclose\">\n              <img src=\"assets/img/Group 225.png\">\n            </span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <p>Are you sure you want to delete this report?</p>\n        </div>\n        <div class=\"modal-footer justify-content-center\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"ReportDelete(this.item_id)\">Yes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n  <!-- Modal -->\n  <div bsModal #replyModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close td-btn\" aria-label=\"Close\" (click)=\"replyModal1()\">\n            <span aria-hidden=\"true\" class=\"prof_modclose\">\n              <img src=\"assets/img/Group 225.png\">\n            </span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form [formGroup]=\"ReplyForm\">\n            <div class=\"row\">\n              <div class=\"col-sm-12\">\n                <div class=\"form-group\">\n                  <textarea class=\"form-control\" rows=\"3\" name=\"reply\" placeholder=\"Write your reply here...\" formControlName=\"reply\"></textarea>\n                  <div *ngIf=\"(ReplyForm.controls.reply?.touched || ReplyForm.controls.reply?.dirty)\n                    && ReplyForm.controls.reply?.invalid && ReplyForm.controls.reply?.errors?.required\" style=\"color:red\" >\n                    *Please enter your reply....\n                  </div>\n                </div>\n              </div>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer justify-content-center\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"replyModal1()\">Cancel</button>\n          <button type=\"submit\" class=\"btn btn-primary\" (click)=\"ReportReply(this.id)\" >Submit</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  \n  ";
+      __webpack_exports__["default"] = "<section class=\"payment-mngmnt\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"tabl_upr d-flex align-items-center justify-content-between\">\n            <mat-form-field appearance=\"standard\">\n              <mat-label>Filter</mat-label>\n              <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n            </mat-form-field>\n            <!-- <div class=\"fltr_div d-flex align-items-center\">\n              <div class=\"form-group mb-0 ml-3\">\n                <select class=\"form-control custom-select\">\n                    <option selected>Select Report Type</option>\n                    <option>Messaging</option>\n                    <option>Jobs</option>\n                    <option>Grad Applications</option>\n                </select>\n              </div>\n  \n            </div> -->\n          </div>\n  \n          <div class=\"mat-elevation-z8\">\n            <div class=\"table-responsive\">\n              <table mat-table [dataSource]=\"sortedData\" matSort>\n                <!-- Checkbox Column -->\n                <ng-container matColumnDef=\"select\">\n                  <th mat-header-cell *matHeaderCellDef>\n                    <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                      [checked]=\"selection.hasValue() && isAllSelected()\"\n                      [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                      [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                    </mat-checkbox>\n                  </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                    <mat-checkbox (click)=\"$event.stopPropagation()\"\n                      (change)=\"$event ? selection.toggle(row) : null\"\n                      [checked]=\"selection.isSelected(row)\"\n                      [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                    </mat-checkbox>\n                  </td>\n                </ng-container>\n                <!-- ID Column -->\n                <ng-container matColumnDef=\"id\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                  <td mat-cell *matCellDef=\"let row; let i=index\"> {{i+1}} </td>\n                </ng-container>\n  \n                <!-- postedby Column -->\n                <ng-container matColumnDef=\"employer\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Reported By</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.employer_detail?.first_name}} {{row?.employer_detail?.last_name}}</td>\n                </ng-container>\n  \n                <!-- worktype Column -->\n                <ng-container matColumnDef=\"candidate\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Graduate Name</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.graduate_detail?.first_name}} {{row?.graduate_detail?.last_name}} </td>\n                </ng-container>\n                \n                <!-- worktype Column -->\n                <ng-container matColumnDef=\"jobtitle\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Long Reason</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.description}} </td>\n                </ng-container>\n  \n                <!-- postedby Column -->\n                <ng-container matColumnDef=\"interviewmethod\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Short Reason</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.reasons?.name}} </td>\n                </ng-container>\n                <!-- Company Column -->\n                <ng-container matColumnDef=\"location\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Name</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.job_post_detail?.job_title}} </td>\n                </ng-container>\n                 <!-- Job title Column -->\n                <ng-container matColumnDef=\"date\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Reported Date</th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row?.createdAt | date:'dd/MM/yyyy'}} </td>\n                </ng-container>\n\n                <!-- <ng-container matColumnDef=\"application date\">\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Application Date</th>\n                    <td mat-cell *matCellDef=\"let row\"> {{row?.job_application_detail?.createdAt | date:'dd/MM/yyyy'}} </td>\n                  </ng-container> -->\n                \n                <!-- status column -->\n                <!-- <ng-container matColumnDef=\"time\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>\n                  <td mat-cell *matCellDef=\"let row\"><span class=\"badge badge-warning\">{{row?.reply_status | titlecase}}</span></td>\n                  \n                </ng-container> -->\n                 <!-- Action column -->\n                 <ng-container matColumnDef=\"action\">\n                  <th mat-header-cell *matHeaderCellDef> Action </th>\n                  <td mat-cell *matCellDef=\"let row\">\n                      <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                        <mat-icon>more_vert</mat-icon>\n                      </button>\n                      <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                        <a mat-menu-item class=\"\" routerLink=\"/view-report/{{row._id}}\">\n                          <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                          <span>View</span>\n                        </a>\n                        <!-- <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"simple_reply(row._id)\">\n                          <mat-icon class=\"material-icons-outlined\">reply</mat-icon>\n                          <span *ngIf=\"row.reply_status=='pending' \">Reply</span>\n                          <span *ngIf=\"row.reply_status=='replied' \">Already Replied</span>\n                        </a> -->\n                        <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"simple_email(row._id,'employer')\">\n                          <mat-icon class=\"material-icons-outlined\">email</mat-icon>\n                          <span>Email Employer</span>\n                        </a>\n                        <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"simple_email(row._id,'graduate')\">\n                          <mat-icon class=\"material-icons-outlined\">email</mat-icon>\n                          <span>Email Graduate</span>\n                        </a>\n                        <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"block_graduate(row.graduate_detail._id)\">\n                          <mat-icon class=\"material-icons-outlined\">not_interested</mat-icon>\n                          <span>Block Graduate Profile</span>\n                        </a>\n                        <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"delete_id(row._id)\">\n                          <mat-icon class=\"material-icons-outlined\" >delete</mat-icon>\n                          <span>Delete</span>\n                        </a>\n                      </mat-menu>\n                  </td>\n                </ng-container>\n  \n                <!-- Progress Column -->\n                <!-- <ng-container matColumnDef=\"progress\">\n                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                  <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n                </ng-container> -->\n  \n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  \n                <!-- Row shown when there is no matching data. -->\n                <tr class=\"mat-row\" *matNoDataRow>\n                  <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n                </tr>\n              </table>\n            </div>\n            <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n                [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\" showFirstLastButtons>\n            </mat-paginator>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n  \n  <!-- Modal -->\n  <div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-sm\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n            <span aria-hidden=\"true\" class=\"prof_modclose\">\n              <img src=\"assets/img/Group 225.png\">\n            </span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <p>Are you sure you want to delete this report?</p>\n        </div>\n        <div class=\"modal-footer justify-content-center\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"ReportDelete(this.item_id)\">Yes</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n    <!-- Modal -->\n    <div bsModal #blockModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"blockModalLabel\" aria-hidden=\"true\">\n      <div class=\"modal-dialog modal-sm\" role=\"document\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <button type=\"button\" class=\"close td-btn\" (click)=\"blockModal.hide()\" aria-label=\"Close\">\n              <span aria-hidden=\"true\" class=\"prof_modclose\">\n                <img src=\"assets/img/Group 225.png\">\n              </span>\n            </button>\n          </div>\n          <div class=\"modal-body\">\n            <p>Are you sure you want to block this graduate profile?</p>\n          </div>\n          <div class=\"modal-footer justify-content-center\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"blockModal.hide()\">No</button>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"BlockProfile(this.block_id)\">Yes</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  \n\n\n  <!-- Modal -->\n  <div bsModal #replyModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\" style=\"padding:0px;\">\n          <button type=\"button\" class=\"close td-btn\" aria-label=\"Close\" (click)=\"replyModal1()\">\n            <span aria-hidden=\"true\" class=\"prof_modclose\">\n              <img src=\"assets/img/Group 225.png\">\n            </span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form [formGroup]=\"ReplyForm\">\n            <div class=\"row\">\n              <div class=\"col-sm-12\">\n                <h1>Send Email</h1>\n                <div class=\"form-group\">\n                  <div class=\"text-left\">\n                    <label>To</label>\n                  </div>\n                  <input type=\"email\" name=\"\" class=\"form-control\" value=\"\" formControlName=\"email_to\">\n                </div>\n                <div class=\"form-group\">\n                  <div class=\"text-left\">\n                    <label>Subject</label>\n                  </div>\n                  <input type=\"text\" name=\"\" class=\"form-control\" value=\"\" formControlName=\"subject\">\n                </div>\n                <div class=\"form-group\">\n                  <textarea class=\"form-control\" rows=\"3\" name=\"reply\" placeholder=\"Write your message here...\" formControlName=\"reply\"></textarea>\n                  <div *ngIf=\"(ReplyForm.controls.reply?.touched || ReplyForm.controls.reply?.dirty)\n                    && ReplyForm.controls.reply?.invalid && ReplyForm.controls.reply?.errors?.required\" style=\"color:red\" >\n                    *Please enter your reply....\n                  </div>\n                </div>\n              </div>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer justify-content-center\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"replyModal1()\">Cancel</button>\n          <button type=\"submit\" class=\"btn btn-primary\" (click)=\"SendEmail(this.email_id)\" >Submit</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  \n  \n  ";
       /***/
     },
 
@@ -5343,6 +5343,15 @@
               return res;
             }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
           }
+        }, {
+          key: "BlockGraduateProfile",
+          value: function BlockGraduateProfile(obj) {
+            var API_URL = "".concat(this.SERVER_URL, "/admin/edit/user/detail");
+            console.log(API_URL);
+            return this.httpClient.put(API_URL, obj).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+              return res;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.error));
+          }
         }]);
 
         return TopgradserviceService;
@@ -5654,7 +5663,7 @@
 
           this.Service = Service;
           this.fb = fb;
-          this.displayedColumns = ['select', 'id', 'employer', 'candidate', 'interviewmethod', 'jobtitle', 'location', 'application date', 'date', 'time', 'action'];
+          this.displayedColumns = ['select', 'id', 'employer', 'candidate', 'interviewmethod', 'jobtitle', 'location', 'date', 'action'];
           this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []); // Create 100 users
 
           var users = Array.from({
@@ -5665,7 +5674,9 @@
 
           this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_6__["MatTableDataSource"](users);
           this.ReplyForm = this.fb.group({
-            reply: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_10__["Validators"].required]
+            reply: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_10__["Validators"].required],
+            email_to: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_10__["Validators"].required],
+            subject: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_10__["Validators"].required]
           });
         }
 
@@ -5779,8 +5790,8 @@
             this.ReplyForm.reset();
           }
         }, {
-          key: "ReportReply",
-          value: function ReportReply(id) {
+          key: "SendEmail",
+          value: function SendEmail(id) {
             var _this17 = this;
 
             console.log("formmmmmmmmmmmm", this.ReplyForm);
@@ -5796,10 +5807,10 @@
               var obj = {
                 id: id,
                 reply: this.ReplyForm.controls.reply.value,
-                reply_status: "replied",
-                email: this.sortedData[index].graduate_detail.email,
-                name: this.sortedData[index].graduate_detail.first_name,
-                subject: "TopGrad Report Reply"
+                //reply_status:"replied",
+                email: this.ReplyForm.controls.email_to.value,
+                name: this.name.charAt(0).toUpperCase() + this.name.slice(1),
+                subject: this.ReplyForm.controls.subject.value
               };
               console.log("Reply=========>", obj);
               this.Service.ReportReply(obj).subscribe(function (res) {
@@ -5812,7 +5823,7 @@
                 _this17.ReplyForm.reset();
 
                 _this17.Service.showMessage({
-                  message: "Reply Sent Successfully"
+                  message: "Email Sent Successfully"
                 });
               });
             }
@@ -5848,6 +5859,62 @@
               });
             });
           }
+        }, {
+          key: "block_graduate",
+          value: function block_graduate(id) {
+            this.block_id = id;
+            this.blockModal.show();
+          }
+        }, {
+          key: "BlockProfile",
+          value: function BlockProfile(id) {
+            var _this19 = this;
+
+            var obj = {
+              user_id: id,
+              blocked: true
+            };
+            console.log("my object=============>>", obj);
+            this.blockModal.hide();
+            this.Service.BlockGraduateProfile(obj).subscribe(function (res) {
+              console.log("Response==========", res);
+
+              _this19.ngOnInit();
+
+              _this19.smallModal.hide();
+
+              _this19.Service.showMessage({
+                message: "Graduate Profile Blocked Successfully"
+              });
+            });
+          }
+        }, {
+          key: "simple_email",
+          value: function simple_email(id, type) {
+            this.email_id = id;
+            var index2 = this.sortedData.findIndex(function (x) {
+              return x._id === id;
+            });
+            console.log("my index---->>>", index2);
+            console.log("my indxd array----->>>", this.sortedData[index2]);
+
+            if (type == 'employer') {
+              this.email = this.sortedData[index2].employer_detail.email;
+              this.name = this.sortedData[index2].employer_detail.first_name + " " + this.sortedData[index2].employer_detail.last_name;
+            }
+
+            if (type == 'graduate') {
+              this.email = this.sortedData[index2].graduate_detail.email;
+              this.name = this.sortedData[index2].graduate_detail.first_name + " " + this.sortedData[index2].graduate_detail.last_name;
+            }
+
+            console.log("my email=========>>", this.email, type);
+            console.log("my name=========>>", this.name, type);
+            this.ReplyForm.patchValue({
+              email_to: this.email
+            });
+            this.replyModal.show();
+          }
         }]);
 
         return ReportsComponent;
@@ -5869,6 +5936,10 @@
         replyModal: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
           args: ['replyModal']
+        }],
+        blockModal: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+          args: ['blockModal']
         }],
         paginator: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
@@ -5999,38 +6070,13 @@
         }, {
           key: "getFaqCategories",
           value: function getFaqCategories() {
-            var _this19 = this;
+            var _this20 = this;
 
             var data = {
               user_type: 'graduate'
             };
             this.Service.faqCategories(data).subscribe(function (data) {
-              _this19.faq = data.data;
-            }, function (err) {
-              console.log(err.status);
-
-              if (err.status >= 404) {
-                console.log('Some error occured');
-              } else {
-                _this19.toastr.error('Some error occured, please try again!!', 'Error');
-              }
-            });
-          }
-        }, {
-          key: "faq_id",
-          value: function faq_id() {
-            var _this20 = this;
-
-            var obj = {
-              faq_id: this.route.snapshot.paramMap.get('id')
-            };
-            console.log("onnnn", obj);
-            this.Service.faqDetail(obj).subscribe(function (data) {
-              console.log("main data for users is ssssssssssssssssssss====", data);
-              _this20.user = data.data;
-              _this20.description1 = _this20.user.description;
-              _this20.title1 = _this20.user.title;
-              _this20.selectedValue = _this20.user.category_id._id;
+              _this20.faq = data.data;
             }, function (err) {
               console.log(err.status);
 
@@ -6038,6 +6084,31 @@
                 console.log('Some error occured');
               } else {
                 _this20.toastr.error('Some error occured, please try again!!', 'Error');
+              }
+            });
+          }
+        }, {
+          key: "faq_id",
+          value: function faq_id() {
+            var _this21 = this;
+
+            var obj = {
+              faq_id: this.route.snapshot.paramMap.get('id')
+            };
+            console.log("onnnn", obj);
+            this.Service.faqDetail(obj).subscribe(function (data) {
+              console.log("main data for users is ssssssssssssssssssss====", data);
+              _this21.user = data.data;
+              _this21.description1 = _this21.user.description;
+              _this21.title1 = _this21.user.title;
+              _this21.selectedValue = _this21.user.category_id._id;
+            }, function (err) {
+              console.log(err.status);
+
+              if (err.status >= 404) {
+                console.log('Some error occured');
+              } else {
+                _this21.toastr.error('Some error occured, please try again!!', 'Error');
 
                 console.log('Internet Connection Error');
               }
@@ -6057,7 +6128,7 @@
         }, {
           key: "addEditFaq",
           value: function addEditFaq(id) {
-            var _this21 = this;
+            var _this22 = this;
 
             console.log("formmmmmmmmmmmm", this.inputTitle);
 
@@ -6074,11 +6145,11 @@
               this.Service.addEditFaq(obj).subscribe(function (res) {
                 console.log("Response==========", res);
 
-                _this21.Service.showMessage({
+                _this22.Service.showMessage({
                   message: "Edit Successfully"
                 });
 
-                _this21.router.navigate(['/graduateFaq']);
+                _this22.router.navigate(['/graduateFaq']);
               });
             }
           }
@@ -6256,7 +6327,7 @@
         }, {
           key: "addheading",
           value: function addheading() {
-            var _this22 = this;
+            var _this23 = this;
 
             console.log("sdsfsfdsfdfdfds", this.terms_headingform);
 
@@ -6275,16 +6346,16 @@
                 console.log("fgdgfdgfdfgdfgd", res);
 
                 if (res.code == 200) {
-                  _this22._snackBar.open("Added Heading Successfully", "close", {
+                  _this23._snackBar.open("Added Heading Successfully", "close", {
                     duration: 2000
                   });
 
-                  _this22.location.back();
+                  _this23.location.back();
                 }
               }, function (err) {
                 console.log(err);
 
-                _this22._snackBar.open("Some Error Occued", "close", {
+                _this23._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               });
@@ -6443,7 +6514,7 @@
         _createClass(LoginComponent, [{
           key: "logincredentials",
           value: function logincredentials() {
-            var _this23 = this;
+            var _this24 = this;
 
             //  console.log("hjgsdhsagdhjsagdhjsg");
             console.log("sdsfsfdsfdfdfds", this.loginform);
@@ -6462,9 +6533,9 @@
                 console.log("kdjhcjdshcjdhkjdh");
                 localStorage.setItem("token", res.token);
 
-                _this23.router.navigate(['dashboard']);
+                _this24.router.navigate(['dashboard']);
 
-                _this23._snackBar.open("User Logged In Successfully", "close", {
+                _this24._snackBar.open("User Logged In Successfully", "close", {
                   duration: 2000
                 });
               }
@@ -6478,11 +6549,11 @@
               console.log("login error message==============>>", err.error.errors.msg);
 
               if (err.status >= 400) {
-                _this23._snackBar.open(ErrorMsg, "close", {
+                _this24._snackBar.open(ErrorMsg, "close", {
                   duration: 2000
                 });
               } else {
-                _this23._snackBar.open("Some Error Occued", "close", {
+                _this24._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               }
@@ -6605,7 +6676,7 @@
         }, {
           key: "getsubheading",
           value: function getsubheading() {
-            var _this24 = this;
+            var _this25 = this;
 
             var obj = {
               content_id: this.route.snapshot.paramMap.get('content_id'),
@@ -6615,7 +6686,7 @@
             this.Service.getsubheading(obj).subscribe(function (res) {
               console.log("response", res);
 
-              _this24.editsubheadingform.patchValue({
+              _this25.editsubheadingform.patchValue({
                 title: res.data[0].sub_heading[0].title,
                 description: res.data[0].sub_heading[0].description
               });
@@ -6624,7 +6695,7 @@
         }, {
           key: "editsubheading",
           value: function editsubheading() {
-            var _this25 = this;
+            var _this26 = this;
 
             console.log("sdsfsfdsfdfdfds", this.editsubheadingform);
 
@@ -6641,16 +6712,16 @@
                 console.log("fgdgfdgfdfgdfgd", res);
 
                 if (res.code == 200) {
-                  _this25._snackBar.open("Sub Heading Updated Successfully", "close", {
+                  _this26._snackBar.open("Sub Heading Updated Successfully", "close", {
                     duration: 2000
                   });
 
-                  _this25.location.back();
+                  _this26.location.back();
                 }
               }, function (err) {
                 console.log(err);
 
-                _this25._snackBar.open("Some Error Occued", "close", {
+                _this26._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               });
@@ -6852,7 +6923,7 @@
         }, {
           key: "support_id",
           value: function support_id() {
-            var _this26 = this;
+            var _this27 = this;
 
             var obj = {
               //  limit: this.searchFilters.limit,
@@ -6863,14 +6934,14 @@
               console.log("main data for users is ssssssssssssssssssss====", data); //  this.productslist = data.products
               //  this.length = data.total_counts
 
-              _this26.user = data.data;
+              _this27.user = data.data;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                _this26.toastr.error('Some error occured, please try again!!', 'Error');
+                _this27.toastr.error('Some error occured, please try again!!', 'Error');
 
                 console.log('Internet Connection Error');
               }
@@ -6994,7 +7065,7 @@
         }, {
           key: "getcontent",
           value: function getcontent() {
-            var _this27 = this;
+            var _this28 = this;
 
             var obj = {
               article_id: this.route.snapshot.paramMap.get('id')
@@ -7003,20 +7074,20 @@
               var _a, _b, _c;
 
               console.log("object============>", obj);
-              _this27.video = resp.data.medias.find(function (x) {
+              _this28.video = resp.data.medias.find(function (x) {
                 return x["for"] == 'video';
               }); // this.video.url = this.sanitizer.bypassSecurityTrustUrl(this.video.url)
 
-              _this27.main_image = resp.data.medias.find(function (x) {
+              _this28.main_image = resp.data.medias.find(function (x) {
                 return x["for"] == 'main';
               });
-              console.log("============>", _this27.main_image);
-              _this27.HeadingImage2 = (_a = _this27.main_image) === null || _a === void 0 ? void 0 : _a.url;
-              console.log("============>", _this27.video);
+              console.log("============>", _this28.main_image);
+              _this28.HeadingImage2 = (_a = _this28.main_image) === null || _a === void 0 ? void 0 : _a.url;
+              console.log("============>", _this28.video);
               console.log("response============>", resp); // setTimeout(function(){
 
-              _this27.editVideoform.patchValue({
-                Image: (_b = _this27.main_image) === null || _b === void 0 ? void 0 : _b.url,
+              _this28.editVideoform.patchValue({
+                Image: (_b = _this28.main_image) === null || _b === void 0 ? void 0 : _b.url,
                 title: resp.data.article_title,
                 type: resp.data.article_type,
                 description: resp.data.article_description,
@@ -7025,15 +7096,15 @@
               }); // }, 2000)
 
 
-              console.log("my for,=============>", _this27.editVideoform);
+              console.log("my for,=============>", _this28.editVideoform);
 
               if (resp.data.article_type == "small_video_article") {
-                _this27.type_article = "small_video_article";
+                _this28.type_article = "small_video_article";
               } else if (resp.data.article_type == "large_video_article") {
-                _this27.type_article = "large_video_article";
+                _this28.type_article = "large_video_article";
 
-                _this27.editVideoform.patchValue({
-                  Video: (_c = _this27.video) === null || _c === void 0 ? void 0 : _c.url
+                _this28.editVideoform.patchValue({
+                  Video: (_c = _this28.video) === null || _c === void 0 ? void 0 : _c.url
                 });
               }
             });
@@ -7048,7 +7119,7 @@
         }, {
           key: "onVideoChange",
           value: function onVideoChange(e) {
-            var _this28 = this;
+            var _this29 = this;
 
             this.type_article = "large_video_article";
             console.log(e);
@@ -7064,7 +7135,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this28.editVideoform.patchValue({
+                _this29.editVideoform.patchValue({
                   Video: resp.file_name
                 });
               });
@@ -7082,7 +7153,7 @@
         }, {
           key: "setHeadingImage1",
           value: function setHeadingImage1(event) {
-            var _this29 = this;
+            var _this30 = this;
 
             console.log(event.target.files[0]); // this.type_article="small_article";
 
@@ -7097,14 +7168,14 @@
               this.Service.uploadbenefitmedia(formData).subscribe(function (resp) {
                 console.log("image response ==>", resp);
 
-                _this29.editVideoform.patchValue({
+                _this30.editVideoform.patchValue({
                   Image: resp
                 });
               });
               var reader = new FileReader();
 
               reader.onload = function (event) {
-                _this29.HeadingImage2 = event.target.result;
+                _this30.HeadingImage2 = event.target.result;
               };
 
               reader.readAsDataURL(this.headingImageObj);
@@ -7122,7 +7193,7 @@
         }, {
           key: "postcontent",
           value: function postcontent() {
-            var _this30 = this;
+            var _this31 = this;
 
             var obj;
 
@@ -7170,7 +7241,7 @@
 
             console.log("objjjjjjjj===========>", obj);
             this.Service.editArticleContent(obj).subscribe(function (resp) {
-              _this30.Service.showMessage({
+              _this31.Service.showMessage({
                 message: "Submitted Successfully"
               });
             });
@@ -7411,57 +7482,57 @@
         }, {
           key: "getAboutUsData",
           value: function getAboutUsData() {
-            var _this31 = this;
+            var _this32 = this;
 
             this.Service.getAboutUsData().subscribe(function (resp) {
               console.log("getAboutUsData Resp ==>", resp.data);
-              _this31.HeadingImage = resp.data.section_1.image;
+              _this32.HeadingImage = resp.data.section_1.image;
 
-              _this31.headerSection.patchValue({
+              _this32.headerSection.patchValue({
                 heading: resp.data.section_1.heading,
                 description: resp.data.section_1.description,
                 Image: resp.data.section_1.image,
                 is_visible: resp.data.section_1.is_visible
               });
 
-              _this31.Champions.patchValue({
+              _this32.Champions.patchValue({
                 heading: resp.data.section_2.heading_1,
                 heading1: resp.data.section_2.heading_2,
                 is_visible: resp.data.section_2.is_visible
               });
 
-              _this31.ourVision.patchValue({
+              _this32.ourVision.patchValue({
                 heading: resp.data.section_3.heading,
                 description: resp.data.section_3.description,
                 is_visible: resp.data.section_3.is_visible
               });
 
-              _this31.ourMission.patchValue({
+              _this32.ourMission.patchValue({
                 heading: resp.data.section_4.heading,
                 description: resp.data.section_4.description,
                 is_visible: resp.data.section_4.is_visible
               });
 
-              _this31.jobOpenings.patchValue({
+              _this32.jobOpenings.patchValue({
                 heading: resp.data.section_5.heading,
                 description: resp.data.section_5.description,
                 is_visible: resp.data.section_5.is_visible
               });
 
-              _this31.TopGraduates.patchValue({
+              _this32.TopGraduates.patchValue({
                 heading: resp.data.section_6.heading,
                 is_visible: resp.data.section_5.is_visible
               });
 
               resp.data.section_6.text.forEach(function (element) {
-                _this31.Fields.push(_this31.fb.control(element, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(100)]));
+                _this32.Fields.push(_this32.fb.control(element, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(100)]));
               });
             });
           }
         }, {
           key: "setHeadingImage",
           value: function setHeadingImage(event) {
-            var _this32 = this;
+            var _this33 = this;
 
             console.log(event.target.files[0]);
             var file = event.target.files[0];
@@ -7476,7 +7547,7 @@
               var reader = new FileReader();
 
               reader.onload = function (event) {
-                _this32.HeadingImage = event.target.result;
+                _this33.HeadingImage = event.target.result;
               };
 
               reader.readAsDataURL(this.headingImageObj);
@@ -7494,7 +7565,7 @@
         }, {
           key: "postAboutUsdata",
           value: function postAboutUsdata(type) {
-            var _this33 = this;
+            var _this34 = this;
 
             var obj;
             console.log("type==>", type);
@@ -7632,7 +7703,7 @@
             }
 
             this.Service.postAboutUsdata(obj).subscribe(function (resp) {
-              _this33.Service.showMessage({
+              _this34.Service.showMessage({
                 message: "Submitted Successfully"
               });
             });
@@ -7936,7 +8007,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"jobs-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <mat-progress-bar mode=\"indeterminate\" value=\"50\" *ngIf=\"!sortedData\"></mat-progress-bar>\n        <mat-form-field appearance=\"standard\">\n          <mat-label>Filter</mat-label>\n          <input matInput (keyup)=\"applyFilter($event)\" [(ngModel)]=\"search\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n        </mat-form-field>\n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"sortedData\" matSort (matSortChange)=\"sortData($event)\">\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"id\"> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n              </ng-container>\n\n              <!-- firstName Column -->\n              <ng-container matColumnDef=\"firstName\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"first_name\">First Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.first_name}} </td>\n              </ng-container>\n              <!-- lastName Column -->\n              <ng-container matColumnDef=\"lastName\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"last_name\">Last Name</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.last_name}} </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"enquiryType\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"enquiry_subject\">Enquiry Type</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.enquiry_subject.name}} </td>\n              </ng-container>\n               <!-- Job title Column -->\n              <ng-container matColumnDef=\"email\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"email\">Email Address</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.email}} </td>\n              </ng-container>\n             \n              <!-- enquiry Column -->\n              <ng-container matColumnDef=\"enquiry\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"enquiry\"> Enquiry </th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.enquiry}} </td>\n              </ng-container>\n\n              <!-- Admin reply -->\n              <ng-container matColumnDef=\"reply\">\n                <th  mat-header-cell *matHeaderCellDef mat-sort-header=\"is_replied\"> Is Replied </th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.is_replied==false ? 'NO' : \"Yes\"}} </td>\n            \n              </ng-container>\n\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle></mat-slide-toggle>\n                   </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"applications\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Applicants </th>\n                <td mat-cell *matCellDef=\"let row\"><a routerLink=\"/applicantsManagement\"> {{row.applications}}</a> </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                    \t<a *ngIf=\"!row.is_replied\" mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"simple_reply(row._id)\" >\n                        <mat-icon class=\"material-icons-outlined\">reply</mat-icon>\n                        <span>Reply</span>\n                      </a>\n                      <a *ngIf=\"row.is_replied\" mat-menu-item class=\"\" >\n                        <mat-icon class=\"material-icons-outlined\">check_circle_outline</mat-icon>\n                        <span>Already Replied</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/view-help/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\"  (click)=\"delete_id(row._id)\" >\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n            <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n                  [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\" showFirstLastButtons>\n            </mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Enquiry?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"contactDelete(this.item_id)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- Modal -->\n<div bsModal #replyModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"replyModal1()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form [formGroup]=\"viewHelp\">\n        \t<div class=\"row\">\n        \t\t<div class=\"col-sm-12\">\n        \t\t\t<div class=\"form-group\">\n        \t\t\t\t<textarea class=\"form-control\" rows=\"3\" name=\"reply\" placeholder=\"Write your reply here...\" formControlName=\"reply\"></textarea>\n                <div *ngIf=\"(viewHelp.controls.reply?.touched || viewHelp.controls.reply?.dirty)\n                  && viewHelp.controls.reply?.invalid && viewHelp.controls.reply?.errors?.required\" style=\"color:red\" >\n                  *Please enter your reply ....\n                </div>\n        \t\t\t</div>\n        \t\t</div>\n        \t</div>\n        </form>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"replyModal1()\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"contactReply(id) \">Submit</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+      __webpack_exports__["default"] = "<section class=\"jobs-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <mat-progress-bar mode=\"indeterminate\" value=\"50\" *ngIf=\"!sortedData\"></mat-progress-bar>\n        <mat-form-field appearance=\"standard\">\n          <mat-label>Filter</mat-label>\n          <input matInput (keyup)=\"applyFilter($event)\" [(ngModel)]=\"search\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n        </mat-form-field>\n\n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"sortedData\" matSort (matSortChange)=\"sortData($event)\">\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"id\"> S.No </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.id}} </td>\n              </ng-container>\n\n              <!-- firstName Column -->\n              <ng-container matColumnDef=\"firstName\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"first_name\">First Name </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.first_name}} </td>\n              </ng-container>\n              <!-- lastName Column -->\n              <ng-container matColumnDef=\"lastName\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"last_name\">Last Name</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.last_name}} </td>\n              </ng-container>\n              <!-- Company Column -->\n              <ng-container matColumnDef=\"enquiryType\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"enquiry_subject\">Enquiry Type</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.enquiry_subject?.name}} </td>\n              </ng-container>\n               <!-- Job title Column -->\n              <ng-container matColumnDef=\"email\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"email\">Email Address</th>\n                <td mat-cell *matCellDef=\"let row\"> {{row?.email}} </td>\n              </ng-container>\n             \n              <!-- enquiry Column -->\n              <ng-container matColumnDef=\"enquiry\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header=\"enquiry\"> Enquiry </th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.enquiry ? row.enquiry : row.message}} </td>\n              </ng-container>\n\n              <!-- Admin reply -->\n              <ng-container matColumnDef=\"reply\">\n                <th  mat-header-cell *matHeaderCellDef mat-sort-header=\"is_replied\"> Is Replied </th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.is_replied==false ? 'NO' : \"Yes\"}} </td>\n            \n              </ng-container>\n\n              <!-- status column -->\n              <ng-container matColumnDef=\"status\">\n                <th mat-header-cell *matHeaderCellDef> Status </th>\n                <td mat-cell *matCellDef=\"let row\">\n                     <mat-slide-toggle></mat-slide-toggle>\n                   </td>\n              </ng-container>\n              <!-- status column -->\n              <ng-container matColumnDef=\"applications\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Applicants </th>\n                <td mat-cell *matCellDef=\"let row\"><a routerLink=\"/applicantsManagement\"> {{row?.applications}}</a> </td>\n              </ng-container>\n               <!-- Action column -->\n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                    \t<a *ngIf=\"!row.is_replied\" mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"simple_reply(row._id)\" >\n                        <mat-icon class=\"material-icons-outlined\">reply</mat-icon>\n                        <span>Reply</span>\n                      </a>\n                      <a *ngIf=\"row.is_replied\" mat-menu-item class=\"\" >\n                        <mat-icon class=\"material-icons-outlined\">check_circle_outline</mat-icon>\n                        <span>Already Replied</span>\n                      </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/view-help/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\"  (click)=\"delete_id(row._id)\" >\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n            <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n                  [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\" showFirstLastButtons>\n            </mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Enquiry?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"contactDelete(this.item_id)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<!-- Modal -->\n<div bsModal #replyModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"replyModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"replyModal1()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <form [formGroup]=\"viewHelp\">\n        \t<div class=\"row\">\n        \t\t<div class=\"col-sm-12\">\n        \t\t\t<div class=\"form-group\">\n        \t\t\t\t<textarea class=\"form-control\" rows=\"3\" name=\"reply\" placeholder=\"Write your reply here...\" formControlName=\"reply\"></textarea>\n                <div *ngIf=\"(viewHelp.controls.reply?.touched || viewHelp.controls.reply?.dirty)\n                  && viewHelp.controls.reply?.invalid && viewHelp.controls.reply?.errors?.required\" style=\"color:red\" >\n                  *Please enter your reply ....\n                </div>\n        \t\t\t</div>\n        \t\t</div>\n        \t</div>\n        </form>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"replyModal1()\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"contactReply(id) \">Submit</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
       /***/
     },
 
@@ -7972,7 +8043,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit FAQ</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"inputTitle\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Category</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\"  formControlName=\"category_id\" [(ngModel)]=\"selectedValue\">\n\t\t\t\t\t\t\t\t\t\t<option *ngFor=\"let row of faq\"  [ngValue]=\"row._id\" [selected]=\"row._id==selectedValue\" >{{row?.name}}</option>\n\t\t\t\t\t\t                <!-- <option>My Account</option>\n\t\t\t\t\t\t                <option>Jobs</option>\n\t\t\t\t\t\t                <option>Permissions & Privacy</option> -->\n\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\" formControlName=\"title\" [(ngModel)]=\"title1\" >\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"( inputTitle.controls.title?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.title?.invalid && inputTitle.controls.title?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter title here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\" [(ngModel)]=\"description1\"></editor>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.description?.touched || inputTitle.controls.description?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.description?.invalid && inputTitle.controls.description?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter description here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button mat-stroked-button (click)=\"openSnackBar()\"  class=\"btn btn-primary mr-4\" (click)=\"addEditFaq(this.id)\">Save</button>\n\t\t\t\t\t\t\t\t\t<button  class=\"btn btn-primary\"  routerLink='/graduateFaq'>Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
+      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit FAQ</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"inputTitle\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Category</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\"  formControlName=\"category_id\" [(ngModel)]=\"selectedValue\">\n\t\t\t\t\t\t\t\t\t\t<option *ngFor=\"let row of faq\"  [ngValue]=\"row._id\" [selected]=\"row._id==selectedValue\" >{{row?.name}}</option>\n\t\t\t\t\t\t                <!-- <option>My Account</option>\n\t\t\t\t\t\t                <option>Jobs</option>\n\t\t\t\t\t\t                <option>Permissions & Privacy</option> -->\n\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\" formControlName=\"title\" [(ngModel)]=\"title1\" >\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"( inputTitle.controls.title?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.title?.invalid && inputTitle.controls.title?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter title here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea formControlName=\"description\" class=\"form-control\" [(ngModel)]=\"description1\" rows=\"4\"></textarea>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.description?.touched || inputTitle.controls.description?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.description?.invalid && inputTitle.controls.description?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter description here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button mat-stroked-button (click)=\"openSnackBar()\"  class=\"btn btn-primary mr-4\" (click)=\"addEditFaq(this.id)\">Save</button>\n\t\t\t\t\t\t\t\t\t<button  class=\"btn btn-primary\"  routerLink='/graduateFaq'>Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
       /***/
     },
 
@@ -8125,7 +8196,7 @@
         }, {
           key: "support_id",
           value: function support_id() {
-            var _this34 = this;
+            var _this35 = this;
 
             var obj = {
               //  limit: this.searchFilters.limit,
@@ -8136,14 +8207,14 @@
               console.log("main data for users is ssssssssssssssssssss====", data); //  this.productslist = data.products
               //  this.length = data.total_counts
 
-              _this34.user = data.data;
+              _this35.user = data.data;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                _this34.toastr.error('Some error occured, please try again!!', 'Error');
+                _this35.toastr.error('Some error occured, please try again!!', 'Error');
 
                 console.log('Internet Connection Error');
               }
@@ -8320,7 +8391,7 @@
         }, {
           key: "paginationOptionChange",
           value: function paginationOptionChange(evt) {
-            var _this35 = this;
+            var _this36 = this;
 
             this.event = evt;
             console.log("evthrm", evt);
@@ -8338,7 +8409,7 @@
 
             console.log("paginator obj==========", obj);
             this.Service.getarticleList(obj).subscribe(function (data) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this35, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this36, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
                 var _a, _b, i, new_article;
 
                 return regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -8433,7 +8504,7 @@
         }, {
           key: "deleteArticle",
           value: function deleteArticle(id) {
-            var _this36 = this;
+            var _this37 = this;
 
             var obj = {
               article_id: id
@@ -8441,19 +8512,19 @@
             this.Service.delArticle(obj).subscribe(function (res) {
               console.log("Response==========", res);
 
-              _this36.smallModal.hide();
+              _this37.smallModal.hide();
 
-              _this36.Service.showMessage({
+              _this37.Service.showMessage({
                 message: "Deleted Successfully"
               });
 
-              _this36.ngOnInit();
+              _this37.ngOnInit();
             });
           }
         }, {
           key: "articleList",
           value: function articleList() {
-            var _this37 = this;
+            var _this38 = this;
 
             console.log("javascriptt========");
             var obj = {
@@ -8468,35 +8539,35 @@
               var _a, _b;
 
               console.log("Response==========", res);
-              _this37.sortedData = res.data;
-              _this37.totalRecords = res.count;
+              _this38.sortedData = res.data;
+              _this38.totalRecords = res.count;
 
-              for (var i = 0; i < _this37.sortedData.length; i++) {
-                var new_article = _this37.sortedData[i].article_type;
+              for (var i = 0; i < _this38.sortedData.length; i++) {
+                var new_article = _this38.sortedData[i].article_type;
                 console.log("new_article=============>", new_article);
 
                 if (new_article == "small_video_article") {
-                  _this37.article = "Small Video";
-                  console.log("this.article small===========>", _this37.article);
-                  _this37.sortedData[i].article_name = _this37.article;
-                  _this37.image = _this37.sortedData[i].medias.find(function (x) {
+                  _this38.article = "Small Video";
+                  console.log("this.article small===========>", _this38.article);
+                  _this38.sortedData[i].article_name = _this38.article;
+                  _this38.image = _this38.sortedData[i].medias.find(function (x) {
                     return x["for"] == 'main';
                   });
-                  _this37.image_url = (_a = _this37.image) === null || _a === void 0 ? void 0 : _a.url;
-                  _this37.sortedData[i].url = _this37.image_url;
+                  _this38.image_url = (_a = _this38.image) === null || _a === void 0 ? void 0 : _a.url;
+                  _this38.sortedData[i].url = _this38.image_url;
                 } else if (new_article == "large_video_article") {
-                  _this37.article = "Large Video";
-                  console.log("this.article large===========>", _this37.article);
-                  _this37.sortedData[i].article_name = _this37.article;
-                  _this37.video = _this37.sortedData[i].medias.find(function (x) {
+                  _this38.article = "Large Video";
+                  console.log("this.article large===========>", _this38.article);
+                  _this38.sortedData[i].article_name = _this38.article;
+                  _this38.video = _this38.sortedData[i].medias.find(function (x) {
                     return x["for"] == 'video';
                   });
-                  _this37.video_url = (_b = _this37.video) === null || _b === void 0 ? void 0 : _b.url;
-                  _this37.sortedData[i].url = _this37.video_url;
+                  _this38.video_url = (_b = _this38.video) === null || _b === void 0 ? void 0 : _b.url;
+                  _this38.sortedData[i].url = _this38.video_url;
                 }
               }
 
-              console.log("data shubham==>", _this37.sortedData);
+              console.log("data shubham==>", _this38.sortedData);
             }, function (err) {
               console.log(err.status);
 
@@ -8825,7 +8896,7 @@
         }, {
           key: "termssubheadings",
           value: function termssubheadings() {
-            var _this38 = this;
+            var _this39 = this;
 
             console.log("khjhgjhgjhgjhghjghjgjhghjg");
             var obj = {
@@ -8836,11 +8907,11 @@
               var _a;
 
               console.log("main data for terms sub headings is ====", data);
-              _this38.subheadinglist = (_a = data.data.heading) === null || _a === void 0 ? void 0 : _a.sub_headings;
-              _this38.totalRecords = data.length;
-              _this38.heading_id = obj.content_id;
-              console.log(_this38.subheadinglist);
-              console.log("heading_id", _this38.heading_id);
+              _this39.subheadinglist = (_a = data.data.heading) === null || _a === void 0 ? void 0 : _a.sub_headings;
+              _this39.totalRecords = data.length;
+              _this39.heading_id = obj.content_id;
+              console.log(_this39.subheadinglist);
+              console.log("heading_id", _this39.heading_id);
             }, function (err) {
               console.log(err.status);
 
@@ -8861,7 +8932,7 @@
         }, {
           key: "deletesubheading",
           value: function deletesubheading(id) {
-            var _this39 = this;
+            var _this40 = this;
 
             var obj = {
               content_id: this.route.snapshot.paramMap.get('id'),
@@ -8870,19 +8941,19 @@
             this.Service.deletetermsubheading(obj).subscribe(function (res) {
               console.log("fgdgfdgfdfgdfgd", res);
 
-              _this39.smallModal.hide();
+              _this40.smallModal.hide();
 
               if (res.code == 200) {
-                _this39._snackBar.open("Sub Heading Deleted Successfully", "close", {
+                _this40._snackBar.open("Sub Heading Deleted Successfully", "close", {
                   duration: 2000
                 });
 
-                _this39.ngOnInit();
+                _this40.ngOnInit();
               }
             }, function (err) {
               console.log(err);
 
-              _this39._snackBar.open("Some Error Occued", "close", {
+              _this40._snackBar.open("Some Error Occued", "close", {
                 duration: 2000
               });
             });
@@ -9062,7 +9133,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\n<section class=\"view-employer-sec view-payment-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Report Details</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Reported By:</label>\n\t\t\t\t\t\t\t\t \t\t<span>{{Detail?.employer_detail?.first_name}} {{Detail?.employer_detail?.last_name}}</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>To:</label>\n\t\t\t\t\t\t\t\t \t\t<span>{{Detail?.graduate_detail?.first_name}} {{Detail?.graduate_detail?.last_name}}</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t\t\t<label>Job Name:</label>\n\t\t\t\t\t\t\t\t\t\t<span>{{Detail?.job_post_detail?.job_title}}</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t   </div>\n\t\t\t\t\t\t\t   <div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t\t\t<label>Status:</label>\n\t\t\t\t\t\t\t\t\t\t<span>{{Detail?.reply_status | titlecase}}</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t   </div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Job Application Date:</label>\n\t\t\t\t\t\t\t\t \t\t<span>{{Detail?.job_application_detail?.createdAt | date:'dd/MM/yyyy'}}</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Job Post Date:</label>\n\t\t\t\t\t\t\t\t \t\t<span>{{Detail?.job_post_detail?.createdAt | date:'dd/MM/yyyy'}}</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t\t\t<label>Short Reason:</label>\n\t\t\t\t\t\t\t\t\t\t<span>{{Detail?.reasons.name}}</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t   </div>\n\t\t\t\t\t\t\t   <div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t\t\t<label>Long Reason:</label>\n\t\t\t\t\t\t\t\t\t\t<span>{{Detail?.description}}</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t        </div>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<!-- <div class=\"col-lg-8 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t \t\t<label>Short Reason</label>\n\t\t\t\t\t\t\t\t \t\t<textarea class=\"form-control\" rows=\"4\"></textarea>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns text-right mt-4\">\n\t\t\t\t\t\t\t\t<!-- <span><a routerLink=\"/\" class=\"btn btn-primary mr-4\">Send</a></span> -->\n\t\t                        <span><a (click)=\"navigate()\" class=\"btn btn-primary\">Back</a></span>\n\t\t                    </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>\n</section>";
+      __webpack_exports__["default"] = "\n<section class=\"view-employer-sec view-payment-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Report Details</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Reported By:</label>\n\t\t\t\t\t\t\t\t \t\t<span>{{Detail?.employer_detail?.first_name}} {{Detail?.employer_detail?.last_name}}</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>To:</label>\n\t\t\t\t\t\t\t\t \t\t<span>{{Detail?.graduate_detail?.first_name}} {{Detail?.graduate_detail?.last_name}}</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t\t\t<label>Job Name:</label>\n\t\t\t\t\t\t\t\t\t\t<span>{{Detail?.job_post_detail?.job_title}}</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t   </div>\n\t\t\t\t\t\t\t   <div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t\t\t<label>Reported Date:</label>\n\t\t\t\t\t\t\t\t\t\t<span>{{Detail?.createdAt | date:'dd/MM/yyyy'}}</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t   </div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Job Application Date:</label>\n\t\t\t\t\t\t\t\t \t\t<span>{{Detail?.job_application_detail?.createdAt | date:'dd/MM/yyyy'}}</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t \t\t<label>Job Post Date:</label>\n\t\t\t\t\t\t\t\t \t\t<span>{{Detail?.job_post_detail?.createdAt | date:'dd/MM/yyyy'}}</span>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t\t\t<label>Short Reason:</label>\n\t\t\t\t\t\t\t\t\t\t<span>{{Detail?.reasons.name}}</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t   </div>\n\t\t\t\t\t\t\t   <div class=\"col-lg-6 col-sm-12\">\n\t\t\t\t\t\t\t\t\t<div class=\"form-group pymnt_dtls\">\n\t\t\t\t\t\t\t\t\t\t<label>Long Reason:</label>\n\t\t\t\t\t\t\t\t\t\t<span>{{Detail?.description}}</span>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t        </div>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<!-- <div class=\"col-lg-8 col-sm-12\">\n\t\t\t\t\t\t\t\t \t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t \t\t<label>Short Reason</label>\n\t\t\t\t\t\t\t\t \t\t<textarea class=\"form-control\" rows=\"4\"></textarea>\n\t\t\t\t\t\t\t\t \t</div>\n\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns text-right mt-4\">\n\t\t\t\t\t\t\t\t<!-- <span><a routerLink=\"/\" class=\"btn btn-primary mr-4\">Send</a></span> -->\n\t\t                        <span><a (click)=\"navigate()\" class=\"btn btn-primary\">Back</a></span>\n\t\t                    </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t</div>\n\n\t</div>\n</section>";
       /***/
     },
 
@@ -9249,7 +9320,7 @@
         }, {
           key: "paginationOptionChange",
           value: function paginationOptionChange(evt) {
-            var _this40 = this;
+            var _this41 = this;
 
             this.event = evt;
             console.log("evthrm", evt);
@@ -9266,7 +9337,7 @@
             }
 
             this.Service.contactList(obj).subscribe(function (data) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this40, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this41, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
                 return regeneratorRuntime.wrap(function _callee5$(_context5) {
                   while (1) {
                     switch (_context5.prev = _context5.next) {
@@ -9292,7 +9363,7 @@
         }, {
           key: "contactList",
           value: function contactList() {
-            var _this41 = this;
+            var _this42 = this;
 
             console.log("javascriptt========");
             var obj = {
@@ -9307,9 +9378,9 @@
 
             this.Service.contactList(obj).subscribe(function (res) {
               console.log("Response==========", res);
-              _this41.Contactlisting = res.data;
-              _this41.sortedData = _this41.Contactlisting;
-              _this41.totalRecords = res.count; // this.ngOnInit()
+              _this42.Contactlisting = res.data;
+              _this42.sortedData = _this42.Contactlisting;
+              _this42.totalRecords = res.count; // this.ngOnInit()
             });
             console.log("Object==========");
           } // delete contact start..............
@@ -9325,7 +9396,7 @@
         }, {
           key: "contactDelete",
           value: function contactDelete(id) {
-            var _this42 = this;
+            var _this43 = this;
 
             var obj = {
               support_id: id
@@ -9335,9 +9406,9 @@
             this.Service.contactDelete(obj).subscribe(function (res) {
               console.log("Response==========", res);
 
-              _this42.ngOnInit();
+              _this43.ngOnInit();
 
-              _this42.smallModal.hide();
+              _this43.smallModal.hide();
             });
           } // delete end here............
           //replyyyyyyyyyyyyyy..............
@@ -9352,7 +9423,7 @@
         }, {
           key: "contactReply",
           value: function contactReply(id) {
-            var _this43 = this;
+            var _this44 = this;
 
             console.log("formmmmmmmmmmmm", this.contactUsForm);
 
@@ -9375,13 +9446,13 @@
               this.Service.contactReply(obj).subscribe(function (res) {
                 console.log("Response==========", res);
 
-                _this43.ngOnInit();
+                _this44.ngOnInit();
 
-                _this43.replyModal.hide();
+                _this44.replyModal.hide();
 
-                _this43.contactUsForm.reset();
+                _this44.contactUsForm.reset();
 
-                _this43.Service.showMessage({
+                _this44.Service.showMessage({
                   message: "Reply Sent Successfully"
                 });
               });
@@ -10060,7 +10131,7 @@
         }, {
           key: "getFaqCategories",
           value: function getFaqCategories() {
-            var _this44 = this;
+            var _this45 = this;
 
             var obj = {
               user_type: 'graduate'
@@ -10068,14 +10139,14 @@
             console.log("categories=============", obj);
             this.Service.faqCategories(obj).subscribe(function (data) {
               console.log("fgdfgfgdfgdfgdfgdfgdfgdgf", data);
-              _this44.faq = data.data;
+              _this45.faq = data.data;
             }, function (err) {
               console.log(err.status);
 
               if (err.status >= 404) {
                 console.log('Some error occured');
               } else {
-                _this44.toastr.error('Some error occured, please try again!!', 'Error');
+                _this45.toastr.error('Some error occured, please try again!!', 'Error');
               }
             });
           }
@@ -10093,7 +10164,7 @@
         }, {
           key: "addEditFaq",
           value: function addEditFaq(id) {
-            var _this45 = this;
+            var _this46 = this;
 
             console.log("formmmmmmmmmmmm", this.inputTitle);
 
@@ -10110,11 +10181,11 @@
               this.Service.addEditFaq(obj).subscribe(function (res) {
                 console.log("Response==========", res);
 
-                _this45.Service.showMessage({
+                _this46.Service.showMessage({
                   message: "Added Successfully"
                 });
 
-                _this45.router.navigate(['/graduateFaq']);
+                _this46.router.navigate(['/graduateFaq']);
               });
             }
           }
@@ -10252,7 +10323,7 @@
         }, {
           key: "getcontent",
           value: function getcontent() {
-            var _this46 = this;
+            var _this47 = this;
 
             var obj = {
               article_id: this.route.snapshot.paramMap.get('id')
@@ -10261,7 +10332,7 @@
               console.log("object============>", obj);
               console.log("response============>", resp);
 
-              _this46.editArticleform.patchValue({
+              _this47.editArticleform.patchValue({
                 Image: resp.data.medias[0].url,
                 title: resp.data.article_title,
                 type: resp.data.article_type,
@@ -10271,59 +10342,19 @@
               });
 
               if (resp.data.article_type == "small_article") {
-                _this46.type_article = "small_article", _this46.HeadingImage2 = resp.data.medias[0].url;
+                _this47.type_article = "small_article", _this47.HeadingImage2 = resp.data.medias[0].url;
               } else if (resp.data.article_type == "large_article") {
-                _this46.type_article = "large_article", _this46.HeadingImage1 = resp.data.medias[0].url;
+                _this47.type_article = "large_article", _this47.HeadingImage1 = resp.data.medias[0].url;
               }
             });
           }
         }, {
           key: "setHeadingImage",
           value: function setHeadingImage(event) {
-            var _this47 = this;
-
-            console.log(event.target.files[0]);
-            this.type_article = "large_article";
-            var file = event.target.files[0];
-            var fileType = file.type.split("/")[0];
-            console.log(fileType);
-
-            if (fileType == "image") {
-              this.headingImageObj = event.target.files[0];
-              var formData = new FormData();
-              formData.append('image', this.headingImageObj);
-              this.Service.uploadbenefitmedia(formData).subscribe(function (resp) {
-                console.log("image response ==>", resp);
-
-                _this47.editArticleform.patchValue({
-                  Image: resp
-                });
-              });
-              var reader = new FileReader();
-
-              reader.onload = function (event) {
-                _this47.HeadingImage1 = event.target.result;
-              };
-
-              reader.readAsDataURL(this.headingImageObj);
-              this.editArticleform.get('county').clearValidators(); // 6. Clear All Validators
-
-              this.editArticleform.get('county').updateValueAndValidity();
-              console.log("rightextension", this.editArticleform);
-            } else {
-              this.editArticleform.get('county').setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]); // 5.Set Required Validator
-
-              this.editArticleform.get('county').updateValueAndValidity();
-              console.log("wrongextension", this.editArticleform);
-            }
-          }
-        }, {
-          key: "setHeadingImage1",
-          value: function setHeadingImage1(event) {
             var _this48 = this;
 
             console.log(event.target.files[0]);
-            this.type_article = "small_article";
+            this.type_article = "large_article";
             var file = event.target.files[0];
             var fileType = file.type.split("/")[0];
             console.log(fileType);
@@ -10342,7 +10373,47 @@
               var reader = new FileReader();
 
               reader.onload = function (event) {
-                _this48.HeadingImage2 = event.target.result;
+                _this48.HeadingImage1 = event.target.result;
+              };
+
+              reader.readAsDataURL(this.headingImageObj);
+              this.editArticleform.get('county').clearValidators(); // 6. Clear All Validators
+
+              this.editArticleform.get('county').updateValueAndValidity();
+              console.log("rightextension", this.editArticleform);
+            } else {
+              this.editArticleform.get('county').setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]); // 5.Set Required Validator
+
+              this.editArticleform.get('county').updateValueAndValidity();
+              console.log("wrongextension", this.editArticleform);
+            }
+          }
+        }, {
+          key: "setHeadingImage1",
+          value: function setHeadingImage1(event) {
+            var _this49 = this;
+
+            console.log(event.target.files[0]);
+            this.type_article = "small_article";
+            var file = event.target.files[0];
+            var fileType = file.type.split("/")[0];
+            console.log(fileType);
+
+            if (fileType == "image") {
+              this.headingImageObj = event.target.files[0];
+              var formData = new FormData();
+              formData.append('image', this.headingImageObj);
+              this.Service.uploadbenefitmedia(formData).subscribe(function (resp) {
+                console.log("image response ==>", resp);
+
+                _this49.editArticleform.patchValue({
+                  Image: resp
+                });
+              });
+              var reader = new FileReader();
+
+              reader.onload = function (event) {
+                _this49.HeadingImage2 = event.target.result;
               };
 
               reader.readAsDataURL(this.headingImageObj);
@@ -10360,7 +10431,7 @@
         }, {
           key: "postcontent",
           value: function postcontent() {
-            var _this49 = this;
+            var _this50 = this;
 
             var obj;
 
@@ -10405,7 +10476,7 @@
 
             console.log("objjjjjjjj===========>", obj);
             this.Service.editArticleContent(obj).subscribe(function (resp) {
-              _this49.Service.showMessage({
+              _this50.Service.showMessage({
                 message: "Submitted Successfully"
               });
             });
@@ -11545,7 +11616,7 @@
         }, {
           key: "getcontent",
           value: function getcontent() {
-            var _this50 = this;
+            var _this51 = this;
 
             var obj = {
               article_id: this.route.snapshot.paramMap.get('id')
@@ -11553,8 +11624,8 @@
             this.Service.getArticleContent(obj).subscribe(function (resp) {
               console.log("object============>", obj);
               console.log("response============>", resp);
-              _this50.articledetail = resp.data;
-              console.log("============>", _this50.articledetail);
+              _this51.articledetail = resp.data;
+              console.log("============>", _this51.articledetail);
             });
           }
         }]);
@@ -11805,7 +11876,7 @@
         }, {
           key: "setHeadingImage",
           value: function setHeadingImage(event) {
-            var _this51 = this;
+            var _this52 = this;
 
             console.log(event.target.files[0]);
             var file = event.target.files[0];
@@ -11819,14 +11890,14 @@
               this.Service.uploadbenefitmedia(formData).subscribe(function (resp) {
                 console.log("image response ==>", resp);
 
-                _this51.addVideoform.patchValue({
+                _this52.addVideoform.patchValue({
                   Image: resp
                 });
               });
               var reader = new FileReader();
 
               reader.onload = function (event) {
-                _this51.HeadingImage1 = event.target.result;
+                _this52.HeadingImage1 = event.target.result;
               };
 
               reader.readAsDataURL(this.headingImageObj);
@@ -11844,7 +11915,7 @@
         }, {
           key: "onVideoChange",
           value: function onVideoChange(e) {
-            var _this52 = this;
+            var _this53 = this;
 
             console.log(e);
             console.log(e.target.files[0].name);
@@ -11859,8 +11930,8 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this52.addVideoform.patchValue({
-                  video: _this52.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+                _this53.addVideoform.patchValue({
+                  video: _this53.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
                 });
               });
               this.addVideoform.get('county1').clearValidators(); // 6. Clear All Validators
@@ -11877,7 +11948,7 @@
         }, {
           key: "postcontent",
           value: function postcontent() {
-            var _this53 = this;
+            var _this54 = this;
 
             var obj;
 
@@ -11924,7 +11995,7 @@
 
             console.log("objjjjjjjj===========>", obj);
             this.Service.addArticleContent(obj).subscribe(function (resp) {
-              _this53.Service.showMessage({
+              _this54.Service.showMessage({
                 message: "Submitted Successfully"
               });
             });
@@ -13288,7 +13359,7 @@
         }, {
           key: "getcontent",
           value: function getcontent() {
-            var _this54 = this;
+            var _this55 = this;
 
             var obj = {
               article_id: this.route.snapshot.paramMap.get('id')
@@ -13298,30 +13369,30 @@
 
               console.log("object============>", obj);
               console.log("response============>", resp);
-              _this54.articledetail = resp.data;
-              console.log("articledetail============>", _this54.articledetail);
-              _this54.video = _this54.articledetail.medias.find(function (x) {
+              _this55.articledetail = resp.data;
+              console.log("articledetail============>", _this55.articledetail);
+              _this55.video = _this55.articledetail.medias.find(function (x) {
                 return x["for"] == 'video';
               });
-              _this54.video_url = (_a = _this54.video) === null || _a === void 0 ? void 0 : _a.url;
-              console.log("shubham============>", _this54.video_url);
-              _this54.videoSources = [{
-                src: _this54.video_url,
+              _this55.video_url = (_a = _this55.video) === null || _a === void 0 ? void 0 : _a.url;
+              console.log("shubham============>", _this55.video_url);
+              _this55.videoSources = [{
+                src: _this55.video_url,
                 type: 'video/mp4'
               }];
-              _this54.main_image = _this54.articledetail.medias.find(function (x) {
+              _this55.main_image = _this55.articledetail.medias.find(function (x) {
                 return x["for"] == 'main';
               });
-              console.log("============>", _this54.main_image);
-              _this54.image_url = (_b = _this54.main_image) === null || _b === void 0 ? void 0 : _b.url;
+              console.log("============>", _this55.main_image);
+              _this55.image_url = (_b = _this55.main_image) === null || _b === void 0 ? void 0 : _b.url;
               var postedBy = resp.data.posted_by;
-              console.log("=====================", _this54.hasWhiteSpace(postedBy));
+              console.log("=====================", _this55.hasWhiteSpace(postedBy));
 
-              if (!_this54.hasWhiteSpace(postedBy)) {
-                _this54.firstChar = postedBy.charAt(0);
-                console.log("firstchar==========>", _this54.firstChar);
-                _this54.secondChar = postedBy.charAt(1);
-                console.log("secondChar==========>", _this54.secondChar);
+              if (!_this55.hasWhiteSpace(postedBy)) {
+                _this55.firstChar = postedBy.charAt(0);
+                console.log("firstchar==========>", _this55.firstChar);
+                _this55.secondChar = postedBy.charAt(1);
+                console.log("secondChar==========>", _this55.secondChar);
               }
 
               console.log("posteBy========>", postedBy);
@@ -13329,10 +13400,10 @@
               console.log("var splitted========>", splitted);
               var splitted = postedBy.split(" ", 2);
               console.log("var splitted========>", splitted);
-              _this54.firstChar = splitted[0].charAt(0);
-              console.log("firstchar==========>", _this54.firstChar);
-              _this54.secondChar = splitted[1].charAt(0);
-              console.log("secondChar==========>", _this54.secondChar);
+              _this55.firstChar = splitted[0].charAt(0);
+              console.log("firstchar==========>", _this55.firstChar);
+              _this55.secondChar = splitted[1].charAt(0);
+              console.log("secondChar==========>", _this55.secondChar);
             });
           }
         }, {
@@ -13550,21 +13621,8 @@
         icon: 'icon-support',
         children: [{
           name: 'Reports',
-          url: '/',
-          icon: 'icon-report',
-          children: [{
-            name: 'Graduate Applications',
-            url: '/job-applicants-reports',
-            icon: 'icon-star'
-          }, {
-            name: 'Jobs',
-            url: '/',
-            icon: 'icon-star'
-          }, {
-            name: 'Messaging',
-            url: '/',
-            icon: 'icon-star'
-          }]
+          url: '/job-applicants-reports',
+          icon: 'icon-report'
         }, {
           name: 'Verification Submissions',
           url: '/verification-submissions',
@@ -14173,7 +14231,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add FAQ</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"inputTitle\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Category</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\"  formControlName=\"category_id\" [(ngModel)]=\"selectedValue\">\n\t\t\t\t\t\t\t\t\t\t<option *ngFor=\"let row of faq\"  [ngValue]=\"row._id\" [selected]=\"row._id==selectedValue\" >{{row?.name}}</option>\n\t\t\t\t\t\t                <!-- <option>My Account</option>\n\t\t\t\t\t\t                <option>Jobs</option>\n\t\t\t\t\t\t                <option>Permissions & Privacy</option> -->\n\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.category_id?.touched || inputTitle.controls.category_id?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.category_id?.invalid && inputTitle.controls.category_id?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please selected Category....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\" formControlName=\"title\" [(ngModel)]=\"title1\"  >\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.title?.touched || inputTitle.controls.title?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.title?.invalid && inputTitle.controls.title?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter title here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.description?.touched || inputTitle.controls.description?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.description?.invalid && inputTitle.controls.description?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter description here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button mat-stroked-button (click)=\"openSnackBar()\"  class=\"btn btn-primary mr-4\" (click)=\"addEditFaq(this.id)\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" routerLink='/graduateFaq'>Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
+      __webpack_exports__["default"] = "<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add FAQ</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"inputTitle\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Category</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\"  formControlName=\"category_id\" [(ngModel)]=\"selectedValue\">\n\t\t\t\t\t\t\t\t\t\t<option *ngFor=\"let row of faq\"  [ngValue]=\"row._id\" [selected]=\"row._id==selectedValue\" >{{row?.name}}</option>\n\t\t\t\t\t\t                <!-- <option>My Account</option>\n\t\t\t\t\t\t                <option>Jobs</option>\n\t\t\t\t\t\t                <option>Permissions & Privacy</option> -->\n\t\t\t\t\t\t            </select>\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.category_id?.touched || inputTitle.controls.category_id?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.category_id?.invalid && inputTitle.controls.category_id?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please selected Category....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\" formControlName=\"title\" [(ngModel)]=\"title1\"  >\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.title?.touched || inputTitle.controls.title?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.title?.invalid && inputTitle.controls.title?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter title here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Description</label>\n\t\t\t\t\t\t\t\t\t<textarea style=\"height: 100px;\"  class=\"form-control\" rows=\"4\" formControlName=\"description\"></textarea>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div *ngIf=\"(inputTitle.controls.description?.touched || inputTitle.controls.description?.dirty)\n\t\t\t\t\t\t\t\t\t&& inputTitle.controls.description?.invalid && inputTitle.controls.description?.errors?.required\" style=\"color:red\" >\n\t\t\t\t\t\t\t\t\t*Please enter description here....\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button mat-stroked-button (click)=\"openSnackBar()\"  class=\"btn btn-primary mr-4\" (click)=\"addEditFaq(this.id)\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" routerLink='/graduateFaq'>Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n";
       /***/
     },
 
@@ -14609,15 +14667,15 @@
         }, {
           key: "getReportDetail",
           value: function getReportDetail() {
-            var _this55 = this;
+            var _this56 = this;
 
             var obj = {
               id: this.route.snapshot.paramMap.get('id')
             };
             this.Service.ReportsDetail(obj).subscribe(function (data) {
               console.log("applications report detail is ====>", data);
-              _this55.Detail = data.data[0];
-              console.log("details========>>>", _this55.Detail);
+              _this56.Detail = data.data[0];
+              console.log("details========>>>", _this56.Detail);
             });
           }
         }, {
@@ -15281,7 +15339,7 @@
         }, {
           key: "getheadingdetail",
           value: function getheadingdetail() {
-            var _this56 = this;
+            var _this57 = this;
 
             console.log("khjhgjhgjhgjhghjghjgjhghjg");
             var obj = {
@@ -15291,7 +15349,7 @@
             this.Service.termsheading(obj).subscribe(function (data) {
               console.log("main data for terms is ====", data);
 
-              _this56.editheadingform.patchValue({
+              _this57.editheadingform.patchValue({
                 title: data.data.heading.title,
                 description: data.data.heading.description
               });
@@ -15309,7 +15367,7 @@
         }, {
           key: "editheading",
           value: function editheading() {
-            var _this57 = this;
+            var _this58 = this;
 
             console.log("sdsfsfdsfdfdfds", this.editheadingform);
 
@@ -15325,16 +15383,16 @@
                 console.log("fgdgfdgfdfgdfgd", res);
 
                 if (res.code == 200) {
-                  _this57._snackBar.open("Heading Updated Successfully", "close", {
+                  _this58._snackBar.open("Heading Updated Successfully", "close", {
                     duration: 2000
                   });
 
-                  _this57.location.back();
+                  _this58.location.back();
                 }
               }, function (err) {
                 console.log(err);
 
-                _this57._snackBar.open("Some Error Occued", "close", {
+                _this58._snackBar.open("Some Error Occued", "close", {
                   duration: 2000
                 });
               });
@@ -15855,7 +15913,7 @@
           this.logos = [];
           this.logosUrl = [];
           this.headerform = this._formBuilder.group({
-            'title': ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(200)]],
+            'title': ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(2000)]],
             'image': ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
             'is_visible': [''],
             'county': ['']
@@ -16012,7 +16070,7 @@
         }, {
           key: "onStoryFormimageChange",
           value: function onStoryFormimageChange(e) {
-            var _this58 = this;
+            var _this59 = this;
 
             console.log(e);
             console.log(e.target.files[0].name);
@@ -16027,8 +16085,8 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this58.storyform.patchValue({
-                  video: _this58.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+                _this59.storyform.patchValue({
+                  video: _this59.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
                 });
               });
               this.storyform.get('county').clearValidators(); // 6. Clear All Validators
@@ -16045,7 +16103,7 @@
         }, {
           key: "onHeaderFormChange",
           value: function onHeaderFormChange(e) {
-            var _this59 = this;
+            var _this60 = this;
 
             console.log(e);
             console.log(e.target.files[0].name);
@@ -16061,11 +16119,11 @@
               var formData = new FormData();
               formData.append('media', this.file);
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
-                _this59.headerform.patchValue({
+                _this60.headerform.patchValue({
                   image: resp.file_name
                 });
 
-                console.log("uploaded image==>", _this59.headerform.controls['image'].value);
+                console.log("uploaded image==>", _this60.headerform.controls['image'].value);
               });
               this.headerform.get('county').clearValidators(); // 6. Clear All Validators
 
@@ -16081,7 +16139,7 @@
         }, {
           key: "onSelectLogo",
           value: function onSelectLogo(e) {
-            var _this60 = this;
+            var _this61 = this;
 
             console.log("event", e);
             console.log("logos response ==>", e.addedFiles[0]);
@@ -16093,13 +16151,13 @@
             this.Service.uploadmedia1(formData).subscribe(function (resp) {
               console.log("video response ==>", resp);
 
-              _this60.logosUrl.push(resp.file_name);
+              _this61.logosUrl.push(resp.file_name);
             });
           }
         }, {
           key: "setHeadingImage",
           value: function setHeadingImage(e) {
-            var _this61 = this;
+            var _this62 = this;
 
             var file = e.target.files[0];
             var fileType = file.type.split("/")[0];
@@ -16111,7 +16169,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this61.newRegister.controls['image'].setValue(resp.file_name);
+                _this62.newRegister.controls['image'].setValue(resp.file_name);
               });
               this.newRegister.get('county').clearValidators(); // 6. Clear All Validators
 
@@ -16127,7 +16185,7 @@
         }, {
           key: "onEmployerChangeImage",
           value: function onEmployerChangeImage(e, index) {
-            var _this62 = this;
+            var _this63 = this;
 
             console.log("ind", index);
             var file = e.target.files[0];
@@ -16141,7 +16199,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this62.employerArray.at(index).patchValue({
+                _this63.employerArray.at(index).patchValue({
                   image: resp.file_name
                 });
               });
@@ -16161,7 +16219,7 @@
         }, {
           key: "onGraduatesChange",
           value: function onGraduatesChange(e, index) {
-            var _this63 = this;
+            var _this64 = this;
 
             console.log("ind", index);
             var file = e.target.files[0];
@@ -16175,7 +16233,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this63.graduateArray.at(index).patchValue({
+                _this64.graduateArray.at(index).patchValue({
                   image: resp.file_name
                 });
               });
@@ -16195,7 +16253,7 @@
         }, {
           key: "onSelectVideo",
           value: function onSelectVideo(e) {
-            var _this64 = this;
+            var _this65 = this;
 
             var file = e.target.files[0];
             var fileType = file.type.split("/")[0];
@@ -16208,8 +16266,8 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this64.successform.patchValue({
-                  video: _this64.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
+                _this65.successform.patchValue({
+                  video: _this65.sanitizer.bypassSecurityTrustResourceUrl(resp.file_name)
                 });
               });
               this.successform.get('county').clearValidators(); // 6. Clear All Validators
@@ -16226,7 +16284,7 @@
         }, {
           key: "onCompaniesChangeImage",
           value: function onCompaniesChangeImage(e) {
-            var _this65 = this;
+            var _this66 = this;
 
             var file = e.target.files[0];
             var fileType = file.type.split("/")[0];
@@ -16239,7 +16297,7 @@
               this.Service.uploadmedia1(formData).subscribe(function (resp) {
                 console.log("video response ==>", resp);
 
-                _this65.Companies.controls['image'].setValue(resp.file_name);
+                _this66.Companies.controls['image'].setValue(resp.file_name);
               });
               this.Companies.get('county').clearValidators(); // 6. Clear All Validators
 
@@ -16261,34 +16319,34 @@
         }, {
           key: "homepagecontent",
           value: function homepagecontent() {
-            var _this66 = this;
+            var _this67 = this;
 
             this.Service.homecontent().subscribe(function (data) {
               console.log("home page content is ====>", data); // this.data=data.data
               // this.data=JSON.parse(this.data)
               // console.log("home page content is new====>", this.data)
 
-              _this66.headerform.patchValue({
+              _this67.headerform.patchValue({
                 title: data.data.home_header_section.title,
                 image: data.data.home_header_section.image,
                 is_visible: data.data.home_header_section.is_visible
               });
 
-              _this66.storyform.patchValue({
+              _this67.storyform.patchValue({
                 title1: data.data.our_story_section.title,
                 description: data.data.our_story_section.description,
                 name: data.data.our_story_section.posted_by,
-                video: _this66.sanitizer.bypassSecurityTrustResourceUrl(data.data.our_story_section.video),
+                video: _this67.sanitizer.bypassSecurityTrustResourceUrl(data.data.our_story_section.video),
                 designation: data.data.our_story_section.position,
                 is_visible: data.data.our_story_section.is_visible
               });
 
-              _this66.curatedform.patchValue({
+              _this67.curatedform.patchValue({
                 heading: data.data.section_3.heading,
                 is_visible: data.data.section_3.is_visible
               });
 
-              _this66.newRegister.patchValue({
+              _this67.newRegister.patchValue({
                 heading: data.data.section_7.heading,
                 text: data.data.section_7.text,
                 description: data.data.section_7.description,
@@ -16296,25 +16354,25 @@
                 is_visible: data.data.section_7.is_visible
               });
 
-              _this66.successform.patchValue({
+              _this67.successform.patchValue({
                 heading: data.data.section_6.heading,
-                video: _this66.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video),
+                video: _this67.sanitizer.bypassSecurityTrustResourceUrl(data.data.section_6.video),
                 is_visible: data.data.section_6.is_visible
               });
 
-              _this66.Companies.patchValue({
+              _this67.Companies.patchValue({
                 heading: data.data.section_5.heading,
                 image: data.data.section_5.image,
                 is_visible: data.data.section_5.is_visible
               });
 
-              _this66.mainBenefitsForBoth.patchValue({
+              _this67.mainBenefitsForBoth.patchValue({
                 heading: data.data.section_4.heading,
                 is_visible: data.data.section_4.is_visible
               });
 
               data.data.section_4.tab_1.forEach(function (element) {
-                _this66.employerArray.push(_this66._formBuilder.group({
+                _this67.employerArray.push(_this67._formBuilder.group({
                   heading: [element.heading, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
                   Description: [element.Description, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(500)]],
                   image: [element.image, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
@@ -16323,7 +16381,7 @@
                 }));
               });
               data.data.section_4.tab_2.forEach(function (element) {
-                _this66.graduateArray.push(_this66._formBuilder.group({
+                _this67.graduateArray.push(_this67._formBuilder.group({
                   heading: [element.heading, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
                   Description: [element.Description, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(500)]],
                   image: [element.image, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
@@ -16332,14 +16390,14 @@
                 }));
               });
               data.data.section_6.description.forEach(function (element) {
-                _this66.discriptionArray.push(_this66._formBuilder.control(element, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]));
+                _this67.discriptionArray.push(_this67._formBuilder.control(element, [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]));
               });
             });
           }
         }, {
           key: "postHomePageContent",
           value: function postHomePageContent(type, Secondtype) {
-            var _this67 = this;
+            var _this68 = this;
 
             var obj;
             console.log("type==>", type, this.headerform);
@@ -16508,7 +16566,7 @@
             }
 
             this.Service.postHomePageContent(obj).subscribe(function (resp) {
-              _this67.Service.showMessage({
+              _this68.Service.showMessage({
                 message: "Submitted Successfully"
               });
             });
@@ -16704,7 +16762,7 @@
         }, {
           key: "sendemail",
           value: function sendemail() {
-            var _this68 = this;
+            var _this69 = this;
 
             console.log("sdsfsfdsfdfdfds", this.forgotpwdform);
             var obj = {
@@ -16714,14 +16772,14 @@
               console.log("fgdgfdgfdfgdfgd", res); // localStorage.setItem("admin_details",JSON.stringify(res.obj.email))
 
               if (res.code == 200) {
-                _this68.Service.showMessage({
+                _this69.Service.showMessage({
                   message: "Email Sent Succsessfully"
                 });
               }
             }, function (err) {
               console.log("hjjhgjhghjgjhghjgjhghjg", err);
 
-              _this68.Service.showMessage({
+              _this69.Service.showMessage({
                 message: err.error.errors.msg ? err.error.errors.msg : 'Something went Wrong'
               });
             });
@@ -17233,7 +17291,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<section class=\"edit-employer-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Help Query</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<!-- <div class=\"text-center edit-profile\">\n\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined dp-icon\">edit</mat-icon>\n\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"dp-input\">\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t<div class=\"edit-form\">\n\t\t\t\t\t\t\t\t<form>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form-fields\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>First Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.first_name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Last Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.last_name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Email Address</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.email}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Enquiry Type</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <select class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Employer</option>\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Graduate</option>\n\t\t\t\t\t\t\t\t\t\t\t\t            </select> -->\n\t\t\t\t\t\t\t\t\t\t\t\t            <input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\" {{user?.enquiry_subject.name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Enquiry</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"3\" readonly=\"\">{{user?.enquiry}}</textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"user?.is_replied\" class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Admin Reply</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"3\" readonly=\"\">{{user?.reply}}</textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrdwrp\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrd\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_enqr d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_wrp d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_img mr-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Tanveer Singh</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_dtm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Mar 09, 2:14 PM</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenq_msg py-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments (2)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs mb-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqr_rply text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" ><i class=\"fa fa-reply mr-2\"></i>Reply</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"admnusr_rply\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group mt-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"5\" placeholder=\"Reply here\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqr_rply text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" >Send</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrd\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_enqr d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_wrp d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_img mr-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Tanveer Singh</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_dtm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Mar 09, 2:14 PM</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenq_msg py-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments (2)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs mb-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<hr>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_wrp\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_dtls\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Mar 09, 16:04 PM Akshit Jain </b>wrote</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_rply\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Hey,</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"chck_icn ml-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"19\" height=\"19\" viewBox=\"0 0 19 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M15.8333 2.375L7.125 13.4583L2.375 7.125\" stroke=\"#26C296\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" routerLink='/help-management'>Back</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n";
+      __webpack_exports__["default"] = "<section class=\"edit-employer-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"card\">\n\t\t\t\t\t<div class=\"card-header\">\n\t\t\t\t\t\t<strong>Help Query</strong>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-body\">\n\t\t\t\t\t\t<div class=\"edit-wrapper\">\n\t\t\t\t\t\t\t<!-- <div class=\"text-center edit-profile\">\n\t\t\t\t\t\t\t\t<span class=\"user_dp position-relative\">\n\t\t\t\t\t\t\t\t\t<img src=\"assets/img/avatars/8.jpg\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t<mat-icon class=\"material-icons-outlined dp-icon\">edit</mat-icon>\n\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"dp-input\">\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t<div class=\"edit-form\">\n\t\t\t\t\t\t\t\t<form>\n\t\t\t\t\t\t\t\t\t<div class=\"edit-form-fields\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row justify-content-center\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>First Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.first_name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Last Name</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.last_name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Email Address</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\"{{user?.email}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Enquiry Type</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<!-- <select class=\"form-control\">\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Employer</option>\n\t\t\t\t\t\t\t\t\t\t\t\t                <option>Graduate</option>\n\t\t\t\t\t\t\t\t\t\t\t\t            </select> -->\n\t\t\t\t\t\t\t\t\t\t\t\t            <input type=\"text\" name=\"\" class=\"form-control\" readonly=\"\" value=\" {{user?.enquiry_subject?.name}}\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Enquiry</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"3\" readonly=\"\">{{user.enquiry ? user.enquiry : user.message}}</textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"user?.is_replied\" class=\"col-md-6\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Admin Reply</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"3\" readonly=\"\">{{user?.reply}}</textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrdwrp\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrd\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_enqr d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_wrp d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_img mr-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Tanveer Singh</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_dtm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Mar 09, 2:14 PM</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenq_msg py-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments (2)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs mb-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqr_rply text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" ><i class=\"fa fa-reply mr-2\"></i>Reply</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"admnusr_rply\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group mt-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<textarea class=\"form-control\" rows=\"5\" placeholder=\"Reply here\"></textarea>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqr_rply text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-primary\" >Send</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_thrd\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_enqr d-flex justify-content-between\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_wrp d-flex align-items-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usr_img mr-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Tanveer Singh</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenqr_dtm\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Mar 09, 2:14 PM</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"usrenq_msg py-3\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments (2)</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs mb-2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small class=\"fl_sz\">20 MB</small>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<hr>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_wrp\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_dtls\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p><b>Mar 09, 16:04 PM Akshit Jain </b>wrote</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"enqadmn_rply\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Hey,</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Attachments</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"file_icons_pw d-flex align-items-center upld_prcs\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"32\" viewBox=\"0 0 25 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M21.1761 5.17688C20.8764 4.88148 20.5691 4.58109 20.2671 4.27585C19.9625 3.97307 19.663 3.66538 19.3682 3.36506C17.2671 1.21606 16.0158 0 14.7104 0H4.94144C2.2349 0 0.0293812 2.20931 0.0293812 4.92326V24.6657C0.0293812 25.3182 0.55831 25.8471 1.21078 25.8471C1.86324 25.8471 2.39217 25.3182 2.39217 24.6657V4.90854C2.39217 3.54972 3.49247 2.44691 4.8482 2.44691L13.8446 2.44195C14.7191 2.44195 14.7191 3.75896 14.7191 4.85069V8.60098C14.7104 9.84532 14.7104 9.8318 15.9471 9.8318H19.6312C20.8555 9.8318 22.0872 9.83795 22.0872 11.0626V27.0767C22.0872 28.4356 20.9869 29.5384 19.6312 29.5384H4.8482C3.49247 29.5384 2.39217 28.4356 2.39217 27.0767V24.3343C2.39217 23.6737 1.85667 23.1382 1.19609 23.1382C0.535506 23.1382 0 23.6737 0 24.3343V27.0767C0 29.7907 2.20429 32 4.91206 32H19.6213C22.329 32 24.5333 29.7907 24.5333 27.0767V9.84532C24.5333 8.5382 23.3202 7.2828 21.1761 5.17688Z\" fill=\"#9A9A9A\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"prew_info mr-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"pw_accnt\">NathanJones_HelpDoc.pdf</p>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"chck_icn ml-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"19\" height=\"19\" viewBox=\"0 0 19 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M15.8333 2.375L7.125 13.4583L2.375 7.125\" stroke=\"#26C296\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" routerLink='/help-management'>Back</button>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n";
       /***/
     },
 

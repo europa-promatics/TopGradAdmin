@@ -173,7 +173,7 @@ import { ReportsComponent } from './pages/support-management/reports/reports.com
 
 @NgModule({
   imports: [
-    BrowserModule,
+     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
