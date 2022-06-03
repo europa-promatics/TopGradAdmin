@@ -28,10 +28,21 @@
 							
 									</select>
 								</div>
-								<div *ngIf="(addArticleform.controls.type.touched || addArticleform.controls.type.dirty) && addArticleform.controls.type.invalid && addArticleform.controls.type?.errors?.required  " class="invalid">
-									*Please enter type
+								<div class="form-group">
+									<label>Category</label>
+									<select class="form-control" placeholder="Enter Type" formControlName="category" (change)="category($event)">
+										<option value="resumes">Resumes</option>
+										<option value="cover_letters">Cover Letters</option>
+							            <option value="internships">Internships</option>
+										<option value="job_interviews">Job Interviews</option>
+										<option value="job_trends">Job Trends</option>
+										<option value="linked_in">LinkedIn</option>
+									</select>
 								</div>
-								<div *ngIf="(addArticleform.controls.type.touched || addArticleform.controls.type.dirty) && addArticleform.controls.type.invalid && addArticleform.controls.type?.errors?.maxlength  " class="invalid">
+								<div *ngIf="(addArticleform.controls.category.touched || addArticleform.controls.category.dirty) && addArticleform.controls.category.invalid && addArticleform.controls.category?.errors?.required  " class="invalid">
+									*Please enter category
+								</div>
+								<div *ngIf="(addArticleform.controls.category.touched || addArticleform.controls.category.dirty) && addArticleform.controls.category.invalid && addArticleform.controls.category?.errors?.maxlength  " class="invalid">
 									**Maximum Length should be 50 characters
 								</div>
 								<div class="form-group">

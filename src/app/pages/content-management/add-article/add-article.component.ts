@@ -15,6 +15,7 @@ export class AddArticleComponent implements OnInit {
   headingImageObj: any;
   HeadingImage2: any;
   type_article:any= '';
+  category_type: any;
 
 
   constructor(private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
@@ -22,6 +23,7 @@ export class AddArticleComponent implements OnInit {
   addArticleform = this.fb.group({
     title: ['', [Validators.required, Validators.maxLength(200)]],
     type: ['', [Validators.required, Validators.maxLength(50)]],
+    category: ['', [Validators.required, Validators.maxLength(50)]],
     description: ['', [Validators.required, Validators.maxLength(5000)]],
     postedby: ['', [Validators.required, Validators.maxLength(50)]],
     postdescription: ['', [Validators.required, Validators.maxLength(5000)]],
@@ -39,6 +41,13 @@ export class AddArticleComponent implements OnInit {
     console.log(event.target.value);
     this.type_article = event.target.value;
     console.log("type============>",this.type_article);
+    
+  }
+
+  category(event){
+    console.log(event.target.value);
+    this.category_type = event.target.value;
+    console.log("type============>",this.category_type);
     
   }
 
@@ -120,6 +129,7 @@ export class AddArticleComponent implements OnInit {
         const formdata = new FormData()
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_type",  this.addArticleform.controls['type'].value)
+          formdata.append("category",  this.addArticleform.controls['category'].value)
           formdata.append("article_title",  this.addArticleform.controls['title'].value)
           formdata.append("article_description", this.addArticleform.controls['description'].value)
           formdata.append("posted_by", this.addArticleform.controls['postedby'].value)

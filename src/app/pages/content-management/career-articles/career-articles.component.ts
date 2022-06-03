@@ -44,7 +44,7 @@ const POSTEDBY: string[] = [
 })
 export class CareerArticlesComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'image', 'postedBy', 'title','type', 'action'];
+  displayedColumns: string[] = ['select', 'id', 'image', 'postedBy', 'title','category','type', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   
