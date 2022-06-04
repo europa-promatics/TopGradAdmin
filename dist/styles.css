@@ -6603,7 +6603,7 @@ a.plyr__control{text-decoration:none}
 .ng-dropdown-panel.ng-select-top .ng-dropdown-panel-items .ng-option:first-child{border-top-right-radius:4px;border-top-left-radius:4px}
 .ng-dropdown-panel .ng-dropdown-header{border-bottom:1px solid #ccc;padding:5px 7px}
 .ng-dropdown-panel .ng-dropdown-footer{border-top:1px solid #ccc;padding:5px 7px}
-.ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup{-webkit-user-select:none;-moz-user-select:none;user-select:none;padding:8px 10px;font-weight:500;color:rgba(0,0,0,0.54);cursor:pointer}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:8px 10px;font-weight:500;color:rgba(0,0,0,0.54);cursor:pointer}
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup.ng-option-disabled{cursor:default}
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup.ng-option-marked{background-color:#f5faff}
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup.ng-option-selected,.ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup.ng-option-selected.ng-option-marked{background-color:#ebf5ff;font-weight:600}
@@ -8185,6 +8185,9 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   caret-color: #3f51b5;
 }
 .mat-input-element::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.42);
+}
+.mat-input-element:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.42);
 }
 .mat-input-element::placeholder {
@@ -10545,6 +10548,10 @@ pre code {
   color: #73818f;
   opacity: 1;
 }
+.form-control:-ms-input-placeholder {
+  color: #73818f;
+  opacity: 1;
+}
 .form-control::placeholder {
   color: #73818f;
   opacity: 1;
@@ -10931,6 +10938,7 @@ textarea.form-control {
   vertical-align: middle;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -19472,6 +19480,7 @@ base-chart.chart {
 canvas {
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .chartjs-tooltip {
@@ -19978,6 +19987,9 @@ canvas {
   border: 0;
 }
 .sidebar .sidebar-form .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.sidebar .sidebar-form .form-control:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 .sidebar .sidebar-form .form-control::placeholder {

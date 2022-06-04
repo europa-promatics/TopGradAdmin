@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-edit-video',
@@ -20,10 +20,11 @@ export class EditVideoComponent implements OnInit {
   selectedfile2: any;
   headingImageObj: any;
 
-  constructor(private sanitizer:DomSanitizer, private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) {
+  constructor(private _location: Location,private sanitizer:DomSanitizer, private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) {
     this.editVideoform = this.fb.group({
       title: ['', [Validators.required, Validators.maxLength(200)]],
       type: ['', [Validators.required, Validators.maxLength(50)]],
+      category: ['', [Validators.required, Validators.maxLength(50)]],
       description: ['', [Validators.required, Validators.maxLength(5000)]],
       postedby: ['', [Validators.required, Validators.maxLength(50)]],
       postdescription: ['', [Validators.required, Validators.maxLength(5000)]],
@@ -64,7 +65,7 @@ export class EditVideoComponent implements OnInit {
       // setTimeout(function(){
         this.editVideoform.patchValue({
           Image:this.main_image?.url,
-          
+          category:resp.data.category,
           title:resp.data.article_title,
           type:resp.data.article_type,
           description:resp.data.article_description,
@@ -171,6 +172,7 @@ export class EditVideoComponent implements OnInit {
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_id",  this.route.snapshot.paramMap.get('id'))
           formdata.append("article_type",  this.editVideoform.controls['type'].value)
+          formdata.append("category",  this.editVideoform.controls['category'].value)
           formdata.append("article_title",  this.editVideoform.controls['title'].value)
           formdata.append("article_description", this.editVideoform.controls['description'].value)
           formdata.append("posted_by", this.editVideoform.controls['postedby'].value)
@@ -219,6 +221,10 @@ export class EditVideoComponent implements OnInit {
 
       this.Service.showMessage({ message: "Submitted Successfully" })
     })
+  }
+
+  back(){
+    this._location.back();
   }
 
 

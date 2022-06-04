@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { PlyrComponent } from 'ngx-plyr';
+import {Location} from '@angular/common';
 
 
 @Component({
@@ -33,7 +34,7 @@ plyr: PlyrComponent;
   // plyr: PlyrComponent;
   author: any = {}
   videoSources: { src: string; type: string; }[];
-  constructor(private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) {
+  constructor(private _location: Location,private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) {
     
    }
 
@@ -152,7 +153,9 @@ plyr: PlyrComponent;
   
  
   
-   
+   back(){
+    this._location.back();
+   }
 
 
 }

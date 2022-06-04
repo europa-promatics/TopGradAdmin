@@ -58,6 +58,7 @@ export class CareerArticlesComponent implements OnInit {
   search: any='';
   topPage: any;
   event: any;
+  categoryName: string;
 
   constructor(private Service: TopgradserviceService, public dialog: MatDialog, private fb: FormBuilder, private route: ActivatedRoute) {
   	// Create 100 users
@@ -117,7 +118,65 @@ export class CareerArticlesComponent implements OnInit {
        console.log("Response of all the service listing>>>>>", data);
         this.sortedData=data.data
         this.totalRecords = data.count
-     })
+
+        for(let i=0;i<this.sortedData.length;i++){
+          var new_article = this.sortedData[i].article_type
+          var type_category = this.sortedData[i]?.category
+          console.log("type_category  outside    =======>>>",type_category);
+          
+          console.log("new_article=============>", new_article)
+          if(new_article =="small_article"){
+            this.article= "Small Article"
+            console.log("this.article small===========>",this.article);
+            this.sortedData[i].article_name=(this.article);
+            
+          }
+          else if(new_article == "large_article"){
+            this.article= "Large Article"
+            console.log("this.article large===========>",this.article);
+            this.sortedData[i].article_name=(this.article);
+          }
+  
+          if(type_category == 'resumes'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Resumes'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'cover_letters'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Cover Letters'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'internships'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Internships'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'job_interviews'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Job Interviews'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'job_trends'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Job Trends'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'linked_in'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Linked In'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+        }
+     }, err => {
+      console.log(err.status)
+      if (err.status >= 404) {
+        console.log('Some error occured')
+      } else {
+        console.log('Internet Connection Error')
+      }
+    
+    })
   }
   getPageSizeOptions() {
     return [5,10,50,100];
@@ -184,6 +243,9 @@ export class CareerArticlesComponent implements OnInit {
       this.totalRecords = res.count
       for(let i=0;i<this.sortedData.length;i++){
         var new_article = this.sortedData[i].article_type
+        var type_category = this.sortedData[i]?.category
+        console.log("type_category  outside    =======>>>",type_category);
+        
         console.log("new_article=============>", new_article)
         if(new_article =="small_article"){
           this.article= "Small Article"
@@ -195,6 +257,37 @@ export class CareerArticlesComponent implements OnInit {
           this.article= "Large Article"
           console.log("this.article large===========>",this.article);
           this.sortedData[i].article_name=(this.article);
+        }
+
+        if(type_category == 'resumes'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Resumes'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'cover_letters'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Cover Letters'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'internships'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Internships'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'job_interviews'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Job Interviews'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'job_trends'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Job Trends'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'linked_in'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Linked In'
+          this.sortedData[i].category_name=(this.categoryName);
         }
       }
       

@@ -4,6 +4,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { TopgradserviceService } from '../../../topgradservice.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-add-article',
@@ -18,7 +19,7 @@ export class AddArticleComponent implements OnInit {
   category_type: any;
 
 
-  constructor(private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
+  constructor(private _location: Location,private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
   
   addArticleform = this.fb.group({
     title: ['', [Validators.required, Validators.maxLength(200)]],
@@ -174,6 +175,10 @@ export class AddArticleComponent implements OnInit {
 
       this.Service.showMessage({ message: "Submitted Successfully" })
     })
+  }
+
+  back(){
+    this._location.back();
   }
 
 }

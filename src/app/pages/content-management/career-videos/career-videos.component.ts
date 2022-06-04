@@ -43,7 +43,7 @@ const POSTEDBY: string[] = [
 })
 export class CareerVideosComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'image', 'postedBy', 'title','type', 'action'];
+  displayedColumns: string[] = ['select', 'id', 'image', 'postedBy', 'title','category','type', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   
@@ -61,6 +61,7 @@ export class CareerVideosComponent implements OnInit {
   video_url: any;
   image_url: any;
   image: any;
+  categoryName: string;
  
 
   constructor(private Service: TopgradserviceService, public dialog: MatDialog, private fb: FormBuilder, private route: ActivatedRoute) {
@@ -125,6 +126,7 @@ export class CareerVideosComponent implements OnInit {
         this.totalRecords = data.count
         for(let i=0;i<this.sortedData.length;i++){
           var new_article = this.sortedData[i].article_type
+          var type_category = this.sortedData[i]?.category
           console.log("new_article=============>", new_article)
           if(new_article =="small_video_article"){
             this.article= "Small Video"
@@ -142,6 +144,37 @@ export class CareerVideosComponent implements OnInit {
             this.video=this.sortedData[i].medias.find(x => x.for == 'video');
             this.video_url=this.video?.url
             this.sortedData[i].url=(this.video_url);
+          }
+
+          if(type_category == 'resumes'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Resumes'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'cover_letters'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Cover Letters'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'internships'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Internships'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'job_interviews'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Job Interviews'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'job_trends'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Job Trends'
+            this.sortedData[i].category_name=(this.categoryName);
+          }
+          if(type_category == 'linked_in'){
+            console.log("type_category  inside condition    =======>>>",type_category);
+            this.categoryName = 'Linked In'
+            this.sortedData[i].category_name=(this.categoryName);
           }
         }
         console.log("data shubham==>",this.sortedData);
@@ -212,6 +245,7 @@ export class CareerVideosComponent implements OnInit {
       this.totalRecords = res.count
       for(let i=0;i<this.sortedData.length;i++){
         var new_article = this.sortedData[i].article_type
+        var type_category = this.sortedData[i]?.category
         console.log("new_article=============>", new_article)
         if(new_article =="small_video_article"){
           this.article= "Small Video"
@@ -229,6 +263,37 @@ export class CareerVideosComponent implements OnInit {
           this.video=this.sortedData[i].medias.find(x => x.for == 'video');
           this.video_url=this.video?.url
           this.sortedData[i].url=(this.video_url);
+        }
+
+        if(type_category == 'resumes'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Resumes'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'cover_letters'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Cover Letters'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'internships'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Internships'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'job_interviews'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Job Interviews'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'job_trends'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Job Trends'
+          this.sortedData[i].category_name=(this.categoryName);
+        }
+        if(type_category == 'linked_in'){
+          console.log("type_category  inside condition    =======>>>",type_category);
+          this.categoryName = 'Linked In'
+          this.sortedData[i].category_name=(this.categoryName);
         }
       }
       console.log("data shubham==>",this.sortedData);

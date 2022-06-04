@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { TopgradserviceService } from '../../../topgradservice.service';
+import {Location} from '@angular/common';
 // declare var $:any
 import * as $ from "jquery";
 
@@ -17,7 +18,7 @@ export class EditArticleComponent implements OnInit {
   
   headingImageObj: any;
 
-  constructor(private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
+  constructor(private _location: Location,private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
   type_article:any;
   HeadingImage1:any;
   HeadingImage2:any;
@@ -25,6 +26,7 @@ export class EditArticleComponent implements OnInit {
   editArticleform = this.fb.group({
     title: ['', [Validators.required, Validators.maxLength(200)]],
     type: ['', [Validators.required, Validators.maxLength(50)]],
+    category: ['', [Validators.required, Validators.maxLength(50)]],
     description: ['', [Validators.required, Validators.maxLength(5000)]],
     postedby: ['', [Validators.required, Validators.maxLength(50)]],
     postdescription: ['', [Validators.required, Validators.maxLength(5000)]],
@@ -65,6 +67,7 @@ export class EditArticleComponent implements OnInit {
         Image:resp.data.medias[0].url,
         title:resp.data.article_title,
         type:resp.data.article_type,
+        category:resp.data.category,
         description:resp.data.article_description,
         postedby:resp.data.posted_by,
         postdescription:resp.data.posted_description
@@ -163,6 +166,7 @@ export class EditArticleComponent implements OnInit {
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_id",  this.route.snapshot.paramMap.get('id'))
           formdata.append("article_type",  this.editArticleform.controls['type'].value)
+          formdata.append("category",  this.editArticleform.controls['category'].value)
           formdata.append("article_title",  this.editArticleform.controls['title'].value)
           formdata.append("article_description", this.editArticleform.controls['description'].value)
           formdata.append("posted_by", this.editArticleform.controls['postedby'].value)
@@ -207,6 +211,11 @@ export class EditArticleComponent implements OnInit {
 
       this.Service.showMessage({ message: "Submitted Successfully" })
     })
+  }
+
+
+  back(){
+    this._location.back();
   }
 
 }

@@ -61,6 +61,14 @@
               </ng-container>
 
                <!-- worktype Column -->
+               <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+                <td mat-cell *matCellDef="let row" class="td-width"> {{row?.category_name}} </td>
+              </ng-container>
+              
+              <!-- worktype Column -->
+
+               <!-- worktype Column -->
                <ng-container matColumnDef="type">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Type</th>
                 <td mat-cell *matCellDef="let row" class="td-width"> {{row.article_name}} </td>

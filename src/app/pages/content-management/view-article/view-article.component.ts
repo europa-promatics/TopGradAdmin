@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { TopgradserviceService } from '../../../topgradservice.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-view-article',
@@ -14,7 +15,7 @@ import { TopgradserviceService } from '../../../topgradservice.service';
 export class ViewArticleComponent implements OnInit {
   articledetail: any;
 
-  constructor(private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
+  constructor(private _location: Location,private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.getcontent();
@@ -36,6 +37,10 @@ export class ViewArticleComponent implements OnInit {
       
      })
     
+  }
+
+  back(){
+    this._location.back();
   }
 
 

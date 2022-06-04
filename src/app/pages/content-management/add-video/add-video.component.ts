@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { TopgradserviceService } from '../../../topgradservice.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-add-video',
@@ -17,11 +18,12 @@ export class AddVideoComponent implements OnInit {
   HeadingImage1: any;
   selectedfile2: any;
 
-  constructor(private sanitizer: DomSanitizer,private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
+  constructor(private _location: Location,private sanitizer: DomSanitizer,private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
 
   addVideoform = this.fb.group({
     title: ['', [Validators.required, Validators.maxLength(200)]],
     type: ['', [Validators.required, Validators.maxLength(50)]],
+    category: ['', [Validators.required, Validators.maxLength(50)]],
     description: ['', [Validators.required, Validators.maxLength(5000)]],
     postedby: ['', [Validators.required, Validators.maxLength(50)]],
     postdescription: ['', [Validators.required, Validators.maxLength(5000)]],
@@ -115,6 +117,7 @@ export class AddVideoComponent implements OnInit {
         const formdata = new FormData()
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_type",  this.addVideoform.controls['type'].value)
+          formdata.append("category",  this.addVideoform.controls['category'].value)
           formdata.append("article_title",  this.addVideoform.controls['title'].value)
           formdata.append("article_description", this.addVideoform.controls['description'].value)
           formdata.append("posted_by", this.addVideoform.controls['postedby'].value)
@@ -163,6 +166,10 @@ export class AddVideoComponent implements OnInit {
 
       this.Service.showMessage({ message: "Submitted Successfully" })
     })
+  }
+
+  back(){
+    this._location.back();
   }
 
 }

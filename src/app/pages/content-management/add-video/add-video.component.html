@@ -35,6 +35,23 @@
 									**Maximum Length should be 50 characters
 								</div>
 								<div class="form-group">
+									<label>Category</label>
+									<select class="form-control" placeholder="Enter Type" formControlName="category">
+										<option value="resumes">Resumes</option>
+										<option value="cover_letters">Cover Letters</option>
+							            <option value="internships">Internships</option>
+										<option value="job_interviews">Job Interviews</option>
+										<option value="job_trends">Job Trends</option>
+										<option value="linked_in">LinkedIn</option>
+									</select>
+								</div>
+								<div *ngIf="(addVideoform.controls.category.touched || addVideoform.controls.category.dirty) && addVideoform.controls.category.invalid && addVideoform.controls.category?.errors?.required  " class="invalid">
+									*Please enter category
+								</div>
+								<div *ngIf="(addVideoform.controls.category.touched || addVideoform.controls.category.dirty) && addVideoform.controls.category.invalid && addVideoform.controls.category?.errors?.maxlength  " class="invalid">
+									**Maximum Length should be 50 characters
+								</div>
+								<div class="form-group">
 									<label>Video Description</label>
 									<editor formControlName="description"></editor>
 								</div>
@@ -119,7 +136,7 @@
 								</div>
 								<div class="edit-btns d-flex justify-content-end">
 									<button class="btn btn-primary mr-4" (click)="postcontent()">Save</button>
-									<button class="btn btn-primary">Back</button>
+									<button class="btn btn-primary" (click)="back()">Back</button>
 								</div>
 		      				</div>
 		      			</form>
