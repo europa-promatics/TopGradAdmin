@@ -104,14 +104,15 @@
 								</div>
 								<div class="form-group" *ngIf="type_article =='large_video_article'">
 									<label>Video</label>
-									<div class="slider-video-cntnt">
+									<div class="slider-video-cntnt" *ngIf = "!youtubevideo">
 										<div class="prev-upld-img">
+											<img src="assets/img/video-thumb.png"  class="img-fluid" *ngIf="!addVideoform.controls['video'].value">
 											<iframe *ngIf="addVideoform.controls['video'].value" width="420"
 												height="315" [src]="addVideoform.controls['video'].value"
 												frameborder="0" allowfullscreen ></iframe>
 											<div class="upload-imag text-center">
 												<button class="btn-primary btn mt-3 position-relative">
-													<input type="file" name="" class="img-input-upld"
+													<input type="file" name="" class="img-input-upld form-group"
 														(change)="onVideoChange($event)" accept="video/*" >
 													Upload Video
 												</button>
@@ -124,6 +125,9 @@
 												class="invalid">
 												*Only videos are allowed
 											</div>
+											
+
+											  
 											<!-- <img src="assets/img/dummy.png" class="img-fluid"> -->
 											<!-- <div class="upload-imag text-center">
 												<button class="btn-primary btn  mt-3 position-relative">
@@ -131,6 +135,24 @@
 												Upload Video
 												</button>
 											</div> -->
+										</div>
+									</div>
+                                    <div class="slider-video-cntnt mt-5">
+										<div class="prev-upld-img">
+											<div class="resume_video_div text-center" >
+												<img src="assets/img/video-thumb.png"  class="img-fluid" *ngIf="!youtubevideo">
+												<iframe  [src]="videoURL" width = "420" height="315"  *ngIf="youtubevideo"></iframe>
+											</div>
+
+											<div class="form-group mt-2" *ngIf="import">
+												<label>Import from URL</label>
+												<input type="text" name="" class="form-control" placeholder="Enter url here" formControlName="importUrl" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value" (change)="importVideo()">
+											</div>
+											<div class="upload-imag text-center form-group" (click)="onImportUrl()">
+												<button class="btn-primary btn mt-3 position-relative">
+														Import from URL
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>

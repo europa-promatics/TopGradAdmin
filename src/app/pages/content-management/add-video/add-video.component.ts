@@ -17,6 +17,10 @@ export class AddVideoComponent implements OnInit {
   headingImageObj: any;
   HeadingImage1: any;
   selectedfile2: any;
+  import: boolean = false;
+  youtubeUrl: any = false;
+  youtubevideo: boolean = false;
+  videoURL: any;
 
   constructor(private _location: Location,private sanitizer: DomSanitizer,private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
 
@@ -24,11 +28,12 @@ export class AddVideoComponent implements OnInit {
     title: ['', [Validators.required, Validators.maxLength(200)]],
     type: ['', [Validators.required, Validators.maxLength(50)]],
     category: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(5000)]],
+    description: ['', [Validators.required]],
     postedby: ['', [Validators.required, Validators.maxLength(50)]],
-    postdescription: ['', [Validators.required, Validators.maxLength(5000)]],
+    postdescription: ['', [Validators.required]],
     Image: ['',],
     video:[''],
+    importUrl:[''],
     is_visible: [''],
     county:[''],
     county1:['']
@@ -136,6 +141,7 @@ export class AddVideoComponent implements OnInit {
           }
 
           if(this.addVideoform.controls['type'].value=='large_video_article'){
+            console.log("i am here false this.videoURL ----->>",this.videoURL);
             const medias:any= [
              {
                  for:"main",
@@ -151,6 +157,10 @@ export class AddVideoComponent implements OnInit {
             
             formdata.append("medias",JSON.stringify(medias))
           }
+
+      
+
+         
           
         obj = formdata
 
@@ -170,6 +180,49 @@ export class AddVideoComponent implements OnInit {
 
   back(){
     this._location.back();
+  }
+
+  onImportUrl(){
+   this.import = true;
+    
+  }
+
+  importVideo() {
+    
+    console.log("import video youtube video value=======>>", this.import);
+    this.youtubeUrl = this.addVideoform.controls.importUrl.value
+    if(this.youtubeUrl.includes("youtube")){
+      this.youtubevideo = true;
+      console.log(this.youtubeUrl.includes("youtube"));
+      console.log("import youtube,,,, youtube video value=======>>", this.youtubevideo);
+      const videoId = this.getId(this.youtubeUrl);
+      console.log("youtube video id======>>>",videoId);
+      const vid = "https://www.youtube.com/embed/"+videoId
+      this.videoURL = this.sanitizer.bypassSecurityTrustResourceUrl(vid);
+      this.addVideoform.patchValue({
+        video: this.videoURL
+      })
+      
+      
+    }else{
+      // this.youtubevideo = true;
+      // console.log("vimeo link=========>>",this.resumeUrl.includes("vimeo"));
+      // console.log("import vimeo,, youtube video value=======>>", this.youtubevideo);
+      // const videoId = this.getVimeoId(this.resumeUrl);
+      // console.log("vimeo video id======>>>",videoId);
+      // const vid = "https://player.vimeo.com/video/"+videoId
+      // this.videoURL = this.sanitizer.bypassSecurityTrustResourceUrl(vid);
+      
+    }
+  }
+
+  getId(url: any) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    
+    return (match && match[2].length === 11)
+    ? match[2]
+    : null;
   }
 
 }

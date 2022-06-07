@@ -27,9 +27,9 @@ export class EditArticleComponent implements OnInit {
     title: ['', [Validators.required, Validators.maxLength(200)]],
     type: ['', [Validators.required, Validators.maxLength(50)]],
     category: ['', [Validators.required, Validators.maxLength(50)]],
-    description: ['', [Validators.required, Validators.maxLength(5000)]],
+    description: ['', [Validators.required]],
     postedby: ['', [Validators.required, Validators.maxLength(50)]],
-    postdescription: ['', [Validators.required, Validators.maxLength(5000)]],
+    postdescription: ['', [Validators.required]],
     Image: ['',],
     county:['']
   });
