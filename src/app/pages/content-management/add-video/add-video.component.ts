@@ -27,6 +27,7 @@ export class AddVideoComponent implements OnInit {
 
   addVideoform = this.fb.group({
     title: ['', [Validators.required, Validators.maxLength(200)]],
+    order: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
     type: ['', [Validators.required, Validators.maxLength(50)]],
     category: ['', [Validators.required, Validators.maxLength(50)]],
     description: ['', [Validators.required]],
@@ -124,6 +125,7 @@ export class AddVideoComponent implements OnInit {
         const formdata = new FormData()
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_type",  this.addVideoform.controls['type'].value)
+          formdata.append("order",  this.addVideoform.controls['order'].value)
           formdata.append("category",  this.addVideoform.controls['category'].value)
           formdata.append("article_title",  this.addVideoform.controls['title'].value)
           formdata.append("article_description", this.addVideoform.controls['description'].value)
@@ -205,15 +207,6 @@ export class AddVideoComponent implements OnInit {
         video: this.videoURL
       })
       
-      
-    }else{
-      // this.youtubevideo = true;
-      // console.log("vimeo link=========>>",this.resumeUrl.includes("vimeo"));
-      // console.log("import vimeo,, youtube video value=======>>", this.youtubevideo);
-      // const videoId = this.getVimeoId(this.resumeUrl);
-      // console.log("vimeo video id======>>>",videoId);
-      // const vid = "https://player.vimeo.com/video/"+videoId
-      // this.videoURL = this.sanitizer.bypassSecurityTrustResourceUrl(vid);
       
     }
   }

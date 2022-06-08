@@ -25,6 +25,7 @@ export class EditArticleComponent implements OnInit {
   
   editArticleform = this.fb.group({
     title: ['', [Validators.required, Validators.maxLength(200)]],
+    order: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
     type: ['', [Validators.required, Validators.maxLength(50)]],
     category: ['', [Validators.required, Validators.maxLength(50)]],
     description: ['', [Validators.required]],
@@ -67,6 +68,7 @@ export class EditArticleComponent implements OnInit {
         Image:resp.data.medias[0].url,
         title:resp.data.article_title,
         type:resp.data.article_type,
+        order:resp.data.order,
         category:resp.data.category,
         description:resp.data.article_description,
         postedby:resp.data.posted_by,
@@ -166,6 +168,7 @@ export class EditArticleComponent implements OnInit {
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_id",  this.route.snapshot.paramMap.get('id'))
           formdata.append("article_type",  this.editArticleform.controls['type'].value)
+          formdata.append("order",  this.editArticleform.controls['order'].value)
           formdata.append("category",  this.editArticleform.controls['category'].value)
           formdata.append("article_title",  this.editArticleform.controls['title'].value)
           formdata.append("article_description", this.editArticleform.controls['description'].value)

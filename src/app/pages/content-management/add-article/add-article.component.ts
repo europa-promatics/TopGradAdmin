@@ -23,6 +23,7 @@ export class AddArticleComponent implements OnInit {
   
   addArticleform = this.fb.group({
     title: ['', [Validators.required, Validators.maxLength(200)]],
+    order: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
     type: ['', [Validators.required, Validators.maxLength(50)]],
     category: ['', [Validators.required, Validators.maxLength(50)]],
     description: ['', [Validators.required]],
@@ -130,6 +131,7 @@ export class AddArticleComponent implements OnInit {
         const formdata = new FormData()
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_type",  this.addArticleform.controls['type'].value)
+          formdata.append("order",  this.addArticleform.controls['order'].value)
           formdata.append("category",  this.addArticleform.controls['category'].value)
           formdata.append("article_title",  this.addArticleform.controls['title'].value)
           formdata.append("article_description", this.addArticleform.controls['description'].value)

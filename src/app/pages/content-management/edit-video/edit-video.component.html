@@ -20,6 +20,20 @@
 								<div *ngIf="(editVideoform.controls.title.touched || editVideoform.controls.title.dirty) && editVideoform.controls.title.invalid && editVideoform.controls.title?.errors?.maxlength  " class="invalid">
 									**Maximum Length should be 200 characters
 								</div>
+
+								<div class="form-group">
+									<label>Order</label>
+									<input type="number" name="" class="form-control" placeholder="Enter Order" formControlName="order" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
+								</div>
+								<div *ngIf="(editVideoform.controls.order.touched || editVideoform.controls.order.dirty) && editVideoform.controls.order.invalid && editVideoform.controls.order?.errors?.required  " class="invalid">
+									*Please enter order
+								</div>
+								<div *ngIf="(editVideoform.controls.order.touched || editVideoform.controls.order.dirty) && editVideoform.controls.order.invalid && editVideoform.controls.order?.errors?.max" class="invalid">
+									*Maximum value must be 10
+								</div>
+								<div *ngIf="(editVideoform.controls.order.touched || editVideoform.controls.order.dirty) && editVideoform.controls.order.invalid && editVideoform.controls.order?.errors?.min" class="invalid">
+									*Minimum value must be 1
+								</div>
 								<div class="form-group">
 									<label>Video Type</label>
 									<select class="form-control" placeholder="Enter Type" formControlName="type" (change)="changevideo($event)">

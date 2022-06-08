@@ -26,6 +26,7 @@ export class EditVideoComponent implements OnInit {
   constructor(private _location: Location,private sanitizer:DomSanitizer, private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) {
     this.editVideoform = this.fb.group({
       title: ['', [Validators.required, Validators.maxLength(200)]],
+      order: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
       type: ['', [Validators.required, Validators.maxLength(50)]],
       category: ['', [Validators.required, Validators.maxLength(50)]],
       description: ['', [Validators.required]],
@@ -70,6 +71,7 @@ export class EditVideoComponent implements OnInit {
         this.editVideoform.patchValue({
           Image:this.main_image?.url,
           category:resp.data.category,
+          order:resp.data.order,
           title:resp.data.article_title,
           type:resp.data.article_type,
           description:resp.data.article_description,
@@ -230,6 +232,7 @@ export class EditVideoComponent implements OnInit {
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_id",  this.route.snapshot.paramMap.get('id'))
           formdata.append("article_type",  this.editVideoform.controls['type'].value)
+          formdata.append("order",  this.editVideoform.controls['order'].value)
           formdata.append("category",  this.editVideoform.controls['category'].value)
           formdata.append("article_title",  this.editVideoform.controls['title'].value)
           formdata.append("article_description", this.editVideoform.controls['description'].value)

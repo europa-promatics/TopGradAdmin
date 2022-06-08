@@ -21,6 +21,20 @@
 									**Maximum Length should be 200 characters
 								</div>
 								<div class="form-group">
+									<label>Order</label>
+									<input type="number" name="" class="form-control" value="Career Counsellors" formControlName="order" 
+									oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
+								</div>
+								<div *ngIf="(addArticleform.controls.order.touched || addArticleform.controls.order.dirty) && addArticleform.controls.order.invalid && addArticleform.controls.order?.errors?.required  " class="invalid">
+									*Please enter order
+								</div>
+								<div *ngIf="(addArticleform.controls.order.touched || addArticleform.controls.order.dirty) && addArticleform.controls.order.invalid && addArticleform.controls.order?.errors?.min" class="invalid">
+									*Minimum value of order must be 1
+								</div>
+								<div *ngIf="(addArticleform.controls.order.touched || addArticleform.controls.order.dirty) && addArticleform.controls.order.invalid && addArticleform.controls.order?.errors?.max" class="invalid">
+									*Maximum value of order must be 10
+								</div>
+								<div class="form-group">
 									<label>Article Type</label>
 									<select class="form-control" placeholder="Enter Type" formControlName="type" (change)="article($event)">
 										<option value="small_article">Small Article</option>

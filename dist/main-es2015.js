@@ -1056,7 +1056,7 @@ function createNewUser(id) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"editVideoform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\" formControlName=\"title\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.title.touched || editVideoform.controls.title.dirty) && editVideoform.controls.title.invalid && editVideoform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.title.touched || editVideoform.controls.title.dirty) && editVideoform.controls.title.invalid && editVideoform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"changevideo($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_video_article\">Small Video</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_video_article\">Large Video</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.type.touched || editVideoform.controls.type.dirty) && editVideoform.controls.type.invalid && editVideoform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.type.touched || editVideoform.controls.type.dirty) && editVideoform.controls.type.invalid && editVideoform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.description.touched || editVideoform.controls.description.dirty) && editVideoform.controls.description.invalid && editVideoform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.description.touched || editVideoform.controls.description.dirty) && editVideoform.controls.description.invalid && editVideoform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postdescription.touched || editVideoform.controls.postdescription.dirty) && editVideoform.controls.postdescription.invalid && editVideoform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postdescription.touched || editVideoform.controls.postdescription.dirty) && editVideoform.controls.postdescription.invalid && editVideoform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article == 'large_video_article'\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<!-- <video [src]=\"editVideoform.controls['Video'].value\"></video> -->\n\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"editVideoform.controls['Video'].value\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"sanitizer.bypassSecurityTrustResourceUrl(editVideoform.controls['Video'].value)\"\n\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen ></iframe>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onVideoChange($event)\" accept=\"video/*\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.Video?.errors?.required\"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.Video.valid && editVideoform.controls.county1?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage2?HeadingImage2:'assets/img/youtube_video.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage1($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"editVideoform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\" formControlName=\"title\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.title.touched || editVideoform.controls.title.dirty) && editVideoform.controls.title.invalid && editVideoform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.title.touched || editVideoform.controls.title.dirty) && editVideoform.controls.title.invalid && editVideoform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"changevideo($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_video_article\">Small Video</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_video_article\">Large Video</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.type.touched || editVideoform.controls.type.dirty) && editVideoform.controls.type.invalid && editVideoform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.type.touched || editVideoform.controls.type.dirty) && editVideoform.controls.type.invalid && editVideoform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Category</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"category\" >\n\t\t\t\t\t\t\t\t\t\t<option value=\"resumes\">Resumes</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"cover_letters\">Cover Letters</option>\n\t\t\t\t\t\t\t            <option value=\"internships\">Internships</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"job_interviews\">Job Interviews</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"job_trends\">Job Trends</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"linked_in\">LinkedIn</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.category.touched || editVideoform.controls.category.dirty) && editVideoform.controls.category.invalid && editVideoform.controls.category?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter category\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.category.touched || editVideoform.controls.category.dirty) && editVideoform.controls.category.invalid && editVideoform.controls.category?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.description.touched || editVideoform.controls.description.dirty) && editVideoform.controls.description.invalid && editVideoform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.description.touched || editVideoform.controls.description.dirty) && editVideoform.controls.description.invalid && editVideoform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postdescription.touched || editVideoform.controls.postdescription.dirty) && editVideoform.controls.postdescription.invalid && editVideoform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editVideoform.controls.postdescription.touched || editVideoform.controls.postdescription.dirty) && editVideoform.controls.postdescription.invalid && editVideoform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article == 'large_video_article'\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\" *ngIf = \"(editVideoform.controls['Video'].value || editVideoform.controls['importUrl'].value) && !import\">\n\t\t\t\t\t\t\t\t\t\t\t<!-- <video [src]=\"editVideoform.controls['Video'].value\"></video> -->\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video-thumb.png\"  class=\"img-fluid\" *ngIf=\"!editVideoform.controls['Video'].value && editVideoform.controls['importUrl'].value\">\n\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"editVideoform.controls['Video'].value\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"sanitizer.bypassSecurityTrustResourceUrl(editVideoform.controls['Video'].value)\"\n\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen ></iframe>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onVideoChange($event)\" accept=\"video/*\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.Video?.errors?.required\"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.Video.valid && editVideoform.controls.county1?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt mt-5\" *ngIf=\"(editVideoform.controls['Video'].value || editVideoform.controls['importUrl'].value) && !upload\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"resume_video_div text-center\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video-thumb.png\"  class=\"img-fluid\" *ngIf=\"!editVideoform.controls['importUrl'].value && editVideoform.controls['Video'].value\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<iframe  [src]=\"sanitizer.bypassSecurityTrustResourceUrl(editVideoform.controls['importUrl'].value)\" width = \"420\" height=\"315\"  *ngIf=\"editVideoform.controls['importUrl'].value\"></iframe>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group mt-2\" *ngIf=\"import\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<label>Import from URL</label>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter url here\" formControlName=\"importUrl\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\" (change)=\"importVideo()\">\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center form-group\" (click)=\"onImportUrl()\" *ngIf=\"!uploadVideo\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tImport from URL\n\t\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt video-ply-icn\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img video\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage2?HeadingImage2:'assets/img/youtube_video.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage1($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editVideoform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" (click)=\"back()\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -2659,10 +2659,65 @@ let CareerArticlesComponent = class CareerArticlesComponent {
         // }
         console.log("paginator obj==========", obj);
         this.Service.getarticleList(obj).subscribe((data) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            var _a;
             console.log("Response of all the service listing>>>>>", data);
             this.sortedData = data.data;
             this.totalRecords = data.count;
-        }));
+            for (let i = 0; i < this.sortedData.length; i++) {
+                var new_article = this.sortedData[i].article_type;
+                var type_category = (_a = this.sortedData[i]) === null || _a === void 0 ? void 0 : _a.category;
+                console.log("type_category  outside    =======>>>", type_category);
+                console.log("new_article=============>", new_article);
+                if (new_article == "small_article") {
+                    this.article = "Small Article";
+                    console.log("this.article small===========>", this.article);
+                    this.sortedData[i].article_name = (this.article);
+                }
+                else if (new_article == "large_article") {
+                    this.article = "Large Article";
+                    console.log("this.article large===========>", this.article);
+                    this.sortedData[i].article_name = (this.article);
+                }
+                if (type_category == 'resumes') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Resumes';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'cover_letters') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Cover Letters';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'internships') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Internships';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'job_interviews') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Job Interviews';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'job_trends') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Job Trends';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'linked_in') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Linked In';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+            }
+        }), err => {
+            console.log(err.status);
+            if (err.status >= 404) {
+                console.log('Some error occured');
+            }
+            else {
+                console.log('Internet Connection Error');
+            }
+        });
     }
     getPageSizeOptions() {
         return [5, 10, 50, 100];
@@ -2714,11 +2769,14 @@ let CareerArticlesComponent = class CareerArticlesComponent {
         };
         console.log("object===>", obj);
         this.Service.getarticleList(obj).subscribe(res => {
+            var _a;
             console.log("Response==========", res);
             this.sortedData = res.data;
             this.totalRecords = res.count;
             for (let i = 0; i < this.sortedData.length; i++) {
                 var new_article = this.sortedData[i].article_type;
+                var type_category = (_a = this.sortedData[i]) === null || _a === void 0 ? void 0 : _a.category;
+                console.log("type_category  outside    =======>>>", type_category);
                 console.log("new_article=============>", new_article);
                 if (new_article == "small_article") {
                     this.article = "Small Article";
@@ -2729,6 +2787,36 @@ let CareerArticlesComponent = class CareerArticlesComponent {
                     this.article = "Large Article";
                     console.log("this.article large===========>", this.article);
                     this.sortedData[i].article_name = (this.article);
+                }
+                if (type_category == 'resumes') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Resumes';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'cover_letters') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Cover Letters';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'internships') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Internships';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'job_interviews') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Job Interviews';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'job_trends') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Job Trends';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'linked_in') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Linked In';
+                    this.sortedData[i].category_name = (this.categoryName);
                 }
             }
         }, err => {
@@ -3054,7 +3142,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"addVideoform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\" formControlName=\"title\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.title.touched || addVideoform.controls.title.dirty) && addVideoform.controls.title.invalid && addVideoform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.title.touched || addVideoform.controls.title.dirty) && addVideoform.controls.title.invalid && addVideoform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"video($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_video_article\">Small Video</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_video_article\">Large Video</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.type.touched || addVideoform.controls.type.dirty) && addVideoform.controls.type.invalid && addVideoform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.type.touched || addVideoform.controls.type.dirty) && addVideoform.controls.type.invalid && addVideoform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter name here\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage1?HeadingImage1:'assets/img/dummy.png'\"  class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article =='large_video_article'\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"addVideoform.controls['video'].value\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"addVideoform.controls['video'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen ></iframe>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onVideoChange($event)\" accept=\"video/*\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.video.touched || addVideoform.controls.video.dirty) && addVideoform.controls.video.invalid && addVideoform.controls.video?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls.video.valid && addVideoform.controls.county1?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<!-- <img src=\"assets/img/dummy.png\" class=\"img-fluid\"> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Add Video</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"addVideoform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter Title\" formControlName=\"title\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.title.touched || addVideoform.controls.title.dirty) && addVideoform.controls.title.invalid && addVideoform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.title.touched || addVideoform.controls.title.dirty) && addVideoform.controls.title.invalid && addVideoform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"video($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_video_article\">Small Video</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_video_article\">Large Video</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.type.touched || addVideoform.controls.type.dirty) && addVideoform.controls.type.invalid && addVideoform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.type.touched || addVideoform.controls.type.dirty) && addVideoform.controls.type.invalid && addVideoform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Category</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"category\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"resumes\">Resumes</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"cover_letters\">Cover Letters</option>\n\t\t\t\t\t\t\t            <option value=\"internships\">Internships</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"job_interviews\">Job Interviews</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"job_trends\">Job Trends</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"linked_in\">LinkedIn</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.category.touched || addVideoform.controls.category.dirty) && addVideoform.controls.category.invalid && addVideoform.controls.category?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter category\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.category.touched || addVideoform.controls.category.dirty) && addVideoform.controls.category.invalid && addVideoform.controls.category?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Video Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter name here\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Main Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage1?HeadingImage1:'assets/img/dummy.png'\"  class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article =='large_video_article'\">\n\t\t\t\t\t\t\t\t\t<label>Video</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\" *ngIf = \"!youtubevideo\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video-thumb.png\"  class=\"img-fluid\" *ngIf=\"!addVideoform.controls['video'].value\">\n\t\t\t\t\t\t\t\t\t\t\t<iframe *ngIf=\"addVideoform.controls['video'].value\" width=\"420\"\n\t\t\t\t\t\t\t\t\t\t\t\theight=\"315\" [src]=\"addVideoform.controls['video'].value\"\n\t\t\t\t\t\t\t\t\t\t\t\tframeborder=\"0\" allowfullscreen ></iframe>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld form-group\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(change)=\"onVideoChange($event)\" accept=\"video/*\" >\n\t\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"(addVideoform.controls.video.touched || addVideoform.controls.video.dirty) && addVideoform.controls.video.invalid && addVideoform.controls.video?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Please upload video\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"addVideoform.controls.video.valid && addVideoform.controls.county1?.errors?.required  \"\n\t\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only videos are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t\t\t\t\t<!-- <img src=\"assets/img/dummy.png\" class=\"img-fluid\"> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Video\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div> -->\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n                                    <div class=\"slider-video-cntnt mt-5\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"resume_video_div text-center\" >\n\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"assets/img/video-thumb.png\"  class=\"img-fluid\" *ngIf=\"!youtubevideo && !uploadVideo\">\n\t\t\t\t\t\t\t\t\t\t\t\t<iframe  [src]=\"videoURL\" width = \"420\" height=\"315\"  *ngIf=\"youtubevideo  && !uploadVideo\"></iframe>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group mt-2\" *ngIf=\"import  && !uploadVideo\">\n\t\t\t\t\t\t\t\t\t\t\t\t<label>Import from URL</label>\n\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" placeholder=\"Enter url here\" formControlName=\"importUrl\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\" (change)=\"importVideo()\">\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center form-group\" (click)=\"onImportUrl()\" *ngIf=\"!uploadVideo\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tImport from URL\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" (click)=\"back()\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -3882,7 +3970,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-video\">Add Video</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"sortedData\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video/Image</th>\n                  <td mat-cell *matCellDef=\"let row \" > \n                    <span class=\"position-relative play-container\">\n                      <video [src]=\"row?.url\" class=\"slider-imag\" *ngIf=\"row.article_type == 'large_video_article' \"></video>\n                      <img [src]=\"row?.url\" class=\"slider-imag\" *ngIf=\"row.article_type == 'small_video_article' \" /> \n                    </span> \n                  </td>\n                <!-- <td mat-cell *matCellDef=\"let row \" *ngIf=\"row.article_name == 'small_video_article' \"> \n                  <span class=\"position-relative play-container\"> -->\n                    <!-- <video [src]=\"row?.medias[i]?.url\" class=\"slider-imag\" ></video> -->\n                    <!-- <img src=\"row?.url\" class=\"img-fluid slider-play\"> \n                  </span> \n                </td> -->\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_title}} </td>\n              </ng-container>\n\n               <!-- worktype Column -->\n               <ng-container matColumnDef=\"type\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Type</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_name}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <!-- <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container> -->\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.posted_by}}</td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-video/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-video/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"Modal(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n          [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\"  aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Video?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteArticle(delId)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-video\">Add Video</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"sortedData\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video/Image</th>\n                  <td mat-cell *matCellDef=\"let row \" > \n                    <span class=\"position-relative play-container\">\n                      <iframe  [src]=\"row?.url\" width = \"200px\" height=\"150px\" *ngIf=\"row.article_type == 'large_video_article' \"></iframe>\n                      <!-- <video [src]=\"row?.url\" class=\"slider-imag\" *ngIf=\"row.article_type == 'large_video_article' \"></video> -->\n                      <img [src]=\"row?.url\" class=\"slider-imag\" *ngIf=\"row.article_type == 'small_video_article' \" /> \n                    </span> \n                  </td>\n                <!-- <td mat-cell *matCellDef=\"let row \" *ngIf=\"row.article_name == 'small_video_article' \"> \n                  <span class=\"position-relative play-container\"> -->\n                    <!-- <video [src]=\"row?.medias[i]?.url\" class=\"slider-imag\" ></video> -->\n                    <!-- <img src=\"row?.url\" class=\"img-fluid slider-play\"> \n                  </span> \n                </td> -->\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_title}} </td>\n              </ng-container>\n\n               <!-- worktype Column -->\n               <ng-container matColumnDef=\"category\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row?.category_name}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n\n               <!-- worktype Column -->\n               <ng-container matColumnDef=\"type\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Type</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_name}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <!-- <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.description}} </td>\n              </ng-container> -->\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.posted_by}}</td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-video/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-video/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"Modal(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n          [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\"  aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Video?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteArticle(delId)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -4837,7 +4925,7 @@ EditSubHeadingComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"{{articledetail?.medias[0].url}}\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>{{articledetail?.article_title | titlecase}}</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">{{articledetail?.posted_by | titlecase}}</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted {{articledetail?.createdAt | date:\"dd/MM/yyyy\"}}</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.posted_description\"></p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<p class=\"highlighted_info\" [innerHTML]=\"articledetail.posted_description\">\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.article_description\">\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<!-- <p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant.\n\t\t\t\t\t\t\t\t\t</p> -->\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"{{articledetail?.medias[0].url}}\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>{{articledetail?.article_title | titlecase}}</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">MG.</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">{{articledetail?.posted_by | titlecase}}</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted {{articledetail?.createdAt | date:\"dd/MM/yyyy\"}}</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.posted_description\"></p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\">\n\t\t\t\t\t\t\t\t\t<p class=\"highlighted_info\" [innerHTML]=\"articledetail.posted_description\">\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.article_description\">\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t<!-- <p class=\"reosurce_posted_info\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum enim, fermentum, phasellus cras tempus, lacus. Dui pellentesque dui praesent platea. Magna velit, lorem enim, amet volutpat cursus neque. Posuere elit lobortis tempus vivamus praesent at ac tortor. \n\t\t\t\t\t\t\t\t\t\tEros a nisi, hendrerit mauris tincidunt. Aliquet adipiscing ultricies tellus, volutpat quis. Risus facilisis interdum viverra felis, odio scelerisque. Scelerisque tortor pulvinar pulvinar fermentum mi et urna, quis. Viverra amet, in bibendum elementum elit venenatis, tristique sit. Pharetra tristique eget sed maecenas enim auctor odio sed elementum. In adipiscing viverra senectus et quis non. Adipiscing et non morbi quisque risus eu vulputate egestas id. Fringilla scelerisque augue nisl diam arcu lectus. Cras tristique nam diam, ullamcorper nisi. Molestie neque amet, ac porta aenean nunc quam felis nulla. Non, placerat in commodo in sem habitant.\n\t\t\t\t\t\t\t\t\t</p> -->\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" (click)=\"back()\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -4983,6 +5071,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
 
 
 
@@ -4994,20 +5084,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let EditVideoComponent = class EditVideoComponent {
-    constructor(sanitizer, route, Service, _snackBar, router, fb) {
+    constructor(_location, sanitizer, route, Service, _snackBar, router, fb) {
+        this._location = _location;
         this.sanitizer = sanitizer;
         this.route = route;
         this.Service = Service;
         this._snackBar = _snackBar;
         this.router = router;
         this.fb = fb;
+        this.import = false;
+        this.upload = false;
         this.editVideoform = this.fb.group({
             title: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(200)]],
             type: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
-            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            category: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
             postedby: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
-            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
             Image: ['',],
+            importUrl: ['',],
             county: [''],
             Video: ['',],
             county1: ['']
@@ -5021,7 +5116,7 @@ let EditVideoComponent = class EditVideoComponent {
             article_id: this.route.snapshot.paramMap.get('id')
         };
         this.Service.getArticleContent(obj).subscribe((resp) => {
-            var _a, _b, _c;
+            var _a, _b, _c, _d, _e;
             console.log("object============>", obj);
             this.video = resp.data.medias.find(x => x.for == 'video');
             // this.video.url = this.sanitizer.bypassSecurityTrustUrl(this.video.url)
@@ -5033,6 +5128,7 @@ let EditVideoComponent = class EditVideoComponent {
             // setTimeout(function(){
             this.editVideoform.patchValue({
                 Image: (_b = this.main_image) === null || _b === void 0 ? void 0 : _b.url,
+                category: resp.data.category,
                 title: resp.data.article_title,
                 type: resp.data.article_type,
                 description: resp.data.article_description,
@@ -5046,11 +5142,46 @@ let EditVideoComponent = class EditVideoComponent {
             }
             else if (resp.data.article_type == "large_video_article") {
                 this.type_article = "large_video_article";
-                this.editVideoform.patchValue({
-                    Video: (_c = this.video) === null || _c === void 0 ? void 0 : _c.url
-                });
+                if ((_c = this.video) === null || _c === void 0 ? void 0 : _c.url.includes("youtube")) {
+                    this.editVideoform.patchValue({
+                        importUrl: (_d = this.video) === null || _d === void 0 ? void 0 : _d.url
+                    });
+                }
+                else {
+                    this.editVideoform.patchValue({
+                        Video: (_e = this.video) === null || _e === void 0 ? void 0 : _e.url
+                    });
+                }
             }
         });
+    }
+    onImportUrl() {
+        this.import = true;
+    }
+    importVideo() {
+        console.log("import video youtube video value=======>>", this.import);
+        this.youtubeUrl = this.editVideoform.controls.importUrl.value;
+        if (this.youtubeUrl.includes("youtube")) {
+            console.log(this.youtubeUrl.includes("youtube"));
+            const videoId = this.getId(this.youtubeUrl);
+            console.log("youtube video id======>>>", videoId);
+            const vid = "https://www.youtube.com/embed/" + videoId;
+            this.editVideoform.patchValue({
+                importUrl: vid,
+            });
+            if (this.editVideoform.controls['Video'].value) {
+                this.editVideoform.patchValue({
+                    Video: '',
+                });
+            }
+        }
+    }
+    getId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11)
+            ? match[2]
+            : null;
     }
     changevideo(event) {
         console.log(event.target.value);
@@ -5058,6 +5189,7 @@ let EditVideoComponent = class EditVideoComponent {
         console.log("type============>", this.type_article);
     }
     onVideoChange(e) {
+        this.upload = true;
         this.type_article = "large_video_article";
         console.log(e);
         console.log(e.target.files[0].name);
@@ -5076,6 +5208,11 @@ let EditVideoComponent = class EditVideoComponent {
             });
             this.editVideoform.get('county1').clearValidators(); // 6. Clear All Validators
             this.editVideoform.get('county1').updateValueAndValidity();
+            if (this.editVideoform.controls['importUrl'].value) {
+                this.editVideoform.patchValue({
+                    importUrl: '',
+                });
+            }
             console.log("rightextension", this.editVideoform);
         }
         else {
@@ -5123,6 +5260,7 @@ let EditVideoComponent = class EditVideoComponent {
             console.log("yippeeeeeeee", this.headingImageObj);
             formdata.append("article_id", this.route.snapshot.paramMap.get('id'));
             formdata.append("article_type", this.editVideoform.controls['type'].value);
+            formdata.append("category", this.editVideoform.controls['category'].value);
             formdata.append("article_title", this.editVideoform.controls['title'].value);
             formdata.append("article_description", this.editVideoform.controls['description'].value);
             formdata.append("posted_by", this.editVideoform.controls['postedby'].value);
@@ -5139,19 +5277,36 @@ let EditVideoComponent = class EditVideoComponent {
                 formdata.append("medias", JSON.stringify(medias));
             }
             if (this.editVideoform.controls['type'].value == 'large_video_article') {
-                const medias = [
-                    {
-                        for: "video",
-                        url: this.editVideoform.controls['Video'].value
-                    },
-                    {
-                        "for": "main",
-                        "url": this.editVideoform.controls['Image'].value
-                    }
-                ];
-                const newmedia = JSON.stringify(medias);
-                console.log("newmedia==========>>>", newmedia);
-                formdata.append("medias", JSON.stringify(medias));
+                if (this.editVideoform.controls['Video'].value) {
+                    const medias = [
+                        {
+                            for: "video",
+                            url: this.editVideoform.controls['Video'].value
+                        },
+                        {
+                            "for": "main",
+                            "url": this.editVideoform.controls['Image'].value
+                        }
+                    ];
+                    const newmedia = JSON.stringify(medias);
+                    console.log("newmedia==========>>>", newmedia);
+                    formdata.append("medias", JSON.stringify(medias));
+                }
+                if (this.editVideoform.controls['importUrl'].value) {
+                    const medias = [
+                        {
+                            for: "video",
+                            url: this.editVideoform.controls['importUrl'].value
+                        },
+                        {
+                            "for": "main",
+                            "url": this.editVideoform.controls['Image'].value
+                        }
+                    ];
+                    const newmedia = JSON.stringify(medias);
+                    console.log("newmedia==========>>>", newmedia);
+                    formdata.append("medias", JSON.stringify(medias));
+                }
             }
             obj = formdata;
         }
@@ -5164,8 +5319,12 @@ let EditVideoComponent = class EditVideoComponent {
             this.Service.showMessage({ message: "Submitted Successfully" });
         });
     }
+    back() {
+        this._location.back();
+    }
 };
 EditVideoComponent.ctorParameters = () => [
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_9__["Location"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
     { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
@@ -5179,7 +5338,7 @@ EditVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         template: _raw_loader_edit_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_edit_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_9__["Location"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], EditVideoComponent);
 
 
@@ -5978,6 +6137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/dialog */ "0IaG");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+
 
 
 
@@ -6009,12 +6170,13 @@ const POSTEDBY = [
     'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
 ];
 let CareerVideosComponent = class CareerVideosComponent {
-    constructor(Service, dialog, fb, route) {
+    constructor(Service, sanitizer, dialog, fb, route) {
         this.Service = Service;
+        this.sanitizer = sanitizer;
         this.dialog = dialog;
         this.fb = fb;
         this.route = route;
-        this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'type', 'action'];
+        this.displayedColumns = ['select', 'id', 'image', 'postedBy', 'title', 'category', 'type', 'action'];
         this.selection = new _angular_cdk_collections__WEBPACK_IMPORTED_MODULE_8__["SelectionModel"](true, []);
         this.search = '';
         // Create 100 users
@@ -6059,31 +6221,73 @@ let CareerVideosComponent = class CareerVideosComponent {
         // }
         console.log("paginator obj==========", obj);
         this.Service.getarticleList(obj).subscribe((data) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            var _a, _b;
+            var _a, _b, _c;
             console.log("Response of all the service listing>>>>>", data);
             this.sortedData = data.data;
             this.totalRecords = data.count;
             for (let i = 0; i < this.sortedData.length; i++) {
                 var new_article = this.sortedData[i].article_type;
+                var type_category = (_a = this.sortedData[i]) === null || _a === void 0 ? void 0 : _a.category;
                 console.log("new_article=============>", new_article);
                 if (new_article == "small_video_article") {
                     this.article = "Small Video";
-                    console.log("this.article small===========>", this.article);
+                    console.log("this.article small111111111===========>", this.article);
                     this.sortedData[i].article_name = (this.article);
                     this.image = this.sortedData[i].medias.find(x => x.for == 'main');
-                    this.image_url = (_a = this.image) === null || _a === void 0 ? void 0 : _a.url;
+                    this.image_url = (_b = this.image) === null || _b === void 0 ? void 0 : _b.url;
                     this.sortedData[i].url = (this.image_url);
                 }
                 else if (new_article == "large_video_article") {
                     this.article = "Large Video";
-                    console.log("this.article large===========>", this.article);
+                    console.log("this.article large1111111===========>", this.article);
                     this.sortedData[i].article_name = (this.article);
                     this.video = this.sortedData[i].medias.find(x => x.for == 'video');
-                    this.video_url = (_b = this.video) === null || _b === void 0 ? void 0 : _b.url;
-                    this.sortedData[i].url = (this.video_url);
+                    this.video_url = (_c = this.video) === null || _c === void 0 ? void 0 : _c.url;
+                    console.log("video url========>.");
+                    if (this.video_url && this.video_url.includes("youtube")) {
+                        console.log("conatins youtube", this.video_url);
+                        this.sortedData[i].url = (this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url));
+                    }
+                    else {
+                        console.log("does not conatins youtube", this.video_url);
+                        this.sortedData[i].url = (this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url));
+                    }
+                }
+                // this.image=this.sortedData[i].medias.find(x => x.for == 'main');
+                //   this.image_url=this.image?.url
+                //   this.sortedData[i].url=(this.image_url);
+                if (type_category == 'resumes') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Resumes';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'cover_letters') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Cover Letters';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'internships') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Internships';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'job_interviews') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Job Interviews';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'job_trends') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Job Trends';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'linked_in') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Linked In';
+                    this.sortedData[i].category_name = (this.categoryName);
                 }
             }
-            console.log("data shubham==>", this.sortedData);
+            console.log("data ==>", this.sortedData);
         }));
     }
     getPageSizeOptions() {
@@ -6136,19 +6340,20 @@ let CareerVideosComponent = class CareerVideosComponent {
         };
         console.log("object===>", obj);
         this.Service.getarticleList(obj).subscribe(res => {
-            var _a, _b;
+            var _a, _b, _c;
             console.log("Response==========", res);
             this.sortedData = res.data;
             this.totalRecords = res.count;
             for (let i = 0; i < this.sortedData.length; i++) {
                 var new_article = this.sortedData[i].article_type;
+                var type_category = (_a = this.sortedData[i]) === null || _a === void 0 ? void 0 : _a.category;
                 console.log("new_article=============>", new_article);
                 if (new_article == "small_video_article") {
                     this.article = "Small Video";
                     console.log("this.article small===========>", this.article);
                     this.sortedData[i].article_name = (this.article);
                     this.image = this.sortedData[i].medias.find(x => x.for == 'main');
-                    this.image_url = (_a = this.image) === null || _a === void 0 ? void 0 : _a.url;
+                    this.image_url = (_b = this.image) === null || _b === void 0 ? void 0 : _b.url;
                     this.sortedData[i].url = (this.image_url);
                 }
                 else if (new_article == "large_video_article") {
@@ -6156,8 +6361,47 @@ let CareerVideosComponent = class CareerVideosComponent {
                     console.log("this.article large===========>", this.article);
                     this.sortedData[i].article_name = (this.article);
                     this.video = this.sortedData[i].medias.find(x => x.for == 'video');
-                    this.video_url = (_b = this.video) === null || _b === void 0 ? void 0 : _b.url;
-                    this.sortedData[i].url = (this.video_url);
+                    this.video_url = (_c = this.video) === null || _c === void 0 ? void 0 : _c.url;
+                    console.log("this.video url===============>>>>>>", this.video_url);
+                    if (this.video_url && this.video_url.includes("youtube")) {
+                        console.log("conatins youtube", this.video_url);
+                        this.sortedData[i].url = (this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url));
+                    }
+                    else {
+                        console.log("does not conatins youtube", this.video_url);
+                        this.sortedData[i].url = (this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url));
+                    }
+                    // this.sortedData[i].url=(this.video_url);
+                }
+                if (type_category == 'resumes') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Resumes';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'cover_letters') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Cover Letters';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'internships') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Internships';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'job_interviews') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Job Interviews';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'job_trends') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Job Trends';
+                    this.sortedData[i].category_name = (this.categoryName);
+                }
+                if (type_category == 'linked_in') {
+                    console.log("type_category  inside condition    =======>>>", type_category);
+                    this.categoryName = 'Linked In';
+                    this.sortedData[i].category_name = (this.categoryName);
                 }
             }
             console.log("data shubham==>", this.sortedData);
@@ -6175,6 +6419,7 @@ let CareerVideosComponent = class CareerVideosComponent {
 };
 CareerVideosComponent.ctorParameters = () => [
     { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"] },
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_13__["DomSanitizer"] },
     { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"] },
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"] }
@@ -6190,7 +6435,7 @@ CareerVideosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
         template: _raw_loader_career_videos_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_career_videos_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_topgradservice_service__WEBPACK_IMPORTED_MODULE_9__["TopgradserviceService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_13__["DomSanitizer"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_10__["MatDialog"], _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_12__["ActivatedRoute"]])
 ], CareerVideosComponent);
 
 function createNewUser(id) {
@@ -7415,7 +7660,7 @@ GraduateAddFaqComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Article</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"editArticleform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\" formControlName=\"title\" \n\t\t\t\t\t\t\t\t\toninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.title.touched || editArticleform.controls.title.dirty) && editArticleform.controls.title.invalid && editArticleform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.title.touched || editArticleform.controls.title.dirty) && editArticleform.controls.title.invalid && editArticleform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"article($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_article\">Small Article</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_article\">Large Article</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.type.touched || editArticleform.controls.type.dirty) && editArticleform.controls.type.invalid && editArticleform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.type.touched || editArticleform.controls.type.dirty) && editArticleform.controls.type.invalid && editArticleform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Description</label>\n\t\t\t\t\t\t\t\t\t<editor  formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article =='large_article'\">\n\t\t\t\t\t\t\t\t\t<label>Article Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage1?HeadingImage1:'assets/img/dummy.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article == 'small_article'\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage2?HeadingImage2:'assets/img/dummy.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage1($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"home-header-sec\">\n\t<div class=\"container\">\n\t    <div class=\"row\">\n\t      <div class=\"col-md-12\">\n\t      \t<div class=\"card\">\n\t      \t\t<div class=\"manage-home-header\">\n\t      \t\t\t<div class=\"card-header\">\n\t      \t\t\t\t<strong>Edit Article</strong>\n\t      \t\t\t</div>\n\t      \t\t\t<div class=\"card-body\">\n\t      \t\t\t\t<form [formGroup]=\"editArticleform\">\n\t\t      \t\t\t\t<div class=\"home-mng-form\">\n\t\t      \t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Title</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Career Counsellors\" formControlName=\"title\" \n\t\t\t\t\t\t\t\t\toninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.title.touched || editArticleform.controls.title.dirty) && editArticleform.controls.title.invalid && editArticleform.controls.title?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter title\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.title.touched || editArticleform.controls.title.dirty) && editArticleform.controls.title.invalid && editArticleform.controls.title?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 200 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Type</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"type\" (change)=\"article($event)\">\n\t\t\t\t\t\t\t\t\t\t<option value=\"small_article\">Small Article</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"large_article\">Large Article</option>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.type.touched || editArticleform.controls.type.dirty) && editArticleform.controls.type.invalid && editArticleform.controls.type?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter type\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.type.touched || editArticleform.controls.type.dirty) && editArticleform.controls.type.invalid && editArticleform.controls.type?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Category</label>\n\t\t\t\t\t\t\t\t\t<select class=\"form-control\" placeholder=\"Enter Type\" formControlName=\"category\" >\n\t\t\t\t\t\t\t\t\t\t<option value=\"resumes\">Resumes</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"cover_letters\">Cover Letters</option>\n\t\t\t\t\t\t\t            <option value=\"internships\">Internships</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"job_interviews\">Job Interviews</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"job_trends\">Job Trends</option>\n\t\t\t\t\t\t\t\t\t\t<option value=\"linked_in\">LinkedIn</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.category.touched || editArticleform.controls.category.dirty) && editArticleform.controls.category.invalid && editArticleform.controls.category?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter category\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.category.touched || editArticleform.controls.category.dirty) && editArticleform.controls.category.invalid && editArticleform.controls.category?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Article Description</label>\n\t\t\t\t\t\t\t\t\t<editor  formControlName=\"description\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted By</label>\n\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"\" class=\"form-control\" value=\"Olivia\" formControlName=\"postedby\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter name\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 50 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t\t\t<label>Posted Description</label>\n\t\t\t\t\t\t\t\t\t<editor formControlName=\"postdescription\" oninput=\"this.value = !this.value.trim() ? this.value.trim() : this.value\"></editor>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t*Please enter description\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div *ngIf=\"(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.maxlength  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t**Maximum Length should be 5000 characters\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article =='large_article'\">\n\t\t\t\t\t\t\t\t\t<label>Article Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage1?HeadingImage1:'assets/img/dummy.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"form-group\" *ngIf=\"type_article == 'small_article'\">\n\t\t\t\t\t\t\t\t\t<label>Banner Image</label>\n\t\t\t\t\t\t\t\t\t<div class=\"slider-video-cntnt\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"prev-upld-img\">\n\t\t\t\t\t\t\t\t\t\t\t<img [src]=\"HeadingImage2?HeadingImage2:'assets/img/dummy.png'\" class=\"img-fluid\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"upload-imag text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn-primary btn  mt-3 position-relative\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t<input type=\"file\" name=\"\" class=\"img-input-upld\" (change)=\"setHeadingImage1($event)\">\n\t\t\t\t\t\t\t\t\t\t\t\tUpload Image\n\t\t\t\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls['Image']?.errors?.required \"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t*Please select image\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div *ngIf=\"editArticleform.controls.county?.errors?.required  \" class=\"invalid\">\n\t\t\t\t\t\t\t\t\t\t\t\t*Only images are allowed\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end\">\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary mr-4\" (click)=\"postcontent()\">Save</button>\n\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" (click)=\"back()\">Back</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t      \t\t\t\t</div>\n\t\t      \t\t\t</form>\n\t      \t\t\t</div>\n\t\t      \t</div>\n\t      \t</div>\n\t      </div>\n\t  \t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -7437,6 +7682,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "dNgK");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
 
 
 
@@ -7447,7 +7694,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let EditArticleComponent = class EditArticleComponent {
-    constructor(route, Service, _snackBar, router, fb) {
+    constructor(_location, route, Service, _snackBar, router, fb) {
+        this._location = _location;
         this.route = route;
         this.Service = Service;
         this._snackBar = _snackBar;
@@ -7456,9 +7704,10 @@ let EditArticleComponent = class EditArticleComponent {
         this.editArticleform = this.fb.group({
             title: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(200)]],
             type: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
-            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            category: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
             postedby: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
-            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
             Image: ['',],
             county: ['']
         });
@@ -7482,6 +7731,7 @@ let EditArticleComponent = class EditArticleComponent {
                 Image: resp.data.medias[0].url,
                 title: resp.data.article_title,
                 type: resp.data.article_type,
+                category: resp.data.category,
                 description: resp.data.article_description,
                 postedby: resp.data.posted_by,
                 postdescription: resp.data.posted_description
@@ -7566,6 +7816,7 @@ let EditArticleComponent = class EditArticleComponent {
             console.log("yippeeeeeeee", this.headingImageObj);
             formdata.append("article_id", this.route.snapshot.paramMap.get('id'));
             formdata.append("article_type", this.editArticleform.controls['type'].value);
+            formdata.append("category", this.editArticleform.controls['category'].value);
             formdata.append("article_title", this.editArticleform.controls['title'].value);
             formdata.append("article_description", this.editArticleform.controls['description'].value);
             formdata.append("posted_by", this.editArticleform.controls['postedby'].value);
@@ -7603,8 +7854,12 @@ let EditArticleComponent = class EditArticleComponent {
             this.Service.showMessage({ message: "Submitted Successfully" });
         });
     }
+    back() {
+        this._location.back();
+    }
 };
 EditArticleComponent.ctorParameters = () => [
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_8__["Location"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
     { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
     { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
@@ -7617,7 +7872,7 @@ EditArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])(
         template: _raw_loader_edit_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_edit_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_8__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], EditArticleComponent);
 
 
@@ -8291,6 +8546,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "dNgK");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
 
 
 
@@ -8301,7 +8558,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ViewArticleComponent = class ViewArticleComponent {
-    constructor(route, Service, _snackBar, router, fb) {
+    constructor(_location, route, Service, _snackBar, router, fb) {
+        this._location = _location;
         this.route = route;
         this.Service = Service;
         this._snackBar = _snackBar;
@@ -8322,8 +8580,12 @@ let ViewArticleComponent = class ViewArticleComponent {
             console.log("============>", this.articledetail);
         });
     }
+    back() {
+        this._location.back();
+    }
 };
 ViewArticleComponent.ctorParameters = () => [
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_8__["Location"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
     { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
     { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
@@ -8336,7 +8598,7 @@ ViewArticleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])(
         template: _raw_loader_view_article_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_view_article_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_8__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], ViewArticleComponent);
 
 
@@ -8446,6 +8708,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
 
 
 
@@ -8456,20 +8720,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AddVideoComponent = class AddVideoComponent {
-    constructor(sanitizer, Service, _snackBar, router, fb) {
+    constructor(_location, sanitizer, Service, _snackBar, router, fb) {
+        this._location = _location;
         this.sanitizer = sanitizer;
         this.Service = Service;
         this._snackBar = _snackBar;
         this.router = router;
         this.fb = fb;
+        this.import = false;
+        this.youtubeUrl = false;
+        this.youtubevideo = false;
+        this.uploadVideo = false;
         this.addVideoform = this.fb.group({
             title: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(200)]],
             type: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
-            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            category: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
+            description: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
             postedby: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(50)]],
-            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].maxLength(5000)]],
+            postdescription: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
             Image: ['',],
             video: [''],
+            importUrl: [''],
             is_visible: [''],
             county: [''],
             county1: ['']
@@ -8515,6 +8786,7 @@ let AddVideoComponent = class AddVideoComponent {
     }
     onVideoChange(e) {
         console.log(e);
+        this.uploadVideo = true;
         console.log(e.target.files[0].name);
         const file = e.target.files[0];
         const fileType = file.type.split("/")[0];
@@ -8546,6 +8818,7 @@ let AddVideoComponent = class AddVideoComponent {
             const formdata = new FormData();
             console.log("yippeeeeeeee", this.headingImageObj);
             formdata.append("article_type", this.addVideoform.controls['type'].value);
+            formdata.append("category", this.addVideoform.controls['category'].value);
             formdata.append("article_title", this.addVideoform.controls['title'].value);
             formdata.append("article_description", this.addVideoform.controls['description'].value);
             formdata.append("posted_by", this.addVideoform.controls['postedby'].value);
@@ -8562,6 +8835,7 @@ let AddVideoComponent = class AddVideoComponent {
                 formdata.append("medias", JSON.stringify(medias));
             }
             if (this.addVideoform.controls['type'].value == 'large_video_article') {
+                console.log("i am here false this.videoURL ----->>", this.videoURL);
                 const medias = [
                     {
                         for: "main",
@@ -8587,8 +8861,47 @@ let AddVideoComponent = class AddVideoComponent {
             this.Service.showMessage({ message: "Submitted Successfully" });
         });
     }
+    back() {
+        this._location.back();
+    }
+    onImportUrl() {
+        this.import = true;
+    }
+    importVideo() {
+        console.log("import video youtube video value=======>>", this.import);
+        this.youtubeUrl = this.addVideoform.controls.importUrl.value;
+        if (this.youtubeUrl.includes("youtube")) {
+            this.youtubevideo = true;
+            console.log(this.youtubeUrl.includes("youtube"));
+            console.log("import youtube,,,, youtube video value=======>>", this.youtubevideo);
+            const videoId = this.getId(this.youtubeUrl);
+            console.log("youtube video id======>>>", videoId);
+            const vid = "https://www.youtube.com/embed/" + videoId;
+            this.videoURL = this.sanitizer.bypassSecurityTrustResourceUrl(vid);
+            this.addVideoform.patchValue({
+                video: this.videoURL
+            });
+        }
+        else {
+            // this.youtubevideo = true;
+            // console.log("vimeo link=========>>",this.resumeUrl.includes("vimeo"));
+            // console.log("import vimeo,, youtube video value=======>>", this.youtubevideo);
+            // const videoId = this.getVimeoId(this.resumeUrl);
+            // console.log("vimeo video id======>>>",videoId);
+            // const vid = "https://player.vimeo.com/video/"+videoId
+            // this.videoURL = this.sanitizer.bypassSecurityTrustResourceUrl(vid);
+        }
+    }
+    getId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11)
+            ? match[2]
+            : null;
+    }
 };
 AddVideoComponent.ctorParameters = () => [
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_9__["Location"] },
     { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"] },
     { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
     { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
@@ -8601,7 +8914,7 @@ AddVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         template: _raw_loader_add_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_add_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_9__["Location"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["DomSanitizer"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], AddVideoComponent);
 
 
@@ -9136,6 +9449,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
 /* harmony import */ var _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../topgradservice.service */ "DL5e");
 /* harmony import */ var ngx_plyr__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-plyr */ "pr9R");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
 
 
 
@@ -9147,7 +9462,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ViewVideoComponent = class ViewVideoComponent {
-    constructor(route, Service, _snackBar, router, fb) {
+    constructor(_location, route, Service, _snackBar, router, fb) {
+        this._location = _location;
         this.route = route;
         this.Service = Service;
         this._snackBar = _snackBar;
@@ -9240,8 +9556,13 @@ let ViewVideoComponent = class ViewVideoComponent {
         console.log("whitespeace");
         return postedBy.indexOf(' ') >= 0;
     }
+    // or get it from plyrInit event
+    back() {
+        this._location.back();
+    }
 };
 ViewVideoComponent.ctorParameters = () => [
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_9__["Location"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
     { type: _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"] },
     { type: _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
@@ -9257,7 +9578,7 @@ ViewVideoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         template: _raw_loader_view_video_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: [_view_video_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     }),
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_9__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"], _topgradservice_service__WEBPACK_IMPORTED_MODULE_7__["TopgradserviceService"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], ViewVideoComponent);
 
 
@@ -10580,7 +10901,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"{{image_url}}\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>{{articledetail.article_title}}</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">{{firstChar ? (firstChar | titlecase) : ''}}{{secondChar ? (secondChar | titlecase) : ''}}</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">{{articledetail.posted_by}}</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted {{articledetail.createdAt | date:\"dd/MM/yyyy\"}}</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\" >\n\t\t\t\t\t\t\t\t\t<figure class=\"figMargn_8 video_career position-relative vw_video\" *ngIf=\"video_url\">\n\t\t\t\t\t\t\t\t\t\t<div  plyr style=\"width: 700px; height: 400px;\" plyrTitle=\"Video 1\" [plyrPlaysInline]=\"true\" [plyrSources]=\"videoSources\" (plyrInit)=\"player = $event\" (plyrPlay)=\"played($event)\"></div>\n\t\t\t\t\t\t\t\t\t\t<!-- <video id='video'>\n\t\t\t\t\t\t\t\t\t\t\t<source src=\"{{video_url}}\" type=\"video/mp4\">\n\t\t\t\t\t\t\t\t\t\t</video> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <video id='video' src=\"{{video_url}}\" class=\"img-fluid\"></video> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <figcaption class=\"blog_vdo large_vdo_src\"> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <button id='playVid' (click)=\"play1()\">Play</button> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <span id='playVid' (click)=\"play1()\">\n\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"29\" viewBox=\"0 0 25 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" id='playVid'>\n\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M23.875 13.8505C24.375 14.1392 24.375 14.8608 23.875 15.1495L1.375 28.1399C0.874997 28.4286 0.249999 28.0677 0.249999 27.4904L0.25 1.50962C0.25 0.932266 0.875 0.571424 1.375 0.860099L23.875 13.8505Z\" fill=\"#26C296\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t</figcaption> -->\n\t\t\t\t\t\t\t\t\t</figure>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.article_description\">\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n<section class=\"view-applicant-sec\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"view-applct-wrpr\">\n\t\t\t\t\t<div class=\"edit_profil jobApply_modal\">\n\t\t\t\t\t\t<div class=\"job-content card\">\n\t\t\t\t\t\t\t<div class=\"grad_resource_article position-relative pb-0\">\n\t\t\t\t\t\t\t\t<div class=\"resource_info-cntnt\">\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div class=\"articles_sec\">\n\t\t\t\t\t\t\t\t\t\t<img src=\"{{image_url}}\" class=\"img-fluid grad_artcl\">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t  \t<div class=\"resource_hdng_container\">\n\t\t\t\t\t\t\t\t<h2>{{articledetail.article_title}}</h2>\n\t\t\t\t\t\t\t\t<div class=\"resource_sub_hdngs\">\n\t\t\t\t\t\t\t\t\t<div class=\"mb-3\">\n\t\t\t\t\t\t\t\t\t\t<span class=\"user_circle_name\">{{firstChar ? (firstChar | titlecase) : ''}}{{secondChar ? (secondChar | titlecase) : ''}}</span>\n\t\t\t\t\t\t\t\t\t\t<span class=\"arcle_author\">{{articledetail.posted_by}}</span>\n\t\t\t\t\t\t\t\t\t\t<small> Posted {{articledetail.createdAt | date:\"dd/MM/yyyy\"}}</small>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"resource_inner_content\" >\n\t\t\t\t\t\t\t\t\t<figure class=\"figMargn_8 video_career position-relative vw_video\" *ngIf=\"video_url\">\n\t\t\t\t\t\t\t\t\t\t<div  plyr style=\"width: 700px; height: 400px;\" plyrTitle=\"Video 1\" [plyrPlaysInline]=\"true\" [plyrSources]=\"videoSources\" (plyrInit)=\"player = $event\" (plyrPlay)=\"played($event)\"></div>\n\t\t\t\t\t\t\t\t\t\t<!-- <video id='video'>\n\t\t\t\t\t\t\t\t\t\t\t<source src=\"{{video_url}}\" type=\"video/mp4\">\n\t\t\t\t\t\t\t\t\t\t</video> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <video id='video' src=\"{{video_url}}\" class=\"img-fluid\"></video> -->\n\t\t\t\t\t\t\t\t\t\t<!-- <figcaption class=\"blog_vdo large_vdo_src\"> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <button id='playVid' (click)=\"play1()\">Play</button> -->\n\t\t\t\t\t\t\t\t\t\t\t<!-- <span id='playVid' (click)=\"play1()\">\n\t\t\t\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"29\" viewBox=\"0 0 25 29\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" id='playVid'>\n\t\t\t\t\t\t\t\t\t\t\t\t<path d=\"M23.875 13.8505C24.375 14.1392 24.375 14.8608 23.875 15.1495L1.375 28.1399C0.874997 28.4286 0.249999 28.0677 0.249999 27.4904L0.25 1.50962C0.25 0.932266 0.875 0.571424 1.375 0.860099L23.875 13.8505Z\" fill=\"#26C296\"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t</figcaption> -->\n\t\t\t\t\t\t\t\t\t</figure>\n\t\t\t\t\t\t\t\t\t<p class=\"reosurce_posted_info\" [innerHTML]=\"articledetail.article_description\">\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"edit-btns d-flex justify-content-end mt-4\">\n\t\t\t\t\t\t\t\t<button class=\"btn btn-primary\" (click)=\"back()\">Back</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n\n");
 
 /***/ }),
 
@@ -10857,7 +11178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-article\">Add Article</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"sortedData\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>\n                <td mat-cell *matCellDef=\"let row\"> <img [src]=\"row.medias[0].url\" class=\"slider-imag\" /></td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_title}} </td>\n              </ng-container>\n\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"category\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row?.category}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"type\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Type</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_name}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <!-- <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_description}} </td>\n              </ng-container> -->\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.posted_by}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-article/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-article/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"Modal(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n          [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\"  aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteArticle(delId)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"category-mngmnt\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"catgry-tools d-flex justify-content-between align-items-center\">\n          <mat-form-field appearance=\"standard\">\n            <mat-label>Filter</mat-label>\n            <input matInput (keyup)=\"applyFilter($event)\" placeholder=\"Ex. Mia\" class=\"filter_input\" #input>\n          </mat-form-field>\n          <span class=\"add-categry\">\n            <a class=\"btn-primary btn\" routerLink=\"/add-article\">Add Article</a>\n          </span>\n        </div>\n        \n        <div class=\"mat-elevation-z8\">\n          <div class=\"table-responsive\">\n            <table mat-table [dataSource]=\"sortedData\" matSort>\n              <!-- Checkbox Column -->\n              <ng-container matColumnDef=\"select\">\n                <th mat-header-cell *matHeaderCellDef>\n                  <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\" class=\"td-check\">\n                  </mat-checkbox>\n                </th>\n                <td mat-cell *matCellDef=\"let row\">\n                  <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\" class=\"td-check\">\n                  </mat-checkbox>\n                </td>\n              </ng-container>\n              <!-- ID Column -->\n              <ng-container matColumnDef=\"id\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>\n                <td mat-cell *matCellDef=\"let row ; let i=index\"> {{i+1}} </td>\n              </ng-container>\n\n              <!-- Name Column -->\n              <ng-container matColumnDef=\"image\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>\n                <td mat-cell *matCellDef=\"let row\"> <img [src]=\"row.medias[0].url\" class=\"slider-imag\" /></td>\n              </ng-container>\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"title\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Title</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_title}} </td>\n              </ng-container>\n\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"category\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row?.category_name}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n\n              <!-- worktype Column -->\n              <ng-container matColumnDef=\"type\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Type</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_name}} </td>\n              </ng-container>\n              \n              <!-- worktype Column -->\n              <!-- <ng-container matColumnDef=\"description\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.article_description}} </td>\n              </ng-container> -->\n\n              <ng-container matColumnDef=\"postedBy\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header>Posted By</th>\n                <td mat-cell *matCellDef=\"let row\" class=\"td-width\"> {{row.posted_by}} </td>\n              </ng-container>\n              \n              \n               <ng-container matColumnDef=\"action\">\n                <th mat-header-cell *matHeaderCellDef> Action </th>\n                <td mat-cell *matCellDef=\"let row\">\n                    <button mat-icon-button [matMenuTriggerFor]=\"menu\" class=\"td-btn\">\n                      <mat-icon>more_vert</mat-icon>\n                    </button>\n                    <mat-menu #menu=\"matMenu\" class=\"td-menu\">\n                      <!-- <a mat-menu-item class=\"\" routerLink=\"/addSubCategory\">\n                        <mat-icon class=\"material-icons-outlined\">add</mat-icon>\n                        <span>Add</span>\n                      </a> -->\n                      <a mat-menu-item class=\"\" routerLink=\"/view-article/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">visibility</mat-icon>\n                        <span>View</span>\n                    </a>\n                      <a mat-menu-item class=\"\" routerLink=\"/edit-article/{{row._id}}\">\n                        <mat-icon class=\"material-icons-outlined\">edit</mat-icon>\n                        <span>Edit</span>\n                      </a>\n                      <a mat-menu-item class=\"\" data-toggle=\"modal\" (click)=\"Modal(row._id)\">\n                        <mat-icon class=\"material-icons-outlined\">delete</mat-icon>\n                        <span>Delete</span>\n                      </a>\n                    </mat-menu>\n                </td>\n              </ng-container>\n\n              <!-- Progress Column -->\n              <!-- <ng-container matColumnDef=\"progress\">\n                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n                <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n              </ng-container> -->\n\n              <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n              <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n              <!-- Row shown when there is no matching data. -->\n              <tr class=\"mat-row\" *matNoDataRow>\n                <td class=\"mat-cell\" colspan=\"4\">No data matching the filter \"{{input.value}}\"</td>\n              </tr>\n            </table>\n          </div>\n          <mat-paginator [length]=\"totalRecords\" [pageIndex]=\"topPage\" [pageSize]=\"limit\"\n          [pageSizeOptions]=\"getPageSizeOptions()\" (page)=\"paginationOptionChange($event)\"  aria-label=\"Select page of users\"></mat-paginator>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Modal -->\n<div bsModal #smallModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"smallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-sm\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close td-btn\" (click)=\"smallModal.hide()\" aria-label=\"Close\">\n          <span aria-hidden=\"true\" class=\"prof_modclose\">\n            <img src=\"assets/img/Group 225.png\">\n          </span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure you want to delete the selected Category?</p>\n      </div>\n      <div class=\"modal-footer justify-content-center\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"smallModal.hide()\">No</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"deleteArticle(delId)\">Yes</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n");
 
 /***/ }),
 

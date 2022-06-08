@@ -15,11 +15,19 @@
 									<input type="text" name="" class="form-control" value="Career Counsellors" formControlName="title" 
 									oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
 								</div>
-								<div *ngIf="(editArticleform.controls.title.touched || editArticleform.controls.title.dirty) && editArticleform.controls.title.invalid && editArticleform.controls.title?.errors?.required  " class="invalid">
-									*Please enter title
+								<div class="form-group">
+									<label>Order</label>
+									<input type="number" name="" class="form-control" value="Career Counsellors" formControlName="order" 
+									oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
 								</div>
-								<div *ngIf="(editArticleform.controls.title.touched || editArticleform.controls.title.dirty) && editArticleform.controls.title.invalid && editArticleform.controls.title?.errors?.maxlength  " class="invalid">
-									**Maximum Length should be 200 characters
+								<div *ngIf="(editArticleform.controls.order.touched || editArticleform.controls.order.dirty) && editArticleform.controls.order.invalid && editArticleform.controls.order?.errors?.required  " class="invalid">
+									*Please enter order
+								</div>
+								<div *ngIf="(editArticleform.controls.order.touched || editArticleform.controls.order.dirty) && editArticleform.controls.order.invalid && editArticleform.controls.order?.errors?.min" class="invalid">
+									*Minimum value of order must be 1
+								</div>
+								<div *ngIf="(editArticleform.controls.order.touched || editArticleform.controls.order.dirty) && editArticleform.controls.order.invalid && editArticleform.controls.order?.errors?.max" class="invalid">
+									*Maximum value of order must be 10
 								</div>
 								<div class="form-group">
 									<label>Article Type</label>
