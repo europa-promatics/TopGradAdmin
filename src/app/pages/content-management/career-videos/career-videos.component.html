@@ -43,7 +43,8 @@
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Video/Image</th>
                   <td mat-cell *matCellDef="let row " > 
                     <span class="position-relative play-container">
-                      <video [src]="row?.url" class="slider-imag" *ngIf="row.article_type == 'large_video_article' "></video>
+                      <iframe  [src]="row?.url" width = "200px" height="150px" *ngIf="row.article_type == 'large_video_article' "></iframe>
+                      <!-- <video [src]="row?.url" class="slider-imag" *ngIf="row.article_type == 'large_video_article' "></video> -->
                       <img [src]="row?.url" class="slider-imag" *ngIf="row.article_type == 'small_video_article' " /> 
                     </span> 
                   </td>

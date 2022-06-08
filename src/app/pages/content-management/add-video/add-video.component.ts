@@ -21,6 +21,7 @@ export class AddVideoComponent implements OnInit {
   youtubeUrl: any = false;
   youtubevideo: boolean = false;
   videoURL: any;
+  uploadVideo: boolean = false;
 
   constructor(private _location: Location,private sanitizer: DomSanitizer,private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
 
@@ -86,6 +87,7 @@ export class AddVideoComponent implements OnInit {
 
   onVideoChange(e) {
     console.log(e);
+    this.uploadVideo = true;
     console.log(e.target.files[0].name);
     const file = e.target.files[0];
     const fileType = file.type.split("/")[0];

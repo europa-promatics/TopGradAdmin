@@ -140,15 +140,15 @@
                                     <div class="slider-video-cntnt mt-5">
 										<div class="prev-upld-img">
 											<div class="resume_video_div text-center" >
-												<img src="assets/img/video-thumb.png"  class="img-fluid" *ngIf="!youtubevideo">
-												<iframe  [src]="videoURL" width = "420" height="315"  *ngIf="youtubevideo"></iframe>
+												<img src="assets/img/video-thumb.png"  class="img-fluid" *ngIf="!youtubevideo && !uploadVideo">
+												<iframe  [src]="videoURL" width = "420" height="315"  *ngIf="youtubevideo  && !uploadVideo"></iframe>
 											</div>
 
-											<div class="form-group mt-2" *ngIf="import">
+											<div class="form-group mt-2" *ngIf="import  && !uploadVideo">
 												<label>Import from URL</label>
 												<input type="text" name="" class="form-control" placeholder="Enter url here" formControlName="importUrl" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value" (change)="importVideo()">
 											</div>
-											<div class="upload-imag text-center form-group" (click)="onImportUrl()">
+											<div class="upload-imag text-center form-group" (click)="onImportUrl()" *ngIf="!uploadVideo">
 												<button class="btn-primary btn mt-3 position-relative">
 														Import from URL
 												</button>

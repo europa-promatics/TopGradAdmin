@@ -8,6 +8,7 @@ import { TopgradserviceService } from '../../../topgradservice.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
 export interface UserData {
   id: string;
@@ -64,7 +65,7 @@ export class CareerVideosComponent implements OnInit {
   categoryName: string;
  
 
-  constructor(private Service: TopgradserviceService, public dialog: MatDialog, private fb: FormBuilder, private route: ActivatedRoute) {
+  constructor(private Service: TopgradserviceService,private sanitizer: DomSanitizer, public dialog: MatDialog, private fb: FormBuilder, private route: ActivatedRoute) {
   	// Create 100 users
     const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
 
@@ -130,7 +131,7 @@ export class CareerVideosComponent implements OnInit {
           console.log("new_article=============>", new_article)
           if(new_article =="small_video_article"){
             this.article= "Small Video"
-            console.log("this.article small===========>",this.article);
+            console.log("this.article small111111111===========>",this.article);
             this.sortedData[i].article_name=(this.article);
             this.image=this.sortedData[i].medias.find(x => x.for == 'main');
             this.image_url=this.image?.url
@@ -139,12 +140,24 @@ export class CareerVideosComponent implements OnInit {
           }
           else if(new_article == "large_video_article"){
             this.article= "Large Video"
-            console.log("this.article large===========>",this.article);
+            console.log("this.article large1111111===========>",this.article);
             this.sortedData[i].article_name=(this.article);
             this.video=this.sortedData[i].medias.find(x => x.for == 'video');
             this.video_url=this.video?.url
-            this.sortedData[i].url=(this.video_url);
+            console.log("video url========>.");
+            
+            if(this.video_url && this.video_url.includes("youtube")){
+              console.log("conatins youtube",this.video_url);
+              
+              this.sortedData[i].url=(this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url));
+            }else{
+              console.log("does not conatins youtube",this.video_url);
+              this.sortedData[i].url=(this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url));
+            }
           }
+          // this.image=this.sortedData[i].medias.find(x => x.for == 'main');
+          //   this.image_url=this.image?.url
+          //   this.sortedData[i].url=(this.image_url);
 
           if(type_category == 'resumes'){
             console.log("type_category  inside condition    =======>>>",type_category);
@@ -177,7 +190,7 @@ export class CareerVideosComponent implements OnInit {
             this.sortedData[i].category_name=(this.categoryName);
           }
         }
-        console.log("data shubham==>",this.sortedData);
+        console.log("data ==>",this.sortedData);
      })
   }
   getPageSizeOptions() {
@@ -262,7 +275,17 @@ export class CareerVideosComponent implements OnInit {
           this.sortedData[i].article_name=(this.article);
           this.video=this.sortedData[i].medias.find(x => x.for == 'video');
           this.video_url=this.video?.url
-          this.sortedData[i].url=(this.video_url);
+          console.log("this.video url===============>>>>>>",this.video_url);
+          
+          if(this.video_url && this.video_url.includes("youtube")){
+            console.log("conatins youtube",this.video_url);
+            
+            this.sortedData[i].url=(this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url));
+          }else{
+            console.log("does not conatins youtube",this.video_url);
+            this.sortedData[i].url=(this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url));
+          }
+          // this.sortedData[i].url=(this.video_url);
         }
 
         if(type_category == 'resumes'){

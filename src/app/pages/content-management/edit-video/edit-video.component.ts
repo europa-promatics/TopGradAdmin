@@ -19,6 +19,9 @@ export class EditVideoComponent implements OnInit {
   video: any;
   selectedfile2: any;
   headingImageObj: any;
+  import: boolean = false;
+  youtubeUrl: any;
+  upload: boolean = false;
 
   constructor(private _location: Location,private sanitizer:DomSanitizer, private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) {
     this.editVideoform = this.fb.group({
@@ -29,6 +32,7 @@ export class EditVideoComponent implements OnInit {
       postedby: ['', [Validators.required, Validators.maxLength(50)]],
       postdescription: ['', [Validators.required]],
       Image: ['',],
+      importUrl: ['',],
       county:[''],
       Video: ['',],
       county1:['']
@@ -80,12 +84,59 @@ export class EditVideoComponent implements OnInit {
       }
       else if(resp.data.article_type=="large_video_article"){
         this.type_article="large_video_article"
-        this.editVideoform.patchValue({
-          Video: this.video?.url
-        })
+        
+        if(this.video?.url.includes("youtube")){
+          this.editVideoform.patchValue({
+            importUrl: this.video?.url
+          })
+        }
+        else{
+          
+          this.editVideoform.patchValue({
+            Video: this.video?.url
+          })
+        }
       }
       
     })
+  }
+
+  onImportUrl(){
+    this.import = true;
+     
+  }
+
+
+  importVideo() {
+    
+    console.log("import video youtube video value=======>>", this.import);
+    this.youtubeUrl = this.editVideoform.controls.importUrl.value
+    if(this.youtubeUrl.includes("youtube")){
+     
+      console.log(this.youtubeUrl.includes("youtube"));
+    
+      const videoId = this.getId(this.youtubeUrl);
+      console.log("youtube video id======>>>",videoId);
+      const vid = "https://www.youtube.com/embed/"+videoId
+      this.editVideoform.patchValue({
+        importUrl: vid,
+      })
+      
+      if(this.editVideoform.controls['Video'].value){
+        this.editVideoform.patchValue({
+         Video : '',
+        })
+     }
+    }
+  }
+
+  getId(url: any) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    
+    return (match && match[2].length === 11)
+    ? match[2]
+    : null;
   }
 
   changevideo(event){
@@ -96,6 +147,7 @@ export class EditVideoComponent implements OnInit {
   }
 
   onVideoChange(e) {
+    this.upload = true;
     this.type_article="large_video_article";
     console.log(e);
     console.log(e.target.files[0].name);
@@ -116,6 +168,11 @@ export class EditVideoComponent implements OnInit {
       })
       this.editVideoform.get('county1').clearValidators(); // 6. Clear All Validators
       this.editVideoform.get('county1').updateValueAndValidity();
+      if(this.editVideoform.controls['importUrl'].value){
+         this.editVideoform.patchValue({
+          importUrl : '',
+         })
+      }
       console.log("rightextension", this.editVideoform);
     }
     else {
@@ -124,6 +181,7 @@ export class EditVideoComponent implements OnInit {
 
       console.log("wrongextension", this.editVideoform);
     }
+
   }
 
 
@@ -191,21 +249,39 @@ export class EditVideoComponent implements OnInit {
           }
 
           if(this.editVideoform.controls['type'].value=='large_video_article'){
-            const medias:any= [
-             {
-                 for:"video",
-                 url:this.editVideoform.controls['Video'].value
-             },
-             {
-              "for":"main",
-              "url":this.editVideoform.controls['Image'].value
+            if(this.editVideoform.controls['Video'].value){
+              const medias:any= [
+              {
+                  for:"video",
+                  url:this.editVideoform.controls['Video'].value
+              },
+              {
+                  "for":"main",
+                  "url":this.editVideoform.controls['Image'].value
+                }
+              ]
+              const newmedia= JSON.stringify(medias)
+              console.log("newmedia==========>>>",newmedia);
+              
+              formdata.append("medias",JSON.stringify(medias))
+            }
+            if(this.editVideoform.controls['importUrl'].value){
+              const medias:any= [
+              {
+                  for:"video",
+                  url:this.editVideoform.controls['importUrl'].value
+              },
+              {
+                  "for":"main",
+                  "url":this.editVideoform.controls['Image'].value
+                }
+              ]
+              const newmedia= JSON.stringify(medias)
+              console.log("newmedia==========>>>",newmedia);
+              
+              formdata.append("medias",JSON.stringify(medias))
+            }
           }
-         ]
-         const newmedia= JSON.stringify(medias)
-         console.log("newmedia==========>>>",newmedia);
-         
-         formdata.append("medias",JSON.stringify(medias))
-         }
           
         obj = formdata
 

@@ -84,8 +84,9 @@
 								<div class="form-group" *ngIf="type_article == 'large_video_article'">
 									<label>Video</label>
 									<div class="slider-video-cntnt video-ply-icn">
-										<div class="prev-upld-img video">
+										<div class="prev-upld-img video" *ngIf = "(editVideoform.controls['Video'].value || editVideoform.controls['importUrl'].value) && !import">
 											<!-- <video [src]="editVideoform.controls['Video'].value"></video> -->
+											<img src="assets/img/video-thumb.png"  class="img-fluid" *ngIf="!editVideoform.controls['Video'].value && editVideoform.controls['importUrl'].value">
 											<iframe *ngIf="editVideoform.controls['Video'].value" width="420"
 												height="315" [src]="sanitizer.bypassSecurityTrustResourceUrl(editVideoform.controls['Video'].value)"
 												frameborder="0" allowfullscreen ></iframe>
@@ -104,6 +105,24 @@
 												class="invalid">
 												*Only videos are allowed
 										    </div>
+										</div>
+										<div class="slider-video-cntnt mt-5" *ngIf="(editVideoform.controls['Video'].value || editVideoform.controls['importUrl'].value) && !upload">
+											<div class="prev-upld-img">
+												<div class="resume_video_div text-center" >
+													<img src="assets/img/video-thumb.png"  class="img-fluid" *ngIf="!editVideoform.controls['importUrl'].value && editVideoform.controls['Video'].value">
+													<iframe  [src]="sanitizer.bypassSecurityTrustResourceUrl(editVideoform.controls['importUrl'].value)" width = "420" height="315"  *ngIf="editVideoform.controls['importUrl'].value"></iframe>
+												</div>
+	
+												<div class="form-group mt-2" *ngIf="import">
+													<label>Import from URL</label>
+													<input type="text" name="" class="form-control" placeholder="Enter url here" formControlName="importUrl" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value" (change)="importVideo()">
+												</div>
+												<div class="upload-imag text-center form-group" (click)="onImportUrl()" *ngIf="!uploadVideo">
+													<button class="btn-primary btn mt-3 position-relative">
+															Import from URL
+													</button>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
