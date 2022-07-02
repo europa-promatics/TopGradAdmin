@@ -217,6 +217,9 @@ export class HelpManagementComponent implements OnInit {
       var obj={
         support_id:id,
         reply:this.viewHelp.controls.reply.value,
+        name:this.HelpManagement.first_name,
+        email:this.HelpManagement.email,
+        subject:'Enquiry',
       }
       console.log("Reply=========>",obj);
       this.Service.contactReply(obj).subscribe(res=>{

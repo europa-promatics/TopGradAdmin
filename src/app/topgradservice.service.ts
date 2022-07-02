@@ -877,7 +877,19 @@ export class TopgradserviceService implements HttpInterceptor {
       }
 
       getarticleList(obj: any): Observable<any> {
-        let API_URL = `${this.SERVER_URL}/admin/get/article/list?limit=${obj.limit}&offset=${obj.offset}&search=${obj.search}&type=${obj.type}`;
+        let API_URL = `${this.SERVER_URL}/admin/get/article/list?limit=${obj.limit}&offset=${obj.offset}&search=${obj.search}&type=article`;
+        console.log(API_URL)
+        return this.httpClient.get(API_URL, obj)
+        .pipe(
+        map(res => {
+        return res
+        }),
+        catchError(this.error)
+        )
+      }
+
+      getvideoList(obj: any): Observable<any> {
+        let API_URL = `${this.SERVER_URL}/admin/get/article/list?limit=${obj.limit}&offset=${obj.offset}&search=${obj.search}&type=video`;
         console.log(API_URL)
         return this.httpClient.get(API_URL, obj)
         .pipe(

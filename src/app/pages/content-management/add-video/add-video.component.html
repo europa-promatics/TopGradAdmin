@@ -20,7 +20,7 @@
 								<div *ngIf="(addVideoform.controls.title.touched || addVideoform.controls.title.dirty) && addVideoform.controls.title.invalid && addVideoform.controls.title?.errors?.maxlength  " class="invalid">
 									**Maximum Length should be 200 characters
 								</div>
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label>Order</label>
 									<input type="number" name="" class="form-control" placeholder="Enter Order" formControlName="order" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
 								</div>
@@ -32,8 +32,8 @@
 								</div>
 								<div *ngIf="(addVideoform.controls.order.touched || addVideoform.controls.order.dirty) && addVideoform.controls.order.invalid && addVideoform.controls.order?.errors?.min" class="invalid">
 									*Minimum value must be 1
-								</div>
-								<div class="form-group">
+								</div> -->
+								<!-- <div class="form-group">
 									<label>Video Type</label>
 									<select class="form-control" placeholder="Enter Type" formControlName="type" (change)="video($event)">
 										<option value="small_video_article">Small Video</option>
@@ -46,7 +46,7 @@
 								</div>
 								<div *ngIf="(addVideoform.controls.type.touched || addVideoform.controls.type.dirty) && addVideoform.controls.type.invalid && addVideoform.controls.type?.errors?.maxlength  " class="invalid">
 									**Maximum Length should be 50 characters
-								</div>
+								</div> -->
 								<div class="form-group">
 									<label>Category</label>
 									<select class="form-control" placeholder="Enter Type" formControlName="category">
@@ -65,57 +65,6 @@
 									**Maximum Length should be 50 characters
 								</div>
 								<div class="form-group">
-									<label>Video Description</label>
-									<editor formControlName="description"></editor>
-								</div>
-								<div *ngIf="(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.required  " class="invalid">
-									*Please enter description
-								</div>
-								<div *ngIf="(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.maxlength  " class="invalid">
-									**Maximum Length should be 5000 characters
-								</div>
-								<div class="form-group">
-									<label>Posted By</label>
-									<input type="text" name="" class="form-control" placeholder="Enter name here" formControlName="postedby" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
-								</div>
-								<div *ngIf="(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.required  " class="invalid">
-									*Please enter name
-								</div>
-								<div *ngIf="(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.maxlength  " class="invalid">
-									**Maximum Length should be 50 characters
-								</div>
-								<div class="form-group">
-									<label>Posted Description</label>
-									<editor formControlName="postdescription"></editor>
-								</div>
-								<div *ngIf="(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.required  " class="invalid">
-									*Please enter description
-								</div>
-								<div *ngIf="(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.maxlength  " class="invalid">
-									**Maximum Length should be 5000 characters
-								</div>
-								<div class="form-group">
-									<label>Main Image</label>
-									<div class="slider-video-cntnt">
-										<div class="prev-upld-img">
-											<img [src]="HeadingImage1?HeadingImage1:'assets/img/dummy.png'"  class="img-fluid">
-											<div class="upload-imag text-center">
-												<button class="btn-primary btn  mt-3 position-relative">
-													<input type="file" name="" class="img-input-upld" (change)="setHeadingImage($event)">
-												Upload Image
-												</button>
-											</div>
-											<div *ngIf="addVideoform.controls['Image']?.errors?.required "
-											class="invalid">
-											*Please select image
-											</div>
-											<div *ngIf="addVideoform.controls.county?.errors?.required  " class="invalid">
-												*Only images are allowed
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group" *ngIf="type_article =='large_video_article'">
 									<label>Video</label>
 									<div class="slider-video-cntnt" *ngIf = "!youtubevideo">
 										<div class="prev-upld-img">
@@ -154,7 +103,7 @@
 										<div class="prev-upld-img">
 											<div class="resume_video_div text-center" >
 												<img src="assets/img/video-thumb.png"  class="img-fluid" *ngIf="!youtubevideo && !uploadVideo">
-												<iframe  [src]="videoURL" width = "420" height="315"  *ngIf="youtubevideo  && !uploadVideo"></iframe>
+												<iframe  [src]="videoURL2" width = "420" height="315"  *ngIf="youtubevideo  && !uploadVideo"></iframe>
 											</div>
 
 											<div class="form-group mt-2" *ngIf="import  && !uploadVideo">
@@ -169,6 +118,72 @@
 										</div>
 									</div>
 								</div>
+
+								<div class="form-group position-relative publication_date">
+									<label>Publication Date </label>
+									<div class="">
+										  <input matInput [matDatepicker]="picker1"  (click)="picker1.open()" class="form-control" placeholder="MM/DD/YYYY" formControlName='publication_date'>
+										  <mat-datepicker-toggle matSuffix [for]="picker1"  class="job_date_pickr"></mat-datepicker-toggle>
+										  <mat-datepicker #picker1></mat-datepicker>
+									</div>
+								</div>
+
+								<div *ngIf="(addVideoform.controls.publication_date.touched || addVideoform.controls.publication_date.dirty) && addVideoform.controls.publication_date.invalid && addVideoform.controls.publication_date?.errors?.required  " class="invalid">
+									*Please enter date
+								</div>
+
+								<div class="form-group">	
+									<label>Video Description</label>
+									<editor formControlName="description"></editor>
+								</div>
+								<div *ngIf="(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+								<div *ngIf="(addVideoform.controls.description.touched || addVideoform.controls.description.dirty) && addVideoform.controls.description.invalid && addVideoform.controls.description?.errors?.maxlength  " class="invalid">
+									**Maximum Length should be 5000 characters
+								</div>
+								<div class="form-group">
+									<label>Posted By</label>
+									<input type="text" name="" class="form-control" placeholder="Enter name here" formControlName="postedby" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
+								</div>
+								<div *ngIf="(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.required  " class="invalid">
+									*Please enter name
+								</div>
+								<div *ngIf="(addVideoform.controls.postedby.touched || addVideoform.controls.postedby.dirty) && addVideoform.controls.postedby.invalid && addVideoform.controls.postedby?.errors?.maxlength  " class="invalid">
+									**Maximum Length should be 50 characters
+								</div>
+								<!-- <div class="form-group">
+									<label>Posted Description</label>
+									<editor formControlName="postdescription"></editor>
+								</div>
+								<div *ngIf="(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+								<div *ngIf="(addVideoform.controls.postdescription.touched || addVideoform.controls.postdescription.dirty) && addVideoform.controls.postdescription.invalid && addVideoform.controls.postdescription?.errors?.maxlength  " class="invalid">
+									**Maximum Length should be 5000 characters
+								</div> -->
+								<!-- <div class="form-group">
+									<label>Main Image</label>
+									<div class="slider-video-cntnt">
+										<div class="prev-upld-img">
+											<img [src]="HeadingImage1?HeadingImage1:'assets/img/dummy.png'"  class="img-fluid">
+											<div class="upload-imag text-center">
+												<button class="btn-primary btn  mt-3 position-relative">
+													<input type="file" name="" class="img-input-upld" (change)="setHeadingImage($event)">
+												Upload Image
+												</button>
+											</div>
+											<div *ngIf="addVideoform.controls['Image']?.errors?.required "
+											class="invalid">
+											*Please select image
+											</div>
+											<div *ngIf="addVideoform.controls.county?.errors?.required  " class="invalid">
+												*Only images are allowed
+											</div>
+										</div>
+									</div>
+								</div> -->
+								
 								<div class="edit-btns d-flex justify-content-end">
 									<button class="btn btn-primary mr-4" (click)="postcontent()">Save</button>
 									<button class="btn btn-primary" (click)="back()">Back</button>

@@ -24,13 +24,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "fXoL");
+      "8Y7J");
       /* harmony import */
 
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/router */
-      "tyNb");
+      "iInd");
       /* harmony import */
 
 
@@ -76,19 +76,25 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "fXoL");
+      "8Y7J");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/common */
-      "ofXK");
+      "SVse");
       /* harmony import */
 
 
       var _edit_article_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ./edit-article-routing.module */
       "ULaL");
+      /* harmony import */
+
+
+      var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/material/datepicker */
+      "TN/R");
 
       var EditArticleModule = function EditArticleModule() {
         _classCallCheck(this, EditArticleModule);
@@ -96,7 +102,7 @@
 
       EditArticleModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [],
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _edit_article_routing_module__WEBPACK_IMPORTED_MODULE_3__["EditArticleRoutingModule"]]
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _edit_article_routing_module__WEBPACK_IMPORTED_MODULE_3__["EditArticleRoutingModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_4__["MatDatepickerModule"]]
       })], EditArticleModule);
       /***/
     }

@@ -40,13 +40,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "fXoL");
+      "8Y7J");
       /* harmony import */
 
 
       var ng2_charts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ng2-charts */
-      "LPYB");
+      "hrfs");
       /* harmony import */
 
 
@@ -99,7 +99,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/core */
-      "fXoL");
+      "8Y7J");
 
       var ChartJSComponent = /*#__PURE__*/function () {
         function ChartJSComponent() {
@@ -229,13 +229,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "fXoL");
+      "8Y7J");
       /* harmony import */
 
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/router */
-      "tyNb");
+      "iInd");
       /* harmony import */
 
 

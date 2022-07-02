@@ -35,13 +35,13 @@
               <!-- ID Column -->
               <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
-                <td mat-cell *matCellDef="let row ; let i=index"> {{i+1}} </td>
+                <td mat-cell *matCellDef="let row ; let i=index"> {{i+1+offset}} </td>
               </ng-container>
 
               <!-- Name Column -->
               <ng-container matColumnDef="image">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
-                <td mat-cell *matCellDef="let row"> <img [src]="row.medias[0].url" class="slider-imag" /></td>
+                <td mat-cell *matCellDef="let row"> <img [src]="row.media ? row?.media : 'assets/img/dummy.png'" class="slider-imag" /></td>
               </ng-container>
               <!-- worktype Column -->
               <ng-container matColumnDef="title">
@@ -58,10 +58,10 @@
               <!-- worktype Column -->
 
               <!-- worktype Column -->
-              <ng-container matColumnDef="type">
+              <!-- <ng-container matColumnDef="type">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Article Type</th>
                 <td mat-cell *matCellDef="let row" class="td-width"> {{row.article_name}} </td>
-              </ng-container>
+              </ng-container> -->
               
               <!-- worktype Column -->
               <!-- <ng-container matColumnDef="description">

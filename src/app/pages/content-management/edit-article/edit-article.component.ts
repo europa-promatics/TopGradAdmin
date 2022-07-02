@@ -17,6 +17,7 @@ import * as $ from "jquery";
 export class EditArticleComponent implements OnInit {
   
   headingImageObj: any;
+  image_url: any;
 
   constructor(private _location: Location,private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) { }
   type_article:any;
@@ -25,14 +26,15 @@ export class EditArticleComponent implements OnInit {
   
   editArticleform = this.fb.group({
     title: ['', [Validators.required, Validators.maxLength(200)]],
-    order: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
-    type: ['', [Validators.required, Validators.maxLength(50)]],
+    // order: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
+    // type: ['', [Validators.required, Validators.maxLength(50)]],
     category: ['', [Validators.required, Validators.maxLength(50)]],
     description: ['', [Validators.required]],
     postedby: ['', [Validators.required, Validators.maxLength(50)]],
-    postdescription: ['', [Validators.required]],
+    // postdescription: ['', [Validators.required]],
     Image: ['',],
-    county:['']
+    county:[''],
+    publication_date:['',[Validators.required]],
   });
   article_description:any;
 
@@ -65,62 +67,65 @@ export class EditArticleComponent implements OnInit {
       
       console.log("response============>",resp);
       this.editArticleform.patchValue({
-        Image:resp.data.medias[0].url,
+        Image:resp.data.media,
         title:resp.data.article_title,
-        type:resp.data.article_type,
-        order:resp.data.order,
+        // type:resp.data.article_type,
+        // order:resp.data.order,
         category:resp.data.category,
         description:resp.data.article_description,
         postedby:resp.data.posted_by,
-        postdescription:resp.data.posted_description
+        publication_date: resp.data.date,
+        
+        // postdescription:resp.data.posted_description
       })
+      this.HeadingImage2 = resp.data.media
       
-      if(resp.data.article_type=="small_article"){
-        this.type_article="small_article",
-        this.HeadingImage2=resp.data.medias[0].url
-      }
-      else if(resp.data.article_type=="large_article"){
-        this.type_article="large_article",
-        this.HeadingImage1=resp.data.medias[0].url
-      }
+      // if(resp.data.article_type=="small_article"){
+      //   this.type_article="small_article",
+      //   this.HeadingImage2=resp.data.medias[0].url
+      // }
+      // else if(resp.data.article_type=="large_article"){
+      //   this.type_article="large_article",
+      //   this.HeadingImage1=resp.data.medias[0].url
+      // }
       
     })
   }
 
-  setHeadingImage(event) {
-    console.log(event.target.files[0]);
-    this.type_article="large_article";
-    const file = event.target.files[0];
-    const fileType = file.type.split("/")[0];
-    console.log(fileType);
-    if (fileType == "image") {
-      this.headingImageObj = event.target.files[0]
-      const formData = new FormData();
-      formData.append('image', this.headingImageObj);
-      this.Service.uploadbenefitmedia(formData).subscribe((resp: any) => {
+  // setHeadingImage(event) {
+  //   console.log(event.target.files[0]);
+  //   this.type_article="large_article";
+  //   const file = event.target.files[0];
+  //   const fileType = file.type.split("/")[0];
+  //   console.log(fileType);
+  //   if (fileType == "image") {
+  //     this.headingImageObj = event.target.files[0]
+  //     const formData = new FormData();
+  //     formData.append('image', this.headingImageObj);
+  //     this.Service.uploadbenefitmedia(formData).subscribe((resp: any) => {
 
-        console.log("image response ==>", resp);
+  //       console.log("image response ==>", resp);
 
-        this.editArticleform.patchValue({
-          Image: resp,
-        })
-      })
-      let reader = new FileReader();
-      reader.onload = (event: any) => {
+  //       this.editArticleform.patchValue({
+  //         Image: resp,
+  //       })
+  //     })
+  //     let reader = new FileReader();
+  //     reader.onload = (event: any) => {
         
-        this.HeadingImage1= event.target.result;
-      };
-      reader.readAsDataURL(this.headingImageObj);
-      this.editArticleform.get('county').clearValidators(); // 6. Clear All Validators
-      this.editArticleform.get('county').updateValueAndValidity();
-      console.log("rightextension", this.editArticleform);
-    } else {
-      this.editArticleform.get('county').setValidators([Validators.required]); // 5.Set Required Validator
-      this.editArticleform.get('county').updateValueAndValidity();
+  //       this.HeadingImage1= event.target.result;
+  //     };
+  //     reader.readAsDataURL(this.headingImageObj);
+  //     this.editArticleform.get('county').clearValidators(); // 6. Clear All Validators
+  //     this.editArticleform.get('county').updateValueAndValidity();
+  //     console.log("rightextension", this.editArticleform);
+  //   } else {
+  //     this.editArticleform.get('county').setValidators([Validators.required]); // 5.Set Required Validator
+  //     this.editArticleform.get('county').updateValueAndValidity();
 
-      console.log("wrongextension",this.editArticleform);
-    }
-  }
+  //     console.log("wrongextension",this.editArticleform);
+  //   }
+  // }
 
   setHeadingImage1(event) {
     console.log(event.target.files[0]);
@@ -135,7 +140,7 @@ export class EditArticleComponent implements OnInit {
       this.Service.uploadbenefitmedia(formData).subscribe((resp: any) => {
 
         console.log("image response ==>", resp);
-
+        this.image_url =  resp;
         this.editArticleform.patchValue({
           Image: resp,
         })
@@ -167,38 +172,41 @@ export class EditArticleComponent implements OnInit {
         const formdata = new FormData()
           console.log("yippeeeeeeee", this.headingImageObj);
           formdata.append("article_id",  this.route.snapshot.paramMap.get('id'))
-          formdata.append("article_type",  this.editArticleform.controls['type'].value)
-          formdata.append("order",  this.editArticleform.controls['order'].value)
+          // formdata.append("article_type",  this.editArticleform.controls['type'].value)
+          // formdata.append("order",  this.editArticleform.controls['order'].value)
           formdata.append("category",  this.editArticleform.controls['category'].value)
           formdata.append("article_title",  this.editArticleform.controls['title'].value)
           formdata.append("article_description", this.editArticleform.controls['description'].value)
           formdata.append("posted_by", this.editArticleform.controls['postedby'].value)
-          formdata.append("posted_description", this.editArticleform.controls['postdescription'].value)
-          if(this.editArticleform.controls['type'].value=='small_article'){
-             const medias:any= [
-              {
-                  "for":"main",
-                  "url":this.editArticleform.controls['Image'].value
-              }
-          ]
-          const newmedia= JSON.stringify(medias)
-          console.log("newmedia==========>>>",newmedia);
-          
-          formdata.append("medias",JSON.stringify(medias))
-          }
+          formdata.append("date", this.editArticleform.controls['publication_date'].value)
+          formdata.append("media",this.image_url);
 
-          if(this.editArticleform.controls['type'].value=='large_article'){
-            const medias:any= [
-             {
-                 for:"article_image",
-                 url:this.editArticleform.controls['Image'].value
-             }
-         ]
-         const newmedia= JSON.stringify(medias)
-         console.log("newmedia==========>>>",newmedia);
+          // formdata.append("posted_description", this.editArticleform.controls['postdescription'].value)
+        //   if(this.editArticleform.controls['type'].value=='small_article'){
+        //      const medias:any= [
+        //       {
+        //           "for":"main",
+        //           "url":this.editArticleform.controls['Image'].value
+        //       }
+        //   ]
+        //   const newmedia= JSON.stringify(medias)
+        //   console.log("newmedia==========>>>",newmedia);
+          
+        //   formdata.append("medias",JSON.stringify(medias))
+        //   }
+
+        //   if(this.editArticleform.controls['type'].value=='large_article'){
+        //     const medias:any= [
+        //      {
+        //          for:"article_image",
+        //          url:this.editArticleform.controls['Image'].value
+        //      }
+        //  ]
+        //  const newmedia= JSON.stringify(medias)
+        //  console.log("newmedia==========>>>",newmedia);
          
-         formdata.append("medias",JSON.stringify(medias))
-         }
+        //  formdata.append("medias",JSON.stringify(medias))
+        //  }
           
         obj = formdata
 

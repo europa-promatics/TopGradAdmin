@@ -865,3 +865,9 @@ p.accoun_date {
     white-space: nowrap;
    }
   }
+  .publication_date{
+    .job_date_pickr button.mat-focus-indicator.mat-icon-button.mat-button-base{
+      right: 0;
+    }
+  }
+ 

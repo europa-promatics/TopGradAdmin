@@ -6,6 +6,10 @@ import { AddArticleComponent } from './add-article.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddArticleRoutingModule,
     EditorModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
   ]
 })
 export class AddArticleModule { }

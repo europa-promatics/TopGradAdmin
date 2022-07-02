@@ -15,7 +15,7 @@
 									<input type="text" name="" class="form-control" value="Career Counsellors" formControlName="title" 
 									oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
 								</div>
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label>Order</label>
 									<input type="number" name="" class="form-control" value="Career Counsellors" formControlName="order" 
 									oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
@@ -28,8 +28,8 @@
 								</div>
 								<div *ngIf="(editArticleform.controls.order.touched || editArticleform.controls.order.dirty) && editArticleform.controls.order.invalid && editArticleform.controls.order?.errors?.max" class="invalid">
 									*Maximum value of order must be 10
-								</div>
-								<div class="form-group">
+								</div> -->
+								<!-- <div class="form-group">
 									<label>Article Type</label>
 									<select class="form-control" placeholder="Enter Type" formControlName="type" (change)="article($event)">
 										<option value="small_article">Small Article</option>
@@ -42,7 +42,7 @@
 								</div>
 								<div *ngIf="(editArticleform.controls.type.touched || editArticleform.controls.type.dirty) && editArticleform.controls.type.invalid && editArticleform.controls.type?.errors?.maxlength  " class="invalid">
 									**Maximum Length should be 50 characters
-								</div>
+								</div> -->
 								<div class="form-group">
 									<label>Category</label>
 									<select class="form-control" placeholder="Enter Type" formControlName="category" >
@@ -61,57 +61,6 @@
 									**Maximum Length should be 50 characters
 								</div>
 								<div class="form-group">
-									<label>Article Description</label>
-									<editor  formControlName="description"></editor>
-								</div>
-								<div *ngIf="(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.required  " class="invalid">
-									*Please enter description
-								</div>
-								<div *ngIf="(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.maxlength  " class="invalid">
-									**Maximum Length should be 5000 characters
-								</div>
-								<div class="form-group">
-									<label>Posted By</label>
-									<input type="text" name="" class="form-control" value="Olivia" formControlName="postedby" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
-								</div>
-								<div *ngIf="(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.required  " class="invalid">
-									*Please enter name
-								</div>
-								<div *ngIf="(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.maxlength  " class="invalid">
-									**Maximum Length should be 50 characters
-								</div>
-								<div class="form-group">
-									<label>Posted Description</label>
-									<editor formControlName="postdescription" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value"></editor>
-								</div>
-								<div *ngIf="(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.required  " class="invalid">
-									*Please enter description
-								</div>
-								<div *ngIf="(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.maxlength  " class="invalid">
-									**Maximum Length should be 5000 characters
-								</div>
-								<div class="form-group" *ngIf="type_article =='large_article'">
-									<label>Article Image</label>
-									<div class="slider-video-cntnt">
-										<div class="prev-upld-img">
-											<img [src]="HeadingImage1?HeadingImage1:'assets/img/dummy.png'" class="img-fluid">
-											<div class="upload-imag text-center">
-												<button class="btn-primary btn  mt-3 position-relative">
-													<input type="file" name="" class="img-input-upld" (change)="setHeadingImage($event)">
-												Upload Image
-												</button>
-											</div>
-											<div *ngIf="editArticleform.controls['Image']?.errors?.required "
-											class="invalid">
-											*Please select image
-											</div>
-											<div *ngIf="editArticleform.controls.county?.errors?.required  " class="invalid">
-												*Only images are allowed
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group" *ngIf="type_article == 'small_article'">
 									<label>Banner Image</label>
 									<div class="slider-video-cntnt">
 										<div class="prev-upld-img">
@@ -132,6 +81,72 @@
 										</div>
 									</div>
 								</div>
+								
+                                <div class="form-group position-relative publication_date">
+									<label>Publication Date </label>
+									<div class="">
+										  <input matInput [matDatepicker]="picker1"  (click)="picker1.open()" class="form-control" placeholder="MM/DD/YYYY" formControlName='publication_date'>
+										  <mat-datepicker-toggle matSuffix [for]="picker1"  class="job_date_pickr"></mat-datepicker-toggle>
+										  <mat-datepicker #picker1></mat-datepicker>
+									</div>
+								</div>
+
+								<div *ngIf="(editArticleform.controls.publication_date.touched || editArticleform.controls.publication_date.dirty) && editArticleform.controls.publication_date.invalid && editArticleform.controls.publication_date?.errors?.required  " class="invalid">
+									*Please enter date
+								</div>
+
+								<div class="form-group">
+									<label>Article Content</label>
+									<editor  formControlName="description"></editor>
+								</div>
+								<div *ngIf="(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+								<div *ngIf="(editArticleform.controls.description.touched || editArticleform.controls.description.dirty) && editArticleform.controls.description.invalid && editArticleform.controls.description?.errors?.maxlength  " class="invalid">
+									**Maximum Length should be 5000 characters
+								</div>
+								<div class="form-group">
+									<label>Author</label>
+									<input type="text" name="" class="form-control" value="Olivia" formControlName="postedby" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
+								</div>
+								<div *ngIf="(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.required  " class="invalid">
+									*Please enter name
+								</div>
+								<div *ngIf="(editArticleform.controls.postedby.touched || editArticleform.controls.postedby.dirty) && editArticleform.controls.postedby.invalid && editArticleform.controls.postedby?.errors?.maxlength  " class="invalid">
+									**Maximum Length should be 50 characters
+								</div>
+								<!-- <div class="form-group">
+									<label>Posted Description</label>
+									<editor formControlName="postdescription" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value"></editor>
+								</div>
+								<div *ngIf="(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+								<div *ngIf="(editArticleform.controls.postdescription.touched || editArticleform.controls.postdescription.dirty) && editArticleform.controls.postdescription.invalid && editArticleform.controls.postdescription?.errors?.maxlength  " class="invalid">
+									**Maximum Length should be 5000 characters
+								</div> -->
+								<!-- <div class="form-group" *ngIf="type_article =='large_article'">
+									<label>Article Image</label>
+									<div class="slider-video-cntnt">
+										<div class="prev-upld-img">
+											<img [src]="HeadingImage1?HeadingImage1:'assets/img/dummy.png'" class="img-fluid">
+											<div class="upload-imag text-center">
+												<button class="btn-primary btn  mt-3 position-relative">
+													<input type="file" name="" class="img-input-upld" (change)="setHeadingImage($event)">
+												Upload Image
+												</button>
+											</div>
+											<div *ngIf="editArticleform.controls['Image']?.errors?.required "
+											class="invalid">
+											*Please select image
+											</div>
+											<div *ngIf="editArticleform.controls.county?.errors?.required  " class="invalid">
+												*Only images are allowed
+											</div>
+										</div>
+									</div>
+								</div> -->
+							
 								<div class="edit-btns d-flex justify-content-end">
 									<button class="btn btn-primary mr-4" (click)="postcontent()">Save</button>
 									<button class="btn btn-primary" (click)="back()">Back</button>

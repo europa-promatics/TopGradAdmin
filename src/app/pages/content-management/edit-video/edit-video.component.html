@@ -21,7 +21,7 @@
 									**Maximum Length should be 200 characters
 								</div>
 
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label>Order</label>
 									<input type="number" name="" class="form-control" placeholder="Enter Order" formControlName="order" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
 								</div>
@@ -47,7 +47,7 @@
 								</div>
 								<div *ngIf="(editVideoform.controls.type.touched || editVideoform.controls.type.dirty) && editVideoform.controls.type.invalid && editVideoform.controls.type?.errors?.maxlength  " class="invalid">
 									**Maximum Length should be 50 characters
-								</div>
+								</div> -->
 								<div class="form-group">
 									<label>Category</label>
 									<select class="form-control" placeholder="Enter Type" formControlName="category" >
@@ -75,17 +75,8 @@
 								<div *ngIf="(editVideoform.controls.description.touched || editVideoform.controls.description.dirty) && editVideoform.controls.description.invalid && editVideoform.controls.description?.errors?.maxlength  " class="invalid">
 									**Maximum Length should be 5000 characters
 								</div>
-								<div class="form-group">
-									<label>Posted By</label>
-									<input type="text" name="" class="form-control" value="Olivia" formControlName="postedby" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
-								</div>
-								<div *ngIf="(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.required  " class="invalid">
-									*Please enter name
-								</div>
-								<div *ngIf="(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.maxlength  " class="invalid">
-									**Maximum Length should be 50 characters
-								</div>
-								<div class="form-group">
+								
+								<!-- <div class="form-group">
 									<label>Posted Description</label>
 									<editor formControlName="postdescription"></editor>
 								</div>
@@ -94,8 +85,8 @@
 								</div>
 								<div *ngIf="(editVideoform.controls.postdescription.touched || editVideoform.controls.postdescription.dirty) && editVideoform.controls.postdescription.invalid && editVideoform.controls.postdescription?.errors?.maxlength  " class="invalid">
 									**Maximum Length should be 5000 characters
-								</div>
-								<div class="form-group" *ngIf="type_article == 'large_video_article'">
+								</div> -->
+								<div class="form-group" >
 									<label>Video</label>
 									<div class="slider-video-cntnt video-ply-icn">
 										<div class="prev-upld-img video" *ngIf = "(editVideoform.controls['Video'].value || editVideoform.controls['importUrl'].value) && !import">
@@ -140,7 +131,22 @@
 										</div>
 									</div>
 								</div>
-								<div class="form-group">
+
+								<div class="form-group position-relative publication_date">
+									<label>Publication Date </label>
+									<div class="">
+										  <input matInput [matDatepicker]="picker1"  (click)="picker1.open()" class="form-control" placeholder="MM/DD/YYYY" formControlName='publication_date'>
+										  <mat-datepicker-toggle matSuffix [for]="picker1"  class="job_date_pickr"></mat-datepicker-toggle>
+										  <mat-datepicker #picker1></mat-datepicker>
+									</div>
+								</div>
+
+								<div *ngIf="(editVideoform.controls.publication_date.touched || editVideoform.controls.publication_date.dirty) && editVideoform.controls.publication_date.invalid && editVideoform.controls.publication_date?.errors?.required  " class="invalid">
+									*Please enter description
+								</div>
+
+
+								<!-- <div class="form-group">
 									<label>Main Image</label>
 									<div class="slider-video-cntnt video-ply-icn">
 										<div class="prev-upld-img video">
@@ -160,7 +166,19 @@
 											</div>
 										</div>
 									</div>
+								</div> -->
+                                 
+								<div class="form-group">
+									<label>Posted By</label>
+									<input type="text" name="" class="form-control" value="Olivia" formControlName="postedby" oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
 								</div>
+								<div *ngIf="(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.required  " class="invalid">
+									*Please enter name
+								</div>
+								<div *ngIf="(editVideoform.controls.postedby.touched || editVideoform.controls.postedby.dirty) && editVideoform.controls.postedby.invalid && editVideoform.controls.postedby?.errors?.maxlength  " class="invalid">
+									**Maximum Length should be 50 characters
+								</div>
+
 								<div class="edit-btns d-flex justify-content-end">
 									<button class="btn btn-primary mr-4" (click)="postcontent()">Save</button>
 									<button class="btn btn-primary" (click)="back()">Back</button>

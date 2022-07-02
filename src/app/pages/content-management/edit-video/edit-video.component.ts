@@ -26,17 +26,18 @@ export class EditVideoComponent implements OnInit {
   constructor(private _location: Location,private sanitizer:DomSanitizer, private route:ActivatedRoute, private Service: TopgradserviceService, private _snackBar: MatSnackBar, private router: Router, private fb: FormBuilder) {
     this.editVideoform = this.fb.group({
       title: ['', [Validators.required, Validators.maxLength(200)]],
-      order: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
-      type: ['', [Validators.required, Validators.maxLength(50)]],
+      // order: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
+      // type: ['', [Validators.required, Validators.maxLength(50)]],
       category: ['', [Validators.required, Validators.maxLength(50)]],
       description: ['', [Validators.required]],
       postedby: ['', [Validators.required, Validators.maxLength(50)]],
-      postdescription: ['', [Validators.required]],
+      // postdescription: ['', [Validators.required]],
       Image: ['',],
       importUrl: ['',],
       county:[''],
       Video: ['',],
-      county1:['']
+      county1:[''],
+      publication_date:[''],
     });
    }
 
@@ -76,7 +77,8 @@ export class EditVideoComponent implements OnInit {
           type:resp.data.article_type,
           description:resp.data.article_description,
           postedby:resp.data.posted_by,
-          postdescription:resp.data.posted_description
+          postdescription:resp.data.posted_description,
+          publication_date:resp.data.date
         })
       // }, 2000)
       console.log("my for,=============>",this.editVideoform);

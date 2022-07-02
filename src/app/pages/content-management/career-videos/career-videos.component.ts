@@ -44,7 +44,7 @@ const POSTEDBY: string[] = [
 })
 export class CareerVideosComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'image', 'postedBy', 'title','category','type', 'action'];
+  displayedColumns: string[] = ['select', 'id', 'image', 'postedBy', 'title','category', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   
@@ -63,6 +63,7 @@ export class CareerVideosComponent implements OnInit {
   image_url: any;
   image: any;
   categoryName: string;
+  offset: number = 0;
  
 
   constructor(private Service: TopgradserviceService,private sanitizer: DomSanitizer, public dialog: MatDialog, private fb: FormBuilder, private route: ActivatedRoute) {
@@ -109,11 +110,12 @@ export class CareerVideosComponent implements OnInit {
     this.topPage = evt.pageIndex
     console.log('rsawsfsdsf',this.topPage)
     console.log("pagesize is======",evt.pageSize);
+    this.offset =(evt.pageIndex*evt.pageSize);
     
    var obj:any = {
       search:this.search,
       limit: evt.pageSize,
-      offset: (evt.pageIndex*evt.pageSize),
+      offset: this.offset,
       type:"video_article"
     }
     //  if(this.search){
@@ -245,14 +247,14 @@ export class CareerVideosComponent implements OnInit {
     var obj: any = {
       limit: 5,
       offset: 0,
-      type:"video_article",
+      type:"video",
       search: this.search
       // search: this.search
     }
 
     console.log("object===>", obj);
 
-    this.Service.getarticleList(obj).subscribe(res => {
+    this.Service.getvideoList(obj).subscribe(res => {
       console.log("Response==========", res);
       this.sortedData = res.data
       this.totalRecords = res.count

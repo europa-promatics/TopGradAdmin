@@ -44,7 +44,7 @@ const POSTEDBY: string[] = [
 })
 export class CareerArticlesComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'image', 'postedBy', 'title','category','type', 'action'];
+  displayedColumns: string[] = ['select', 'id', 'image', 'postedBy', 'title','category', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   
@@ -59,6 +59,7 @@ export class CareerArticlesComponent implements OnInit {
   topPage: any;
   event: any;
   categoryName: string;
+  offset: number = 0;
 
   constructor(private Service: TopgradserviceService, public dialog: MatDialog, private fb: FormBuilder, private route: ActivatedRoute) {
   	// Create 100 users
@@ -103,7 +104,7 @@ export class CareerArticlesComponent implements OnInit {
     this.topPage = evt.pageIndex
     console.log('rsawsfsdsf',this.topPage)
     console.log("pagesize is======",evt.pageSize);
-    
+    this.offset = evt.pageIndex*evt.pageSize
    var obj:any = {
       search:this.search,
       limit: evt.pageSize,
@@ -118,24 +119,24 @@ export class CareerArticlesComponent implements OnInit {
        console.log("Response of all the service listing>>>>>", data);
         this.sortedData=data.data
         this.totalRecords = data.count
-
+        console.log("sorted data output", this.sortedData)
         for(let i=0;i<this.sortedData.length;i++){
           var new_article = this.sortedData[i].article_type
           var type_category = this.sortedData[i]?.category
           console.log("type_category  outside    =======>>>",type_category);
           
           console.log("new_article=============>", new_article)
-          if(new_article =="small_article"){
-            this.article= "Small Article"
-            console.log("this.article small===========>",this.article);
-            this.sortedData[i].article_name=(this.article);
+        //   if(new_article =="small_article"){
+        //     this.article= "Small Article"
+        //     console.log("this.article small===========>",this.article);
+        //     this.sortedData[i].article_name=(this.article);
             
-          }
-          else if(new_article == "large_article"){
-            this.article= "Large Article"
-            console.log("this.article large===========>",this.article);
-            this.sortedData[i].article_name=(this.article);
-          }
+        //   }
+        //   else if(new_article == "large_article"){
+        //     this.article= "Large Article"
+        //     console.log("this.article large===========>",this.article);
+        //     this.sortedData[i].article_name=(this.article);
+        //   }
   
           if(type_category == 'resumes'){
             console.log("type_category  inside condition    =======>>>",type_category);
@@ -230,7 +231,7 @@ export class CareerArticlesComponent implements OnInit {
     var obj: any = {
       limit: 5,
       offset: 0,
-      type:"image_article",
+      article_type:"article",
       search: this.search
       // search: this.search
     }
@@ -238,8 +239,9 @@ export class CareerArticlesComponent implements OnInit {
     console.log("object===>", obj);
 
     this.Service.getarticleList(obj).subscribe(res => {
-      console.log("Response==========", res);
+      console.log("Response==========22", res);
       this.sortedData = res.data
+      console.log("sorted data output", this.sortedData)
       this.totalRecords = res.count
       for(let i=0;i<this.sortedData.length;i++){
         var new_article = this.sortedData[i].article_type
@@ -247,17 +249,17 @@ export class CareerArticlesComponent implements OnInit {
         console.log("type_category  outside    =======>>>",type_category);
         
         console.log("new_article=============>", new_article)
-        if(new_article =="small_article"){
-          this.article= "Small Article"
-          console.log("this.article small===========>",this.article);
-          this.sortedData[i].article_name=(this.article);
+        // if(new_article =="small_article"){
+        //   this.article= "Small Article"
+        //   console.log("this.article small===========>",this.article);
+        //   this.sortedData[i].article_name=(this.article);
           
-        }
-        else if(new_article == "large_article"){
-          this.article= "Large Article"
-          console.log("this.article large===========>",this.article);
-          this.sortedData[i].article_name=(this.article);
-        }
+        // }
+        // else if(new_article == "large_article"){
+        //   this.article= "Large Article"
+        //   console.log("this.article large===========>",this.article);
+        //   this.sortedData[i].article_name=(this.article);
+        // }
 
         if(type_category == 'resumes'){
           console.log("type_category  inside condition    =======>>>",type_category);
