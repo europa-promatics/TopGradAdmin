@@ -28,7 +28,7 @@ const CATEGORY: string[] = [
 })
 export class CategoriesManagementComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['select', 'id', 'image', 'category', 'subcategory', 'status', 'action'];
+  displayedColumns: string[] = ['select', 'id', 'category', 'subcategory', 'status', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   

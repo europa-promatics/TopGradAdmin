@@ -220,7 +220,9 @@ export class EditArticleComponent implements OnInit {
    
     this.Service.editArticleContent(obj).subscribe((resp) => {
 
-      this.Service.showMessage({ message: "Submitted Successfully" })
+      this.Service.showMessage({ message: "Submitted Successfully" });
+            this.router.navigate(['/career-article'])
+
     })
   }
 

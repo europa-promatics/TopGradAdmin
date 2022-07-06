@@ -186,6 +186,8 @@ export class AddVideoComponent implements OnInit {
     this.Service.addArticleContent(obj).subscribe((resp) => {
 
       this.Service.showMessage({ message: "Submitted Successfully" })
+                  this.router.navigate(['/career-article'])
+
     })
   }
 

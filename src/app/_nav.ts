@@ -43,7 +43,7 @@ export const navItems: INavData[] = [
     icon: 'icon-user'
   },
   {
-    name: 'Categories Management',
+    name: 'Industry Management',
     url: '/categoriesManagement',
     icon: 'icon-layers'
   },

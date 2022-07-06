@@ -387,6 +387,8 @@
               _this2.Service.showMessage({
                 message: "Submitted Successfully"
               });
+
+              _this2.router.navigate(['/career-article']);
             });
           }
         }, {

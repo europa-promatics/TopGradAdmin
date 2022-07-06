@@ -63,7 +63,7 @@ const SUBSEXP: string[] = [
 })
 export class OfferSubmissionsComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'supervisorname', 'supervisoremail', 'company', 'candidate', 'candidatemail', 'offer', 'startdate', 'subsexp', 'action'];
+  displayedColumns: string[] = ['select', 'id', 'supervisorname', 'supervisoremail', 'company', 'candidate', 'candidatemail', 'offer', 'startdate', 'subsexp','status','action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   

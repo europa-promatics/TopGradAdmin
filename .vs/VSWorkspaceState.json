@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\views",
+    "\\src\\app\\views\\add-category"
   ],
-  "SelectedNode": "\\src\\index.html",
   "PreviewInSolutionExplorer": false
 }

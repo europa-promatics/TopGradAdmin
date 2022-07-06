@@ -275,6 +275,7 @@ let AddArticleComponent = class AddArticleComponent {
         console.log("objjjjjjjj===========>", obj);
         this.Service.addArticleContent(obj).subscribe((resp) => {
             this.Service.showMessage({ message: "Submitted Successfully" });
+            this.router.navigate(['/career-article']);
         });
     }
     back() {
