@@ -12,62 +12,77 @@
 							<div class="row">
 								<div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
-								 		<label>Host Company:</label>
-								 		<span>FrameStacks Inc.</span>
+										 <label>Name:</label>
+								 		<span>{{firstName | titlecase}} {{lastName | titlecase}}</span>
 								 	</div>
 								</div>
+
 								<div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
 								 		<label>Transaction ID:</label>
-								 		<span>5734O</span>
+								 		<span>{{transactionId}}</span>
 								 	</div>
 								</div>
-								<div class="col-lg-6 col-sm-12">
+
+								<!-- <div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
 								 		<label>Supervisor Name:</label>
 								 		<span>Michael Smith</span>
 								 	</div>
-								</div>
+								</div> -->
+
 								<div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
-								 		<label>Candidate Name:</label>
-								 		<span>Nathan Jones</span>
+								 		<label>Company Name:</label>
+								 		<span>{{companyName | titlecase}}</span>
 								 	</div>
 								</div>
+
 								<div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
-								 		<label>Supervisor Email:</label>
-								 		<span>msmith@outlook.com</span>
+								 		<label>Email:</label>
+								 		<span>{{email}}</span>
 								 	</div>
 								</div>
-								<div class="col-lg-6 col-sm-12">
+
+								<!-- <div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
 								 		<label>Candidate Email:</label>
 								 		<span>nathan.jones95@gmail.com</span>
 								 	</div>
-								</div>
+								</div> -->
+
 								<div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
-								 		<label>Start Date:</label>
-								 		<span>4th June 2021</span>
+								 		<label>Date:</label>
+								 		<span>{{date | date:shortDate}}</span>
 								 	</div>
 								</div>
-								<div class="col-lg-6 col-sm-12">
+								<!-- <div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
 								 		<label>End Date:</label>
 								 		<span>4th July 2021</span>
 								 	</div>
-								</div>
-								<div class="col-lg-6 col-sm-12">
+								</div> -->
+
+								<!-- <div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
 								 		<label>Insurance Package:</label>
 								 		<span>Insurance and Agreement</span>
 								 	</div>
-								</div>
+								</div> -->
+
+								<div class="col-lg-6 col-sm-12">
+									<div class="form-group pymnt_dtls">
+										<label>Status:</label>
+										<span>{{status | titlecase}}</span>
+									</div>
+							   </div>
+
 								<div class="col-lg-6 col-sm-12">
 								 	<div class="form-group pymnt_dtls">
 								 		<label>Amount Paid:</label>
-								 		<span>$195</span>
+								 		<span>{{totalAmount}} {{currencyAmount}}</span>
 								 	</div>
 								</div>
 								
@@ -80,7 +95,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-12">
+			<!-- <div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
 						<strong>Recent Transaction Details</strong>
@@ -94,7 +109,7 @@
 				        <div class="mat-elevation-z8">
 				          <div class="table-responsive">
 				            <table mat-table [dataSource]="dataSource" matSort>
-				              <!-- Checkbox Column -->
+
 				              <ng-container matColumnDef="select">
 				                <th mat-header-cell *matHeaderCellDef>
 				                  <mat-checkbox (change)="$event ? masterToggle() : null"
@@ -111,63 +126,58 @@
 				                  </mat-checkbox>
 				                </td>
 				              </ng-container>
-				              <!-- ID Column -->
+
 				              <ng-container matColumnDef="id">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
 				                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
 				              </ng-container>
 
-				              <!-- postedby Column -->
 				              <ng-container matColumnDef="transid">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header>Transaction ID </th>
 				                <td mat-cell *matCellDef="let row"> {{row.transid}} </td>
 				              </ng-container>
 
-				              <!-- postedby Column -->
 				              <ng-container matColumnDef="supervisorname">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header>Supervisor Name </th>
 				                <td mat-cell *matCellDef="let row"> {{row.supervisorname}} </td>
 				              </ng-container>
-				              <!-- worktype Column -->
+
 				              <ng-container matColumnDef="supervisoremail">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header>Supervisor Email</th>
 				                <td mat-cell *matCellDef="let row"> {{row.supervisoremail}} </td>
 				              </ng-container>
 
-				              <!-- postedby Column -->
 				              <ng-container matColumnDef="company">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header>Company name </th>
 				                <td mat-cell *matCellDef="let row"> {{row.company}} </td>
 				              </ng-container>
-				              <!-- worktype Column -->
+
 				              <ng-container matColumnDef="candidate">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header>Candidate name</th>
 				                <td mat-cell *matCellDef="let row"> {{row.candidate}} </td>
 				              </ng-container>
-				              <!-- Company Column -->
+
 				              <ng-container matColumnDef="candidatemail">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header>Candidate Email</th>
 				                <td mat-cell *matCellDef="let row"> {{row.candidatemail}} </td>
 				              </ng-container>
 
-				              <!-- Company Column -->
+
 				              <ng-container matColumnDef="offer">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header>Offer Selected</th>
 				                <td mat-cell *matCellDef="let row"> {{row.offer}} </td>
 				              </ng-container>
 
-				               <!-- Job title Column -->
 				              <ng-container matColumnDef="startdate">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header>Start Date</th>
 				                <td mat-cell *matCellDef="let row"> {{row.startdate}} </td>
 				              </ng-container>
 				              
-				              <!-- status column -->
 				              <ng-container matColumnDef="subsexp">
 				                <th mat-header-cell *matHeaderCellDef mat-sort-header> Expiry date </th>
 				                <td mat-cell *matCellDef="let row">{{row.subsexp}}</td>
 				              </ng-container>
-				               <!-- Action column -->
+
 				               <ng-container matColumnDef="action">
 				                <th mat-header-cell *matHeaderCellDef> Action </th>
 				                <td mat-cell *matCellDef="let row">
@@ -187,16 +197,11 @@
 				                </td>
 				              </ng-container>
 
-				              <!-- Progress Column -->
-				              <!-- <ng-container matColumnDef="progress">
-				                <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-				                <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
-				              </ng-container> -->
 
 				              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 				              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-				              <!-- Row shown when there is no matching data. -->
+
 				              <tr class="mat-row" *matNoDataRow>
 				                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
 				              </tr>
@@ -207,14 +212,14 @@
 					</div>
 				</div>
 		        
-		      </div>
+		      </div> -->
 		</div>
 
 	</div>
 </section>
 
 <!-- Modal -->
-<div bsModal #smallModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+<!-- <div bsModal #smallModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -233,4 +238,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

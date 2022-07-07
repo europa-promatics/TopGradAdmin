@@ -4,6 +4,8 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {ModalDirective} from 'ngx-bootstrap/modal';
 import {SelectionModel} from '@angular/cdk/collections';
+import { TopgradserviceService } from '../../topgradservice.service';
+import { ActivatedRoute } from '@angular/router';
 
 export interface UserData {
   id: string;
@@ -62,15 +64,30 @@ const SUBSEXP: string[] = [
 })
 export class ViewPaymentComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'transid', 'supervisorname', 'supervisoremail', 'company', 'candidate', 'candidatemail', 'offer', 'startdate', 'subsexp', 'action'];
+  // displayedColumns: string[] = ['select', 'id', 'transid', 'supervisorname', 'supervisoremail', 'company', 'candidate', 'candidatemail', 'offer', 'startdate', 'subsexp', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   
   @ViewChild('smallModal') public smallModal: ModalDirective;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+  firstName: any;
+  lastName: any;
+  transactionId: any;
+  companyName: any;
+  email: any;
+  amount: any;
+  date: any;
+  status: any;
+  alldetailData: any;
+  totalAmount: any;
+  currencyAmount: any;
 
-  constructor() { 
+
+  constructor(
+    private Service: TopgradserviceService,
+    private route: ActivatedRoute,
+  ) { 
   	// Create 100 users
     const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
 
@@ -83,7 +100,52 @@ export class ViewPaymentComponent implements OnInit {
     this.dataSource.sort = this.sort;
   }
 
+
+
   ngOnInit(): void {
+    this.detailPayment()
+  }
+
+  detailPayment() {
+    var obj = {
+      id:this.route.snapshot.paramMap.get('id')
+    }
+    this.Service.detailOfPayment(obj).subscribe((res: any) => {
+      console.log("response of detail Payment >>>>>>>", res);
+      this.alldetailData=res.data
+      console.log(" all data of payment details >>>",this.alldetailData);
+      
+
+      this.firstName=this.alldetailData.payment_detail.payer.payer_info.first_name
+      console.log("first name",this.firstName);
+      
+      this.lastName=this.alldetailData.payment_detail.payer.payer_info.last_name
+      console.log("last name",this.lastName);
+      
+      this.transactionId=this.alldetailData.paymentId
+      console.log("transaction id",this.transactionId);
+      
+      this.companyName=this.alldetailData.payment_detail.payer.payer_info.business_name
+      console.log("comapny name",this.companyName);
+      
+      this.email=this.alldetailData.payment_detail.payer.payer_info.email
+      console.log("email",this.email);
+      
+      this.currencyAmount=this.alldetailData.payment_detail.transactions[0].amount.currency
+      console.log("currencey amount",this.currencyAmount);
+      
+      this.totalAmount=this.alldetailData.payment_detail.transactions[0].amount.total
+      console.log("total amount",this.totalAmount);
+      
+      this.date=this.alldetailData.createdAt
+      console.log("date",this.date);
+      
+      this.status=this.alldetailData.payment_detail.payer.status
+      console.log("status",this.status);
+      
+
+
+    })
   }
 
   applyFilter(event: Event) {

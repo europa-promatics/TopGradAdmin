@@ -311,7 +311,7 @@ export const routes: Routes = [
         loadChildren: () => import('./views/payment-management/payment-management.module').then(m => m.PaymentManagementModule)
       },
       {
-        path: 'viewPayment',
+        path: 'viewPayment/:id',
         loadChildren: () => import('./views/view-payment/view-payment.module').then(m => m.ViewPaymentModule)
       },
       {
@@ -530,7 +530,7 @@ export const routes: Routes = [
         loadChildren: () => import('./views/view-verification/view-verification.module').then(m => m.ViewVerificationModule)
       },
       {
-        path: 'view-offer',
+        path: 'view-offer/:id',
         loadChildren: () => import('./views/view-offer/view-offer.module').then(m => m.ViewOfferModule)
       },
       {

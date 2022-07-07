@@ -72,10 +72,11 @@ export class PaymentManagementComponent implements OnInit {
     // 'supervisoremail',
       'candidate',
     'company',
-
     'candidatemail',
+    'amount',
     // 'offer',
-    // 'startdate',
+    'startdate',
+    'status',
     // 'subsexp',
     'action'];
   dataSource: MatTableDataSource<UserData>;

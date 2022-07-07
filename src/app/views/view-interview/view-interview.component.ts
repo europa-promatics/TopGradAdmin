@@ -83,13 +83,6 @@ export class ViewInterviewComponent implements OnInit {
       this.phone=this.allData.interview.phone
 
 
-
-
-
-
-
-
-
     })
   }
 

@@ -1,9 +1,9 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import {ModalDirective} from 'ngx-bootstrap/modal';
-import {SelectionModel} from '@angular/cdk/collections';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { ModalDirective } from 'ngx-bootstrap/modal';
+import { SelectionModel } from '@angular/cdk/collections';
 import { TopgradserviceService } from '../../topgradservice.service';
 
 export interface UserData {
@@ -64,19 +64,31 @@ const SUBSEXP: string[] = [
 })
 export class OfferSubmissionsComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'supervisorname', 'supervisoremail', 'company', 'candidate', 'candidatemail', 'offer', 'startdate', 'subsexp','status','action'];
+  displayedColumns: string[] = [
+    // 'select',
+    'id',
+    'candidate_name',
+    'candidate_email',
+    'emp_name',
+    'emp_email',
+    'job_title',
+    'cmp_name',
+    'date',
+    'status',
+    'action'
+  ];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
-  
+
   @ViewChild('smallModal') public smallModal: ModalDirective;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   offerSubmissionAllData: any;
   offerSubmissionCount: any;
 
-  constructor(private Service: TopgradserviceService) { 
-  	// Create 100 users
-    const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
+  constructor(private Service: TopgradserviceService) {
+    // Create 100 users
+    const users = Array.from({ length: 50 }, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
@@ -106,20 +118,20 @@ export class OfferSubmissionsComponent implements OnInit {
     }
   }
 
-  getOfferSubmission(){
-    var obj={
-      limit:this.matObj.limit,
-      offset:this.matObj.offset
+  getOfferSubmission() {
+    var obj = {
+      limit: this.matObj.limit,
+      offset: this.matObj.offset
     }
-    this.Service.getOfferSubmissiondata(obj).subscribe((res:any)=>{
-      console.log("Response data of Payment>>>",res);
+    this.Service.getOfferSubmissiondata(obj).subscribe((res: any) => {
+      console.log("Response data of offer submission>>>", res);
 
-      this.offerSubmissionAllData=res.data.interviews
-      console.log("payment all data>>>",this.offerSubmissionAllData)
+      this.offerSubmissionAllData = res.data.interviews
+      console.log("offer submission all data>>>", this.offerSubmissionAllData)
 
-      this.offerSubmissionCount=res.data.count
-      console.log("payment count >>>",this.offerSubmissionCount)
-      
+      this.offerSubmissionCount = res.data.count
+      console.log("offer submission count >>>", this.offerSubmissionCount)
+
     })
   }
 
@@ -151,7 +163,7 @@ export class OfferSubmissionsComponent implements OnInit {
     this.selection.select(...this.dataSource.data);
   }
 
-   /** The label for the checkbox on the passed row */
+  /** The label for the checkbox on the passed row */
   checkboxLabel(row?: UserData): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;

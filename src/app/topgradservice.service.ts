@@ -1036,7 +1036,7 @@ export class TopgradserviceService implements HttpInterceptor {
   // 07-july-2022-- paymenet management---
 
   getPaymentdata(obj:any):Observable<any>{
-    let API_URL=`${this.SERVER_URL}/admin/get/payments`;
+    let API_URL=`${this.SERVER_URL}/admin/get/payments?limit=${obj.limit}&offset=${obj.offset}`;
     console.log("Get Payment API_URL>>>",API_URL);
     return this.httpClient.get(API_URL).pipe(
       map(res=>{
@@ -1063,7 +1063,7 @@ export class TopgradserviceService implements HttpInterceptor {
   // 07-july-2022 -- offer submission--
 
   getOfferSubmissiondata(obj:any):Observable<any>{
-    let API_URL=`${this.SERVER_URL}/admin/get/interviews`;
+    let API_URL=`${this.SERVER_URL}/admin/get/interviews?limit=${obj.limit}&offset=${obj.offset}`;
     console.log("Get Offer Submission API_URL>>>",API_URL);
     return this.httpClient.get(API_URL).pipe(
       map(res=>{
