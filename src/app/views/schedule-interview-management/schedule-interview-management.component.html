@@ -5,14 +5,14 @@
         <div class="tabl_upr d-flex align-items-center justify-content-between">
           <mat-form-field appearance="standard">
             <mat-label>Filter</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" class="filter_input" #input>
+            <input matInput (keyup)="applyFilter($event)"  [(ngModel)]="search" placeholder="Ex. Mia" class="filter_input" #input>
           </mat-form-field>
           <div class="fltr_div d-flex align-items-center">
             <div class="form-group mb-0 ml-3">
-              <select class="form-control custom-select">
-                  <option selected>Select Filter</option>
-                  <option>Scheduled</option>
-                  <option>Completed</option>
+              <select class="form-control custom-select" (change)="selectFilter($event)">
+                  <option selected disabled >Select Filter</option>
+                  <option value="scheduled">Scheduled</option>
+                  <option value="completed">Completed</option>
               </select>
             </div>
 
@@ -21,9 +21,9 @@
 
         <div class="mat-elevation-z8">
           <div class="table-responsive">
-            <table mat-table [dataSource]="dataSource" matSort>
+            <table mat-table [dataSource]="interviewList" matSort>
               <!-- Checkbox Column -->
-              <ng-container matColumnDef="select">
+              <!-- <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
                   <mat-checkbox (change)="$event ? masterToggle() : null"
                     [checked]="selection.hasValue() && isAllSelected()"
@@ -38,51 +38,67 @@
                     [aria-label]="checkboxLabel(row)" class="td-check">
                   </mat-checkbox>
                 </td>
-              </ng-container>
+              </ng-container> -->
               <!-- ID Column -->
               <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
-                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                <td mat-cell *matCellDef="let row; let i=index"> {{i+1}} </td>
               </ng-container>
 
               <!-- worktype Column -->
               <ng-container matColumnDef="candidate">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Candidate</th>
-                <td mat-cell *matCellDef="let row"> {{row.candidate}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.graduate_detail.first_name | titlecase}} {{row.graduate_detail.last_name | titlecase}} </td>
               </ng-container>
               <!-- postedby Column -->
               <ng-container matColumnDef="employer">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Employer </th>
-                <td mat-cell *matCellDef="let row"> {{row.employer}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.employer_detail.first_name | titlecase}} {{row.employer_detail.last_name | titlecase}} </td>
               </ng-container>
               <!-- worktype Column -->
               <ng-container matColumnDef="jobtitle">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Job Title</th>
-                <td mat-cell *matCellDef="let row"> {{row.jobtitle}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.job_detail.job_title | titlecase}} </td>
               </ng-container>
 
               <!-- postedby Column -->
               <ng-container matColumnDef="interviewmethod">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Interview Method </th>
-                <td mat-cell *matCellDef="let row"> {{row.interviewmethod}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.interview.interviewMethod | titlecase}} </td>
               </ng-container>
               <!-- Company Column -->
               <ng-container matColumnDef="location">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Location</th>
-                <td mat-cell *matCellDef="let row"> {{row.location}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.location | titlecase}} </td>
               </ng-container>
                <!-- Job title Column -->
               <ng-container matColumnDef="date">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
-                <td mat-cell *matCellDef="let row"> {{row.date}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.interview.date | date:shortDate}} </td>
               </ng-container>
               
               <!-- status column -->
               <ng-container matColumnDef="time">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
-                <td mat-cell *matCellDef="let row"><span class="badge badge-primary">Scheduled</span></td>
-                <td mat-cell *matCellDef="let row"><span class="badge badge-success">Completed</span></td>
+                <ng-container *ngIf="this.filterData == 'scheduled'">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                  <td mat-cell *matCellDef="let row"><span class="badge badge-primary">Scheduled</span></td>
+                </ng-container>
+                <ng-container *ngIf="this.filterData == 'completed'">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                  <td mat-cell *matCellDef="let row"  ><span class="badge badge-success" >Completed</span></td>
+                </ng-container>
+
               </ng-container>
+
+              <!-- <ng-container matColumnDef="time" >
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                <td mat-cell *matCellDef="let row" ><span class="badge badge-primary">Scheduled</span></td>
+              </ng-container>
+
+              <ng-container matColumnDef="time" >
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                <td mat-cell *matCellDef="let row" ><span class="badge badge-success">Completed</span></td>
+              </ng-container> -->
                <!-- Action column -->
                <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef> Action </th>
@@ -91,18 +107,18 @@
                       <mat-icon>more_vert</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu" class="td-menu">
-                      <a mat-menu-item class="" routerLink="/view-interview">
+                      <a mat-menu-item class="" routerLink="/view-interview/{{row._id}}">
                         <mat-icon class="material-icons-outlined">visibility</mat-icon>
                         <span>View</span>
                       </a>
-                      <a mat-menu-item class="" routerLink="/edit-interview">
+                      <!-- <a mat-menu-item class="" routerLink="/edit-interview">
                         <mat-icon class="material-icons-outlined">edit</mat-icon>
                         <span>Edit</span>
                       </a>
-                      <a mat-menu-item class="" data-toggle="modal" (click)="smallModal.show()">
+                      <a mat-menu-item class="" data-toggle="modal" (click)="deleteInterviewId(row._id)">
                         <mat-icon class="material-icons-outlined">delete</mat-icon>
                         <span>Delete</span>
-                      </a>
+                      </a> -->
                     </mat-menu>
                 </td>
               </ng-container>
@@ -122,7 +138,12 @@
               </tr>
             </table>
           </div>
-          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+          <mat-paginator aria-label="Select page of users" (page)="paginatorOfInterview($event)" [length]="interviewCount" [pageSize]="5"
+          [pageSizeOptions]="getPageSizeOfInterviewOptions()" [pageIndex]="topPage"></mat-paginator>
+
+
+
         </div>
       </div>
     </div>
@@ -130,7 +151,8 @@
 </section>
 
 <!-- Modal -->
-<div bsModal #smallModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+
+<!-- <div bsModal #smallModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -145,9 +167,9 @@
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" (click)="smallModal.hide()">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" class="btn btn-primary" (click)="deletedInterview(this.dataId)">Yes</button>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 

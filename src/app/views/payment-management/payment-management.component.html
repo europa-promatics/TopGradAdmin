@@ -3,15 +3,15 @@
     <div class="row">
       <div class="col-md-12">
         <mat-form-field appearance="standard">
-          <mat-label>Filter</mat-label>
+          <mat-label>Filterrr</mat-label>
           <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" class="filter_input" #input>
         </mat-form-field>
 
         <div class="mat-elevation-z8">
           <div class="table-responsive">
-            <table mat-table [dataSource]="dataSource" matSort>
+            <table mat-table [dataSource]="paymentAllData" matSort>
               <!-- Checkbox Column -->
-              <ng-container matColumnDef="select">
+              <!-- <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
                   <mat-checkbox (change)="$event ? masterToggle() : null"
                     [checked]="selection.hasValue() && isAllSelected()"
@@ -19,6 +19,8 @@
                     [aria-label]="checkboxLabel()" class="td-check">
                   </mat-checkbox>
                 </th>
+
+
                 <td mat-cell *matCellDef="let row">
                   <mat-checkbox (click)="$event.stopPropagation()"
                     (change)="$event ? selection.toggle(row) : null"
@@ -26,63 +28,65 @@
                     [aria-label]="checkboxLabel(row)" class="td-check">
                   </mat-checkbox>
                 </td>
-              </ng-container>
+
+
+              </ng-container> -->
               <!-- ID Column -->
               <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
-                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                <td mat-cell *matCellDef="let row; let i=index"> {{i+1}} </td>
               </ng-container>
 
               <!-- postedby Column -->
               <ng-container matColumnDef="transid">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Transaction ID </th>
-                <td mat-cell *matCellDef="let row"> {{row.transid}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.payment_detail?.payer?.payer_info?.payer_id}} </td>
               </ng-container>
 
               <!-- postedby Column -->
-              <ng-container matColumnDef="supervisorname">
+              <!-- <ng-container matColumnDef="supervisorname">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Supervisor Name </th>
                 <td mat-cell *matCellDef="let row"> {{row.supervisorname}} </td>
-              </ng-container>
+              </ng-container> -->
               <!-- worktype Column -->
-              <ng-container matColumnDef="supervisoremail">
+              <!-- <ng-container matColumnDef="supervisoremail">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Supervisor Email</th>
                 <td mat-cell *matCellDef="let row"> {{row.supervisoremail}} </td>
-              </ng-container>
+              </ng-container> -->
 
               <!-- postedby Column -->
               <ng-container matColumnDef="company">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Company name </th>
-                <td mat-cell *matCellDef="let row"> {{row.company}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.payment_detail?.payer?.payer_info?.business_name}} </td>
               </ng-container>
               <!-- worktype Column -->
               <ng-container matColumnDef="candidate">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Candidate name</th>
-                <td mat-cell *matCellDef="let row"> {{row.candidate}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.payment_detail?.payer?.payer_info?.first_name}} {{row.payment_detail?.payer?.payer_info?.last_name}} </td>
               </ng-container>
               <!-- Company Column -->
               <ng-container matColumnDef="candidatemail">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Candidate Email</th>
-                <td mat-cell *matCellDef="let row"> {{row.candidatemail}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.payment_detail?.payer?.payer_info?.email}} </td>
               </ng-container>
 
               <!-- Company Column -->
-              <ng-container matColumnDef="offer">
+              <!-- <ng-container matColumnDef="offer">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Offer Selected</th>
                 <td mat-cell *matCellDef="let row"> {{row.offer}} </td>
-              </ng-container>
+              </ng-container> -->
 
                <!-- Job title Column -->
-              <ng-container matColumnDef="startdate">
+              <!-- <ng-container matColumnDef="startdate">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Start Date</th>
                 <td mat-cell *matCellDef="let row"> {{row.startdate}} </td>
-              </ng-container>
-              
+              </ng-container> -->
+
               <!-- status column -->
-              <ng-container matColumnDef="subsexp">
+              <!-- <ng-container matColumnDef="subsexp">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Expiry date </th>
                 <td mat-cell *matCellDef="let row">{{row.subsexp}}</td>
-              </ng-container>
+              </ng-container> -->
                <!-- Action column -->
                <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef> Action </th>
@@ -118,7 +122,9 @@
               </tr>
             </table>
           </div>
-          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator> -->
+          <mat-paginator aria-label="Select page of users" (page)="paginatorOfInterview($event)" [length]="paymentCount" [pageSize]="5"
+          [pageSizeOptions]="getPageSizeOfInterviewOptions()" [pageIndex]="topPage"></mat-paginator>
         </div>
       </div>
     </div>
@@ -146,4 +152,3 @@
     </div>
   </div>
 </div>
-

@@ -4,6 +4,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {ModalDirective} from 'ngx-bootstrap/modal';
 import {SelectionModel} from '@angular/cdk/collections';
+import { TopgradserviceService } from '../../topgradservice.service';
 
 export interface UserData {
   id: string;
@@ -70,13 +71,21 @@ export class OfferSubmissionsComponent implements OnInit {
   @ViewChild('smallModal') public smallModal: ModalDirective;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+  offerSubmissionAllData: any;
+  offerSubmissionCount: any;
 
-  constructor() { 
+  constructor(private Service: TopgradserviceService) { 
   	// Create 100 users
     const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
+  }
+
+
+  matObj = {
+    offset: 0,
+    limit: 5
   }
 
   ngAfterViewInit() {
@@ -85,6 +94,7 @@ export class OfferSubmissionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getOfferSubmission()
   }
 
   applyFilter(event: Event) {
@@ -94,6 +104,34 @@ export class OfferSubmissionsComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  getOfferSubmission(){
+    var obj={
+      limit:this.matObj.limit,
+      offset:this.matObj.offset
+    }
+    this.Service.getOfferSubmissiondata(obj).subscribe((res:any)=>{
+      console.log("Response data of Payment>>>",res);
+
+      this.offerSubmissionAllData=res.data.interviews
+      console.log("payment all data>>>",this.offerSubmissionAllData)
+
+      this.offerSubmissionCount=res.data.count
+      console.log("payment count >>>",this.offerSubmissionCount)
+      
+    })
+  }
+
+  paginatorOfInterview(event) {
+    console.log("pagintaor event>>>>>", event);
+    this.matObj.offset = event.pageIndex * event.pageSize;
+    this.matObj.limit = event.pageSize
+    this.getOfferSubmission();
+  }
+
+  getPageSizeOfInterviewOptions() {
+    return [5, 10, 50, 100];
   }
 
   /** Whether the number of selected elements matches the total number of rows. */

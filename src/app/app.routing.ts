@@ -420,7 +420,7 @@ export const routes: Routes = [
         loadChildren: () => import('./views/schedule-interview-management/schedule-interview-management.module').then(m => m.ScheduleInterviewManagementModule)
       },
       {
-        path: 'view-interview',
+        path: 'view-interview/:id',
         loadChildren: () => import('./views/view-interview/view-interview.module').then(m => m.ViewInterviewModule)
       },
       {

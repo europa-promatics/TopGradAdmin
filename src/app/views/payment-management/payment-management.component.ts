@@ -1,9 +1,10 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import {ModalDirective} from 'ngx-bootstrap/modal';
-import {SelectionModel} from '@angular/cdk/collections';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { ModalDirective } from 'ngx-bootstrap/modal';
+import { SelectionModel } from '@angular/cdk/collections';
+import { TopgradserviceService } from '../../topgradservice.service';
 
 export interface UserData {
   id: string;
@@ -63,17 +64,37 @@ const SUBSEXP: string[] = [
 })
 export class PaymentManagementComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'transid', 'supervisorname', 'supervisoremail', 'company', 'candidate', 'candidatemail', 'offer', 'startdate', 'subsexp', 'action'];
+  displayedColumns: string[] = [
+    // 'select',
+    'id',
+    'transid',
+    // 'supervisorname',
+    // 'supervisoremail',
+      'candidate',
+    'company',
+
+    'candidatemail',
+    // 'offer',
+    // 'startdate',
+    // 'subsexp',
+    'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
-  
+
   @ViewChild('smallModal') public smallModal: ModalDirective;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() { 
-  	// Create 100 users
-    const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
+  matObj = {
+    offset: 0,
+    limit: 5
+  }
+  paymentAllData: any;
+  paymentCount: any;
+
+  constructor(private Service: TopgradserviceService) {
+    // Create 100 users
+    const users = Array.from({ length: 50 }, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
@@ -85,6 +106,7 @@ export class PaymentManagementComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getPayment()
   }
 
   applyFilter(event: Event) {
@@ -95,6 +117,39 @@ export class PaymentManagementComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+
+
+  getPayment() {
+    var obj = {
+      limit: this.matObj.limit,
+      offset: this.matObj.offset
+    }
+    this.Service.getPaymentdata(obj).subscribe((res: any) => {
+      console.log("Response data of Payment>>>", res);
+
+      this.paymentAllData = res.data
+      console.log("payment all data>>>", this.paymentAllData)
+
+      this.paymentCount = res.count
+      console.log("payment count >>>", this.paymentCount)
+
+    })
+  }
+
+  paginatorOfInterview(event) {
+    console.log("pagintaor event>>>>>", event);
+    this.matObj.offset = event.pageIndex * event.pageSize;
+    this.matObj.limit = event.pageSize
+    this.getPayment();
+  }
+
+  getPageSizeOfInterviewOptions() {
+    return [5, 10, 50, 100];
+  }
+
+
+
+
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
@@ -113,7 +168,7 @@ export class PaymentManagementComponent implements OnInit {
     this.selection.select(...this.dataSource.data);
   }
 
-   /** The label for the checkbox on the passed row */
+  /** The label for the checkbox on the passed row */
   checkboxLabel(row?: UserData): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;

@@ -42,11 +42,11 @@ export const navItems: INavData[] = [
     url: '/jobsManagement',
     icon: 'icon-user'
   },
-  {
-    name: 'Industry Management',
-    url: '/categoriesManagement',
-    icon: 'icon-layers'
-  },
+  // {
+  //   name: 'Industry Management',
+  //   url: '/categoriesManagement',
+  //   icon: 'icon-layers'
+  // },
   {
     name: 'Payment Management',
     url: '/paymentManagement',
@@ -283,11 +283,11 @@ export const navItems: INavData[] = [
       },
     ]
   },
-  {
-    name: 'Offer Management',
-    url: '/offer-management',
-    icon: 'icon-user'
-  },
+  // {
+  //   name: 'Offer Management',
+  //   url: '/offer-management',
+  //   icon: 'icon-user'
+  // },
   {
     name: 'Graduate Verification Management',
     url: '/graduate-verification-management',

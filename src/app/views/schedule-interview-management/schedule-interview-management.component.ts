@@ -1,9 +1,10 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import {ModalDirective} from 'ngx-bootstrap/modal';
-import {SelectionModel} from '@angular/cdk/collections';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { ModalDirective } from 'ngx-bootstrap/modal';
+import { SelectionModel } from '@angular/cdk/collections';
+import { TopgradserviceService } from '../../topgradservice.service';
 
 export interface UserData {
   id: string;
@@ -52,21 +53,43 @@ const TIME: string[] = [
 })
 export class ScheduleInterviewManagementComponent implements OnInit {
 
-  displayedColumns: string[] = ['select', 'id', 'candidate', 'employer', 'jobtitle', 'interviewmethod', 'location', 'date', 'time', 'action'];
+  displayedColumns: string[] = [
+    // 'select',
+    'id',
+    'candidate',
+    'employer',
+    'jobtitle',
+    'interviewmethod',
+    'location',
+    'date',
+    'time',
+    'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
-  
+
   @ViewChild('smallModal') public smallModal: ModalDirective;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() { 
-  	// Create 100 users
-    const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
+  interviewList: any;
+  search:any=''
+  event: any;
+  interviewCount: number;
+  matObj = {
+    offset: 0,
+    limit: 5
+  }
+  dataId: any;
+  filterData: any;
+
+  constructor(private Service: TopgradserviceService) {
+    // Create 100 users
+    const users = Array.from({ length: 50 }, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -74,16 +97,112 @@ export class ScheduleInterviewManagementComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.search=''
+    this.filterData='scheduled'
+    this.getInterviewList();
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  selectFilter(event){
+    console.log("select filter event>>>>",event.target.value);
+    this.filterData=event.target.value
+    this.getInterviewList()
+    
+  }
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
+  applyFilter(filterValue) {
+    console.log("filter value>>>>", filterValue);
+
+    this.search = filterValue.target.value
+    console.log("search >>>>>>", this.search);
+
+    if (this.event) {
+      console.log("paginator ka event>>>", this.event);
+
+      this.paginatorOfInterview(this.event)
     }
+    else {
+      this.getInterviewList()
+
+    }
+
   }
+
+  getInterviewList() {
+    var obj: any = {
+      limit: this.matObj.limit,
+      offset: this.matObj.offset,
+      search:this.search,    
+      type:this.filterData
+    }
+    if (this.search) {
+      obj.search = this.search   
+    }
+    this.Service.getInterviewListing(obj).subscribe((res: any) => {
+      console.log("response of interview data>>>>>>", res);
+
+      this.interviewList = res.data.interviews
+      console.log("this interview list data>>>>>", this.interviewList);
+
+      this.interviewCount = res.data.count
+      console.log("this interview count >>>>>>", this.interviewCount);
+
+
+      for (let i = 0; i < this.interviewList?.length; i++) {
+        if (this.interviewList[i].interview.interview_method == 'face_to_face') {
+          let interviewMethod = "Face To Face"
+          this.interviewList[i].interview.interviewMethod = interviewMethod
+        }
+        else if (this.interviewList[i].interview.interview_method == 'phone') {
+          let interviewMethod = "Phone"
+          this.interviewList[i].interview.interviewMethod = interviewMethod
+        }
+        else if (this.interviewList[i].interview.interview_method == 'video') {
+          let interviewMethod = "Video"
+          this.interviewList[i].interview.interviewMethod = interviewMethod
+        }
+      }
+    })
+
+
+  }
+
+  paginatorOfInterview(event) {
+    console.log("pagintaor event>>>>>", event);
+    this.matObj.offset = event.pageIndex * event.pageSize;
+    this.matObj.limit = event.pageSize
+    this.getInterviewList();
+  }
+
+  getPageSizeOfInterviewOptions() {
+    return [5, 10, 50, 100];
+  }
+
+  // deleteInterviewId(id){
+  //   console.log("delete data id >>>",id);
+
+  //   this.dataId=id
+  //   this.smallModal.show()
+  //   this.ngOnInit()
+  // }
+
+  // deletedInterview(){
+
+  //   var obj={
+  //     id:this.dataId
+  //   }
+  //   this.Service.deleteInterview(obj).subscribe((res:any)=>{
+  //     console.log("response of delete interview data>>>",res);
+
+  //     this.ngOnInit()
+  //     this.smallModal.hide()
+
+  //   })
+
+  // }
+
+
+
+
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
@@ -102,7 +221,7 @@ export class ScheduleInterviewManagementComponent implements OnInit {
     this.selection.select(...this.dataSource.data);
   }
 
-   /** The label for the checkbox on the passed row */
+  /** The label for the checkbox on the passed row */
   checkboxLabel(row?: UserData): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
