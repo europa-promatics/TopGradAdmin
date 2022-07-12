@@ -86,12 +86,14 @@ export class PaymentManagementComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
+  search:any=''
   matObj = {
     offset: 0,
     limit: 5
   }
   paymentAllData: any;
   paymentCount: any;
+  event: any;
 
   constructor(private Service: TopgradserviceService) {
     // Create 100 users
@@ -107,23 +109,45 @@ export class PaymentManagementComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.search=''
     this.getPayment()
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
+  //   if (this.dataSource.paginator) {
+  //     this.dataSource.paginator.firstPage();
+  //   }
+  // }
+  applyFilter(filterValue) {
+    console.log("filter value>>>>", filterValue);
+
+    this.search = filterValue.target.value
+    console.log("search >>>>>>", this.search);
+
+    if (this.event) {
+      console.log("paginator ka event>>>", this.event);
+
+      this.paginatorOfPayment(this.event)
     }
+    else {
+      this.getPayment()
+
+    }
+
   }
 
 
   getPayment() {
     var obj = {
       limit: this.matObj.limit,
-      offset: this.matObj.offset
+      offset: this.matObj.offset,
+      search:this.search,
+    }
+    if (this.search) {
+      obj.search = this.search   
     }
     this.Service.getPaymentdata(obj).subscribe((res: any) => {
       console.log("Response data of Payment>>>", res);
@@ -137,14 +161,14 @@ export class PaymentManagementComponent implements OnInit {
     })
   }
 
-  paginatorOfInterview(event) {
+  paginatorOfPayment(event) {
     console.log("pagintaor event>>>>>", event);
     this.matObj.offset = event.pageIndex * event.pageSize;
     this.matObj.limit = event.pageSize
     this.getPayment();
   }
 
-  getPageSizeOfInterviewOptions() {
+  getPageSizeOfPaymentOptions() {
     return [5, 10, 50, 100];
   }
 

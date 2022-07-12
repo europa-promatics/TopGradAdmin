@@ -85,6 +85,7 @@ export class OfferSubmissionsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   offerSubmissionAllData: any;
   offerSubmissionCount: any;
+  event: any;
 
   constructor(private Service: TopgradserviceService) {
     // Create 100 users
@@ -94,7 +95,7 @@ export class OfferSubmissionsComponent implements OnInit {
     this.dataSource = new MatTableDataSource(users);
   }
 
-
+  search:any=''
   matObj = {
     offset: 0,
     limit: 5
@@ -106,22 +107,36 @@ export class OfferSubmissionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.search=''
     this.getOfferSubmission()
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  applyFilter(filterValue) {
+    console.log("filter value>>>>", filterValue);
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
+    this.search = filterValue.target.value
+    console.log("search >>>>>>", this.search);
+
+    if (this.event) {
+      console.log("paginator ka event>>>", this.event);
+
+      this.paginatorOfOfferSubmission(this.event)
     }
+    else {
+      this.getOfferSubmission()
+
+    }
+
   }
 
   getOfferSubmission() {
     var obj = {
       limit: this.matObj.limit,
-      offset: this.matObj.offset
+      offset: this.matObj.offset,
+      search:this.search,
+    }
+    if (this.search) {
+      obj.search = this.search   
     }
     this.Service.getOfferSubmissiondata(obj).subscribe((res: any) => {
       console.log("Response data of offer submission>>>", res);
@@ -135,14 +150,14 @@ export class OfferSubmissionsComponent implements OnInit {
     })
   }
 
-  paginatorOfInterview(event) {
+  paginatorOfOfferSubmission(event) {
     console.log("pagintaor event>>>>>", event);
     this.matObj.offset = event.pageIndex * event.pageSize;
     this.matObj.limit = event.pageSize
     this.getOfferSubmission();
   }
 
-  getPageSizeOfInterviewOptions() {
+  getPageSizeOfOfferSubmission() {
     return [5, 10, 50, 100];
   }
 

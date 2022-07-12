@@ -323,11 +323,11 @@ export const routes: Routes = [
         loadChildren: () => import('./views/add-sub-admin/add-sub-admin.module').then(m => m.AddSubAdminModule)
       },
       {
-        path: 'editSubAdmin',
+        path: 'editSubAdmin/:id',
         loadChildren: () => import('./views/edit-sub-admin/edit-sub-admin.module').then(m => m.EditSubAdminModule)
       },
       {
-        path: 'viewSubAdmin',
+        path: 'viewSubAdmin/:id',
         loadChildren: () => import('./views/view-sub-admin/view-sub-admin.module').then(m => m.ViewSubAdminModule)
       },
       {

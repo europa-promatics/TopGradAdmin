@@ -60,7 +60,7 @@ export class ScheduleInterviewManagementComponent implements OnInit {
     'employer',
     'jobtitle',
     'interviewmethod',
-    'location',
+    // 'location',
     'date',
     'time',
     'action'];

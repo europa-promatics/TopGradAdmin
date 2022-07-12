@@ -33,6 +33,7 @@ export class LoginComponent {
     }
     this.Service.login(obj).subscribe(res=>{
       console.log("fgdgfdgfdfgdfgd",res);
+      localStorage.setItem("admin_data",res.data.type)
       localStorage.setItem("admin_email",res.data.email)
       localStorage.setItem("first_name",res.data.first_name)
       localStorage.setItem("last_name",res.data.last_name)

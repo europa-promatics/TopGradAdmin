@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {ThemePalette} from '@angular/material/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TopgradserviceService } from '../../topgradservice.service';
 
 
 export interface Task {
@@ -37,6 +41,43 @@ export interface Task3 {
 })
 export class EditSubAdminComponent implements OnInit {
 
+  editSubAdminForm:FormGroup
+  imageFile: string | ArrayBuffer;
+  allData: any;
+  status: any;
+  image: any;
+  graduates: any;
+  employers: any;
+  userCheck1: boolean;
+  faqs: any;
+  home_page: any;
+  how_it_works: boolean;
+  userCheck2: boolean;
+  approve: any;
+  delete: any;
+  edit: any;
+  userCheck3: boolean;
+  paymentDelete: any;
+  invoices: any;
+  view: any;
+  userCheck4: boolean;
+
+  constructor(
+    private Service: TopgradserviceService,
+    private fb: FormBuilder,
+    private router:Router,
+    private _snackBar: MatSnackBar,
+    private route: ActivatedRoute,
+    ){ 
+    this.editSubAdminForm = this.fb.group({
+      first_name: ['', [Validators.required]],
+      last_name: ['', [Validators.required]],
+      email: ['', [Validators.required,Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+      // status: ['', [Validators.required]],
+      phone_no: ['', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+     })
+  }
+
 
 	task: Task = {
     name: 'User Management',
@@ -45,7 +86,7 @@ export class EditSubAdminComponent implements OnInit {
     subtasks: [
       {name: 'Graduates', completed: false, color: 'accent'},
       {name: 'Employers', completed: false, color: 'accent'},
-      {name: 'Sub Admin', completed: false, color: 'accent'}
+      // {name: 'Sub Admin', completed: false, color: 'accent'}
     ]
   };
 
@@ -63,7 +104,8 @@ export class EditSubAdminComponent implements OnInit {
   }
 
   setAll(completed: boolean) {
-    this.allComplete = completed;
+    this.employers=completed,
+    this.graduates=completed
     if (this.task.subtasks == null) {
       return;
     }
@@ -96,6 +138,10 @@ export class EditSubAdminComponent implements OnInit {
   }
 
   setAll1(completed: boolean) {
+    this.approve=completed
+    this.delete=completed
+    this.edit=completed
+
     this.allComplete1 = completed;
     if (this.task1.subtasks1 == null) {
       return;
@@ -129,6 +175,10 @@ export class EditSubAdminComponent implements OnInit {
   }
 
   setAll2(completed: boolean) {
+    this.paymentDelete=completed
+    this.invoices=completed
+    this.view=completed
+
     this.allComplete2 = completed;
     if (this.task2.subtasks2 == null) {
       return;
@@ -163,6 +213,10 @@ export class EditSubAdminComponent implements OnInit {
   }
 
   setAll3(completed: boolean) {
+    this.faqs=completed
+    this.home_page=completed
+    this.how_it_works=completed
+
     this.allComplete3 = completed;
     if (this.task3.subtasks3 == null) {
       return;
@@ -170,9 +224,124 @@ export class EditSubAdminComponent implements OnInit {
     this.task3.subtasks3.forEach(t => t.completed = completed);
   }
 
-  constructor() { }
 
   ngOnInit(): void {
+    console.log("my edit form is >>>>>>",this.editSubAdminForm);
+    
+    this.detailSubAdminData()
+  }
+
+  detailSubAdminData() {
+    var obj = {
+      id: this.route.snapshot.paramMap.get('id')
+    }
+    console.log("object>>>>",obj);
+    
+    this.Service.detailSubAdmin(obj).subscribe((res: any) => {
+      console.log("response of detail Sub admin >>>>>>>", res)
+      this.allData=res.data
+     this.image=this.allData.image
+     this.status=this.allData.status
+
+      this.editSubAdminForm.patchValue({
+        first_name:this.allData.first_name,
+        last_name:this.allData.last_name,
+        phone_no:this.allData.phone_no,
+        email:this.allData.email,
+      })
+
+            // this.user_management=this.allData.user_management
+            this.employers=this.allData.user_management.employers
+            this.graduates=this.allData.user_management.graduates
+      
+            if(this.employers==true || this.graduates==true){
+              this.userCheck1 = true;
+            }
+      
+            // this.general_management=this.allData.general_management
+            this.faqs=this.allData.general_management.faqs
+            this.home_page=this.allData.general_management.home_page
+            this.how_it_works=this.allData.general_management.how_it_works
+            if(this.how_it_works==true || this.home_page==true || this.faqs==true){
+              this.userCheck2 = true;
+            }
+      
+            // this.job_management=this.allData.job_management
+            this.approve=this.allData.job_management.approve
+            this.delete=this.allData.job_management.delete
+            this.edit=this.allData.job_management.edit
+            if(this.edit==true || this.delete==true || this.approve==true){
+              this.userCheck3 = true;
+            }
+      
+            // this.payment_management=this.allData.payment_management
+            this.paymentDelete=this.allData.payment_management.delete
+            this.invoices=this.allData.payment_management.invoices
+            this.view=this.allData.payment_management.view
+            if(this.paymentDelete==true || this.invoices==true || this.view==true){
+              this.userCheck4 = true;
+            }
+
+
+      
+    })
+  }
+
+
+  changeImage(event) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.imageFile = event.target.result;
+      }
+    }
+  }
+
+  submitSubAdminForm(){
+    var obj = {
+      id: this.route.snapshot.paramMap.get('id'),
+      type: "sub_admin",
+      image: this.imageFile,
+      first_name: this.editSubAdminForm.value.first_name,
+      last_name: this.editSubAdminForm.value.last_name,
+      email: this.editSubAdminForm.value.email,
+      phone_no:this.editSubAdminForm.value.phone_no,
+      status:this.editSubAdminForm.value.status,
+
+      user_management: {
+        graduates: this.graduates,
+        employers: this.employers,
+      },
+      job_management: {
+        edit: this.edit,
+        approve: this.approve,
+        delete: this.delete,
+      },
+      payment_management: {
+        invoices: this.invoices,
+        view: this.view,
+        delete: this.delete,
+      },
+      general_management: {
+        home_page: this.home_page,
+        how_it_works: this.how_it_works,
+        faqs: this.faqs
+      }
+
+    }
+
+    this.Service.updateSubAdmin(obj).subscribe((res: any) => {
+      console.log("response of Sub Admin data>>>>>>", res);
+      this.router.navigate(["/subAdminManagement"])
+      this._snackBar.open('Updated SubAdmin Data, Successfully..','close',{
+        duration: 2000
+      })
+
+
+    })
   }
 
 }

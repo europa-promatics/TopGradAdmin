@@ -4,6 +4,8 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {ModalDirective} from 'ngx-bootstrap/modal';
 import {SelectionModel} from '@angular/cdk/collections';
+import { TopgradserviceService } from '../../topgradservice.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface UserData {
   id: string;
@@ -40,7 +42,22 @@ export class SubAdminManagementComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() { 
+
+
+  search:any=''
+  event: any;
+  interviewCount: number;
+  matObj = {
+    offset: 0,
+    limit: 5
+  }
+  subAdminCount: any;
+  allSubAdminData: any;
+  dataId: any;
+  credentialsId: any;
+
+  constructor(private Service: TopgradserviceService,
+    private _snackBar: MatSnackBar) { 
 	// Create 100 users
     const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
 
@@ -54,17 +71,111 @@ export class SubAdminManagementComponent implements AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.search=''
+    this.getSubAdminList();
   }
 
 
-	applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
+  applyFilter(filterValue) {
+    console.log("filter value>>>>", filterValue);
+
+    this.search = filterValue.target.value
+    console.log("search >>>>>>", this.search);
+
+    if (this.event) {
+      console.log("paginator ka event>>>", this.event);
+
+      this.paginatorOfInterview(this.event)
     }
+    else {
+      this.getSubAdminList()
+
+    }
+
   }
+
+  getSubAdminList() {
+    var obj: any = {
+      limit: this.matObj.limit,
+      offset: this.matObj.offset,
+      search:this.search,    
+    }
+    if (this.search) {
+      obj.search = this.search   
+    }
+    this.Service.getSubAdminData(obj).subscribe((res: any) => {
+      console.log("response of Sub Admin data>>>>>>", res);
+
+      this.allSubAdminData=res.data
+      console.log("All data of Sub Admin>>>>>",this.allSubAdminData);
+      
+
+      this.subAdminCount=res.count
+
+    })
+
+
+  }
+
+  paginatorOfInterview(event) {
+    console.log("pagintaor event>>>>>", event);
+    this.matObj.offset = event.pageIndex * event.pageSize;
+    this.matObj.limit = event.pageSize
+    this.getSubAdminList();
+  }
+
+  getPageSizeOfInterviewOptions() {
+    return [5, 10, 50, 100];
+  }
+
+
+    deleteSubAdminId(id){
+    console.log("delete data id >>>",id);
+
+    this.dataId=id
+    this.smallModal.show()
+    this.ngOnInit()
+  }
+
+  deletedSubAdmin(){
+
+    var obj={
+      id:this.dataId
+    }
+    this.Service.deleteSubAdmin(obj).subscribe((res:any)=>{
+      console.log("response of delete SubAdmin data>>>",res);
+      this._snackBar.open('Sub_Admin Data Deleted , Successfully..','close',{
+        duration: 2000
+      })
+      this.ngOnInit()
+      this.smallModal.hide()
+
+    })
+
+  }
+
+  credentials(id){
+    console.log("credentials id >>>>>>>.",id);
+    this.credentialsId=id
+
+    var obj={
+      id:this.credentialsId
+    }
+    this.Service.sendCredentialsSubAdmin(obj).subscribe((res:any)=>{
+      console.log("response of credentials SubAdmin data>>>",res);
+      this.ngOnInit()
+      this._snackBar.open('Credentials Sended, Successfully..','close',{
+        duration: 2000
+      })
+
+    })
+    
+
+  }
+
+
+
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {

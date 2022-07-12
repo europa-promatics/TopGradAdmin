@@ -5,7 +5,7 @@
         <div class="catgry-tools d-flex justify-content-between align-items-center">
           <mat-form-field appearance="standard">
             <mat-label>Filter</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" class="filter_input" #input>
+            <input matInput (keyup)="applyFilter($event)"  [(ngModel)]="search" placeholder="Ex. Mia" class="filter_input" #input>
           </mat-form-field>
           <span class="add-categry">
             <a class="btn-primary btn" routerLink="/addSubAdmin">Add</a>
@@ -14,7 +14,7 @@
 
         <div class="mat-elevation-z8">
           <div class="table-responsive">
-            <table mat-table [dataSource]="dataSource" matSort>
+            <table mat-table [dataSource]="allSubAdminData" matSort>
               <!-- Checkbox Column -->
               <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
@@ -35,13 +35,13 @@
               <!-- ID Column -->
               <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
-                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                <td mat-cell *matCellDef="let row; let i=index"> {{i+1}} </td>
               </ng-container>
 
               <!-- Name Column -->
               <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>User Name</th>
-                <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.first_name | titlecase}} {{row.last_name | titlecase}} </td>
               </ng-container>
               <!-- worktype Column -->
               <ng-container matColumnDef="email">
@@ -53,7 +53,7 @@
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Send Credentials</th>
                 <td mat-cell *matCellDef="let row">
                   <span>
-                    <mat-icon class="material-icons-outlined">vpn_key</mat-icon>
+                    <mat-icon class="material-icons-outlined" style="cursor: pointer;" (click)="credentials(row._id)">vpn_key</mat-icon>
                   </span>
                 </td>
               </ng-container>
@@ -61,7 +61,7 @@
               <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef> Status </th>
                 <td mat-cell *matCellDef="let row">
-                     <mat-slide-toggle></mat-slide-toggle>
+                     <mat-slide-toggle [checked]="row.status=='active'?true:false"></mat-slide-toggle>
                    </td>
               </ng-container>
                <!-- Action column -->
@@ -72,15 +72,15 @@
                       <mat-icon>more_vert</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu" class="td-menu">
-                      <a mat-menu-item class="" routerLink="/viewSubAdmin">
+                      <a mat-menu-item class="" routerLink="/viewSubAdmin/{{row._id}}">
                         <mat-icon class="material-icons-outlined">visibility</mat-icon>
                         <span>View</span>
                       </a>
-                      <a mat-menu-item class="" routerLink="/editSubAdmin">
+                      <a mat-menu-item class="" routerLink="/editSubAdmin/{{row._id}}">
                         <mat-icon class="material-icons-outlined">edit</mat-icon>
                         <span>Edit</span>
                       </a>
-                      <a mat-menu-item class="" data-toggle="modal" (click)="smallModal.show()">
+                      <a mat-menu-item class="" data-toggle="modal" (click)="deleteSubAdminId(row._id)">
                         <mat-icon class="material-icons-outlined">delete</mat-icon>
                         <span>Delete</span>
                       </a>
@@ -97,7 +97,9 @@
               </tr>
             </table>
           </div>
-          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator> -->
+          <mat-paginator aria-label="Select page of users" (page)="paginatorOfInterview($event)" [length]="subAdminCount" [pageSize]="5"
+          [pageSizeOptions]="getPageSizeOfInterviewOptions()" [pageIndex]="topPage"></mat-paginator>
         </div>
       </div>
     </div>
@@ -120,7 +122,7 @@
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" (click)="smallModal.hide()">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" class="btn btn-primary" (click)="deletedSubAdmin(this.dataId)">Yes</button>
       </div>
     </div>
   </div>
