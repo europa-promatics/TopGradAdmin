@@ -4,14 +4,14 @@
       <div class="col-md-12">
         <mat-form-field appearance="standard">
           <mat-label>Filter</mat-label>
-          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" class="filter_input" #input>
+          <input matInput (keyup)="applyFilter($event)"  [(ngModel)]="search" placeholder="Ex. Mia" class="filter_input" #input>
         </mat-form-field>
 
         <div class="mat-elevation-z8">
           <div class="table-responsive">
-            <table mat-table [dataSource]="dataSource" matSort>
+            <table mat-table [dataSource]="allData" matSort>
               <!-- Checkbox Column -->
-              <ng-container matColumnDef="select">
+              <!-- <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
                   <mat-checkbox (change)="$event ? masterToggle() : null"
                     [checked]="selection.hasValue() && isAllSelected()"
@@ -26,49 +26,67 @@
                     [aria-label]="checkboxLabel(row)" class="td-check">
                   </mat-checkbox>
                 </td>
-              </ng-container>
+              </ng-container> -->
               <!-- ID Column -->
               <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> S.No </th>
-                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                <td mat-cell *matCellDef="let row;let i =index"> {{i+1}} </td>
               </ng-container>
 
               <!-- worktype Column -->
               <ng-container matColumnDef="candidate">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Candidate Name</th>
-                <td mat-cell *matCellDef="let row"> {{row.candidate}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.graduate_id.first_name | titlecase}} {{row.graduate_id.last_name | titlecase}} </td>
               </ng-container>
               <!-- postedby Column -->
               <ng-container matColumnDef="email">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Email </th>
-                <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.graduate_id.email}} </td>
               </ng-container>
               <!-- worktype Column -->
               <ng-container matColumnDef="transcripts">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Academic Transcripts</th>
                 <td mat-cell *matCellDef="let row">
-                	<div class="check_icns text-center">
+
+                	<div class="check_icns text-center" *ngIf="row.upload_documents[0].name == 'Academic transcripts'">
                 		<mat-icon class="material-icons-outlined">check</mat-icon>
                 	</div> 
+
+                  <div class="check_icns text-center" *ngIf="row.upload_documents[0].name != 'Academic transcripts'">
+                		<mat-icon class="material-icons-outlined">close</mat-icon>
+                	</div> 
+
                 </td>
               </ng-container>
 
               <!-- postedby Column -->
               <ng-container matColumnDef="polcheck">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>National Police Check </th>
-                <td mat-cell *matCellDef="let row"> 
-                	<div class="check_icns text-center">
+                <td mat-cell *matCellDef="let row">
+
+                	<div class="check_icns text-center"  *ngIf="row.upload_documents[1].name == 'National Police Check'">
                 		<mat-icon class="material-icons-outlined">check</mat-icon>
                 	</div> 
+
+                  <div class="check_icns text-center"  *ngIf="row.upload_documents[1].name != 'National Police Check'">
+                		<mat-icon class="material-icons-outlined">close</mat-icon>
+                	</div> 
+
             	</td>
               </ng-container>
               <!-- Company Column -->
               <ng-container matColumnDef="lngtst">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>English Language Test</th>
                 <td mat-cell *matCellDef="let row">
-                	<div class="check_icns text-center">
+
+                	<div class="check_icns text-center" *ngIf="row.upload_documents[2].name == 'English Language Test'">
+                		<mat-icon class="material-icons-outlined">check</mat-icon>
+                	</div>
+
+                  <div class="check_icns text-center" *ngIf="row.upload_documents[2].name != 'English Language Test'">
                 		<mat-icon class="material-icons-outlined">close</mat-icon>
                 	</div>
+
                 </td>
               </ng-container>
 
@@ -85,9 +103,15 @@
               <ng-container matColumnDef="rfrncs">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>References</th>
                 <td mat-cell *matCellDef="let row">
-                	<div class="check_icns text-center">
+
+                	<div class="check_icns text-center" *ngIf="row.references[0].email.length== 0 ">
                 		<mat-icon class="material-icons-outlined">close</mat-icon>
                 	</div>
+
+                  <div class="check_icns text-center" *ngIf="row.references[0].email.length >= 1 || row.references[1].email.length >= 1">
+                		<mat-icon class="material-icons-outlined">check</mat-icon>
+                	</div>
+
                 </td>
               </ng-container>
 
@@ -95,9 +119,15 @@
               <ng-container matColumnDef="vdeorsm">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Resume</th>
                 <td mat-cell *matCellDef="let row">
-                	<div class="check_icns text-center">
-                		<mat-icon class="material-icons-outlined">check</mat-icon>
+
+                	<div class="check_icns text-center" *ngIf="row.graduate_id.video_resume.url.length == 0">
+                		<mat-icon class="material-icons-outlined">close</mat-icon>
                 	</div>
+
+                  <div class="check_icns text-center" *ngIf="row.graduate_id.video_resume.url.length >= 1">
+                		<mat-icon class=" material-icons-outlined">check</mat-icon>
+                	</div>
+
                 </td>
               </ng-container>
                <!-- Job title Column -->
@@ -116,7 +146,7 @@
               <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef> Verification Status </th>
                 <td mat-cell *matCellDef="let row">
-                     <mat-slide-toggle></mat-slide-toggle>
+                     <mat-slide-toggle [checked]="row.status=='active'?true:false"></mat-slide-toggle>
                    </td>
               </ng-container>
                <!-- Action column -->
@@ -158,7 +188,9 @@
               </tr>
             </table>
           </div>
-          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator> -->
+          <mat-paginator aria-label="Select page of users" (page)="paginatorOfVerification($event)" [length]="verificationCount" [pageSize]="5"
+          [pageSizeOptions]="getPageSizeOfVerification()" [pageIndex]="topPage"></mat-paginator>
         </div>
       </div>
     </div>

@@ -1164,5 +1164,19 @@ export class TopgradserviceService implements HttpInterceptor {
 
   }
 
+  // verification submission-----------------
+
+  getVerificationSubmission(obj:any):Observable<any>{
+    let API_URL = `${this.SERVER_URL}/admin/verification/submissions?limit=${obj.limit}&offset=${obj.offset}&search=${obj.search}`;
+    console.log("Get Offer Submission API_URL>>>", API_URL);
+    return this.httpClient.get(API_URL).pipe(
+      map(res => {
+        return res
+      }),
+      catchError(this.error)
+    )
+  }
+
+
 
 }

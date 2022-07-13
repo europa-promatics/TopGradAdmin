@@ -349,8 +349,6 @@ export class EditGraduateHowItWorksComponent implements OnInit {
   // }
 
   onSelect(e) {
-    // console.log("filesss===>", e.addedFiles[0]);
-    // this.selectedfile = e.addedFiles[0];
     this.files.push(...e.addedFiles)
 
     const formdata = new FormData()

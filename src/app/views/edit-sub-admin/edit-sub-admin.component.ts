@@ -62,6 +62,21 @@ export class EditSubAdminComponent implements OnInit {
   view: any;
   userCheck4: boolean;
 
+  graduateCheck: boolean=false;
+  employerCheck: boolean=false;
+
+  editCheck: boolean=false;
+  approveCheck: boolean=false;
+  deleteCheck: boolean=false;
+
+  invoiceCheck: boolean=false;
+  viewCheck: boolean=false;
+  deleteCheckk: boolean=false;
+
+  homeCheck: boolean=false;
+  howItWorkCheck: boolean=false;
+  faqCheck: boolean=false;
+
   constructor(
     private Service: TopgradserviceService,
     private fb: FormBuilder,
@@ -230,6 +245,49 @@ export class EditSubAdminComponent implements OnInit {
     
     this.detailSubAdminData()
   }
+
+
+  userChangeSelect1(event){
+    this.graduateCheck=event
+  }
+  userChangeSelect2(event){
+    this.employerCheck=event
+  }
+
+  jobChangeSelect1(event){
+    this.editCheck=event
+  }
+  jobChangeSelect2(event){
+    this.approveCheck=event
+  }
+  jobChangeSelect3(event){
+    this.deleteCheck=event
+  }
+
+
+  paymentChangeSelect1(event){
+    this.invoiceCheck=event
+  }
+  paymentChangeSelect2(event){
+    this.viewCheck=event
+  }
+  paymentChangeSelect3(event){
+    this.deleteCheckk=event
+  }
+
+
+  generalChangeSelect1(event){
+    this.homeCheck=event
+  }
+  generalChangeSelect2(event){
+    this.howItWorkCheck=event
+  }
+  generalChangeSelect3(event){
+    this.faqCheck=event
+  }
+
+
+
 
   detailSubAdminData() {
     var obj = {
