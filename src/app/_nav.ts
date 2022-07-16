@@ -16,12 +16,12 @@ export const navItems: INavData[] = [
     icon: 'icon-user',
     children: [
       {
-       name: 'Employer',
+        name: 'Employer',
         url: '/employersList',
         icon: 'icon-star'
       },
       {
-       name: 'Graduate',
+        name: 'Graduate',
         url: '/graduateList',
         icon: 'icon-star'
       },
@@ -32,11 +32,11 @@ export const navItems: INavData[] = [
     url: '/subAdminManagement',
     icon: 'icon-user'
   },
-  {
-    name: 'Access Priviledge Management',
-    url: '/dashboard',
-    icon: 'icon-badge'
-  },
+  // {
+  //   name: 'Access Priviledge Management',
+  //   url: '/dashboard',
+  //   icon: 'icon-badge'
+  // },
   {
     name: 'Jobs Management',
     url: '/jobsManagement',
@@ -114,20 +114,20 @@ export const navItems: INavData[] = [
         // url: '/industryManagement',
         icon: 'icon-star',
         children: [
-        {
-        name: 'Employer Industry Management',
-        url: '/employerIndustryManagement',
-        icon: 'icon-star'
-        },
-        {
-        name: 'Graduate Industry Management',
-        url: '/graduateIndustryManagement',
-        icon: 'icon-star'
-        },
+          {
+            name: 'Employer Industry Management',
+            url: '/employerIndustryManagement',
+            icon: 'icon-star'
+          },
+          {
+            name: 'Graduate Industry Management',
+            url: '/graduateIndustryManagement',
+            icon: 'icon-star'
+          },
         ]
-        },
-        
-          
+      },
+
+
       // {
       //   name: 'Industry Management',
       //   url: '/industryManagement',
@@ -138,12 +138,12 @@ export const navItems: INavData[] = [
         icon: 'icon-settings',
         children: [
           {
-           name: 'Employer How it Works',
+            name: 'Employer How it Works',
             url: '/editEmployerHowItWorks',
             icon: 'icon-star'
           },
           {
-           name: 'Graduate How it Works',
+            name: 'Graduate How it Works',
             url: '/editGraduateHowItWorks',
             icon: 'icon-star'
           },
@@ -154,12 +154,12 @@ export const navItems: INavData[] = [
         icon: 'icon-calculator',
         children: [
           {
-           name: 'Articles',
+            name: 'Articles',
             url: '/career-article',
             icon: 'icon-star'
           },
           {
-           name: 'Videos',
+            name: 'Videos',
             url: '/career-videos',
             icon: 'icon-star'
           },
@@ -170,22 +170,22 @@ export const navItems: INavData[] = [
         icon: 'icon-settings',
         children: [
           {
-           name: 'Video Intro',
+            name: 'Video Intro',
             url: '/videoIntro',
             icon: 'icon-star'
           },
           {
-           name: 'Video Intro 1',
+            name: 'Video Intro 1',
             url: '/videoIntro1',
             icon: 'icon-star'
           },
           {
-           name: 'Video Intro 2',
+            name: 'Video Intro 2',
             url: '/videoIntro2',
             icon: 'icon-star'
           },
           {
-           name: 'Video Intro 3',
+            name: 'Video Intro 3',
             url: '/videoIntro3',
             icon: 'icon-star'
           },
@@ -222,19 +222,19 @@ export const navItems: INavData[] = [
         name: 'FAQs',
         url: '/faqs',
         icon: 'icon-question',
-        children:[
-        {
-        name: 'Employer',
-        url: '/employersFaq',
-        icon: 'icon-star'
-        },
-        {
-        name: 'Graduate',
-        url: '/graduateFaq',
-        icon: 'icon-star'
-        },
+        children: [
+          {
+            name: 'Employer',
+            url: '/employersFaq',
+            icon: 'icon-star'
+          },
+          {
+            name: 'Graduate',
+            url: '/graduateFaq',
+            icon: 'icon-star'
+          },
         ]
-        },
+      },
       {
         name: 'Help Management',
         url: '/help-management',
@@ -252,7 +252,7 @@ export const navItems: INavData[] = [
         url: '/job-applicants-reports',
         icon: 'icon-report',
         // children: [
-          
+
         //      {
         //       name: 'Graduate Applications',
         //       url: '/job-applicants-reports',
@@ -300,12 +300,12 @@ export const navItems: INavData[] = [
     name: 'Skills List',
     url: '/skills-list',
     icon: 'icon-user'
-    },
+  },
   {
     title: true,
     name: 'Extras',
   },
-  
+
   {
     name: 'Pages',
     url: '/pages',

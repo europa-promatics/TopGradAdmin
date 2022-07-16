@@ -10,7 +10,7 @@
 						<div class="edit-wrapper">
 
 							<div class="edit-form mt-4">
-								<form [formGroup]="addSubAdminForm">
+								<form [formGroup]="addSubAdminForm" (ngSubmit)="submitSubAdminForm()">
 									<div class="text-center edit-profile">
 
 										<span class="user_dp position-relative">
@@ -24,7 +24,7 @@
 											*ngIf="!addSubAdminForm.controls['image'].valid && addSubAdminForm.controls['image'].touched">
 											<p style="color: #f90202"
 												*ngIf="addSubAdminForm.controls['image'].touched && addSubAdminForm.controls['image'].hasError('required')">
-												**Please Upload Image
+												Please upload image
 											</p>
 										</div>
 									</div>
@@ -38,14 +38,17 @@
 															<input type="text" name="" class="form-control"
 																formControlName="first_name"
 																oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
+															<div *ngIf="(addSubAdminForm.controls.first_name?.touched || addSubAdminForm.controls.first_name?.dirty)
+														           && addSubAdminForm.controls.first_name?.invalid && addSubAdminForm.controls.first_name?.errors?.required"
+																style="color:red">
+																Please enter first name
+															</div>
+															<div style="color: #f90202"
+																*ngIf="addSubAdminForm.controls['first_name'].errors?.pattern">
+																Please enter only alphabets
+															</div>
 														</div>
-														<div
-															*ngIf="!addSubAdminForm.controls['first_name'].valid && addSubAdminForm.controls['first_name'].touched">
-															<p style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['first_name'].touched && addSubAdminForm.controls['first_name'].hasError('required')">
-																**Please Enter First Name
-															</p>
-														</div>
+
 													</div>
 													<div class="col-md-6">
 														<div class="form-group">
@@ -53,13 +56,15 @@
 															<input type="text" name="" class="form-control"
 																formControlName="last_name"
 																oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
-														</div>
-														<div
-															*ngIf="!addSubAdminForm.controls['last_name'].valid && addSubAdminForm.controls['last_name'].touched">
-															<p style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['last_name'].touched && addSubAdminForm.controls['last_name'].hasError('required')">
-																**Please Enter Last Name
-															</p>
+															<div *ngIf="(addSubAdminForm.controls.last_name?.touched || addSubAdminForm.controls.last_name?.dirty)
+														            && addSubAdminForm.controls.last_name?.invalid && addSubAdminForm.controls.last_name?.errors?.required"
+																style="color:red">
+																Please enter last name
+															</div>
+															<div style="color: #f90202"
+																*ngIf="addSubAdminForm.controls['last_name'].errors?.pattern">
+																Please enter only alphabets
+															</div>
 														</div>
 													</div>
 												</div>
@@ -70,35 +75,59 @@
 															<input type="text" name="" class="form-control"
 																formControlName="email"
 																oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
+															<div
+																*ngIf="!addSubAdminForm.controls['email'].valid && addSubAdminForm.controls['email'].touched">
+																<p style="color: #f90202"
+																	*ngIf="addSubAdminForm.controls['email'].touched && addSubAdminForm.controls['email'].hasError('required')">
+																	Please enter email
+																</p>
+																<div style="color: #f90202"
+																	*ngIf="addSubAdminForm.controls['email'].errors?.pattern">
+																	Email must be a valid email address</div>
+															</div>
 														</div>
-														<div
-															*ngIf="!addSubAdminForm.controls['email'].valid && addSubAdminForm.controls['email'].touched">
-															<p style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['email'].touched && addSubAdminForm.controls['email'].hasError('required')">
-																**Please Enter Email
-															</p>
-															<div style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['email'].errors.email">
-																**Email must be a valid email address</div>
-														</div>
+
 													</div>
 													<div class="col-md-6">
 														<div class="form-group">
 															<label>Contact Number</label>
 															<input type="text" name="" class="form-control"
 																formControlName="phone_no"
-																oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
-														</div>
-														<div
-															*ngIf="!addSubAdminForm.controls['phone_no'].valid && addSubAdminForm.controls['phone_no'].touched">
-															<p style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['phone_no'].touched && addSubAdminForm.controls['phone_no'].hasError('required')">
-																**Please Enter Phone Number
-															</p>
+																oninput="this.value = !this.value.trim() ? this.value.trim() : this.value"
+																oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+															<!-- <div
+																*ngIf="!addSubAdminForm.controls['phone_no'].valid && addSubAdminForm.controls['phone_no'].touched">
+																<p style="color: #f90202"
+																	*ngIf="addSubAdminForm.controls['phone_no'].touched && addSubAdminForm.controls['phone_no'].hasError('required')">
+																	Please enter contact number
+																</p>
+															</div>
 															<div style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['phone_no'].errors.pattern">
-																**Please, Enter 10 digit Mobile Number.</div>
+																*ngIf="addSubAdminForm.controls['phone_no'].errors?.pattern">
+																Please enter valid digit contact number
+															</div>
+															<div style="color: #f90202"
+																*ngIf="addSubAdminForm.controls['phone_no'].errors?.maxlength || addSubAdminForm.controls['phone_no'].errors?.minlength">
+																Please enter the digits minimum 7 or maximum 15
+															</div> -->
+															<p style="color: red"
+																*ngIf="addSubAdminForm.controls['phone_no'].hasError('required') &&addSubAdminForm.controls['phone_no'].touched">
+																Please enter contact number
+															</p>
+															<p style="color: red"
+																*ngIf="!addSubAdminForm.controls['phone_no'].hasError('required') && addSubAdminForm.controls['phone_no'].hasError('pattern')">
+																Please enter valid digit contact number
+															</p>
+															<p style="color: red"
+																*ngIf="!addSubAdminForm.controls['phone_no'].hasError('required') && addSubAdminForm.controls['phone_no'].hasError('minlength')">
+																Please enter the digits minimum 7 or maximum 15
+															</p>
+															<p style="color: red"
+																*ngIf="!addSubAdminForm.controls['phone_no'].hasError('required') && addSubAdminForm.controls['phone_no'].hasError('maxlength')">
+																Please enter the digits minimum 7 or maximum 15
+															</p>
 														</div>
+
 													</div>
 												</div>
 												<div class="row">
@@ -109,224 +138,25 @@
 																<option value="active">Active</option>
 																<option value="inactive">Inactive</option>
 															</select>
+															<div
+																*ngIf="!addSubAdminForm.controls['status'].valid && addSubAdminForm.controls['status'].touched">
+																<p style="color: #f90202"
+																	*ngIf="addSubAdminForm.controls['status'].touched && addSubAdminForm.controls['status'].hasError('required')">
+																	Please select status
+																</p>
+															</div>
 														</div>
-														<div
-															*ngIf="!addSubAdminForm.controls['status'].valid && addSubAdminForm.controls['status'].touched">
-															<p style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['status'].touched && addSubAdminForm.controls['status'].hasError('required')">
-																**Please Select Status
-															</p>
-														</div>
+
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</form>
-								<div class="access-form-fields mt-3">
+
 									<div class="row justify-content-center">
 										<div class="col-md-8">
-											<div class="access-form">
-												<div class="row">
-
-													<div class="col-md-6">
-														<div class="card acces-crd">
-															<div class="card-body">
-																<div class="example-section">
-																	<span class="example-list-section">
-																		<!-- <mat-checkbox class="example-margin"
-																                  [checked]="allComplete"
-																                  [color]="task.color"
-																                  [indeterminate]="someComplete()"
-																                  (change)="setAll($event.checked)">
-																      {{task.name}}
-																    </mat-checkbox> -->
-																		<mat-checkbox class="example-margin"
-																			[checked]="allComplete" [color]="task.color"
-																			[indeterminate]="someComplete()"
-																			(change)="setAllUserManagement($event.checked)">
-																			{{task.name}}
-																		</mat-checkbox>
-
-																	</span>
-																	<span class="example-list-section">
-																		<ul>
-																			<!-- <li *ngFor="let subtask of task.subtasks">
-																        <mat-checkbox [(ngModel)]="subtask.completed"
-																                      [color]="subtask.color"
-																                      (ngModelChange)="updateAllComplete()">
-																          {{subtask.name}}
-																        </mat-checkbox>
-																      </li> -->
-																			<li *ngFor="let subtask of task.subtasks">
-																				<mat-checkbox
-																					[(ngModel)]="subtask.completed"
-																					[color]="subtask.color"
-																					(ngModelChange)="updateAllCompleteUser($event,subtask.name)">
-																					{{subtask.name}}
-																				</mat-checkbox>
-																			</li>
-
-																		</ul>
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
-
-
-
-													<div class="col-md-6">
-														<div class="card acces-crd">
-															<div class="card-body">
-																<div class="example-section">
-																	<span class="example-list-section">
-																		<!-- <mat-checkbox class="example-margin"
-																                  [checked]="allComplete1"
-																                  [color]="task1.color"
-																                  [indeterminate]="someComplete1()"
-																                  (change)="setAll1($event.checked)">
-																      {{task1.name}}
-																    </mat-checkbox> -->
-																		<mat-checkbox class="example-margin"
-																			[checked]="allComplete1"
-																			[color]="task1.color"
-																			[indeterminate]="someComplete1()"
-																			(change)="setAllJobManagement1($event.checked)">
-																			{{task1.name}}
-																		</mat-checkbox>
-																	</span>
-																	<span class="example-list-section">
-																		<ul>
-																			<!-- <li *ngFor="let subtask1 of task1.subtasks1">
-																        <mat-checkbox [(ngModel)]="subtask1.completed"
-																                      [color]="subtask1.color"
-																                      (ngModelChange)="updateAllComplete1()">
-																          {{subtask1.name}}
-																        </mat-checkbox>
-																      </li> -->
-																			<li
-																				*ngFor="let subtask1 of task1.subtasks1">
-																				<mat-checkbox
-																					[(ngModel)]="subtask1.completed"
-																					[color]="subtask1.color"
-																					(ngModelChange)="updateAllComplete1($event,subtask1.name)">
-																					{{subtask1.name}}
-																				</mat-checkbox>
-																			</li>
-
-																		</ul>
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
-
-												</div>
-
-
-												<div class="row">
-
-													<div class="col-md-6">
-														<div class="card acces-crd">
-															<div class="card-body">
-																<div class="example-section">
-																	<span class="example-list-section">
-																		<!-- <mat-checkbox class="example-margin"
-																                  [checked]="allComplete2"
-																                  [color]="task2.color"
-																                  [indeterminate]="someComplete2()"
-																                  (change)="setAll2($event.checked)">
-																      {{task2.name}}
-																    </mat-checkbox> -->
-																		<mat-checkbox class="example-margin"
-																			[checked]="allComplete2"
-																			[color]="task2.color"
-																			[indeterminate]="someComplete2()"
-																			(change)="setAllPaymentManagement($event.checked)">
-																			{{task2.name}}
-																		</mat-checkbox>
-																	</span>
-																	<span class="example-list-section">
-																		<ul>
-																			<!-- <li *ngFor="let subtask2 of task2.subtasks2">
-																        <mat-checkbox [(ngModel)]="subtask2.completed"
-																                      [color]="subtask2.color"
-																                      (ngModelChange)="updateAllComplete2()">
-																          {{subtask2.name}}
-																        </mat-checkbox>
-																      </li> -->
-																			<li
-																				*ngFor="let subtask2 of task2.subtasks2">
-																				<mat-checkbox
-																					[(ngModel)]="subtask2.completed"
-																					[color]="subtask2.color"
-																					(ngModelChange)="updateAllComplete2($event,subtask2.name)">
-																					{{subtask2.name}}
-																				</mat-checkbox>
-																			</li>
-
-																		</ul>
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
-
-
-													<div class="col-md-6">
-														<div class="card acces-crd">
-															<div class="card-body">
-																<div class="example-section">
-																	<span class="example-list-section">
-																		<!-- <mat-checkbox class="example-margin"
-																                  [checked]="allComplete3"
-																                  [color]="task3.color"
-																                  [indeterminate]="someComplete3()"
-																                  (change)="setAll3($event.checked)">
-																      {{task3.name}}
-																    </mat-checkbox> -->
-																		<mat-checkbox class="example-margin"
-																			[checked]="allComplete3"
-																			[color]="task3.color"
-																			[indeterminate]="someComplete3()"
-																			(change)="setAllGeneralManagement($event.checked)">
-																			{{task3.name}}
-																		</mat-checkbox>
-																	</span>
-																	<span class="example-list-section">
-																		<ul>
-																			<!-- <li *ngFor="let subtask3 of task3.subtasks3">
-																        <mat-checkbox [(ngModel)]="subtask3.completed"
-																                      [color]="subtask3.color"
-																                      (ngModelChange)="updateAllComplete3()">
-																          {{subtask3.name}}
-																        </mat-checkbox>
-																      </li> -->
-																			<li
-																				*ngFor="let subtask3 of task3.subtasks3">
-																				<mat-checkbox
-																					[(ngModel)]="subtask3.completed"
-																					[color]="subtask3.color"
-																					(ngModelChange)="updateAllComplete3($event,subtask3.name)">
-																					{{subtask3.name}}
-																				</mat-checkbox>
-																			</li>
-
-																		</ul>
-																	</span>
-																</div>
-															</div>
-														</div>
-													</div>
-
-
-												</div>
-
-											</div>
 											<div class="edit-btns d-flex justify-content-end">
-												<button class="btn btn-primary mr-4" type="submit"
-													(click)="submitSubAdminForm()">
+												<button class="btn btn-primary mr-4" type="submit">
 													Save
 												</button>
 												<button class="btn btn-primary" routerLink="/subAdminManagement">
@@ -335,7 +165,8 @@
 											</div>
 										</div>
 									</div>
-								</div>
+
+								</form>
 							</div>
 						</div>
 					</div>

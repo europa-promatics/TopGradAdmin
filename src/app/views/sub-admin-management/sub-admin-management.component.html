@@ -57,11 +57,23 @@
                   </span>
                 </td>
               </ng-container>
+
+              <ng-container matColumnDef="access_priviledge">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Access Priviledge</th>
+                <td mat-cell *matCellDef="let row">
+                  <span>
+                    <mat-icon class="material-icons-outlined" style="cursor: pointer;" routerLink="/access-privilege/{{row._id}}" >accessibility</mat-icon>
+                  </span>
+                </td>
+              </ng-container>
+
+
               <!-- status column -->
               <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef> Status </th>
                 <td mat-cell *matCellDef="let row">
-                     <mat-slide-toggle [checked]="row.status=='active'?true:false"></mat-slide-toggle>
+                     <mat-slide-toggle [checked]="row.status=='active'?true:false"
+                     (change)="toggle($event, row._id)"></mat-slide-toggle>
                    </td>
               </ng-container>
                <!-- Action column -->

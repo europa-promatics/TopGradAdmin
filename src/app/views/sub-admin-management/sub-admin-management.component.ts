@@ -34,7 +34,7 @@ const APPDATE: string[] = [
 })
 export class SubAdminManagementComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['select', 'id', 'name', 'email', 'credentials', 'status', 'action'];
+  displayedColumns: string[] = ['select', 'id', 'name', 'email', 'credentials','access_priviledge', 'status', 'action'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
   
@@ -55,6 +55,7 @@ export class SubAdminManagementComponent implements AfterViewInit {
   allSubAdminData: any;
   dataId: any;
   credentialsId: any;
+  selectedUser: any=[];
 
   constructor(private Service: TopgradserviceService,
     private _snackBar: MatSnackBar) { 
@@ -145,7 +146,7 @@ export class SubAdminManagementComponent implements AfterViewInit {
     }
     this.Service.deleteSubAdmin(obj).subscribe((res:any)=>{
       console.log("response of delete SubAdmin data>>>",res);
-      this._snackBar.open('Sub_Admin Data Deleted , Successfully..','close',{
+      this._snackBar.open('Sub admin deleted successfully','close',{
         duration: 2000
       })
       this.ngOnInit()
@@ -165,13 +166,43 @@ export class SubAdminManagementComponent implements AfterViewInit {
     this.Service.sendCredentialsSubAdmin(obj).subscribe((res:any)=>{
       console.log("response of credentials SubAdmin data>>>",res);
       this.ngOnInit()
-      this._snackBar.open('Credentials Sended, Successfully..','close',{
+      this._snackBar.open('Credentials sent successfully','close',{
         duration: 2000
       })
 
     })
     
 
+  }
+
+
+  toggle(event, _id): void {
+    this.selectedUser.push(_id);
+    if (event?.checked) {
+      var obj={
+        id: _id, 
+        status: "active" 
+      }
+      this.Service .updateSubAdmin(obj).subscribe((res) => {
+        this._snackBar.open('Sub admin account status active successfully..','close',{
+          duration: 2000
+        })
+        this.selectedUser = [];
+        });
+
+    } 
+    else {
+      var obj={
+        id: _id, 
+        status: "inactive" 
+      }
+      this.Service.updateSubAdmin(obj).subscribe((res) => {
+        this._snackBar.open('Sub admin account status inactive successfully..','close',{
+          duration: 2000
+        })
+            this.selectedUser = [];
+        });
+    }
   }
 
 

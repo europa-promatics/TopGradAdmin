@@ -163,6 +163,7 @@ import { AddSubHeadingComponent } from './pages/content-management/add-sub-headi
 import { GraduateAddFaqComponent } from './pages/support-management/faq_emp-grad/graduate-add-faq/graduate-add-faq.component';
 import { GraduateEditFaqComponent } from './pages/support-management/faq_emp-grad/graduate-edit-faq/graduate-edit-faq.component';
 import { ReportsComponent } from './pages/support-management/reports/reports.component';
+import { AccessPrivilegeComponent } from './views/access-privilege/access-privilege.component';
 //import { ViewSubHeadingComponent } from './pages/content-management/view-sub-heading/view-sub-heading.component';
 
 // import { GraduateFaqComponent } from './pages/support-management/faq_emp-grad/graduate-faq/graduate-faq.component';
@@ -308,6 +309,7 @@ import { ReportsComponent } from './pages/support-management/reports/reports.com
     EditHeadingComponent,
     EditSubHeadingComponent,
     AddSubHeadingComponent,
+    AccessPrivilegeComponent,
     
     //GraduateListComponent,
         //  ViewSubHeadingComponent,

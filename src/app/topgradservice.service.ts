@@ -1164,6 +1164,28 @@ export class TopgradserviceService implements HttpInterceptor {
 
   }
 
+  getAccessPrivilegeSubAdmin(obj:any):Observable<any>{
+    let API_URL=`${this.SERVER_URL}/admin/get/access/privileges/${obj.id}`;
+    console.log("get access privilege service Api Url>>>",API_URL);
+    return this.httpClient.get(API_URL,obj).pipe(
+      map(res=>{
+        return res
+      }),
+      catchError(this.error)
+    )
+    
+  }
+  updtaeAccessPrivilegeSubAdmin(obj:any):Observable<any>{
+    let API_URL=`${this.SERVER_URL}/admin/update/access/privileges`;
+    console.log("update access privilege service>>>",API_URL);
+    return this.httpClient.patch(API_URL,obj).pipe(
+      map(res=>{
+        return res
+      }),
+      catchError(this.error)
+    )
+  }
+
   // verification submission-----------------
 
   getVerificationSubmission(obj:any):Observable<any>{

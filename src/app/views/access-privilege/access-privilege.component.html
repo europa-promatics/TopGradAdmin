@@ -1,0 +1,607 @@
+<section class="edit-employer-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Access Privileges</strong>
+                    </div>
+                    <div class="card-body">
+                        <div class="edit-wrapper">
+                            <div class="edit-form mt-4">
+                                <div class="access-form-fields mt-3">
+                                    <div class="edit-form-fields">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group itssize">
+                                                        <label class="mr-2">Name: </label>
+                                                        {{first_name | titlecase}} {{last_name | titlecase}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group itssize">
+                                                        <label class="mr-2">Email: </label>
+                                                        {{email}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-8">
+                                            <div class="access-form">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.user_management_check"
+                                                                            (change)="userSetAll($event.checked)"
+                                                                            [checked]="this.graduateCheck==true || this.employerCheck == true">
+                                                                            User Management
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.graduates"
+                                                                                    (change)="userChangeSelect1($event.checked)">
+                                                                                    Graduates
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.employers"
+                                                                                    (change)="userChangeSelect2($event.checked)">
+                                                                                    Employers
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.job_management_check"
+                                                                            (change)="jobSetAll($event.checked)"
+                                                                            [checked]="this.job_management_edit_Check==true || this.job_management_approve_Check == true || this.job_management_delete_Check == true">
+                                                                            Job Management
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="job_management_edit"
+                                                                                    (change)="jobChangeSelect1($event.checked)">
+                                                                                    Edit
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.job_management_approve"
+                                                                                    (change)="jobChangeSelect2($event.checked)">
+                                                                                    Approve
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.job_management_delete"
+                                                                                    (change)="jobChangeSelect3($event.checked)">
+                                                                                    Delete
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.payment_management_check"
+                                                                            (change)="paymentSetAll($event.checked)"
+                                                                            [checked]="this.payment_management_invoices_Check==true || this.payment_management_view_Check == true || this.payment_management_delete_Check == true">
+                                                                            Payment Management
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.payment_management_invoices"
+                                                                                    (change)="paymentChangeSelect1($event.checked)">
+                                                                                    Invoices
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.payment_management_view"
+                                                                                    (change)="paymentChangeSelect2($event.checked)">
+                                                                                    View
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.payment_management_delete"
+                                                                                    (change)="paymentChangeSelect3($event.checked)">
+                                                                                    Delete
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Logs-->
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.logs_check"
+                                                                            (change)="logSetAll($event.checked)"
+                                                                            [checked]="this.reports_Check==true || this.verifications_submission_Check == true || this.offer_submission_Check == true">
+                                                                            Logs
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox [(ngModel)]="this.reports"
+                                                                                    (change)="logChangeSelect1($event.checked)">
+                                                                                    Reports
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.verifications_submission"
+                                                                                    (change)="logChangeSelect2($event.checked)">
+                                                                                    Verification Submission
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.offer_submission"
+                                                                                    (change)="logChangeSelect3($event.checked)">
+                                                                                    Offer Submission
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ----------------------------InterView Management & Recruitment solution Management----------------- -->
+                                                <div class="row">
+                                                    <!-- Interview Mngt -->
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.interview_management_check"
+                                                                            (change)="interviewSetAll($event.checked)"
+                                                                            [checked]="this.interview_management_add_Check==true || this.interview_management_edit_Check == true || this.interview_management_delete_Check == true">
+                                                                            Interview Management
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.interview_management_add"
+                                                                                    (change)="interviewChangeSelect1($event.checked)">
+                                                                                    Add
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.interview_management_edit"
+                                                                                    (change)="interviewChangeSelect2($event.checked)">
+                                                                                    Edit
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.interview_management_delete"
+                                                                                    (change)="interviewChangeSelect3($event.checked)">
+                                                                                    Delete
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Recruitment solution Mngt -->
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.recruitment_solution_management_check"
+                                                                            (change)="rcmSetAll($event.checked)"
+                                                                            [checked]="this.rcm_add_Check==true || this.rcm_edit_Check == true || this.rcm_delete_Check == true">
+                                                                            Recruitment Solution Management
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox [(ngModel)]="this.rcm_add"
+                                                                                    (change)="rcmChangeSelect1($event.checked)">
+                                                                                    Add
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.rcm_edit"
+                                                                                    (change)="rcmChangeSelect2($event.checked)">
+                                                                                    Edit
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.rcm_delete"
+                                                                                    (change)="rcmChangeSelect3($event.checked)">
+                                                                                    Delete
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ----------------------------Resume Builder And Graduate Verification mngt----------------- -->
+                                                <div class="row">
+                                                    <!-- Resume Builder Mngt -->
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.resume_builder_management_check"
+                                                                            (change)="rbmSetAll($event.checked)"
+                                                                            [checked]="this.resume_builder_management_add_Check==true || this.resume_builder_management_edit_Check == true || this.resume_builder_management_delete_Check == true">
+                                                                            Resume Builder Management
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.resume_builder_management_add"
+                                                                                    (change)="rbmChangeSelect1($event.checked)">
+                                                                                    Add
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.resume_builder_management_edit"
+                                                                                    (change)="rbmChangeSelect2($event.checked)">
+                                                                                    Edit
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.resume_builder_management_delete"
+                                                                                    (change)="rbmChangeSelect3($event.checked)">
+                                                                                    Delete
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Graduate verification Mngt -->
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.graduate_verification_management_check"
+                                                                            (change)="gradVerificationtSetAll($event.checked)"
+                                                                            [checked]="this.gvm_add_Check==true || this.gvm_edit_Check == true || this.gvm_delete_Check == true">
+                                                                            Graduate verification Management
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox [(ngModel)]="this.gvm_add"
+                                                                                    (change)="gvmChangeSelect1($event.checked)">
+                                                                                    Add
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.gvm_edit"
+                                                                                    (change)="gvmChangeSelect2($event.checked)">
+                                                                                    Edit
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.gvm_delete"
+                                                                                    (change)="gvmChangeSelect3($event.checked)">
+                                                                                    Delete
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ----------------------------Skill List And Pages----------------- -->
+                                                <div class="row">
+                                                    <!-- Pages -->
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.page_check"
+                                                                            (change)="pageSetAll($event.checked)"
+                                                                            [checked]="this.login_Check==true || this.error_404_Check == true || this.error_500_Check == true">
+                                                                            Pages
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox [(ngModel)]="this.login"
+                                                                                    (change)="pageChangeSelect1($event.checked)">
+                                                                                    Login
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.error_404"
+                                                                                    (change)="pageChangeSelect2($event.checked)">
+                                                                                    Error 404
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.error_500"
+                                                                                    (change)="pageChangeSelect3($event.checked)">
+                                                                                    Error 500
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Skill List -->
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.skill_list_check"
+                                                                            (change)="skillSetAll($event.checked)"
+                                                                            [checked]="this.skill_add_Check==true || this.skill_edit_Check == true || this.skill_delete_Check == true">
+                                                                            Skill List
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.skill_add"
+                                                                                    (change)="skillChangeSelect1($event.checked)">
+                                                                                    Add
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.skill_edit"
+                                                                                    (change)="skillChangeSelect2($event.checked)">
+                                                                                    Edit
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.skill_delete"
+                                                                                    (change)="skillChangeSelect3($event.checked)">
+                                                                                    Delete
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ----------------------------Support Management & Logs----------------- -->
+                                                <div class="row">
+                                                    <!-- Support Mngt -->
+                                                    <div class="col-md-6">
+                                                        <div class="card acces-crd">
+                                                            <div class="card-body">
+                                                                <div class="example-section">
+                                                                    <span class="example-list-section">
+                                                                        <mat-checkbox class="example-margin"
+                                                                            [(ngModel)]="this.support_management_check"
+                                                                            (change)="supportSetAll($event.checked)"
+                                                                            [checked]="this.support_management_contact_us_Check==true || this.support_management_help_management_Check == true || this.support_management_faqs_Check == true">
+                                                                            Support Management
+                                                                        </mat-checkbox>
+                                                                    </span>
+                                                                    <span class="example-list-section">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.support_management_contact_us"
+                                                                                    (change)="supportChangeSelect1($event.checked)">
+                                                                                    Contact Us
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.support_management_help_management"
+                                                                                    (change)="supportChangeSelect2($event.checked)">
+                                                                                    Help Management
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                            <li>
+                                                                                <mat-checkbox
+                                                                                    [(ngModel)]="this.support_management_faqs"
+                                                                                    (change)="supportChangeSelect3($event.checked)">
+                                                                                    FAQs
+                                                                                </mat-checkbox>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- ----------------------------Content Management----------------- -->
+                                                    <div class="row">
+                                                        <!-- Content Mngt -->
+                                                        <div class="col-md-12">
+                                                            <div class="card acces-crd">
+                                                                <div class="card-body">
+                                                                    <div class="example-section">
+                                                                        <span class="example-list-section">
+                                                                            <mat-checkbox class="example-margin"
+                                                                                [(ngModel)]="this.content_management_check"
+                                                                                (change)="contentSetAll($event.checked)"
+                                                                                [checked]="
+                                                                                this.home_page_management_Check ==true ||
+                                                                                this.industry_management_Check ==true ||
+                                                                                this.how_it_works_management_Check ==true ||
+                                                                                this.career_resources_Check ==true ||
+                                                                                this.video_resume_tips_management_Check ==true ||
+                                                                                this.terms_and_conditions_Check ==true ||
+                                                                                this.privacy_policy_Check ==true ||
+                                                                                this.about_us_Check ==true
+                                                                                ">
+                                                                                Content Management
+                                                                            </mat-checkbox>
+                                                                        </span>
+                                                                        <span class="example-list-section">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <mat-checkbox
+                                                                                        [(ngModel)]="this.home_page_management"
+                                                                                        (change)="contentChangeSelect1($event.checked)">
+                                                                                        Home Page Management
+                                                                                    </mat-checkbox>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <mat-checkbox
+                                                                                        [(ngModel)]="this.industry_management"
+                                                                                        (change)="contentChangeSelect2($event.checked)">
+                                                                                        Industry Management
+                                                                                    </mat-checkbox>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <mat-checkbox
+                                                                                        [(ngModel)]="this.how_it_works_management"
+                                                                                        (change)="contentChangeSelect3($event.checked)">
+                                                                                        How It Works Management
+                                                                                    </mat-checkbox>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <mat-checkbox
+                                                                                        [(ngModel)]="this.career_resources"
+                                                                                        (change)="contentChangeSelect4($event.checked)">
+                                                                                        Career Resources
+                                                                                    </mat-checkbox>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <mat-checkbox
+                                                                                        [(ngModel)]="this.video_resume_tips_management"
+                                                                                        (change)="contentChangeSelect5($event.checked)">
+                                                                                        Video Resume Tips Management
+                                                                                    </mat-checkbox>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <mat-checkbox
+                                                                                        [(ngModel)]="this.terms_and_conditions"
+                                                                                        (change)="contentChangeSelect6($event.checked)">
+                                                                                        Terms & Conditions
+                                                                                    </mat-checkbox>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <mat-checkbox
+                                                                                        [(ngModel)]="this.privacy_policy"
+                                                                                        (change)="contentChangeSelect7($event.checked)">
+                                                                                        Privacy & Policy
+                                                                                    </mat-checkbox>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <mat-checkbox
+                                                                                        [(ngModel)]="this.about_us"
+                                                                                        (change)="contentChangeSelect8($event.checked)">
+                                                                                        About Us
+                                                                                    </mat-checkbox>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="edit-btns d-flex justify-content-end">
+                                                <button class="btn btn-primary mr-4" type="submit"
+                                                    (click)="updateData()">
+                                                    Save
+                                                </button>
+                                                <button class="btn btn-primary" routerLink="/subAdminManagement">
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

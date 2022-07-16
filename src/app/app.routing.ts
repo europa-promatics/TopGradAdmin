@@ -97,6 +97,7 @@ import { EditHeadingComponent } from './pages/content-management/edit-heading/ed
 import { EditSubHeadingComponent } from './pages/content-management/edit-sub-heading/edit-sub-heading.component';
 import { AddSubHeadingComponent } from './pages/content-management/add-sub-heading/add-sub-heading.component';
 import { ReportsComponent } from './pages/support-management/reports/reports.component';
+import {AccessPrivilegeComponent} from './views/access-privilege/access-privilege.component'
 
 
 
@@ -536,6 +537,11 @@ export const routes: Routes = [
       {
         path: 'view-report/:id',
         loadChildren: () => import('./pages/support-management/view-report/view-report.module').then(m => m.ViewReportModule)
+      },
+
+      {
+        path: 'access-privilege/:id',
+        loadChildren: () => import('./views/access-privilege/access-privilege.module').then(m => m.AccessPrivilegeModule)
       }
 
     ]
