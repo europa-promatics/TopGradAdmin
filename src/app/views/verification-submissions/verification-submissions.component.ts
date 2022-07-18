@@ -5,6 +5,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {ModalDirective} from 'ngx-bootstrap/modal';
 import {SelectionModel} from '@angular/cdk/collections';
 import { TopgradserviceService } from '../../topgradservice.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface UserData {
   id: string;
@@ -54,9 +55,12 @@ export class VerificationSubmissionsComponent implements OnInit {
   }
   allData: any;
   references: any;
+  dataId: any;
+  selected: any[]=[];
 
 
-  constructor(private Service: TopgradserviceService) { 
+  constructor(private Service: TopgradserviceService,
+    private _snackBar: MatSnackBar) { 
   	// Create 100 users
     const users = Array.from({length: 50}, (_, k) => createNewUser(k + 1));
 
@@ -163,6 +167,61 @@ export class VerificationSubmissionsComponent implements OnInit {
   }
 
 
+
+
+  delete(_id){
+    console.log("delete data id >>>",_id);
+    this.dataId=_id
+    this.smallModal.show()
+    this.ngOnInit()
+  }
+  deleteDataOfVerification(){
+    var obj: any = {
+      submission_id:this.dataId
+    }
+    this.Service.deleteVerificationSubmission(obj).subscribe((res:any)=>{
+      console.log("response of verification submission>>>",res);
+      this._snackBar.open('Verfication submission deleted successfully','close',{
+        duration: 2000
+      })
+      this.ngOnInit()
+      this.smallModal.hide()
+
+    })
+  }
+
+  statusToggle(event,_id){
+    this.selected.push(_id)
+    if (event?.checked) {
+      var obj={
+        id: _id, 
+        verified_status: "true" 
+      }
+      this.Service .toggleVerificationSubmission(obj).subscribe((res) => {
+        console.log("respons eof status>>>",res);
+        this.ngOnInit()
+        
+        this._snackBar.open('Verification submission account status active successfully..','close',{
+          duration: 2000
+        })
+        this.selected = [];
+        });
+
+    } else {
+      var obj={
+        id: _id, 
+        verified_status: "false" 
+      }
+      this.Service.toggleVerificationSubmission(obj).subscribe((res) => {
+        console.log("respons eof status>>>",res);
+        this.ngOnInit()
+        this._snackBar.open('Verification submission account status inactive successfully..','close',{
+          duration: 2000
+        })
+            this.selected = [];
+        });
+    }
+  }
 
 
 }

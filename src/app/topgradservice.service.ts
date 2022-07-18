@@ -1199,6 +1199,42 @@ export class TopgradserviceService implements HttpInterceptor {
     )
   }
 
+  deleteVerificationSubmission(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/delete/verification/submissions/${obj.submission_id}`;
+    console.log("Delete Verification Submission Service API_URL>>>", API_URL)
+    return this.httpClient.delete(API_URL).pipe(
+      map(res => {
+        return res
+      }),
+      catchError(this.error)
+    )
+
+  }
+
+  detailVerificationSubmission(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/get/verification_submission/details/${obj.submission_id}`;
+    console.log("Detail Verification Submission Service API_URL>>", API_URL);
+    return this.httpClient.get(API_URL).pipe(
+      map(res => {
+        return res
+      }),
+      catchError(this.error)
+    )
+
+  }
+
+  toggleVerificationSubmission(obj: any): Observable<any> {
+    let API_URL = `${this.SERVER_URL}/admin/update/verification/status`;
+    console.log("toggle status service >>>>", API_URL);
+    return this.httpClient.patch(API_URL,obj).pipe(
+      map(res => {
+        return res
+      }),
+      catchError(this.error)
+    )
+
+  }
+
 
 
 }

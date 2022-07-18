@@ -74,14 +74,24 @@
 														<div class="form-group">
 															<label>Contact Number</label>
 															<input type="text" name="" class="form-control" formControlName="phone_no"
-															oninput="this.value = !this.value.trim() ? this.value.trim() : this.value">
-														</div>
-														<div *ngIf="!editSubAdminForm.controls['phone_no'].valid && editSubAdminForm.controls['phone_no'].touched">
-															<p style="color: #f90202"
-																*ngIf="editSubAdminForm.controls['phone_no'].touched && editSubAdminForm.controls['phone_no'].hasError('required')">
-																**Please Enter Phone Number
+															oninput="this.value = !this.value.trim() ? this.value.trim() : this.value"
+															oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+															<p style="color: red"
+																*ngIf="editSubAdminForm.controls['phone_no'].hasError('required') &&editSubAdminForm.controls['phone_no'].touched">
+																Please enter contact number
 															</p>
-															<div style="color: #f90202" *ngIf="editSubAdminForm.controls['phone_no'].errors.pattern">**Please, Enter 10 digit Mobile Number.</div>  
+															<p style="color: red"
+																*ngIf="!editSubAdminForm.controls['phone_no'].hasError('required') && editSubAdminForm.controls['phone_no'].hasError('pattern')">
+																Please enter valid digit contact number
+															</p>
+															<p style="color: red"
+																*ngIf="!editSubAdminForm.controls['phone_no'].hasError('required') && editSubAdminForm.controls['phone_no'].hasError('minlength')">
+																Please enter the digits minimum 7 or maximum 15
+															</p>
+															<p style="color: red"
+																*ngIf="!editSubAdminForm.controls['phone_no'].hasError('required') && editSubAdminForm.controls['phone_no'].hasError('maxlength')">
+																Please enter the digits minimum 7 or maximum 15
+															</p>
 														</div>
 													</div>
 												</div>

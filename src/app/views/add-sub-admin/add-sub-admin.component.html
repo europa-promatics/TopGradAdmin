@@ -95,21 +95,6 @@
 																formControlName="phone_no"
 																oninput="this.value = !this.value.trim() ? this.value.trim() : this.value"
 																oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
-															<!-- <div
-																*ngIf="!addSubAdminForm.controls['phone_no'].valid && addSubAdminForm.controls['phone_no'].touched">
-																<p style="color: #f90202"
-																	*ngIf="addSubAdminForm.controls['phone_no'].touched && addSubAdminForm.controls['phone_no'].hasError('required')">
-																	Please enter contact number
-																</p>
-															</div>
-															<div style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['phone_no'].errors?.pattern">
-																Please enter valid digit contact number
-															</div>
-															<div style="color: #f90202"
-																*ngIf="addSubAdminForm.controls['phone_no'].errors?.maxlength || addSubAdminForm.controls['phone_no'].errors?.minlength">
-																Please enter the digits minimum 7 or maximum 15
-															</div> -->
 															<p style="color: red"
 																*ngIf="addSubAdminForm.controls['phone_no'].hasError('required') &&addSubAdminForm.controls['phone_no'].touched">
 																Please enter contact number

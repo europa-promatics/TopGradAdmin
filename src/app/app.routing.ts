@@ -527,7 +527,7 @@ export const routes: Routes = [
         loadChildren: () => import('./views/offer-submissions/offer-submissions.module').then(m => m.OfferSubmissionsModule)
       },
       {
-        path: 'view-verification',
+        path: 'view-verification/:id',
         loadChildren: () => import('./views/view-verification/view-verification.module').then(m => m.ViewVerificationModule)
       },
       {

@@ -49,11 +49,11 @@
                 <td mat-cell *matCellDef="let row">
 
                 	<div class="check_icns text-center" *ngIf="row.upload_documents[0].name == 'Academic transcripts'">
-                		<mat-icon class="material-icons-outlined">check</mat-icon>
+                		<mat-icon class="material-icons-outlined style_check">check</mat-icon>
                 	</div> 
 
                   <div class="check_icns text-center" *ngIf="row.upload_documents[0].name != 'Academic transcripts'">
-                		<mat-icon class="material-icons-outlined">close</mat-icon>
+                		<mat-icon class="material-icons-outlined style_close">close</mat-icon>
                 	</div> 
 
                 </td>
@@ -65,11 +65,11 @@
                 <td mat-cell *matCellDef="let row">
 
                 	<div class="check_icns text-center"  *ngIf="row.upload_documents[1].name == 'National Police Check'">
-                		<mat-icon class="material-icons-outlined">check</mat-icon>
+                		<mat-icon class="material-icons-outlined style_check">check</mat-icon>
                 	</div> 
 
                   <div class="check_icns text-center"  *ngIf="row.upload_documents[1].name != 'National Police Check'">
-                		<mat-icon class="material-icons-outlined">close</mat-icon>
+                		<mat-icon class="material-icons-outlined style_close">close</mat-icon>
                 	</div> 
 
             	</td>
@@ -80,11 +80,11 @@
                 <td mat-cell *matCellDef="let row">
 
                 	<div class="check_icns text-center" *ngIf="row.upload_documents[2].name == 'English Language Test'">
-                		<mat-icon class="material-icons-outlined">check</mat-icon>
+                		<mat-icon class="material-icons-outlined style_check">check</mat-icon>
                 	</div>
 
                   <div class="check_icns text-center" *ngIf="row.upload_documents[2].name != 'English Language Test'">
-                		<mat-icon class="material-icons-outlined">close</mat-icon>
+                		<mat-icon class="material-icons-outlined style_close">close</mat-icon>
                 	</div>
 
                 </td>
@@ -94,8 +94,12 @@
               <ng-container matColumnDef="prfwrk">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Proof of Work </th>
                 <td mat-cell *matCellDef="let row">
-                	<div class="check_icns text-center">
-                		<mat-icon class="material-icons-outlined">check</mat-icon>
+                  <div class="check_icns text-center" *ngIf="row.upload_documents[3]?.name == 'Proof Of Work'">
+                		<mat-icon class="material-icons-outlined style_check">check</mat-icon>
+                	</div>
+
+                  <div class="check_icns text-center" *ngIf="row.upload_documents[3]?.name != 'Proof Of Work'">
+                		<mat-icon class="material-icons-outlined style_close">close</mat-icon>
                 	</div>
                 </td>
               </ng-container>
@@ -105,11 +109,11 @@
                 <td mat-cell *matCellDef="let row">
 
                 	<div class="check_icns text-center" *ngIf="row.references[0].email.length== 0 ">
-                		<mat-icon class="material-icons-outlined">close</mat-icon>
+                		<mat-icon class="material-icons-outlined style_close">close</mat-icon>
                 	</div>
 
                   <div class="check_icns text-center" *ngIf="row.references[0].email.length >= 1 || row.references[1].email.length >= 1">
-                		<mat-icon class="material-icons-outlined">check</mat-icon>
+                		<mat-icon class="material-icons-outlined style_check">check</mat-icon>
                 	</div>
 
                 </td>
@@ -120,12 +124,12 @@
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Video Resume</th>
                 <td mat-cell *matCellDef="let row">
 
-                	<div class="check_icns text-center" *ngIf="row.graduate_id.video_resume.url.length == 0">
-                		<mat-icon class="material-icons-outlined">close</mat-icon>
+                	<div class="check_icns text-center" *ngIf="row.video_resume.video_resume?.url.length == 0">
+                		<mat-icon class="material-icons-outlined style_close">close</mat-icon>
                 	</div>
 
-                  <div class="check_icns text-center" *ngIf="row.graduate_id.video_resume.url.length >= 1">
-                		<mat-icon class=" material-icons-outlined">check</mat-icon>
+                  <div class="check_icns text-center" *ngIf="row.video_resume.video_resume?.url.length >= 1">
+                		<mat-icon class=" material-icons-outlined style_check">check</mat-icon>
                 	</div>
 
                 </td>
@@ -146,7 +150,8 @@
               <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef> Verification Status </th>
                 <td mat-cell *matCellDef="let row">
-                     <mat-slide-toggle [checked]="row.status=='active'?true:false"></mat-slide-toggle>
+                     <mat-slide-toggle  [checked]="row.verified_status=='true'?true:false"
+                     (change)="statusToggle($event, row._id)"></mat-slide-toggle>
                    </td>
               </ng-container>
                <!-- Action column -->
@@ -157,7 +162,7 @@
                       <mat-icon>more_vert</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu" class="td-menu">
-                      <a mat-menu-item class="" routerLink="/view-verification">
+                      <a mat-menu-item class="" routerLink="/view-verification/{{row._id}}" >
                         <mat-icon class="material-icons-outlined">visibility</mat-icon>
                         <span>View</span>
                       </a>
@@ -165,8 +170,8 @@
                         <mat-icon class="material-icons-outlined">edit</mat-icon>
                         <span>Edit</span>
                       </a> -->
-                      <a mat-menu-item class="" data-toggle="modal" (click)="smallModal.show()">
-                        <mat-icon class="material-icons-outlined">delete</mat-icon>
+                      <a mat-menu-item class="" data-toggle="modal" (click)="delete(row._id)">
+                        <mat-icon class="material-icons-outlined" >delete</mat-icon>
                         <span>Delete</span>
                       </a>
                     </mat-menu>
@@ -213,7 +218,7 @@
       </div>
       <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-secondary" (click)="smallModal.hide()">No</button>
-        <button type="button" class="btn btn-primary">Yes</button>
+        <button type="button" class="btn btn-primary" (click)="deleteDataOfVerification(this.dataId)">Yes</button>
       </div>
     </div>
   </div>
